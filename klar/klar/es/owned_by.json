@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "¿Quién es dueño de <subject>? La respuesta es: <mask>",
+    "¿Qué empresa o persona es dueña de <subject>? La respuesta es: <mask>",
+    "¿Quién es el propietario actual de <subject>? La respuesta es: <mask>",
+    "¿A quién pertenece <subject>? La respuesta es: <mask>",
+    "¿Qué entidad tiene la propiedad de <subject>? La respuesta es: <mask>",
+    " El dueño de <subject> es <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Berlín, París, Toyota, Sony, Milán, Francia, BBC, Polonia, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Lamborghini",
+      "object": "Audi",
+      "object_candidates": "París, Yahoo!, Génova, Milán, Amazon, Polonia, Microsoft, Toyota, Francia, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Torre Eiffel",
+      "object": "París",
+      "object_candidates": "Leópolis, Catar, Yahoo!, Milán, Francia, Microsoft, Sony, Polonia, Turín, París",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Alemania",
+      "object_candidates": "Turín, Sony, París, Berlín, Génova, Polonia, Catar, Toyota, Chicago, Alemania",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Google",
+      "object": "Google",
+      "object_candidates": "Turín, Sony, Alemania, Génova, Polonia, Catar, Yahoo!, Chicago, Milán, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Leópolis, Google, Francia, Chicago, BBC, Palermo, Polonia, Génova, Alemania, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "Chicago, Milán, Leópolis, París, Nápoles, Francia, Alemania, Turín, BBC, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "disco compacto",
+      "object": "Sony",
+      "object_candidates": "Toyota, Leópolis, BBC, Milán, Google, Yahoo!, Nápoles, Génova, París, Sony",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Aeropuerto Internacional O'Hare",
+      "object": "Chicago",
+      "object_candidates": "BBC, Génova, Francia, Catar, Audi, Toyota, Ámsterdam, Amazon, Leópolis, Chicago",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "Francia, Leópolis, Génova, Audi, Yahoo!, Nápoles, Palermo, París, Ámsterdam, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony",
+      "object_candidates": "Turín, Google, Yahoo!, Amazon, Leópolis, Microsoft, Audi, Toyota, Alemania, Sony",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures",
+      "object": "Sony",
+      "object_candidates": "Alemania, Chicago, Microsoft, Nápoles, Leópolis, Amazon, Audi, BBC, Catar, Sony",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Audi, Nápoles, París, Sony, Leópolis, Toyota, Palermo, Catar, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Maps",
+      "object": "Google",
+      "object_candidates": "Sony, Palermo, Francia, Turín, Nápoles, Milán, Toyota, Berlín, Leópolis, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "Sony",
+      "object_candidates": "Catar, Génova, Google, Turín, París, Milán, BBC, Toyota, Microsoft, Sony",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Parque de los Príncipes",
+      "object": "París",
+      "object_candidates": "Leópolis, Polonia, Toyota, Alemania, Berlín, Yahoo!, BBC, Microsoft, Google, París",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google",
+      "object_candidates": "Audi, Microsoft, Ámsterdam, Nápoles, Berlín, Sony, Palermo, Leópolis, Polonia, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Reproductor de Windows Media",
+      "object": "Microsoft",
+      "object_candidates": "Berlín, Chicago, Milán, Yahoo!, París, Toyota, Google, Sony, Turín, Microsoft",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Estadio Giuseppe Meazza",
+      "object": "Milán",
+      "object_candidates": "Génova, Sony, Alemania, Amazon, Catar, Polonia, París, Audi, Chicago, Milán",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon",
+      "object_candidates": "Francia, Chicago, Audi, Polonia, París, Google, Sony, Catar, Palermo, Amazon",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "AdSense",
+      "object": "Google",
+      "object_candidates": "Nápoles, Polonia, Palermo, Audi, Microsoft, Leópolis, Ámsterdam, Catar, Génova, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "Amazon",
+      "object_candidates": "Milán, Nápoles, Francia, Alemania, Ámsterdam, Leópolis, Microsoft, Génova, Palermo, Amazon",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Estadio Renzo Barbera",
+      "object": "Palermo",
+      "object_candidates": "Sony, Catar, Alemania, Ámsterdam, Francia, Audi, Google, Berlín, BBC, Palermo",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Chicago, Alemania, BBC, Microsoft, Catar, Francia, Turín, Polonia, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "Polonia, Milán, Microsoft, Palermo, Francia, Ámsterdam, Génova, Leópolis, BBC, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google",
+      "object_candidates": "Ámsterdam, Microsoft, Yahoo!, Amazon, Toyota, Audi, Chicago, Leópolis, Génova, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "París, Berlín, Microsoft, Alemania, Sony, BBC, Nápoles, Francia, Génova, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Arco de Triunfo de París",
+      "object": "Francia",
+      "object_candidates": "Nápoles, Audi, Ámsterdam, Berlín, Catar, Google, París, Alemania, Microsoft, Francia",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Palacio de Fontainebleau",
+      "object": "Francia",
+      "object_candidates": "Toyota, Sony, Ámsterdam, Amazon, Polonia, Milán, Palermo, Audi, Génova, Francia",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Génova, Audi, Amazon, Sony, París, Catar, Polonia, Leópolis, Berlín, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Libros",
+      "object": "Google",
+      "object_candidates": "Alemania, Milán, Audi, Yahoo!, Catar, Turín, Nápoles, Sony, París, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Estadio Olímpico de Turín",
+      "object": "Turín",
+      "object_candidates": "Google, Ámsterdam, Francia, Milán, Génova, Microsoft, Berlín, Palermo, Sony, Turín",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Catar",
+      "object_candidates": "Yahoo!, Milán, Amazon, Francia, París, Nápoles, Toyota, Sony, Leópolis, Catar",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "La ronda de noche",
+      "object": "Ámsterdam",
+      "object_candidates": "Milán, Leópolis, Audi, Francia, Turín, BBC, Toyota, Nápoles, Polonia, Ámsterdam",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Sony, Toyota, Polonia, Audi, París, Leópolis, Microsoft, Amazon, Milán, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Estadio Olímpico de Berlín",
+      "object": "Berlín",
+      "object_candidates": "Catar, París, Milán, Microsoft, Ámsterdam, BBC, Chicago, Audi, Turín, Berlín",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT Polish Airlines",
+      "object": "Polonia",
+      "object_candidates": "Leópolis, París, Chicago, Amazon, Yahoo!, Ámsterdam, Google, Sony, Alemania, Polonia",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Estadio Luigi Ferraris",
+      "object": "Génova",
+      "object_candidates": "Catar, Sony, Microsoft, Polonia, Berlín, Nápoles, Alemania, Toyota, BBC, Génova",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Traductor de Google",
+      "object": "Google",
+      "object_candidates": "Nápoles, Catar, Ámsterdam, Polonia, Yahoo!, Microsoft, Chicago, Milán, Francia, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Shard London Bridge",
+      "object": "Catar",
+      "object_candidates": "Leópolis, Ámsterdam, Nápoles, Amazon, Sony, Génova, BBC, Microsoft, Chicago, Catar",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Stade de France",
+      "object": "Francia",
+      "object_candidates": "Génova, Leópolis, Yahoo!, Toyota, Google, Microsoft, Turín, Chicago, Amazon, Francia",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Arena Lviv",
+      "object": "Leópolis",
+      "object_candidates": "Nápoles, Amazon, Chicago, Turín, Francia, Alemania, Audi, Toyota, Catar, Leópolis",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Microsoft",
+      "object_candidates": "Toyota, Catar, Chicago, Nápoles, Palermo, Sony, Ámsterdam, Audi, París, Microsoft",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, Microsoft, Polonia, Milán, Turín, Alemania, Génova, Chicago, Ámsterdam, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Estadio San Paolo",
+      "object": "Nápoles",
+      "object_candidates": "Berlín, Microsoft, Google, Génova, Ámsterdam, Yahoo!, París, Palermo, Leópolis, Nápoles",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Stadio delle Alpi",
+      "object": "Turín",
+      "object_candidates": "Toyota, Sony, Leópolis, Alemania, Google, Ámsterdam, Chicago, París, Yahoo!, Turín",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Aeropuerto Internacional de Dubái",
+      "object": "Dubái",
+      "object_candidates": "Yahoo!, Génova, Catar, Amazon, Palermo, Google, BBC, Turín, París, Dubái",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Académico",
+      "object": "Google",
+      "object_candidates": "Microsoft, Turín, Génova, Polonia, Palermo, Audi, París, Toyota, Chicago, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Mona Lisa",
+      "object": "Francia",
+      "object_candidates": "París, Turín, Microsoft, Milán, Yahoo!, Palermo, Nápoles, Berlín, Génova, Francia",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon",
+      "object_candidates": "Catar, Toyota, Yahoo!, Ámsterdam, Alemania, Audi, Francia, Microsoft, Génova, Amazon",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

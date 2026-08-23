@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "<subject>の開発会社はどこですか？答えは：<mask>",
+    "<subject>は誰が開発しましたか？答えは：<mask>",
+    "<subject>の開発を担当している会社はどこですか？答えは：<mask>",
+    "<subject>は誰によって開発されましたか？答えは：<mask>",
+    "<subject>の開発に貢献した組織はどこですか？答えは：<mask>",
+    " <subject>を開発した会社は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "macOS",
+      "object": "アップル",
+      "object_candidates": "ボーイング, IBM, Google, アドビシステムズ, ノキア, インテル, 任天堂, マイクロソフト, エアバス, アップル",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iOS",
+      "object": "アップル",
+      "object_candidates": "IBM, Google, アドビシステムズ, 任天堂, ボーイング, エアバス, ノキア, インテル, マイクロソフト, アップル",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Safari",
+      "object": "アップル",
+      "object_candidates": "ノキア, エアバス, ボーイング, 任天堂, アドビシステムズ, Google, インテル, IBM, マイクロソフト, アップル",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "PostScript",
+      "object": "アドビシステムズ",
+      "object_candidates": "インテル, エアバス, ボーイング, ノキア, Google, IBM, アップル, マイクロソフト, 任天堂, アドビシステムズ",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Microsoft Windows Vista",
+      "object": "マイクロソフト",
+      "object_candidates": "任天堂, ノキア, Google, アドビシステムズ, アップル, ボーイング, インテル, エアバス, IBM, マイクロソフト",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Internet Explorer",
+      "object": "マイクロソフト",
+      "object_candidates": "アップル, Google, ボーイング, IBM, 任天堂, エアバス, アドビシステムズ, ノキア, インテル, マイクロソフト",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-17",
+      "object": "ボーイング",
+      "object_candidates": "アップル, エアバス, 任天堂, ノキア, Google, インテル, マイクロソフト, アドビシステムズ, IBM, ボーイング",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "Microsoft DirectX",
+      "object": "マイクロソフト",
+      "object_candidates": "アップル, 任天堂, ボーイング, アドビシステムズ, IBM, Google, エアバス, ノキア, インテル, マイクロソフト",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows",
+      "object": "マイクロソフト",
+      "object_candidates": "任天堂, インテル, アドビシステムズ, エアバス, アップル, Google, ノキア, IBM, ボーイング, マイクロソフト",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox 360",
+      "object": "マイクロソフト",
+      "object_candidates": "アップル, Google, 任天堂, アドビシステムズ, エアバス, ノキア, ボーイング, IBM, インテル, マイクロソフト",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox One",
+      "object": "マイクロソフト",
+      "object_candidates": "エアバス, アドビシステムズ, ボーイング, ノキア, 任天堂, アップル, インテル, Google, IBM, マイクロソフト",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "MS-DOS",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, ノキア, アップル, Google, ボーイング, エアバス, 任天堂, IBM, インテル, マイクロソフト",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "FORTRAN",
+      "object": "IBM",
+      "object_candidates": "アドビシステムズ, エアバス, Google, アップル, インテル, 任天堂, マイクロソフト, ノキア, ボーイング, IBM",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "Microsoft Windows 1.0",
+      "object": "マイクロソフト",
+      "object_candidates": "ボーイング, 任天堂, ノキア, インテル, Google, IBM, アップル, エアバス, アドビシステムズ, マイクロソフト",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ニンテンドー3DS",
+      "object": "任天堂",
+      "object_candidates": "ノキア, エアバス, ボーイング, マイクロソフト, インテル, アップル, アドビシステムズ, IBM, Google, 任天堂",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "Intel 80386",
+      "object": "インテル",
+      "object_candidates": "アップル, IBM, ノキア, エアバス, 任天堂, Google, マイクロソフト, ボーイング, アドビシステムズ, インテル",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Windows 10",
+      "object": "マイクロソフト",
+      "object_candidates": "ノキア, 任天堂, IBM, アップル, インテル, ボーイング, エアバス, アドビシステムズ, Google, マイクロソフト",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Excel",
+      "object": "マイクロソフト",
+      "object_candidates": "ノキア, インテル, ボーイング, アップル, アドビシステムズ, 任天堂, IBM, Google, エアバス, マイクロソフト",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Office",
+      "object": "マイクロソフト",
+      "object_candidates": "インテル, アップル, アドビシステムズ, Google, 任天堂, ボーイング, エアバス, ノキア, IBM, マイクロソフト",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Word",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, ボーイング, インテル, エアバス, IBM, 任天堂, ノキア, Google, アップル, マイクロソフト",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Mac OS",
+      "object": "アップル",
+      "object_candidates": "ノキア, 任天堂, マイクロソフト, エアバス, IBM, アドビシステムズ, インテル, ボーイング, Google, アップル",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Windows 95",
+      "object": "マイクロソフト",
+      "object_candidates": "IBM, アドビシステムズ, インテル, Google, ノキア, エアバス, アップル, 任天堂, ボーイング, マイクロソフト",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Visual Studio",
+      "object": "マイクロソフト",
+      "object_candidates": "アップル, アドビシステムズ, IBM, ボーイング, 任天堂, インテル, Google, エアバス, ノキア, マイクロソフト",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows 98",
+      "object": "マイクロソフト",
+      "object_candidates": "ボーイング, IBM, アップル, 任天堂, ノキア, エアバス, アドビシステムズ, Google, インテル, マイクロソフト",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe Acrobat",
+      "object": "アドビシステムズ",
+      "object_candidates": "ノキア, アップル, マイクロソフト, ボーイング, エアバス, IBM, Google, インテル, 任天堂, アドビシステムズ",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Portable Document Format",
+      "object": "アドビシステムズ",
+      "object_candidates": "IBM, 任天堂, インテル, マイクロソフト, ノキア, Google, アップル, ボーイング, エアバス, アドビシステムズ",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Intel Core 2",
+      "object": "インテル",
+      "object_candidates": "ノキア, ボーイング, Google, 任天堂, アドビシステムズ, アップル, IBM, エアバス, マイクロソフト, インテル",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Adobe Flash",
+      "object": "アドビシステムズ",
+      "object_candidates": "エアバス, アップル, ボーイング, 任天堂, ノキア, インテル, IBM, Google, マイクロソフト, アドビシステムズ",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Symbian OS",
+      "object": "ノキア",
+      "object_candidates": "エアバス, マイクロソフト, アップル, IBM, インテル, Google, 任天堂, ボーイング, アドビシステムズ, ノキア",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "Windows Phone",
+      "object": "マイクロソフト",
+      "object_candidates": "Google, エアバス, IBM, 任天堂, ボーイング, アップル, インテル, アドビシステムズ, ノキア, マイクロソフト",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Intel Pentium",
+      "object": "インテル",
+      "object_candidates": "マイクロソフト, IBM, ボーイング, Google, 任天堂, エアバス, アップル, アドビシステムズ, ノキア, インテル",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "フォトショップ",
+      "object": "アドビシステムズ",
+      "object_candidates": "アップル, インテル, ボーイング, 任天堂, ノキア, マイクロソフト, エアバス, IBM, Google, アドビシステムズ",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "QuickTime",
+      "object": "アップル",
+      "object_candidates": "ボーイング, IBM, インテル, アドビシステムズ, Google, エアバス, 任天堂, ノキア, マイクロソフト, アップル",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Wii U",
+      "object": "任天堂",
+      "object_candidates": "IBM, アップル, Google, ボーイング, インテル, ノキア, マイクロソフト, エアバス, アドビシステムズ, 任天堂",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "Microsoft Windows XP",
+      "object": "マイクロソフト",
+      "object_candidates": "ノキア, ボーイング, 任天堂, インテル, Google, IBM, アップル, エアバス, アドビシステムズ, マイクロソフト",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows 2000",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, 任天堂, インテル, エアバス, ノキア, アップル, Google, ボーイング, IBM, マイクロソフト",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "NT File System",
+      "object": "マイクロソフト",
+      "object_candidates": "インテル, ボーイング, アップル, アドビシステムズ, 任天堂, エアバス, ノキア, Google, IBM, マイクロソフト",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows 8",
+      "object": "マイクロソフト",
+      "object_candidates": "インテル, Google, アドビシステムズ, ノキア, 任天堂, エアバス, ボーイング, アップル, IBM, マイクロソフト",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "iPod",
+      "object": "アップル",
+      "object_candidates": "マイクロソフト, Google, IBM, インテル, アドビシステムズ, エアバス, ノキア, 任天堂, ボーイング, アップル",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "ボーイング, エアバス, マイクロソフト, ノキア, アップル, インテル, IBM, アドビシステムズ, 任天堂, Google",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google マップ",
+      "object": "Google",
+      "object_candidates": "アップル, ノキア, IBM, エアバス, 任天堂, マイクロソフト, アドビシステムズ, ボーイング, インテル, Google",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Live メッセンジャー",
+      "object": "マイクロソフト",
+      "object_candidates": "ボーイング, インテル, アドビシステムズ, アップル, IBM, Google, エアバス, 任天堂, ノキア, マイクロソフト",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google ストリートビュー",
+      "object": "Google",
+      "object_candidates": "ボーイング, アドビシステムズ, ノキア, マイクロソフト, エアバス, インテル, IBM, 任天堂, アップル, Google",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "マイクロソフト",
+      "object_candidates": "インテル, 任天堂, エアバス, アドビシステムズ, ボーイング, IBM, ノキア, アップル, Google, マイクロソフト",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": ".NET Framework",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, インテル, Google, ノキア, エアバス, 任天堂, IBM, ボーイング, アップル, マイクロソフト",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Update",
+      "object": "マイクロソフト",
+      "object_candidates": "ボーイング, アドビシステムズ, インテル, アップル, エアバス, IBM, ノキア, 任天堂, Google, マイクロソフト",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-52",
+      "object": "ボーイング",
+      "object_candidates": "エアバス, アップル, 任天堂, IBM, マイクロソフト, アドビシステムズ, インテル, Google, ノキア, ボーイング",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "iTunes",
+      "object": "アップル",
+      "object_candidates": "任天堂, マイクロソフト, インテル, Google, ノキア, IBM, エアバス, アドビシステムズ, ボーイング, アップル",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Microsoft Windows 2.0",
+      "object": "マイクロソフト",
+      "object_candidates": "アップル, 任天堂, ノキア, ボーイング, IBM, インテル, エアバス, アドビシステムズ, Google, マイクロソフト",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google",
+      "object_candidates": "アドビシステムズ, マイクロソフト, エアバス, アップル, ノキア, IBM, インテル, 任天堂, ボーイング, Google",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Microsoft Windows 7",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, ノキア, エアバス, アップル, 任天堂, IBM, Google, ボーイング, インテル, マイクロソフト",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "エアバスA350 XWB",
+      "object": "エアバス",
+      "object_candidates": "アップル, アドビシステムズ, 任天堂, インテル, ノキア, Google, ボーイング, IBM, マイクロソフト, エアバス",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "Picasa",
+      "object": "Google",
+      "object_candidates": "ノキア, 任天堂, ボーイング, エアバス, IBM, アドビシステムズ, インテル, マイクロソフト, アップル, Google",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google",
+      "object_candidates": "任天堂, ボーイング, マイクロソフト, IBM, エアバス, ノキア, アドビシステムズ, インテル, アップル, Google",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Play",
+      "object": "Google",
+      "object_candidates": "エアバス, インテル, IBM, ノキア, アドビシステムズ, アップル, マイクロソフト, 任天堂, ボーイング, Google",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "iCloud",
+      "object": "アップル",
+      "object_candidates": "ノキア, 任天堂, マイクロソフト, Google, アドビシステムズ, インテル, エアバス, IBM, ボーイング, アップル",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Siri",
+      "object": "アップル",
+      "object_candidates": "インテル, IBM, ノキア, マイクロソフト, アドビシステムズ, 任天堂, ボーイング, エアバス, Google, アップル",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "App Store",
+      "object": "アップル",
+      "object_candidates": "インテル, IBM, アドビシステムズ, ボーイング, 任天堂, Google, ノキア, マイクロソフト, エアバス, アップル",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Microsoft Access",
+      "object": "マイクロソフト",
+      "object_candidates": "インテル, 任天堂, エアバス, アップル, ボーイング, アドビシステムズ, Google, IBM, ノキア, マイクロソフト",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Apple Watch",
+      "object": "アップル",
+      "object_candidates": "Google, マイクロソフト, エアバス, インテル, ノキア, アドビシステムズ, 任天堂, IBM, ボーイング, アップル",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iBooks",
+      "object": "アップル",
+      "object_candidates": "マイクロソフト, エアバス, ボーイング, IBM, 任天堂, アドビシステムズ, インテル, Google, ノキア, アップル",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "任天堂, IBM, ボーイング, アドビシステムズ, ノキア, マイクロソフト, アップル, インテル, エアバス, Google",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google+ ハングアウト",
+      "object": "Google",
+      "object_candidates": "エアバス, マイクロソフト, アドビシステムズ, ノキア, IBM, 任天堂, インテル, アップル, ボーイング, Google",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Googleカレンダー",
+      "object": "Google",
+      "object_candidates": "マイクロソフト, アップル, IBM, アドビシステムズ, 任天堂, ノキア, ボーイング, インテル, エアバス, Google",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Skype",
+      "object": "マイクロソフト",
+      "object_candidates": "Google, IBM, インテル, エアバス, アップル, 任天堂, ボーイング, ノキア, アドビシステムズ, マイクロソフト",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe InDesign",
+      "object": "アドビシステムズ",
+      "object_candidates": "Google, アップル, IBM, エアバス, マイクロソフト, 任天堂, インテル, ボーイング, ノキア, アドビシステムズ",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Microsoftストア",
+      "object": "マイクロソフト",
+      "object_candidates": "エアバス, ノキア, Google, IBM, アドビシステムズ, 任天堂, ボーイング, アップル, インテル, マイクロソフト",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Intel 8051",
+      "object": "インテル",
+      "object_candidates": "IBM, エアバス, ノキア, 任天堂, マイクロソフト, アップル, Google, アドビシステムズ, ボーイング, インテル",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "アップル, アドビシステムズ, ノキア, ボーイング, マイクロソフト, インテル, 任天堂, エアバス, IBM, Google",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Chrome",
+      "object": "Google",
+      "object_candidates": "IBM, マイクロソフト, ボーイング, 任天堂, アップル, インテル, ノキア, エアバス, アドビシステムズ, Google",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google翻訳",
+      "object": "Google",
+      "object_candidates": "ボーイング, アドビシステムズ, アップル, IBM, マイクロソフト, エアバス, ノキア, インテル, 任天堂, Google",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Glass",
+      "object": "Google",
+      "object_candidates": "マイクロソフト, ボーイング, IBM, ノキア, アドビシステムズ, 任天堂, アップル, インテル, エアバス, Google",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Mobile",
+      "object": "マイクロソフト",
+      "object_candidates": "エアバス, アドビシステムズ, アップル, 任天堂, ボーイング, ノキア, インテル, IBM, Google, マイクロソフト",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows Millennium Edition",
+      "object": "マイクロソフト",
+      "object_candidates": "任天堂, インテル, ボーイング, アップル, ノキア, エアバス, IBM, アドビシステムズ, Google, マイクロソフト",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Minecraft",
+      "object": "マイクロソフト",
+      "object_candidates": "Google, ボーイング, 任天堂, IBM, エアバス, ノキア, アップル, インテル, アドビシステムズ, マイクロソフト",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Security Essentials",
+      "object": "マイクロソフト",
+      "object_candidates": "アドビシステムズ, アップル, ボーイング, IBM, ノキア, Google, エアバス, 任天堂, インテル, マイクロソフト",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

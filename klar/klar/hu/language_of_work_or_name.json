@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "Mi <subject> eredeti nyelve? A válasz: <mask>.",
+    "Melyik nyelven íródott eredetileg <subject>? A válasz: <mask>.",
+    "Melyik nyelvben született <subject> eredetileg? A válasz: <mask>.",
+    "Milyen nyelven volt <subject> eredeti munkája? A válasz: <mask>.",
+    "Melyik nyelven készült először <subject>? A válasz: <mask>.",
+    " <subject> eredeti nyelve <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "A párizsi Notre-Dame",
+      "object": "francia",
+      "object_candidates": "holland, görög, olasz, német, orosz, finn, angol, francia",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "Az oroszlánkirály",
+      "object": "angol",
+      "object_candidates": "orosz, francia, holland, görög, német, olasz, finn, angol",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "Életrevalók",
+      "object": "francia",
+      "object_candidates": "görög, finn, német, angol, holland, orosz, olasz, francia",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kalandra fel!",
+      "object": "angol",
+      "object_candidates": "finn, francia, holland, olasz, német, görög, orosz, angol",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Csalóka napfény",
+      "object": "orosz",
+      "object_candidates": "finn, görög, olasz, német, angol, francia, holland, orosz",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "A zongorista",
+      "object": "angol",
+      "object_candidates": "olasz, görög, holland, orosz, német, finn, francia, angol",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Monte Cristo grófja",
+      "object": "francia",
+      "object_candidates": "orosz, finn, német, holland, görög, angol, olasz, francia",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Gettómilliomos",
+      "object": "angol",
+      "object_candidates": "finn, holland, olasz, görög, orosz, német, francia, angol",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "angol",
+      "object_candidates": "finn, görög, francia, olasz, orosz, holland, német, angol",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "A Keresztapa",
+      "object": "angol",
+      "object_candidates": "francia, görög, német, orosz, finn, holland, olasz, angol",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "Szellemirtók",
+      "object": "angol",
+      "object_candidates": "holland, francia, görög, német, finn, olasz, orosz, angol",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "A három testőr",
+      "object": "francia",
+      "object_candidates": "holland, görög, angol, német, finn, olasz, orosz, francia",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "holland Wikipédia",
+      "object": "holland",
+      "object_candidates": "angol, orosz, görög, francia, olasz, német, finn, holland",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "francia",
+      "object_candidates": "olasz, orosz, finn, angol, görög, holland, német, francia",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ponyvaregény",
+      "object": "angol",
+      "object_candidates": "olasz, holland, orosz, német, francia, görög, finn, angol",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "A Jó, a Rossz és a Csúf",
+      "object": "olasz",
+      "object_candidates": "orosz, angol, német, francia, holland, görög, finn, olasz",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Halálos iramban",
+      "object": "angol",
+      "object_candidates": "orosz, francia, német, olasz, holland, görög, finn, angol",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "A varázsfuvola",
+      "object": "német",
+      "object_candidates": "olasz, holland, finn, angol, francia, görög, orosz, német",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "iCarly",
+      "object": "angol",
+      "object_candidates": "görög, holland, német, francia, orosz, finn, olasz, angol",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nagy szovjet enciklopédia",
+      "object": "orosz",
+      "object_candidates": "olasz, német, francia, holland, finn, görög, angol, orosz",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Csizmás Kandúr",
+      "object": "olasz",
+      "object_candidates": "görög, német, angol, francia, finn, holland, orosz, olasz",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "finn Wikipédia",
+      "object": "finn",
+      "object_candidates": "görög, francia, német, olasz, angol, orosz, holland, finn",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Tom és Jerry",
+      "object": "angol",
+      "object_candidates": "orosz, német, finn, görög, holland, francia, olasz, angol",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "A dzsungel könyve",
+      "object": "angol",
+      "object_candidates": "olasz, finn, orosz, francia, görög, német, holland, angol",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "görög Wikipédia",
+      "object": "görög",
+      "object_candidates": "finn, orosz, holland, francia, német, angol, olasz, görög",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "angol",
+      "object_candidates": "spanyol, olasz, török, dán, bengáli, német, francia, koreai, bolgár, angol",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git",
+      "object": "angol",
+      "object_candidates": "lengyel, török, latin, bengáli, cseh, orosz, spanyol, olasz, svéd, angol",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aeneis",
+      "object": "latin",
+      "object_candidates": "vietnámi, lengyel, olasz, angol, katalán, cseh, magyar, orosz, bengáli, latin",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "orosz Wikipédia",
+      "object": "orosz",
+      "object_candidates": "koreai, svéd, bolgár, magyar, német, angol, lengyel, bengáli, spanyol, orosz",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Sötétségben – Star Trek",
+      "object": "angol",
+      "object_candidates": "bengáli, ukrán, német, svéd, lengyel, vietnámi, bolgár, latin, spanyol, angol",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "francia",
+      "object_candidates": "német, észt, spanyol, török, magyar, olasz, bolgár, orosz, angol, francia",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Washington Post",
+      "object": "angol",
+      "object_candidates": "dán, észt, spanyol, német, orosz, holland, koreai, svéd, horvát, angol",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "Playboy",
+      "object": "angol",
+      "object_candidates": "dán, katalán, észt, magyar, spanyol, svéd, német, francia, bolgár, angol",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "New Horizons",
+      "object": "angol",
+      "object_candidates": "olasz, katalán, ukrán, magyar, bengáli, finn, svéd, lengyel, holland, angol",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aida",
+      "object": "olasz",
+      "object_candidates": "török, holland, magyar, lengyel, latin, ukrán, svéd, katalán, bolgár, olasz",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Science",
+      "object": "angol",
+      "object_candidates": "bengáli, magyar, vietnámi, német, ukrán, bolgár, horvát, finn, latin, angol",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "Napos oldal",
+      "object": "angol",
+      "object_candidates": "holland, vietnámi, bengáli, német, latin, dán, magyar, bolgár, orosz, angol",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "Newsweek",
+      "object": "angol",
+      "object_candidates": "bolgár, katalán, latin, cseh, dán, bengáli, olasz, horvát, magyar, angol",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "Rambo – Első vér",
+      "object": "angol",
+      "object_candidates": "német, észt, olasz, lengyel, spanyol, francia, horvát, bolgár, dán, angol",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "A kis herceg",
+      "object": "francia",
+      "object_candidates": "észt, orosz, ukrán, latin, olasz, spanyol, cseh, angol, bolgár, francia",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "angol",
+      "object_candidates": "ukrán, finn, horvát, olasz, bolgár, német, svéd, spanyol, francia, angol",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "dán Wikipédia",
+      "object": "dán",
+      "object_candidates": "finn, horvát, magyar, orosz, latin, ukrán, bolgár, angol, svéd, dán",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Le Monde",
+      "object": "francia",
+      "object_candidates": "ukrán, észt, dán, koreai, svéd, horvát, orosz, német, finn, francia",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "Le Figaro",
+      "object": "francia",
+      "object_candidates": "lengyel, bengáli, vietnámi, latin, finn, orosz, holland, svéd, észt, francia",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "cseh Wikipédia",
+      "object": "cseh",
+      "object_candidates": "francia, bengáli, svéd, horvát, vietnámi, ukrán, észt, koreai, olasz, cseh",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "The Guardian",
+      "object": "angol",
+      "object_candidates": "spanyol, olasz, bolgár, magyar, holland, orosz, bengáli, dán, német, angol",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "horvát Wikipédia",
+      "object": "horvát",
+      "object_candidates": "magyar, vietnámi, dán, francia, spanyol, bengáli, holland, orosz, lengyel, horvát",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Utrechti béke",
+      "object": "angol",
+      "object_candidates": "horvát, ukrán, vietnámi, cseh, magyar, katalán, svéd, bolgár, spanyol, angol",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ponyvaregény",
+      "object": "angol",
+      "object_candidates": "bolgár, vietnámi, cseh, ukrán, finn, német, spanyol, dán, katalán, angol",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hollandia himnusza",
+      "object": "holland",
+      "object_candidates": "török, cseh, koreai, angol, francia, spanyol, magyar, német, ukrán, holland",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "svéd Wikipédia",
+      "object": "svéd",
+      "object_candidates": "bolgár, észt, török, olasz, horvát, orosz, spanyol, latin, magyar, svéd",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "lengyel Wikipédia",
+      "object": "lengyel",
+      "object_candidates": "észt, francia, finn, dán, cseh, spanyol, katalán, holland, olasz, lengyel",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "észt Wikipédia",
+      "object": "észt",
+      "object_candidates": "magyar, német, francia, vietnámi, török, koreai, spanyol, latin, ukrán, észt",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "angol",
+      "object_candidates": "olasz, észt, orosz, spanyol, dán, francia, német, katalán, cseh, angol",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "katalán Wikipédia",
+      "object": "katalán",
+      "object_candidates": "orosz, észt, svéd, török, olasz, lengyel, angol, vietnámi, koreai, katalán",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "vietnámi Wikipédia",
+      "object": "vietnámi",
+      "object_candidates": "lengyel, német, cseh, török, holland, ukrán, spanyol, horvát, francia, vietnámi",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "A varázsfuvola",
+      "object": "német",
+      "object_candidates": "finn, horvát, bengáli, spanyol, orosz, katalán, angol, francia, holland, német",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "koreai Wikipédia",
+      "object": "koreai",
+      "object_candidates": "vietnámi, spanyol, finn, német, bengáli, bolgár, észt, holland, lengyel, koreai",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "francia",
+      "object_candidates": "dán, bolgár, finn, katalán, latin, magyar, cseh, német, spanyol, francia",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "Twist Olivér",
+      "object": "angol",
+      "object_candidates": "katalán, koreai, francia, horvát, dán, észt, svéd, lengyel, orosz, angol",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alice Csodaországban",
+      "object": "angol",
+      "object_candidates": "katalán, latin, ukrán, bolgár, olasz, finn, dán, vietnámi, török, angol",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Büszkeség és balítélet",
+      "object": "angol",
+      "object_candidates": "dán, koreai, finn, olasz, magyar, francia, bengáli, spanyol, bolgár, angol",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Time",
+      "object": "angol",
+      "object_candidates": "bolgár, német, lengyel, katalán, cseh, észt, spanyol, orosz, ukrán, angol",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "A nagy Gatsby",
+      "object": "angol",
+      "object_candidates": "bolgár, koreai, török, katalán, svéd, spanyol, olasz, francia, orosz, angol",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "angol",
+      "object_candidates": "cseh, horvát, dán, török, bengáli, finn, lengyel, koreai, francia, angol",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "spanyol",
+      "object_candidates": "észt, német, orosz, svéd, vietnámi, ukrán, holland, latin, bolgár, spanyol",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Banglades himnusza",
+      "object": "bengáli",
+      "object_candidates": "spanyol, latin, magyar, lengyel, orosz, olasz, észt, svéd, angol, bengáli",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "finn",
+      "object_candidates": "török, koreai, holland, olasz, orosz, bolgár, katalán, horvát, ukrán, finn",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "német Wikipédia",
+      "object": "német",
+      "object_candidates": "magyar, bolgár, holland, spanyol, ukrán, bengáli, török, koreai, horvát, német",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "versailles-i békeszerződés",
+      "object": "francia",
+      "object_candidates": "észt, spanyol, lengyel, német, koreai, ukrán, bengáli, orosz, angol, francia",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Anyegin",
+      "object": "orosz",
+      "object_candidates": "koreai, vietnámi, svéd, lengyel, finn, katalán, ukrán, bolgár, olasz, orosz",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ukrán Wikipédia",
+      "object": "ukrán",
+      "object_candidates": "orosz, cseh, olasz, bolgár, katalán, holland, spanyol, észt, finn, ukrán",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "1984",
+      "object": "angol",
+      "object_candidates": "ukrán, észt, katalán, olasz, horvát, francia, spanyol, bolgár, latin, angol",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tom Sawyer kalandjai",
+      "object": "angol",
+      "object_candidates": "olasz, latin, cseh, koreai, spanyol, katalán, francia, bengáli, holland, angol",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "Terminator: Genesis",
+      "object": "angol",
+      "object_candidates": "holland, francia, bengáli, észt, német, bolgár, olasz, magyar, latin, angol",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "angol",
+      "object_candidates": "cseh, bolgár, orosz, dán, katalán, finn, német, török, holland, angol",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Dekameron",
+      "object": "olasz",
+      "object_candidates": "svéd, bengáli, finn, cseh, katalán, bolgár, koreai, ukrán, francia, olasz",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "finn",
+      "object_candidates": "cseh, francia, német, holland, vietnámi, bolgár, latin, bengáli, magyar, finn",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "The Economist",
+      "object": "angol",
+      "object_candidates": "lengyel, holland, horvát, spanyol, német, cseh, svéd, finn, latin, angol",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Svédország himnusza",
+      "object": "svéd",
+      "object_candidates": "német, olasz, francia, spanyol, bolgár, észt, angol, vietnámi, latin, svéd",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Pinokkió kalandjai",
+      "object": "olasz",
+      "object_candidates": "vietnámi, cseh, horvát, angol, magyar, koreai, dán, holland, török, olasz",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Moby Dick",
+      "object": "angol",
+      "object_candidates": "svéd, dán, horvát, orosz, vietnámi, német, koreai, spanyol, francia, angol",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "olasz",
+      "object_candidates": "észt, horvát, török, finn, latin, német, ukrán, dán, holland, olasz",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Figaro házassága",
+      "object": "olasz",
+      "object_candidates": "angol, svéd, ukrán, holland, török, latin, katalán, orosz, spanyol, olasz",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Maastrichti szerződés",
+      "object": "francia",
+      "object_candidates": "latin, ukrán, svéd, török, magyar, koreai, észt, holland, cseh, francia",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "angol",
+      "object_candidates": "latin, holland, magyar, török, koreai, svéd, orosz, katalán, német, angol",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "bolgár Wikipédia",
+      "object": "bolgár",
+      "object_candidates": "horvát, holland, katalán, latin, dán, észt, magyar, lengyel, finn, bolgár",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "The Pirate Bay",
+      "object": "spanyol",
+      "object_candidates": "német, svéd, latin, magyar, bolgár, vietnámi, francia, koreai, finn, spanyol",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "török Wikipédia",
+      "object": "török",
+      "object_candidates": "svéd, finn, orosz, vietnámi, bengáli, cseh, spanyol, koreai, katalán, török",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "magyar Wikipédia",
+      "object": "magyar",
+      "object_candidates": "finn, horvát, spanyol, bolgár, svéd, olasz, koreai, bengáli, dán, magyar",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Anna Karenina",
+      "object": "orosz",
+      "object_candidates": "magyar, olasz, finn, angol, ukrán, észt, lengyel, spanyol, török, orosz",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "szerb Wikipédia",
+      "object": "szerb",
+      "object_candidates": "vietnámi, latin, finn, német, angol, holland, bolgár, török, orosz, szerb",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "olasz Wikipédia",
+      "object": "olasz",
+      "object_candidates": "török, finn, német, cseh, dán, katalán, koreai, svéd, ukrán, olasz",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "spanyol Wikipédia",
+      "object": "spanyol",
+      "object_candidates": "katalán, dán, latin, olasz, magyar, észt, finn, bengáli, horvát, spanyol",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "finn Wikipédia",
+      "object": "finn",
+      "object_candidates": "olasz, német, spanyol, katalán, magyar, koreai, bengáli, dán, ukrán, finn",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "egyszerűsített angol nyelvű Wikipédia",
+      "object": "angol",
+      "object_candidates": "német, katalán, bengáli, orosz, vietnámi, cseh, francia, bolgár, török, angol",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Becstelen brigantyk",
+      "object": "angol",
+      "object_candidates": "észt, katalán, francia, török, spanyol, magyar, latin, lengyel, finn, angol",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "angol",
+      "object_candidates": "német, spanyol, francia, magyar, cseh, katalán, bengáli, vietnámi, ukrán, angol",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alexander",
+      "object": "angol",
+      "object_candidates": "latin, horvát, dán, olasz, német, koreai, finn, ukrán, katalán, angol",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kódjátszma",
+      "object": "angol",
+      "object_candidates": "katalán, német, dán, francia, cseh, finn, spanyol, horvát, olasz, angol",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "Don Giovanni",
+      "object": "olasz",
+      "object_candidates": "dán, magyar, spanyol, finn, holland, koreai, cseh, észt, francia, olasz",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "angol",
+      "object_candidates": "cseh, lengyel, német, vietnámi, bolgár, latin, ukrán, olasz, magyar, angol",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "Internet Archive",
+      "object": "angol",
+      "object_candidates": "észt, olasz, magyar, latin, bolgár, dán, német, cseh, holland, angol",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bohemian Rhapsody",
+      "object": "angol",
+      "object_candidates": "orosz, horvát, bolgár, dán, finn, svéd, holland, francia, német, angol",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "francia Wikipédia",
+      "object": "francia",
+      "object_candidates": "ukrán, spanyol, lengyel, bolgár, svéd, bengáli, dán, finn, cseh, francia",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Los Angeles Times",
+      "object": "angol",
+      "object_candidates": "török, latin, magyar, észt, koreai, dán, spanyol, svéd, cseh, angol",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "Apache HTTP Server",
+      "object": "angol",
+      "object_candidates": "ukrán, dán, cseh, lengyel, svéd, francia, latin, spanyol, észt, angol",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "RIA Novosztyi",
+      "object": "orosz",
+      "object_candidates": "angol, bolgár, spanyol, magyar, ukrán, dán, finn, vietnámi, horvát, orosz",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

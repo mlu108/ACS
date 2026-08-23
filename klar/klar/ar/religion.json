@@ -1,0 +1,1014 @@
+{
+  "name": "religion",
+  "prompt_templates": [
+    "أي ديانة ينتمي إليها <subject>؟ الجواب هو: <mask>",
+    "ما هو الاعتقاد الديني لـ <subject>؟ الجواب هو: <mask>",
+    "ما هي الإيمان التي يتبعها <subject>؟ الجواب هو: <mask>",
+    "أي ديانة تمارسها <subject>؟ الجواب هو: <mask>",
+    "في أي ديانة يشارك <subject>؟ الجواب هو: <mask>",
+    " الديانة الرسمية لـ <subject> هي <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "غوتاما بودا",
+      "object": "بوذية",
+      "object_candidates": "الإسلام, يهودية, هندوسية, مسلم, المسيحية, سينتولوجيا, كاثوليكية, بوذية",
+      "index": 4632,
+      "subject_en": "Gautama Buddha",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "أوغسطينوس",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, الإسلام, يهودية, سينتولوجيا, مسلم, بوذية, هندوسية, المسيحية",
+      "index": 4633,
+      "subject_en": "Augustine of Hippo",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "ألبان",
+      "object": "مسلم",
+      "object_candidates": "الإسلام, هندوسية, بوذية, يهودية, سينتولوجيا, المسيحية, كاثوليكية, مسلم",
+      "index": 4634,
+      "subject_en": "Albanians",
+      "object_en": "Muslim"
+    },
+    {
+      "subject": "بيدا",
+      "object": "المسيحية",
+      "object_candidates": "مسلم, يهودية, كاثوليكية, بوذية, هندوسية, الإسلام, سينتولوجيا, المسيحية",
+      "index": 4635,
+      "subject_en": "Bede",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "قسطنطين العظيم",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, يهودية, بوذية, هندوسية, سينتولوجيا, مسلم, الإسلام, المسيحية",
+      "index": 4636,
+      "subject_en": "Constantine the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "يعقوب",
+      "object": "يهودية",
+      "object_candidates": "بوذية, سينتولوجيا, المسيحية, كاثوليكية, هندوسية, الإسلام, مسلم, يهودية",
+      "index": 4637,
+      "subject_en": "Jacob",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "أسقف",
+      "object": "المسيحية",
+      "object_candidates": "بوذية, كاثوليكية, الإسلام, يهودية, سينتولوجيا, هندوسية, مسلم, المسيحية",
+      "index": 4638,
+      "subject_en": "bishop",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "هونريوس الثالث",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, مسلم, الإسلام, بوذية, هندوسية, كاثوليكية, سينتولوجيا, المسيحية",
+      "index": 4639,
+      "subject_en": "Honorius III",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "غريغوري التاسع",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, يهودية, مسلم, الإسلام, هندوسية, بوذية, سينتولوجيا, المسيحية",
+      "index": 4640,
+      "subject_en": "Gregory IX",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "أفغانستان",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, مسلم, يهودية, سينتولوجيا, بوذية, كاثوليكية, المسيحية, الإسلام",
+      "index": 4641,
+      "subject_en": "Afghanistan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "يسوع",
+      "object": "يهودية",
+      "object_candidates": "مسلم, الإسلام, سينتولوجيا, المسيحية, بوذية, هندوسية, كاثوليكية, يهودية",
+      "index": 4642,
+      "subject_en": "Jesus Christ",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "عراقي",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, بوذية, المسيحية, هندوسية, مسلم, يهودية, سينتولوجيا, الإسلام",
+      "index": 4643,
+      "subject_en": "Iraqi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ابن بطوطة",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, يهودية, مسلم, سينتولوجيا, المسيحية, بوذية, كاثوليكية, الإسلام",
+      "index": 4644,
+      "subject_en": "Ibn Battuta",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, مسلم, يهودية, كاثوليكية, بوذية, المسيحية, هندوسية, الإسلام",
+      "index": 4645,
+      "subject_en": "Muhammad",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "مسلم",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, كاثوليكية, يهودية, مسلم, هندوسية, المسيحية, بوذية, الإسلام",
+      "index": 4646,
+      "subject_en": "Muslim",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "موسى بن ميمون",
+      "object": "يهودية",
+      "object_candidates": "هندوسية, الإسلام, كاثوليكية, بوذية, مسلم, سينتولوجيا, المسيحية, يهودية",
+      "index": 4647,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "مالكوم إكس",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, المسيحية, مسلم, سينتولوجيا, كاثوليكية, هندوسية, يهودية, الإسلام",
+      "index": 4648,
+      "subject_en": "Malcolm X",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "أوزبك",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, بوذية, سينتولوجيا, يهودية, مسلم, كاثوليكية, هندوسية, الإسلام",
+      "index": 4649,
+      "subject_en": "Uzbeks",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "كنيس",
+      "object": "يهودية",
+      "object_candidates": "مسلم, سينتولوجيا, الإسلام, هندوسية, المسيحية, كاثوليكية, بوذية, يهودية",
+      "index": 4650,
+      "subject_en": "synagogue",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "محمد الرابع",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, يهودية, سينتولوجيا, بوذية, هندوسية, كاثوليكية, مسلم, الإسلام",
+      "index": 4651,
+      "subject_en": "Mehmed IV",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "إبراهيم",
+      "object": "يهودية",
+      "object_candidates": "مسلم, كاثوليكية, بوذية, سينتولوجيا, الإسلام, هندوسية, المسيحية, يهودية",
+      "index": 4652,
+      "subject_en": "Abraham",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "ابن رشد",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, سينتولوجيا, مسلم, بوذية, المسيحية, كاثوليكية, هندوسية, الإسلام",
+      "index": 4653,
+      "subject_en": "Averroes",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ابن خلدون",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, سينتولوجيا, بوذية, هندوسية, المسيحية, كاثوليكية, مسلم, الإسلام",
+      "index": 4654,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "داود",
+      "object": "يهودية",
+      "object_candidates": "مسلم, بوذية, كاثوليكية, سينتولوجيا, المسيحية, الإسلام, هندوسية, يهودية",
+      "index": 4655,
+      "subject_en": "David",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "سليمان القانوني",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, المسيحية, سينتولوجيا, مسلم, كاثوليكية, يهودية, بوذية, الإسلام",
+      "index": 4656,
+      "subject_en": "Suleiman the Magnificent",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "عراقي",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, هندوسية, يهودية, سينتولوجيا, مسلم, الإسلام, بوذية, المسيحية",
+      "index": 4657,
+      "subject_en": "Iraqi",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "جلال الدين الرومي",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, مسلم, يهودية, كاثوليكية, بوذية, سينتولوجيا, هندوسية, الإسلام",
+      "index": 4658,
+      "subject_en": "Rumi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "أبو حامد الغزالي",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, مسلم, المسيحية, هندوسية, يهودية, كاثوليكية, سينتولوجيا, الإسلام",
+      "index": 4659,
+      "subject_en": "Al-Ghazali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "الدولة الأموية",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, المسيحية, كاثوليكية, سينتولوجيا, هندوسية, يهودية, مسلم, الإسلام",
+      "index": 4660,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ستيفين الأول ملك المجر",
+      "object": "المسيحية",
+      "object_candidates": "الإسلام, بوذية, سينتولوجيا, مسلم, كاثوليكية, يهودية, هندوسية, المسيحية",
+      "index": 4661,
+      "subject_en": "Stephen I of Hungary",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "شارلمان",
+      "object": "المسيحية",
+      "object_candidates": "الإسلام, يهودية, كاثوليكية, بوذية, سينتولوجيا, مسلم, هندوسية, المسيحية",
+      "index": 4662,
+      "subject_en": "Charlemagne",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "سبتيون",
+      "object": "المسيحية",
+      "object_candidates": "بوذية, كاثوليكية, يهودية, هندوسية, سينتولوجيا, الإسلام, مسلم, المسيحية",
+      "index": 4663,
+      "subject_en": "Seventh-day Adventist Church",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "فلاديمير الأول",
+      "object": "المسيحية",
+      "object_candidates": "سينتولوجيا, بوذية, كاثوليكية, الإسلام, هندوسية, يهودية, مسلم, المسيحية",
+      "index": 4664,
+      "subject_en": "Vladimir the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "كنيسة القيامة",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, سينتولوجيا, يهودية, بوذية, مسلم, الإسلام, هندوسية, المسيحية",
+      "index": 4665,
+      "subject_en": "Church of the Holy Sepulchre",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "معاوية بن أبي سفيان",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, يهودية, هندوسية, بوذية, مسلم, كاثوليكية, المسيحية, الإسلام",
+      "index": 4666,
+      "subject_en": "Muawiyah I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "كلوفيس الأول",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, مسلم, سينتولوجيا, هندوسية, بوذية, كاثوليكية, الإسلام, المسيحية",
+      "index": 4667,
+      "subject_en": "Clovis I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "سلالة تانغ الحاكمة",
+      "object": "بوذية",
+      "object_candidates": "سينتولوجيا, المسيحية, الإسلام, كاثوليكية, يهودية, مسلم, هندوسية, بوذية",
+      "index": 4668,
+      "subject_en": "Tang Empire",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "عمر بن الخطاب",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, مسلم, بوذية, يهودية, كاثوليكية, سينتولوجيا, المسيحية, الإسلام",
+      "index": 4669,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد إقبال",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, سينتولوجيا, مسلم, كاثوليكية, يهودية, هندوسية, المسيحية, الإسلام",
+      "index": 4670,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "عمر بونغو",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, هندوسية, كاثوليكية, مسلم, بوذية, يهودية, سينتولوجيا, الإسلام",
+      "index": 4671,
+      "subject_en": "Omar Bongo",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "نقولا الخامس",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, بوذية, الإسلام, هندوسية, كاثوليكية, مسلم, سينتولوجيا, المسيحية",
+      "index": 4672,
+      "subject_en": "Nicholas V",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "روح الله الخميني",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, سينتولوجيا, المسيحية, كاثوليكية, هندوسية, مسلم, بوذية, الإسلام",
+      "index": 4673,
+      "subject_en": "Ruhollah Khomeini",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "بونيفاس الثامن",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, مسلم, الإسلام, هندوسية, بوذية, كاثوليكية, سينتولوجيا, المسيحية",
+      "index": 4674,
+      "subject_en": "Boniface VIII",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "عائشة بنت أبي بكر",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, مسلم, سينتولوجيا, يهودية, بوذية, المسيحية, كاثوليكية, الإسلام",
+      "index": 4675,
+      "subject_en": "Aisha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ناجارجونا",
+      "object": "بوذية",
+      "object_candidates": "مسلم, يهودية, هندوسية, الإسلام, المسيحية, سينتولوجيا, كاثوليكية, بوذية",
+      "index": 4676,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "الحسين بن علي",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, كاثوليكية, مسلم, سينتولوجيا, بوذية, هندوسية, يهودية, الإسلام",
+      "index": 4677,
+      "subject_en": "Husayn ibn Ali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "براهمان",
+      "object": "هندوسية",
+      "object_candidates": "يهودية, سينتولوجيا, المسيحية, الإسلام, بوذية, مسلم, كاثوليكية, هندوسية",
+      "index": 4678,
+      "subject_en": "Brahman",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "صلاح الدين الأيوبي",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, يهودية, المسيحية, بوذية, هندوسية, سينتولوجيا, مسلم, الإسلام",
+      "index": 4679,
+      "subject_en": "Saladin",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "الكنيسة الرومانية الكاثوليكية",
+      "object": "كاثوليكية",
+      "object_candidates": "يهودية, بوذية, سينتولوجيا, هندوسية, المسيحية, الإسلام, مسلم, كاثوليكية",
+      "index": 4680,
+      "subject_en": "Catholic Church",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "ثيودور هرتزل",
+      "object": "يهودية",
+      "object_candidates": "كاثوليكية, سينتولوجيا, مسلم, بوذية, المسيحية, هندوسية, الإسلام, يهودية",
+      "index": 4681,
+      "subject_en": "Theodor Herzl",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "إمبراطورية الخمير",
+      "object": "هندوسية",
+      "object_candidates": "سينتولوجيا, يهودية, كاثوليكية, بوذية, المسيحية, مسلم, الإسلام, هندوسية",
+      "index": 4682,
+      "subject_en": "Khmer Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "عبد العزيز آل سعود",
+      "object": "الإسلام",
+      "object_candidates": "مسلم, بوذية, سينتولوجيا, هندوسية, المسيحية, يهودية, كاثوليكية, الإسلام",
+      "index": 4683,
+      "subject_en": "Ibn Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "حسني مبارك",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, يهودية, مسلم, المسيحية, هندوسية, كاثوليكية, بوذية, الإسلام",
+      "index": 4684,
+      "subject_en": "Hosni Mubarak",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "سلفستر الأول",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, كاثوليكية, الإسلام, هندوسية, مسلم, بوذية, سينتولوجيا, المسيحية",
+      "index": 4685,
+      "subject_en": "Sylvester I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "مايكل بلومبيرغ",
+      "object": "يهودية",
+      "object_candidates": "سينتولوجيا, المسيحية, الإسلام, بوذية, مسلم, هندوسية, كاثوليكية, يهودية",
+      "index": 4686,
+      "subject_en": "Michael Bloomberg",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "علي بن أبي طالب",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, كاثوليكية, بوذية, المسيحية, هندوسية, سينتولوجيا, مسلم, الإسلام",
+      "index": 4687,
+      "subject_en": "Alī ibn Abī Ṭālib",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "دوكو عمروف",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, مسلم, هندوسية, كاثوليكية, المسيحية, بوذية, يهودية, الإسلام",
+      "index": 4688,
+      "subject_en": "Dokka Umarov",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد علي باشا",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, هندوسية, بوذية, سينتولوجيا, المسيحية, مسلم, كاثوليكية, الإسلام",
+      "index": 4689,
+      "subject_en": "Muhammad Ali Pasha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ريتشارد الأول ملك إنجلترا",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, كاثوليكية, هندوسية, مسلم, سينتولوجيا, بوذية, الإسلام, المسيحية",
+      "index": 4690,
+      "subject_en": "Richard I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "عثمان بن عفان",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, المسيحية, هندوسية, سينتولوجيا, مسلم, يهودية, بوذية, الإسلام",
+      "index": 4691,
+      "subject_en": "Uthman ibn Affan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "علي خامنئي",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, المسيحية, هندوسية, مسلم, يهودية, بوذية, كاثوليكية, الإسلام",
+      "index": 4692,
+      "subject_en": "Ali Khamenei",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "توم كروز",
+      "object": "سينتولوجيا",
+      "object_candidates": "كاثوليكية, بوذية, الإسلام, يهودية, مسلم, المسيحية, هندوسية, سينتولوجيا",
+      "index": 4693,
+      "subject_en": "Tom Cruise",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "مهاتما غاندي",
+      "object": "هندوسية",
+      "object_candidates": "مسلم, يهودية, كاثوليكية, المسيحية, سينتولوجيا, بوذية, الإسلام, هندوسية",
+      "index": 4694,
+      "subject_en": "Mohandas Karamchand Gandhi",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "حامد كرزاي",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, مسلم, بوذية, هندوسية, سينتولوجيا, يهودية, كاثوليكية, الإسلام",
+      "index": 4695,
+      "subject_en": "Hamid Karzai",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ألبرت شفايتزر",
+      "object": "المسيحية",
+      "object_candidates": "سينتولوجيا, يهودية, هندوسية, الإسلام, كاثوليكية, مسلم, بوذية, المسيحية",
+      "index": 4696,
+      "subject_en": "Albert Schweitzer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "أحمد سوكارنو",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, سينتولوجيا, بوذية, هندوسية, المسيحية, يهودية, مسلم, الإسلام",
+      "index": 4697,
+      "subject_en": "Sukarno",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "سوهارتو",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, سينتولوجيا, بوذية, كاثوليكية, المسيحية, يهودية, مسلم, الإسلام",
+      "index": 4698,
+      "subject_en": "Suharto",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "آيس كيوب",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, هندوسية, يهودية, كاثوليكية, سينتولوجيا, بوذية, مسلم, الإسلام",
+      "index": 4699,
+      "subject_en": "Ice Cube",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "كارلوس الثعلب",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, المسيحية, مسلم, سينتولوجيا, بوذية, هندوسية, يهودية, الإسلام",
+      "index": 4700,
+      "subject_en": "Carlos the Jackal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "عبد الله المأمون",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, المسيحية, كاثوليكية, سينتولوجيا, هندوسية, بوذية, مسلم, الإسلام",
+      "index": 4701,
+      "subject_en": "al-Maʾmun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "فاطمة الزهراء",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, بوذية, المسيحية, سينتولوجيا, مسلم, يهودية, كاثوليكية, الإسلام",
+      "index": 4702,
+      "subject_en": "Fatimah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد علي جناح",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, المسيحية, يهودية, بوذية, كاثوليكية, مسلم, هندوسية, الإسلام",
+      "index": 4703,
+      "subject_en": "Mohammad Ali Jinnah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "فيتنام الجنوبية",
+      "object": "بوذية",
+      "object_candidates": "يهودية, سينتولوجيا, كاثوليكية, هندوسية, المسيحية, الإسلام, مسلم, بوذية",
+      "index": 4704,
+      "subject_en": "South Vietnam",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "عبد الحميد الثاني",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, مسلم, كاثوليكية, بوذية, هندوسية, سينتولوجيا, يهودية, الإسلام",
+      "index": 4705,
+      "subject_en": "Abdul Hamid II",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "علاهيون",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, مسلم, بوذية, سينتولوجيا, هندوسية, كاثوليكية, المسيحية, الإسلام",
+      "index": 4706,
+      "subject_en": "Alevism",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "أون سان سو تشي",
+      "object": "بوذية",
+      "object_candidates": "الإسلام, هندوسية, المسيحية, سينتولوجيا, كاثوليكية, مسلم, يهودية, بوذية",
+      "index": 4707,
+      "subject_en": "Aung San Suu Kyi",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "هارون الرشيد",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, يهودية, هندوسية, بوذية, سينتولوجيا, مسلم, المسيحية, الإسلام",
+      "index": 4708,
+      "subject_en": "Harun al-Rashid",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "أشعياء",
+      "object": "يهودية",
+      "object_candidates": "مسلم, بوذية, الإسلام, سينتولوجيا, المسيحية, هندوسية, كاثوليكية, يهودية",
+      "index": 4709,
+      "subject_en": "Isaiah",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "أبو بكر الصديق",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, هندوسية, بوذية, مسلم, يهودية, المسيحية, كاثوليكية, الإسلام",
+      "index": 4710,
+      "subject_en": "Abu Bakr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "إمبراطورية جوبتا",
+      "object": "هندوسية",
+      "object_candidates": "الإسلام, كاثوليكية, بوذية, مسلم, سينتولوجيا, المسيحية, يهودية, هندوسية",
+      "index": 4711,
+      "subject_en": "Gupta Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "جلال الدين أكبر",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, كاثوليكية, مسلم, سينتولوجيا, يهودية, هندوسية, بوذية, الإسلام",
+      "index": 4712,
+      "subject_en": "Akbar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "إمام",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, بوذية, هندوسية, المسيحية, يهودية, مسلم, سينتولوجيا, الإسلام",
+      "index": 4713,
+      "subject_en": "Imam",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "لويس الرابع عشر ملك فرنسا",
+      "object": "كاثوليكية",
+      "object_candidates": "الإسلام, بوذية, سينتولوجيا, المسيحية, يهودية, مسلم, هندوسية, كاثوليكية",
+      "index": 4714,
+      "subject_en": "Louis XIV of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "عيد الخمسين",
+      "object": "المسيحية",
+      "object_candidates": "يهودية, مسلم, بوذية, الإسلام, كاثوليكية, هندوسية, سينتولوجيا, المسيحية",
+      "index": 4715,
+      "subject_en": "Pentecost",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "الصلاة الربية",
+      "object": "المسيحية",
+      "object_candidates": "مسلم, كاثوليكية, هندوسية, سينتولوجيا, الإسلام, بوذية, يهودية, المسيحية",
+      "index": 4716,
+      "subject_en": "Lord's Prayer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "إسكندر بك",
+      "object": "المسيحية",
+      "object_candidates": "مسلم, كاثوليكية, سينتولوجيا, الإسلام, هندوسية, يهودية, بوذية, المسيحية",
+      "index": 4717,
+      "subject_en": "Skanderbeg",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "شوغونية توكوغاوا",
+      "object": "بوذية",
+      "object_candidates": "مسلم, المسيحية, يهودية, سينتولوجيا, الإسلام, كاثوليكية, هندوسية, بوذية",
+      "index": 4718,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "هنري الثالث ملك فرنسا",
+      "object": "كاثوليكية",
+      "object_candidates": "يهودية, سينتولوجيا, بوذية, المسيحية, هندوسية, مسلم, الإسلام, كاثوليكية",
+      "index": 4719,
+      "subject_en": "Henry III of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "ملا عمر",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, مسلم, يهودية, المسيحية, سينتولوجيا, بوذية, هندوسية, الإسلام",
+      "index": 4720,
+      "subject_en": "Mohammed Omar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "شارل الخامس ملك فرنسا",
+      "object": "المسيحية",
+      "object_candidates": "هندوسية, سينتولوجيا, بوذية, مسلم, كاثوليكية, يهودية, الإسلام, المسيحية",
+      "index": 4721,
+      "subject_en": "Charles V of France",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "الإمبراطورية الماورية",
+      "object": "هندوسية",
+      "object_candidates": "مسلم, كاثوليكية, سينتولوجيا, يهودية, الإسلام, بوذية, المسيحية, هندوسية",
+      "index": 4722,
+      "subject_en": "Maurya Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "راماكريشنا",
+      "object": "هندوسية",
+      "object_candidates": "مسلم, بوذية, المسيحية, يهودية, سينتولوجيا, كاثوليكية, الإسلام, هندوسية",
+      "index": 4723,
+      "subject_en": "Ramakrishna",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "تشيونتسانغ",
+      "object": "بوذية",
+      "object_candidates": "هندوسية, مسلم, يهودية, سينتولوجيا, الإسلام, المسيحية, كاثوليكية, بوذية",
+      "index": 4724,
+      "subject_en": "Xuanzang",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "عثمان الأول",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, يهودية, كاثوليكية, سينتولوجيا, بوذية, مسلم, المسيحية, الإسلام",
+      "index": 4725,
+      "subject_en": "Osman I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "متى",
+      "object": "المسيحية",
+      "object_candidates": "كاثوليكية, يهودية, مسلم, الإسلام, سينتولوجيا, هندوسية, بوذية, المسيحية",
+      "index": 4726,
+      "subject_en": "Matthew the Apostle",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "محمد الفاتح",
+      "object": "الإسلام",
+      "object_candidates": "مسلم, المسيحية, بوذية, يهودية, سينتولوجيا, هندوسية, كاثوليكية, الإسلام",
+      "index": 4727,
+      "subject_en": "Mehmed the Conqueror",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "حنة آرنت",
+      "object": "يهودية",
+      "object_candidates": "المسيحية, مسلم, سينتولوجيا, الإسلام, هندوسية, كاثوليكية, بوذية, يهودية",
+      "index": 4728,
+      "subject_en": "Hannah Arendt",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "جون ترافولتا",
+      "object": "سينتولوجيا",
+      "object_candidates": "هندوسية, المسيحية, بوذية, الإسلام, كاثوليكية, مسلم, يهودية, سينتولوجيا",
+      "index": 4729,
+      "subject_en": "John Travolta",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "رومولوس أوغستولوس",
+      "object": "المسيحية",
+      "object_candidates": "هندوسية, كاثوليكية, سينتولوجيا, مسلم, الإسلام, بوذية, يهودية, المسيحية",
+      "index": 4730,
+      "subject_en": "Romulus Augustus",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "جوزيف بريستلي",
+      "object": "المسيحية",
+      "object_candidates": "الإسلام, بوذية, سينتولوجيا, كاثوليكية, يهودية, مسلم, هندوسية, المسيحية",
+      "index": 4731,
+      "subject_en": "Joseph Priestley",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "إسكندر بك",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, المسيحية, سينتولوجيا, بوذية, هندوسية, مسلم, كاثوليكية, الإسلام",
+      "index": 4732,
+      "subject_en": "Skanderbeg",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "حافظ الشيرازي",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, سينتولوجيا, المسيحية, مسلم, كاثوليكية, هندوسية, بوذية, الإسلام",
+      "index": 4733,
+      "subject_en": "Hafez",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "جان جاك روسو",
+      "object": "المسيحية",
+      "object_candidates": "هندوسية, كاثوليكية, يهودية, الإسلام, مسلم, بوذية, سينتولوجيا, المسيحية",
+      "index": 4734,
+      "subject_en": "Jean-Jacques Rousseau",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "ألفريد العظيم",
+      "object": "المسيحية",
+      "object_candidates": "مسلم, بوذية, يهودية, هندوسية, سينتولوجيا, كاثوليكية, الإسلام, المسيحية",
+      "index": 4735,
+      "subject_en": "Alfred the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "تشنغ خه",
+      "object": "الإسلام",
+      "object_candidates": "مسلم, سينتولوجيا, بوذية, يهودية, هندوسية, كاثوليكية, المسيحية, الإسلام",
+      "index": 4736,
+      "subject_en": "Zheng He",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "عيد الفطر",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, مسلم, كاثوليكية, سينتولوجيا, يهودية, المسيحية, هندوسية, الإسلام",
+      "index": 4737,
+      "subject_en": "Eid al-Fitr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "جواهر لال نهرو",
+      "object": "هندوسية",
+      "object_candidates": "كاثوليكية, المسيحية, بوذية, سينتولوجيا, مسلم, يهودية, الإسلام, هندوسية",
+      "index": 4738,
+      "subject_en": "Jawaharlal Nehru",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "شاه جهان",
+      "object": "الإسلام",
+      "object_candidates": "مسلم, يهودية, كاثوليكية, هندوسية, سينتولوجيا, بوذية, المسيحية, الإسلام",
+      "index": 4739,
+      "subject_en": "Shah Jahan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "الدولة المرابطية",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, مسلم, يهودية, كاثوليكية, المسيحية, بوذية, هندوسية, الإسلام",
+      "index": 4740,
+      "subject_en": "Almoravid dynasty",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "جمهورية منغوليا الشعبية",
+      "object": "بوذية",
+      "object_candidates": "هندوسية, المسيحية, كاثوليكية, مسلم, الإسلام, سينتولوجيا, يهودية, بوذية",
+      "index": 4741,
+      "subject_en": "Mongolian People's Republic",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "سوين فوركبيرد",
+      "object": "المسيحية",
+      "object_candidates": "الإسلام, كاثوليكية, مسلم, يهودية, سينتولوجيا, هندوسية, بوذية, المسيحية",
+      "index": 4742,
+      "subject_en": "Sweyn I of Denmark",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "سارفيبالي راذاكريشنان",
+      "object": "هندوسية",
+      "object_candidates": "الإسلام, كاثوليكية, مسلم, سينتولوجيا, المسيحية, يهودية, بوذية, هندوسية",
+      "index": 4743,
+      "subject_en": "Sarvepalli Radhakrishnan",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "تاج محل",
+      "object": "الإسلام",
+      "object_candidates": "يهودية, المسيحية, بوذية, سينتولوجيا, مسلم, هندوسية, كاثوليكية, الإسلام",
+      "index": 4744,
+      "subject_en": "Taj Mahal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد مرسي",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, بوذية, يهودية, سينتولوجيا, مسلم, هندوسية, المسيحية, الإسلام",
+      "index": 4745,
+      "subject_en": "Mohamed Morsi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "أحمد الأول",
+      "object": "الإسلام",
+      "object_candidates": "المسيحية, بوذية, يهودية, سينتولوجيا, كاثوليكية, مسلم, هندوسية, الإسلام",
+      "index": 4746,
+      "subject_en": "Ahmed I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "فرانس كافكا",
+      "object": "يهودية",
+      "object_candidates": "الإسلام, مسلم, كاثوليكية, هندوسية, المسيحية, سينتولوجيا, بوذية, يهودية",
+      "index": 4747,
+      "subject_en": "Franz Kafka",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "خليفة بن زايد آل نهيان",
+      "object": "الإسلام",
+      "object_candidates": "سينتولوجيا, بوذية, المسيحية, كاثوليكية, يهودية, مسلم, هندوسية, الإسلام",
+      "index": 4748,
+      "subject_en": "Khalifa bin Zayed Al Nahyan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "إدوارد الأول ملك إنجلترا",
+      "object": "المسيحية",
+      "object_candidates": "الإسلام, كاثوليكية, يهودية, بوذية, سينتولوجيا, هندوسية, مسلم, المسيحية",
+      "index": 4749,
+      "subject_en": "Edward I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "مارلين مونرو",
+      "object": "يهودية",
+      "object_candidates": "كاثوليكية, هندوسية, الإسلام, سينتولوجيا, المسيحية, بوذية, مسلم, يهودية",
+      "index": 4750,
+      "subject_en": "Marilyn Monroe",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "ظهير الدين بابر",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, بوذية, مسلم, سينتولوجيا, هندوسية, يهودية, المسيحية, الإسلام",
+      "index": 4751,
+      "subject_en": "Babur",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "سليم الأول",
+      "object": "الإسلام",
+      "object_candidates": "كاثوليكية, هندوسية, المسيحية, مسلم, يهودية, بوذية, سينتولوجيا, الإسلام",
+      "index": 4752,
+      "subject_en": "Selim I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "فهد بن عبد العزيز آل سعود",
+      "object": "الإسلام",
+      "object_candidates": "بوذية, مسلم, كاثوليكية, سينتولوجيا, يهودية, المسيحية, هندوسية, الإسلام",
+      "index": 4753,
+      "subject_en": "Fahd bin Abdulaziz Al Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "برويز مشرف",
+      "object": "الإسلام",
+      "object_candidates": "هندوسية, مسلم, بوذية, سينتولوجيا, يهودية, كاثوليكية, المسيحية, الإسلام",
+      "index": 4754,
+      "subject_en": "Pervez Musharraf",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "محمد أنور السادات",
+      "object": "الإسلام",
+      "object_candidates": "مسلم, بوذية, يهودية, سينتولوجيا, هندوسية, المسيحية, كاثوليكية, الإسلام",
+      "index": 4755,
+      "subject_en": "Anwar Sadat",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "ليون التاسع",
+      "object": "المسيحية",
+      "object_candidates": "هندوسية, كاثوليكية, يهودية, سينتولوجيا, الإسلام, مسلم, بوذية, المسيحية",
+      "index": 4756,
+      "subject_en": "Leo IX",
+      "object_en": "Christianity"
+    }
+  ],
+  "relation_id": "P140"
+}

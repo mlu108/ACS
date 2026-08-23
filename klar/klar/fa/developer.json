@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "کدام شرکت توسعه‌دهنده <subject> است؟ پاسخ: <mask>",
+    "چه کسی <subject> را توسعه داده است؟ پاسخ: <mask>",
+    "کدام شرکت مسئول توسعه <subject> است؟ پاسخ: <mask>",
+    "توسعه <subject> توسط چه کسی انجام شده است؟ پاسخ: <mask>",
+    "کدام سازمان به خاطر توسعه <subject> شناخته شده است؟ پاسخ: <mask>",
+    " شرکتی که <subject> را توسعه داده نام دارد <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "مک‌اواس",
+      "object": "اپل",
+      "object_candidates": "بوئینگ, آی‌بی‌ام, گوگل, ادوبی, نوکیا, اینتل, نینتندو, مایکروسافت, ایرباس, اپل",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آی‌اواس",
+      "object": "اپل",
+      "object_candidates": "آی‌بی‌ام, گوگل, ادوبی, نینتندو, بوئینگ, ایرباس, نوکیا, اینتل, مایکروسافت, اپل",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "سافاری",
+      "object": "اپل",
+      "object_candidates": "نوکیا, ایرباس, بوئینگ, نینتندو, ادوبی, گوگل, اینتل, آی‌بی‌ام, مایکروسافت, اپل",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "پست‌اسکریپت",
+      "object": "ادوبی",
+      "object_candidates": "اینتل, ایرباس, بوئینگ, نوکیا, گوگل, آی‌بی‌ام, اپل, مایکروسافت, نینتندو, ادوبی",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "ویندوز ویستا",
+      "object": "مایکروسافت",
+      "object_candidates": "نینتندو, نوکیا, گوگل, ادوبی, اپل, بوئینگ, اینتل, ایرباس, آی‌بی‌ام, مایکروسافت",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "اینترنت اکسپلورر",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, گوگل, بوئینگ, آی‌بی‌ام, نینتندو, ایرباس, ادوبی, نوکیا, اینتل, مایکروسافت",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "بوئینگ بی-۱۷ فلایینگ فورترس",
+      "object": "بوئینگ",
+      "object_candidates": "اپل, ایرباس, نینتندو, نوکیا, گوگل, اینتل, مایکروسافت, ادوبی, آی‌بی‌ام, بوئینگ",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "دیرکت‌اکس",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, نینتندو, بوئینگ, ادوبی, آی‌بی‌ام, گوگل, ایرباس, نوکیا, اینتل, مایکروسافت",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت ویندوز",
+      "object": "مایکروسافت",
+      "object_candidates": "نینتندو, اینتل, ادوبی, ایرباس, اپل, گوگل, نوکیا, آی‌بی‌ام, بوئینگ, مایکروسافت",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ایکس‌باکس ۳۶۰",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, گوگل, نینتندو, ادوبی, ایرباس, نوکیا, بوئینگ, آی‌بی‌ام, اینتل, مایکروسافت",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ایکس‌باکس وان",
+      "object": "مایکروسافت",
+      "object_candidates": "ایرباس, ادوبی, بوئینگ, نوکیا, نینتندو, اپل, اینتل, گوگل, آی‌بی‌ام, مایکروسافت",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ام‌اس-داس",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, نوکیا, اپل, گوگل, بوئینگ, ایرباس, نینتندو, آی‌بی‌ام, اینتل, مایکروسافت",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "فورترن",
+      "object": "آی‌بی‌ام",
+      "object_candidates": "ادوبی, ایرباس, گوگل, اپل, اینتل, نینتندو, مایکروسافت, نوکیا, بوئینگ, آی‌بی‌ام",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "ویندوز ۱.۰",
+      "object": "مایکروسافت",
+      "object_candidates": "بوئینگ, نینتندو, نوکیا, اینتل, گوگل, آی‌بی‌ام, اپل, ایرباس, ادوبی, مایکروسافت",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "نینتندو ۳دی‌اس",
+      "object": "نینتندو",
+      "object_candidates": "نوکیا, ایرباس, بوئینگ, مایکروسافت, اینتل, اپل, ادوبی, آی‌بی‌ام, گوگل, نینتندو",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "اینتل ۸۰۳۸۶",
+      "object": "اینتل",
+      "object_candidates": "اپل, آی‌بی‌ام, نوکیا, ایرباس, نینتندو, گوگل, مایکروسافت, بوئینگ, ادوبی, اینتل",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "ویندوز ۱۰",
+      "object": "مایکروسافت",
+      "object_candidates": "نوکیا, نینتندو, آی‌بی‌ام, اپل, اینتل, بوئینگ, ایرباس, ادوبی, گوگل, مایکروسافت",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت اکسل",
+      "object": "مایکروسافت",
+      "object_candidates": "نوکیا, اینتل, بوئینگ, اپل, ادوبی, نینتندو, آی‌بی‌ام, گوگل, ایرباس, مایکروسافت",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت آفیس",
+      "object": "مایکروسافت",
+      "object_candidates": "اینتل, اپل, ادوبی, گوگل, نینتندو, بوئینگ, ایرباس, نوکیا, آی‌بی‌ام, مایکروسافت",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت ورد",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, بوئینگ, اینتل, ایرباس, آی‌بی‌ام, نینتندو, نوکیا, گوگل, اپل, مایکروسافت",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مک اواس",
+      "object": "اپل",
+      "object_candidates": "نوکیا, نینتندو, مایکروسافت, ایرباس, آی‌بی‌ام, ادوبی, اینتل, بوئینگ, گوگل, اپل",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ویندوز ۹۵",
+      "object": "مایکروسافت",
+      "object_candidates": "آی‌بی‌ام, ادوبی, اینتل, گوگل, نوکیا, ایرباس, اپل, نینتندو, بوئینگ, مایکروسافت",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت ویژوال استودیو",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, ادوبی, آی‌بی‌ام, بوئینگ, نینتندو, اینتل, گوگل, ایرباس, نوکیا, مایکروسافت",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ویندوز ۹۸",
+      "object": "مایکروسافت",
+      "object_candidates": "بوئینگ, آی‌بی‌ام, اپل, نینتندو, نوکیا, ایرباس, ادوبی, گوگل, اینتل, مایکروسافت",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ادوبی آکروبات",
+      "object": "ادوبی",
+      "object_candidates": "نوکیا, اپل, مایکروسافت, بوئینگ, ایرباس, آی‌بی‌ام, گوگل, اینتل, نینتندو, ادوبی",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "پی‌دی‌اف",
+      "object": "ادوبی",
+      "object_candidates": "آی‌بی‌ام, نینتندو, اینتل, مایکروسافت, نوکیا, گوگل, اپل, بوئینگ, ایرباس, ادوبی",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "اینتل کور ۲",
+      "object": "اینتل",
+      "object_candidates": "نوکیا, بوئینگ, گوگل, نینتندو, ادوبی, اپل, آی‌بی‌ام, ایرباس, مایکروسافت, اینتل",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "ادوبی فلش",
+      "object": "ادوبی",
+      "object_candidates": "ایرباس, اپل, بوئینگ, نینتندو, نوکیا, اینتل, آی‌بی‌ام, گوگل, مایکروسافت, ادوبی",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "سیمبیان",
+      "object": "نوکیا",
+      "object_candidates": "ایرباس, مایکروسافت, اپل, آی‌بی‌ام, اینتل, گوگل, نینتندو, بوئینگ, ادوبی, نوکیا",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "ویندوز فون",
+      "object": "مایکروسافت",
+      "object_candidates": "گوگل, ایرباس, آی‌بی‌ام, نینتندو, بوئینگ, اپل, اینتل, ادوبی, نوکیا, مایکروسافت",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "پنتیوم",
+      "object": "اینتل",
+      "object_candidates": "مایکروسافت, آی‌بی‌ام, بوئینگ, گوگل, نینتندو, ایرباس, اپل, ادوبی, نوکیا, اینتل",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "اَدوبی فوتوشاپ",
+      "object": "ادوبی",
+      "object_candidates": "اپل, اینتل, بوئینگ, نینتندو, نوکیا, مایکروسافت, ایرباس, آی‌بی‌ام, گوگل, ادوبی",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "کوئیک‌تایم",
+      "object": "اپل",
+      "object_candidates": "بوئینگ, آی‌بی‌ام, اینتل, ادوبی, گوگل, ایرباس, نینتندو, نوکیا, مایکروسافت, اپل",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "وی یو",
+      "object": "نینتندو",
+      "object_candidates": "آی‌بی‌ام, اپل, گوگل, بوئینگ, اینتل, نوکیا, مایکروسافت, ایرباس, ادوبی, نینتندو",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "ویندوز اکس‌پی",
+      "object": "مایکروسافت",
+      "object_candidates": "نوکیا, بوئینگ, نینتندو, اینتل, گوگل, آی‌بی‌ام, اپل, ایرباس, ادوبی, مایکروسافت",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ویندوز ۲۰۰۰",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, نینتندو, اینتل, ایرباس, نوکیا, اپل, گوگل, بوئینگ, آی‌بی‌ام, مایکروسافت",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ان‌تی‌اف‌اس",
+      "object": "مایکروسافت",
+      "object_candidates": "اینتل, بوئینگ, اپل, ادوبی, نینتندو, ایرباس, نوکیا, گوگل, آی‌بی‌ام, مایکروسافت",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ویندوز ۸",
+      "object": "مایکروسافت",
+      "object_candidates": "اینتل, گوگل, ادوبی, نوکیا, نینتندو, ایرباس, بوئینگ, اپل, آی‌بی‌ام, مایکروسافت",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "آی‌پاد",
+      "object": "اپل",
+      "object_candidates": "مایکروسافت, گوگل, آی‌بی‌ام, اینتل, ادوبی, ایرباس, نوکیا, نینتندو, بوئینگ, اپل",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "جیمیل",
+      "object": "گوگل",
+      "object_candidates": "بوئینگ, ایرباس, مایکروسافت, نوکیا, اپل, اینتل, آی‌بی‌ام, ادوبی, نینتندو, گوگل",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل مپس",
+      "object": "گوگل",
+      "object_candidates": "اپل, نوکیا, آی‌بی‌ام, ایرباس, نینتندو, مایکروسافت, ادوبی, بوئینگ, اینتل, گوگل",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "پیام‌رسان ویندوز لایو",
+      "object": "مایکروسافت",
+      "object_candidates": "بوئینگ, اینتل, ادوبی, اپل, آی‌بی‌ام, گوگل, ایرباس, نینتندو, نوکیا, مایکروسافت",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "گوگل استریت ویو",
+      "object": "گوگل",
+      "object_candidates": "بوئینگ, ادوبی, نوکیا, مایکروسافت, ایرباس, اینتل, آی‌بی‌ام, نینتندو, اپل, گوگل",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ویندوز مدیا پلیر",
+      "object": "مایکروسافت",
+      "object_candidates": "اینتل, نینتندو, ایرباس, ادوبی, بوئینگ, آی‌بی‌ام, نوکیا, اپل, گوگل, مایکروسافت",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "چارچوب دات‌نت",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, اینتل, گوگل, نوکیا, ایرباس, نینتندو, آی‌بی‌ام, بوئینگ, اپل, مایکروسافت",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "به‌روزرسانی ویندوز",
+      "object": "مایکروسافت",
+      "object_candidates": "بوئینگ, ادوبی, اینتل, اپل, ایرباس, آی‌بی‌ام, نوکیا, نینتندو, گوگل, مایکروسافت",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "بوئینگ بی-۵۲ استراتوفورترس",
+      "object": "بوئینگ",
+      "object_candidates": "ایرباس, اپل, نینتندو, آی‌بی‌ام, مایکروسافت, ادوبی, اینتل, گوگل, نوکیا, بوئینگ",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "آی‌تیونز",
+      "object": "اپل",
+      "object_candidates": "نینتندو, مایکروسافت, اینتل, گوگل, نوکیا, آی‌بی‌ام, ایرباس, ادوبی, بوئینگ, اپل",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ویندوز ۲٫۰",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, نینتندو, نوکیا, بوئینگ, آی‌بی‌ام, اینتل, ایرباس, ادوبی, گوگل, مایکروسافت",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "گوگل ادسنس",
+      "object": "گوگل",
+      "object_candidates": "ادوبی, مایکروسافت, ایرباس, اپل, نوکیا, آی‌بی‌ام, اینتل, نینتندو, بوئینگ, گوگل",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ویندوز ۷",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, نوکیا, ایرباس, اپل, نینتندو, آی‌بی‌ام, گوگل, بوئینگ, اینتل, مایکروسافت",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ایرباس آ-۳۵۰",
+      "object": "ایرباس",
+      "object_candidates": "اپل, ادوبی, نینتندو, اینتل, نوکیا, گوگل, بوئینگ, آی‌بی‌ام, مایکروسافت, ایرباس",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "پیکاسا",
+      "object": "گوگل",
+      "object_candidates": "نوکیا, نینتندو, بوئینگ, ایرباس, آی‌بی‌ام, ادوبی, اینتل, مایکروسافت, اپل, گوگل",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل ارت",
+      "object": "گوگل",
+      "object_candidates": "نینتندو, بوئینگ, مایکروسافت, آی‌بی‌ام, ایرباس, نوکیا, ادوبی, اینتل, اپل, گوگل",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل پلی",
+      "object": "گوگل",
+      "object_candidates": "ایرباس, اینتل, آی‌بی‌ام, نوکیا, ادوبی, اپل, مایکروسافت, نینتندو, بوئینگ, گوگل",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "آی‌کلاد",
+      "object": "اپل",
+      "object_candidates": "نوکیا, نینتندو, مایکروسافت, گوگل, ادوبی, اینتل, ایرباس, آی‌بی‌ام, بوئینگ, اپل",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "سیری",
+      "object": "اپل",
+      "object_candidates": "اینتل, آی‌بی‌ام, نوکیا, مایکروسافت, ادوبی, نینتندو, بوئینگ, ایرباس, گوگل, اپل",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "اپ استور",
+      "object": "اپل",
+      "object_candidates": "اینتل, آی‌بی‌ام, ادوبی, بوئینگ, نینتندو, گوگل, نوکیا, مایکروسافت, ایرباس, اپل",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "مایکروسافت اکسس",
+      "object": "مایکروسافت",
+      "object_candidates": "اینتل, نینتندو, ایرباس, اپل, بوئینگ, ادوبی, گوگل, آی‌بی‌ام, نوکیا, مایکروسافت",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "اپل واچ",
+      "object": "اپل",
+      "object_candidates": "گوگل, مایکروسافت, ایرباس, اینتل, نوکیا, ادوبی, نینتندو, آی‌بی‌ام, بوئینگ, اپل",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آی‌بوکس",
+      "object": "اپل",
+      "object_candidates": "مایکروسافت, ایرباس, بوئینگ, آی‌بی‌ام, نینتندو, ادوبی, اینتل, گوگل, نوکیا, اپل",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "گوگل درایو",
+      "object": "گوگل",
+      "object_candidates": "نینتندو, آی‌بی‌ام, بوئینگ, ادوبی, نوکیا, مایکروسافت, اپل, اینتل, ایرباس, گوگل",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل هنگ اوت",
+      "object": "گوگل",
+      "object_candidates": "ایرباس, مایکروسافت, ادوبی, نوکیا, آی‌بی‌ام, نینتندو, اینتل, اپل, بوئینگ, گوگل",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "تقویم گوگل",
+      "object": "گوگل",
+      "object_candidates": "مایکروسافت, اپل, آی‌بی‌ام, ادوبی, نینتندو, نوکیا, بوئینگ, اینتل, ایرباس, گوگل",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "اسکایپ",
+      "object": "مایکروسافت",
+      "object_candidates": "گوگل, آی‌بی‌ام, اینتل, ایرباس, اپل, نینتندو, بوئینگ, نوکیا, ادوبی, مایکروسافت",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ادوبی این‌دیزاین",
+      "object": "ادوبی",
+      "object_candidates": "گوگل, اپل, آی‌بی‌ام, ایرباس, مایکروسافت, نینتندو, اینتل, بوئینگ, نوکیا, ادوبی",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "مایکروسافت اِستوُر",
+      "object": "مایکروسافت",
+      "object_candidates": "ایرباس, نوکیا, گوگل, آی‌بی‌ام, ادوبی, نینتندو, بوئینگ, اپل, اینتل, مایکروسافت",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "اینتل ام‌سی‌اس-۵۱",
+      "object": "اینتل",
+      "object_candidates": "آی‌بی‌ام, ایرباس, نوکیا, نینتندو, مایکروسافت, اپل, گوگل, ادوبی, بوئینگ, اینتل",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "بلاگر",
+      "object": "گوگل",
+      "object_candidates": "اپل, ادوبی, نوکیا, بوئینگ, مایکروسافت, اینتل, نینتندو, ایرباس, آی‌بی‌ام, گوگل",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل کروم",
+      "object": "گوگل",
+      "object_candidates": "آی‌بی‌ام, مایکروسافت, بوئینگ, نینتندو, اپل, اینتل, نوکیا, ایرباس, ادوبی, گوگل",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ترجمه‌گر گوگل",
+      "object": "گوگل",
+      "object_candidates": "بوئینگ, ادوبی, اپل, آی‌بی‌ام, مایکروسافت, ایرباس, نوکیا, اینتل, نینتندو, گوگل",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "پروژه عینک",
+      "object": "گوگل",
+      "object_candidates": "مایکروسافت, بوئینگ, آی‌بی‌ام, نوکیا, ادوبی, نینتندو, اپل, اینتل, ایرباس, گوگل",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ویندوز موبایل",
+      "object": "مایکروسافت",
+      "object_candidates": "ایرباس, ادوبی, اپل, نینتندو, بوئینگ, نوکیا, اینتل, آی‌بی‌ام, گوگل, مایکروسافت",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ویندوز ام‌ای",
+      "object": "مایکروسافت",
+      "object_candidates": "نینتندو, اینتل, بوئینگ, اپل, نوکیا, ایرباس, آی‌بی‌ام, ادوبی, گوگل, مایکروسافت",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ماینکرفت",
+      "object": "مایکروسافت",
+      "object_candidates": "گوگل, بوئینگ, نینتندو, آی‌بی‌ام, ایرباس, نوکیا, اپل, اینتل, ادوبی, مایکروسافت",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مایکروسافت سکیوریتی اسنشالز",
+      "object": "مایکروسافت",
+      "object_candidates": "ادوبی, اپل, بوئینگ, آی‌بی‌ام, نوکیا, گوگل, ایرباس, نینتندو, اینتل, مایکروسافت",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "في أي مجال يعمل <subject>? الإجابة هي: <mask>",
+    "في أي مجال من المعروف أن <subject> عمل فيه؟ الإجابة هي: <mask>",
+    "ما هي المجال الدراسي المرتبط بـ <subject>? الجواب هو: <mask>",
+    "بأي تخصص يشتهر <subject> في العمل؟ الجواب هو: <mask>",
+    "ما هو المجال الرئيسي لخبرة <subject>? الجواب هو: <mask>",
+    " مجال عمل <subject> هو <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "آلان تورنغ",
+      "object": "منطق",
+      "object_candidates": "علم وظائف الأعضاء, علم النفس, أبارتيد, روائي, طائر, نادي ليلي, طب, موسيقي, بوذية, منطق",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "أناكساغوراس",
+      "object": "فلسفة",
+      "object_candidates": "هندسة رياضية, علم الفلك, علم الأحياء, لسانيات, علم النفس, أوبرا, منطق, إرهاب, علم الوراثة, فلسفة",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "روبرت بنزن",
+      "object": "كيمياء",
+      "object_candidates": "بوذية, فيزياء, كاتب مسرحي, عالم فلك, لسانيات, تشريح, أوبرا, روائي, علم الأحياء, كيمياء",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "جان كالفن",
+      "object": "إلهيات",
+      "object_candidates": "تاريخ, تشريح, منطق, فيزياء, علم النفس, جغرافيا, رياضيات, جيولوجيا, هندسة رياضية, إلهيات",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "نظام فيزيائي",
+      "object": "فيزياء",
+      "object_candidates": "إرهاب, علم النفس, تاريخ, طوبولوجيا, موسيقي, عالم فلك, أوبرا, جغرافيا, اقتصاد, فيزياء",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "كارل روجرز",
+      "object": "علم النفس",
+      "object_candidates": "لسانيات, منطق, أبارتيد, طوبولوجيا, علم الوراثة, علم وظائف الأعضاء, بوذية, علم, عالم فلك, علم النفس",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "ديفيد هيلبرت",
+      "object": "هندسة رياضية",
+      "object_candidates": "اقتصادي, جغرافيا, طوبولوجيا, رياضيات, علم الاجتماع, موقع ويب, كاتب مسرحي, علم البيئة, أبارتيد, هندسة رياضية",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ريتشارد فاغنر",
+      "object": "أوبرا",
+      "object_candidates": "موقع ويب, رياضياتي, طائر, رياضيات, فلسفة, اقتصاد, بوذية, نادي ليلي, فيزياء, أوبرا",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "إقليدس",
+      "object": "هندسة رياضية",
+      "object_candidates": "موقع ويب, علم الوراثة, إرهاب, لسانيات, نادي ليلي, اقتصاد, عالم فلك, جيولوجيا, منطق, هندسة رياضية",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ماكس فيبر",
+      "object": "علم الاجتماع",
+      "object_candidates": "اقتصاد, كيمياء, موسيقي, جيولوجيا, إرهاب, رياضيات, علم الفلك, طوبولوجيا, علم, علم الاجتماع",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "هانز آيزنك",
+      "object": "علم النفس",
+      "object_candidates": "كيمياء, علم وظائف الأعضاء, موسيقي, موقع ويب, اقتصادي, روائي, تشريح, فيزياء, عالم فلك, علم النفس",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "يوجين ويغنر",
+      "object": "فيزياء",
+      "object_candidates": "كاتب مسرحي, اقتصادي, جغرافيا, أبارتيد, لسانيات, طب, كيمياء, هندسة رياضية, إرهاب, فيزياء",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "فريد هويل",
+      "object": "علم الفلك",
+      "object_candidates": "طوبولوجيا, أبارتيد, إرهاب, علم الأحياء, فلسفة, طب, اقتصاد, تشريح, رياضياتي, علم الفلك",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "جالينوس",
+      "object": "تشريح",
+      "object_candidates": "أوبرا, رياضيات, اقتصادي, علم النفس, علم وظائف الأعضاء, فيزياء, موقع ويب, طب, عالم فلك, تشريح",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "ويليام هارفي",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "علم الأحياء, طب, علم الوراثة, موسيقي, لسانيات, تشريح, منطق, كيمياء, اقتصادي, علم وظائف الأعضاء",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "هوارد كارتر",
+      "object": "علم الآثار",
+      "object_candidates": "لسانيات, هندسة رياضية, إلهيات, جغرافيا, علم وظائف الأعضاء, إرهاب, رياضياتي, رياضيات, اقتصاد, علم الآثار",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "هاينريش شليمان",
+      "object": "علم الآثار",
+      "object_candidates": "موسيقي, اقتصاد, منطق, كاتب مسرحي, علم الأحياء, جاز, أوبرا, فيزياء, علم الفلك, علم الآثار",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "كلود برنارد",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "طب, علم الأحياء, تاريخ, اقتصادي, كيمياء, اقتصاد, أبارتيد, طوبولوجيا, هندسة رياضية, علم وظائف الأعضاء",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "إسحاق نيوتن",
+      "object": "رياضيات",
+      "object_candidates": "أوبرا, جيولوجيا, علم وظائف الأعضاء, هندسة رياضية, فيزياء, طائر, علم النفس, علم الآثار, تاريخ, رياضيات",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "يوستوس فون ليبيغ",
+      "object": "كيمياء",
+      "object_candidates": "أوبرا, كاتب مسرحي, طائر, فلسفة, نادي ليلي, علم الوراثة, علم البيئة, علم الآثار, موقع ويب, كيمياء",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "فردريك بانتنغ",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "رياضياتي, موسيقي, هندسة رياضية, رياضيات, روائي, إرهاب, منطق, أوبرا, بوذية, علم وظائف الأعضاء",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "كارل ماركس",
+      "object": "علم الاجتماع",
+      "object_candidates": "علم البيئة, إرهاب, طوبولوجيا, رياضياتي, طب, عالم فلك, إلهيات, منطق, جاز, علم الاجتماع",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "هانز بيته",
+      "object": "فيزياء",
+      "object_candidates": "أبارتيد, بوذية, علم, تشريح, موقع ويب, جيولوجيا, علم الأحياء, علم الفلك, لسانيات, فيزياء",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جاك روبي",
+      "object": "نادي ليلي",
+      "object_candidates": "جيولوجيا, كيمياء, علم الفلك, رياضيات, جاز, علم وظائف الأعضاء, فيزياء, علم النفس, علم الاجتماع, نادي ليلي",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "بيرسي ويليامز بريجمان",
+      "object": "فيزياء",
+      "object_candidates": "جيولوجيا, طائر, طب, جغرافيا, روائي, فلسفة, علم وظائف الأعضاء, نادي ليلي, رياضياتي, فيزياء",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جيرولامو كاردانو",
+      "object": "رياضيات",
+      "object_candidates": "علم, علم الاجتماع, اقتصادي, طائر, موقع ويب, علم الفلك, روائي, طوبولوجيا, تشريح, رياضيات",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ماكس فيبر",
+      "object": "اقتصاد",
+      "object_candidates": "طب, موسيقي, فيزياء, طوبولوجيا, اقتصادي, عالم فلك, بوذية, هندسة رياضية, إرهاب, اقتصاد",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "مايكل فاراداي",
+      "object": "كيمياء",
+      "object_candidates": "موسيقي, طوبولوجيا, إرهاب, فيزياء, علم الوراثة, أوبرا, جيولوجيا, جغرافيا, علم الأحياء, كيمياء",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "علم الطيور",
+      "object": "طائر",
+      "object_candidates": "كاتب مسرحي, تاريخ, بوذية, إلهيات, طوبولوجيا, فلسفة, روائي, علم وظائف الأعضاء, رياضياتي, طائر",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "بونافنتورا كافاليري",
+      "object": "رياضيات",
+      "object_candidates": "رياضياتي, علم الاجتماع, اقتصادي, جغرافيا, نادي ليلي, علم البيئة, موسيقي, أوبرا, علم الأحياء, رياضيات",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "غاليليو غاليلي",
+      "object": "رياضيات",
+      "object_candidates": "روائي, إلهيات, اقتصادي, كاتب مسرحي, علم الوراثة, علم الاجتماع, علم النفس, علم الآثار, نادي ليلي, رياضيات",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "هيباتيا",
+      "object": "رياضيات",
+      "object_candidates": "فيزياء, لسانيات, روائي, طب, رياضياتي, هندسة رياضية, علم وظائف الأعضاء, اقتصادي, علم الفلك, رياضيات",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ميغيل سيرفيت",
+      "object": "إلهيات",
+      "object_candidates": "علم البيئة, اقتصادي, هندسة رياضية, لسانيات, علم النفس, جاز, فيزياء, تشريح, اقتصاد, إلهيات",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "إدوين هابل",
+      "object": "علم الفلك",
+      "object_candidates": "طوبولوجيا, فلسفة, علم الاجتماع, رياضياتي, موقع ويب, رياضيات, أبارتيد, بوذية, تشريح, علم الفلك",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "إسحاق نيوتن",
+      "object": "فيزياء",
+      "object_candidates": "علم النفس, طب, إلهيات, رياضياتي, علم الفلك, تشريح, كاتب مسرحي, أوبرا, علم البيئة, فيزياء",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "إيليا بريغوجين",
+      "object": "فيزياء",
+      "object_candidates": "طب, موسيقي, أوبرا, طوبولوجيا, فلسفة, رياضياتي, علم النفس, إرهاب, تاريخ, فيزياء",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "نسبية لغوية",
+      "object": "لسانيات",
+      "object_candidates": "علم, علم البيئة, رياضياتي, اقتصادي, تشريح, أبارتيد, علم الوراثة, علم وظائف الأعضاء, إرهاب, لسانيات",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "المنهج العلمي",
+      "object": "علم",
+      "object_candidates": "تشريح, فلسفة, كاتب مسرحي, تاريخ, موقع ويب, روائي, علم البيئة, اقتصاد, جيولوجيا, علم",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "وليام كروكس",
+      "object": "كيمياء",
+      "object_candidates": "جيولوجيا, موسيقي, إلهيات, اقتصادي, جغرافيا, تشريح, طوبولوجيا, أوبرا, علم البيئة, كيمياء",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ستيف بيكو",
+      "object": "أبارتيد",
+      "object_candidates": "لسانيات, رياضيات, علم النفس, رياضياتي, موقع ويب, موسيقي, جغرافيا, إلهيات, تاريخ, أبارتيد",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "تشارلز داروين",
+      "object": "علم الأحياء",
+      "object_candidates": "نادي ليلي, علم الاجتماع, أوبرا, إرهاب, بوذية, فيزياء, جغرافيا, علم, إلهيات, علم الأحياء",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "تيخو براهي",
+      "object": "علم الفلك",
+      "object_candidates": "بوذية, نادي ليلي, فيزياء, علم الأحياء, طب, رياضياتي, علم النفس, فلسفة, موسيقي, علم الفلك",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "جون ستيوارت مل",
+      "object": "فلسفة",
+      "object_candidates": "عالم فلك, علم الفلك, طائر, علم الاجتماع, علم البيئة, جاز, علم الوراثة, منطق, جيولوجيا, فلسفة",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "آلان تورنغ",
+      "object": "رياضيات",
+      "object_candidates": "موقع ويب, إلهيات, عالم فلك, علم الوراثة, تشريح, فيزياء, موسيقي, طائر, رياضياتي, رياضيات",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "فيلفريدو باريتو",
+      "object": "علم الاجتماع",
+      "object_candidates": "علم النفس, أوبرا, لسانيات, رياضيات, علم الأحياء, جاز, عالم فلك, طوبولوجيا, تشريح, علم الاجتماع",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "سومرست موم",
+      "object": "كاتب مسرحي",
+      "object_candidates": "جيولوجيا, علم الوراثة, عالم فلك, علم الفلك, علم الاجتماع, علم البيئة, علم الآثار, إرهاب, علم وظائف الأعضاء, كاتب مسرحي",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "سومرست موم",
+      "object": "روائي",
+      "object_candidates": "اقتصاد, علم وظائف الأعضاء, منطق, علم الآثار, هندسة رياضية, اقتصادي, علم, أوبرا, كيمياء, روائي",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "إنريكو فيرمي",
+      "object": "فيزياء",
+      "object_candidates": "علم النفس, إرهاب, طائر, كيمياء, علم وظائف الأعضاء, موسيقي, موقع ويب, فلسفة, طب, فيزياء",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جيوفاني دومينيكو كاسيني",
+      "object": "علم الفلك",
+      "object_candidates": "تشريح, بوذية, هندسة رياضية, روائي, فلسفة, منطق, جيولوجيا, رياضياتي, عالم فلك, علم الفلك",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "يوهان غوته",
+      "object": "تشريح",
+      "object_candidates": "علم النفس, رياضيات, فلسفة, موسيقي, إرهاب, اقتصادي, موقع ويب, بوذية, طائر, تشريح",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "براكلسوس",
+      "object": "طب",
+      "object_candidates": "رياضياتي, بوذية, أوبرا, علم, اقتصادي, إرهاب, عالم فلك, كاتب مسرحي, اقتصاد, طب",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "جون كولترين",
+      "object": "جاز",
+      "object_candidates": "روائي, تشريح, علم الفلك, جغرافيا, علم وظائف الأعضاء, لسانيات, أوبرا, علم النفس, علم الأحياء, جاز",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "فيزياء",
+      "object_candidates": "تاريخ, جغرافيا, طب, موقع ويب, علم, أبارتيد, اقتصادي, طائر, هندسة رياضية, فيزياء",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جالينوس",
+      "object": "طب",
+      "object_candidates": "منطق, علم الأحياء, رياضياتي, لسانيات, علم الوراثة, عالم فلك, علم الاجتماع, أبارتيد, إرهاب, طب",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "أبراهام ماسلو",
+      "object": "علم النفس",
+      "object_candidates": "روائي, تشريح, جيولوجيا, عالم فلك, كيمياء, رياضياتي, نادي ليلي, موسيقي, علم البيئة, علم النفس",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "لويس باستور",
+      "object": "كيمياء",
+      "object_candidates": "علم, بوذية, علم وظائف الأعضاء, علم الاجتماع, فلسفة, علم الآثار, أبارتيد, طائر, طوبولوجيا, كيمياء",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "هنري كافنديش",
+      "object": "فيزياء",
+      "object_candidates": "طائر, علم الآثار, موقع ويب, تاريخ, رياضيات, علم الوراثة, موسيقي, جيولوجيا, تشريح, فيزياء",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "كارل ماركس",
+      "object": "اقتصاد",
+      "object_candidates": "علم الآثار, بوذية, عالم فلك, طوبولوجيا, أبارتيد, إلهيات, تشريح, علم وظائف الأعضاء, طب, اقتصاد",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "أولف فون أولر",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "طوبولوجيا, طب, علم الاجتماع, كاتب مسرحي, إلهيات, فيزياء, رياضيات, أوبرا, هندسة رياضية, علم وظائف الأعضاء",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "غاليليو غاليلي",
+      "object": "علم الفلك",
+      "object_candidates": "كيمياء, نادي ليلي, علم, منطق, بوذية, أوبرا, هندسة رياضية, طب, علم الأحياء, علم الفلك",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "نيكولاي لوباتشيفسكي",
+      "object": "هندسة رياضية",
+      "object_candidates": "إلهيات, بوذية, منطق, روائي, علم الاجتماع, جغرافيا, أبارتيد, علم النفس, جيولوجيا, هندسة رياضية",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "كريستيان هوغنس",
+      "object": "رياضيات",
+      "object_candidates": "جاز, تاريخ, اقتصادي, إرهاب, كيمياء, منطق, فيزياء, علم الفلك, طائر, رياضيات",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "تطبيق ويب",
+      "object": "موقع ويب",
+      "object_candidates": "تاريخ, هندسة رياضية, علم الأحياء, جيولوجيا, بوذية, أوبرا, علم النفس, علم وظائف الأعضاء, كيمياء, موقع ويب",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "ناجارجونا",
+      "object": "بوذية",
+      "object_candidates": "منطق, رياضياتي, فيزياء, طائر, علم البيئة, جاز, تشريح, روائي, موقع ويب, بوذية",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "وليم روان هاملتون",
+      "object": "رياضيات",
+      "object_candidates": "علم, اقتصادي, هندسة رياضية, علم الآثار, عالم فلك, جغرافيا, موقع ويب, لسانيات, كيمياء, رياضيات",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "إرنست رذرفورد",
+      "object": "فيزياء",
+      "object_candidates": "إرهاب, تاريخ, اقتصادي, لسانيات, علم الآثار, طوبولوجيا, تشريح, علم البيئة, رياضياتي, فيزياء",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ويليام هيرشل",
+      "object": "علم الفلك",
+      "object_candidates": "علم, جيولوجيا, إلهيات, أوبرا, فلسفة, تاريخ, علم الأحياء, علم الآثار, بوذية, علم الفلك",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "إيفان بافلوف",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "أبارتيد, علم النفس, عالم فلك, نادي ليلي, علم الأحياء, اقتصادي, فيزياء, جغرافيا, علم الاجتماع, علم وظائف الأعضاء",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "هيرمان مينكوفسكي",
+      "object": "هندسة رياضية",
+      "object_candidates": "إرهاب, موقع ويب, إلهيات, طب, فيزياء, طوبولوجيا, نادي ليلي, علم الوراثة, رياضيات, هندسة رياضية",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "غاليليو غاليلي",
+      "object": "فيزياء",
+      "object_candidates": "هندسة رياضية, نادي ليلي, علم البيئة, طوبولوجيا, طائر, منطق, إرهاب, موسيقي, كاتب مسرحي, فيزياء",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جوليان شفينجر",
+      "object": "فيزياء",
+      "object_candidates": "لسانيات, علم وظائف الأعضاء, طوبولوجيا, تشريح, علم, علم الاجتماع, جغرافيا, كيمياء, إلهيات, فيزياء",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "عملية انتحارية",
+      "object": "إرهاب",
+      "object_candidates": "طوبولوجيا, علم النفس, فلسفة, جغرافيا, علم الآثار, لسانيات, إلهيات, هندسة رياضية, طائر, إرهاب",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "ليف سيمينوفيتش فيغوتسكي",
+      "object": "علم النفس",
+      "object_candidates": "طب, جاز, منطق, جغرافيا, علم الوراثة, رياضيات, نادي ليلي, اقتصادي, كاتب مسرحي, علم النفس",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "كارل ماركس",
+      "object": "فلسفة",
+      "object_candidates": "علم النفس, إرهاب, فيزياء, نادي ليلي, علم البيئة, جيولوجيا, علم, عالم فلك, موسيقي, فلسفة",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "فريدريش بيسل",
+      "object": "رياضيات",
+      "object_candidates": "نادي ليلي, لسانيات, إلهيات, طوبولوجيا, علم وظائف الأعضاء, علم الأحياء, أوبرا, جيولوجيا, منطق, رياضيات",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "جوزيف شومبيتر",
+      "object": "اقتصاد",
+      "object_candidates": "علم الآثار, نادي ليلي, طب, علم الاجتماع, فلسفة, جاز, رياضياتي, منطق, إلهيات, اقتصاد",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "ماكس فيبر",
+      "object": "تاريخ",
+      "object_candidates": "طائر, جغرافيا, تشريح, علم, عالم فلك, علم الأحياء, علم الوراثة, نادي ليلي, علم البيئة, تاريخ",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "إدوارد جيبون",
+      "object": "تاريخ",
+      "object_candidates": "لسانيات, إرهاب, جغرافيا, فلسفة, إلهيات, علم الاجتماع, أبارتيد, كاتب مسرحي, علم وظائف الأعضاء, تاريخ",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "جون أرشيبالد ويلر",
+      "object": "فيزياء",
+      "object_candidates": "علم الاجتماع, إرهاب, نادي ليلي, علم الأحياء, موقع ويب, أبارتيد, جغرافيا, علم النفس, تشريح, فيزياء",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ليونهارت أويلر",
+      "object": "فيزياء",
+      "object_candidates": "بوذية, جغرافيا, رياضيات, علم النفس, رياضياتي, جاز, جيولوجيا, أبارتيد, لسانيات, فيزياء",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "أوغست كروغ",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "علم الأحياء, علم الآثار, منطق, نادي ليلي, بوذية, جيولوجيا, تشريح, موقع ويب, اقتصاد, علم وظائف الأعضاء",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Felix Bloch",
+      "object": "فيزياء",
+      "object_candidates": "أبارتيد, علم, رياضياتي, علم النفس, رياضيات, جغرافيا, روائي, أوبرا, علم وظائف الأعضاء, فيزياء",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "أندرس سلسيوس",
+      "object": "علم الفلك",
+      "object_candidates": "اقتصادي, كيمياء, علم الأحياء, عالم فلك, علم وظائف الأعضاء, تشريح, طائر, موقع ويب, هندسة رياضية, علم الفلك",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "أبارتيد, إلهيات, نادي ليلي, علم الفلك, جغرافيا, بوذية, لسانيات, منطق, علم البيئة, علم وظائف الأعضاء",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "جوزيف فون فراونهوفر",
+      "object": "فيزياء",
+      "object_candidates": "طب, موسيقي, علم, علم البيئة, رياضيات, جاز, كيمياء, رياضياتي, علم الآثار, فيزياء",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "شينيتشيرو توموناغا",
+      "object": "فيزياء",
+      "object_candidates": "منطق, جيولوجيا, فلسفة, إلهيات, عالم فلك, اقتصادي, بوذية, علم, علم النفس, فيزياء",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هيرمان شفارز",
+      "object": "رياضيات",
+      "object_candidates": "عالم فلك, علم النفس, كاتب مسرحي, فيزياء, نادي ليلي, موسيقي, هندسة رياضية, علم الفلك, علم وظائف الأعضاء, رياضيات",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "لورن دالمبير",
+      "object": "رياضيات",
+      "object_candidates": "كيمياء, روائي, علم وظائف الأعضاء, علم الوراثة, فلسفة, علم الأحياء, طب, علم الآثار, موسيقي, رياضيات",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "لوكا باتشولي",
+      "object": "رياضيات",
+      "object_candidates": "طب, عالم فلك, لسانيات, علم النفس, علم الفلك, طائر, فلسفة, بوذية, علم الأحياء, رياضيات",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "فيتالي غينزبورغ",
+      "object": "فيزياء",
+      "object_candidates": "جغرافيا, جاز, علم الآثار, كاتب مسرحي, طوبولوجيا, علم الفلك, طائر, فلسفة, كيمياء, فيزياء",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "سيما شيان",
+      "object": "تاريخ",
+      "object_candidates": "طب, جيولوجيا, نادي ليلي, طائر, تشريح, موقع ويب, علم البيئة, كاتب مسرحي, إرهاب, تاريخ",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "بطليموس",
+      "object": "رياضياتي",
+      "object_candidates": "كاتب مسرحي, طائر, إرهاب, طوبولوجيا, طب, عالم فلك, هندسة رياضية, علم, موسيقي, رياضياتي",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "جان بياجيه",
+      "object": "علم النفس",
+      "object_candidates": "أوبرا, منطق, علم الاجتماع, بوذية, إلهيات, كيمياء, موقع ويب, تشريح, علم الآثار, علم النفس",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "ستيفن باناخ",
+      "object": "رياضيات",
+      "object_candidates": "منطق, علم الفلك, علم الأحياء, علم الآثار, علم وظائف الأعضاء, علم, علم الاجتماع, إرهاب, طوبولوجيا, رياضيات",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "جوزيف بريستلي",
+      "object": "فلسفة",
+      "object_candidates": "فيزياء, علم النفس, اقتصاد, تشريح, طب, إرهاب, كاتب مسرحي, هندسة رياضية, رياضيات, فلسفة",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "كورت ليفين",
+      "object": "علم النفس",
+      "object_candidates": "كيمياء, كاتب مسرحي, تشريح, اقتصاد, علم الفلك, اقتصادي, منطق, أوبرا, بوذية, علم النفس",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "جيمس كليرك ماكسويل",
+      "object": "فيزياء",
+      "object_candidates": "طب, جغرافيا, علم النفس, اقتصاد, أوبرا, علم الفلك, إرهاب, بوذية, علم الأحياء, فيزياء",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ألفرد مارشال",
+      "object": "اقتصاد",
+      "object_candidates": "فيزياء, جغرافيا, علم الأحياء, بوذية, علم, هندسة رياضية, علم الفلك, رياضياتي, منطق, اقتصاد",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "نيكولاس كوبرنيكوس",
+      "object": "علم الفلك",
+      "object_candidates": "منطق, طوبولوجيا, علم الآثار, علم, طائر, جغرافيا, إرهاب, نادي ليلي, علم الأحياء, علم الفلك",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "إيريك ماسكين",
+      "object": "اقتصادي",
+      "object_candidates": "بوذية, روائي, علم الفلك, علم, علم البيئة, علم الاجتماع, تشريح, عالم فلك, طب, اقتصادي",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "جارد دايموند",
+      "object": "علم البيئة",
+      "object_candidates": "كيمياء, علم الآثار, جيولوجيا, منطق, فيزياء, موقع ويب, علم, عالم فلك, أبارتيد, علم البيئة",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "أندريه كولموغوروف",
+      "object": "هندسة رياضية",
+      "object_candidates": "علم الأحياء, فيزياء, لسانيات, كاتب مسرحي, رياضيات, موقع ويب, علم الاجتماع, روائي, جاز, هندسة رياضية",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "لوي جوزيف غي ـ لوساك",
+      "object": "كيمياء",
+      "object_candidates": "علم الفلك, طائر, تاريخ, جغرافيا, موسيقي, منطق, كاتب مسرحي, اقتصاد, روائي, كيمياء",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "أوكتان",
+      "object": "كيمياء",
+      "object_candidates": "لسانيات, طوبولوجيا, موقع ويب, منطق, أبارتيد, أوبرا, علم, تاريخ, روائي, كيمياء",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "دانييل برنولي",
+      "object": "فيزياء",
+      "object_candidates": "طب, علم الآثار, طائر, إلهيات, كاتب مسرحي, علم النفس, أوبرا, عالم فلك, فلسفة, فيزياء",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "مايكل فاراداي",
+      "object": "فيزياء",
+      "object_candidates": "طائر, علم الأحياء, أوبرا, بوذية, اقتصاد, طوبولوجيا, تاريخ, طب, علم النفس, فيزياء",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "همفري ديفي",
+      "object": "كيمياء",
+      "object_candidates": "كاتب مسرحي, اقتصادي, علم النفس, علم الاجتماع, فلسفة, منطق, جاز, روائي, جغرافيا, كيمياء",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "هنري مواسان",
+      "object": "كيمياء",
+      "object_candidates": "موقع ويب, منطق, روائي, رياضيات, طوبولوجيا, اقتصاد, عالم فلك, إرهاب, نادي ليلي, كيمياء",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "بيار كوري",
+      "object": "فيزياء",
+      "object_candidates": "اقتصاد, إلهيات, كاتب مسرحي, هندسة رياضية, علم الآثار, فلسفة, روائي, علم النفس, جاز, فيزياء",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "غوستاف روبرت كيرشهوف",
+      "object": "فيزياء",
+      "object_candidates": "طوبولوجيا, رياضياتي, إلهيات, علم, فلسفة, رياضيات, لسانيات, أبارتيد, طب, فيزياء",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "نوربرت فينر",
+      "object": "رياضيات",
+      "object_candidates": "منطق, بوذية, أوبرا, كيمياء, علم البيئة, علم الاجتماع, إلهيات, فلسفة, جغرافيا, رياضيات",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "أوربان لوفيرييه",
+      "object": "علم الفلك",
+      "object_candidates": "إلهيات, علم وظائف الأعضاء, نادي ليلي, بوذية, جغرافيا, تشريح, علم الأحياء, موقع ويب, جيولوجيا, علم الفلك",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "يوهان هويزنجا",
+      "object": "تاريخ",
+      "object_candidates": "رياضياتي, جاز, فيزياء, روائي, لسانيات, رياضيات, جغرافيا, طب, طائر, تاريخ",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "ساينس",
+      "object": "علم",
+      "object_candidates": "موسيقي, هندسة رياضية, إلهيات, طائر, منطق, علم النفس, جاز, علم البيئة, عالم فلك, علم",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "إدوارد تيلر",
+      "object": "فيزياء",
+      "object_candidates": "علم الوراثة, بوذية, رياضيات, اقتصاد, منطق, عالم فلك, تشريح, علم الاجتماع, جاز, فيزياء",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "لد زبلين",
+      "object": "موسيقي",
+      "object_candidates": "علم الآثار, اقتصاد, علم الأحياء, منطق, لسانيات, علم النفس, جيولوجيا, تشريح, علم الوراثة, موسيقي",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "إرنست أورلاندو لورنس",
+      "object": "فيزياء",
+      "object_candidates": "علم, طائر, تشريح, تاريخ, علم الفلك, طوبولوجيا, منطق, طب, نادي ليلي, فيزياء",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ماري كوري",
+      "object": "كيمياء",
+      "object_candidates": "اقتصاد, عالم فلك, علم, بوذية, علم البيئة, موقع ويب, جاز, رياضياتي, رياضيات, كيمياء",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "جون نابير",
+      "object": "رياضيات",
+      "object_candidates": "لسانيات, إلهيات, عالم فلك, أوبرا, موسيقي, رياضياتي, طب, روائي, علم الوراثة, رياضيات",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "إسحاق نيوتن",
+      "object": "علم الفلك",
+      "object_candidates": "إلهيات, علم البيئة, اقتصاد, أبارتيد, علم الوراثة, جغرافيا, تشريح, رياضياتي, أوبرا, علم الفلك",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "لاري سانجر",
+      "object": "فلسفة",
+      "object_candidates": "علم, فيزياء, علم وظائف الأعضاء, علم الآثار, علم البيئة, علم الفلك, طب, كيمياء, عالم فلك, فلسفة",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "فيليب أنتون لينارد",
+      "object": "فيزياء",
+      "object_candidates": "إرهاب, جيولوجيا, اقتصادي, منطق, روائي, طائر, كاتب مسرحي, أوبرا, علم الاجتماع, فيزياء",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "علم وظائف الأعضاء",
+      "object_candidates": "اقتصاد, طائر, رياضيات, علم الوراثة, فيزياء, موقع ويب, علم البيئة, رياضياتي, كاتب مسرحي, علم وظائف الأعضاء",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "فريدريش بيسل",
+      "object": "علم الفلك",
+      "object_candidates": "أبارتيد, علم النفس, موقع ويب, منطق, هندسة رياضية, فلسفة, موسيقي, علم الوراثة, أوبرا, علم الفلك",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "ألفريد كينسي",
+      "object": "علم الأحياء",
+      "object_candidates": "كاتب مسرحي, كيمياء, علم الاجتماع, بوذية, علم البيئة, جيولوجيا, علم الوراثة, تاريخ, أوبرا, علم الأحياء",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "ميسروب ماشدوتس",
+      "object": "لسانيات",
+      "object_candidates": "جيولوجيا, علم الوراثة, نادي ليلي, كيمياء, طب, علم, أبارتيد, فيزياء, طوبولوجيا, لسانيات",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "جيمس فرانك",
+      "object": "فيزياء",
+      "object_candidates": "علم الفلك, موقع ويب, علم الاجتماع, علم البيئة, اقتصاد, علم, طائر, نادي ليلي, أبارتيد, فيزياء",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "إلينور أوستروم",
+      "object": "اقتصاد",
+      "object_candidates": "عالم فلك, علم وظائف الأعضاء, رياضياتي, أبارتيد, طائر, منطق, روائي, طب, علم النفس, اقتصاد",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "إدوارد فيكتور أبلتون",
+      "object": "فيزياء",
+      "object_candidates": "رياضيات, علم النفس, عالم فلك, طائر, أبارتيد, جاز, علم الفلك, علم البيئة, إلهيات, فيزياء",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جون دالتون",
+      "object": "كيمياء",
+      "object_candidates": "لسانيات, رياضياتي, كاتب مسرحي, تاريخ, اقتصاد, علم الأحياء, بوذية, جغرافيا, فلسفة, كيمياء",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "جون دالتون",
+      "object": "فيزياء",
+      "object_candidates": "رياضياتي, إرهاب, هندسة رياضية, طوبولوجيا, عالم فلك, كيمياء, علم وظائف الأعضاء, جغرافيا, تشريح, فيزياء",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ديميتري مندلييف",
+      "object": "كيمياء",
+      "object_candidates": "فيزياء, عالم فلك, موقع ويب, علم الآثار, أوبرا, علم الأحياء, نادي ليلي, تاريخ, علم البيئة, كيمياء",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ديميتري مندلييف",
+      "object": "فيزياء",
+      "object_candidates": "كاتب مسرحي, أوبرا, علم الاجتماع, جغرافيا, طب, رياضياتي, جاز, رياضيات, إرهاب, فيزياء",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "بول مكارتني",
+      "object": "موسيقي",
+      "object_candidates": "هندسة رياضية, علم الفلك, إلهيات, بوذية, كاتب مسرحي, إرهاب, علم البيئة, تشريح, روائي, موسيقي",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "تشارلز بابيج",
+      "object": "رياضيات",
+      "object_candidates": "علم الفلك, نادي ليلي, تشريح, بوذية, علم النفس, علم الأحياء, فلسفة, كاتب مسرحي, موقع ويب, رياضيات",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "نيكولاس كوبرنيكوس",
+      "object": "رياضيات",
+      "object_candidates": "تشريح, موقع ويب, طائر, علم وظائف الأعضاء, علم الفلك, عالم فلك, علم الأحياء, فيزياء, جغرافيا, رياضيات",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "أريابهاتا",
+      "object": "علم الفلك",
+      "object_candidates": "علم الاجتماع, منطق, اقتصادي, اقتصاد, علم الأحياء, رياضياتي, تاريخ, أبارتيد, جغرافيا, علم الفلك",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "كلايد تومبو",
+      "object": "عالم فلك",
+      "object_candidates": "إرهاب, روائي, منطق, جغرافيا, إلهيات, بوذية, لسانيات, نادي ليلي, كيمياء, عالم فلك",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "ويليس لامب",
+      "object": "فيزياء",
+      "object_candidates": "اقتصاد, تشريح, علم الآثار, طائر, طب, هندسة رياضية, لسانيات, علم الفلك, منطق, فيزياء",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "أرخميدس",
+      "object": "هندسة رياضية",
+      "object_candidates": "علم وظائف الأعضاء, جاز, طوبولوجيا, جغرافيا, موقع ويب, جيولوجيا, فلسفة, علم البيئة, علم الأحياء, هندسة رياضية",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "أناكساغوراس",
+      "object": "علم الفلك",
+      "object_candidates": "أبارتيد, تاريخ, طوبولوجيا, عالم فلك, علم الوراثة, تشريح, فلسفة, منطق, علم الاجتماع, علم الفلك",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "كريستيان هوغنس",
+      "object": "فيزياء",
+      "object_candidates": "إرهاب, أوبرا, اقتصاد, نادي ليلي, منطق, موسيقي, رياضيات, هندسة رياضية, تشريح, فيزياء",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "مايكل جاكسون",
+      "object": "موسيقي",
+      "object_candidates": "فيزياء, اقتصادي, جيولوجيا, علم الآثار, عالم فلك, رياضيات, طائر, اقتصاد, بوذية, موسيقي",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "آدم سميث",
+      "object": "اقتصاد",
+      "object_candidates": "منطق, طوبولوجيا, علم الوراثة, جاز, رياضيات, علم الأحياء, جيولوجيا, طائر, جغرافيا, اقتصاد",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "روبرت ميليكان",
+      "object": "فيزياء",
+      "object_candidates": "علم البيئة, جيولوجيا, طب, كاتب مسرحي, نادي ليلي, جاز, جغرافيا, كيمياء, أبارتيد, فيزياء",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جيراردوس مركاتور",
+      "object": "جغرافيا",
+      "object_candidates": "تشريح, علم البيئة, كاتب مسرحي, موسيقي, عالم فلك, علم, منطق, أوبرا, اقتصادي, جغرافيا",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "كارولوس لينيوس",
+      "object": "طب",
+      "object_candidates": "منطق, فلسفة, نادي ليلي, إلهيات, رياضيات, كاتب مسرحي, اقتصاد, جيولوجيا, هندسة رياضية, طب",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "تشارلز داروين",
+      "object": "جيولوجيا",
+      "object_candidates": "علم النفس, منطق, علم, علم الآثار, عالم فلك, نادي ليلي, أوبرا, إلهيات, جغرافيا, جيولوجيا",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "فرانك ويلكزك",
+      "object": "فيزياء",
+      "object_candidates": "فلسفة, هندسة رياضية, علم, علم النفس, تشريح, علم البيئة, علم الوراثة, علم الفلك, طائر, فيزياء",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "أندريه كولموغوروف",
+      "object": "طوبولوجيا",
+      "object_candidates": "علم الآثار, علم, هندسة رياضية, علم الوراثة, رياضياتي, منطق, رياضيات, طائر, روائي, طوبولوجيا",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "يوهان هاينغيش لامبرت",
+      "object": "فيزياء",
+      "object_candidates": "علم الفلك, موسيقي, جاز, علم الأحياء, طب, كاتب مسرحي, علم الآثار, روائي, لسانيات, فيزياء",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "براهماغوبتا",
+      "object": "رياضيات",
+      "object_candidates": "اقتصاد, تشريح, موسيقي, موقع ويب, نادي ليلي, روائي, طائر, جاز, جغرافيا, رياضيات",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "فلهلم فيين",
+      "object": "فيزياء",
+      "object_candidates": "علم وظائف الأعضاء, موقع ويب, علم الوراثة, طائر, طب, اقتصاد, منطق, بوذية, علم الاجتماع, فيزياء",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "علم النفس",
+      "object_candidates": "علم الفلك, رياضيات, علم الأحياء, جاز, عالم فلك, أوبرا, طب, إرهاب, فلسفة, علم النفس",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "ليونهارت أويلر",
+      "object": "علم الفلك",
+      "object_candidates": "بوذية, علم الاجتماع, أبارتيد, فيزياء, كاتب مسرحي, رياضياتي, هندسة رياضية, علم الآثار, موسيقي, علم الفلك",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "غاليليو غاليلي",
+      "object": "فلسفة",
+      "object_candidates": "علم النفس, فيزياء, رياضياتي, علم الآثار, موقع ويب, علم الأحياء, علم الفلك, جاز, منطق, فلسفة",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "غريغور يوهان مندل",
+      "object": "علم الوراثة",
+      "object_candidates": "تشريح, لسانيات, إرهاب, علم الفلك, طوبولوجيا, اقتصاد, علم النفس, جغرافيا, إلهيات, علم الوراثة",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "بروس سبرينغستين",
+      "object": "موسيقي",
+      "object_candidates": "جيولوجيا, اقتصادي, جاز, علم وظائف الأعضاء, لسانيات, عالم فلك, علم, جغرافيا, إرهاب, موسيقي",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "صوفيا كوفاليفسكايا",
+      "object": "رياضيات",
+      "object_candidates": "علم الأحياء, كيمياء, رياضياتي, جاز, علم الوراثة, كاتب مسرحي, علم الاجتماع, جيولوجيا, لسانيات, رياضيات",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "جوردانو برونو",
+      "object": "فلسفة",
+      "object_candidates": "روائي, رياضياتي, جاز, بوذية, طائر, جيولوجيا, هندسة رياضية, اقتصاد, علم الأحياء, فلسفة",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "هنري بيكريل",
+      "object": "فيزياء",
+      "object_candidates": "إرهاب, منطق, طائر, علم الفلك, جغرافيا, إلهيات, لسانيات, عالم فلك, جيولوجيا, فيزياء",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "كيب ثورن",
+      "object": "فيزياء",
+      "object_candidates": "علم وظائف الأعضاء, جاز, إرهاب, أبارتيد, هندسة رياضية, علم الأحياء, روائي, موقع ويب, طوبولوجيا, فيزياء",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "أوغست وايزمان",
+      "object": "علم الأحياء",
+      "object_candidates": "جيولوجيا, علم البيئة, علم وظائف الأعضاء, طوبولوجيا, علم الوراثة, إرهاب, منطق, تشريح, طب, علم الأحياء",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "بول لانجفان",
+      "object": "فيزياء",
+      "object_candidates": "عالم فلك, علم النفس, طوبولوجيا, علم وظائف الأعضاء, فلسفة, هندسة رياضية, كاتب مسرحي, علم الأحياء, علم الفلك, فيزياء",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جون كوكروفت",
+      "object": "فيزياء",
+      "object_candidates": "طائر, هندسة رياضية, جيولوجيا, رياضياتي, علم, منطق, جاز, اقتصادي, علم الاجتماع, فيزياء",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "سفانت أرينيوس",
+      "object": "كيمياء",
+      "object_candidates": "جاز, تشريح, علم الاجتماع, موسيقي, طائر, طوبولوجيا, علم النفس, اقتصادي, موقع ويب, كيمياء",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "روكوكو",
+      "object": "عمارة",
+      "object_candidates": "كيمياء, جغرافيا, عالم فلك, منطق, علم وظائف الأعضاء, طوبولوجيا, طب, إرهاب, رياضياتي, عمارة",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

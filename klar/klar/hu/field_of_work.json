@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "Melyik területen dolgozik <subject>? A válasz: <mask>",
+    "Melyik területen ismert, hogy dolgozott <subject>? A válasz: <mask>",
+    "Milyen szakterülettel társítják <subject>-et? A válasz: <mask>",
+    "Melyik szakterületen dolgozik leginkább <subject>? A válasz: <mask>",
+    "Melyik terület a fő szakértelme <subject>-nek? A válasz: <mask>",
+    " <subject> munkaterülete <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Alan Turing",
+      "object": "logika",
+      "object_candidates": "élettan, pszichológia, apartheid, regényíró, madarak, éjszakai szórakozóhely, orvostudomány, zenész, buddhizmus, logika",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "Klazomenai Anaxagorasz",
+      "object": "filozófia",
+      "object_candidates": "geometria, csillagászat, biológia, nyelvészet, pszichológia, opera, logika, terrorizmus, genetika, filozófia",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Robert Wilhelm Bunsen",
+      "object": "kémia",
+      "object_candidates": "buddhizmus, fizika, drámaíró, csillagász, nyelvészet, anatómia, opera, regényíró, biológia, kémia",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Kálvin János",
+      "object": "teológia",
+      "object_candidates": "történelem, anatómia, logika, fizika, pszichológia, földrajztudomány, matematika, geológia, geometria, teológia",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "fizikai rendszer",
+      "object": "fizika",
+      "object_candidates": "terrorizmus, pszichológia, történelem, topológia, zenész, csillagász, opera, földrajztudomány, közgazdaságtan, fizika",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Carl Rogers",
+      "object": "pszichológia",
+      "object_candidates": "nyelvészet, logika, apartheid, topológia, genetika, élettan, buddhizmus, tudomány, csillagász, pszichológia",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "David Hilbert",
+      "object": "geometria",
+      "object_candidates": "közgazdász, földrajztudomány, topológia, matematika, szociológia, webhely, drámaíró, ökológia, apartheid, geometria",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Richard Wagner",
+      "object": "opera",
+      "object_candidates": "webhely, matematikus, madarak, matematika, filozófia, közgazdaságtan, buddhizmus, éjszakai szórakozóhely, fizika, opera",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "Eukleidész",
+      "object": "geometria",
+      "object_candidates": "webhely, genetika, terrorizmus, nyelvészet, éjszakai szórakozóhely, közgazdaságtan, csillagász, geológia, logika, geometria",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "szociológia",
+      "object_candidates": "közgazdaságtan, kémia, zenész, geológia, terrorizmus, matematika, csillagászat, topológia, tudomány, szociológia",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Hans Eysenck",
+      "object": "pszichológia",
+      "object_candidates": "kémia, élettan, zenész, webhely, közgazdász, regényíró, anatómia, fizika, csillagász, pszichológia",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Wigner Jenő",
+      "object": "fizika",
+      "object_candidates": "drámaíró, közgazdász, földrajztudomány, apartheid, nyelvészet, orvostudomány, kémia, geometria, terrorizmus, fizika",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Fred Hoyle",
+      "object": "csillagászat",
+      "object_candidates": "topológia, apartheid, terrorizmus, biológia, filozófia, orvostudomány, közgazdaságtan, anatómia, matematikus, csillagászat",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Galénosz",
+      "object": "anatómia",
+      "object_candidates": "opera, matematika, közgazdász, pszichológia, élettan, fizika, webhely, orvostudomány, csillagász, anatómia",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "William Harvey",
+      "object": "élettan",
+      "object_candidates": "biológia, orvostudomány, genetika, zenész, nyelvészet, anatómia, logika, kémia, közgazdász, élettan",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Howard Carter",
+      "object": "régészet",
+      "object_candidates": "nyelvészet, geometria, teológia, földrajztudomány, élettan, terrorizmus, matematikus, matematika, közgazdaságtan, régészet",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Heinrich Schliemann",
+      "object": "régészet",
+      "object_candidates": "zenész, közgazdaságtan, logika, drámaíró, biológia, dzsessz, opera, fizika, csillagászat, régészet",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Claude Bernard",
+      "object": "élettan",
+      "object_candidates": "orvostudomány, biológia, történelem, közgazdász, kémia, közgazdaságtan, apartheid, topológia, geometria, élettan",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "matematika",
+      "object_candidates": "opera, geológia, élettan, geometria, fizika, madarak, pszichológia, régészet, történelem, matematika",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Justus von Liebig",
+      "object": "kémia",
+      "object_candidates": "opera, drámaíró, madarak, filozófia, éjszakai szórakozóhely, genetika, ökológia, régészet, webhely, kémia",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Frederick Banting",
+      "object": "élettan",
+      "object_candidates": "matematikus, zenész, geometria, matematika, regényíró, terrorizmus, logika, opera, buddhizmus, élettan",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "szociológia",
+      "object_candidates": "ökológia, terrorizmus, topológia, matematikus, orvostudomány, csillagász, teológia, logika, dzsessz, szociológia",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Hans Albrecht Bethe",
+      "object": "fizika",
+      "object_candidates": "apartheid, buddhizmus, tudomány, anatómia, webhely, geológia, biológia, csillagászat, nyelvészet, fizika",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Jack Ruby",
+      "object": "éjszakai szórakozóhely",
+      "object_candidates": "geológia, kémia, csillagászat, matematika, dzsessz, élettan, fizika, pszichológia, szociológia, éjszakai szórakozóhely",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "Percy Williams Bridgman",
+      "object": "fizika",
+      "object_candidates": "geológia, madarak, orvostudomány, földrajztudomány, regényíró, filozófia, élettan, éjszakai szórakozóhely, matematikus, fizika",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gerolamo Cardano",
+      "object": "matematika",
+      "object_candidates": "tudomány, szociológia, közgazdász, madarak, webhely, csillagászat, regényíró, topológia, anatómia, matematika",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "közgazdaságtan",
+      "object_candidates": "orvostudomány, zenész, fizika, topológia, közgazdász, csillagász, buddhizmus, geometria, terrorizmus, közgazdaságtan",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Michael Faraday",
+      "object": "kémia",
+      "object_candidates": "zenész, topológia, terrorizmus, fizika, genetika, opera, geológia, földrajztudomány, biológia, kémia",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Ornitológia",
+      "object": "madarak",
+      "object_candidates": "drámaíró, történelem, buddhizmus, teológia, topológia, filozófia, regényíró, élettan, matematikus, madarak",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "Bonaventura Cavalieri",
+      "object": "matematika",
+      "object_candidates": "matematikus, szociológia, közgazdász, földrajztudomány, éjszakai szórakozóhely, ökológia, zenész, opera, biológia, matematika",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "matematika",
+      "object_candidates": "regényíró, teológia, közgazdász, drámaíró, genetika, szociológia, pszichológia, régészet, éjszakai szórakozóhely, matematika",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Alexandriai Hüpatia",
+      "object": "matematika",
+      "object_candidates": "fizika, nyelvészet, regényíró, orvostudomány, matematikus, geometria, élettan, közgazdász, csillagászat, matematika",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Szervét Mihály",
+      "object": "teológia",
+      "object_candidates": "ökológia, közgazdász, geometria, nyelvészet, pszichológia, dzsessz, fizika, anatómia, közgazdaságtan, teológia",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "Edwin Hubble",
+      "object": "csillagászat",
+      "object_candidates": "topológia, filozófia, szociológia, matematikus, webhely, matematika, apartheid, buddhizmus, anatómia, csillagászat",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "fizika",
+      "object_candidates": "pszichológia, orvostudomány, teológia, matematikus, csillagászat, anatómia, drámaíró, opera, ökológia, fizika",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Ilya Prigogine",
+      "object": "fizika",
+      "object_candidates": "orvostudomány, zenész, opera, topológia, filozófia, matematikus, pszichológia, terrorizmus, történelem, fizika",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Sapir–Whorf-hipotézis",
+      "object": "nyelvészet",
+      "object_candidates": "tudomány, ökológia, matematikus, közgazdász, anatómia, apartheid, genetika, élettan, terrorizmus, nyelvészet",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "tudományos módszer",
+      "object": "tudomány",
+      "object_candidates": "anatómia, filozófia, drámaíró, történelem, webhely, regényíró, ökológia, közgazdaságtan, geológia, tudomány",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "William Crookes",
+      "object": "kémia",
+      "object_candidates": "geológia, zenész, teológia, közgazdász, földrajztudomány, anatómia, topológia, opera, ökológia, kémia",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Steve Biko",
+      "object": "apartheid",
+      "object_candidates": "nyelvészet, matematika, pszichológia, matematikus, webhely, zenész, földrajztudomány, teológia, történelem, apartheid",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "Charles Darwin",
+      "object": "biológia",
+      "object_candidates": "éjszakai szórakozóhely, szociológia, opera, terrorizmus, buddhizmus, fizika, földrajztudomány, tudomány, teológia, biológia",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Tycho Brahe",
+      "object": "csillagászat",
+      "object_candidates": "buddhizmus, éjszakai szórakozóhely, fizika, biológia, orvostudomány, matematikus, pszichológia, filozófia, zenész, csillagászat",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "John Stuart Mill",
+      "object": "filozófia",
+      "object_candidates": "csillagász, csillagászat, madarak, szociológia, ökológia, dzsessz, genetika, logika, geológia, filozófia",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Alan Turing",
+      "object": "matematika",
+      "object_candidates": "webhely, teológia, csillagász, genetika, anatómia, fizika, zenész, madarak, matematikus, matematika",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Vilfredo Pareto",
+      "object": "szociológia",
+      "object_candidates": "pszichológia, opera, nyelvészet, matematika, biológia, dzsessz, csillagász, topológia, anatómia, szociológia",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "William Somerset Maugham",
+      "object": "drámaíró",
+      "object_candidates": "geológia, genetika, csillagász, csillagászat, szociológia, ökológia, régészet, terrorizmus, élettan, drámaíró",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "William Somerset Maugham",
+      "object": "regényíró",
+      "object_candidates": "közgazdaságtan, élettan, logika, régészet, geometria, közgazdász, tudomány, opera, kémia, regényíró",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "Enrico Fermi",
+      "object": "fizika",
+      "object_candidates": "pszichológia, terrorizmus, madarak, kémia, élettan, zenész, webhely, filozófia, orvostudomány, fizika",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Giovanni Domenico Cassini",
+      "object": "csillagászat",
+      "object_candidates": "anatómia, buddhizmus, geometria, regényíró, filozófia, logika, geológia, matematikus, csillagász, csillagászat",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "anatómia",
+      "object_candidates": "pszichológia, matematika, filozófia, zenész, terrorizmus, közgazdász, webhely, buddhizmus, madarak, anatómia",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "Paracelsus",
+      "object": "orvostudomány",
+      "object_candidates": "matematikus, buddhizmus, opera, tudomány, közgazdász, terrorizmus, csillagász, drámaíró, közgazdaságtan, orvostudomány",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "John Coltrane",
+      "object": "dzsessz",
+      "object_candidates": "regényíró, anatómia, csillagászat, földrajztudomány, élettan, nyelvészet, opera, pszichológia, biológia, dzsessz",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "Hermann Ludwig von Helmholtz",
+      "object": "fizika",
+      "object_candidates": "történelem, földrajztudomány, orvostudomány, webhely, tudomány, apartheid, közgazdász, madarak, geometria, fizika",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Galénosz",
+      "object": "orvostudomány",
+      "object_candidates": "logika, biológia, matematikus, nyelvészet, genetika, csillagász, szociológia, apartheid, terrorizmus, orvostudomány",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Abraham Maslow",
+      "object": "pszichológia",
+      "object_candidates": "regényíró, anatómia, geológia, csillagász, kémia, matematikus, éjszakai szórakozóhely, zenész, ökológia, pszichológia",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Louis Pasteur",
+      "object": "kémia",
+      "object_candidates": "tudomány, buddhizmus, élettan, szociológia, filozófia, régészet, apartheid, madarak, topológia, kémia",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Henry Cavendish",
+      "object": "fizika",
+      "object_candidates": "madarak, régészet, webhely, történelem, matematika, genetika, zenész, geológia, anatómia, fizika",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "közgazdaságtan",
+      "object_candidates": "régészet, buddhizmus, csillagász, topológia, apartheid, teológia, anatómia, élettan, orvostudomány, közgazdaságtan",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Ulf von Euler",
+      "object": "élettan",
+      "object_candidates": "topológia, orvostudomány, szociológia, drámaíró, teológia, fizika, matematika, opera, geometria, élettan",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "csillagászat",
+      "object_candidates": "kémia, éjszakai szórakozóhely, tudomány, logika, buddhizmus, opera, geometria, orvostudomány, biológia, csillagászat",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Nyikolaj Ivanovics Lobacsevszkij",
+      "object": "geometria",
+      "object_candidates": "teológia, buddhizmus, logika, regényíró, szociológia, földrajztudomány, apartheid, pszichológia, geológia, geometria",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Christiaan Huygens",
+      "object": "matematika",
+      "object_candidates": "dzsessz, történelem, közgazdász, terrorizmus, kémia, logika, fizika, csillagászat, madarak, matematika",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "webalkalmazás",
+      "object": "webhely",
+      "object_candidates": "történelem, geometria, biológia, geológia, buddhizmus, opera, pszichológia, élettan, kémia, webhely",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "Nágárdzsuna",
+      "object": "buddhizmus",
+      "object_candidates": "logika, matematikus, fizika, madarak, ökológia, dzsessz, anatómia, regényíró, webhely, buddhizmus",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "William Rowan Hamilton",
+      "object": "matematika",
+      "object_candidates": "tudomány, közgazdász, geometria, régészet, csillagász, földrajztudomány, webhely, nyelvészet, kémia, matematika",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Ernest Rutherford",
+      "object": "fizika",
+      "object_candidates": "terrorizmus, történelem, közgazdász, nyelvészet, régészet, topológia, anatómia, ökológia, matematikus, fizika",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "William Herschel",
+      "object": "csillagászat",
+      "object_candidates": "tudomány, geológia, teológia, opera, filozófia, történelem, biológia, régészet, buddhizmus, csillagászat",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Ivan Petrovics Pavlov",
+      "object": "élettan",
+      "object_candidates": "apartheid, pszichológia, csillagász, éjszakai szórakozóhely, biológia, közgazdász, fizika, földrajztudomány, szociológia, élettan",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Hermann Minkowski",
+      "object": "geometria",
+      "object_candidates": "terrorizmus, webhely, teológia, orvostudomány, fizika, topológia, éjszakai szórakozóhely, genetika, matematika, geometria",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "fizika",
+      "object_candidates": "geometria, éjszakai szórakozóhely, ökológia, topológia, madarak, logika, terrorizmus, zenész, drámaíró, fizika",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Julian Schwinger",
+      "object": "fizika",
+      "object_candidates": "nyelvészet, élettan, topológia, anatómia, tudomány, szociológia, földrajztudomány, kémia, teológia, fizika",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "öngyilkos merénylet",
+      "object": "terrorizmus",
+      "object_candidates": "topológia, pszichológia, filozófia, földrajztudomány, régészet, nyelvészet, teológia, geometria, madarak, terrorizmus",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "Lev Szemjonovics Vigotszkij",
+      "object": "pszichológia",
+      "object_candidates": "orvostudomány, dzsessz, logika, földrajztudomány, genetika, matematika, éjszakai szórakozóhely, közgazdász, drámaíró, pszichológia",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "filozófia",
+      "object_candidates": "pszichológia, terrorizmus, fizika, éjszakai szórakozóhely, ökológia, geológia, tudomány, csillagász, zenész, filozófia",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "matematika",
+      "object_candidates": "éjszakai szórakozóhely, nyelvészet, teológia, topológia, élettan, biológia, opera, geológia, logika, matematika",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Joseph Schumpeter",
+      "object": "közgazdaságtan",
+      "object_candidates": "régészet, éjszakai szórakozóhely, orvostudomány, szociológia, filozófia, dzsessz, matematikus, logika, teológia, közgazdaságtan",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "történelem",
+      "object_candidates": "madarak, földrajztudomány, anatómia, tudomány, csillagász, biológia, genetika, éjszakai szórakozóhely, ökológia, történelem",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "Edward Gibbon",
+      "object": "történelem",
+      "object_candidates": "nyelvészet, terrorizmus, földrajztudomány, filozófia, teológia, szociológia, apartheid, drámaíró, élettan, történelem",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "John Archibald Wheeler",
+      "object": "fizika",
+      "object_candidates": "szociológia, terrorizmus, éjszakai szórakozóhely, biológia, webhely, apartheid, földrajztudomány, pszichológia, anatómia, fizika",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Leonhard Euler",
+      "object": "fizika",
+      "object_candidates": "buddhizmus, földrajztudomány, matematika, pszichológia, matematikus, dzsessz, geológia, apartheid, nyelvészet, fizika",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "August Krogh",
+      "object": "élettan",
+      "object_candidates": "biológia, régészet, logika, éjszakai szórakozóhely, buddhizmus, geológia, anatómia, webhely, közgazdaságtan, élettan",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Felix Bloch",
+      "object": "fizika",
+      "object_candidates": "apartheid, tudomány, matematikus, pszichológia, matematika, földrajztudomány, regényíró, opera, élettan, fizika",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Anders Celsius",
+      "object": "csillagászat",
+      "object_candidates": "közgazdász, kémia, biológia, csillagász, élettan, anatómia, madarak, webhely, geometria, csillagászat",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "élettan",
+      "object_candidates": "apartheid, teológia, éjszakai szórakozóhely, csillagászat, földrajztudomány, buddhizmus, nyelvészet, logika, ökológia, élettan",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Joseph von Fraunhofer",
+      "object": "fizika",
+      "object_candidates": "orvostudomány, zenész, tudomány, ökológia, matematika, dzsessz, kémia, matematikus, régészet, fizika",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Tomonaga Sinicsiró",
+      "object": "fizika",
+      "object_candidates": "logika, geológia, filozófia, teológia, csillagász, közgazdász, buddhizmus, tudomány, pszichológia, fizika",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann Amandus Schwarz",
+      "object": "matematika",
+      "object_candidates": "csillagász, pszichológia, drámaíró, fizika, éjszakai szórakozóhely, zenész, geometria, csillagászat, élettan, matematika",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Jean Le Rond d’Alembert",
+      "object": "matematika",
+      "object_candidates": "kémia, regényíró, élettan, genetika, filozófia, biológia, orvostudomány, régészet, zenész, matematika",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Luca Pacioli",
+      "object": "matematika",
+      "object_candidates": "orvostudomány, csillagász, nyelvészet, pszichológia, csillagászat, madarak, filozófia, buddhizmus, biológia, matematika",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Vitalij Lazarevics Ginzburg",
+      "object": "fizika",
+      "object_candidates": "földrajztudomány, dzsessz, régészet, drámaíró, topológia, csillagászat, madarak, filozófia, kémia, fizika",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Sze-ma Csien",
+      "object": "történelem",
+      "object_candidates": "orvostudomány, geológia, éjszakai szórakozóhely, madarak, anatómia, webhely, ökológia, drámaíró, terrorizmus, történelem",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "Klaudiosz Ptolemaiosz",
+      "object": "matematikus",
+      "object_candidates": "drámaíró, madarak, terrorizmus, topológia, orvostudomány, csillagász, geometria, tudomány, zenész, matematikus",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "Jean Piaget",
+      "object": "pszichológia",
+      "object_candidates": "opera, logika, szociológia, buddhizmus, teológia, kémia, webhely, anatómia, régészet, pszichológia",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Stefan Banach",
+      "object": "matematika",
+      "object_candidates": "logika, csillagászat, biológia, régészet, élettan, tudomány, szociológia, terrorizmus, topológia, matematika",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Joseph Priestley",
+      "object": "filozófia",
+      "object_candidates": "fizika, pszichológia, közgazdaságtan, anatómia, orvostudomány, terrorizmus, drámaíró, geometria, matematika, filozófia",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Kurt Lewin",
+      "object": "pszichológia",
+      "object_candidates": "kémia, drámaíró, anatómia, közgazdaságtan, csillagászat, közgazdász, logika, opera, buddhizmus, pszichológia",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "James Clerk Maxwell",
+      "object": "fizika",
+      "object_candidates": "orvostudomány, földrajztudomány, pszichológia, közgazdaságtan, opera, csillagászat, terrorizmus, buddhizmus, biológia, fizika",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Alfred Marshall",
+      "object": "közgazdaságtan",
+      "object_candidates": "fizika, földrajztudomány, biológia, buddhizmus, tudomány, geometria, csillagászat, matematikus, logika, közgazdaságtan",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Kopernikusz",
+      "object": "csillagászat",
+      "object_candidates": "logika, topológia, régészet, tudomány, madarak, földrajztudomány, terrorizmus, éjszakai szórakozóhely, biológia, csillagászat",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Eric Maskin",
+      "object": "közgazdász",
+      "object_candidates": "buddhizmus, regényíró, csillagászat, tudomány, ökológia, szociológia, anatómia, csillagász, orvostudomány, közgazdász",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "Jared Diamond",
+      "object": "ökológia",
+      "object_candidates": "kémia, régészet, geológia, logika, fizika, webhely, tudomány, csillagász, apartheid, ökológia",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "Andrej Nyikolajevics Kolmogorov",
+      "object": "geometria",
+      "object_candidates": "biológia, fizika, nyelvészet, drámaíró, matematika, webhely, szociológia, regényíró, dzsessz, geometria",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Joseph Louis Gay-Lussac",
+      "object": "kémia",
+      "object_candidates": "csillagászat, madarak, történelem, földrajztudomány, zenész, logika, drámaíró, közgazdaságtan, regényíró, kémia",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Oktán",
+      "object": "kémia",
+      "object_candidates": "nyelvészet, topológia, webhely, logika, apartheid, opera, tudomány, történelem, regényíró, kémia",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Daniel Bernoulli",
+      "object": "fizika",
+      "object_candidates": "orvostudomány, régészet, madarak, teológia, drámaíró, pszichológia, opera, csillagász, filozófia, fizika",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Michael Faraday",
+      "object": "fizika",
+      "object_candidates": "madarak, biológia, opera, buddhizmus, közgazdaságtan, topológia, történelem, orvostudomány, pszichológia, fizika",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Humphrey Davy",
+      "object": "kémia",
+      "object_candidates": "drámaíró, közgazdász, pszichológia, szociológia, filozófia, logika, dzsessz, regényíró, földrajztudomány, kémia",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Henri Moissan",
+      "object": "kémia",
+      "object_candidates": "webhely, logika, regényíró, matematika, topológia, közgazdaságtan, csillagász, terrorizmus, éjszakai szórakozóhely, kémia",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Pierre Curie",
+      "object": "fizika",
+      "object_candidates": "közgazdaságtan, teológia, drámaíró, geometria, régészet, filozófia, regényíró, pszichológia, dzsessz, fizika",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gustav Robert Kirchhoff",
+      "object": "fizika",
+      "object_candidates": "topológia, matematikus, teológia, tudomány, filozófia, matematika, nyelvészet, apartheid, orvostudomány, fizika",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Norbert Wiener",
+      "object": "matematika",
+      "object_candidates": "logika, buddhizmus, opera, kémia, ökológia, szociológia, teológia, filozófia, földrajztudomány, matematika",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Urbain Le Verrier",
+      "object": "csillagászat",
+      "object_candidates": "teológia, élettan, éjszakai szórakozóhely, buddhizmus, földrajztudomány, anatómia, biológia, webhely, geológia, csillagászat",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Johan Huizinga",
+      "object": "történelem",
+      "object_candidates": "matematikus, dzsessz, fizika, regényíró, nyelvészet, matematika, földrajztudomány, orvostudomány, madarak, történelem",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "Science",
+      "object": "tudomány",
+      "object_candidates": "zenész, geometria, teológia, madarak, logika, pszichológia, dzsessz, ökológia, csillagász, tudomány",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "Teller Ede",
+      "object": "fizika",
+      "object_candidates": "genetika, buddhizmus, matematika, közgazdaságtan, logika, csillagász, anatómia, szociológia, dzsessz, fizika",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Led Zeppelin",
+      "object": "zenész",
+      "object_candidates": "régészet, közgazdaságtan, biológia, logika, nyelvészet, pszichológia, geológia, anatómia, genetika, zenész",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Ernest Lawrence",
+      "object": "fizika",
+      "object_candidates": "tudomány, madarak, anatómia, történelem, csillagászat, topológia, logika, orvostudomány, éjszakai szórakozóhely, fizika",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Marie Curie",
+      "object": "kémia",
+      "object_candidates": "közgazdaságtan, csillagász, tudomány, buddhizmus, ökológia, webhely, dzsessz, matematikus, matematika, kémia",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "John Napier",
+      "object": "matematika",
+      "object_candidates": "nyelvészet, teológia, csillagász, opera, zenész, matematikus, orvostudomány, regényíró, genetika, matematika",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "csillagászat",
+      "object_candidates": "teológia, ökológia, közgazdaságtan, apartheid, genetika, földrajztudomány, anatómia, matematikus, opera, csillagászat",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Larry Sanger",
+      "object": "filozófia",
+      "object_candidates": "tudomány, fizika, élettan, régészet, ökológia, csillagászat, orvostudomány, kémia, csillagász, filozófia",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Lénárd Fülöp",
+      "object": "fizika",
+      "object_candidates": "terrorizmus, geológia, közgazdász, logika, regényíró, madarak, drámaíró, opera, szociológia, fizika",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann Ludwig von Helmholtz",
+      "object": "élettan",
+      "object_candidates": "közgazdaságtan, madarak, matematika, genetika, fizika, webhely, ökológia, matematikus, drámaíró, élettan",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "csillagászat",
+      "object_candidates": "apartheid, pszichológia, webhely, logika, geometria, filozófia, zenész, genetika, opera, csillagászat",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Alfred Kinsey",
+      "object": "biológia",
+      "object_candidates": "drámaíró, kémia, szociológia, buddhizmus, ökológia, geológia, genetika, történelem, opera, biológia",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Mesztop Mastoc",
+      "object": "nyelvészet",
+      "object_candidates": "geológia, genetika, éjszakai szórakozóhely, kémia, orvostudomány, tudomány, apartheid, fizika, topológia, nyelvészet",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "James Franck",
+      "object": "fizika",
+      "object_candidates": "csillagászat, webhely, szociológia, ökológia, közgazdaságtan, tudomány, madarak, éjszakai szórakozóhely, apartheid, fizika",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Elinor Ostrom",
+      "object": "közgazdaságtan",
+      "object_candidates": "csillagász, élettan, matematikus, apartheid, madarak, logika, regényíró, orvostudomány, pszichológia, közgazdaságtan",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Edward Victor Appleton",
+      "object": "fizika",
+      "object_candidates": "matematika, pszichológia, csillagász, madarak, apartheid, dzsessz, csillagászat, ökológia, teológia, fizika",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "John Dalton",
+      "object": "kémia",
+      "object_candidates": "nyelvészet, matematikus, drámaíró, történelem, közgazdaságtan, biológia, buddhizmus, földrajztudomány, filozófia, kémia",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "John Dalton",
+      "object": "fizika",
+      "object_candidates": "matematikus, terrorizmus, geometria, topológia, csillagász, kémia, élettan, földrajztudomány, anatómia, fizika",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Dmitrij Ivanovics Mengyelejev",
+      "object": "kémia",
+      "object_candidates": "fizika, csillagász, webhely, régészet, opera, biológia, éjszakai szórakozóhely, történelem, ökológia, kémia",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Dmitrij Ivanovics Mengyelejev",
+      "object": "fizika",
+      "object_candidates": "drámaíró, opera, szociológia, földrajztudomány, orvostudomány, matematikus, dzsessz, matematika, terrorizmus, fizika",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Paul McCartney",
+      "object": "zenész",
+      "object_candidates": "geometria, csillagászat, teológia, buddhizmus, drámaíró, terrorizmus, ökológia, anatómia, regényíró, zenész",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Charles Babbage",
+      "object": "matematika",
+      "object_candidates": "csillagászat, éjszakai szórakozóhely, anatómia, buddhizmus, pszichológia, biológia, filozófia, drámaíró, webhely, matematika",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Kopernikusz",
+      "object": "matematika",
+      "object_candidates": "anatómia, webhely, madarak, élettan, csillagászat, csillagász, biológia, fizika, földrajztudomány, matematika",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Árjabhata",
+      "object": "csillagászat",
+      "object_candidates": "szociológia, logika, közgazdász, közgazdaságtan, biológia, matematikus, történelem, apartheid, földrajztudomány, csillagászat",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Clyde Tombaugh",
+      "object": "csillagász",
+      "object_candidates": "terrorizmus, regényíró, logika, földrajztudomány, teológia, buddhizmus, nyelvészet, éjszakai szórakozóhely, kémia, csillagász",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "Willis Lamb",
+      "object": "fizika",
+      "object_candidates": "közgazdaságtan, anatómia, régészet, madarak, orvostudomány, geometria, nyelvészet, csillagászat, logika, fizika",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Arkhimédész",
+      "object": "geometria",
+      "object_candidates": "élettan, dzsessz, topológia, földrajztudomány, webhely, geológia, filozófia, ökológia, biológia, geometria",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Klazomenai Anaxagorasz",
+      "object": "csillagászat",
+      "object_candidates": "apartheid, történelem, topológia, csillagász, genetika, anatómia, filozófia, logika, szociológia, csillagászat",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Christiaan Huygens",
+      "object": "fizika",
+      "object_candidates": "terrorizmus, opera, közgazdaságtan, éjszakai szórakozóhely, logika, zenész, matematika, geometria, anatómia, fizika",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Michael Jackson",
+      "object": "zenész",
+      "object_candidates": "fizika, közgazdász, geológia, régészet, csillagász, matematika, madarak, közgazdaságtan, buddhizmus, zenész",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Adam Smith",
+      "object": "közgazdaságtan",
+      "object_candidates": "logika, topológia, genetika, dzsessz, matematika, biológia, geológia, madarak, földrajztudomány, közgazdaságtan",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Robert Millikan",
+      "object": "fizika",
+      "object_candidates": "ökológia, geológia, orvostudomány, drámaíró, éjszakai szórakozóhely, dzsessz, földrajztudomány, kémia, apartheid, fizika",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gerardus Mercator",
+      "object": "földrajztudomány",
+      "object_candidates": "anatómia, ökológia, drámaíró, zenész, csillagász, tudomány, logika, opera, közgazdász, földrajztudomány",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "Carl von Linné",
+      "object": "orvostudomány",
+      "object_candidates": "logika, filozófia, éjszakai szórakozóhely, teológia, matematika, drámaíró, közgazdaságtan, geológia, geometria, orvostudomány",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Charles Darwin",
+      "object": "geológia",
+      "object_candidates": "pszichológia, logika, tudomány, régészet, csillagász, éjszakai szórakozóhely, opera, teológia, földrajztudomány, geológia",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "Frank Wilczek",
+      "object": "fizika",
+      "object_candidates": "filozófia, geometria, tudomány, pszichológia, anatómia, ökológia, genetika, csillagászat, madarak, fizika",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Andrej Nyikolajevics Kolmogorov",
+      "object": "topológia",
+      "object_candidates": "régészet, tudomány, geometria, genetika, matematikus, logika, matematika, madarak, regényíró, topológia",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "Johann Heinrich Lambert",
+      "object": "fizika",
+      "object_candidates": "csillagászat, zenész, dzsessz, biológia, orvostudomány, drámaíró, régészet, regényíró, nyelvészet, fizika",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Brahmagupta",
+      "object": "matematika",
+      "object_candidates": "közgazdaságtan, anatómia, zenész, webhely, éjszakai szórakozóhely, regényíró, madarak, dzsessz, földrajztudomány, matematika",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Wilhelm Wien",
+      "object": "fizika",
+      "object_candidates": "élettan, webhely, genetika, madarak, orvostudomány, közgazdaságtan, logika, buddhizmus, szociológia, fizika",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann Ludwig von Helmholtz",
+      "object": "pszichológia",
+      "object_candidates": "csillagászat, matematika, biológia, dzsessz, csillagász, opera, orvostudomány, terrorizmus, filozófia, pszichológia",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Leonhard Euler",
+      "object": "csillagászat",
+      "object_candidates": "buddhizmus, szociológia, apartheid, fizika, drámaíró, matematikus, geometria, régészet, zenész, csillagászat",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "filozófia",
+      "object_candidates": "pszichológia, fizika, matematikus, régészet, webhely, biológia, csillagászat, dzsessz, logika, filozófia",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Gregor Mendel",
+      "object": "genetika",
+      "object_candidates": "anatómia, nyelvészet, terrorizmus, csillagászat, topológia, közgazdaságtan, pszichológia, földrajztudomány, teológia, genetika",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "Bruce Springsteen",
+      "object": "zenész",
+      "object_candidates": "geológia, közgazdász, dzsessz, élettan, nyelvészet, csillagász, tudomány, földrajztudomány, terrorizmus, zenész",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Szofja Vasziljevna Kovalevszkaja",
+      "object": "matematika",
+      "object_candidates": "biológia, kémia, matematikus, dzsessz, genetika, drámaíró, szociológia, geológia, nyelvészet, matematika",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Giordano Bruno",
+      "object": "filozófia",
+      "object_candidates": "regényíró, matematikus, dzsessz, buddhizmus, madarak, geológia, geometria, közgazdaságtan, biológia, filozófia",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Henri Becquerel",
+      "object": "fizika",
+      "object_candidates": "terrorizmus, logika, madarak, csillagászat, földrajztudomány, teológia, nyelvészet, csillagász, geológia, fizika",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Kip Thorne",
+      "object": "fizika",
+      "object_candidates": "élettan, dzsessz, terrorizmus, apartheid, geometria, biológia, regényíró, webhely, topológia, fizika",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "August Weismann",
+      "object": "biológia",
+      "object_candidates": "geológia, ökológia, élettan, topológia, genetika, terrorizmus, logika, anatómia, orvostudomány, biológia",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Paul Langevin",
+      "object": "fizika",
+      "object_candidates": "csillagász, pszichológia, topológia, élettan, filozófia, geometria, drámaíró, biológia, csillagászat, fizika",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "John Cockcroft",
+      "object": "fizika",
+      "object_candidates": "madarak, geometria, geológia, matematikus, tudomány, logika, dzsessz, közgazdász, szociológia, fizika",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Svante August Arrhenius",
+      "object": "kémia",
+      "object_candidates": "dzsessz, anatómia, szociológia, zenész, madarak, topológia, pszichológia, közgazdász, webhely, kémia",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Rokokó",
+      "object": "építészet",
+      "object_candidates": "kémia, földrajztudomány, csillagász, logika, élettan, topológia, orvostudomány, terrorizmus, matematikus, építészet",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

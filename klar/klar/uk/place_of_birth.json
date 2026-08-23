@@ -1,0 +1,294 @@
+{
+  "name": "place_of_birth",
+  "prompt_templates": [
+    "У якому місті народився <subject>? Відповідь: <mask>.",
+    "Де народився <subject>? Відповідь: <mask>.",
+    "Яке місце народження <subject>? Відповідь: <mask>.",
+    "Яке місце народження <subject>? Відповідь: <mask>.",
+    "У якій країні народився <subject>? Відповідь: <mask>.",
+    " Місто народження <subject> називається <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Карл II Зачарований",
+      "object": "Мадрид",
+      "object_candidates": "Торонто, Лондон, Белград, Манчестер, Неаполь, Бруклін, Відень, Стамбул, Женева, Мадрид",
+      "index": 0,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Девід Култхард",
+      "object": "Шотландія",
+      "object_candidates": "Бруклін, Відень, Пекін, Белфаст, Париж, Стамбул, Х'юстон, Мілан, Вестмінстер, Шотландія",
+      "index": 1,
+      "subject_en": "David Coulthard",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Крістіна Россетті",
+      "object": "Лондон",
+      "object_candidates": "Белфаст, Комо, Москва, Стамбул, Берлін, Шотландія, Рим, Манчестер, Вірменія, Лондон",
+      "index": 2,
+      "subject_en": "Christina Rossetti",
+      "object_en": "London"
+    },
+    {
+      "subject": "Кенні Роджерс",
+      "object": "Х'юстон",
+      "object_candidates": "Стамбул, Белград, Чикаго, Мадрид, Париж, Лондон, Мілан, Відень, Бруклін, Х'юстон",
+      "index": 3,
+      "subject_en": "Kenny Rogers",
+      "object_en": "Houston"
+    },
+    {
+      "subject": "Хусейн ібн Алі",
+      "object": "Медіна",
+      "object_candidates": "Париж, Москва, Берлін, Женева, Бруклін, Рим, Шотландія, Пекін, Белград, Медіна",
+      "index": 4,
+      "subject_en": "Husayn ibn Ali",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Вільям Томсон",
+      "object": "Белфаст",
+      "object_candidates": "Москва, Женева, Мадрид, Вестмінстер, Париж, Медіна, Белград, Пекін, Рим, Белфаст",
+      "index": 5,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "Альфред Адлер",
+      "object": "Відень",
+      "object_candidates": "Париж, Мадрид, Торонто, Кельн, Комо, Лондон, Белфаст, Стамбул, Мюнхен, Відень",
+      "index": 6,
+      "subject_en": "Alfred Adler",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Чус Лампреаве",
+      "object": "Мадрид",
+      "object_candidates": "Неаполь, Рим, Мекка, Чикаго, Вірменія, Лондон, Комо, Шотландія, Стамбул, Мадрид",
+      "index": 7,
+      "subject_en": "Chus Lampreave",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Лавров Сергій Вікторович",
+      "object": "Москва",
+      "object_candidates": "Пекін, Женева, Медіна, Стамбул, Белфаст, Белград, Мадрид, Вестмінстер, Лондон, Москва",
+      "index": 8,
+      "subject_en": "Sergey Lavrov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Конрад Лоренц",
+      "object": "Відень",
+      "object_candidates": "Мекка, Мілан, Берлін, Белград, Лондон, Чикаго, Пекін, Стамбул, Белфаст, Відень",
+      "index": 9,
+      "subject_en": "Konrad Lorenz",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Лу Рід",
+      "object": "Бруклін",
+      "object_candidates": "Х'юстон, Женева, Мюнхен, Рим, Відень, Медіна, Вестмінстер, Кельн, Берлін, Бруклін",
+      "index": 10,
+      "subject_en": "Lou Reed",
+      "object_en": "Brooklyn"
+    },
+    {
+      "subject": "Лев V Вірменин",
+      "object": "Вірменія",
+      "object_candidates": "Берлін, Торонто, Кельн, Мекка, Манчестер, Москва, Комо, Стамбул, Мадрид, Вірменія",
+      "index": 11,
+      "subject_en": "Leo V the Armenian",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "Марко Дельвеккіо",
+      "object": "Мілан",
+      "object_candidates": "Мекка, Мюнхен, Вестмінстер, Кельн, Пекін, Белград, Женева, Торонто, Вірменія, Мілан",
+      "index": 12,
+      "subject_en": "Marco Delvecchio",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Карл Орф",
+      "object": "Мюнхен",
+      "object_candidates": "Рим, Торонто, Х'юстон, Манчестер, Відень, Пекін, Кельн, Чикаго, Берлін, Мюнхен",
+      "index": 13,
+      "subject_en": "Carl Orff",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Пліній Старший",
+      "object": "Комо",
+      "object_candidates": "Торонто, Мюнхен, Женева, Париж, Мілан, Вестмінстер, Манчестер, Берлін, Лондон, Комо",
+      "index": 14,
+      "subject_en": "Pliny the Elder",
+      "object_en": "Como"
+    },
+    {
+      "subject": "Фрідріх Вільгельм II",
+      "object": "Берлін",
+      "object_candidates": "Вірменія, Мадрид, Торонто, Белфаст, Вестмінстер, Шотландія, Х'юстон, Париж, Кельн, Берлін",
+      "index": 15,
+      "subject_en": "Frederick William II of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Боніфацій III",
+      "object": "Рим",
+      "object_candidates": "Бруклін, Неаполь, Х'юстон, Комо, Москва, Манчестер, Мілан, Белград, Париж, Рим",
+      "index": 16,
+      "subject_en": "Boniface III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Клаудіо Аббадо",
+      "object": "Мілан",
+      "object_candidates": "Мадрид, Кельн, Белград, Белфаст, Відень, Чикаго, Пекін, Лондон, Берлін, Мілан",
+      "index": 17,
+      "subject_en": "Claudio Abbado",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Енріко Карузо",
+      "object": "Неаполь",
+      "object_candidates": "Кельн, Рим, Комо, Манчестер, Відень, Берлін, Париж, Шотландія, Х'юстон, Неаполь",
+      "index": 18,
+      "subject_en": "Enrico Caruso",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Мехмед VI",
+      "object": "Стамбул",
+      "object_candidates": "Мадрид, Вестмінстер, Мюнхен, Белфаст, Белград, Москва, Женева, Торонто, Х'юстон, Стамбул",
+      "index": 19,
+      "subject_en": "Mehmed VI",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Денніс Фаріна",
+      "object": "Чикаго",
+      "object_candidates": "Москва, Белфаст, Торонто, Берлін, Мадрид, Мілан, Вірменія, Неаполь, Стамбул, Чикаго",
+      "index": 20,
+      "subject_en": "Dennis Farina",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "Марк Стронг",
+      "object": "Лондон",
+      "object_candidates": "Мілан, Мадрид, Белфаст, Женева, Рим, Бруклін, Торонто, Париж, Х'юстон, Лондон",
+      "index": 21,
+      "subject_en": "Mark Strong",
+      "object_en": "London"
+    },
+    {
+      "subject": "Едуард I Довгоногий",
+      "object": "Вестмінстер",
+      "object_candidates": "Кельн, Бруклін, Москва, Женева, Мілан, Торонто, Відень, Вірменія, Медіна, Вестмінстер",
+      "index": 22,
+      "subject_en": "Edward I of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "The Weeknd",
+      "object": "Торонто",
+      "object_candidates": "Манчестер, Мілан, Лондон, Кельн, Мекка, Вестмінстер, Берлін, Мадрид, Х'юстон, Торонто",
+      "index": 23,
+      "subject_en": "The Weeknd",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "Ларрі Кінг",
+      "object": "Бруклін",
+      "object_candidates": "Женева, Комо, Рим, Медіна, Париж, Берлін, Кельн, Мюнхен, Чикаго, Бруклін",
+      "index": 24,
+      "subject_en": "Larry King",
+      "object_en": "Brooklyn"
+    },
+    {
+      "subject": "Артур Гарден",
+      "object": "Манчестер",
+      "object_candidates": "Лондон, Рим, Кельн, Белфаст, Шотландія, Мекка, Стамбул, Торонто, Москва, Манчестер",
+      "index": 25,
+      "subject_en": "Arthur Harden",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Маркіз де Сад",
+      "object": "Париж",
+      "object_candidates": "Медіна, Мілан, Х'юстон, Манчестер, Неаполь, Стамбул, Торонто, Мекка, Рим, Париж",
+      "index": 26,
+      "subject_en": "Marquis de Sade",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Чжан Цзиї",
+      "object": "Пекін",
+      "object_candidates": "Неаполь, Медіна, Чикаго, Берлін, Белград, Мадрид, Рим, Москва, Мекка, Пекін",
+      "index": 27,
+      "subject_en": "Zhang Ziyi",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Конрад Аденауер",
+      "object": "Кельн",
+      "object_candidates": "Белград, Торонто, Женева, Комо, Москва, Х'юстон, Мілан, Лондон, Медіна, Кельн",
+      "index": 28,
+      "subject_en": "Konrad Adenauer",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "Фердинанд де Сосюр",
+      "object": "Женева",
+      "object_candidates": "Стамбул, Мюнхен, Москва, Комо, Неаполь, Кельн, Белград, Мадрид, Лондон, Женева",
+      "index": 29,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "Василій III",
+      "object": "Москва",
+      "object_candidates": "Мілан, Торонто, Мекка, Берлін, Рим, Пекін, Стамбул, Мадрид, Женева, Москва",
+      "index": 30,
+      "subject_en": "Vasili III of Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Жорж Дюамель",
+      "object": "Париж",
+      "object_candidates": "Відень, Мілан, Вестмінстер, Белфаст, Мекка, Вірменія, Манчестер, Медіна, Торонто, Париж",
+      "index": 31,
+      "subject_en": "Georges Duhamel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Аїша",
+      "object": "Мекка",
+      "object_candidates": "Комо, Кельн, Париж, Бруклін, Белфаст, Х'юстон, Шотландія, Відень, Мадрид, Мекка",
+      "index": 32,
+      "subject_en": "Aisha",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "Петро I Карагеоргієвич",
+      "object": "Белград",
+      "object_candidates": "Відень, Пекін, Мілан, Женева, Вірменія, Бруклін, Чикаго, Неаполь, Белфаст, Белград",
+      "index": 33,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Бінг Кросбі",
+      "object": "Такома",
+      "object_candidates": "Чикаго, Х'юстон, Відень, Стамбул, Комо, Лондон, Медіна, Бруклін, Неаполь, Такома",
+      "index": 34,
+      "subject_en": "Bing Crosby",
+      "object_en": "Tacoma"
+    }
+  ],
+  "relation_id": "P19"
+}

@@ -1,0 +1,1014 @@
+{
+  "name": "religion",
+  "prompt_templates": [
+    "Σε ποια θρησκεία είναι συνδεδεμένος <subject>; Η απάντηση είναι: <mask>",
+    "Ποια είναι η θρησκευτική πίστη του <subject>; Η απάντηση είναι: <mask>",
+    "Ποια πίστη ακολουθεί ο/η <subject>; Η απάντηση είναι: <mask>",
+    "Ποια θρησκεία ασκείται από τον/την <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια θρησκεία εμπλέκεται ο/η <subject>; Η απάντηση είναι: <mask>",
+    " Η επίσημη θρησκεία του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Σιντάρτα Γκαουτάμα",
+      "object": "Βουδισμός",
+      "object_candidates": "Ισλάμ, Ιουδαϊσμός, Ινδουισμός, Μουσουλμάνος, Χριστιανισμός, Σαηεντολογία, Καθολικισμός, Βουδισμός",
+      "index": 4632,
+      "subject_en": "Gautama Buddha",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Αυγουστίνος Ιππώνος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Ισλάμ, Ιουδαϊσμός, Σαηεντολογία, Μουσουλμάνος, Βουδισμός, Ινδουισμός, Χριστιανισμός",
+      "index": 4633,
+      "subject_en": "Augustine of Hippo",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Αλβανοί",
+      "object": "Μουσουλμάνος",
+      "object_candidates": "Ισλάμ, Ινδουισμός, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Χριστιανισμός, Καθολικισμός, Μουσουλμάνος",
+      "index": 4634,
+      "subject_en": "Albanians",
+      "object_en": "Muslim"
+    },
+    {
+      "subject": "Βέδας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Ινδουισμός, Ισλάμ, Σαηεντολογία, Χριστιανισμός",
+      "index": 4635,
+      "subject_en": "Bede",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Κωνσταντίνος Α΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Ιουδαϊσμός, Βουδισμός, Ινδουισμός, Σαηεντολογία, Μουσουλμάνος, Ισλάμ, Χριστιανισμός",
+      "index": 4636,
+      "subject_en": "Constantine the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Ιακώβ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Βουδισμός, Σαηεντολογία, Χριστιανισμός, Καθολικισμός, Ινδουισμός, Ισλάμ, Μουσουλμάνος, Ιουδαϊσμός",
+      "index": 4637,
+      "subject_en": "Jacob",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "επίσκοπος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Βουδισμός, Καθολικισμός, Ισλάμ, Ιουδαϊσμός, Σαηεντολογία, Ινδουισμός, Μουσουλμάνος, Χριστιανισμός",
+      "index": 4638,
+      "subject_en": "bishop",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Πάπας Ονώριος Γ΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ, Βουδισμός, Ινδουισμός, Καθολικισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4639,
+      "subject_en": "Honorius III",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Πάπας Γρηγόριος Θ΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ, Ινδουισμός, Βουδισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4640,
+      "subject_en": "Gregory IX",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Αφγανιστάν",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Μουσουλμάνος, Ιουδαϊσμός, Σαηεντολογία, Βουδισμός, Καθολικισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4641,
+      "subject_en": "Afghanistan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ιησούς Χριστός",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Μουσουλμάνος, Ισλάμ, Σαηεντολογία, Χριστιανισμός, Βουδισμός, Ινδουισμός, Καθολικισμός, Ιουδαϊσμός",
+      "index": 4642,
+      "subject_en": "Jesus Christ",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Άραβες",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Βουδισμός, Χριστιανισμός, Ινδουισμός, Μουσουλμάνος, Ιουδαϊσμός, Σαηεντολογία, Ισλάμ",
+      "index": 4643,
+      "subject_en": "Iraqi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ιμπν Μπατούτα",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Ιουδαϊσμός, Μουσουλμάνος, Σαηεντολογία, Χριστιανισμός, Βουδισμός, Καθολικισμός, Ισλάμ",
+      "index": 4644,
+      "subject_en": "Ibn Battuta",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μωάμεθ",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Χριστιανισμός, Ινδουισμός, Ισλάμ",
+      "index": 4645,
+      "subject_en": "Muhammad",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μουσουλμάνος",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ινδουισμός, Χριστιανισμός, Βουδισμός, Ισλάμ",
+      "index": 4646,
+      "subject_en": "Muslim",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μαϊμωνίδης",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Ινδουισμός, Ισλάμ, Καθολικισμός, Βουδισμός, Μουσουλμάνος, Σαηεντολογία, Χριστιανισμός, Ιουδαϊσμός",
+      "index": 4647,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Μάλκολμ Χ",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Χριστιανισμός, Μουσουλμάνος, Σαηεντολογία, Καθολικισμός, Ινδουισμός, Ιουδαϊσμός, Ισλάμ",
+      "index": 4648,
+      "subject_en": "Malcolm X",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ουζμπέκοι",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Βουδισμός, Σαηεντολογία, Ιουδαϊσμός, Μουσουλμάνος, Καθολικισμός, Ινδουισμός, Ισλάμ",
+      "index": 4649,
+      "subject_en": "Uzbeks",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "συναγωγή",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Μουσουλμάνος, Σαηεντολογία, Ισλάμ, Ινδουισμός, Χριστιανισμός, Καθολικισμός, Βουδισμός, Ιουδαϊσμός",
+      "index": 4650,
+      "subject_en": "synagogue",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Μωάμεθ Δ΄",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Ιουδαϊσμός, Σαηεντολογία, Βουδισμός, Ινδουισμός, Καθολικισμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4651,
+      "subject_en": "Mehmed IV",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αβραάμ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Μουσουλμάνος, Καθολικισμός, Βουδισμός, Σαηεντολογία, Ισλάμ, Ινδουισμός, Χριστιανισμός, Ιουδαϊσμός",
+      "index": 4652,
+      "subject_en": "Abraham",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Αβερρόης",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Μουσουλμάνος, Βουδισμός, Χριστιανισμός, Καθολικισμός, Ινδουισμός, Ισλάμ",
+      "index": 4653,
+      "subject_en": "Averroes",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ιμπν Χαλντούν",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Βουδισμός, Ινδουισμός, Χριστιανισμός, Καθολικισμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4654,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Δαβίδ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Καθολικισμός, Σαηεντολογία, Χριστιανισμός, Ισλάμ, Ινδουισμός, Ιουδαϊσμός",
+      "index": 4655,
+      "subject_en": "David",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Σουλεϊμάν Α΄ ο Μεγαλοπρεπής",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Χριστιανισμός, Σαηεντολογία, Μουσουλμάνος, Καθολικισμός, Ιουδαϊσμός, Βουδισμός, Ισλάμ",
+      "index": 4656,
+      "subject_en": "Suleiman the Magnificent",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Άραβες",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Ινδουισμός, Ιουδαϊσμός, Σαηεντολογία, Μουσουλμάνος, Ισλάμ, Βουδισμός, Χριστιανισμός",
+      "index": 4657,
+      "subject_en": "Iraqi",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Τζελαλεντίν Ρουμί",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Σαηεντολογία, Ινδουισμός, Ισλάμ",
+      "index": 4658,
+      "subject_en": "Rumi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αλ-Γκαζαλί",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Μουσουλμάνος, Χριστιανισμός, Ινδουισμός, Ιουδαϊσμός, Καθολικισμός, Σαηεντολογία, Ισλάμ",
+      "index": 4659,
+      "subject_en": "Al-Ghazali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Χαλιφάτο των Ομεϋαδών",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Χριστιανισμός, Καθολικισμός, Σαηεντολογία, Ινδουισμός, Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4660,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Στέφανος Α' της Ουγγαρίας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ισλάμ, Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Καθολικισμός, Ιουδαϊσμός, Ινδουισμός, Χριστιανισμός",
+      "index": 4661,
+      "subject_en": "Stephen I of Hungary",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Καρλομάγνος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ισλάμ, Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Ινδουισμός, Χριστιανισμός",
+      "index": 4662,
+      "subject_en": "Charlemagne",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Εκκλησία Αντβεντιστών της Εβδόμης Ημέρας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Βουδισμός, Καθολικισμός, Ιουδαϊσμός, Ινδουισμός, Σαηεντολογία, Ισλάμ, Μουσουλμάνος, Χριστιανισμός",
+      "index": 4663,
+      "subject_en": "Seventh-day Adventist Church",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Βλαδίμηρος Α΄ του Κιέβου",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Σαηεντολογία, Βουδισμός, Καθολικισμός, Ισλάμ, Ινδουισμός, Ιουδαϊσμός, Μουσουλμάνος, Χριστιανισμός",
+      "index": 4664,
+      "subject_en": "Vladimir the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Ναός της Αναστάσεως",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Σαηεντολογία, Ιουδαϊσμός, Βουδισμός, Μουσουλμάνος, Ισλάμ, Ινδουισμός, Χριστιανισμός",
+      "index": 4665,
+      "subject_en": "Church of the Holy Sepulchre",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Μωαβίας Α'",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Ιουδαϊσμός, Ινδουισμός, Βουδισμός, Μουσουλμάνος, Καθολικισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4666,
+      "subject_en": "Muawiyah I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Χλωδοβίκος Α΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Μουσουλμάνος, Σαηεντολογία, Ινδουισμός, Βουδισμός, Καθολικισμός, Ισλάμ, Χριστιανισμός",
+      "index": 4667,
+      "subject_en": "Clovis I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Δυναστεία Τανγκ",
+      "object": "Βουδισμός",
+      "object_candidates": "Σαηεντολογία, Χριστιανισμός, Ισλάμ, Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ινδουισμός, Βουδισμός",
+      "index": 4668,
+      "subject_en": "Tang Empire",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Ουμάρ ιμπν αλ-Χαττάμπ",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Μουσουλμάνος, Βουδισμός, Ιουδαϊσμός, Καθολικισμός, Σαηεντολογία, Χριστιανισμός, Ισλάμ",
+      "index": 4669,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μωχάμαντ Ικμπάλ",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Καθολικισμός, Ιουδαϊσμός, Ινδουισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4670,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ομάρ Μπόνγκο",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Ινδουισμός, Καθολικισμός, Μουσουλμάνος, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Ισλάμ",
+      "index": 4671,
+      "subject_en": "Omar Bongo",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Πάπας Νικόλαος Ε΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Βουδισμός, Ισλάμ, Ινδουισμός, Καθολικισμός, Μουσουλμάνος, Σαηεντολογία, Χριστιανισμός",
+      "index": 4672,
+      "subject_en": "Nicholas V",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Ρουχολάχ Χομεϊνί",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Χριστιανισμός, Καθολικισμός, Ινδουισμός, Μουσουλμάνος, Βουδισμός, Ισλάμ",
+      "index": 4673,
+      "subject_en": "Ruhollah Khomeini",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Πάπας Βονιφάτιος Η΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ, Ινδουισμός, Βουδισμός, Καθολικισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4674,
+      "subject_en": "Boniface VIII",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Αϊσά",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Μουσουλμάνος, Σαηεντολογία, Ιουδαϊσμός, Βουδισμός, Χριστιανισμός, Καθολικισμός, Ισλάμ",
+      "index": 4675,
+      "subject_en": "Aisha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ναγκαριούνα",
+      "object": "Βουδισμός",
+      "object_candidates": "Μουσουλμάνος, Ιουδαϊσμός, Ινδουισμός, Ισλάμ, Χριστιανισμός, Σαηεντολογία, Καθολικισμός, Βουδισμός",
+      "index": 4676,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Χουσεΐν ιμπν Αλί",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Καθολικισμός, Μουσουλμάνος, Σαηεντολογία, Βουδισμός, Ινδουισμός, Ιουδαϊσμός, Ισλάμ",
+      "index": 4677,
+      "subject_en": "Husayn ibn Ali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Βράχμαν",
+      "object": "Ινδουισμός",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Χριστιανισμός, Ισλάμ, Βουδισμός, Μουσουλμάνος, Καθολικισμός, Ινδουισμός",
+      "index": 4678,
+      "subject_en": "Brahman",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Σαλαντίν",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Ιουδαϊσμός, Χριστιανισμός, Βουδισμός, Ινδουισμός, Σαηεντολογία, Μουσουλμάνος, Ισλάμ",
+      "index": 4679,
+      "subject_en": "Saladin",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Καθολική Εκκλησία",
+      "object": "Καθολικισμός",
+      "object_candidates": "Ιουδαϊσμός, Βουδισμός, Σαηεντολογία, Ινδουισμός, Χριστιανισμός, Ισλάμ, Μουσουλμάνος, Καθολικισμός",
+      "index": 4680,
+      "subject_en": "Catholic Church",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "Τέοντορ Χερτσλ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Καθολικισμός, Σαηεντολογία, Μουσουλμάνος, Βουδισμός, Χριστιανισμός, Ινδουισμός, Ισλάμ, Ιουδαϊσμός",
+      "index": 4681,
+      "subject_en": "Theodor Herzl",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Αυτοκρατορία των Χμερ",
+      "object": "Ινδουισμός",
+      "object_candidates": "Σαηεντολογία, Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Χριστιανισμός, Μουσουλμάνος, Ισλάμ, Ινδουισμός",
+      "index": 4682,
+      "subject_en": "Khmer Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Ιμπν Σαούντ",
+      "object": "Ισλάμ",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Σαηεντολογία, Ινδουισμός, Χριστιανισμός, Ιουδαϊσμός, Καθολικισμός, Ισλάμ",
+      "index": 4683,
+      "subject_en": "Ibn Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Χόσνι Μουμπάρακ",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Ιουδαϊσμός, Μουσουλμάνος, Χριστιανισμός, Ινδουισμός, Καθολικισμός, Βουδισμός, Ισλάμ",
+      "index": 4684,
+      "subject_en": "Hosni Mubarak",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Πάπας Σίλβεστρος Α΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Καθολικισμός, Ισλάμ, Ινδουισμός, Μουσουλμάνος, Βουδισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4685,
+      "subject_en": "Sylvester I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Μάικλ Μπλούμπεργκ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Σαηεντολογία, Χριστιανισμός, Ισλάμ, Βουδισμός, Μουσουλμάνος, Ινδουισμός, Καθολικισμός, Ιουδαϊσμός",
+      "index": 4686,
+      "subject_en": "Michael Bloomberg",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Αλής",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Καθολικισμός, Βουδισμός, Χριστιανισμός, Ινδουισμός, Σαηεντολογία, Μουσουλμάνος, Ισλάμ",
+      "index": 4687,
+      "subject_en": "Alī ibn Abī Ṭālib",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ντόκκα Ουμάροφ",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Μουσουλμάνος, Ινδουισμός, Καθολικισμός, Χριστιανισμός, Βουδισμός, Ιουδαϊσμός, Ισλάμ",
+      "index": 4688,
+      "subject_en": "Dokka Umarov",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μεχμέτ Αλί Πασάς",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Ινδουισμός, Βουδισμός, Σαηεντολογία, Χριστιανισμός, Μουσουλμάνος, Καθολικισμός, Ισλάμ",
+      "index": 4689,
+      "subject_en": "Muhammad Ali Pasha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ριχάρδος ο Λεοντόκαρδος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Καθολικισμός, Ινδουισμός, Μουσουλμάνος, Σαηεντολογία, Βουδισμός, Ισλάμ, Χριστιανισμός",
+      "index": 4690,
+      "subject_en": "Richard I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Οθμάν ιμπν Αφφάν",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Χριστιανισμός, Ινδουισμός, Σαηεντολογία, Μουσουλμάνος, Ιουδαϊσμός, Βουδισμός, Ισλάμ",
+      "index": 4691,
+      "subject_en": "Uthman ibn Affan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αλί Χαμενεΐ",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Χριστιανισμός, Ινδουισμός, Μουσουλμάνος, Ιουδαϊσμός, Βουδισμός, Καθολικισμός, Ισλάμ",
+      "index": 4692,
+      "subject_en": "Ali Khamenei",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Τομ Κρουζ",
+      "object": "Σαηεντολογία",
+      "object_candidates": "Καθολικισμός, Βουδισμός, Ισλάμ, Ιουδαϊσμός, Μουσουλμάνος, Χριστιανισμός, Ινδουισμός, Σαηεντολογία",
+      "index": 4693,
+      "subject_en": "Tom Cruise",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "Μαχάτμα Γκάντι",
+      "object": "Ινδουισμός",
+      "object_candidates": "Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Χριστιανισμός, Σαηεντολογία, Βουδισμός, Ισλάμ, Ινδουισμός",
+      "index": 4694,
+      "subject_en": "Mohandas Karamchand Gandhi",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Χαμίντ Καρζάι",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Μουσουλμάνος, Βουδισμός, Ινδουισμός, Σαηεντολογία, Ιουδαϊσμός, Καθολικισμός, Ισλάμ",
+      "index": 4695,
+      "subject_en": "Hamid Karzai",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Άλμπερτ Σβάιτσερ",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Σαηεντολογία, Ιουδαϊσμός, Ινδουισμός, Ισλάμ, Καθολικισμός, Μουσουλμάνος, Βουδισμός, Χριστιανισμός",
+      "index": 4696,
+      "subject_en": "Albert Schweitzer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Σουκάρνο",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Σαηεντολογία, Βουδισμός, Ινδουισμός, Χριστιανισμός, Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4697,
+      "subject_en": "Sukarno",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Σουχάρτο",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Σαηεντολογία, Βουδισμός, Καθολικισμός, Χριστιανισμός, Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4698,
+      "subject_en": "Suharto",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ice Cube",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Ινδουισμός, Ιουδαϊσμός, Καθολικισμός, Σαηεντολογία, Βουδισμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4699,
+      "subject_en": "Ice Cube",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Κάρλος το Τσακάλι",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Χριστιανισμός, Μουσουλμάνος, Σαηεντολογία, Βουδισμός, Ινδουισμός, Ιουδαϊσμός, Ισλάμ",
+      "index": 4700,
+      "subject_en": "Carlos the Jackal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αλ-Μαμούν",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Χριστιανισμός, Καθολικισμός, Σαηεντολογία, Ινδουισμός, Βουδισμός, Μουσουλμάνος, Ισλάμ",
+      "index": 4701,
+      "subject_en": "al-Maʾmun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Φατιμά Ζαχρά",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Βουδισμός, Χριστιανισμός, Σαηεντολογία, Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Ισλάμ",
+      "index": 4702,
+      "subject_en": "Fatimah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μοχάμεντ Αλί Τζίνα",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Χριστιανισμός, Ιουδαϊσμός, Βουδισμός, Καθολικισμός, Μουσουλμάνος, Ινδουισμός, Ισλάμ",
+      "index": 4703,
+      "subject_en": "Mohammad Ali Jinnah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Νότιο Βιετνάμ",
+      "object": "Βουδισμός",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Καθολικισμός, Ινδουισμός, Χριστιανισμός, Ισλάμ, Μουσουλμάνος, Βουδισμός",
+      "index": 4704,
+      "subject_en": "South Vietnam",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Αμπντούλ Χαμίτ Β΄",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Μουσουλμάνος, Καθολικισμός, Βουδισμός, Ινδουισμός, Σαηεντολογία, Ιουδαϊσμός, Ισλάμ",
+      "index": 4705,
+      "subject_en": "Abdul Hamid II",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αλεβήδες",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Μουσουλμάνος, Βουδισμός, Σαηεντολογία, Ινδουισμός, Καθολικισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4706,
+      "subject_en": "Alevism",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αούνγκ Σαν Σου Κι",
+      "object": "Βουδισμός",
+      "object_candidates": "Ισλάμ, Ινδουισμός, Χριστιανισμός, Σαηεντολογία, Καθολικισμός, Μουσουλμάνος, Ιουδαϊσμός, Βουδισμός",
+      "index": 4707,
+      "subject_en": "Aung San Suu Kyi",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Χαρούν αλ-Ρασίντ",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Ιουδαϊσμός, Ινδουισμός, Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Χριστιανισμός, Ισλάμ",
+      "index": 4708,
+      "subject_en": "Harun al-Rashid",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ησαΐας",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Ισλάμ, Σαηεντολογία, Χριστιανισμός, Ινδουισμός, Καθολικισμός, Ιουδαϊσμός",
+      "index": 4709,
+      "subject_en": "Isaiah",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Αμπού Μπακρ",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Ινδουισμός, Βουδισμός, Μουσουλμάνος, Ιουδαϊσμός, Χριστιανισμός, Καθολικισμός, Ισλάμ",
+      "index": 4710,
+      "subject_en": "Abu Bakr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αυτοκρατορία των Ινδών Γκούπτα",
+      "object": "Ινδουισμός",
+      "object_candidates": "Ισλάμ, Καθολικισμός, Βουδισμός, Μουσουλμάνος, Σαηεντολογία, Χριστιανισμός, Ιουδαϊσμός, Ινδουισμός",
+      "index": 4711,
+      "subject_en": "Gupta Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Ακμπάρ ο Μέγας",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Καθολικισμός, Μουσουλμάνος, Σαηεντολογία, Ιουδαϊσμός, Ινδουισμός, Βουδισμός, Ισλάμ",
+      "index": 4712,
+      "subject_en": "Akbar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ιμάμης",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Βουδισμός, Ινδουισμός, Χριστιανισμός, Ιουδαϊσμός, Μουσουλμάνος, Σαηεντολογία, Ισλάμ",
+      "index": 4713,
+      "subject_en": "Imam",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Λουδοβίκος ΙΔ΄ της Γαλλίας",
+      "object": "Καθολικισμός",
+      "object_candidates": "Ισλάμ, Βουδισμός, Σαηεντολογία, Χριστιανισμός, Ιουδαϊσμός, Μουσουλμάνος, Ινδουισμός, Καθολικισμός",
+      "index": 4714,
+      "subject_en": "Louis XIV of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "Πεντηκοστή",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ιουδαϊσμός, Μουσουλμάνος, Βουδισμός, Ισλάμ, Καθολικισμός, Ινδουισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4715,
+      "subject_en": "Pentecost",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Κυριακή προσευχή",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Μουσουλμάνος, Καθολικισμός, Ινδουισμός, Σαηεντολογία, Ισλάμ, Βουδισμός, Ιουδαϊσμός, Χριστιανισμός",
+      "index": 4716,
+      "subject_en": "Lord's Prayer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Σκεντέρμπεης",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Μουσουλμάνος, Καθολικισμός, Σαηεντολογία, Ισλάμ, Ινδουισμός, Ιουδαϊσμός, Βουδισμός, Χριστιανισμός",
+      "index": 4717,
+      "subject_en": "Skanderbeg",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Σογκουνάτο Τοκουγκάβα",
+      "object": "Βουδισμός",
+      "object_candidates": "Μουσουλμάνος, Χριστιανισμός, Ιουδαϊσμός, Σαηεντολογία, Ισλάμ, Καθολικισμός, Ινδουισμός, Βουδισμός",
+      "index": 4718,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Ερρίκος Γ΄ της Γαλλίας",
+      "object": "Καθολικισμός",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Βουδισμός, Χριστιανισμός, Ινδουισμός, Μουσουλμάνος, Ισλάμ, Καθολικισμός",
+      "index": 4719,
+      "subject_en": "Henry III of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "Μοχάμεντ Ομάρ",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Μουσουλμάνος, Ιουδαϊσμός, Χριστιανισμός, Σαηεντολογία, Βουδισμός, Ινδουισμός, Ισλάμ",
+      "index": 4720,
+      "subject_en": "Mohammed Omar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Κάρολος Ε΄ της Γαλλίας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ινδουισμός, Σαηεντολογία, Βουδισμός, Μουσουλμάνος, Καθολικισμός, Ιουδαϊσμός, Ισλάμ, Χριστιανισμός",
+      "index": 4721,
+      "subject_en": "Charles V of France",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Αυτοκρατορία των Μαουρύα",
+      "object": "Ινδουισμός",
+      "object_candidates": "Μουσουλμάνος, Καθολικισμός, Σαηεντολογία, Ιουδαϊσμός, Ισλάμ, Βουδισμός, Χριστιανισμός, Ινδουισμός",
+      "index": 4722,
+      "subject_en": "Maurya Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Ραμακρίσνα",
+      "object": "Ινδουισμός",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Χριστιανισμός, Ιουδαϊσμός, Σαηεντολογία, Καθολικισμός, Ισλάμ, Ινδουισμός",
+      "index": 4723,
+      "subject_en": "Ramakrishna",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Χσουάν Τσανγκ",
+      "object": "Βουδισμός",
+      "object_candidates": "Ινδουισμός, Μουσουλμάνος, Ιουδαϊσμός, Σαηεντολογία, Ισλάμ, Χριστιανισμός, Καθολικισμός, Βουδισμός",
+      "index": 4724,
+      "subject_en": "Xuanzang",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Οσμάν Α΄",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Ιουδαϊσμός, Καθολικισμός, Σαηεντολογία, Βουδισμός, Μουσουλμάνος, Χριστιανισμός, Ισλάμ",
+      "index": 4725,
+      "subject_en": "Osman I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Απόστολος Ματθαίος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ισλάμ, Σαηεντολογία, Ινδουισμός, Βουδισμός, Χριστιανισμός",
+      "index": 4726,
+      "subject_en": "Matthew the Apostle",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Μωάμεθ Β΄ ο Πορθητής",
+      "object": "Ισλάμ",
+      "object_candidates": "Μουσουλμάνος, Χριστιανισμός, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Ινδουισμός, Καθολικισμός, Ισλάμ",
+      "index": 4727,
+      "subject_en": "Mehmed the Conqueror",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Χάνα Άρεντ",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Χριστιανισμός, Μουσουλμάνος, Σαηεντολογία, Ισλάμ, Ινδουισμός, Καθολικισμός, Βουδισμός, Ιουδαϊσμός",
+      "index": 4728,
+      "subject_en": "Hannah Arendt",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Τζον Τραβόλτα",
+      "object": "Σαηεντολογία",
+      "object_candidates": "Ινδουισμός, Χριστιανισμός, Βουδισμός, Ισλάμ, Καθολικισμός, Μουσουλμάνος, Ιουδαϊσμός, Σαηεντολογία",
+      "index": 4729,
+      "subject_en": "John Travolta",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "Ρωμύλος Αυγουστύλος",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ινδουισμός, Καθολικισμός, Σαηεντολογία, Μουσουλμάνος, Ισλάμ, Βουδισμός, Ιουδαϊσμός, Χριστιανισμός",
+      "index": 4730,
+      "subject_en": "Romulus Augustus",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Τζόζεφ Πρίστλυ",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ισλάμ, Βουδισμός, Σαηεντολογία, Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ινδουισμός, Χριστιανισμός",
+      "index": 4731,
+      "subject_en": "Joseph Priestley",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Σκεντέρμπεης",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Χριστιανισμός, Σαηεντολογία, Βουδισμός, Ινδουισμός, Μουσουλμάνος, Καθολικισμός, Ισλάμ",
+      "index": 4732,
+      "subject_en": "Skanderbeg",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Χαφέζ",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Σαηεντολογία, Χριστιανισμός, Μουσουλμάνος, Καθολικισμός, Ινδουισμός, Βουδισμός, Ισλάμ",
+      "index": 4733,
+      "subject_en": "Hafez",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ζαν Ζακ Ρουσσώ",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ινδουισμός, Καθολικισμός, Ιουδαϊσμός, Ισλάμ, Μουσουλμάνος, Βουδισμός, Σαηεντολογία, Χριστιανισμός",
+      "index": 4734,
+      "subject_en": "Jean-Jacques Rousseau",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Αλφρέδος του Ουέσσεξ",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Ιουδαϊσμός, Ινδουισμός, Σαηεντολογία, Καθολικισμός, Ισλάμ, Χριστιανισμός",
+      "index": 4735,
+      "subject_en": "Alfred the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Τσενκ Χι",
+      "object": "Ισλάμ",
+      "object_candidates": "Μουσουλμάνος, Σαηεντολογία, Βουδισμός, Ιουδαϊσμός, Ινδουισμός, Καθολικισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4736,
+      "subject_en": "Zheng He",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ιντ αλ-φιτρ",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Μουσουλμάνος, Καθολικισμός, Σαηεντολογία, Ιουδαϊσμός, Χριστιανισμός, Ινδουισμός, Ισλάμ",
+      "index": 4737,
+      "subject_en": "Eid al-Fitr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Τζαβαχαρλάλ Νεχρού",
+      "object": "Ινδουισμός",
+      "object_candidates": "Καθολικισμός, Χριστιανισμός, Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Ιουδαϊσμός, Ισλάμ, Ινδουισμός",
+      "index": 4738,
+      "subject_en": "Jawaharlal Nehru",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Σα Τζαχάν",
+      "object": "Ισλάμ",
+      "object_candidates": "Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Ινδουισμός, Σαηεντολογία, Βουδισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4739,
+      "subject_en": "Shah Jahan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αλμοραβίδες",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Μουσουλμάνος, Ιουδαϊσμός, Καθολικισμός, Χριστιανισμός, Βουδισμός, Ινδουισμός, Ισλάμ",
+      "index": 4740,
+      "subject_en": "Almoravid dynasty",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Λαϊκή Δημοκρατία της Μογκολίας",
+      "object": "Βουδισμός",
+      "object_candidates": "Ινδουισμός, Χριστιανισμός, Καθολικισμός, Μουσουλμάνος, Ισλάμ, Σαηεντολογία, Ιουδαϊσμός, Βουδισμός",
+      "index": 4741,
+      "subject_en": "Mongolian People's Republic",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Σβεν Α΄ της Δανίας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ισλάμ, Καθολικισμός, Μουσουλμάνος, Ιουδαϊσμός, Σαηεντολογία, Ινδουισμός, Βουδισμός, Χριστιανισμός",
+      "index": 4742,
+      "subject_en": "Sweyn I of Denmark",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Σαρβεπάλλι Ραντακρίσναν",
+      "object": "Ινδουισμός",
+      "object_candidates": "Ισλάμ, Καθολικισμός, Μουσουλμάνος, Σαηεντολογία, Χριστιανισμός, Ιουδαϊσμός, Βουδισμός, Ινδουισμός",
+      "index": 4743,
+      "subject_en": "Sarvepalli Radhakrishnan",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Τατζ Μαχάλ",
+      "object": "Ισλάμ",
+      "object_candidates": "Ιουδαϊσμός, Χριστιανισμός, Βουδισμός, Σαηεντολογία, Μουσουλμάνος, Ινδουισμός, Καθολικισμός, Ισλάμ",
+      "index": 4744,
+      "subject_en": "Taj Mahal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Μοχάμεντ Μόρσι",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Μουσουλμάνος, Ινδουισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4745,
+      "subject_en": "Mohamed Morsi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Αχμέτ Α΄",
+      "object": "Ισλάμ",
+      "object_candidates": "Χριστιανισμός, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Καθολικισμός, Μουσουλμάνος, Ινδουισμός, Ισλάμ",
+      "index": 4746,
+      "subject_en": "Ahmed I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Φραντς Κάφκα",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Ισλάμ, Μουσουλμάνος, Καθολικισμός, Ινδουισμός, Χριστιανισμός, Σαηεντολογία, Βουδισμός, Ιουδαϊσμός",
+      "index": 4747,
+      "subject_en": "Franz Kafka",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Χαλίφα μπιν Ζαγέντ αλ Ναχαγιάν",
+      "object": "Ισλάμ",
+      "object_candidates": "Σαηεντολογία, Βουδισμός, Χριστιανισμός, Καθολικισμός, Ιουδαϊσμός, Μουσουλμάνος, Ινδουισμός, Ισλάμ",
+      "index": 4748,
+      "subject_en": "Khalifa bin Zayed Al Nahyan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Εδουάρδος Α΄ της Αγγλίας",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ισλάμ, Καθολικισμός, Ιουδαϊσμός, Βουδισμός, Σαηεντολογία, Ινδουισμός, Μουσουλμάνος, Χριστιανισμός",
+      "index": 4749,
+      "subject_en": "Edward I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Μέριλιν Μονρόε",
+      "object": "Ιουδαϊσμός",
+      "object_candidates": "Καθολικισμός, Ινδουισμός, Ισλάμ, Σαηεντολογία, Χριστιανισμός, Βουδισμός, Μουσουλμάνος, Ιουδαϊσμός",
+      "index": 4750,
+      "subject_en": "Marilyn Monroe",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Μπαμπούρ",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Βουδισμός, Μουσουλμάνος, Σαηεντολογία, Ινδουισμός, Ιουδαϊσμός, Χριστιανισμός, Ισλάμ",
+      "index": 4751,
+      "subject_en": "Babur",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Σελίμ Α΄",
+      "object": "Ισλάμ",
+      "object_candidates": "Καθολικισμός, Ινδουισμός, Χριστιανισμός, Μουσουλμάνος, Ιουδαϊσμός, Βουδισμός, Σαηεντολογία, Ισλάμ",
+      "index": 4752,
+      "subject_en": "Selim I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Φαχντ μπιν Αμπντούλ Αζίζ",
+      "object": "Ισλάμ",
+      "object_candidates": "Βουδισμός, Μουσουλμάνος, Καθολικισμός, Σαηεντολογία, Ιουδαϊσμός, Χριστιανισμός, Ινδουισμός, Ισλάμ",
+      "index": 4753,
+      "subject_en": "Fahd bin Abdulaziz Al Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Περβέζ Μουσάραφ",
+      "object": "Ισλάμ",
+      "object_candidates": "Ινδουισμός, Μουσουλμάνος, Βουδισμός, Σαηεντολογία, Ιουδαϊσμός, Καθολικισμός, Χριστιανισμός, Ισλάμ",
+      "index": 4754,
+      "subject_en": "Pervez Musharraf",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ανουάρ Σαντάτ",
+      "object": "Ισλάμ",
+      "object_candidates": "Μουσουλμάνος, Βουδισμός, Ιουδαϊσμός, Σαηεντολογία, Ινδουισμός, Χριστιανισμός, Καθολικισμός, Ισλάμ",
+      "index": 4755,
+      "subject_en": "Anwar Sadat",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Πάπας Λέων Θ΄",
+      "object": "Χριστιανισμός",
+      "object_candidates": "Ινδουισμός, Καθολικισμός, Ιουδαϊσμός, Σαηεντολογία, Ισλάμ, Μουσουλμάνος, Βουδισμός, Χριστιανισμός",
+      "index": 4756,
+      "subject_en": "Leo IX",
+      "object_en": "Christianity"
+    }
+  ],
+  "relation_id": "P140"
+}

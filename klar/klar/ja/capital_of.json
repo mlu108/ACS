@@ -1,0 +1,1710 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "<subject>の首都はどの国または州ですか？答えは：<mask>",
+    "<subject>の首都はどこですか？答えは：<mask>",
+    "<subject>の首都としてどの国または州ですか？答えは：<mask>",
+    "<subject>の首都としてどの場所ですか？答えは：<mask>",
+    "<subject>はどこに首都としてサーブされていますか？答えは：<mask>",
+    " <subject>は首都であり、その所属する国の名前は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "エドモントン",
+      "object": "アルバータ州",
+      "object_candidates": "チェコスロバキア, ラオス, グジャラート州, バイエルン自由州, サラワク州, バングラデシュ, テキサス州, カタール, プロヴァンス, アルバータ州",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "アンカラ",
+      "object": "トルコ",
+      "object_candidates": "ザンビア, ドイツ, セネガル, ポーランド, フィリピン, ラトビア, リビア, アーカンソー州, グリーンランド, トルコ",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "アムステルダム",
+      "object": "オランダ",
+      "object_candidates": "ラトビア, アン県, カンザス州, バイエルン自由州, ネパール, スロベニア, マリ共和国, コネチカット州, ローデシア, オランダ",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "バクー",
+      "object": "アゼルバイジャン",
+      "object_candidates": "オランダ, ベルギー, ボツワナ, マハーラーシュトラ州, デンマーク, ニジェール, ウクライナ, ソマリア, イエメン, アゼルバイジャン",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "カイロ",
+      "object": "エジプト",
+      "object_candidates": "オマーン, ボリビア, ナバラ州, カザフスタン, メリーランド州, コネチカット州, イングランド, モザンビーク, ユダ王国, エジプト",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "コペンハーゲン",
+      "object": "デンマーク",
+      "object_candidates": "マサチューセッツ州, スロバキア, ベネズエラ, イスラエル, イラク, フランドル, アイダホ州, バングラデシュ, グアテマラ, デンマーク",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "バルセロナ",
+      "object": "カタルーニャ州",
+      "object_candidates": "リュクサンブール州, コロラド州, トスカーナ州, バーレーン, ベリーズ, 四川省, ドバイ首長国, ヨルダン, ラオス, カタルーニャ州",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "ブエノスアイレス",
+      "object": "アルゼンチン",
+      "object_candidates": "カタール, アラゴン州, ドイツ, モンテネグロ, ユタ州, ロシア, ボリビア, ポルトガル, サラワク州, アルゼンチン",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "ミュンヘン",
+      "object": "バイエルン自由州",
+      "object_candidates": "クイーンズランド州, ポルトガル, インディアナ州, ブルネイ, ポーランド, コネチカット州, フランドル, ウズベキスタン, ユダ王国, バイエルン自由州",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "フィレンツェ",
+      "object": "トスカーナ州",
+      "object_candidates": "リベリア, モンテネグロ, 広東省, セルビア, アイルランド, ルイジアナ州, ベラルーシ, インド, ノルウェー, トスカーナ州",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "ローマ",
+      "object": "イタリア",
+      "object_candidates": "アフガニスタン, インドネシア, ブラジル, マサチューセッツ州, マルタ, ジンバブエ, ドイツ, ベネズエラ, ブータン, イタリア",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "アルジェ",
+      "object": "アルジェリア",
+      "object_candidates": "ハイチ, ベルギー, ジョージア, マラウイ, ギニア, パキスタン, ジンバブエ, セネガル, サラワク州, アルジェリア",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "トリポリ",
+      "object": "リビア",
+      "object_candidates": "ウルグアイ, プロヴァンス, カタール, タジキスタン, ハンガリー, キルギス, パキスタン, ケニア, ポーランド, リビア",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "キャンベラ",
+      "object": "オーストラリア",
+      "object_candidates": "アラスカ州, ミネソタ州, グリーンランド, ハリヤーナー州, クイーンズランド州, クロアチア, モロッコ, ブルガリア, トルコ, オーストラリア",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "ウィントフック",
+      "object": "ナミビア",
+      "object_candidates": "ベルギー, クウェート, シリア, ネパール, 日本, ギニア, アイルランド, フィリピン, トスカーナ州, ナミビア",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "イラクリオン",
+      "object": "クレタ島",
+      "object_candidates": "ポルトガル, ヨルダン, エチオピア, 中華民国, パンジャーブ州, アラスカ州, ドイツ, アン県, インディアナ州, クレタ島",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "バグダード",
+      "object": "イラク",
+      "object_candidates": "ローデシア, アフガニスタン, ロシア, オランダ, ブラジル, クウェート, ベラルーシ, モロッコ, ブルガリア, イラク",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "エディンバラ",
+      "object": "スコットランド",
+      "object_candidates": "テランガナ, ビハール州, ルイジアナ州, ニカラグア, オランダ, アーカンソー州, ブラジル, ユタ州, オクラホマ州, スコットランド",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "カーブル",
+      "object": "アフガニスタン",
+      "object_candidates": "ウェールズ, ウズベキスタン, カルナータカ州, イエメン, 四川省, アラスカ州, カタール, ワイオミング州, パキスタン, アフガニスタン",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "ボン",
+      "object": "ドイツ",
+      "object_candidates": "ベラルーシ, テキサス州, ネパール, フィリピン, アラゴン州, バイエルン自由州, ミシガン州, アーカンソー州, リベリア, ドイツ",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ベルリン",
+      "object": "ドイツ",
+      "object_candidates": "グリーンランド, ピエモンテ州, オマーン, ベネズエラ, フィジー, ラトビア, 中華民国, ノルウェー, ルーマニア, ドイツ",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ポルトノボ",
+      "object": "ベナン",
+      "object_candidates": "ユタ州, キルギス, スペイン, スロベニア, アラゴン州, テキサス州, ウルグアイ, ボリビア, ウガンダ, ベナン",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "ハボローネ",
+      "object": "ボツワナ",
+      "object_candidates": "ルーマニア, カリフォルニア州, サルデーニャ州, タイ王国, エストニア, セルビア, ウルグアイ, マニトバ州, ハリヤーナー州, ボツワナ",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "パリ",
+      "object": "フランス",
+      "object_candidates": "ハイチ, パキスタン, ビハール州, ブラジル, クウェート, ナミビア, フロリダ州, ケーララ州, カザフスタン, フランス",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "ムンバイ",
+      "object": "マハーラーシュトラ州",
+      "object_candidates": "キューバ, マニトバ州, ノール県, サモア, ミシガン州, 四川省, ニジェール, テネシー州, リュクサンブール州, マハーラーシュトラ州",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "オスロ",
+      "object": "ノルウェー",
+      "object_candidates": "マダガスカル, フランス, オンタリオ州, トルコ, クウェート, ピエモンテ州, ブルガリア, タンザニア, コネチカット州, ノルウェー",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "エルサレム",
+      "object": "ユダ王国",
+      "object_candidates": "ブルゴーニュ地域圏, シリア, スイス, グリーンランド, ブラジル, マラウイ, エジプト, タイ王国, ワイオミング州, ユダ王国",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "ビシュケク",
+      "object": "キルギス",
+      "object_candidates": "ビハール州, 四川省, アルメニア, パンジャーブ州, チャド, オマーン, カルナータカ州, テランガナ, タスマニア州, キルギス",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "ブカレスト",
+      "object": "ルーマニア",
+      "object_candidates": "イングランド, ナバラ州, ジンバブエ, アイダホ州, リベリア, タイ王国, アルバ県, ラトビア, エジプト, ルーマニア",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "メルボルン",
+      "object": "ビクトリア州",
+      "object_candidates": "サラワク州, アン県, アルジェリア, オックスフォードシャー, エクアドル, ヘッセン州, コロラド州, アルバータ州, モーリシャス, ビクトリア州",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "北京市",
+      "object": "中華民国",
+      "object_candidates": "モロッコ, バングラデシュ, スウェーデン, アイルランド, 雲南省, アラスカ州, ケーララ州, エジプト, スロバキア, 中華民国",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "重慶市",
+      "object": "中華民国",
+      "object_candidates": "ワイオミング州, ハワイ州, ラトビア, アン県, マルタ, タジキスタン, グリーンランド, タスマニア州, ウズベキスタン, 中華民国",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "ハバナ",
+      "object": "キューバ",
+      "object_candidates": "マレーシア, プロヴァンス, マルタ, ルイジアナ州, 雲南省, カタルーニャ州, レスターシャー, チュニジア, グアテマラ, キューバ",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "デンバー",
+      "object": "コロラド州",
+      "object_candidates": "アラゴン州, アンゴラ, シリア, ソマリア, リビア, フィンランド, ザルツブルク州, オンタリオ州, プロヴァンス, コロラド州",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "モガディシュ",
+      "object": "ソマリア",
+      "object_candidates": "オランダ, リトアニア, サモア, フランス, ウルグアイ, 中華民国, ガーナ, イラン, 雲南省, ソマリア",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "カーディフ",
+      "object": "ウェールズ",
+      "object_candidates": "カタール, メリーランド州, フランドル, ペルー, ベラルーシ, ノルウェー, ウガンダ, イタリア, インド, ウェールズ",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "ダブリン",
+      "object": "アイルランド",
+      "object_candidates": "モーリシャス, ベトナム, アルバニア, インドネシア, メキシコ, ミネソタ州, ギニア, フランス, アゼルバイジャン, アイルランド",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "チュニス",
+      "object": "チュニジア",
+      "object_candidates": "アーカンソー州, オーストラリア, パンジャーブ州, ブータン, ラオス, カリフォルニア州, ベナン, アルバータ州, タイ王国, チュニジア",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "リオデジャネイロ",
+      "object": "ブラジル",
+      "object_candidates": "四川省, ルイジアナ州, オクラホマ州, イングランド王国, ビクトリア州, ユタ州, キプロス, スーダン, サラワク州, ブラジル",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "バレッタ",
+      "object": "マルタ",
+      "object_candidates": "ガボン, ガーナ, フィジー, スイス, モロッコ, カンボジア, メリーランド州, カンザス州, ギリシャ, マルタ",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "ロンドン",
+      "object": "イングランド",
+      "object_candidates": "フィリピン, ノルマンディー, カザフスタン, サバ州, キプロス, スウェーデン, グジャラート州, アルバータ州, アンゴラ, イングランド",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "ラバト",
+      "object": "モロッコ",
+      "object_candidates": "ベネズエラ, キプロス, カナダ, キルギス, タジキスタン, セルビア, ボリビア, クイーンズランド州, マルタ, モロッコ",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "リガ",
+      "object": "ラトビア",
+      "object_candidates": "タイ王国, テキサス州, リベリア, モーリシャス, マルタ, サラワク州, ブランデンブルク州, 四川省, ザルツブルク州, ラトビア",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "ダマスカス",
+      "object": "シリア",
+      "object_candidates": "サバ州, タイ王国, マニトバ州, タジキスタン, イエメン, ウガンダ, イラク, アルバータ州, マサチューセッツ州, シリア",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "ダルエスサラーム",
+      "object": "タンザニア",
+      "object_candidates": "ピエモンテ州, ベラルーシ, バーレーン, チリ, 四川省, グアテマラ, デンマーク, ボツワナ, キルギス, タンザニア",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "ロンドン",
+      "object": "イングランド王国",
+      "object_candidates": "広東省, ロシア, スロバキア, ウクライナ, ルワンダ, カタール, エクアドル, インディアナ州, テキサス州, イングランド王国",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ストックホルム",
+      "object": "スウェーデン",
+      "object_candidates": "ボリビア, トスカーナ州, カザフスタン, ジンバブエ, エジプト, ザルツブルク州, ペルー, ハワイ州, ウクライナ, スウェーデン",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "ヘルシンキ",
+      "object": "フィンランド",
+      "object_candidates": "ネパール, アルバ県, リベリア, アーカンソー州, リュクサンブール州, メリーランド州, モロッコ, ベリーズ, ローデシア, フィンランド",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "プラハ",
+      "object": "ボヘミア",
+      "object_candidates": "ザルツブルク州, キューバ, ベラルーシ, アルジェリア, アルバニア, ヘッセン州, アラゴン州, テネシー州, アゼルバイジャン, ボヘミア",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "インディアナポリス",
+      "object": "インディアナ州",
+      "object_candidates": "タイ王国, フロリダ州, コネチカット州, インド, パナマ, アンゴラ, ニカラグア, ブルガリア, メキシコ, インディアナ州",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "マドリード",
+      "object": "スペイン",
+      "object_candidates": "ルワンダ, フロリダ州, リビア, ポーランド, カリフォルニア州, フランス, エクアドル, ラージャスターン州, ローデシア, スペイン",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "グアテマラシティ",
+      "object": "グアテマラ",
+      "object_candidates": "チャド, アイルランド, カナダ, テキサス州, バルバドス, アンゴラ, ビハール州, アルバニア, ラトビア, グアテマラ",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "ワルシャワ",
+      "object": "ポーランド",
+      "object_candidates": "ハイチ, トルコ, イングランド王国, バイエルン自由州, マルタ, ドバイ首長国, イタリア, ゴア州, カンザス州, ポーランド",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "広州市",
+      "object": "広東省",
+      "object_candidates": "ザンビア, シリア, バイエルン自由州, ブルネイ, ブラジル, 四川省, ウクライナ, ザクセン州, アルバ県, 広東省",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "ドレスデン",
+      "object": "ザクセン州",
+      "object_candidates": "アーカンソー州, タイ王国, グアテマラ, プロヴァンス, ヨルダン, ザルツブルク州, マレーシア, ハワイ州, カナダ, ザクセン州",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "ポルトープランス",
+      "object": "ハイチ",
+      "object_candidates": "日本, アンゴラ, チェコスロバキア, アルゼンチン, カルナータカ州, バーレーン, ギニア, フランス, マハーラーシュトラ州, ハイチ",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "アテネ",
+      "object": "ギリシャ",
+      "object_candidates": "エジプト, コネチカット州, マリ共和国, ハンガリー, オクラホマ州, ホンジュラス, アルメニア, アンゴラ, ザルツブルク州, ギリシャ",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "ホバート",
+      "object": "タスマニア州",
+      "object_candidates": "ヨルダン, セルビア, ジョージア, ブラジル, リュクサンブール州, アイオワ州, パキスタン, オクラホマ州, ビハール州, タスマニア州",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "タリン",
+      "object": "エストニア",
+      "object_candidates": "パンジャーブ州, ナバラ州, ポルトガル, ペンシルベニア州, フィリピン, ブランデンブルク州, フィジー, モザンビーク, クロアチア, エストニア",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "東京都",
+      "object": "日本",
+      "object_candidates": "ビクトリア州, ウガンダ, エジプト, ハンガリー, レバノン, ルワンダ, アフガニスタン, 中華民国, サルデーニャ州, 日本",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "ウィーン",
+      "object": "オーストリア",
+      "object_candidates": "チェコスロバキア, グジャラート州, イスラエル, トルコ, イングランド, カザフスタン, ユタ州, アンゴラ, イエメン, オーストリア",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "リュブリャナ",
+      "object": "スロベニア",
+      "object_candidates": "イスラエル, セネガル, モンテネグロ, シチリア州, フィンランド, ナイジェリア, タジキスタン, アフガニスタン, ギニア, スロベニア",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "エルサレム",
+      "object": "イスラエル",
+      "object_candidates": "セネガル, ベネズエラ, テランガナ, アゼルバイジャン, ブルネイ, ハンガリー, マハーラーシュトラ州, オックスフォードシャー, テキサス州, イスラエル",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "ジャカルタ",
+      "object": "インドネシア",
+      "object_candidates": "モザンビーク, ヨルダン, カリフォルニア州, チリ, 広東省, オクラホマ州, ブルネイ, カルナータカ州, ラージャスターン州, インドネシア",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "トリノ",
+      "object": "ピエモンテ州",
+      "object_candidates": "セネガル, イタリア, ユーゴスラビア, クイーンズランド州, モンテネグロ, ゴア州, ギニア, アラスカ州, オンタリオ州, ピエモンテ州",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "ナイロビ",
+      "object": "ケニア",
+      "object_candidates": "ベリーズ, ラトビア, リベリア, イングランド, ブータン, パンジャーブ州, ウズベキスタン, 中華民国, コネチカット州, ケニア",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "クアラルンプール",
+      "object": "マレーシア",
+      "object_candidates": "インディアナ州, ローデシア, ユーゴスラビア, カナダ, 中華民国, スウェーデン, トルコ, ミシガン州, グジャラート州, マレーシア",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "イスラマバード",
+      "object": "パキスタン",
+      "object_candidates": "マルタ, グジャラート州, マダガスカル, リトアニア, ジョージア, リビア, タイ王国, ケニア, ベリーズ, パキスタン",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "カトマンズ",
+      "object": "ネパール",
+      "object_candidates": "ローデシア, アルバ県, イタリア, エストニア, ウズベキスタン, ブランデンブルク州, プロヴァンス, ニジェール, アルジェリア, ネパール",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "ハルツーム",
+      "object": "スーダン",
+      "object_candidates": "ウクライナ, アラスカ州, ケベック州, プロヴァンス, リベリア, ビクトリア州, ペルー, キューバ, ケーララ州, スーダン",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "ヴィリニュス",
+      "object": "リトアニア",
+      "object_candidates": "ナバラ州, ベナン, アルバ県, コロラド州, ニジェール, ナイジェリア, ボツワナ, ハリヤーナー州, ヘッセン州, リトアニア",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "ベイルート",
+      "object": "レバノン",
+      "object_candidates": "フィリピン, キューバ, ケニア, 広東省, カタルーニャ州, ブータン, カナダ, ベトナム, マサチューセッツ州, レバノン",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "リスボン",
+      "object": "ポルトガル",
+      "object_candidates": "ノルウェー, ジンバブエ, メキシコ, ザクセン州, シチリア州, ウェールズ, ラトビア, オーストラリア, リベリア, ポルトガル",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "ルアンダ",
+      "object": "アンゴラ",
+      "object_candidates": "インド, ハイチ, ラトビア, 日本, クロアチア, パキスタン, ユーゴスラビア, マニトバ州, タイ王国, アンゴラ",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "モスクワ",
+      "object": "ロシア",
+      "object_candidates": "タイ王国, マダガスカル, ケニア, アイオワ州, クイーンズランド州, バーレーン, アフガニスタン, ルワンダ, アラスカ州, ロシア",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "ウィニペグ",
+      "object": "マニトバ州",
+      "object_candidates": "ポーランド, アルバータ州, ザンビア, アラゴン州, ハイチ, フィリピン, アルバ県, 中華民国, ハンガリー, マニトバ州",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "リロングウェ",
+      "object": "マラウイ",
+      "object_candidates": "ワイオミング州, アフガニスタン, クイーンズランド州, チャド, ケベック州, タンザニア, ポーランド, ケニア, ボヘミア, マラウイ",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "メキシコシティ",
+      "object": "メキシコ",
+      "object_candidates": "オンタリオ州, リベリア, アゼルバイジャン, フロリダ州, グジャラート州, スペイン, アルメニア, サルデーニャ州, ビハール州, メキシコ",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "マプト",
+      "object": "モザンビーク",
+      "object_candidates": "パキスタン, ガーナ, バングラデシュ, インドネシア, アーカンソー州, アンゴラ, カナダ, ニジェール, ラオス, モザンビーク",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "ボストン",
+      "object": "マサチューセッツ州",
+      "object_candidates": "ミシガン州, ハンガリー, バルバドス, アルバ県, ブータン, アルバニア, スペイン, カタルーニャ州, キルギス, マサチューセッツ州",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "オタワ",
+      "object": "カナダ",
+      "object_candidates": "マサチューセッツ州, サラワク州, オーストリア, タスマニア州, カリフォルニア州, アラスカ州, クイーンズランド州, ジョージア, ギニア, カナダ",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "モンテビデオ",
+      "object": "ウルグアイ",
+      "object_candidates": "ミネソタ州, ハイチ, ローデシア, ホンジュラス, アーカンソー州, フロリダ州, パンジャーブ州, ルーマニア, カタール, ウルグアイ",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "マナーマ",
+      "object": "バーレーン",
+      "object_candidates": "ポルトガル, ピエモンテ州, アルゼンチン, テキサス州, コネチカット州, ニジェール, ラオス, ガーナ, ウガンダ, バーレーン",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "バンガロール",
+      "object": "カルナータカ州",
+      "object_candidates": "アルゼンチン, カザフスタン, マラウイ, グリーンランド, カンボジア, ウズベキスタン, オランダ, サモア, ブルガリア, カルナータカ州",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "ブダペスト",
+      "object": "ハンガリー",
+      "object_candidates": "アルバ県, プロヴァンス, ノルマンディー, アルメニア, イラク, パンジャーブ州, リベリア, マニトバ州, オランダ, ハンガリー",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "テグシガルパ",
+      "object": "ホンジュラス",
+      "object_candidates": "チュニジア, クウェート, ラージャスターン州, ブルゴーニュ地域圏, オックスフォードシャー, アルバ県, アーカンソー州, タスマニア州, ノルマンディー, ホンジュラス",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "ガンディーナガル",
+      "object": "グジャラート州",
+      "object_candidates": "ユタ州, クロアチア, カタルーニャ州, マラウイ, サルデーニャ州, フランス, ハイチ, 中華民国, ブルゴーニュ地域圏, グジャラート州",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "ポドゴリツァ",
+      "object": "モンテネグロ",
+      "object_candidates": "ベナン, ビクトリア州, テネシー州, イエメン, ルーマニア, エクアドル, 四川省, ハイチ, ザルツブルク州, モンテネグロ",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "トロント",
+      "object": "オンタリオ州",
+      "object_candidates": "サモア, バーレーン, ボヘミア, ブルガリア, ラージャスターン州, フィジー, クウェート, シチリア州, セルビア, オンタリオ州",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "パナマ市",
+      "object": "パナマ",
+      "object_candidates": "ペンシルベニア州, アルゼンチン, ビクトリア州, カナダ, レバノン, ザクセン州, コソボ共和国, ケニア, スペイン, パナマ",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "ダカール",
+      "object": "セネガル",
+      "object_candidates": "ガボン, ラトビア, ミシガン州, ボツワナ, ユタ州, ベルギー, リトアニア, テランガナ, ワイオミング州, セネガル",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "ラゴス",
+      "object": "ナイジェリア",
+      "object_candidates": "ケベック州, コソボ共和国, オックスフォードシャー, エジプト, 雲南省, スコットランド, ウクライナ, ベナン, タンザニア, ナイジェリア",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "バンコク",
+      "object": "タイ王国",
+      "object_candidates": "ポルトガル, クロアチア, ハンガリー, ユーゴスラビア, ヨルダン, カルナータカ州, アイオワ州, キプロス, リベリア, タイ王国",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "サンティアゴ",
+      "object": "チリ",
+      "object_candidates": "ノルウェー, ウガンダ, ローデシア, クウェート, カリフォルニア州, モロッコ, インディアナ州, ポルトガル, バングラデシュ, チリ",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "ニューデリー",
+      "object": "インド",
+      "object_candidates": "コネチカット州, ケーララ州, オマーン, イングランド, ヘッセン州, ラージャスターン州, エクアドル, フィジー, フィンランド, インド",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "ベオグラード",
+      "object": "セルビア",
+      "object_candidates": "フロリダ州, チュニジア, イングランド, マハーラーシュトラ州, クロアチア, ビハール州, ナバラ州, アルバ県, グアテマラ, セルビア",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "カリャリ",
+      "object": "サルデーニャ州",
+      "object_candidates": "ザクセン州, ピエモンテ州, タスマニア州, ハイチ, ナバラ州, スロベニア, クウェート, ケベック州, ベルギー, サルデーニャ州",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "カラカス",
+      "object": "ベネズエラ",
+      "object_candidates": "トルコ, 広東省, ユーゴスラビア, ネパール, ノール県, ウクライナ, ベラルーシ, シリア, 四川省, ベネズエラ",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "ニコシア",
+      "object": "キプロス",
+      "object_candidates": "コネチカット州, ギリシャ, ユーゴスラビア, ハワイ州, メキシコ, マダガスカル, ラージャスターン州, キューバ, アフガニスタン, キプロス",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "キエフ",
+      "object": "ウクライナ",
+      "object_candidates": "アルバ県, インドネシア, ソマリア, リトアニア, ザルツブルク州, ガーナ, エチオピア, ブラジル, ラオス, ウクライナ",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "台北市",
+      "object": "中華民国",
+      "object_candidates": "トスカーナ州, スイス, アルジェリア, メキシコ, ザクセン州, クイーンズランド州, シリア, バルバドス, ザンビア, 中華民国",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "アブジャ",
+      "object": "ナイジェリア",
+      "object_candidates": "プロヴァンス, チリ, ウクライナ, バルバドス, アルバニア, ガボン, サルデーニャ州, グリーンランド, ハイチ, ナイジェリア",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "ソフィア",
+      "object": "ブルガリア",
+      "object_candidates": "マルタ, オクラホマ州, バルバドス, テキサス州, トスカーナ州, リベリア, ベラルーシ, クレタ島, ガボン, ブルガリア",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "ソルトレイクシティ",
+      "object": "ユタ州",
+      "object_candidates": "ニカラグア, トルコ, カタール, チャド, 雲南省, デンマーク, マニトバ州, ビクトリア州, ベネズエラ, ユタ州",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "パレルモ",
+      "object": "シチリア州",
+      "object_candidates": "カンボジア, ブルゴーニュ地域圏, ブルネイ, スコットランド, カタルーニャ州, プロヴァンス, モロッコ, ブラジル, ゴア州, シチリア州",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "テヘラン",
+      "object": "イラン",
+      "object_candidates": "ベラルーシ, アーカンソー州, ローデシア, ビクトリア州, ユーゴスラビア, ザクセン州, タンザニア, セルビア, マレーシア, イラン",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "ケベック・シティー",
+      "object": "ケベック州",
+      "object_candidates": "ナイジェリア, ベルギー, テランガナ, ボツワナ, ドバイ首長国, アゼルバイジャン, ブラジル, イラン, イスラエル, ケベック州",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "プラハ",
+      "object": "チェコスロバキア",
+      "object_candidates": "ベリーズ, イラク, トスカーナ州, 中華民国, エチオピア, クウェート, プロヴァンス, スーダン, アルジェリア, チェコスロバキア",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "ダッカ",
+      "object": "バングラデシュ",
+      "object_candidates": "アルバ県, キルギス, ワイオミング州, スロベニア, アフガニスタン, バイエルン自由州, カナダ, ルワンダ, ガーナ, バングラデシュ",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "ブリスベン",
+      "object": "クイーンズランド州",
+      "object_candidates": "インドネシア, マサチューセッツ州, ザルツブルク州, スロバキア, セルビア, クウェート, イラン, アルバ県, マハーラーシュトラ州, クイーンズランド州",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "ハラレ",
+      "object": "ジンバブエ",
+      "object_candidates": "モロッコ, ドイツ, ナイジェリア, タスマニア州, カルナータカ州, オーストラリア, ヘッセン州, ベラルーシ, ボヘミア, ジンバブエ",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "エクス＝アン＝プロヴァンス",
+      "object": "プロヴァンス",
+      "object_candidates": "ハイチ, ケーララ州, カンボジア, ウルグアイ, パナマ, トルコ, チャド, トスカーナ州, アイオワ州, プロヴァンス",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "モンロビア",
+      "object": "リベリア",
+      "object_candidates": "グジャラート州, イングランド, タンザニア, ベリーズ, アゼルバイジャン, ノール県, スーダン, キプロス, フランス, リベリア",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "ベルン",
+      "object": "スイス",
+      "object_candidates": "デンマーク, メキシコ, フランス, ブータン, イングランド, インドネシア, オンタリオ州, アラスカ州, スウェーデン, スイス",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "アディスアベバ",
+      "object": "エチオピア",
+      "object_candidates": "モーリシャス, ポーランド, ザルツブルク州, ネパール, ハンガリー, セネガル, ブータン, アフガニスタン, オマーン, エチオピア",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "ザグレブ",
+      "object": "クロアチア",
+      "object_candidates": "ポルトガル, ネパール, バーレーン, アイオワ州, ビハール州, ベラルーシ, 広東省, タスマニア州, タイ王国, クロアチア",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "プノンペン",
+      "object": "カンボジア",
+      "object_candidates": "ボリビア, チェコスロバキア, 日本, コソボ共和国, レスターシャー, ウズベキスタン, アラスカ州, ブルネイ, バングラデシュ, カンボジア",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "ドゥシャンベ",
+      "object": "タジキスタン",
+      "object_candidates": "バングラデシュ, テランガナ, フィリピン, キューバ, ヘッセン州, バイエルン自由州, サバ州, アーカンソー州, トスカーナ州, タジキスタン",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "ランシング",
+      "object": "ミシガン州",
+      "object_candidates": "シチリア州, ウェールズ, インド, ボヘミア, ウガンダ, キプロス, ブルネイ, ラトビア, フィリピン, ミシガン州",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "クチン",
+      "object": "サラワク州",
+      "object_candidates": "イングランド王国, リビア, ボリビア, ネパール, アン県, フランス, アイダホ州, タスマニア州, スロバキア, サラワク州",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "マニラ",
+      "object": "フィリピン",
+      "object_candidates": "チリ, ガーナ, マサチューセッツ州, メキシコ, ドバイ首長国, スコットランド, ベネズエラ, メリーランド州, ウクライナ, フィリピン",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "ウェストミンスター",
+      "object": "イングランド王国",
+      "object_candidates": "リトアニア, チリ, シチリア州, タスマニア州, フィンランド, グアテマラ, ナイジェリア, ケニア, アラゴン州, イングランド王国",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "キト",
+      "object": "エクアドル",
+      "object_candidates": "ベリーズ, タイ王国, サバ州, クロアチア, カルナータカ州, 中華民国, カリフォルニア州, ブラジル, カザフスタン, エクアドル",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "レスター",
+      "object": "レスターシャー",
+      "object_candidates": "ケベック州, スロベニア, アルゼンチン, アイオワ州, アルバニア, ベラルーシ, チェコスロバキア, サラワク州, フィンランド, レスターシャー",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "昆明市",
+      "object": "雲南省",
+      "object_candidates": "ビハール州, スコットランド, ケーララ州, アルバ県, ノルウェー, ホンジュラス, カリフォルニア州, ビクトリア州, ミネソタ州, 雲南省",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "マナグア",
+      "object": "ニカラグア",
+      "object_candidates": "クレタ島, カナダ, ハワイ州, メキシコ, 広東省, ハンガリー, アーカンソー州, フィジー, ザンビア, ニカラグア",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "スクレ",
+      "object": "ボリビア",
+      "object_candidates": "ペンシルベニア州, セルビア, リビア, アルバ県, ジンバブエ, チュニジア, エジプト, ウルグアイ, タイ王国, ボリビア",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "ホノルル",
+      "object": "ハワイ州",
+      "object_candidates": "ベリーズ, スロベニア, ケーララ州, フランス, ビクトリア州, アルバータ州, マニトバ州, カリフォルニア州, セネガル, ハワイ州",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "ヴィエンチャン",
+      "object": "ラオス",
+      "object_candidates": "ギニア, マサチューセッツ州, ジョージア, プロヴァンス, サルデーニャ州, チャド, リビア, コロラド州, ギリシャ, ラオス",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "成都市",
+      "object": "四川省",
+      "object_candidates": "ユダ王国, アルバ県, ベナン, ルワンダ, ウガンダ, ゴア州, ポーランド, ミシガン州, カナダ, 四川省",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "サラゴサ",
+      "object": "アラゴン州",
+      "object_candidates": "テランガナ, モンテネグロ, トルコ, ユタ州, カンザス州, リュクサンブール州, ブータン, メキシコ, ウクライナ, アラゴン州",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "オックスフォード",
+      "object": "オックスフォードシャー",
+      "object_candidates": "フィンランド, レスターシャー, ハイチ, アルバ県, ポーランド, ナミビア, イスラエル, バングラデシュ, アラスカ州, オックスフォードシャー",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "チャンディーガル",
+      "object": "ハリヤーナー州",
+      "object_candidates": "イラン, ブラジル, マニトバ州, ピエモンテ州, マラウイ, キルギス, ザンビア, アルメニア, カンボジア, ハリヤーナー州",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "ニアメ",
+      "object": "ニジェール",
+      "object_candidates": "アラゴン州, ガボン, ベネズエラ, ピエモンテ州, ベリーズ, イラン, ギニア, カザフスタン, ロシア, ニジェール",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "ドーハ",
+      "object": "カタール",
+      "object_candidates": "ウズベキスタン, マルタ, ブータン, インディアナ州, スロバキア, クレタ島, 日本, パンジャーブ州, イングランド, カタール",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "ハラレ",
+      "object": "ローデシア",
+      "object_candidates": "ルーマニア, 広東省, フィジー, モンテネグロ, マレーシア, カンザス州, イラク, モロッコ, クロアチア, ローデシア",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "アピア",
+      "object": "サモア",
+      "object_candidates": "イングランド王国, バングラデシュ, アイダホ州, フィンランド, カンボジア, モロッコ, ボリビア, ギニア, ベラルーシ, サモア",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "ブラチスラヴァ",
+      "object": "スロバキア",
+      "object_candidates": "ナバラ州, タンザニア, アイダホ州, チャド, ミシガン州, アイルランド, インドネシア, アルバ県, 日本, スロバキア",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "コタキナバル",
+      "object": "サバ州",
+      "object_candidates": "タスマニア州, オクラホマ州, フランドル, モロッコ, ノール県, ガボン, アゼルバイジャン, セネガル, クロアチア, サバ州",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "タシュケント",
+      "object": "ウズベキスタン",
+      "object_candidates": "ユーゴスラビア, フランス, ハイチ, ミシガン州, ノルウェー, アフガニスタン, ペンシルベニア州, アルバータ州, リトアニア, ウズベキスタン",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "ドドマ",
+      "object": "タンザニア",
+      "object_candidates": "カンザス州, バングラデシュ, ノール県, クロアチア, コロラド州, ケベック州, ルワンダ, ヨルダン, アゼルバイジャン, タンザニア",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "ティラナ",
+      "object": "アルバニア",
+      "object_candidates": "ケーララ州, プロヴァンス, ナイジェリア, リビア, フランドル, ザンビア, 四川省, ベラルーシ, セルビア, アルバニア",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "カンパラ",
+      "object": "ウガンダ",
+      "object_candidates": "ラトビア, シリア, ロシア, スイス, テネシー州, タイ王国, スロバキア, ハリヤーナー州, ボツワナ, ウガンダ",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "ハノイ",
+      "object": "ベトナム",
+      "object_candidates": "オーストリア, オマーン, グアテマラ, イエメン, ベナン, ウズベキスタン, デンマーク, ノルマンディー, カタルーニャ州, ベトナム",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "アデン",
+      "object": "イエメン",
+      "object_candidates": "ペルー, ラオス, アルバ県, ノルマンディー, ロシア, サモア, イスラエル, ニカラグア, ボヘミア, イエメン",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "ルサカ",
+      "object": "ザンビア",
+      "object_candidates": "リュクサンブール州, タスマニア州, アゼルバイジャン, イエメン, エストニア, ポルトガル, ケニア, ゴア州, インドネシア, ザンビア",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "エレバン",
+      "object": "アルメニア",
+      "object_candidates": "マルタ, オックスフォードシャー, コロラド州, イラク, エジプト, サモア, トスカーナ州, シリア, レスターシャー, アルメニア",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "クウェート市",
+      "object": "クウェート",
+      "object_candidates": "アルメニア, フランドル, ザクセン州, ブラジル, イエメン, マレーシア, 日本, グアテマラ, ウズベキスタン, クウェート",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "ポートルイス",
+      "object": "モーリシャス",
+      "object_candidates": "トスカーナ州, テネシー州, グアテマラ, ヨルダン, スロバキア, ハリヤーナー州, ザクセン州, ガボン, コロラド州, モーリシャス",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "アクラ",
+      "object": "ガーナ",
+      "object_candidates": "ワイオミング州, カリフォルニア州, ベナン, オランダ, サラワク州, イラン, カンザス州, バングラデシュ, スウェーデン, ガーナ",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "ジャイプル",
+      "object": "ラージャスターン州",
+      "object_candidates": "イングランド, ネパール, クウェート, ラオス, リトアニア, タイ王国, アルメニア, ベナン, ロシア, ラージャスターン州",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "ミンスク",
+      "object": "ベラルーシ",
+      "object_candidates": "フィンランド, ラトビア, グリーンランド, スロベニア, アルバータ州, ブルネイ, ドイツ, ノルマンディー, ケベック州, ベラルーシ",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "デモイン",
+      "object": "アイオワ州",
+      "object_candidates": "パンジャーブ州, ユーゴスラビア, マダガスカル, サルデーニャ州, レスターシャー, エストニア, バーレーン, マラウイ, アルバニア, アイオワ州",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "パトナ",
+      "object": "ビハール州",
+      "object_candidates": "カナダ, コロラド州, リトアニア, オマーン, パナマ, ブラジル, カルナータカ州, ブランデンブルク州, アフガニスタン, ビハール州",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "バトンルージュ",
+      "object": "ルイジアナ州",
+      "object_candidates": "ユダ王国, イエメン, デンマーク, クロアチア, ラトビア, スイス, オンタリオ州, ブランデンブルク州, ボリビア, ルイジアナ州",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "ジョグジャカルタ市",
+      "object": "インドネシア",
+      "object_candidates": "インディアナ州, ホンジュラス, バーレーン, タンザニア, ボヘミア, ウルグアイ, ルワンダ, クイーンズランド州, ナミビア, インドネシア",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "ヌル-スルタン",
+      "object": "カザフスタン",
+      "object_candidates": "サバ州, エチオピア, パナマ, ミネソタ州, スウェーデン, クロアチア, ポルトガル, アルメニア, ガボン, カザフスタン",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "ヴィースバーデン",
+      "object": "ヘッセン州",
+      "object_candidates": "カルナータカ州, アゼルバイジャン, マレーシア, ラオス, ブルゴーニュ地域圏, ペンシルベニア州, ベラルーシ, ピエモンテ州, ビクトリア州, ヘッセン州",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "ディジョン",
+      "object": "ブルゴーニュ地域圏",
+      "object_candidates": "プロヴァンス, クロアチア, ミネソタ州, リュクサンブール州, アルバニア, ナイジェリア, ケニア, ハワイ州, ピエモンテ州, ブルゴーニュ地域圏",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "ルーアン",
+      "object": "ノルマンディー",
+      "object_candidates": "スイス, ラトビア, 雲南省, ミシガン州, アルバータ州, キューバ, チュニジア, インドネシア, ベルギー, ノルマンディー",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "オクラホマシティ",
+      "object": "オクラホマ州",
+      "object_candidates": "コロラド州, ジンバブエ, カザフスタン, マサチューセッツ州, エストニア, カナダ, メキシコ, レスターシャー, オックスフォードシャー, オクラホマ州",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "リトルロック",
+      "object": "アーカンソー州",
+      "object_candidates": "中華民国, バイエルン自由州, ベトナム, ハワイ州, アルジェリア, ボリビア, アンゴラ, リトアニア, アラスカ州, アーカンソー州",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "ンジャメナ",
+      "object": "チャド",
+      "object_candidates": "ルワンダ, セネガル, ソマリア, スロバキア, オンタリオ州, フィンランド, ナミビア, ハイチ, ノルマンディー, チャド",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "アンマン",
+      "object": "ヨルダン",
+      "object_candidates": "オーストラリア, プロヴァンス, デンマーク, グアテマラ, ホンジュラス, ナミビア, テキサス州, シリア, ボヘミア, ヨルダン",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "ティルヴァナンタプラム",
+      "object": "ケーララ州",
+      "object_candidates": "ヨルダン, マニトバ州, ソマリア, クロアチア, フロリダ州, スコットランド, チャド, マサチューセッツ州, リュクサンブール州, ケーララ州",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "ブリッジタウン",
+      "object": "バルバドス",
+      "object_candidates": "テネシー州, イタリア, ガーナ, アラスカ州, イングランド王国, サバ州, タジキスタン, カナダ, オックスフォードシャー, バルバドス",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "ドバイ",
+      "object": "ドバイ首長国",
+      "object_candidates": "リュクサンブール州, ウェールズ, チュニジア, オーストラリア, パンジャーブ州, アルメニア, ポルトガル, マルタ, テランガナ, ドバイ首長国",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "ポツダム",
+      "object": "ブランデンブルク州",
+      "object_candidates": "エクアドル, ナバラ州, キューバ, コネチカット州, ベネズエラ, フランドル, デンマーク, ユタ州, アラゴン州, ブランデンブルク州",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "アンタナナリボ",
+      "object": "マダガスカル",
+      "object_candidates": "フロリダ州, アイオワ州, イングランド王国, オマーン, フランス, ガーナ, タイ王国, スイス, ウクライナ, マダガスカル",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "バマコ",
+      "object": "マリ共和国",
+      "object_candidates": "アラゴン州, マサチューセッツ州, ブルゴーニュ地域圏, フィジー, エストニア, マラウイ, チリ, フランドル, ピエモンテ州, マリ共和国",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "アナポリス",
+      "object": "メリーランド州",
+      "object_candidates": "スロバキア, チュニジア, スロベニア, テキサス州, ナミビア, フロリダ州, ノルウェー, インド, エストニア, メリーランド州",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "ハイデラバード",
+      "object": "テランガナ",
+      "object_candidates": "ベラルーシ, アルジェリア, ナバラ州, イングランド, ラオス, リトアニア, ケーララ州, レバノン, ハリヤーナー州, テランガナ",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "チャンディーガル",
+      "object": "パンジャーブ州",
+      "object_candidates": "グジャラート州, サモア, マハーラーシュトラ州, イラク, ポルトガル, マラウイ, フランドル, バイエルン自由州, インドネシア, パンジャーブ州",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "ブール＝ガン＝ブレス",
+      "object": "アン県",
+      "object_candidates": "オーストリア, メリーランド州, スロバキア, ブータン, ゴア州, ベトナム, ポーランド, ホンジュラス, アラスカ州, アン県",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "スバ",
+      "object": "フィジー",
+      "object_candidates": "アイオワ州, ビクトリア州, アルゼンチン, バイエルン自由州, 広東省, インド, トスカーナ州, プロヴァンス, ラージャスターン州, フィジー",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "ハリスバーグ",
+      "object": "ペンシルベニア州",
+      "object_candidates": "カンザス州, ベネズエラ, イタリア, ビハール州, ラージャスターン州, ラオス, リビア, スロベニア, マニトバ州, ペンシルベニア州",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "サヌア",
+      "object": "イエメン",
+      "object_candidates": "シチリア州, ビハール州, ノルウェー, アルバータ州, ギリシャ, レバノン, フィジー, ベナン, ハリヤーナー州, イエメン",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "パナジ",
+      "object": "ゴア州",
+      "object_candidates": "リビア, ルワンダ, イラク, オクラホマ州, ペルー, グリーンランド, ギリシャ, キルギス, ルーマニア, ゴア州",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "バンダルスリブガワン",
+      "object": "ブルネイ",
+      "object_candidates": "サモア, オックスフォードシャー, リビア, マルタ, ヘッセン州, クロアチア, オランダ, アイダホ州, ガボン, ブルネイ",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "シャイアン",
+      "object": "ワイオミング州",
+      "object_candidates": "キプロス, サモア, ギニア, ドイツ, マニトバ州, ラージャスターン州, ハンガリー, アンゴラ, ウクライナ, ワイオミング州",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "パンプローナ",
+      "object": "ナバラ州",
+      "object_candidates": "ヨルダン, ホンジュラス, ベラルーシ, グアテマラ, ブルゴーニュ地域圏, チリ, クレタ島, ケーララ州, ゴア州, ナバラ州",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "リーブルヴィル",
+      "object": "ガボン",
+      "object_candidates": "ボリビア, ウクライナ, ジョージア, テランガナ, フランドル, ザルツブルク州, イングランド, カンザス州, ベトナム, ガボン",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "プリシュティナ",
+      "object": "コソボ共和国",
+      "object_candidates": "ニジェール, スペイン, ハンガリー, フロリダ州, ベラルーシ, ケーララ州, フィリピン, ボツワナ, セネガル, コソボ共和国",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "ヌーク",
+      "object": "グリーンランド",
+      "object_candidates": "雲南省, アンゴラ, コネチカット州, ドバイ首長国, ルーマニア, ケベック州, ベネズエラ, チャド, ドイツ, グリーンランド",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "ウィンチェスター",
+      "object": "イングランド王国",
+      "object_candidates": "ギリシャ, 日本, パキスタン, インド, ガーナ, チェコスロバキア, カリフォルニア州, ウェールズ, カタルーニャ州, イングランド王国",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ベオグラード",
+      "object": "ユーゴスラビア",
+      "object_candidates": "ブータン, イタリア, コソボ共和国, バイエルン自由州, ナバラ州, クレタ島, ザンビア, オーストラリア, リトアニア, ユーゴスラビア",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "ハートフォード",
+      "object": "コネチカット州",
+      "object_candidates": "ウクライナ, サバ州, 中華民国, オランダ, コロラド州, ノルウェー, マラウイ, マニトバ州, クウェート, コネチカット州",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "リマ",
+      "object": "ペルー",
+      "object_candidates": "ベネズエラ, ウズベキスタン, ワイオミング州, サバ州, スイス, モーリシャス, カタルーニャ州, イエメン, マサチューセッツ州, ペルー",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "コナクリ",
+      "object": "ギニア",
+      "object_candidates": "オマーン, フランス, ハイチ, カナダ, ナミビア, ルワンダ, ガボン, アイオワ州, ブラジル, ギニア",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "ジュノー",
+      "object": "アラスカ州",
+      "object_candidates": "スコットランド, ノール県, オックスフォードシャー, オーストラリア, ビハール州, タンザニア, インド, パンジャーブ州, ヘッセン州, アラスカ州",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "ベルモパン",
+      "object": "ベリーズ",
+      "object_candidates": "インド, 中華民国, イングランド, エクアドル, ノルマンディー, ポーランド, ミシガン州, ギニア, マダガスカル, ベリーズ",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "サクラメント",
+      "object": "カリフォルニア州",
+      "object_candidates": "ブルネイ, モザンビーク, スロバキア, ケベック州, オーストラリア, イスラエル, パンジャーブ州, チリ, スウェーデン, カリフォルニア州",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "シティ・オブ・ロンドン",
+      "object": "イングランド王国",
+      "object_candidates": "タイ王国, ベリーズ, アイオワ州, カタール, フロリダ州, ハンガリー, ガーナ, サルデーニャ州, ユダ王国, イングランド王国",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "キガリ",
+      "object": "ルワンダ",
+      "object_candidates": "ペンシルベニア州, アルゼンチン, カンザス州, ガボン, ビハール州, ナバラ州, ブータン, ノルマンディー, タスマニア州, ルワンダ",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "ブリュッセル＝ヴィル",
+      "object": "ベルギー",
+      "object_candidates": "ラオス, オクラホマ州, 中華民国, ネパール, イタリア, ナバラ州, フランス, グアテマラ, ゴア州, ベルギー",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "ティンプー",
+      "object": "ブータン",
+      "object_candidates": "インド, デンマーク, ベトナム, ハンガリー, ヘッセン州, マラウイ, チェコスロバキア, タスマニア州, リュクサンブール州, ブータン",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "ナフプリオ",
+      "object": "ギリシャ",
+      "object_candidates": "トルコ, テランガナ, リベリア, イングランド, タスマニア州, ガーナ, ブラジル, ナイジェリア, スペイン, ギリシャ",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "アルバ・ユリア",
+      "object": "アルバ県",
+      "object_candidates": "ソマリア, ヘッセン州, スウェーデン, インドネシア, オマーン, ウクライナ, タスマニア州, ギリシャ, ポーランド, アルバ県",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "ボイシ",
+      "object": "アイダホ州",
+      "object_candidates": "ルワンダ, リュクサンブール州, ローデシア, オックスフォードシャー, ベラルーシ, ウクライナ, イラク, パナマ, フロリダ州, アイダホ州",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "ナッシュビル",
+      "object": "テネシー州",
+      "object_candidates": "ナイジェリア, バイエルン自由州, ケベック州, バングラデシュ, オランダ, イングランド王国, パンジャーブ州, エチオピア, レバノン, テネシー州",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "アルロン",
+      "object": "リュクサンブール州",
+      "object_candidates": "ギリシャ, ボツワナ, オクラホマ州, ノルマンディー, カタルーニャ州, ユダ王国, バルバドス, カルナータカ州, パキスタン, リュクサンブール州",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "ザルツブルク",
+      "object": "ザルツブルク州",
+      "object_candidates": "カタルーニャ州, カリフォルニア州, ガーナ, タンザニア, ナイジェリア, ウェールズ, ノール県, テランガナ, グジャラート州, ザルツブルク州",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "オースティン",
+      "object": "テキサス州",
+      "object_candidates": "ジンバブエ, アフガニスタン, ビハール州, タジキスタン, アルゼンチン, ケベック州, ルイジアナ州, ウクライナ, インディアナ州, テキサス州",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "セントポール",
+      "object": "ミネソタ州",
+      "object_candidates": "ザクセン州, ヘッセン州, パナマ, ユタ州, リベリア, ユーゴスラビア, スロバキア, デンマーク, チェコスロバキア, ミネソタ州",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "マスカット",
+      "object": "オマーン",
+      "object_candidates": "ブルガリア, ノルウェー, タンザニア, カリフォルニア州, イングランド, バーレーン, ウガンダ, ブルネイ, ナバラ州, オマーン",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "タラハシー",
+      "object": "フロリダ州",
+      "object_candidates": "イラク, サバ州, ハンガリー, アゼルバイジャン, カナダ, ラトビア, バーレーン, ケーララ州, セルビア, フロリダ州",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "トビリシ",
+      "object": "ジョージア",
+      "object_candidates": "ケニア, インド, タイ王国, チェコスロバキア, インディアナ州, バーレーン, シリア, アルバータ州, フィジー, ジョージア",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "ブリュッセル＝ヴィル",
+      "object": "フランドル",
+      "object_candidates": "ケーララ州, アンゴラ, クロアチア, 雲南省, アルジェリア, カナダ, ケベック州, ペルー, マサチューセッツ州, フランドル",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "ヘブロン",
+      "object": "ユダ王国",
+      "object_candidates": "サルデーニャ州, チリ, グアテマラ, バイエルン自由州, トスカーナ州, ザクセン州, ボリビア, ハワイ州, オンタリオ州, ユダ王国",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "リール",
+      "object": "ノール県",
+      "object_candidates": "ハリヤーナー州, エストニア, オーストリア, コロラド州, バルバドス, ジンバブエ, モーリシャス, ザクセン州, ベリーズ, ノール県",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "トピカ",
+      "object": "カンザス州",
+      "object_candidates": "アルメニア, ユーゴスラビア, スペイン, オーストリア, キューバ, アンゴラ, ガボン, カンボジア, アフガニスタン, カンザス州",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "サンティアゴ・デ・コンポステーラ",
+      "object": "ガリシア州",
+      "object_candidates": "リビア, ザルツブルク州, ノルウェー, チュニジア, テランガナ, アラスカ州, ラージャスターン州, ベリーズ, トスカーナ州, ガリシア州",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "Πού πέθανε ο <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια πόλη πέθανε ο <subject>; Η απάντηση είναι: <mask>",
+    "Πού ήταν ο τόπος θανάτου του <subject>; Η απάντηση είναι: <mask>",
+    "Ποια ήταν η τοποθεσία του θανάτου του <subject>; Η απάντηση είναι: <mask>",
+    "Ποιος τόπος σηματοδοτεί το θάνατο του <subject>; Η απάντηση είναι: <mask>",
+    " Ο τόπος θανάτου του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Μιχαήλ Άγγελος",
+      "object": "Ρώμη",
+      "object_candidates": "Σόλσμπερι, Λυών, Βερολίνο, Ταϊπέι, Βαρσοβία, Κωνσταντινούπολη, Μάντισον, Τόκιο, Μόσχα, Ρώμη",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Κοκό Σανέλ",
+      "object": "Παρίσι",
+      "object_candidates": "Βερολίνο, Ρώμη, Μεδίνα, Φλωρεντία, Βελιγράδι, Μαδρίτη, Κάιρο, Λυών, Βαρσοβία, Παρίσι",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Πάπας Κλήμης ΙΔ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Λονδίνο, Μάντισον, Τόκιο, Καρχηδόνα, Δαμασκός, Φλωρεντία, Παρίσι, Ελσίνκι, Βαγδάτη, Ρώμη",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ουμάρ ιμπν αλ-Χαττάμπ",
+      "object": "Μεδίνα",
+      "object_candidates": "Βαγδάτη, Βαρσοβία, Μόσχα, Λυών, Βερολίνο, Κάιρο, Ταϊπέι, Αθήνα, Φλωρεντία, Μεδίνα",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Πάπας Κλήμης Γ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Κάιρο, Μεδίνα, Φλωρεντία, Στοκχόλμη, Λυών, Βαρσοβία, Αθήνα, Μαδρίτη, Βερολίνο, Ρώμη",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Βαλβίνος",
+      "object": "Ρώμη",
+      "object_candidates": "Κωνσταντινούπολη, Κάιρο, Σόλσμπερι, Βενετία, Ελσίνκι, Πράγα, Καρχηδόνα, Λονδίνο, Δαμασκός, Ρώμη",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Χραντ Ντινκ",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Καμπούλ, Βελιγράδι, Βαγδάτη, Τόκιο, Ρώμη, Φλωρεντία, Καρχηδόνα, Ταϊπέι, Πράγα, Κωνσταντινούπολη",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Νικηφόρος Γ΄ Βοτανειάτης",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Ντιτρόιτ, Βαγδάτη, Κάιρο, Ιερουσαλήμ, Καρχηδόνα, Λονδίνο, Μαδρίτη, Παρίσι, Βερολίνο, Κωνσταντινούπολη",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Γιόχαν Πάχελμπελ",
+      "object": "Νυρεμβέργη",
+      "object_candidates": "Σάρρεϋ, Ιερουσαλήμ, Πράγα, Βελιγράδι, Βαρσοβία, Καρχηδόνα, Ρώμη, Σόλσμπερι, Βαγδάτη, Νυρεμβέργη",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "Βασλάβ Νιζίνσκι",
+      "object": "Λονδίνο",
+      "object_candidates": "Ρώμη, Βελιγράδι, Δαμασκός, Κωνσταντινούπολη, Μεδίνα, Νυρεμβέργη, Αθήνα, Βερολίνο, Στοκχόλμη, Λονδίνο",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "Πάπας Λέων Ι΄",
+      "object": "Ρώμη",
+      "object_candidates": "Βαρσοβία, Μόσχα, Βερολίνο, Ελσίνκι, Δαμασκός, Παρίσι, Καμπούλ, Αθήνα, Ντιτρόιτ, Ρώμη",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ντονατέλλο",
+      "object": "Φλωρεντία",
+      "object_candidates": "Σάρρεϋ, Κάιρο, Ιερουσαλήμ, Λυών, Καρχηδόνα, Στοκχόλμη, Ταϊπέι, Καμπούλ, Μεδίνα, Φλωρεντία",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Τσιάνγκ Τσινγκ-κούο",
+      "object": "Ταϊπέι",
+      "object_candidates": "Στοκχόλμη, Μαδρίτη, Ιερουσαλήμ, Βενετία, Τόκιο, Μάντισον, Σάρρεϋ, Λονδίνο, Πράγα, Ταϊπέι",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Ρόμπερτ Χουκ",
+      "object": "Λονδίνο",
+      "object_candidates": "Κωνσταντινούπολη, Ελσίνκι, Νυρεμβέργη, Βενετία, Βελιγράδι, Πράγα, Βερολίνο, Μάντισον, Ντιτρόιτ, Λονδίνο",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ρόζα Παρκς",
+      "object": "Ντιτρόιτ",
+      "object_candidates": "Παρίσι, Κωνσταντινούπολη, Πράγα, Στοκχόλμη, Βενετία, Κάιρο, Δαμασκός, Ελσίνκι, Ιερουσαλήμ, Ντιτρόιτ",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Ιωάννης Η΄ Παλαιολόγος",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Κάιρο, Λυών, Βαγδάτη, Ιερουσαλήμ, Στοκχόλμη, Ντιτρόιτ, Ελσίνκι, Ταϊπέι, Νυρεμβέργη, Κωνσταντινούπολη",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Τζων Ντη",
+      "object": "Σάρρεϋ",
+      "object_candidates": "Ρώμη, Λυών, Στοκχόλμη, Νυρεμβέργη, Βελιγράδι, Ταϊπέι, Μάντισον, Βερολίνο, Σόλσμπερι, Σάρρεϋ",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "Φερναντέλ",
+      "object": "Παρίσι",
+      "object_candidates": "Λυών, Βερολίνο, Ελσίνκι, Ιερουσαλήμ, Καμπούλ, Σόλσμπερι, Αθήνα, Μάντισον, Τόκιο, Παρίσι",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Μιχαήλ Β´",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Λυών, Νυρεμβέργη, Βελιγράδι, Λονδίνο, Βαγδάτη, Ελσίνκι, Αθήνα, Μάντισον, Βερολίνο, Κωνσταντινούπολη",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Καρλ Λίμπκνεχτ",
+      "object": "Βερολίνο",
+      "object_candidates": "Τόκιο, Ελσίνκι, Ντιτρόιτ, Φλωρεντία, Παρίσι, Λυών, Κωνσταντινούπολη, Πράγα, Μαδρίτη, Βερολίνο",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Ρίχαρντ Βάγκνερ",
+      "object": "Βενετία",
+      "object_candidates": "Βαγδάτη, Βαρσοβία, Καμπούλ, Λυών, Βερολίνο, Παρίσι, Σάρρεϋ, Στοκχόλμη, Μαδρίτη, Βενετία",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Αντισθένης",
+      "object": "Αθήνα",
+      "object_candidates": "Βαγδάτη, Ελσίνκι, Μεδίνα, Νυρεμβέργη, Τόκιο, Βερολίνο, Καρχηδόνα, Παρίσι, Ταϊπέι, Αθήνα",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Μαξ Ερνστ",
+      "object": "Παρίσι",
+      "object_candidates": "Φλωρεντία, Κάιρο, Βελιγράδι, Λονδίνο, Ρώμη, Ιερουσαλήμ, Αθήνα, Βαγδάτη, Βαρσοβία, Παρίσι",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Μάρτιν Μπούμπερ",
+      "object": "Ιερουσαλήμ",
+      "object_candidates": "Καρχηδόνα, Στοκχόλμη, Κάιρο, Βαγδάτη, Κωνσταντινούπολη, Βερολίνο, Μάντισον, Λονδίνο, Βαρσοβία, Ιερουσαλήμ",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Γιόζεφ Γκαίμπελς",
+      "object": "Βερολίνο",
+      "object_candidates": "Φλωρεντία, Μόσχα, Σόλσμπερι, Ιερουσαλήμ, Νυρεμβέργη, Μεδίνα, Ρώμη, Καρχηδόνα, Δαμασκός, Βερολίνο",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Μοντεσκιέ",
+      "object": "Παρίσι",
+      "object_candidates": "Κάιρο, Καρχηδόνα, Ελσίνκι, Στοκχόλμη, Λονδίνο, Νυρεμβέργη, Μαδρίτη, Μεδίνα, Μάντισον, Παρίσι",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Πάπας Νικόλαος Ε΄",
+      "object": "Ρώμη",
+      "object_candidates": "Βαγδάτη, Βερολίνο, Μάντισον, Σάρρεϋ, Λονδίνο, Στοκχόλμη, Ελσίνκι, Δαμασκός, Μαδρίτη, Ρώμη",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Σαρλότ Κορντέ",
+      "object": "Παρίσι",
+      "object_candidates": "Στοκχόλμη, Λυών, Καμπούλ, Καρχηδόνα, Κωνσταντινούπολη, Ελσίνκι, Βελιγράδι, Μεδίνα, Ντιτρόιτ, Παρίσι",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Μοχάμεντ Ζαχίρ Σαχ",
+      "object": "Καμπούλ",
+      "object_candidates": "Μεδίνα, Καρχηδόνα, Μαδρίτη, Αθήνα, Δαμασκός, Σάρρεϋ, Βαγδάτη, Ταϊπέι, Βερολίνο, Καμπούλ",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Πάπας Ιννοκέντιος ΙΑ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Φλωρεντία, Βενετία, Ελσίνκι, Αθήνα, Μαδρίτη, Δαμασκός, Μόσχα, Ταϊπέι, Ιερουσαλήμ, Ρώμη",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Γορδιανός Β΄",
+      "object": "Καρχηδόνα",
+      "object_candidates": "Δαμασκός, Μάντισον, Σόλσμπερι, Ρώμη, Βαρσοβία, Καμπούλ, Στοκχόλμη, Μαδρίτη, Σάρρεϋ, Καρχηδόνα",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "Μστισλάβ Ροστροπόβιτς",
+      "object": "Μόσχα",
+      "object_candidates": "Μάντισον, Κωνσταντινούπολη, Ιερουσαλήμ, Λονδίνο, Δαμασκός, Βενετία, Πράγα, Βελιγράδι, Μεδίνα, Μόσχα",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Πάπας Πίος Γ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Κωνσταντινούπολη, Φλωρεντία, Σόλσμπερι, Μάντισον, Παρίσι, Λυών, Βαρσοβία, Καρχηδόνα, Πράγα, Ρώμη",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Αμπντ αλ-Καρίμ Κασέμ",
+      "object": "Βαγδάτη",
+      "object_candidates": "Βελιγράδι, Ρώμη, Ταϊπέι, Φλωρεντία, Παρίσι, Ελσίνκι, Ντιτρόιτ, Μάντισον, Μαδρίτη, Βαγδάτη",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Πάπας Γρηγόριος ΙΣΤ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Νυρεμβέργη, Λυών, Ντιτρόιτ, Στοκχόλμη, Καρχηδόνα, Φλωρεντία, Πράγα, Μόσχα, Μαδρίτη, Ρώμη",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Αράμ Χατσατουριάν",
+      "object": "Μόσχα",
+      "object_candidates": "Καμπούλ, Στοκχόλμη, Λονδίνο, Ιερουσαλήμ, Φλωρεντία, Τόκιο, Σάρρεϋ, Βελιγράδι, Βαγδάτη, Μόσχα",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Χάινριχ φον Κλάιστ",
+      "object": "Βερολίνο",
+      "object_candidates": "Ρώμη, Φλωρεντία, Βαγδάτη, Μάντισον, Στοκχόλμη, Καρχηδόνα, Ταϊπέι, Λυών, Βενετία, Βερολίνο",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Αμπντούλ Χαμίτ Α΄",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Νυρεμβέργη, Καρχηδόνα, Αθήνα, Ελσίνκι, Μεδίνα, Βελιγράδι, Σάρρεϋ, Βαρσοβία, Παρίσι, Κωνσταντινούπολη",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Πάπας Αλέξανδρος Η΄",
+      "object": "Ρώμη",
+      "object_candidates": "Μάντισον, Ντιτρόιτ, Μόσχα, Δαμασκός, Κωνσταντινούπολη, Λυών, Νυρεμβέργη, Φλωρεντία, Πράγα, Ρώμη",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Γιόχαν Κρίστιαν Μπαχ",
+      "object": "Λονδίνο",
+      "object_candidates": "Ιερουσαλήμ, Βενετία, Παρίσι, Καρχηδόνα, Τόκιο, Καμπούλ, Μαδρίτη, Πράγα, Μάντισον, Λονδίνο",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "Σάμιουελ Τζόνσον",
+      "object": "Λονδίνο",
+      "object_candidates": "Μόσχα, Κωνσταντινούπολη, Μεδίνα, Κάιρο, Βενετία, Λυών, Βαγδάτη, Ελσίνκι, Ιερουσαλήμ, Λονδίνο",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ζακ-Υβ Κουστώ",
+      "object": "Παρίσι",
+      "object_candidates": "Ιερουσαλήμ, Βενετία, Αθήνα, Βαρσοβία, Λονδίνο, Ρώμη, Νυρεμβέργη, Καμπούλ, Στοκχόλμη, Παρίσι",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Σοφία Κοβαλέφσκαγια",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Παρίσι, Τόκιο, Βενετία, Δαμασκός, Ιερουσαλήμ, Ταϊπέι, Σάρρεϋ, Σόλσμπερι, Καρχηδόνα, Στοκχόλμη",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Γκέοργκ Βίλχελμ Φρίντριχ Χέγκελ",
+      "object": "Βερολίνο",
+      "object_candidates": "Ιερουσαλήμ, Δαμασκός, Καρχηδόνα, Πράγα, Στοκχόλμη, Σόλσμπερι, Κάιρο, Κωνσταντινούπολη, Μεδίνα, Βερολίνο",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Σάντρο Μποττιτσέλλι",
+      "object": "Φλωρεντία",
+      "object_candidates": "Βαρσοβία, Μεδίνα, Κωνσταντινούπολη, Δαμασκός, Λονδίνο, Σάρρεϋ, Κάιρο, Καρχηδόνα, Καμπούλ, Φλωρεντία",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Σάμιουελ Τέιλορ Κόλεριτζ",
+      "object": "Λονδίνο",
+      "object_candidates": "Κάιρο, Λυών, Μεδίνα, Σάρρεϋ, Καμπούλ, Βαρσοβία, Μάντισον, Βαγδάτη, Μόσχα, Λονδίνο",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ιμπν Χαλντούν",
+      "object": "Κάιρο",
+      "object_candidates": "Μάντισον, Βενετία, Λονδίνο, Καμπούλ, Αθήνα, Βαγδάτη, Κωνσταντινούπολη, Ντιτρόιτ, Μαδρίτη, Κάιρο",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Ερρίκος Δ' της Αγγλίας",
+      "object": "Λονδίνο",
+      "object_candidates": "Κωνσταντινούπολη, Ιερουσαλήμ, Ελσίνκι, Ρώμη, Φλωρεντία, Μαδρίτη, Πράγα, Αθήνα, Βενετία, Λονδίνο",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Τομάζο Αλμπινόνι",
+      "object": "Βενετία",
+      "object_candidates": "Παρίσι, Καμπούλ, Μεδίνα, Μάντισον, Ταϊπέι, Σάρρεϋ, Τόκιο, Βαρσοβία, Ντιτρόιτ, Βενετία",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Πάαβο Νούρμι",
+      "object": "Ελσίνκι",
+      "object_candidates": "Ντιτρόιτ, Βερολίνο, Κάιρο, Ταϊπέι, Καρχηδόνα, Παρίσι, Φλωρεντία, Βαρσοβία, Μάντισον, Ελσίνκι",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Πάπας Κλήμης Α΄",
+      "object": "Ρώμη",
+      "object_candidates": "Φλωρεντία, Στοκχόλμη, Τόκιο, Κωνσταντινούπολη, Βαρσοβία, Παρίσι, Μόσχα, Νυρεμβέργη, Λυών, Ρώμη",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Λουδοβίκος ΙΖ΄ της Γαλλίας",
+      "object": "Παρίσι",
+      "object_candidates": "Πράγα, Αθήνα, Νυρεμβέργη, Κάιρο, Βαγδάτη, Ταϊπέι, Μεδίνα, Μαδρίτη, Λονδίνο, Παρίσι",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Κίσο Κουροκάβα",
+      "object": "Τόκιο",
+      "object_candidates": "Ταϊπέι, Ιερουσαλήμ, Μόσχα, Βαγδάτη, Λυών, Ελσίνκι, Αθήνα, Παρίσι, Ρώμη, Τόκιο",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Μαξιμιλιανός Ροβεσπιέρος",
+      "object": "Παρίσι",
+      "object_candidates": "Ταϊπέι, Βαγδάτη, Μεδίνα, Μαδρίτη, Ρώμη, Βελιγράδι, Λονδίνο, Κάιρο, Στοκχόλμη, Παρίσι",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Τζορτζόνε",
+      "object": "Βενετία",
+      "object_candidates": "Παρίσι, Ρώμη, Ιερουσαλήμ, Βαγδάτη, Τόκιο, Φλωρεντία, Νυρεμβέργη, Μεδίνα, Μάντισον, Βενετία",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Πέτρος Α' της Σερβίας",
+      "object": "Βελιγράδι",
+      "object_candidates": "Βαρσοβία, Στοκχόλμη, Φλωρεντία, Παρίσι, Ντιτρόιτ, Καρχηδόνα, Τόκιο, Ιερουσαλήμ, Λονδίνο, Βελιγράδι",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Λουδοβίκος Λάζαρος Ζαμένχοφ",
+      "object": "Βαρσοβία",
+      "object_candidates": "Φλωρεντία, Λονδίνο, Ιερουσαλήμ, Λυών, Μάντισον, Τόκιο, Στοκχόλμη, Νυρεμβέργη, Παρίσι, Βαρσοβία",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Ιμπραήμ Πασάς",
+      "object": "Κάιρο",
+      "object_candidates": "Παρίσι, Δαμασκός, Βερολίνο, Σόλσμπερι, Βαρσοβία, Λυών, Ιερουσαλήμ, Μαδρίτη, Κωνσταντινούπολη, Κάιρο",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Πάπας Κλήμης ΙΒ΄",
+      "object": "Ρώμη",
+      "object_candidates": "Βενετία, Κωνσταντινούπολη, Ελσίνκι, Βελιγράδι, Νυρεμβέργη, Βαρσοβία, Ντιτρόιτ, Καρχηδόνα, Παρίσι, Ρώμη",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ειρηναίος της Λυών",
+      "object": "Λυών",
+      "object_candidates": "Σάρρεϋ, Τόκιο, Βερολίνο, Μεδίνα, Λονδίνο, Φλωρεντία, Ταϊπέι, Νυρεμβέργη, Βαγδάτη, Λυών",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "Ζακ Ντεριντά",
+      "object": "Παρίσι",
+      "object_candidates": "Μόσχα, Βενετία, Σάρρεϋ, Ιερουσαλήμ, Ρώμη, Βαρσοβία, Μαδρίτη, Ελσίνκι, Μάντισον, Παρίσι",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Κάρολος Δ΄ της Ισπανίας",
+      "object": "Ρώμη",
+      "object_candidates": "Σόλσμπερι, Πράγα, Ιερουσαλήμ, Αθήνα, Λυών, Βελιγράδι, Τόκιο, Βαγδάτη, Καμπούλ, Ρώμη",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ραλφ Βων Ουίλιαμς",
+      "object": "Λονδίνο",
+      "object_candidates": "Ρώμη, Πράγα, Ιερουσαλήμ, Βενετία, Μεδίνα, Παρίσι, Σάρρεϋ, Μάντισον, Ελσίνκι, Λονδίνο",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "Αντρέι Γκρομίκο",
+      "object": "Μόσχα",
+      "object_candidates": "Πράγα, Ντιτρόιτ, Σάρρεϋ, Ιερουσαλήμ, Αθήνα, Μαδρίτη, Βαγδάτη, Φλωρεντία, Λονδίνο, Μόσχα",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Ουλρίκα Ελεωνόρα της Σουηδίας",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Ιερουσαλήμ, Ντιτρόιτ, Βερολίνο, Λυών, Καμπούλ, Ταϊπέι, Πράγα, Μαδρίτη, Παρίσι, Στοκχόλμη",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Ότις Ρέντινγκ",
+      "object": "Μάντισον",
+      "object_candidates": "Παρίσι, Αθήνα, Ρώμη, Μόσχα, Ταϊπέι, Κωνσταντινούπολη, Καρχηδόνα, Στοκχόλμη, Κάιρο, Μάντισον",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Ανρί Ρουσσώ",
+      "object": "Παρίσι",
+      "object_candidates": "Βερολίνο, Ταϊπέι, Μόσχα, Τόκιο, Αθήνα, Στοκχόλμη, Λονδίνο, Μαδρίτη, Βαρσοβία, Παρίσι",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Μωαβίας Α'",
+      "object": "Δαμασκός",
+      "object_candidates": "Κάιρο, Βελιγράδι, Σάρρεϋ, Νυρεμβέργη, Μαδρίτη, Πράγα, Βερολίνο, Σόλσμπερι, Παρίσι, Δαμασκός",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Λουί Αραγκόν",
+      "object": "Παρίσι",
+      "object_candidates": "Ελσίνκι, Πράγα, Μεδίνα, Βερολίνο, Καμπούλ, Λυών, Δαμασκός, Στοκχόλμη, Μαδρίτη, Παρίσι",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Μπαϊμπάρ",
+      "object": "Δαμασκός",
+      "object_candidates": "Βαγδάτη, Βερολίνο, Παρίσι, Καμπούλ, Φλωρεντία, Μεδίνα, Ιερουσαλήμ, Πράγα, Βαρσοβία, Δαμασκός",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Κλάους φον Στάουφενμπεργκ",
+      "object": "Βερολίνο",
+      "object_candidates": "Φλωρεντία, Σόλσμπερι, Λυών, Καρχηδόνα, Παρίσι, Μάντισον, Ντιτρόιτ, Βαρσοβία, Σάρρεϋ, Βερολίνο",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Ντονάτο Μπραμάντε",
+      "object": "Ρώμη",
+      "object_candidates": "Καμπούλ, Τόκιο, Μάντισον, Κάιρο, Βενετία, Βαγδάτη, Καρχηδόνα, Στοκχόλμη, Λυών, Ρώμη",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Φρανθίσκο Φράνκο",
+      "object": "Μαδρίτη",
+      "object_candidates": "Ρώμη, Μάντισον, Ιερουσαλήμ, Βαγδάτη, Καμπούλ, Σόλσμπερι, Νυρεμβέργη, Βενετία, Σάρρεϋ, Μαδρίτη",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Κλοντ Μπερνάρ",
+      "object": "Παρίσι",
+      "object_candidates": "Μεδίνα, Νυρεμβέργη, Σάρρεϋ, Μαδρίτη, Μάντισον, Βερολίνο, Κάιρο, Δαμασκός, Βενετία, Παρίσι",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Γκαμάλ Άμπντελ Νάσερ",
+      "object": "Κάιρο",
+      "object_candidates": "Μεδίνα, Κωνσταντινούπολη, Λονδίνο, Ελσίνκι, Σάρρεϋ, Ντιτρόιτ, Ταϊπέι, Αθήνα, Λυών, Κάιρο",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Γιάκοβ Μιχάηλοβιτς Σβερντλόφ",
+      "object": "Μόσχα",
+      "object_candidates": "Ντιτρόιτ, Στοκχόλμη, Σάρρεϋ, Λονδίνο, Μαδρίτη, Φλωρεντία, Βενετία, Αθήνα, Νυρεμβέργη, Μόσχα",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Σαρλ Λουί Αλφόνς Λαβεράν",
+      "object": "Παρίσι",
+      "object_candidates": "Πράγα, Φλωρεντία, Βενετία, Καμπούλ, Ρώμη, Λυών, Στοκχόλμη, Ιερουσαλήμ, Βαρσοβία, Παρίσι",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Τύχο Μπράχε",
+      "object": "Πράγα",
+      "object_candidates": "Μόσχα, Τόκιο, Μεδίνα, Βελιγράδι, Ρώμη, Κάιρο, Ταϊπέι, Κωνσταντινούπολη, Στοκχόλμη, Πράγα",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Έντουαρντ Χιθ",
+      "object": "Σόλσμπερι",
+      "object_candidates": "Βερολίνο, Παρίσι, Ντιτρόιτ, Νυρεμβέργη, Δαμασκός, Λυών, Βενετία, Φλωρεντία, Μόσχα, Σόλσμπερι",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

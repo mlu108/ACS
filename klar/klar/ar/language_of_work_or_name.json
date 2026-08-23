@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "ما هو اللغة الأصلية لـ <subject>؟ الجواب: <mask>.",
+    "بأي لغة كتب <subject> في الأصل؟ الجواب: <mask>.",
+    "ما اللغة التي كانت <subject> في الأصل؟ الجواب: <mask>.",
+    "ما اللغة التي استخدمت لعمل <subject> الأصلي؟ الجواب: <mask>.",
+    "بأي لغة تم إنتاج <subject> أولاً؟ الجواب: <mask>.",
+    " اللغة الأصلية لـ <subject> هي <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "أحدب نوتردام",
+      "object": "الفرنسية",
+      "object_candidates": "الهولندية, اليونانية, الإيطالية, الألمانية, الروسية, الفنلندية, الإنجليزية, الفرنسية",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "الأسد الملك",
+      "object": "الإنجليزية",
+      "object_candidates": "الروسية, الفرنسية, الهولندية, اليونانية, الألمانية, الإيطالية, الفنلندية, الإنجليزية",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "المنبوذون",
+      "object": "الفرنسية",
+      "object_candidates": "اليونانية, الفنلندية, الألمانية, الإنجليزية, الهولندية, الروسية, الإيطالية, الفرنسية",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "وقت المغامرة",
+      "object": "الإنجليزية",
+      "object_candidates": "الفنلندية, الفرنسية, الهولندية, الإيطالية, الألمانية, اليونانية, الروسية, الإنجليزية",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "حرقته الشمس",
+      "object": "الروسية",
+      "object_candidates": "الفنلندية, اليونانية, الإيطالية, الألمانية, الإنجليزية, الفرنسية, الهولندية, الروسية",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "عازف البيانو",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, اليونانية, الهولندية, الروسية, الألمانية, الفنلندية, الفرنسية, الإنجليزية",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "الكونت دي مونت كريستو",
+      "object": "الفرنسية",
+      "object_candidates": "الروسية, الفنلندية, الألمانية, الهولندية, اليونانية, الإنجليزية, الإيطالية, الفرنسية",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "متشرد مليونير",
+      "object": "الإنجليزية",
+      "object_candidates": "الفنلندية, الهولندية, الإيطالية, اليونانية, الروسية, الألمانية, الفرنسية, الإنجليزية",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "نيتشر",
+      "object": "الإنجليزية",
+      "object_candidates": "الفنلندية, اليونانية, الفرنسية, الإيطالية, الروسية, الهولندية, الألمانية, الإنجليزية",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "العراب",
+      "object": "الإنجليزية",
+      "object_candidates": "الفرنسية, اليونانية, الألمانية, الروسية, الفنلندية, الهولندية, الإيطالية, الإنجليزية",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "صائدو الأشباح",
+      "object": "الإنجليزية",
+      "object_candidates": "الهولندية, الفرنسية, اليونانية, الألمانية, الفنلندية, الإيطالية, الروسية, الإنجليزية",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "الفرسان الثلاثة",
+      "object": "الفرنسية",
+      "object_candidates": "الهولندية, اليونانية, الإنجليزية, الألمانية, الفنلندية, الإيطالية, الروسية, الفرنسية",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "ويكيبيديا الهولندية",
+      "object": "الهولندية",
+      "object_candidates": "الإنجليزية, الروسية, اليونانية, الفرنسية, الإيطالية, الألمانية, الفنلندية, الهولندية",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "شارلي إبدو",
+      "object": "الفرنسية",
+      "object_candidates": "الإيطالية, الروسية, الفنلندية, الإنجليزية, اليونانية, الهولندية, الألمانية, الفرنسية",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "خيال رخيص",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, الهولندية, الروسية, الألمانية, الفرنسية, اليونانية, الفنلندية, الإنجليزية",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "الطيب والشرس والقبيح",
+      "object": "الإيطالية",
+      "object_candidates": "الروسية, الإنجليزية, الألمانية, الفرنسية, الهولندية, اليونانية, الفنلندية, الإيطالية",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "السرعة و الغضب",
+      "object": "الإنجليزية",
+      "object_candidates": "الروسية, الفرنسية, الألمانية, الإيطالية, الهولندية, اليونانية, الفنلندية, الإنجليزية",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "الناي السحري",
+      "object": "الألمانية",
+      "object_candidates": "الإيطالية, الهولندية, الفنلندية, الإنجليزية, الفرنسية, اليونانية, الروسية, الألمانية",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "آي كارلي",
+      "object": "الإنجليزية",
+      "object_candidates": "اليونانية, الهولندية, الألمانية, الفرنسية, الروسية, الفنلندية, الإيطالية, الإنجليزية",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "الموسوعة السوفيتية العظمى",
+      "object": "الروسية",
+      "object_candidates": "الإيطالية, الألمانية, الفرنسية, الهولندية, الفنلندية, اليونانية, الإنجليزية, الروسية",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "القط ذو الحذاء",
+      "object": "الإيطالية",
+      "object_candidates": "اليونانية, الألمانية, الإنجليزية, الفرنسية, الفنلندية, الهولندية, الروسية, الإيطالية",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ويكيبيديا الفنلندية",
+      "object": "الفنلندية",
+      "object_candidates": "اليونانية, الفرنسية, الألمانية, الإيطالية, الإنجليزية, الروسية, الهولندية, الفنلندية",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "توم وجيري",
+      "object": "الإنجليزية",
+      "object_candidates": "الروسية, الألمانية, الفنلندية, اليونانية, الهولندية, الفرنسية, الإيطالية, الإنجليزية",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "كتاب الأدغال",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, الفنلندية, الروسية, الفرنسية, اليونانية, الألمانية, الهولندية, الإنجليزية",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا اليونانية",
+      "object": "اليونانية",
+      "object_candidates": "الفنلندية, الروسية, الهولندية, الفرنسية, الألمانية, الإنجليزية, الإيطالية, اليونانية",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "ميدل",
+      "object": "الإنجليزية",
+      "object_candidates": "الإسبانية, الإيطالية, التركية, الدنماركية, البنغالية, الألمانية, الفرنسية, الكورية, البلغارية, الإنجليزية",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "جت",
+      "object": "الإنجليزية",
+      "object_candidates": "البولندية, التركية, اللاتينية, البنغالية, التشيكية, الروسية, الإسبانية, الإيطالية, السويدية, الإنجليزية",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "الإنيادة",
+      "object": "اللاتينية",
+      "object_candidates": "الفيتنامية, البولندية, الإيطالية, الإنجليزية, الكتالونية, التشيكية, المجرية, الروسية, البنغالية, اللاتينية",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ويكيبيديا الروسية",
+      "object": "الروسية",
+      "object_candidates": "الكورية, السويدية, البلغارية, المجرية, الألمانية, الإنجليزية, البولندية, البنغالية, الإسبانية, الروسية",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ستار تريك إلى الظلام",
+      "object": "الإنجليزية",
+      "object_candidates": "البنغالية, الأوكرانية, الألمانية, السويدية, البولندية, الفيتنامية, البلغارية, اللاتينية, الإسبانية, الإنجليزية",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "شارلي إبدو",
+      "object": "الفرنسية",
+      "object_candidates": "الألمانية, الإستونية, الإسبانية, التركية, المجرية, الإيطالية, البلغارية, الروسية, الإنجليزية, الفرنسية",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "واشنطن بوست",
+      "object": "الإنجليزية",
+      "object_candidates": "الدنماركية, الإستونية, الإسبانية, الألمانية, الروسية, الهولندية, الكورية, السويدية, الكرواتية, الإنجليزية",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "بلاي بوي",
+      "object": "الإنجليزية",
+      "object_candidates": "الدنماركية, الكتالونية, الإستونية, المجرية, الإسبانية, السويدية, الألمانية, الفرنسية, البلغارية, الإنجليزية",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "نيو هورايزونز",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, الكتالونية, الأوكرانية, المجرية, البنغالية, الفنلندية, السويدية, البولندية, الهولندية, الإنجليزية",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "أوبرا عايدة",
+      "object": "الإيطالية",
+      "object_candidates": "التركية, الهولندية, المجرية, البولندية, اللاتينية, الأوكرانية, السويدية, الكتالونية, البلغارية, الإيطالية",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ساينس",
+      "object": "الإنجليزية",
+      "object_candidates": "البنغالية, المجرية, الفيتنامية, الألمانية, الأوكرانية, البلغارية, الكرواتية, الفنلندية, اللاتينية, الإنجليزية",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "المعالجة بالسعادة",
+      "object": "الإنجليزية",
+      "object_candidates": "الهولندية, الفيتنامية, البنغالية, الألمانية, اللاتينية, الدنماركية, المجرية, البلغارية, الروسية, الإنجليزية",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "نيوزويك",
+      "object": "الإنجليزية",
+      "object_candidates": "البلغارية, الكتالونية, اللاتينية, التشيكية, الدنماركية, البنغالية, الإيطالية, الكرواتية, المجرية, الإنجليزية",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "الدم الأول",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, الإستونية, الإيطالية, البولندية, الإسبانية, الفرنسية, الكرواتية, البلغارية, الدنماركية, الإنجليزية",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "الأمير الصغير",
+      "object": "الفرنسية",
+      "object_candidates": "الإستونية, الروسية, الأوكرانية, اللاتينية, الإيطالية, الإسبانية, التشيكية, الإنجليزية, البلغارية, الفرنسية",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "سيري",
+      "object": "الإنجليزية",
+      "object_candidates": "الأوكرانية, الفنلندية, الكرواتية, الإيطالية, البلغارية, الألمانية, السويدية, الإسبانية, الفرنسية, الإنجليزية",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا الدنماركية",
+      "object": "الدنماركية",
+      "object_candidates": "الفنلندية, الكرواتية, المجرية, الروسية, اللاتينية, الأوكرانية, البلغارية, الإنجليزية, السويدية, الدنماركية",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "لوموند",
+      "object": "الفرنسية",
+      "object_candidates": "الأوكرانية, الإستونية, الدنماركية, الكورية, السويدية, الكرواتية, الروسية, الألمانية, الفنلندية, الفرنسية",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "لو فيغارو",
+      "object": "الفرنسية",
+      "object_candidates": "البولندية, البنغالية, الفيتنامية, اللاتينية, الفنلندية, الروسية, الهولندية, السويدية, الإستونية, الفرنسية",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "ويكيبيديا التشيكية",
+      "object": "التشيكية",
+      "object_candidates": "الفرنسية, البنغالية, السويدية, الكرواتية, الفيتنامية, الأوكرانية, الإستونية, الكورية, الإيطالية, التشيكية",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "الغارديان",
+      "object": "الإنجليزية",
+      "object_candidates": "الإسبانية, الإيطالية, البلغارية, المجرية, الهولندية, الروسية, البنغالية, الدنماركية, الألمانية, الإنجليزية",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا الكرواتية",
+      "object": "الكرواتية",
+      "object_candidates": "المجرية, الفيتنامية, الدنماركية, الفرنسية, الإسبانية, البنغالية, الهولندية, الروسية, البولندية, الكرواتية",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "معاهدة أوترخت",
+      "object": "الإنجليزية",
+      "object_candidates": "الكرواتية, الأوكرانية, الفيتنامية, التشيكية, المجرية, الكتالونية, السويدية, البلغارية, الإسبانية, الإنجليزية",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "خيال رخيص",
+      "object": "الإنجليزية",
+      "object_candidates": "البلغارية, الفيتنامية, التشيكية, الأوكرانية, الفنلندية, الألمانية, الإسبانية, الدنماركية, الكتالونية, الإنجليزية",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "هت فلهلموس",
+      "object": "الهولندية",
+      "object_candidates": "التركية, التشيكية, الكورية, الإنجليزية, الفرنسية, الإسبانية, المجرية, الألمانية, الأوكرانية, الهولندية",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "ويكيبيديا السويدية",
+      "object": "السويدية",
+      "object_candidates": "البلغارية, الإستونية, التركية, الإيطالية, الكرواتية, الروسية, الإسبانية, اللاتينية, المجرية, السويدية",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "ويكيبيديا البولندية",
+      "object": "البولندية",
+      "object_candidates": "الإستونية, الفرنسية, الفنلندية, الدنماركية, التشيكية, الإسبانية, الكتالونية, الهولندية, الإيطالية, البولندية",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "ويكيبيديا الإستونية",
+      "object": "الإستونية",
+      "object_candidates": "المجرية, الألمانية, الفرنسية, الفيتنامية, التركية, الكورية, الإسبانية, اللاتينية, الأوكرانية, الإستونية",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "آبي رود",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, الإستونية, الروسية, الإسبانية, الدنماركية, الفرنسية, الألمانية, الكتالونية, التشيكية, الإنجليزية",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا الكتلانية",
+      "object": "الكتالونية",
+      "object_candidates": "الروسية, الإستونية, السويدية, التركية, الإيطالية, البولندية, الإنجليزية, الفيتنامية, الكورية, الكتالونية",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "ويكيبيديا الفيتنامية",
+      "object": "الفيتنامية",
+      "object_candidates": "البولندية, الألمانية, التشيكية, التركية, الهولندية, الأوكرانية, الإسبانية, الكرواتية, الفرنسية, الفيتنامية",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "الناي السحري",
+      "object": "الألمانية",
+      "object_candidates": "الفنلندية, الكرواتية, البنغالية, الإسبانية, الروسية, الكتالونية, الإنجليزية, الفرنسية, الهولندية, الألمانية",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "ويكيبيديا الكورية",
+      "object": "الكورية",
+      "object_candidates": "الفيتنامية, الإسبانية, الفنلندية, الألمانية, البنغالية, البلغارية, الإستونية, الهولندية, البولندية, الكورية",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "بنترست",
+      "object": "الفرنسية",
+      "object_candidates": "الدنماركية, البلغارية, الفنلندية, الكتالونية, اللاتينية, المجرية, التشيكية, الألمانية, الإسبانية, الفرنسية",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "أوليفر تويست",
+      "object": "الإنجليزية",
+      "object_candidates": "الكتالونية, الكورية, الفرنسية, الكرواتية, الدنماركية, الإستونية, السويدية, البولندية, الروسية, الإنجليزية",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "أليس في بلاد العجائب",
+      "object": "الإنجليزية",
+      "object_candidates": "الكتالونية, اللاتينية, الأوكرانية, البلغارية, الإيطالية, الفنلندية, الدنماركية, الفيتنامية, التركية, الإنجليزية",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "كبرياء وتحامل",
+      "object": "الإنجليزية",
+      "object_candidates": "الدنماركية, الكورية, الفنلندية, الإيطالية, المجرية, الفرنسية, البنغالية, الإسبانية, البلغارية, الإنجليزية",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "تايم",
+      "object": "الإنجليزية",
+      "object_candidates": "البلغارية, الألمانية, البولندية, الكتالونية, التشيكية, الإستونية, الإسبانية, الروسية, الأوكرانية, الإنجليزية",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "غاتسبي العظيم",
+      "object": "الإنجليزية",
+      "object_candidates": "البلغارية, الكورية, التركية, الكتالونية, السويدية, الإسبانية, الإيطالية, الفرنسية, الروسية, الإنجليزية",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "ليبر أوفيس",
+      "object": "الإنجليزية",
+      "object_candidates": "التشيكية, الكرواتية, الدنماركية, التركية, البنغالية, الفنلندية, البولندية, الكورية, الفرنسية, الإنجليزية",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "بنترست",
+      "object": "الإسبانية",
+      "object_candidates": "الإستونية, الألمانية, الروسية, السويدية, الفيتنامية, الأوكرانية, الهولندية, اللاتينية, البلغارية, الإسبانية",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "بنغلاديش الذهبية",
+      "object": "البنغالية",
+      "object_candidates": "الإسبانية, اللاتينية, المجرية, البولندية, الروسية, الإيطالية, الإستونية, السويدية, الإنجليزية, البنغالية",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "ليبر أوفيس",
+      "object": "الفنلندية",
+      "object_candidates": "التركية, الكورية, الهولندية, الإيطالية, الروسية, البلغارية, الكتالونية, الكرواتية, الأوكرانية, الفنلندية",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ويكيبيديا الألمانية",
+      "object": "الألمانية",
+      "object_candidates": "المجرية, البلغارية, الهولندية, الإسبانية, الأوكرانية, البنغالية, التركية, الكورية, الكرواتية, الألمانية",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "معاهدة فرساي",
+      "object": "الفرنسية",
+      "object_candidates": "الإستونية, الإسبانية, البولندية, الألمانية, الكورية, الأوكرانية, البنغالية, الروسية, الإنجليزية, الفرنسية",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "يفغيني اونيغين",
+      "object": "الروسية",
+      "object_candidates": "الكورية, الفيتنامية, السويدية, البولندية, الفنلندية, الكتالونية, الأوكرانية, البلغارية, الإيطالية, الروسية",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ويكيبيديا الأوكرانية",
+      "object": "الأوكرانية",
+      "object_candidates": "الروسية, التشيكية, الإيطالية, البلغارية, الكتالونية, الهولندية, الإسبانية, الإستونية, الفنلندية, الأوكرانية",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "1984",
+      "object": "الإنجليزية",
+      "object_candidates": "الأوكرانية, الإستونية, الكتالونية, الإيطالية, الكرواتية, الفرنسية, الإسبانية, البلغارية, اللاتينية, الإنجليزية",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "مغامرات توم سوير",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, اللاتينية, التشيكية, الكورية, الإسبانية, الكتالونية, الفرنسية, البنغالية, الهولندية, الإنجليزية",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "ترمنايتور جنيسس",
+      "object": "الإنجليزية",
+      "object_candidates": "الهولندية, الفرنسية, البنغالية, الإستونية, الألمانية, البلغارية, الإيطالية, المجرية, اللاتينية, الإنجليزية",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "نيتشر",
+      "object": "الإنجليزية",
+      "object_candidates": "التشيكية, البلغارية, الروسية, الدنماركية, الكتالونية, الفنلندية, الألمانية, التركية, الهولندية, الإنجليزية",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "ديكاميرون",
+      "object": "الإيطالية",
+      "object_candidates": "السويدية, البنغالية, الفنلندية, التشيكية, الكتالونية, البلغارية, الكورية, الأوكرانية, الفرنسية, الإيطالية",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "بنترست",
+      "object": "الفنلندية",
+      "object_candidates": "التشيكية, الفرنسية, الألمانية, الهولندية, الفيتنامية, البلغارية, اللاتينية, البنغالية, المجرية, الفنلندية",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ذا إيكونومست",
+      "object": "الإنجليزية",
+      "object_candidates": "البولندية, الهولندية, الكرواتية, الإسبانية, الألمانية, التشيكية, السويدية, الفنلندية, اللاتينية, الإنجليزية",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "دو جاملا، دو فريا",
+      "object": "السويدية",
+      "object_candidates": "الألمانية, الإيطالية, الفرنسية, الإسبانية, البلغارية, الإستونية, الإنجليزية, الفيتنامية, اللاتينية, السويدية",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "مغامرات الدمية بينوكيو",
+      "object": "الإيطالية",
+      "object_candidates": "الفيتنامية, التشيكية, الكرواتية, الإنجليزية, المجرية, الكورية, الدنماركية, الهولندية, التركية, الإيطالية",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "موبي ديك",
+      "object": "الإنجليزية",
+      "object_candidates": "السويدية, الدنماركية, الكرواتية, الروسية, الفيتنامية, الألمانية, الكورية, الإسبانية, الفرنسية, الإنجليزية",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "بنترست",
+      "object": "الإيطالية",
+      "object_candidates": "الإستونية, الكرواتية, التركية, الفنلندية, اللاتينية, الألمانية, الأوكرانية, الدنماركية, الهولندية, الإيطالية",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "زواج فيغارو",
+      "object": "الإيطالية",
+      "object_candidates": "الإنجليزية, السويدية, الأوكرانية, الهولندية, التركية, اللاتينية, الكتالونية, الروسية, الإسبانية, الإيطالية",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "معاهدة ماستريخت",
+      "object": "الفرنسية",
+      "object_candidates": "اللاتينية, الأوكرانية, السويدية, التركية, المجرية, الكورية, الإستونية, الهولندية, التشيكية, الفرنسية",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "بليز بليز مي",
+      "object": "الإنجليزية",
+      "object_candidates": "اللاتينية, الهولندية, المجرية, التركية, الكورية, السويدية, الروسية, الكتالونية, الألمانية, الإنجليزية",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا البلغارية",
+      "object": "البلغارية",
+      "object_candidates": "الكرواتية, الهولندية, الكتالونية, اللاتينية, الدنماركية, الإستونية, المجرية, البولندية, الفنلندية, البلغارية",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "ذا بايرت بي",
+      "object": "الإسبانية",
+      "object_candidates": "الألمانية, السويدية, اللاتينية, المجرية, البلغارية, الفيتنامية, الفرنسية, الكورية, الفنلندية, الإسبانية",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ويكيبيديا التركية",
+      "object": "التركية",
+      "object_candidates": "السويدية, الفنلندية, الروسية, الفيتنامية, البنغالية, التشيكية, الإسبانية, الكورية, الكتالونية, التركية",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "ويكيبيديا المجرية",
+      "object": "المجرية",
+      "object_candidates": "الفنلندية, الكرواتية, الإسبانية, البلغارية, السويدية, الإيطالية, الكورية, البنغالية, الدنماركية, المجرية",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "أنا كارينينا",
+      "object": "الروسية",
+      "object_candidates": "المجرية, الإيطالية, الفنلندية, الإنجليزية, الأوكرانية, الإستونية, البولندية, الإسبانية, التركية, الروسية",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ويكيبيديا الصربية",
+      "object": "الصربية",
+      "object_candidates": "الفيتنامية, اللاتينية, الفنلندية, الألمانية, الإنجليزية, الهولندية, البلغارية, التركية, الروسية, الصربية",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "ويكيبيديا الإيطالية",
+      "object": "الإيطالية",
+      "object_candidates": "التركية, الفنلندية, الألمانية, التشيكية, الدنماركية, الكتالونية, الكورية, السويدية, الأوكرانية, الإيطالية",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ويكيبيديا الإسبانية",
+      "object": "الإسبانية",
+      "object_candidates": "الكتالونية, الدنماركية, اللاتينية, الإيطالية, المجرية, الإستونية, الفنلندية, البنغالية, الكرواتية, الإسبانية",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ويكيبيديا الفنلندية",
+      "object": "الفنلندية",
+      "object_candidates": "الإيطالية, الألمانية, الإسبانية, الكتالونية, المجرية, الكورية, البنغالية, الدنماركية, الأوكرانية, الفنلندية",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ويكيبيديا الإنجليزية البسيطة",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, الكتالونية, البنغالية, الروسية, الفيتنامية, التشيكية, الفرنسية, البلغارية, التركية, الإنجليزية",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "أوغاد مجهولون",
+      "object": "الإنجليزية",
+      "object_candidates": "الإستونية, الكتالونية, الفرنسية, التركية, الإسبانية, المجرية, اللاتينية, البولندية, الفنلندية, الإنجليزية",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "بنترست",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, الإسبانية, الفرنسية, المجرية, التشيكية, الكتالونية, البنغالية, الفيتنامية, الأوكرانية, الإنجليزية",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "ألكسندر",
+      "object": "الإنجليزية",
+      "object_candidates": "اللاتينية, الكرواتية, الدنماركية, الإيطالية, الألمانية, الكورية, الفنلندية, الأوكرانية, الكتالونية, الإنجليزية",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "لعبة التزييف",
+      "object": "الإنجليزية",
+      "object_candidates": "الكتالونية, الألمانية, الدنماركية, الفرنسية, التشيكية, الفنلندية, الإسبانية, الكرواتية, الإيطالية, الإنجليزية",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "دون جيوفاني",
+      "object": "الإيطالية",
+      "object_candidates": "الدنماركية, المجرية, الإسبانية, الفنلندية, الهولندية, الكورية, التشيكية, الإستونية, الفرنسية, الإيطالية",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "أوف ذا وول",
+      "object": "الإنجليزية",
+      "object_candidates": "التشيكية, البولندية, الألمانية, الفيتنامية, البلغارية, اللاتينية, الأوكرانية, الإيطالية, المجرية, الإنجليزية",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "أرشيف الإنترنت",
+      "object": "الإنجليزية",
+      "object_candidates": "الإستونية, الإيطالية, المجرية, اللاتينية, البلغارية, الدنماركية, الألمانية, التشيكية, الهولندية, الإنجليزية",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "بوهيميان رابسودي",
+      "object": "الإنجليزية",
+      "object_candidates": "الروسية, الكرواتية, البلغارية, الدنماركية, الفنلندية, السويدية, الهولندية, الفرنسية, الألمانية, الإنجليزية",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويكيبيديا الفرنسية",
+      "object": "الفرنسية",
+      "object_candidates": "الأوكرانية, الإسبانية, البولندية, البلغارية, السويدية, البنغالية, الدنماركية, الفنلندية, التشيكية, الفرنسية",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "لوس أنجلوس تايمز",
+      "object": "الإنجليزية",
+      "object_candidates": "التركية, اللاتينية, المجرية, الإستونية, الكورية, الدنماركية, الإسبانية, السويدية, التشيكية, الإنجليزية",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "خادوم إتش تي تي بي أباتشي",
+      "object": "الإنجليزية",
+      "object_candidates": "الأوكرانية, الدنماركية, التشيكية, البولندية, السويدية, الفرنسية, اللاتينية, الإسبانية, الإستونية, الإنجليزية",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "وكالة أنباء نوفوستي",
+      "object": "الروسية",
+      "object_candidates": "الإنجليزية, البلغارية, الإسبانية, المجرية, الأوكرانية, الدنماركية, الفنلندية, الفيتنامية, الكرواتية, الروسية",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "<subject> 是哪个国家的公民？答案是：<mask>",
+    "<subject> 的国籍是什么？答案是：<mask>",
+    "<subject> 拥有哪个国家的公民身份？答案是：<mask>",
+    "<subject> 是哪个国家的公民？答案是：<mask>",
+    "哪个国家赋予 <subject> 公民身份？答案是：<mask>",
+    "<subject>所拥有的国籍是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "鲍里斯·斯帕斯基",
+      "object": "法国",
+      "object_candidates": "爱尔兰共和国, 澳大利亚, 卡塔尔, 黎巴嫩, 库尔德斯坦, 瑞士, 保加利亚, 印度, 阿根廷, 法国",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "阿达·约纳特",
+      "object": "以色列",
+      "object_candidates": "巴西, 澳大利亚, 卡塔尔, 黎巴嫩, 瑞典, 日本, 希腊, 越南, 挪威, 以色列",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "利昂内尔·梅西",
+      "object": "阿根廷",
+      "object_candidates": "日本, 爱尔兰共和国, 丹麦, 德国, 瑞典, 黎巴嫩, 保加利亚, 希腊, 以色列, 阿根廷",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "卡洛斯二世",
+      "object": "西班牙",
+      "object_candidates": "越南, 加拿大, 挪威, 瑞士, 以色列, 丹麦, 瑞典, 奥地利, 阿根廷, 西班牙",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "阿德里安诺·塞兰特诺",
+      "object": "意大利",
+      "object_candidates": "越南, 奥地利, 德国, 库尔德斯坦, 丹麦, 美茵河畔法兰克福, 希腊, 以色列, 挪威, 意大利",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "格奥尔基·珀尔瓦诺夫",
+      "object": "保加利亚",
+      "object_candidates": "澳大利亚, 希腊, 意大利, 巴西, 卡塔尔, 以色列, 越南, 德国, 英格兰王国, 保加利亚",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "迪尔玛·罗塞夫",
+      "object": "巴西",
+      "object_candidates": "爱尔兰共和国, 美茵河畔法兰克福, 库尔德斯坦, 加拿大, 丹麦, 瑞士, 日本, 西班牙, 澳大利亚, 巴西",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "罗纳尔多",
+      "object": "巴西",
+      "object_candidates": "黎巴嫩, 瑞士, 意大利, 德国, 加拿大, 丹麦, 英格兰王国, 阿根廷, 奥地利, 巴西",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "图拉真",
+      "object": "西班牙",
+      "object_candidates": "卡塔尔, 瑞士, 丹麦, 挪威, 巴西, 库尔德斯坦, 越南, 英格兰王国, 阿根廷, 西班牙",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "罗纳尔迪尼奥",
+      "object": "巴西",
+      "object_candidates": "瑞士, 日本, 以色列, 保加利亚, 越南, 瑞典, 加拿大, 西班牙, 黎巴嫩, 巴西",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "斯科特·莫里森",
+      "object": "澳大利亚",
+      "object_candidates": "德国, 爱尔兰共和国, 美茵河畔法兰克福, 波兰, 加拿大, 奥地利, 日本, 瑞典, 意大利, 澳大利亚",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "胡志明",
+      "object": "越南",
+      "object_candidates": "印度, 日本, 以色列, 阿根廷, 瑞典, 法国, 卡塔尔, 希腊, 波兰, 越南",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "阿兰·罗贝尔",
+      "object": "法国",
+      "object_candidates": "阿根廷, 美茵河畔法兰克福, 希腊, 越南, 以色列, 爱尔兰共和国, 波兰, 库尔德斯坦, 挪威, 法国",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "弗迪南·德·索绪尔",
+      "object": "瑞士",
+      "object_candidates": "印度, 阿根廷, 库尔德斯坦, 巴西, 加拿大, 卡塔尔, 奥地利, 日本, 波兰, 瑞士",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "奥古斯特·罗丹",
+      "object": "法国",
+      "object_candidates": "西班牙, 美茵河畔法兰克福, 意大利, 以色列, 印度, 阿根廷, 保加利亚, 巴西, 奥地利, 法国",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "弗里德里希·威廉·贝塞尔",
+      "object": "德国",
+      "object_candidates": "卡塔尔, 英格兰王国, 日本, 黎巴嫩, 阿根廷, 意大利, 保加利亚, 奥地利, 巴西, 德国",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "约翰·沃尔夫冈·冯·歌德",
+      "object": "美茵河畔法兰克福",
+      "object_candidates": "瑞典, 爱尔兰共和国, 阿根廷, 黎巴嫩, 保加利亚, 以色列, 意大利, 希腊, 日本, 美茵河畔法兰克福",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "马西莫·达莱马",
+      "object": "意大利",
+      "object_candidates": "黎巴嫩, 印度, 瑞典, 法国, 西班牙, 澳大利亚, 波兰, 丹麦, 越南, 意大利",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "鲁道夫·赫斯",
+      "object": "德国",
+      "object_candidates": "波兰, 澳大利亚, 意大利, 法国, 越南, 阿根廷, 库尔德斯坦, 巴西, 丹麦, 德国",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "亨利五世",
+      "object": "英格兰王国",
+      "object_candidates": "保加利亚, 德国, 以色列, 爱尔兰共和国, 瑞典, 越南, 巴西, 加拿大, 瑞士, 英格兰王国",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "米歇尔·维勒贝克",
+      "object": "法国",
+      "object_candidates": "瑞士, 印度, 丹麦, 西班牙, 日本, 挪威, 波兰, 巴西, 奥地利, 法国",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "马萨乔",
+      "object": "意大利",
+      "object_candidates": "丹麦, 英格兰王国, 美茵河畔法兰克福, 巴西, 保加利亚, 法国, 加拿大, 澳大利亚, 希腊, 意大利",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "法兰丝‧盖儿",
+      "object": "法国",
+      "object_candidates": "加拿大, 英格兰王国, 越南, 奥地利, 意大利, 以色列, 美茵河畔法兰克福, 印度, 希腊, 法国",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "拉斐尔·阿尔韦蒂",
+      "object": "西班牙",
+      "object_candidates": "奥地利, 保加利亚, 黎巴嫩, 挪威, 意大利, 越南, 以色列, 波兰, 澳大利亚, 西班牙",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "贝尔纳多·奥赛",
+      "object": "阿根廷",
+      "object_candidates": "卡塔尔, 德国, 以色列, 加拿大, 英格兰王国, 瑞士, 越南, 库尔德斯坦, 保加利亚, 阿根廷",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "宫泽喜一",
+      "object": "日本",
+      "object_candidates": "巴西, 挪威, 法国, 印度, 保加利亚, 卡塔尔, 瑞典, 以色列, 英格兰王国, 日本",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "奥斯卡一世",
+      "object": "瑞典",
+      "object_candidates": "法国, 瑞士, 丹麦, 印度, 西班牙, 德国, 波兰, 卡塔尔, 以色列, 瑞典",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "卡尔·博施",
+      "object": "德国",
+      "object_candidates": "库尔德斯坦, 阿根廷, 西班牙, 瑞典, 以色列, 法国, 瑞士, 美茵河畔法兰克福, 爱尔兰共和国, 德国",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "吉杜·克里希那穆提",
+      "object": "印度",
+      "object_candidates": "卡塔尔, 意大利, 挪威, 德国, 英格兰王国, 希腊, 爱尔兰共和国, 库尔德斯坦, 黎巴嫩, 印度",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "伊丽莎白一世",
+      "object": "英格兰王国",
+      "object_candidates": "法国, 印度, 波兰, 西班牙, 加拿大, 阿根廷, 奥地利, 丹麦, 瑞典, 英格兰王国",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "艾玛纽尔·塞尼耶",
+      "object": "法国",
+      "object_candidates": "卡塔尔, 美茵河畔法兰克福, 黎巴嫩, 意大利, 印度, 库尔德斯坦, 保加利亚, 波兰, 澳大利亚, 法国",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "拉托",
+      "object": "波兰",
+      "object_candidates": "法国, 意大利, 澳大利亚, 爱尔兰共和国, 保加利亚, 德国, 日本, 西班牙, 希腊, 波兰",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "库尔特·瓦尔德海姆",
+      "object": "奥地利",
+      "object_candidates": "以色列, 越南, 西班牙, 瑞士, 库尔德斯坦, 阿根廷, 澳大利亚, 美茵河畔法兰克福, 爱尔兰共和国, 奥地利",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "玛格丽特·爱特伍",
+      "object": "加拿大",
+      "object_candidates": "阿根廷, 挪威, 巴西, 德国, 黎巴嫩, 澳大利亚, 丹麦, 保加利亚, 库尔德斯坦, 加拿大",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "恩佐·安塞尔莫·朱塞佩·玛丽亚·法拉利",
+      "object": "意大利",
+      "object_candidates": "印度, 黎巴嫩, 西班牙, 奥地利, 阿根廷, 爱尔兰共和国, 加拿大, 以色列, 巴西, 意大利",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "安德列·布维",
+      "object": "法国",
+      "object_candidates": "印度, 挪威, 阿根廷, 澳大利亚, 日本, 美茵河畔法兰克福, 英格兰王国, 以色列, 西班牙, 法国",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "沃尔夫冈·泡利",
+      "object": "奥地利",
+      "object_candidates": "加拿大, 越南, 丹麦, 爱尔兰共和国, 瑞典, 希腊, 波兰, 日本, 库尔德斯坦, 奥地利",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "查理六世",
+      "object": "法国",
+      "object_candidates": "波兰, 奥地利, 德国, 丹麦, 保加利亚, 印度, 加拿大, 西班牙, 爱尔兰共和国, 法国",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "米切尔·奥恩",
+      "object": "黎巴嫩",
+      "object_candidates": "越南, 丹麦, 阿根廷, 爱尔兰共和国, 日本, 美茵河畔法兰克福, 巴西, 波兰, 意大利, 黎巴嫩",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "马格努斯·卡尔森",
+      "object": "挪威",
+      "object_candidates": "美茵河畔法兰克福, 西班牙, 法国, 库尔德斯坦, 澳大利亚, 印度, 阿根廷, 黎巴嫩, 希腊, 挪威",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "亨利克·亚当·亚历山大·皮乌斯·显克微支",
+      "object": "波兰",
+      "object_candidates": "黎巴嫩, 巴西, 以色列, 西班牙, 卡塔尔, 日本, 法国, 丹麦, 加拿大, 波兰",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "亚瑟·都铎",
+      "object": "英格兰王国",
+      "object_candidates": "阿根廷, 卡塔尔, 西班牙, 爱尔兰共和国, 挪威, 波兰, 意大利, 瑞典, 库尔德斯坦, 英格兰王国",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "詹姆斯二世",
+      "object": "英格兰王国",
+      "object_candidates": "挪威, 瑞士, 保加利亚, 瑞典, 越南, 印度, 希腊, 巴西, 西班牙, 英格兰王国",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "哈迈德·本·哈利法·阿勒萨尼",
+      "object": "卡塔尔",
+      "object_candidates": "西班牙, 保加利亚, 意大利, 瑞典, 印度, 波兰, 美茵河畔法兰克福, 瑞士, 日本, 卡塔尔",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "弗朗西斯科·戈雅",
+      "object": "西班牙",
+      "object_candidates": "意大利, 法国, 波兰, 加拿大, 以色列, 澳大利亚, 黎巴嫩, 希腊, 巴西, 西班牙",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "贾拉勒·塔拉巴尼",
+      "object": "库尔德斯坦",
+      "object_candidates": "爱尔兰共和国, 英格兰王国, 意大利, 波兰, 法国, 美茵河畔法兰克福, 卡塔尔, 希腊, 保加利亚, 库尔德斯坦",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "佩绍托",
+      "object": "巴西",
+      "object_candidates": "美茵河畔法兰克福, 波兰, 瑞典, 意大利, 库尔德斯坦, 挪威, 奥地利, 法国, 瑞士, 巴西",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "安东尼斯·萨马拉斯",
+      "object": "希腊",
+      "object_candidates": "英格兰王国, 澳大利亚, 丹麦, 卡塔尔, 印度, 意大利, 法国, 阿根廷, 黎巴嫩, 希腊",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "朱塞佩·皮耶罗格里洛",
+      "object": "意大利",
+      "object_candidates": "英格兰王国, 印度, 西班牙, 希腊, 以色列, 澳大利亚, 美茵河畔法兰克福, 法国, 黎巴嫩, 意大利",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "弗雷德里克九世",
+      "object": "丹麦",
+      "object_candidates": "卡塔尔, 奥地利, 加拿大, 法国, 挪威, 美茵河畔法兰克福, 瑞典, 澳大利亚, 巴西, 丹麦",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "麦克·法斯宾达",
+      "object": "爱尔兰共和国",
+      "object_candidates": "加拿大, 西班牙, 卡塔尔, 巴西, 奥地利, 库尔德斯坦, 德国, 法国, 保加利亚, 爱尔兰共和国",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "亚历山德拉",
+      "object": "丹麦",
+      "object_candidates": "奥地利, 瑞典, 阿根廷, 瑞士, 以色列, 澳大利亚, 巴西, 波兰, 英格兰王国, 丹麦",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "米格尔·伊达尔戈·伊·科斯蒂利亚",
+      "object": "西班牙",
+      "object_candidates": "以色列, 瑞士, 美茵河畔法兰克福, 挪威, 爱尔兰共和国, 英格兰王国, 意大利, 阿根廷, 澳大利亚, 西班牙",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "埃德蒙德·胡塞尔",
+      "object": "德国",
+      "object_candidates": "意大利, 黎巴嫩, 印度, 瑞典, 波兰, 奥地利, 法国, 库尔德斯坦, 越南, 德国",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "莉泽·迈特纳",
+      "object": "瑞典",
+      "object_candidates": "西班牙, 卡塔尔, 瑞士, 奥地利, 黎巴嫩, 加拿大, 澳大利亚, 法国, 波兰, 瑞典",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "阿尔贝二世",
+      "object": "比利时",
+      "object_candidates": "波兰, 瑞典, 意大利, 卡塔尔, 希腊, 挪威, 越南, 瑞士, 西班牙, 比利时",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "笩駄摩那",
+      "object": "印度",
+      "object_candidates": "阿根廷, 德国, 越南, 意大利, 波兰, 澳大利亚, 加拿大, 库尔德斯坦, 巴西, 印度",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "斯凡特·奥古斯特·阿伦尼乌斯",
+      "object": "瑞典",
+      "object_candidates": "奥地利, 德国, 以色列, 巴西, 挪威, 卡塔尔, 澳大利亚, 希腊, 法国, 瑞典",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "马里奥·蒙蒂",
+      "object": "意大利",
+      "object_candidates": "西班牙, 丹麦, 印度, 德国, 法国, 爱尔兰共和国, 保加利亚, 卡塔尔, 英格兰王国, 意大利",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "皮埃尔·让森",
+      "object": "法国",
+      "object_candidates": "印度, 以色列, 西班牙, 爱尔兰共和国, 黎巴嫩, 波兰, 瑞士, 丹麦, 瑞典, 法国",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

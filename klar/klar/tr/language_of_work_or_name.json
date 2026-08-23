@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "<subject>un orijinal dili nedir? Cevap: <mask>.",
+    "<subject>ın orijinal olarak hangi dilde yazılmıştır? Cevap: <mask>.",
+    "<subject>hangi dilde orijinal olarak? Cevap: <mask>.",
+    "<subject>'nin orijinal eseri için hangi dil kullanıldı? Cevap: <mask>.",
+    "<subject>ın orijinal olarak hangi dilde üretildi? Cevap: <mask>.",
+    " <subject>’in orijinal dili <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Notre Dame'ın Kamburu",
+      "object": "Fransızca",
+      "object_candidates": "Felemenkçe, Yunanca, İtalyanca, Almanca, Rusça, Fince, İngilizce, Fransızca",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "Aslan Kral",
+      "object": "İngilizce",
+      "object_candidates": "Rusça, Fransızca, Felemenkçe, Yunanca, Almanca, İtalyanca, Fince, İngilizce",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "Can Dostum",
+      "object": "Fransızca",
+      "object_candidates": "Yunanca, Fince, Almanca, İngilizce, Felemenkçe, Rusça, İtalyanca, Fransızca",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "Adventure Time",
+      "object": "İngilizce",
+      "object_candidates": "Fince, Fransızca, Felemenkçe, İtalyanca, Almanca, Yunanca, Rusça, İngilizce",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Güneş Yanığı",
+      "object": "Rusça",
+      "object_candidates": "Fince, Yunanca, İtalyanca, Almanca, İngilizce, Fransızca, Felemenkçe, Rusça",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Piyanist",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Yunanca, Felemenkçe, Rusça, Almanca, Fince, Fransızca, İngilizce",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Monte Kristo Kontu",
+      "object": "Fransızca",
+      "object_candidates": "Rusça, Fince, Almanca, Felemenkçe, Yunanca, İngilizce, İtalyanca, Fransızca",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Milyoner",
+      "object": "İngilizce",
+      "object_candidates": "Fince, Felemenkçe, İtalyanca, Yunanca, Rusça, Almanca, Fransızca, İngilizce",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "İngilizce",
+      "object_candidates": "Fince, Yunanca, Fransızca, İtalyanca, Rusça, Felemenkçe, Almanca, İngilizce",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Baba",
+      "object": "İngilizce",
+      "object_candidates": "Fransızca, Yunanca, Almanca, Rusça, Fince, Felemenkçe, İtalyanca, İngilizce",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hayalet Avcıları",
+      "object": "İngilizce",
+      "object_candidates": "Felemenkçe, Fransızca, Yunanca, Almanca, Fince, İtalyanca, Rusça, İngilizce",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "Üç Silahşorlar",
+      "object": "Fransızca",
+      "object_candidates": "Felemenkçe, Yunanca, İngilizce, Almanca, Fince, İtalyanca, Rusça, Fransızca",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "Felemenkçe Vikipedi",
+      "object": "Felemenkçe",
+      "object_candidates": "İngilizce, Rusça, Yunanca, Fransızca, İtalyanca, Almanca, Fince, Felemenkçe",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "Fransızca",
+      "object_candidates": "İtalyanca, Rusça, Fince, İngilizce, Yunanca, Felemenkçe, Almanca, Fransızca",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ucuz Roman",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Felemenkçe, Rusça, Almanca, Fransızca, Yunanca, Fince, İngilizce",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "İyi, Kötü ve Çirkin",
+      "object": "İtalyanca",
+      "object_candidates": "Rusça, İngilizce, Almanca, Fransızca, Felemenkçe, Yunanca, Fince, İtalyanca",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Hızlı ve Öfkeli",
+      "object": "İngilizce",
+      "object_candidates": "Rusça, Fransızca, Almanca, İtalyanca, Felemenkçe, Yunanca, Fince, İngilizce",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sihirli Flüt",
+      "object": "Almanca",
+      "object_candidates": "İtalyanca, Felemenkçe, Fince, İngilizce, Fransızca, Yunanca, Rusça, Almanca",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "İCarly",
+      "object": "İngilizce",
+      "object_candidates": "Yunanca, Felemenkçe, Almanca, Fransızca, Rusça, Fince, İtalyanca, İngilizce",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "Büyük Sovyet Ansiklopedisi",
+      "object": "Rusça",
+      "object_candidates": "İtalyanca, Almanca, Fransızca, Felemenkçe, Fince, Yunanca, İngilizce, Rusça",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Çizmeli Kedi",
+      "object": "İtalyanca",
+      "object_candidates": "Yunanca, Almanca, İngilizce, Fransızca, Fince, Felemenkçe, Rusça, İtalyanca",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "fince Vikipedi",
+      "object": "Fince",
+      "object_candidates": "Yunanca, Fransızca, Almanca, İtalyanca, İngilizce, Rusça, Felemenkçe, Fince",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Tom ve Jerry",
+      "object": "İngilizce",
+      "object_candidates": "Rusça, Almanca, Fince, Yunanca, Felemenkçe, Fransızca, İtalyanca, İngilizce",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "Orman Kitabı",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Fince, Rusça, Fransızca, Yunanca, Almanca, Felemenkçe, İngilizce",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "Yunanca Vikipedi",
+      "object": "Yunanca",
+      "object_candidates": "Fince, Rusça, Felemenkçe, Fransızca, Almanca, İngilizce, İtalyanca, Yunanca",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "İngilizce",
+      "object_candidates": "İspanyolca, İtalyanca, Türkçe, Danca, bengalce, Almanca, Fransızca, Korece, bulgarca, İngilizce",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git",
+      "object": "İngilizce",
+      "object_candidates": "Lehçe, Türkçe, Latince, bengalce, Çekçe, Rusça, İspanyolca, İtalyanca, İsveççe, İngilizce",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aineias",
+      "object": "Latince",
+      "object_candidates": "Vietnamca, Lehçe, İtalyanca, İngilizce, Katalanca, Çekçe, Macarca, Rusça, bengalce, Latince",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Rusça Vikipedi",
+      "object": "Rusça",
+      "object_candidates": "Korece, İsveççe, bulgarca, Macarca, Almanca, İngilizce, Lehçe, bengalce, İspanyolca, Rusça",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Star Trek Into Darkness",
+      "object": "İngilizce",
+      "object_candidates": "bengalce, Ukraynaca, Almanca, İsveççe, Lehçe, Vietnamca, bulgarca, Latince, İspanyolca, İngilizce",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "Fransızca",
+      "object_candidates": "Almanca, Estonca, İspanyolca, Türkçe, Macarca, İtalyanca, bulgarca, Rusça, İngilizce, Fransızca",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Washington Post",
+      "object": "İngilizce",
+      "object_candidates": "Danca, Estonca, İspanyolca, Almanca, Rusça, Felemenkçe, Korece, İsveççe, Hırvatça, İngilizce",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "Playboy",
+      "object": "İngilizce",
+      "object_candidates": "Danca, Katalanca, Estonca, Macarca, İspanyolca, İsveççe, Almanca, Fransızca, bulgarca, İngilizce",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "Yeni Ufuklar",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Katalanca, Ukraynaca, Macarca, bengalce, Fince, İsveççe, Lehçe, Felemenkçe, İngilizce",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aida",
+      "object": "İtalyanca",
+      "object_candidates": "Türkçe, Felemenkçe, Macarca, Lehçe, Latince, Ukraynaca, İsveççe, Katalanca, bulgarca, İtalyanca",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Science",
+      "object": "İngilizce",
+      "object_candidates": "bengalce, Macarca, Vietnamca, Almanca, Ukraynaca, bulgarca, Hırvatça, Fince, Latince, İngilizce",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "Umut Işığım",
+      "object": "İngilizce",
+      "object_candidates": "Felemenkçe, Vietnamca, bengalce, Almanca, Latince, Danca, Macarca, bulgarca, Rusça, İngilizce",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "Newsweek",
+      "object": "İngilizce",
+      "object_candidates": "bulgarca, Katalanca, Latince, Çekçe, Danca, bengalce, İtalyanca, Hırvatça, Macarca, İngilizce",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "İlk Kan",
+      "object": "İngilizce",
+      "object_candidates": "Almanca, Estonca, İtalyanca, Lehçe, İspanyolca, Fransızca, Hırvatça, bulgarca, Danca, İngilizce",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "Küçük Prens",
+      "object": "Fransızca",
+      "object_candidates": "Estonca, Rusça, Ukraynaca, Latince, İtalyanca, İspanyolca, Çekçe, İngilizce, bulgarca, Fransızca",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "İngilizce",
+      "object_candidates": "Ukraynaca, Fince, Hırvatça, İtalyanca, bulgarca, Almanca, İsveççe, İspanyolca, Fransızca, İngilizce",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "Danca Vikipedi",
+      "object": "Danca",
+      "object_candidates": "Fince, Hırvatça, Macarca, Rusça, Latince, Ukraynaca, bulgarca, İngilizce, İsveççe, Danca",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Le Monde",
+      "object": "Fransızca",
+      "object_candidates": "Ukraynaca, Estonca, Danca, Korece, İsveççe, Hırvatça, Rusça, Almanca, Fince, Fransızca",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "Le Figaro",
+      "object": "Fransızca",
+      "object_candidates": "Lehçe, bengalce, Vietnamca, Latince, Fince, Rusça, Felemenkçe, İsveççe, Estonca, Fransızca",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "Çekçe Vikipedi",
+      "object": "Çekçe",
+      "object_candidates": "Fransızca, bengalce, İsveççe, Hırvatça, Vietnamca, Ukraynaca, Estonca, Korece, İtalyanca, Çekçe",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "The Guardian",
+      "object": "İngilizce",
+      "object_candidates": "İspanyolca, İtalyanca, bulgarca, Macarca, Felemenkçe, Rusça, bengalce, Danca, Almanca, İngilizce",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hırvatça Vikipedi",
+      "object": "Hırvatça",
+      "object_candidates": "Macarca, Vietnamca, Danca, Fransızca, İspanyolca, bengalce, Felemenkçe, Rusça, Lehçe, Hırvatça",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Utrecht Antlaşması",
+      "object": "İngilizce",
+      "object_candidates": "Hırvatça, Ukraynaca, Vietnamca, Çekçe, Macarca, Katalanca, İsveççe, bulgarca, İspanyolca, İngilizce",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ucuz Roman",
+      "object": "İngilizce",
+      "object_candidates": "bulgarca, Vietnamca, Çekçe, Ukraynaca, Fince, Almanca, İspanyolca, Danca, Katalanca, İngilizce",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Het Wilhelmus",
+      "object": "Felemenkçe",
+      "object_candidates": "Türkçe, Çekçe, Korece, İngilizce, Fransızca, İspanyolca, Macarca, Almanca, Ukraynaca, Felemenkçe",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "İsveççe Vikipedi",
+      "object": "İsveççe",
+      "object_candidates": "bulgarca, Estonca, Türkçe, İtalyanca, Hırvatça, Rusça, İspanyolca, Latince, Macarca, İsveççe",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Lehçe Vikipedi",
+      "object": "Lehçe",
+      "object_candidates": "Estonca, Fransızca, Fince, Danca, Çekçe, İspanyolca, Katalanca, Felemenkçe, İtalyanca, Lehçe",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Estonca Vikipedi",
+      "object": "Estonca",
+      "object_candidates": "Macarca, Almanca, Fransızca, Vietnamca, Türkçe, Korece, İspanyolca, Latince, Ukraynaca, Estonca",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Estonca, Rusça, İspanyolca, Danca, Fransızca, Almanca, Katalanca, Çekçe, İngilizce",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "Katalanca Vikipedi",
+      "object": "Katalanca",
+      "object_candidates": "Rusça, Estonca, İsveççe, Türkçe, İtalyanca, Lehçe, İngilizce, Vietnamca, Korece, Katalanca",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Vietnamca Vikipedi",
+      "object": "Vietnamca",
+      "object_candidates": "Lehçe, Almanca, Çekçe, Türkçe, Felemenkçe, Ukraynaca, İspanyolca, Hırvatça, Fransızca, Vietnamca",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "Sihirli Flüt",
+      "object": "Almanca",
+      "object_candidates": "Fince, Hırvatça, bengalce, İspanyolca, Rusça, Katalanca, İngilizce, Fransızca, Felemenkçe, Almanca",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "Korece Vikipedi",
+      "object": "Korece",
+      "object_candidates": "Vietnamca, İspanyolca, Fince, Almanca, bengalce, bulgarca, Estonca, Felemenkçe, Lehçe, Korece",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Fransızca",
+      "object_candidates": "Danca, bulgarca, Fince, Katalanca, Latince, Macarca, Çekçe, Almanca, İspanyolca, Fransızca",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "Oliver Twist",
+      "object": "İngilizce",
+      "object_candidates": "Katalanca, Korece, Fransızca, Hırvatça, Danca, Estonca, İsveççe, Lehçe, Rusça, İngilizce",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alis Harikalar Diyarında",
+      "object": "İngilizce",
+      "object_candidates": "Katalanca, Latince, Ukraynaca, bulgarca, İtalyanca, Fince, Danca, Vietnamca, Türkçe, İngilizce",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Gurur ve Önyargı",
+      "object": "İngilizce",
+      "object_candidates": "Danca, Korece, Fince, İtalyanca, Macarca, Fransızca, bengalce, İspanyolca, bulgarca, İngilizce",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Time",
+      "object": "İngilizce",
+      "object_candidates": "bulgarca, Almanca, Lehçe, Katalanca, Çekçe, Estonca, İspanyolca, Rusça, Ukraynaca, İngilizce",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Muhteşem Gatsby",
+      "object": "İngilizce",
+      "object_candidates": "bulgarca, Korece, Türkçe, Katalanca, İsveççe, İspanyolca, İtalyanca, Fransızca, Rusça, İngilizce",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "İngilizce",
+      "object_candidates": "Çekçe, Hırvatça, Danca, Türkçe, bengalce, Fince, Lehçe, Korece, Fransızca, İngilizce",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "İspanyolca",
+      "object_candidates": "Estonca, Almanca, Rusça, İsveççe, Vietnamca, Ukraynaca, Felemenkçe, Latince, bulgarca, İspanyolca",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Amar Sonar Bangla",
+      "object": "bengalce",
+      "object_candidates": "İspanyolca, Latince, Macarca, Lehçe, Rusça, İtalyanca, Estonca, İsveççe, İngilizce, bengalce",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "Fince",
+      "object_candidates": "Türkçe, Korece, Felemenkçe, İtalyanca, Rusça, bulgarca, Katalanca, Hırvatça, Ukraynaca, Fince",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Almanca Vikipedi",
+      "object": "Almanca",
+      "object_candidates": "Macarca, bulgarca, Felemenkçe, İspanyolca, Ukraynaca, bengalce, Türkçe, Korece, Hırvatça, Almanca",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "Versay Barış Antlaşması",
+      "object": "Fransızca",
+      "object_candidates": "Estonca, İspanyolca, Lehçe, Almanca, Korece, Ukraynaca, bengalce, Rusça, İngilizce, Fransızca",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Yevgeni Onegin",
+      "object": "Rusça",
+      "object_candidates": "Korece, Vietnamca, İsveççe, Lehçe, Fince, Katalanca, Ukraynaca, bulgarca, İtalyanca, Rusça",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Ukraynaca Vikipedi",
+      "object": "Ukraynaca",
+      "object_candidates": "Rusça, Çekçe, İtalyanca, bulgarca, Katalanca, Felemenkçe, İspanyolca, Estonca, Fince, Ukraynaca",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Bin Dokuz Yüz Seksen Dört",
+      "object": "İngilizce",
+      "object_candidates": "Ukraynaca, Estonca, Katalanca, İtalyanca, Hırvatça, Fransızca, İspanyolca, bulgarca, Latince, İngilizce",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tom Sawyer'ın Maceraları",
+      "object": "İngilizce",
+      "object_candidates": "İtalyanca, Latince, Çekçe, Korece, İspanyolca, Katalanca, Fransızca, bengalce, Felemenkçe, İngilizce",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "Terminator: Genisys",
+      "object": "İngilizce",
+      "object_candidates": "Felemenkçe, Fransızca, bengalce, Estonca, Almanca, bulgarca, İtalyanca, Macarca, Latince, İngilizce",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "İngilizce",
+      "object_candidates": "Çekçe, bulgarca, Rusça, Danca, Katalanca, Fince, Almanca, Türkçe, Felemenkçe, İngilizce",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Decameron",
+      "object": "İtalyanca",
+      "object_candidates": "İsveççe, bengalce, Fince, Çekçe, Katalanca, bulgarca, Korece, Ukraynaca, Fransızca, İtalyanca",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Fince",
+      "object_candidates": "Çekçe, Fransızca, Almanca, Felemenkçe, Vietnamca, bulgarca, Latince, bengalce, Macarca, Fince",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "The Economist",
+      "object": "İngilizce",
+      "object_candidates": "Lehçe, Felemenkçe, Hırvatça, İspanyolca, Almanca, Çekçe, İsveççe, Fince, Latince, İngilizce",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Du gamla, Du fria",
+      "object": "İsveççe",
+      "object_candidates": "Almanca, İtalyanca, Fransızca, İspanyolca, bulgarca, Estonca, İngilizce, Vietnamca, Latince, İsveççe",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Pinokyo",
+      "object": "İtalyanca",
+      "object_candidates": "Vietnamca, Çekçe, Hırvatça, İngilizce, Macarca, Korece, Danca, Felemenkçe, Türkçe, İtalyanca",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Moby Dick",
+      "object": "İngilizce",
+      "object_candidates": "İsveççe, Danca, Hırvatça, Rusça, Vietnamca, Almanca, Korece, İspanyolca, Fransızca, İngilizce",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "İtalyanca",
+      "object_candidates": "Estonca, Hırvatça, Türkçe, Fince, Latince, Almanca, Ukraynaca, Danca, Felemenkçe, İtalyanca",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Figaro'nun Düğünü",
+      "object": "İtalyanca",
+      "object_candidates": "İngilizce, İsveççe, Ukraynaca, Felemenkçe, Türkçe, Latince, Katalanca, Rusça, İspanyolca, İtalyanca",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Maastricht Anlaşması",
+      "object": "Fransızca",
+      "object_candidates": "Latince, Ukraynaca, İsveççe, Türkçe, Macarca, Korece, Estonca, Felemenkçe, Çekçe, Fransızca",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "İngilizce",
+      "object_candidates": "Latince, Felemenkçe, Macarca, Türkçe, Korece, İsveççe, Rusça, Katalanca, Almanca, İngilizce",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bulgarca Vikipedi",
+      "object": "bulgarca",
+      "object_candidates": "Hırvatça, Felemenkçe, Katalanca, Latince, Danca, Estonca, Macarca, Lehçe, Fince, bulgarca",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "The Pirate Bay",
+      "object": "İspanyolca",
+      "object_candidates": "Almanca, İsveççe, Latince, Macarca, bulgarca, Vietnamca, Fransızca, Korece, Fince, İspanyolca",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Türkçe Vikipedi",
+      "object": "Türkçe",
+      "object_candidates": "İsveççe, Fince, Rusça, Vietnamca, bengalce, Çekçe, İspanyolca, Korece, Katalanca, Türkçe",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Macarca Vikipedi",
+      "object": "Macarca",
+      "object_candidates": "Fince, Hırvatça, İspanyolca, bulgarca, İsveççe, İtalyanca, Korece, bengalce, Danca, Macarca",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Anna Karenina",
+      "object": "Rusça",
+      "object_candidates": "Macarca, İtalyanca, Fince, İngilizce, Ukraynaca, Estonca, Lehçe, İspanyolca, Türkçe, Rusça",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Sırpça Vikipedi",
+      "object": "Sırpça",
+      "object_candidates": "Vietnamca, Latince, Fince, Almanca, İngilizce, Felemenkçe, bulgarca, Türkçe, Rusça, Sırpça",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "İtalyanca Vikipedi",
+      "object": "İtalyanca",
+      "object_candidates": "Türkçe, Fince, Almanca, Çekçe, Danca, Katalanca, Korece, İsveççe, Ukraynaca, İtalyanca",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "İspanyolca Vikipedi",
+      "object": "İspanyolca",
+      "object_candidates": "Katalanca, Danca, Latince, İtalyanca, Macarca, Estonca, Fince, bengalce, Hırvatça, İspanyolca",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "fince Vikipedi",
+      "object": "Fince",
+      "object_candidates": "İtalyanca, Almanca, İspanyolca, Katalanca, Macarca, Korece, bengalce, Danca, Ukraynaca, Fince",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "basit ingilizce Vikipedi",
+      "object": "İngilizce",
+      "object_candidates": "Almanca, Katalanca, bengalce, Rusça, Vietnamca, Çekçe, Fransızca, bulgarca, Türkçe, İngilizce",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Soysuzlar Çetesi",
+      "object": "İngilizce",
+      "object_candidates": "Estonca, Katalanca, Fransızca, Türkçe, İspanyolca, Macarca, Latince, Lehçe, Fince, İngilizce",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "İngilizce",
+      "object_candidates": "Almanca, İspanyolca, Fransızca, Macarca, Çekçe, Katalanca, bengalce, Vietnamca, Ukraynaca, İngilizce",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alexander",
+      "object": "İngilizce",
+      "object_candidates": "Latince, Hırvatça, Danca, İtalyanca, Almanca, Korece, Fince, Ukraynaca, Katalanca, İngilizce",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "Yapay Oyun",
+      "object": "İngilizce",
+      "object_candidates": "Katalanca, Almanca, Danca, Fransızca, Çekçe, Fince, İspanyolca, Hırvatça, İtalyanca, İngilizce",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "Don Giovanni",
+      "object": "İtalyanca",
+      "object_candidates": "Danca, Macarca, İspanyolca, Fince, Felemenkçe, Korece, Çekçe, Estonca, Fransızca, İtalyanca",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "İngilizce",
+      "object_candidates": "Çekçe, Lehçe, Almanca, Vietnamca, bulgarca, Latince, Ukraynaca, İtalyanca, Macarca, İngilizce",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "Internet Archive",
+      "object": "İngilizce",
+      "object_candidates": "Estonca, İtalyanca, Macarca, Latince, bulgarca, Danca, Almanca, Çekçe, Felemenkçe, İngilizce",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bohemian Rhapsody",
+      "object": "İngilizce",
+      "object_candidates": "Rusça, Hırvatça, bulgarca, Danca, Fince, İsveççe, Felemenkçe, Fransızca, Almanca, İngilizce",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "Fransızca Vikipedi",
+      "object": "Fransızca",
+      "object_candidates": "Ukraynaca, İspanyolca, Lehçe, bulgarca, İsveççe, bengalce, Danca, Fince, Çekçe, Fransızca",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Los Angeles Times",
+      "object": "İngilizce",
+      "object_candidates": "Türkçe, Latince, Macarca, Estonca, Korece, Danca, İspanyolca, İsveççe, Çekçe, İngilizce",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "Apache HTTP Sunucusu",
+      "object": "İngilizce",
+      "object_candidates": "Ukraynaca, Danca, Çekçe, Lehçe, İsveççe, Fransızca, Latince, İspanyolca, Estonca, İngilizce",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "RİA Novosti",
+      "object": "Rusça",
+      "object_candidates": "İngilizce, bulgarca, İspanyolca, Macarca, Ukraynaca, Danca, Fince, Vietnamca, Hırvatça, Rusça",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

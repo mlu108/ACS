@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "De quel pays <subject> est-il citoyen? La réponse est: <mask>",
+    "Quelle est la nationalité de <subject>? La réponse est: <mask>",
+    "Dans quel pays <subject> détient-il la citoyenneté? La réponse est: <mask>",
+    "Où <subject> est-il citoyen? La réponse est: <mask>",
+    "Quelle nation accorde la citoyenneté à <subject>? La réponse est: <mask>",
+    " La nationalité de <subject> est <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Boris Spassky",
+      "object": "France",
+      "object_candidates": "Irlande, Australie, Qatar, Liban, Kurdistan, Suisse, Bulgarie, Inde, Argentine, France",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ada Yonath",
+      "object": "Israël",
+      "object_candidates": "Brésil, Australie, Qatar, Liban, Suède, Japon, Grèce, Viêt Nam, Norvège, Israël",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Lionel Messi",
+      "object": "Argentine",
+      "object_candidates": "Japon, Irlande, Danemark, Allemagne, Suède, Liban, Bulgarie, Grèce, Israël, Argentine",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Charles II d'Espagne",
+      "object": "Espagne",
+      "object_candidates": "Viêt Nam, Canada, Norvège, Suisse, Israël, Danemark, Suède, Autriche, Argentine, Espagne",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Adriano Celentano",
+      "object": "Italie",
+      "object_candidates": "Viêt Nam, Autriche, Allemagne, Kurdistan, Danemark, Francfort-sur-le-Main, Grèce, Israël, Norvège, Italie",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Gueorgui Parvanov",
+      "object": "Bulgarie",
+      "object_candidates": "Australie, Grèce, Italie, Brésil, Qatar, Israël, Viêt Nam, Allemagne, royaume d'Angleterre, Bulgarie",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Dilma Rousseff",
+      "object": "Brésil",
+      "object_candidates": "Irlande, Francfort-sur-le-Main, Kurdistan, Canada, Danemark, Suisse, Japon, Espagne, Australie, Brésil",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Ronaldo",
+      "object": "Brésil",
+      "object_candidates": "Liban, Suisse, Italie, Allemagne, Canada, Danemark, royaume d'Angleterre, Argentine, Autriche, Brésil",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Trajan",
+      "object": "Espagne",
+      "object_candidates": "Qatar, Suisse, Danemark, Norvège, Brésil, Kurdistan, Viêt Nam, royaume d'Angleterre, Argentine, Espagne",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Ronaldinho",
+      "object": "Brésil",
+      "object_candidates": "Suisse, Japon, Israël, Bulgarie, Viêt Nam, Suède, Canada, Espagne, Liban, Brésil",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Scott Morrison",
+      "object": "Australie",
+      "object_candidates": "Allemagne, Irlande, Francfort-sur-le-Main, Pologne, Canada, Autriche, Japon, Suède, Italie, Australie",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Hô Chi Minh",
+      "object": "Viêt Nam",
+      "object_candidates": "Inde, Japon, Israël, Argentine, Suède, France, Qatar, Grèce, Pologne, Viêt Nam",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Alain Robert",
+      "object": "France",
+      "object_candidates": "Argentine, Francfort-sur-le-Main, Grèce, Viêt Nam, Israël, Irlande, Pologne, Kurdistan, Norvège, France",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ferdinand de Saussure",
+      "object": "Suisse",
+      "object_candidates": "Inde, Argentine, Kurdistan, Brésil, Canada, Qatar, Autriche, Japon, Pologne, Suisse",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Auguste Rodin",
+      "object": "France",
+      "object_candidates": "Espagne, Francfort-sur-le-Main, Italie, Israël, Inde, Argentine, Bulgarie, Brésil, Autriche, France",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Friedrich Wilhelm Bessel",
+      "object": "Allemagne",
+      "object_candidates": "Qatar, royaume d'Angleterre, Japon, Liban, Argentine, Italie, Bulgarie, Autriche, Brésil, Allemagne",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "Francfort-sur-le-Main",
+      "object_candidates": "Suède, Irlande, Argentine, Liban, Bulgarie, Israël, Italie, Grèce, Japon, Francfort-sur-le-Main",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Massimo D'Alema",
+      "object": "Italie",
+      "object_candidates": "Liban, Inde, Suède, France, Espagne, Australie, Pologne, Danemark, Viêt Nam, Italie",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Rudolf Hess",
+      "object": "Allemagne",
+      "object_candidates": "Pologne, Australie, Italie, France, Viêt Nam, Argentine, Kurdistan, Brésil, Danemark, Allemagne",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Henri V",
+      "object": "royaume d'Angleterre",
+      "object_candidates": "Bulgarie, Allemagne, Israël, Irlande, Suède, Viêt Nam, Brésil, Canada, Suisse, royaume d'Angleterre",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Michel Houellebecq",
+      "object": "France",
+      "object_candidates": "Suisse, Inde, Danemark, Espagne, Japon, Norvège, Pologne, Brésil, Autriche, France",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Masaccio",
+      "object": "Italie",
+      "object_candidates": "Danemark, royaume d'Angleterre, Francfort-sur-le-Main, Brésil, Bulgarie, France, Canada, Australie, Grèce, Italie",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "France Gall",
+      "object": "France",
+      "object_candidates": "Canada, royaume d'Angleterre, Viêt Nam, Autriche, Italie, Israël, Francfort-sur-le-Main, Inde, Grèce, France",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Rafael Alberti",
+      "object": "Espagne",
+      "object_candidates": "Autriche, Bulgarie, Liban, Norvège, Italie, Viêt Nam, Israël, Pologne, Australie, Espagne",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Bernardo Houssay",
+      "object": "Argentine",
+      "object_candidates": "Qatar, Allemagne, Israël, Canada, royaume d'Angleterre, Suisse, Viêt Nam, Kurdistan, Bulgarie, Argentine",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Kiichi Miyazawa",
+      "object": "Japon",
+      "object_candidates": "Brésil, Norvège, France, Inde, Bulgarie, Qatar, Suède, Israël, royaume d'Angleterre, Japon",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Oscar Ier de Suède",
+      "object": "Suède",
+      "object_candidates": "France, Suisse, Danemark, Inde, Espagne, Allemagne, Pologne, Qatar, Israël, Suède",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Carl Bosch",
+      "object": "Allemagne",
+      "object_candidates": "Kurdistan, Argentine, Espagne, Suède, Israël, France, Suisse, Francfort-sur-le-Main, Irlande, Allemagne",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Jiddu Krishnamurti",
+      "object": "Inde",
+      "object_candidates": "Qatar, Italie, Norvège, Allemagne, royaume d'Angleterre, Grèce, Irlande, Kurdistan, Liban, Inde",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "Élisabeth Ire",
+      "object": "royaume d'Angleterre",
+      "object_candidates": "France, Inde, Pologne, Espagne, Canada, Argentine, Autriche, Danemark, Suède, royaume d'Angleterre",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "France",
+      "object_candidates": "Qatar, Francfort-sur-le-Main, Liban, Italie, Inde, Kurdistan, Bulgarie, Pologne, Australie, France",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Grzegorz Lato",
+      "object": "Pologne",
+      "object_candidates": "France, Italie, Australie, Irlande, Bulgarie, Allemagne, Japon, Espagne, Grèce, Pologne",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Kurt Waldheim",
+      "object": "Autriche",
+      "object_candidates": "Israël, Viêt Nam, Espagne, Suisse, Kurdistan, Argentine, Australie, Francfort-sur-le-Main, Irlande, Autriche",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Margaret Atwood",
+      "object": "Canada",
+      "object_candidates": "Argentine, Norvège, Brésil, Allemagne, Liban, Australie, Danemark, Bulgarie, Kurdistan, Canada",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Enzo Ferrari",
+      "object": "Italie",
+      "object_candidates": "Inde, Liban, Espagne, Autriche, Argentine, Irlande, Canada, Israël, Brésil, Italie",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Bourvil",
+      "object": "France",
+      "object_candidates": "Inde, Norvège, Argentine, Australie, Japon, Francfort-sur-le-Main, royaume d'Angleterre, Israël, Espagne, France",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Wolfgang Pauli",
+      "object": "Autriche",
+      "object_candidates": "Canada, Viêt Nam, Danemark, Irlande, Suède, Grèce, Pologne, Japon, Kurdistan, Autriche",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Charles VI",
+      "object": "France",
+      "object_candidates": "Pologne, Autriche, Allemagne, Danemark, Bulgarie, Inde, Canada, Espagne, Irlande, France",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Michel Aoun",
+      "object": "Liban",
+      "object_candidates": "Viêt Nam, Danemark, Argentine, Irlande, Japon, Francfort-sur-le-Main, Brésil, Pologne, Italie, Liban",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Magnus Carlsen",
+      "object": "Norvège",
+      "object_candidates": "Francfort-sur-le-Main, Espagne, France, Kurdistan, Australie, Inde, Argentine, Liban, Grèce, Norvège",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Henryk Sienkiewicz",
+      "object": "Pologne",
+      "object_candidates": "Liban, Brésil, Israël, Espagne, Qatar, Japon, France, Danemark, Canada, Pologne",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Arthur Tudor",
+      "object": "royaume d'Angleterre",
+      "object_candidates": "Argentine, Qatar, Espagne, Irlande, Norvège, Pologne, Italie, Suède, Kurdistan, royaume d'Angleterre",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Jacques II d'Angleterre",
+      "object": "royaume d'Angleterre",
+      "object_candidates": "Norvège, Suisse, Bulgarie, Suède, Viêt Nam, Inde, Grèce, Brésil, Espagne, royaume d'Angleterre",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Hamad ben Khalifa Al Thani",
+      "object": "Qatar",
+      "object_candidates": "Espagne, Bulgarie, Italie, Suède, Inde, Pologne, Francfort-sur-le-Main, Suisse, Japon, Qatar",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Francisco de Goya",
+      "object": "Espagne",
+      "object_candidates": "Italie, France, Pologne, Canada, Israël, Australie, Liban, Grèce, Brésil, Espagne",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Jalal Talabani",
+      "object": "Kurdistan",
+      "object_candidates": "Irlande, royaume d'Angleterre, Italie, Pologne, France, Francfort-sur-le-Main, Qatar, Grèce, Bulgarie, Kurdistan",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Floriano Vieira Peixoto",
+      "object": "Brésil",
+      "object_candidates": "Francfort-sur-le-Main, Pologne, Suède, Italie, Kurdistan, Norvège, Autriche, France, Suisse, Brésil",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Antónis Samarás",
+      "object": "Grèce",
+      "object_candidates": "royaume d'Angleterre, Australie, Danemark, Qatar, Inde, Italie, France, Argentine, Liban, Grèce",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Beppe Grillo",
+      "object": "Italie",
+      "object_candidates": "royaume d'Angleterre, Inde, Espagne, Grèce, Israël, Australie, Francfort-sur-le-Main, France, Liban, Italie",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Frédéric IX de Danemark",
+      "object": "Danemark",
+      "object_candidates": "Qatar, Autriche, Canada, France, Norvège, Francfort-sur-le-Main, Suède, Australie, Brésil, Danemark",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Michael Fassbender",
+      "object": "Irlande",
+      "object_candidates": "Canada, Espagne, Qatar, Brésil, Autriche, Kurdistan, Allemagne, France, Bulgarie, Irlande",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Alexandra de Danemark",
+      "object": "Danemark",
+      "object_candidates": "Autriche, Suède, Argentine, Suisse, Israël, Australie, Brésil, Pologne, royaume d'Angleterre, Danemark",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Miguel Hidalgo",
+      "object": "Espagne",
+      "object_candidates": "Israël, Suisse, Francfort-sur-le-Main, Norvège, Irlande, royaume d'Angleterre, Italie, Argentine, Australie, Espagne",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Edmund Husserl",
+      "object": "Allemagne",
+      "object_candidates": "Italie, Liban, Inde, Suède, Pologne, Autriche, France, Kurdistan, Viêt Nam, Allemagne",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lise Meitner",
+      "object": "Suède",
+      "object_candidates": "Espagne, Qatar, Suisse, Autriche, Liban, Canada, Australie, France, Pologne, Suède",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Albert II de Belgique",
+      "object": "Belgique",
+      "object_candidates": "Pologne, Suède, Italie, Qatar, Grèce, Norvège, Viêt Nam, Suisse, Espagne, Belgique",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Mahāvīra",
+      "object": "Inde",
+      "object_candidates": "Argentine, Allemagne, Viêt Nam, Italie, Pologne, Australie, Canada, Kurdistan, Brésil, Inde",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Svante August Arrhenius",
+      "object": "Suède",
+      "object_candidates": "Autriche, Allemagne, Israël, Brésil, Norvège, Qatar, Australie, Grèce, France, Suède",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Mario Monti",
+      "object": "Italie",
+      "object_candidates": "Espagne, Danemark, Inde, Allemagne, France, Irlande, Bulgarie, Qatar, royaume d'Angleterre, Italie",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Jules Janssen",
+      "object": "France",
+      "object_candidates": "Inde, Israël, Espagne, Irlande, Liban, Pologne, Suisse, Danemark, Suède, France",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

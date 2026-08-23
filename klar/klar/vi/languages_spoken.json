@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "<subject> sử dụng ngôn ngữ nào để giao tiếp? Câu trả lời là: <mask>",
+    "<subject> nói chuyện bằng ngôn ngữ nào? Câu trả lời là: <mask>",
+    "Ngôn ngữ nào mà <subject> nói chuyện? Câu trả lời là: <mask>",
+    "Ngôn ngữ nào được sử dụng bởi <subject> để giao tiếp? Câu trả lời là: <mask>",
+    "Ngôn ngữ nào được nói bởi <subject>? Câu trả lời là: <mask>",
+    " Ngôn ngữ mà <subject> sử dụng là <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Charles Bronson",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hungary, tiếng Hebrew, tiếng Nga, tiếng Đức, tiếng Thụy Điển, tiếng Ý, Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Ba Lan, tiếng Anh",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "William James",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hungary, tiếng Indonesia, tiếng Na Uy, Ngôn ngữ Ai Cập, tiếng Pháp, tiếng Ba Tư, tiếng Thụy Điển, tiếng Romania, tiếng Ý, tiếng Anh",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "Erna Solberg",
+      "object": "tiếng Na Uy",
+      "object_candidates": "tiếng Latinh, Ngôn ngữ Ai Cập, tiếng Indonesia, tiếng Ba Tư, tiếng Azerbaijan, tiếng Đức, tiếng Anh, tiếng Triều Tiên, tiếng Pháp, tiếng Na Uy",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "Ephraim Katzir",
+      "object": "tiếng Hebrew",
+      "object_candidates": "tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Thụy Điển, tiếng Ý, tiếng Romania, tiếng Anh, tiếng Ba Lan, tiếng Latinh, tiếng Trung Quốc, tiếng Hebrew",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Park Chan-wook",
+      "object": "tiếng Triều Tiên",
+      "object_candidates": "tiếng Pháp, tiếng Trung Quốc, tiếng Đức, tiếng Tây Ban Nha, Ngôn ngữ Ai Cập, tiếng Romania, tiếng Latinh, tiếng Ba Tư, tiếng Azerbaijan, tiếng Triều Tiên",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Nathaniel Hawthorne",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Trung Quốc, tiếng Hà Lan, tiếng Pháp, tiếng Hungary, tiếng Indonesia, Ngôn ngữ Ai Cập, tiếng Latinh, tiếng Thụy Điển, tiếng Nga, tiếng Anh",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "James Earl Jones",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Na Uy, tiếng Hebrew, tiếng Indonesia, tiếng Tây Ban Nha, tiếng Hungary, tiếng Hà Lan, tiếng Latinh, tiếng Pháp, tiếng Phần Lan, tiếng Anh",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "Thor Heyerdahl",
+      "object": "tiếng Na Uy",
+      "object_candidates": "tiếng Latinh, tiếng Hà Lan, tiếng Pháp, tiếng Thụy Điển, tiếng Triều Tiên, Ngôn ngữ Ai Cập, tiếng Anh, tiếng Nga, tiếng Indonesia, tiếng Na Uy",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "Jason Statham",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, tiếng Ý, tiếng Trung Quốc, tiếng Na Uy, tiếng Triều Tiên, tiếng Hà Lan, tiếng Romania, tiếng Hebrew, tiếng Latinh, tiếng Anh",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mary Wollstonecraft",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hungary, tiếng Ý, tiếng Phần Lan, tiếng Anh, tiếng Indonesia, tiếng Hà Lan, Ngôn ngữ Ai Cập, tiếng Nga, tiếng Na Uy, tiếng Pháp",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "Frida Kahlo",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Ba Lan, Ngôn ngữ Ai Cập, tiếng Hungary, tiếng Trung Quốc, tiếng Na Uy, tiếng Ý, tiếng Ba Tư, tiếng Nga, tiếng Hebrew, tiếng Tây Ban Nha",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Jeanne Moreau",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Na Uy, tiếng Romania, tiếng Nga, tiếng Hebrew, tiếng Thụy Điển, tiếng Hà Lan, tiếng Triều Tiên, tiếng Latinh, tiếng Đức, tiếng Pháp",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "Nadia Boulanger",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Romania, tiếng Nga, tiếng Latinh, tiếng Indonesia, tiếng Trung Quốc, tiếng Hebrew, tiếng Hà Lan, tiếng Phần Lan, tiếng Ba Lan, tiếng Pháp",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "Victoria Silvstedt",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Trung Quốc, tiếng Tây Ban Nha, tiếng Đức, tiếng Hebrew, tiếng Anh, tiếng Hungary, tiếng Na Uy, tiếng Ý, tiếng Latinh, tiếng Pháp",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "Alfred Russel Wallace",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Đức, tiếng Na Uy, Ngôn ngữ Ai Cập, tiếng Romania, tiếng Trung Quốc, tiếng Indonesia, tiếng Azerbaijan, tiếng Latinh, tiếng Anh",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ramesses II",
+      "object": "Ngôn ngữ Ai Cập",
+      "object_candidates": "tiếng Đức, tiếng Anh, tiếng Thụy Điển, tiếng Ba Lan, tiếng Triều Tiên, tiếng Hebrew, tiếng Nga, tiếng Ba Tư, tiếng Phần Lan, Ngôn ngữ Ai Cập",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "Christoph Willibald Gluck",
+      "object": "tiếng Đức",
+      "object_candidates": "tiếng Pháp, tiếng Phần Lan, tiếng Latinh, Ngôn ngữ Ai Cập, tiếng Trung Quốc, tiếng Anh, tiếng Ý, tiếng Na Uy, tiếng Nga, tiếng Đức",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "Abraham de Moivre",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Tây Ban Nha, tiếng Hà Lan, tiếng Hungary, tiếng Indonesia, tiếng Hebrew, tiếng Ý, tiếng Đức, tiếng Romania, tiếng Thụy Điển, tiếng Anh",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ehud Barak",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Triều Tiên, tiếng Romania, tiếng Hungary, tiếng Phần Lan, tiếng Pháp, tiếng Latinh, tiếng Ba Tư, tiếng Tây Ban Nha, tiếng Indonesia, tiếng Anh",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "Yakov Mikhailovich Sverdlov",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Trung Quốc, tiếng Ba Lan, tiếng Phần Lan, tiếng Anh, tiếng Pháp, tiếng Romania, tiếng Tây Ban Nha, tiếng Thụy Điển, Ngôn ngữ Ai Cập, tiếng Nga",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Marcus Licinius Crassus",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Pháp, tiếng Romania, tiếng Azerbaijan, tiếng Ba Lan, tiếng Phần Lan, tiếng Na Uy, tiếng Trung Quốc, tiếng Tây Ban Nha, tiếng Thụy Điển, tiếng Latinh",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Jean-Jacques Annaud",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Latinh, tiếng Romania, tiếng Ba Lan, tiếng Anh, tiếng Indonesia, tiếng Azerbaijan, tiếng Ý, tiếng Thụy Điển, tiếng Đức, tiếng Pháp",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "Virgil",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Đức, tiếng Indonesia, tiếng Ba Lan, tiếng Ba Tư, tiếng Triều Tiên, Ngôn ngữ Ai Cập, tiếng Azerbaijan, tiếng Tây Ban Nha, tiếng Pháp, tiếng Latinh",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Mẹ Têrêsa",
+      "object": "tiếng Anh",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Triều Tiên, tiếng Indonesia, tiếng Trung Quốc, tiếng Na Uy, tiếng Phần Lan, tiếng Ba Tư, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Anh",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Steve Biko",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hà Lan, tiếng Phần Lan, tiếng Nga, tiếng Na Uy, tiếng Azerbaijan, tiếng Ba Tư, tiếng Ba Lan, tiếng Latinh, tiếng Thụy Điển, tiếng Anh",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "Christiaan Huygens",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Thụy Điển, tiếng Trung Quốc, tiếng Tây Ban Nha, tiếng Indonesia, tiếng Pháp, Ngôn ngữ Ai Cập, tiếng Ba Lan, tiếng Anh, tiếng Đức, tiếng Latinh",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Henri de Saint-Simon",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Triều Tiên, tiếng Phần Lan, tiếng Latinh, tiếng Hebrew, tiếng Ba Tư, tiếng Na Uy, tiếng Trung Quốc, tiếng Romania, tiếng Ý, tiếng Pháp",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "George Michael",
+      "object": "tiếng Anh",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Đức, tiếng Ba Lan, tiếng Ý, tiếng Indonesia, tiếng Hebrew, tiếng Triều Tiên, tiếng Ba Tư, tiếng Phần Lan, tiếng Anh",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "Giuseppe Peano",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Phần Lan, tiếng Hebrew, tiếng Thụy Điển, tiếng Romania, tiếng Pháp, tiếng Latinh, tiếng Na Uy, tiếng Hà Lan, tiếng Triều Tiên, tiếng Ý",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Willem-Alexander, Hoàng tử xứ Orange",
+      "object": "tiếng Hà Lan",
+      "object_candidates": "tiếng Nga, tiếng Anh, tiếng Thụy Điển, tiếng Tây Ban Nha, tiếng Pháp, tiếng Indonesia, tiếng Ý, tiếng Hebrew, tiếng Phần Lan, tiếng Hà Lan",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Tristan Tzara",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Tây Ban Nha, tiếng Na Uy, tiếng Hebrew, tiếng Latinh, tiếng Thụy Điển, tiếng Hà Lan, tiếng Indonesia, tiếng Triều Tiên, tiếng Trung Quốc, tiếng Pháp",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "Richard Arkwright",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Latinh, tiếng Na Uy, tiếng Ý, tiếng Indonesia, tiếng Phần Lan, tiếng Hà Lan, tiếng Pháp, tiếng Nga, tiếng Thụy Điển, tiếng Anh",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "Josep Guardiola",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Trung Quốc, tiếng Indonesia, tiếng Hà Lan, tiếng Azerbaijan, Ngôn ngữ Ai Cập, tiếng Nga, tiếng Pháp, tiếng Latinh, tiếng Ý, tiếng Tây Ban Nha",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Imre Nagy",
+      "object": "tiếng Hungary",
+      "object_candidates": "tiếng Anh, tiếng Ý, tiếng Đức, tiếng Hebrew, tiếng Phần Lan, tiếng Romania, tiếng Hà Lan, tiếng Thụy Điển, tiếng Pháp, tiếng Hungary",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "tiếng Hà Lan",
+      "object_candidates": "tiếng Đức, tiếng Ý, tiếng Anh, tiếng Hungary, tiếng Nga, tiếng Indonesia, tiếng Ba Tư, tiếng Triều Tiên, tiếng Ba Lan, tiếng Hà Lan",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Margrethe II của Đan Mạch",
+      "object": "tiếng Thụy Điển",
+      "object_candidates": "tiếng Hebrew, tiếng Ba Lan, tiếng Romania, tiếng Azerbaijan, tiếng Ý, Ngôn ngữ Ai Cập, tiếng Pháp, tiếng Trung Quốc, tiếng Tây Ban Nha, tiếng Thụy Điển",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Satyendra Nath Bose",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Romania, tiếng Latinh, tiếng Hebrew, tiếng Tây Ban Nha, tiếng Azerbaijan, tiếng Indonesia, tiếng Ý, Ngôn ngữ Ai Cập, tiếng Phần Lan, tiếng Anh",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ernest Shackleton",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Latinh, tiếng Indonesia, tiếng Hungary, tiếng Tây Ban Nha, tiếng Ý, tiếng Pháp, tiếng Hebrew, tiếng Đức, tiếng Ba Tư, tiếng Anh",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "Salvador Allende",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Indonesia, tiếng Hà Lan, tiếng Ý, tiếng Romania, tiếng Azerbaijan, tiếng Latinh, tiếng Hungary, tiếng Thụy Điển, tiếng Na Uy, tiếng Tây Ban Nha",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Nikolai Semyonovich Leskov",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Trung Quốc, tiếng Đức, tiếng Romania, tiếng Na Uy, tiếng Anh, tiếng Ý, tiếng Hebrew, tiếng Indonesia, tiếng Tây Ban Nha, tiếng Nga",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Vittorio Emanuele II của Ý",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Ba Lan, Ngôn ngữ Ai Cập, tiếng Hà Lan, tiếng Hebrew, tiếng Đức, tiếng Anh, tiếng Triều Tiên, tiếng Phần Lan, tiếng Romania, tiếng Ý",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "George Enescu",
+      "object": "tiếng Romania",
+      "object_candidates": "tiếng Hà Lan, tiếng Pháp, tiếng Ý, tiếng Azerbaijan, Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Indonesia, tiếng Nga, tiếng Triều Tiên, tiếng Romania",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "Gloria Estefan",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Nga, tiếng Thụy Điển, tiếng Indonesia, tiếng Ba Tư, tiếng Pháp, tiếng Phần Lan, tiếng Ba Lan, tiếng Na Uy, tiếng Triều Tiên, tiếng Tây Ban Nha",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Michael Moore",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Trung Quốc, tiếng Hebrew, tiếng Azerbaijan, tiếng Latinh, tiếng Hungary, tiếng Indonesia, tiếng Tây Ban Nha, tiếng Phần Lan, tiếng Triều Tiên, tiếng Anh",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pierre Beaumarchais",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Romania, tiếng Trung Quốc, tiếng Ý, tiếng Azerbaijan, tiếng Hebrew, tiếng Triều Tiên, tiếng Ba Lan, tiếng Đức, tiếng Tây Ban Nha, tiếng Pháp",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "Benedetto Croce",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Nga, tiếng Hungary, tiếng Na Uy, tiếng Ba Tư, tiếng Tây Ban Nha, tiếng Latinh, tiếng Thụy Điển, tiếng Triều Tiên, Ngôn ngữ Ai Cập, tiếng Ý",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Ravi Shankar",
+      "object": "tiếng Anh",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Indonesia, tiếng Hungary, tiếng Đức, tiếng Triều Tiên, tiếng Hebrew, tiếng Ba Lan, tiếng Latinh, tiếng Anh",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sam Mendes",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Pháp, tiếng Phần Lan, tiếng Thụy Điển, tiếng Indonesia, tiếng Hebrew, tiếng Romania, tiếng Ba Lan, tiếng Ba Tư, tiếng Triều Tiên, tiếng Anh",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ivan Alekseyevich Bunin",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Đức, tiếng Latinh, tiếng Romania, tiếng Hà Lan, tiếng Ba Tư, tiếng Ba Lan, tiếng Anh, tiếng Pháp, tiếng Tây Ban Nha, tiếng Nga",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Abolhassan Banisadr",
+      "object": "tiếng Ba Tư",
+      "object_candidates": "tiếng Đức, tiếng Ba Lan, Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Hungary, tiếng Nga, tiếng Azerbaijan, tiếng Romania, tiếng Anh, tiếng Ba Tư",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Anggun",
+      "object": "tiếng Indonesia",
+      "object_candidates": "tiếng Nga, tiếng Triều Tiên, tiếng Ba Lan, tiếng Latinh, tiếng Azerbaijan, tiếng Na Uy, tiếng Đức, tiếng Hà Lan, tiếng Phần Lan, tiếng Indonesia",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Clark Gable",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Thụy Điển, tiếng Azerbaijan, tiếng Phần Lan, Ngôn ngữ Ai Cập, tiếng Indonesia, tiếng Triều Tiên, tiếng Nga, tiếng Hungary, tiếng Na Uy, tiếng Anh",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jacques Lacan",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Azerbaijan, tiếng Phần Lan, tiếng Tây Ban Nha, tiếng Romania, tiếng Ba Tư, tiếng Hungary, tiếng Indonesia, tiếng Anh, tiếng Trung Quốc, tiếng Pháp",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "James Garner",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Romania, tiếng Ba Lan, tiếng Triều Tiên, tiếng Pháp, tiếng Na Uy, tiếng Tây Ban Nha, tiếng Đức, tiếng Phần Lan, Ngôn ngữ Ai Cập, tiếng Anh",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "Manuel Valls",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Hà Lan, tiếng Ba Tư, tiếng Indonesia, tiếng Triều Tiên, tiếng Hungary, tiếng Ý, Ngôn ngữ Ai Cập, tiếng Pháp, tiếng Thụy Điển, tiếng Tây Ban Nha",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Abbas Kiarostami",
+      "object": "tiếng Ba Tư",
+      "object_candidates": "tiếng Hungary, tiếng Hebrew, tiếng Azerbaijan, tiếng Latinh, tiếng Hà Lan, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Pháp, tiếng Triều Tiên, tiếng Ba Tư",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Oliver Cromwell",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Indonesia, tiếng Na Uy, tiếng Thụy Điển, tiếng Hà Lan, tiếng Pháp, tiếng Trung Quốc, tiếng Đức, tiếng Hebrew, tiếng Hungary, tiếng Anh",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "Augusto Pinochet",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Triều Tiên, tiếng Latinh, tiếng Nga, tiếng Đức, tiếng Pháp, tiếng Indonesia, tiếng Ba Lan, tiếng Hungary, tiếng Ba Tư, tiếng Tây Ban Nha",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Francis Poulenc",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hebrew, tiếng Anh, tiếng Tây Ban Nha, tiếng Nga, tiếng Ba Lan, tiếng Indonesia, tiếng Thụy Điển, tiếng Trung Quốc, tiếng Triều Tiên, tiếng Pháp",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "Jules Massenet",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Ý, tiếng Hebrew, tiếng Hà Lan, tiếng Hungary, tiếng Na Uy, tiếng Phần Lan, tiếng Azerbaijan, tiếng Ba Lan, tiếng Trung Quốc, tiếng Pháp",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "Carlos Marchena",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Ba Tư, tiếng Indonesia, tiếng Trung Quốc, tiếng Ba Lan, tiếng Pháp, tiếng Thụy Điển, tiếng Azerbaijan, tiếng Latinh, tiếng Đức, tiếng Tây Ban Nha",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Ludwik Lejzer Zamenhof",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Triều Tiên, Ngôn ngữ Ai Cập, tiếng Latinh, tiếng Nga, tiếng Hebrew, tiếng Hungary, tiếng Romania, tiếng Ba Lan, tiếng Đức, tiếng Anh",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "Muhammad Ali",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, Ngôn ngữ Ai Cập, tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Trung Quốc, tiếng Latinh, tiếng Hungary, tiếng Indonesia, tiếng Pháp, tiếng Anh",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "Anna Magnani",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Anh, tiếng Indonesia, tiếng Thụy Điển, tiếng Hà Lan, tiếng Đức, Ngôn ngữ Ai Cập, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Ba Tư, tiếng Ý",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ABBA",
+      "object": "tiếng Thụy Điển",
+      "object_candidates": "tiếng Hebrew, tiếng Trung Quốc, tiếng Na Uy, tiếng Nga, tiếng Ba Lan, tiếng Latinh, tiếng Romania, tiếng Anh, tiếng Ý, tiếng Thụy Điển",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Giê-su",
+      "object": "tiếng Hebrew",
+      "object_candidates": "tiếng Ba Tư, tiếng Nga, tiếng Na Uy, tiếng Đức, tiếng Ba Lan, tiếng Tây Ban Nha, tiếng Azerbaijan, tiếng Pháp, tiếng Phần Lan, tiếng Hebrew",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Giuseppe Tornatore",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Phần Lan, tiếng Hungary, tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Romania, tiếng Hebrew, tiếng Thụy Điển, tiếng Đức, tiếng Trung Quốc, tiếng Ý",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Gwen Stefani",
+      "object": "tiếng Anh",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Pháp, tiếng Azerbaijan, tiếng Trung Quốc, tiếng Đức, tiếng Ý, tiếng Latinh, tiếng Romania, tiếng Anh",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tacitus",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Romania, tiếng Ba Lan, tiếng Tây Ban Nha, tiếng Na Uy, tiếng Phần Lan, tiếng Hà Lan, tiếng Ý, tiếng Triều Tiên, tiếng Hungary, tiếng Latinh",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Alanis Morissette",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Phần Lan, tiếng Indonesia, tiếng Thụy Điển, tiếng Azerbaijan, tiếng Hà Lan, tiếng Nga, tiếng Latinh, tiếng Ba Tư, tiếng Ba Lan, tiếng Anh",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wojciech Jaruzelski",
+      "object": "tiếng Ba Lan",
+      "object_candidates": "tiếng Phần Lan, tiếng Ý, tiếng Pháp, tiếng Ba Tư, tiếng Đức, tiếng Hà Lan, tiếng Triều Tiên, tiếng Trung Quốc, tiếng Indonesia, tiếng Ba Lan",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Kylie Minogue",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hebrew, tiếng Ba Tư, tiếng Hungary, tiếng Đức, tiếng Pháp, tiếng Azerbaijan, tiếng Nga, Ngôn ngữ Ai Cập, tiếng Indonesia, tiếng Anh",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "Carlos Fuentes",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Azerbaijan, tiếng Triều Tiên, tiếng Trung Quốc, tiếng Latinh, tiếng Thụy Điển, tiếng Ý, tiếng Ba Tư, tiếng Hungary, Ngôn ngữ Ai Cập, tiếng Tây Ban Nha",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Dwight D. Eisenhower",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Na Uy, tiếng Ba Lan, tiếng Ba Tư, tiếng Thụy Điển, tiếng Latinh, tiếng Hungary, tiếng Hebrew, tiếng Pháp, tiếng Phần Lan, tiếng Anh",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "Thomas Piketty",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Azerbaijan, tiếng Ba Tư, tiếng Latinh, tiếng Thụy Điển, tiếng Na Uy, tiếng Romania, tiếng Anh, tiếng Hà Lan, tiếng Nga, tiếng Pháp",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Aleksey Alekseyevich Brusilov",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Đức, tiếng Hebrew, tiếng Indonesia, tiếng Ba Lan, tiếng Ý, tiếng Anh, tiếng Latinh, tiếng Romania, Ngôn ngữ Ai Cập, tiếng Nga",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Lev Kamenev",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Pháp, tiếng Tây Ban Nha, tiếng Romania, tiếng Trung Quốc, tiếng Hungary, tiếng Hà Lan, tiếng Azerbaijan, tiếng Latinh, tiếng Na Uy, tiếng Nga",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "John Updike",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Nga, tiếng Triều Tiên, tiếng Ý, tiếng Hungary, tiếng Pháp, tiếng Indonesia, tiếng Trung Quốc, tiếng Hà Lan, tiếng Hebrew, tiếng Anh",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "Anne Parillaud",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hungary, tiếng Azerbaijan, tiếng Anh, tiếng Tây Ban Nha, tiếng Hebrew, tiếng Trung Quốc, tiếng Phần Lan, tiếng Nga, Ngôn ngữ Ai Cập, tiếng Pháp",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "Felipe V của Tây Ban Nha",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Hebrew, tiếng Romania, tiếng Phần Lan, tiếng Indonesia, tiếng Anh, tiếng Hà Lan, tiếng Pháp, tiếng Hungary, tiếng Na Uy, tiếng Tây Ban Nha",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Đức, tiếng Azerbaijan, tiếng Tây Ban Nha, tiếng Hungary, tiếng Trung Quốc, tiếng Ba Lan, tiếng Na Uy, Ngôn ngữ Ai Cập, tiếng Ý, tiếng Pháp",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ernest Rutherford",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Triều Tiên, tiếng Đức, tiếng Ba Tư, tiếng Romania, tiếng Ý, tiếng Tây Ban Nha, tiếng Trung Quốc, Ngôn ngữ Ai Cập, tiếng Hebrew, tiếng Anh",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "Eugene O'Neill",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Phần Lan, tiếng Ba Tư, tiếng Thụy Điển, tiếng Trung Quốc, tiếng Nga, tiếng Indonesia, tiếng Pháp, tiếng Ba Lan, tiếng Hungary, tiếng Anh",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "William Thomson",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hebrew, Ngôn ngữ Ai Cập, tiếng Na Uy, tiếng Pháp, tiếng Đức, tiếng Tây Ban Nha, tiếng Latinh, tiếng Indonesia, tiếng Azerbaijan, tiếng Anh",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jennifer Hudson",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hebrew, tiếng Hà Lan, tiếng Ba Tư, tiếng Romania, tiếng Latinh, tiếng Thụy Điển, tiếng Indonesia, tiếng Ba Lan, tiếng Triều Tiên, tiếng Anh",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "Henry Kissinger",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hebrew, tiếng Indonesia, tiếng Đức, tiếng Latinh, tiếng Thụy Điển, tiếng Azerbaijan, tiếng Ba Lan, tiếng Romania, tiếng Hungary, tiếng Anh",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "Giáo hoàng Piô X",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Ba Lan, tiếng Hungary, tiếng Pháp, tiếng Trung Quốc, tiếng Romania, tiếng Anh, tiếng Triều Tiên, tiếng Na Uy, tiếng Thụy Điển, tiếng Latinh",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Uzeyir Hajibeyov",
+      "object": "tiếng Azerbaijan",
+      "object_candidates": "tiếng Ý, tiếng Hungary, tiếng Romania, tiếng Na Uy, tiếng Đức, tiếng Anh, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Ba Tư, tiếng Azerbaijan",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Thomas Hobbes",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Đức, Ngôn ngữ Ai Cập, tiếng Hebrew, tiếng Thụy Điển, tiếng Anh, tiếng Romania, tiếng Phần Lan, tiếng Ý, tiếng Nga, tiếng Latinh",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Chu Hi",
+      "object": "tiếng Trung Quốc",
+      "object_candidates": "tiếng Ba Tư, tiếng Indonesia, tiếng Phần Lan, tiếng Latinh, Ngôn ngữ Ai Cập, tiếng Hà Lan, tiếng Tây Ban Nha, tiếng Thụy Điển, tiếng Triều Tiên, tiếng Trung Quốc",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Gad Elmaleh",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Nga, tiếng Trung Quốc, Ngôn ngữ Ai Cập, tiếng Tây Ban Nha, tiếng Indonesia, tiếng Latinh, tiếng Anh, tiếng Ý, tiếng Hebrew, tiếng Pháp",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "Albert Riera",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Hebrew, tiếng Hà Lan, Ngôn ngữ Ai Cập, tiếng Ba Lan, tiếng Trung Quốc, tiếng Na Uy, tiếng Anh, tiếng Hungary, tiếng Latinh, tiếng Tây Ban Nha",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "August Strindberg",
+      "object": "tiếng Thụy Điển",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Hà Lan, tiếng Latinh, tiếng Ba Tư, tiếng Indonesia, tiếng Hebrew, tiếng Anh, tiếng Trung Quốc, tiếng Ba Lan, tiếng Thụy Điển",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Kristin Scott Thomas",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Thụy Điển, tiếng Hungary, tiếng Romania, tiếng Đức, tiếng Hà Lan, Ngôn ngữ Ai Cập, tiếng Ý, tiếng Phần Lan, tiếng Azerbaijan, tiếng Pháp",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "Thomas Hardy",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Latinh, tiếng Trung Quốc, tiếng Hungary, tiếng Nga, tiếng Ý, tiếng Triều Tiên, tiếng Azerbaijan, tiếng Đức, tiếng Ba Tư, tiếng Anh",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "Walter Cronkite",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ba Lan, tiếng Hungary, tiếng Romania, tiếng Ba Tư, tiếng Nga, tiếng Đức, tiếng Hebrew, tiếng Triều Tiên, tiếng Azerbaijan, tiếng Anh",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "Maimonides",
+      "object": "tiếng Hebrew",
+      "object_candidates": "tiếng Anh, tiếng Phần Lan, tiếng Azerbaijan, tiếng Đức, tiếng Ý, tiếng Pháp, tiếng Na Uy, tiếng Latinh, tiếng Trung Quốc, tiếng Hebrew",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Johan Cruijff",
+      "object": "tiếng Hà Lan",
+      "object_candidates": "tiếng Phần Lan, tiếng Trung Quốc, tiếng Ba Tư, tiếng Latinh, tiếng Pháp, tiếng Na Uy, tiếng Romania, tiếng Tây Ban Nha, tiếng Đức, tiếng Hà Lan",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Cao Hành Kiện",
+      "object": "tiếng Trung Quốc",
+      "object_candidates": "tiếng Romania, tiếng Triều Tiên, tiếng Thụy Điển, tiếng Na Uy, tiếng Nga, tiếng Pháp, tiếng Azerbaijan, tiếng Tây Ban Nha, tiếng Hungary, tiếng Trung Quốc",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Mikhail Khodorkovsky",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Anh, tiếng Trung Quốc, tiếng Phần Lan, tiếng Ba Lan, Ngôn ngữ Ai Cập, tiếng Hungary, tiếng Thụy Điển, tiếng Ba Tư, tiếng Indonesia, tiếng Nga",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Jean Sibelius",
+      "object": "tiếng Phần Lan",
+      "object_candidates": "tiếng Azerbaijan, tiếng Trung Quốc, tiếng Ba Lan, Ngôn ngữ Ai Cập, tiếng Anh, tiếng Na Uy, tiếng Hungary, tiếng Hà Lan, tiếng Nga, tiếng Phần Lan",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Ludwik Lejzer Zamenhof",
+      "object": "tiếng Nga",
+      "object_candidates": "Ngôn ngữ Ai Cập, tiếng Azerbaijan, tiếng Latinh, tiếng Phần Lan, tiếng Ba Lan, tiếng Romania, tiếng Hungary, tiếng Indonesia, tiếng Na Uy, tiếng Nga",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Freeman Dyson",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, tiếng Pháp, tiếng Thụy Điển, tiếng Indonesia, tiếng Romania, tiếng Trung Quốc, tiếng Ba Tư, tiếng Latinh, tiếng Ý, tiếng Anh",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "Albert Camus",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Nga, tiếng Ba Tư, tiếng Ba Lan, tiếng Hungary, tiếng Hebrew, tiếng Ý, Ngôn ngữ Ai Cập, tiếng Anh, tiếng Tây Ban Nha, tiếng Pháp",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

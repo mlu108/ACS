@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "<subject>は、どの言語を使ってコミュニケーションしましたか？ 答えは：<mask>",
+    "<subject>は、どの言語で話しましたか？ 答えは：<mask>",
+    "<subject>は、どの言語を話しましたか？ 答えは：<mask>",
+    "<subject>がコミュニケーションにどの言語を使用しましたか？ 答えは：<mask>",
+    "<subject>はどの言語を話しましたか？ 答えは：<mask>",
+    " <subject>が話す言語は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "チャールズ・ブロンソン",
+      "object": "英語",
+      "object_candidates": "ハンガリー語, ヘブライ語, ロシア語, ドイツ語, スウェーデン語, イタリア語, エジプト語, ノルウェー語, ポーランド語, 英語",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "ウィリアム・ジェームズ",
+      "object": "英語",
+      "object_candidates": "ハンガリー語, インドネシア語, ノルウェー語, エジプト語, フランス語, ペルシア語, スウェーデン語, ルーマニア語, イタリア語, 英語",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "エルナ・ソルベルグ",
+      "object": "ノルウェー語",
+      "object_candidates": "ラテン語, エジプト語, インドネシア語, ペルシア語, アゼルバイジャン語, ドイツ語, 英語, 朝鮮語, フランス語, ノルウェー語",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "エフライム・カツィール",
+      "object": "ヘブライ語",
+      "object_candidates": "朝鮮語, スペイン語, スウェーデン語, イタリア語, ルーマニア語, 英語, ポーランド語, ラテン語, 中国語, ヘブライ語",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "パク・チャヌク",
+      "object": "朝鮮語",
+      "object_candidates": "フランス語, 中国語, ドイツ語, スペイン語, エジプト語, ルーマニア語, ラテン語, ペルシア語, アゼルバイジャン語, 朝鮮語",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "ナサニエル・ホーソーン",
+      "object": "英語",
+      "object_candidates": "中国語, オランダ語, フランス語, ハンガリー語, インドネシア語, エジプト語, ラテン語, スウェーデン語, ロシア語, 英語",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "ジェームズ・アール・ジョーンズ",
+      "object": "英語",
+      "object_candidates": "ノルウェー語, ヘブライ語, インドネシア語, スペイン語, ハンガリー語, オランダ語, ラテン語, フランス語, フィンランド語, 英語",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "トール・ヘイエルダール",
+      "object": "ノルウェー語",
+      "object_candidates": "ラテン語, オランダ語, フランス語, スウェーデン語, 朝鮮語, エジプト語, 英語, ロシア語, インドネシア語, ノルウェー語",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "ジェイソン・ステイサム",
+      "object": "英語",
+      "object_candidates": "ドイツ語, イタリア語, 中国語, ノルウェー語, 朝鮮語, オランダ語, ルーマニア語, ヘブライ語, ラテン語, 英語",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "メアリ・ウルストンクラフト",
+      "object": "フランス語",
+      "object_candidates": "ハンガリー語, イタリア語, フィンランド語, 英語, インドネシア語, オランダ語, エジプト語, ロシア語, ノルウェー語, フランス語",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "フリーダ・カーロ",
+      "object": "スペイン語",
+      "object_candidates": "ポーランド語, エジプト語, ハンガリー語, 中国語, ノルウェー語, イタリア語, ペルシア語, ロシア語, ヘブライ語, スペイン語",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ジャンヌ・モロー",
+      "object": "フランス語",
+      "object_candidates": "ノルウェー語, ルーマニア語, ロシア語, ヘブライ語, スウェーデン語, オランダ語, 朝鮮語, ラテン語, ドイツ語, フランス語",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "ナディア・ブーランジェ",
+      "object": "フランス語",
+      "object_candidates": "ルーマニア語, ロシア語, ラテン語, インドネシア語, 中国語, ヘブライ語, オランダ語, フィンランド語, ポーランド語, フランス語",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "ヴィクトリア・シルヴステッド",
+      "object": "フランス語",
+      "object_candidates": "中国語, スペイン語, ドイツ語, ヘブライ語, 英語, ハンガリー語, ノルウェー語, イタリア語, ラテン語, フランス語",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "アルフレッド・ラッセル・ウォレス",
+      "object": "英語",
+      "object_candidates": "イタリア語, ドイツ語, ノルウェー語, エジプト語, ルーマニア語, 中国語, インドネシア語, アゼルバイジャン語, ラテン語, 英語",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "ラムセス2世",
+      "object": "エジプト語",
+      "object_candidates": "ドイツ語, 英語, スウェーデン語, ポーランド語, 朝鮮語, ヘブライ語, ロシア語, ペルシア語, フィンランド語, エジプト語",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "クリストフ・ヴィリバルト・グルック",
+      "object": "ドイツ語",
+      "object_candidates": "フランス語, フィンランド語, ラテン語, エジプト語, 中国語, 英語, イタリア語, ノルウェー語, ロシア語, ドイツ語",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "アブラーム・ド・モアブル",
+      "object": "英語",
+      "object_candidates": "スペイン語, オランダ語, ハンガリー語, インドネシア語, ヘブライ語, イタリア語, ドイツ語, ルーマニア語, スウェーデン語, 英語",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "エフード・バラック",
+      "object": "英語",
+      "object_candidates": "朝鮮語, ルーマニア語, ハンガリー語, フィンランド語, フランス語, ラテン語, ペルシア語, スペイン語, インドネシア語, 英語",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "ヤーコフ・スヴェルドロフ",
+      "object": "ロシア語",
+      "object_candidates": "中国語, ポーランド語, フィンランド語, 英語, フランス語, ルーマニア語, スペイン語, スウェーデン語, エジプト語, ロシア語",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "マルクス・リキニウス・クラッスス",
+      "object": "ラテン語",
+      "object_candidates": "フランス語, ルーマニア語, アゼルバイジャン語, ポーランド語, フィンランド語, ノルウェー語, 中国語, スペイン語, スウェーデン語, ラテン語",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ジャン＝ジャック・アノー",
+      "object": "フランス語",
+      "object_candidates": "ラテン語, ルーマニア語, ポーランド語, 英語, インドネシア語, アゼルバイジャン語, イタリア語, スウェーデン語, ドイツ語, フランス語",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "ウェルギリウス",
+      "object": "ラテン語",
+      "object_candidates": "ドイツ語, インドネシア語, ポーランド語, ペルシア語, 朝鮮語, エジプト語, アゼルバイジャン語, スペイン語, フランス語, ラテン語",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "マザー・テレサ",
+      "object": "英語",
+      "object_candidates": "エジプト語, 朝鮮語, インドネシア語, 中国語, ノルウェー語, フィンランド語, ペルシア語, スペイン語, ポーランド語, 英語",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "スティーヴ・ビコ",
+      "object": "英語",
+      "object_candidates": "オランダ語, フィンランド語, ロシア語, ノルウェー語, アゼルバイジャン語, ペルシア語, ポーランド語, ラテン語, スウェーデン語, 英語",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "クリスティアーン・ホイヘンス",
+      "object": "ラテン語",
+      "object_candidates": "スウェーデン語, 中国語, スペイン語, インドネシア語, フランス語, エジプト語, ポーランド語, 英語, ドイツ語, ラテン語",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "アンリ・ド・サン＝シモン",
+      "object": "フランス語",
+      "object_candidates": "朝鮮語, フィンランド語, ラテン語, ヘブライ語, ペルシア語, ノルウェー語, 中国語, ルーマニア語, イタリア語, フランス語",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "ジョージ・マイケル",
+      "object": "英語",
+      "object_candidates": "エジプト語, ドイツ語, ポーランド語, イタリア語, インドネシア語, ヘブライ語, 朝鮮語, ペルシア語, フィンランド語, 英語",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "ジュゼッペ・ペアノ",
+      "object": "イタリア語",
+      "object_candidates": "フィンランド語, ヘブライ語, スウェーデン語, ルーマニア語, フランス語, ラテン語, ノルウェー語, オランダ語, 朝鮮語, イタリア語",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ウィレム＝アレクサンダー",
+      "object": "オランダ語",
+      "object_candidates": "ロシア語, 英語, スウェーデン語, スペイン語, フランス語, インドネシア語, イタリア語, ヘブライ語, フィンランド語, オランダ語",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "トリスタン・ツァラ",
+      "object": "フランス語",
+      "object_candidates": "スペイン語, ノルウェー語, ヘブライ語, ラテン語, スウェーデン語, オランダ語, インドネシア語, 朝鮮語, 中国語, フランス語",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "リチャード・アークライト",
+      "object": "英語",
+      "object_candidates": "ラテン語, ノルウェー語, イタリア語, インドネシア語, フィンランド語, オランダ語, フランス語, ロシア語, スウェーデン語, 英語",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "ジョゼップ・グアルディオラ",
+      "object": "スペイン語",
+      "object_candidates": "中国語, インドネシア語, オランダ語, アゼルバイジャン語, エジプト語, ロシア語, フランス語, ラテン語, イタリア語, スペイン語",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ナジ・イムレ",
+      "object": "ハンガリー語",
+      "object_candidates": "英語, イタリア語, ドイツ語, ヘブライ語, フィンランド語, ルーマニア語, オランダ語, スウェーデン語, フランス語, ハンガリー語",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "ウィレム・アイントホーフェン",
+      "object": "オランダ語",
+      "object_candidates": "ドイツ語, イタリア語, 英語, ハンガリー語, ロシア語, インドネシア語, ペルシア語, 朝鮮語, ポーランド語, オランダ語",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "マルグレーテ2世",
+      "object": "スウェーデン語",
+      "object_candidates": "ヘブライ語, ポーランド語, ルーマニア語, アゼルバイジャン語, イタリア語, エジプト語, フランス語, 中国語, スペイン語, スウェーデン語",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "サティエンドラ・ボース",
+      "object": "英語",
+      "object_candidates": "ルーマニア語, ラテン語, ヘブライ語, スペイン語, アゼルバイジャン語, インドネシア語, イタリア語, エジプト語, フィンランド語, 英語",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "アーネスト・シャクルトン",
+      "object": "英語",
+      "object_candidates": "ラテン語, インドネシア語, ハンガリー語, スペイン語, イタリア語, フランス語, ヘブライ語, ドイツ語, ペルシア語, 英語",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "サルバドール・アジェンデ",
+      "object": "スペイン語",
+      "object_candidates": "インドネシア語, オランダ語, イタリア語, ルーマニア語, アゼルバイジャン語, ラテン語, ハンガリー語, スウェーデン語, ノルウェー語, スペイン語",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ニコライ・レスコフ",
+      "object": "ロシア語",
+      "object_candidates": "中国語, ドイツ語, ルーマニア語, ノルウェー語, 英語, イタリア語, ヘブライ語, インドネシア語, スペイン語, ロシア語",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ヴィットーリオ・エマヌエーレ2世",
+      "object": "イタリア語",
+      "object_candidates": "ポーランド語, エジプト語, オランダ語, ヘブライ語, ドイツ語, 英語, 朝鮮語, フィンランド語, ルーマニア語, イタリア語",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ジョルジェ・エネスク",
+      "object": "ルーマニア語",
+      "object_candidates": "オランダ語, フランス語, イタリア語, アゼルバイジャン語, エジプト語, ノルウェー語, インドネシア語, ロシア語, 朝鮮語, ルーマニア語",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "グロリア・エステファン",
+      "object": "スペイン語",
+      "object_candidates": "ロシア語, スウェーデン語, インドネシア語, ペルシア語, フランス語, フィンランド語, ポーランド語, ノルウェー語, 朝鮮語, スペイン語",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "マイケル・ムーア",
+      "object": "英語",
+      "object_candidates": "中国語, ヘブライ語, アゼルバイジャン語, ラテン語, ハンガリー語, インドネシア語, スペイン語, フィンランド語, 朝鮮語, 英語",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "カロン・ド・ボーマルシェ",
+      "object": "フランス語",
+      "object_candidates": "ルーマニア語, 中国語, イタリア語, アゼルバイジャン語, ヘブライ語, 朝鮮語, ポーランド語, ドイツ語, スペイン語, フランス語",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "ベネデット・クローチェ",
+      "object": "イタリア語",
+      "object_candidates": "ロシア語, ハンガリー語, ノルウェー語, ペルシア語, スペイン語, ラテン語, スウェーデン語, 朝鮮語, エジプト語, イタリア語",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ラヴィ・シャンカル",
+      "object": "英語",
+      "object_candidates": "エジプト語, ノルウェー語, インドネシア語, ハンガリー語, ドイツ語, 朝鮮語, ヘブライ語, ポーランド語, ラテン語, 英語",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "サム・メンデス",
+      "object": "英語",
+      "object_candidates": "フランス語, フィンランド語, スウェーデン語, インドネシア語, ヘブライ語, ルーマニア語, ポーランド語, ペルシア語, 朝鮮語, 英語",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "イヴァン・ブーニン",
+      "object": "ロシア語",
+      "object_candidates": "ドイツ語, ラテン語, ルーマニア語, オランダ語, ペルシア語, ポーランド語, 英語, フランス語, スペイン語, ロシア語",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "アボルハサン・バニーサドル",
+      "object": "ペルシア語",
+      "object_candidates": "ドイツ語, ポーランド語, エジプト語, ノルウェー語, ハンガリー語, ロシア語, アゼルバイジャン語, ルーマニア語, 英語, ペルシア語",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "アングン",
+      "object": "インドネシア語",
+      "object_candidates": "ロシア語, 朝鮮語, ポーランド語, ラテン語, アゼルバイジャン語, ノルウェー語, ドイツ語, オランダ語, フィンランド語, インドネシア語",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "クラーク・ゲーブル",
+      "object": "英語",
+      "object_candidates": "スウェーデン語, アゼルバイジャン語, フィンランド語, エジプト語, インドネシア語, 朝鮮語, ロシア語, ハンガリー語, ノルウェー語, 英語",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "ジャック・ラカン",
+      "object": "フランス語",
+      "object_candidates": "アゼルバイジャン語, フィンランド語, スペイン語, ルーマニア語, ペルシア語, ハンガリー語, インドネシア語, 英語, 中国語, フランス語",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "ジェームズ・ガーナー",
+      "object": "英語",
+      "object_candidates": "ルーマニア語, ポーランド語, 朝鮮語, フランス語, ノルウェー語, スペイン語, ドイツ語, フィンランド語, エジプト語, 英語",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "マニュエル・ヴァルス",
+      "object": "スペイン語",
+      "object_candidates": "オランダ語, ペルシア語, インドネシア語, 朝鮮語, ハンガリー語, イタリア語, エジプト語, フランス語, スウェーデン語, スペイン語",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "アッバス・キアロスタミ",
+      "object": "ペルシア語",
+      "object_candidates": "ハンガリー語, ヘブライ語, アゼルバイジャン語, ラテン語, オランダ語, スペイン語, ポーランド語, フランス語, 朝鮮語, ペルシア語",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "オリバー・クロムウェル",
+      "object": "英語",
+      "object_candidates": "インドネシア語, ノルウェー語, スウェーデン語, オランダ語, フランス語, 中国語, ドイツ語, ヘブライ語, ハンガリー語, 英語",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "アウグスト・ピノチェト",
+      "object": "スペイン語",
+      "object_candidates": "朝鮮語, ラテン語, ロシア語, ドイツ語, フランス語, インドネシア語, ポーランド語, ハンガリー語, ペルシア語, スペイン語",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "フランシス・プーランク",
+      "object": "フランス語",
+      "object_candidates": "ヘブライ語, 英語, スペイン語, ロシア語, ポーランド語, インドネシア語, スウェーデン語, 中国語, 朝鮮語, フランス語",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "ジュール・マスネ",
+      "object": "フランス語",
+      "object_candidates": "イタリア語, ヘブライ語, オランダ語, ハンガリー語, ノルウェー語, フィンランド語, アゼルバイジャン語, ポーランド語, 中国語, フランス語",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "カルロス・マルチェナ",
+      "object": "スペイン語",
+      "object_candidates": "ペルシア語, インドネシア語, 中国語, ポーランド語, フランス語, スウェーデン語, アゼルバイジャン語, ラテン語, ドイツ語, スペイン語",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ルドヴィコ・ザメンホフ",
+      "object": "英語",
+      "object_candidates": "朝鮮語, エジプト語, ラテン語, ロシア語, ヘブライ語, ハンガリー語, ルーマニア語, ポーランド語, ドイツ語, 英語",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "モハメド・アリ",
+      "object": "英語",
+      "object_candidates": "ドイツ語, エジプト語, 朝鮮語, スペイン語, 中国語, ラテン語, ハンガリー語, インドネシア語, フランス語, 英語",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "アンナ・マニャーニ",
+      "object": "イタリア語",
+      "object_candidates": "英語, インドネシア語, スウェーデン語, オランダ語, ドイツ語, エジプト語, スペイン語, ポーランド語, ペルシア語, イタリア語",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ABBA",
+      "object": "スウェーデン語",
+      "object_candidates": "ヘブライ語, 中国語, ノルウェー語, ロシア語, ポーランド語, ラテン語, ルーマニア語, 英語, イタリア語, スウェーデン語",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "イエス・キリスト",
+      "object": "ヘブライ語",
+      "object_candidates": "ペルシア語, ロシア語, ノルウェー語, ドイツ語, ポーランド語, スペイン語, アゼルバイジャン語, フランス語, フィンランド語, ヘブライ語",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "ジュゼッペ・トルナトーレ",
+      "object": "イタリア語",
+      "object_candidates": "フィンランド語, ハンガリー語, 朝鮮語, スペイン語, ルーマニア語, ヘブライ語, スウェーデン語, ドイツ語, 中国語, イタリア語",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "グウェン・ステファニー",
+      "object": "英語",
+      "object_candidates": "エジプト語, ノルウェー語, フランス語, アゼルバイジャン語, 中国語, ドイツ語, イタリア語, ラテン語, ルーマニア語, 英語",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "タキトゥス",
+      "object": "ラテン語",
+      "object_candidates": "ルーマニア語, ポーランド語, スペイン語, ノルウェー語, フィンランド語, オランダ語, イタリア語, 朝鮮語, ハンガリー語, ラテン語",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "アラニス・モリセット",
+      "object": "英語",
+      "object_candidates": "フィンランド語, インドネシア語, スウェーデン語, アゼルバイジャン語, オランダ語, ロシア語, ラテン語, ペルシア語, ポーランド語, 英語",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "ヴォイチェフ・ヤルゼルスキ",
+      "object": "ポーランド語",
+      "object_candidates": "フィンランド語, イタリア語, フランス語, ペルシア語, ドイツ語, オランダ語, 朝鮮語, 中国語, インドネシア語, ポーランド語",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "カイリー・ミノーグ",
+      "object": "英語",
+      "object_candidates": "ヘブライ語, ペルシア語, ハンガリー語, ドイツ語, フランス語, アゼルバイジャン語, ロシア語, エジプト語, インドネシア語, 英語",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "カルロス・フエンテス",
+      "object": "スペイン語",
+      "object_candidates": "アゼルバイジャン語, 朝鮮語, 中国語, ラテン語, スウェーデン語, イタリア語, ペルシア語, ハンガリー語, エジプト語, スペイン語",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ドワイト・D・アイゼンハワー",
+      "object": "英語",
+      "object_candidates": "ノルウェー語, ポーランド語, ペルシア語, スウェーデン語, ラテン語, ハンガリー語, ヘブライ語, フランス語, フィンランド語, 英語",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "トマ・ピケティ",
+      "object": "フランス語",
+      "object_candidates": "アゼルバイジャン語, ペルシア語, ラテン語, スウェーデン語, ノルウェー語, ルーマニア語, 英語, オランダ語, ロシア語, フランス語",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "アレクセイ・ブルシーロフ",
+      "object": "ロシア語",
+      "object_candidates": "ドイツ語, ヘブライ語, インドネシア語, ポーランド語, イタリア語, 英語, ラテン語, ルーマニア語, エジプト語, ロシア語",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "レフ・カーメネフ",
+      "object": "ロシア語",
+      "object_candidates": "フランス語, スペイン語, ルーマニア語, 中国語, ハンガリー語, オランダ語, アゼルバイジャン語, ラテン語, ノルウェー語, ロシア語",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ジョン・アップダイク",
+      "object": "英語",
+      "object_candidates": "ロシア語, 朝鮮語, イタリア語, ハンガリー語, フランス語, インドネシア語, 中国語, オランダ語, ヘブライ語, 英語",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "アンヌ・パリロー",
+      "object": "フランス語",
+      "object_candidates": "ハンガリー語, アゼルバイジャン語, 英語, スペイン語, ヘブライ語, 中国語, フィンランド語, ロシア語, エジプト語, フランス語",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "フェリペ5世",
+      "object": "スペイン語",
+      "object_candidates": "ヘブライ語, ルーマニア語, フィンランド語, インドネシア語, 英語, オランダ語, フランス語, ハンガリー語, ノルウェー語, スペイン語",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "エマニュエル・セニエ",
+      "object": "フランス語",
+      "object_candidates": "ドイツ語, アゼルバイジャン語, スペイン語, ハンガリー語, 中国語, ポーランド語, ノルウェー語, エジプト語, イタリア語, フランス語",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "アーネスト・ラザフォード",
+      "object": "英語",
+      "object_candidates": "朝鮮語, ドイツ語, ペルシア語, ルーマニア語, イタリア語, スペイン語, 中国語, エジプト語, ヘブライ語, 英語",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "ユージン・オニール",
+      "object": "英語",
+      "object_candidates": "フィンランド語, ペルシア語, スウェーデン語, 中国語, ロシア語, インドネシア語, フランス語, ポーランド語, ハンガリー語, 英語",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "ウィリアム・トムソン",
+      "object": "英語",
+      "object_candidates": "ヘブライ語, エジプト語, ノルウェー語, フランス語, ドイツ語, スペイン語, ラテン語, インドネシア語, アゼルバイジャン語, 英語",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "ジェニファー・ハドソン",
+      "object": "英語",
+      "object_candidates": "ヘブライ語, オランダ語, ペルシア語, ルーマニア語, ラテン語, スウェーデン語, インドネシア語, ポーランド語, 朝鮮語, 英語",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "ヘンリー・キッシンジャー",
+      "object": "英語",
+      "object_candidates": "ヘブライ語, インドネシア語, ドイツ語, ラテン語, スウェーデン語, アゼルバイジャン語, ポーランド語, ルーマニア語, ハンガリー語, 英語",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "ピウス10世",
+      "object": "ラテン語",
+      "object_candidates": "ポーランド語, ハンガリー語, フランス語, 中国語, ルーマニア語, 英語, 朝鮮語, ノルウェー語, スウェーデン語, ラテン語",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ウゼイル・ハジベヨフ",
+      "object": "アゼルバイジャン語",
+      "object_candidates": "イタリア語, ハンガリー語, ルーマニア語, ノルウェー語, ドイツ語, 英語, スペイン語, ポーランド語, ペルシア語, アゼルバイジャン語",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "トマス・ホッブズ",
+      "object": "ラテン語",
+      "object_candidates": "ドイツ語, エジプト語, ヘブライ語, スウェーデン語, 英語, ルーマニア語, フィンランド語, イタリア語, ロシア語, ラテン語",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "朱熹",
+      "object": "中国語",
+      "object_candidates": "ペルシア語, インドネシア語, フィンランド語, ラテン語, エジプト語, オランダ語, スペイン語, スウェーデン語, 朝鮮語, 中国語",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "ガッド・エルマレ",
+      "object": "フランス語",
+      "object_candidates": "ロシア語, 中国語, エジプト語, スペイン語, インドネシア語, ラテン語, 英語, イタリア語, ヘブライ語, フランス語",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "アルベルト・リエラ",
+      "object": "スペイン語",
+      "object_candidates": "ヘブライ語, オランダ語, エジプト語, ポーランド語, 中国語, ノルウェー語, 英語, ハンガリー語, ラテン語, スペイン語",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ヨハン・アウグスト・ストリンドベリ",
+      "object": "スウェーデン語",
+      "object_candidates": "エジプト語, オランダ語, ラテン語, ペルシア語, インドネシア語, ヘブライ語, 英語, 中国語, ポーランド語, スウェーデン語",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "クリスティン・スコット・トーマス",
+      "object": "フランス語",
+      "object_candidates": "スウェーデン語, ハンガリー語, ルーマニア語, ドイツ語, オランダ語, エジプト語, イタリア語, フィンランド語, アゼルバイジャン語, フランス語",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "トーマス・ハーディ",
+      "object": "英語",
+      "object_candidates": "ラテン語, 中国語, ハンガリー語, ロシア語, イタリア語, 朝鮮語, アゼルバイジャン語, ドイツ語, ペルシア語, 英語",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "ウォルター・クロンカイト",
+      "object": "英語",
+      "object_candidates": "ポーランド語, ハンガリー語, ルーマニア語, ペルシア語, ロシア語, ドイツ語, ヘブライ語, 朝鮮語, アゼルバイジャン語, 英語",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "モーシェ・ベン＝マイモーン",
+      "object": "ヘブライ語",
+      "object_candidates": "英語, フィンランド語, アゼルバイジャン語, ドイツ語, イタリア語, フランス語, ノルウェー語, ラテン語, 中国語, ヘブライ語",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "ヨハン・クライフ",
+      "object": "オランダ語",
+      "object_candidates": "フィンランド語, 中国語, ペルシア語, ラテン語, フランス語, ノルウェー語, ルーマニア語, スペイン語, ドイツ語, オランダ語",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "高行健",
+      "object": "中国語",
+      "object_candidates": "ルーマニア語, 朝鮮語, スウェーデン語, ノルウェー語, ロシア語, フランス語, アゼルバイジャン語, スペイン語, ハンガリー語, 中国語",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "ミハイル・ホドルコフスキー",
+      "object": "ロシア語",
+      "object_candidates": "英語, 中国語, フィンランド語, ポーランド語, エジプト語, ハンガリー語, スウェーデン語, ペルシア語, インドネシア語, ロシア語",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ジャン・シベリウス",
+      "object": "フィンランド語",
+      "object_candidates": "アゼルバイジャン語, 中国語, ポーランド語, エジプト語, 英語, ノルウェー語, ハンガリー語, オランダ語, ロシア語, フィンランド語",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ルドヴィコ・ザメンホフ",
+      "object": "ロシア語",
+      "object_candidates": "エジプト語, アゼルバイジャン語, ラテン語, フィンランド語, ポーランド語, ルーマニア語, ハンガリー語, インドネシア語, ノルウェー語, ロシア語",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "フリーマン・ダイソン",
+      "object": "英語",
+      "object_candidates": "ドイツ語, フランス語, スウェーデン語, インドネシア語, ルーマニア語, 中国語, ペルシア語, ラテン語, イタリア語, 英語",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "アルベール・カミュ",
+      "object": "フランス語",
+      "object_candidates": "ロシア語, ペルシア語, ポーランド語, ハンガリー語, ヘブライ語, イタリア語, エジプト語, 英語, スペイン語, フランス語",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

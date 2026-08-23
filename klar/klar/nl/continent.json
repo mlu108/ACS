@@ -1,0 +1,1710 @@
+{
+  "name": "continent",
+  "prompt_templates": [
+    "Op welk continent bevindt <subject> zich? Het antwoord is: <mask>",
+    "Wat is het continent van <subject>? Het antwoord is: <mask>",
+    "Op welk continent kun je <subject> vinden? Het antwoord is: <mask>",
+    "Tot welk werelddeel behoort <subject> in termen van continenten? Het antwoord is: <mask>",
+    "Waar kunnen we <subject> vinden in termen van continenten? Het antwoord is: <mask>",
+    " Het continent waar <subject> ligt heet <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Turkije",
+      "object": "Azië",
+      "object_candidates": "Europa, Amerika, Antarctica, Oceanië, Afrika, Azië",
+      "index": 3462,
+      "subject_en": "Turkey",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Namibië",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Oceanië, Europa, Azië, Amerika, Afrika",
+      "index": 3463,
+      "subject_en": "Namibia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Australisch Antarctisch Territorium",
+      "object": "Antarctica",
+      "object_candidates": "Afrika, Azië, Amerika, Europa, Oceanië, Antarctica",
+      "index": 3464,
+      "subject_en": "Australian Antarctic Territory",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Kochi",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Europa, Afrika, Oceanië, Amerika, Azië",
+      "index": 3465,
+      "subject_en": "Kochi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Duitsland",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Afrika, Amerika, Oceanië, Europa",
+      "index": 3466,
+      "subject_en": "Germany",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Cieszyn",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Afrika, Antarctica, Azië, Europa",
+      "index": 3467,
+      "subject_en": "Cieszyn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Sovjet-Unie",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Azië, Amerika, Oceanië, Europa",
+      "index": 3468,
+      "subject_en": "Soviet Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Yorkshire",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Amerika, Azië, Afrika, Oceanië, Europa",
+      "index": 3469,
+      "subject_en": "Yorkshire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Pitcairneilanden",
+      "object": "Oceanië",
+      "object_candidates": "Azië, Afrika, Antarctica, Europa, Amerika, Oceanië",
+      "index": 3470,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Armenië",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Afrika, Amerika, Antarctica, Europa",
+      "index": 3471,
+      "subject_en": "Armenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Hanoi",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Europa, Amerika, Oceanië, Afrika, Azië",
+      "index": 3472,
+      "subject_en": "Hanoi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Tallinn",
+      "object": "Europa",
+      "object_candidates": "Amerika, Azië, Antarctica, Oceanië, Afrika, Europa",
+      "index": 3473,
+      "subject_en": "Tallinn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Noord-Brabant",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Oceanië, Amerika, Azië, Europa",
+      "index": 3474,
+      "subject_en": "North Brabant",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Taag",
+      "object": "Europa",
+      "object_candidates": "Afrika, Amerika, Antarctica, Oceanië, Azië, Europa",
+      "index": 3475,
+      "subject_en": "Tagus river",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Saoedi-Arabië",
+      "object": "Azië",
+      "object_candidates": "Amerika, Europa, Oceanië, Afrika, Antarctica, Azië",
+      "index": 3476,
+      "subject_en": "Saudi Arabia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Australië",
+      "object": "Oceanië",
+      "object_candidates": "Antarctica, Amerika, Afrika, Europa, Azië, Oceanië",
+      "index": 3477,
+      "subject_en": "Australia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Eritrea",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Azië, Oceanië, Amerika, Europa, Afrika",
+      "index": 3478,
+      "subject_en": "Eritrea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Toulouse",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Amerika, Antarctica, Oceanië, Europa",
+      "index": 3479,
+      "subject_en": "Toulouse",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Zuid-Korea",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Europa, Afrika, Oceanië, Amerika, Azië",
+      "index": 3480,
+      "subject_en": "South Korea",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Den Haag",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Afrika, Azië, Amerika, Antarctica, Europa",
+      "index": 3481,
+      "subject_en": "The Hague",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Denemarken",
+      "object": "Europa",
+      "object_candidates": "Azië, Amerika, Antarctica, Oceanië, Afrika, Europa",
+      "index": 3482,
+      "subject_en": "Denmark",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Verenigd Koninkrijk",
+      "object": "Europa",
+      "object_candidates": "Amerika, Antarctica, Afrika, Azië, Oceanië, Europa",
+      "index": 3483,
+      "subject_en": "United Kingdom",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Britse Rijk",
+      "object": "Afrika",
+      "object_candidates": "Azië, Amerika, Europa, Oceanië, Antarctica, Afrika",
+      "index": 3484,
+      "subject_en": "British Empire",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Zuid-Azië",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Antarctica, Amerika, Afrika, Europa, Azië",
+      "index": 3485,
+      "subject_en": "South Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Bulgarije",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Azië, Oceanië, Amerika, Europa",
+      "index": 3486,
+      "subject_en": "Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Petsjora",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Afrika, Amerika, Antarctica, Azië, Europa",
+      "index": 3487,
+      "subject_en": "Pechora River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Kiribati",
+      "object": "Oceanië",
+      "object_candidates": "Afrika, Amerika, Azië, Antarctica, Europa, Oceanië",
+      "index": 3488,
+      "subject_en": "Kiribati",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Eiger",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Amerika, Oceanië, Afrika, Europa",
+      "index": 3489,
+      "subject_en": "Eiger",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tsjecho-Slowakije",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Afrika, Azië, Amerika, Europa",
+      "index": 3490,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Oostenrijk",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Afrika, Antarctica, Amerika, Europa",
+      "index": 3491,
+      "subject_en": "Austria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Griekenland",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Amerika, Antarctica, Oceanië, Europa",
+      "index": 3492,
+      "subject_en": "Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Wales",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Azië, Afrika, Antarctica, Europa",
+      "index": 3493,
+      "subject_en": "Wales",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Indonesië",
+      "object": "Azië",
+      "object_candidates": "Afrika, Antarctica, Europa, Amerika, Oceanië, Azië",
+      "index": 3494,
+      "subject_en": "Indonesia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Vietnam",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Amerika, Oceanië, Afrika, Europa, Azië",
+      "index": 3495,
+      "subject_en": "Vietnam",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Europese Unie",
+      "object": "Europa",
+      "object_candidates": "Afrika, Amerika, Azië, Oceanië, Antarctica, Europa",
+      "index": 3496,
+      "subject_en": "European Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Joegoslavië",
+      "object": "Europa",
+      "object_candidates": "Afrika, Amerika, Oceanië, Antarctica, Azië, Europa",
+      "index": 3497,
+      "subject_en": "Yugoslavia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Wallis en Futuna",
+      "object": "Oceanië",
+      "object_candidates": "Azië, Europa, Antarctica, Amerika, Afrika, Oceanië",
+      "index": 3498,
+      "subject_en": "Wallis and Futuna",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Mercia",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Amerika, Antarctica, Oceanië, Europa",
+      "index": 3499,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Transantarctisch Gebergte",
+      "object": "Antarctica",
+      "object_candidates": "Azië, Amerika, Oceanië, Europa, Afrika, Antarctica",
+      "index": 3500,
+      "subject_en": "Transantarctic Mountains",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Tbilisi",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Afrika, Amerika, Antarctica, Europa",
+      "index": 3501,
+      "subject_en": "Tbilisi",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Bern",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Amerika, Afrika, Antarctica, Europa",
+      "index": 3502,
+      "subject_en": "Bern",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Parijs",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Azië, Amerika, Oceanië, Europa",
+      "index": 3503,
+      "subject_en": "Paris",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Chabarovsk",
+      "object": "Azië",
+      "object_candidates": "Afrika, Antarctica, Oceanië, Europa, Amerika, Azië",
+      "index": 3504,
+      "subject_en": "Khabarovsk",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "New Delhi",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Amerika, Europa, Antarctica, Afrika, Azië",
+      "index": 3505,
+      "subject_en": "New Delhi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Azerbeidzjan",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Afrika, Amerika, Oceanië, Europa, Azië",
+      "index": 3506,
+      "subject_en": "Azerbaijan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Tiber",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Afrika, Amerika, Azië, Antarctica, Europa",
+      "index": 3507,
+      "subject_en": "Tiber",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Slovenië",
+      "object": "Europa",
+      "object_candidates": "Azië, Antarctica, Amerika, Oceanië, Afrika, Europa",
+      "index": 3508,
+      "subject_en": "Slovenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Irtysj",
+      "object": "Azië",
+      "object_candidates": "Afrika, Europa, Oceanië, Antarctica, Amerika, Azië",
+      "index": 3509,
+      "subject_en": "Irtysh river",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Chandigarh",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Oceanië, Antarctica, Amerika, Azië",
+      "index": 3510,
+      "subject_en": "Chandigarh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Despotaat Epirus",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Azië, Afrika, Antarctica, Europa",
+      "index": 3511,
+      "subject_en": "Despotate of Epirus",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Engeland",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Amerika, Oceanië, Azië, Europa",
+      "index": 3512,
+      "subject_en": "England",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "France métropolitaine",
+      "object": "Europa",
+      "object_candidates": "Afrika, Oceanië, Amerika, Azië, Antarctica, Europa",
+      "index": 3513,
+      "subject_en": "Metropolitan France",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Comoren",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Europa, Oceanië, Amerika, Azië, Afrika",
+      "index": 3514,
+      "subject_en": "Comoros",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Oost-Frankische Rijk",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Antarctica, Afrika, Azië, Europa",
+      "index": 3515,
+      "subject_en": "East Francia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Koninkrijk der Nederlanden",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Amerika, Azië, Oceanië, Europa",
+      "index": 3516,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Marshalleilanden",
+      "object": "Oceanië",
+      "object_candidates": "Antarctica, Azië, Afrika, Amerika, Europa, Oceanië",
+      "index": 3517,
+      "subject_en": "Marshall Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Daman en Diu",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Europa, Afrika, Amerika, Antarctica, Azië",
+      "index": 3518,
+      "subject_en": "Daman and Diu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Lesotho",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Antarctica, Azië, Europa, Oceanië, Afrika",
+      "index": 3519,
+      "subject_en": "Lesotho",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Loire",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Azië, Amerika, Afrika, Europa",
+      "index": 3520,
+      "subject_en": "Loire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Mayotte",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Amerika, Europa, Azië, Oceanië, Afrika",
+      "index": 3521,
+      "subject_en": "Mayotte",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Micronesia",
+      "object": "Oceanië",
+      "object_candidates": "Amerika, Antarctica, Azië, Afrika, Europa, Oceanië",
+      "index": 3522,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Noord-Holland",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Afrika, Oceanië, Amerika, Europa",
+      "index": 3523,
+      "subject_en": "North Holland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Noord-Macedonië",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Azië, Amerika, Afrika, Europa",
+      "index": 3524,
+      "subject_en": "North Macedonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Liberia",
+      "object": "Afrika",
+      "object_candidates": "Oceanië, Azië, Amerika, Antarctica, Europa, Afrika",
+      "index": 3525,
+      "subject_en": "Liberia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Elbe",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Azië, Amerika, Oceanië, Europa",
+      "index": 3526,
+      "subject_en": "Elbe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Vanuatu",
+      "object": "Oceanië",
+      "object_candidates": "Afrika, Azië, Europa, Amerika, Antarctica, Oceanië",
+      "index": 3527,
+      "subject_en": "Vanuatu",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Craiova",
+      "object": "Europa",
+      "object_candidates": "Azië, Antarctica, Oceanië, Afrika, Amerika, Europa",
+      "index": 3528,
+      "subject_en": "Craiova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Himachal Pradesh",
+      "object": "Azië",
+      "object_candidates": "Afrika, Oceanië, Amerika, Europa, Antarctica, Azië",
+      "index": 3529,
+      "subject_en": "Himachal Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Cookeilanden",
+      "object": "Oceanië",
+      "object_candidates": "Antarctica, Afrika, Amerika, Europa, Azië, Oceanië",
+      "index": 3530,
+      "subject_en": "Cook Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Antarctische Plaat",
+      "object": "Antarctica",
+      "object_candidates": "Azië, Afrika, Oceanië, Europa, Amerika, Antarctica",
+      "index": 3531,
+      "subject_en": "Antarctic Plate",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Hongkong",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Antarctica, Oceanië, Amerika, Azië",
+      "index": 3532,
+      "subject_en": "Hong Kong",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Sint-Petersburg",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Antarctica, Amerika, Oceanië, Europa",
+      "index": 3533,
+      "subject_en": "Saint Petersburg",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tadzjikistan",
+      "object": "Azië",
+      "object_candidates": "Europa, Antarctica, Oceanië, Amerika, Afrika, Azië",
+      "index": 3534,
+      "subject_en": "Tajikistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Kalahari",
+      "object": "Afrika",
+      "object_candidates": "Azië, Oceanië, Amerika, Europa, Antarctica, Afrika",
+      "index": 3535,
+      "subject_en": "Kalahari Desert",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Turkmenistan",
+      "object": "Azië",
+      "object_candidates": "Afrika, Antarctica, Oceanië, Amerika, Europa, Azië",
+      "index": 3536,
+      "subject_en": "Turkmenistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Oude Griekenland",
+      "object": "Europa",
+      "object_candidates": "Amerika, Azië, Afrika, Antarctica, Oceanië, Europa",
+      "index": 3537,
+      "subject_en": "Ancient Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Moskou",
+      "object": "Europa",
+      "object_candidates": "Azië, Amerika, Antarctica, Afrika, Oceanië, Europa",
+      "index": 3538,
+      "subject_en": "Moscow",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Goa",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Antarctica, Amerika, Oceanië, Azië",
+      "index": 3539,
+      "subject_en": "Goa",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Thailand",
+      "object": "Azië",
+      "object_candidates": "Amerika, Europa, Oceanië, Afrika, Antarctica, Azië",
+      "index": 3540,
+      "subject_en": "Thailand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Eufraat",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Antarctica, Oceanië, Amerika, Azië",
+      "index": 3541,
+      "subject_en": "Euphrates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Schelde",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Antarctica, Oceanië, Amerika, Europa",
+      "index": 3542,
+      "subject_en": "Scheldt",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Schotland",
+      "object": "Europa",
+      "object_candidates": "Amerika, Azië, Afrika, Oceanië, Antarctica, Europa",
+      "index": 3543,
+      "subject_en": "Scotland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Koninkrijk Bourgondië",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Antarctica, Amerika, Afrika, Europa",
+      "index": 3544,
+      "subject_en": "Kingdom of Burgundy",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Kangchenjunga",
+      "object": "Azië",
+      "object_candidates": "Afrika, Europa, Amerika, Antarctica, Oceanië, Azië",
+      "index": 3545,
+      "subject_en": "Kanchenjunga",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Slowakije",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Oceanië, Azië, Amerika, Europa",
+      "index": 3546,
+      "subject_en": "Slovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Kameroen",
+      "object": "Afrika",
+      "object_candidates": "Europa, Oceanië, Antarctica, Azië, Amerika, Afrika",
+      "index": 3547,
+      "subject_en": "Cameroon",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Rubicon",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Oceanië, Amerika, Antarctica, Europa",
+      "index": 3548,
+      "subject_en": "Rubicon",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Oostenrijk-Hongarije",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Afrika, Antarctica, Amerika, Europa",
+      "index": 3549,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Verenigd Koninkrijk van Groot-Brittannië en Ierland",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Amerika, Oceanië, Afrika, Europa",
+      "index": 3550,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Vostokmeer",
+      "object": "Antarctica",
+      "object_candidates": "Azië, Amerika, Europa, Afrika, Oceanië, Antarctica",
+      "index": 3551,
+      "subject_en": "Lake Vostok",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Equatoriaal-Guinea",
+      "object": "Afrika",
+      "object_candidates": "Europa, Oceanië, Antarctica, Azië, Amerika, Afrika",
+      "index": 3552,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Spanje",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Azië, Oceanië, Amerika, Europa",
+      "index": 3553,
+      "subject_en": "Spain",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Nigeria",
+      "object": "Afrika",
+      "object_candidates": "Europa, Oceanië, Antarctica, Azië, Amerika, Afrika",
+      "index": 3554,
+      "subject_en": "Nigeria",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Swaziland",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Europa, Amerika, Oceanië, Azië, Afrika",
+      "index": 3555,
+      "subject_en": "Eswatini",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Vinsonmassief",
+      "object": "Antarctica",
+      "object_candidates": "Oceanië, Afrika, Europa, Amerika, Azië, Antarctica",
+      "index": 3556,
+      "subject_en": "Vinson Massif",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Seychellen",
+      "object": "Afrika",
+      "object_candidates": "Azië, Antarctica, Oceanië, Europa, Amerika, Afrika",
+      "index": 3557,
+      "subject_en": "Seychelles",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Niger",
+      "object": "Afrika",
+      "object_candidates": "Azië, Europa, Antarctica, Oceanië, Amerika, Afrika",
+      "index": 3558,
+      "subject_en": "Niger",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Portugal",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Amerika, Afrika, Antarctica, Europa",
+      "index": 3559,
+      "subject_en": "Portugal",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Niue",
+      "object": "Oceanië",
+      "object_candidates": "Azië, Amerika, Europa, Afrika, Antarctica, Oceanië",
+      "index": 3560,
+      "subject_en": "Niue",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Ierse Vrijstaat",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Antarctica, Afrika, Amerika, Europa",
+      "index": 3561,
+      "subject_en": "Irish Free State",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tisza",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Antarctica, Afrika, Amerika, Europa",
+      "index": 3562,
+      "subject_en": "Tisza",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Bosnië en Herzegovina",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Azië, Afrika, Antarctica, Europa",
+      "index": 3563,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Midden-Oosten",
+      "object": "Afrika",
+      "object_candidates": "Azië, Oceanië, Amerika, Antarctica, Europa, Afrika",
+      "index": 3564,
+      "subject_en": "Middle East",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "kalifaat van de Abbasiden",
+      "object": "Afrika",
+      "object_candidates": "Azië, Oceanië, Europa, Antarctica, Amerika, Afrika",
+      "index": 3565,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Palau",
+      "object": "Oceanië",
+      "object_candidates": "Antarctica, Amerika, Afrika, Azië, Europa, Oceanië",
+      "index": 3566,
+      "subject_en": "Palau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Melilla",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Antarctica, Europa, Azië, Oceanië, Afrika",
+      "index": 3567,
+      "subject_en": "Melilla",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Montenegro",
+      "object": "Europa",
+      "object_candidates": "Azië, Amerika, Oceanië, Antarctica, Afrika, Europa",
+      "index": 3568,
+      "subject_en": "Montenegro",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Manipur",
+      "object": "Azië",
+      "object_candidates": "Europa, Oceanië, Afrika, Antarctica, Amerika, Azië",
+      "index": 3569,
+      "subject_en": "Manipur",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Wellington",
+      "object": "Oceanië",
+      "object_candidates": "Azië, Europa, Amerika, Antarctica, Afrika, Oceanië",
+      "index": 3570,
+      "subject_en": "Wellington",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Djibouti",
+      "object": "Afrika",
+      "object_candidates": "Europa, Oceanië, Amerika, Azië, Antarctica, Afrika",
+      "index": 3571,
+      "subject_en": "Djibouti",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Benin",
+      "object": "Afrika",
+      "object_candidates": "Europa, Amerika, Antarctica, Azië, Oceanië, Afrika",
+      "index": 3572,
+      "subject_en": "Benin",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Iran",
+      "object": "Azië",
+      "object_candidates": "Afrika, Europa, Amerika, Oceanië, Antarctica, Azië",
+      "index": 3573,
+      "subject_en": "Iran",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Großglockner",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Amerika, Oceanië, Afrika, Europa",
+      "index": 3574,
+      "subject_en": "Grossglockner",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Gibraltar",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Amerika, Antarctica, Oceanië, Europa",
+      "index": 3575,
+      "subject_en": "Gibraltar",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Mont Blanc",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Azië, Amerika, Oceanië, Europa",
+      "index": 3576,
+      "subject_en": "Mont Blanc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ierland",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Amerika, Oceanië, Azië, Europa",
+      "index": 3577,
+      "subject_en": "Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Koeweit",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Oceanië, Europa, Amerika, Afrika, Azië",
+      "index": 3578,
+      "subject_en": "Kuwait",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Thimphu",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Afrika, Europa, Antarctica, Amerika, Azië",
+      "index": 3579,
+      "subject_en": "Thimphu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Jangtsekiang",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Europa, Amerika, Antarctica, Afrika, Azië",
+      "index": 3580,
+      "subject_en": "Yangtze",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Kazachstan",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Oceanië, Amerika, Azië, Europa",
+      "index": 3581,
+      "subject_en": "Kazakhstan",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Koninkrijk Saksen",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Antarctica, Amerika, Afrika, Europa",
+      "index": 3582,
+      "subject_en": "Kingdom of Saxony",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Irrawaddy",
+      "object": "Azië",
+      "object_candidates": "Afrika, Oceanië, Antarctica, Amerika, Europa, Azië",
+      "index": 3583,
+      "subject_en": "Irrawaddy River",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Laos",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Afrika, Amerika, Antarctica, Europa, Azië",
+      "index": 3584,
+      "subject_en": "Laos",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Zwitserland",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Azië, Afrika, Amerika, Europa",
+      "index": 3585,
+      "subject_en": "Switzerland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Gdynia",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Oceanië, Amerika, Antarctica, Europa",
+      "index": 3586,
+      "subject_en": "Gdynia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Dnjestr",
+      "object": "Europa",
+      "object_candidates": "Amerika, Afrika, Azië, Oceanië, Antarctica, Europa",
+      "index": 3587,
+      "subject_en": "Dniester",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Poona",
+      "object": "Azië",
+      "object_candidates": "Afrika, Amerika, Europa, Oceanië, Antarctica, Azië",
+      "index": 3588,
+      "subject_en": "Pune",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Rajkot",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Amerika, Antarctica, Oceanië, Azië",
+      "index": 3589,
+      "subject_en": "Rajkot",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Kryvy Rih",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Antarctica, Afrika, Azië, Europa",
+      "index": 3590,
+      "subject_en": "Kryvyi Rih",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Inn",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Azië, Afrika, Amerika, Europa",
+      "index": 3591,
+      "subject_en": "Inn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tasjkent",
+      "object": "Azië",
+      "object_candidates": "Afrika, Amerika, Oceanië, Antarctica, Europa, Azië",
+      "index": 3592,
+      "subject_en": "Tashkent",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Westelijke Dvina",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Azië, Oceanië, Amerika, Europa",
+      "index": 3593,
+      "subject_en": "Daugava River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Jammu en Kasjmir",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Europa, Antarctica, Afrika, Amerika, Azië",
+      "index": 3594,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Maleisië",
+      "object": "Azië",
+      "object_candidates": "Europa, Amerika, Afrika, Oceanië, Antarctica, Azië",
+      "index": 3595,
+      "subject_en": "Malaysia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Uttar Pradesh",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Europa, Antarctica, Amerika, Afrika, Azië",
+      "index": 3596,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Warta",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Amerika, Azië, Oceanië, Europa",
+      "index": 3597,
+      "subject_en": "Warta",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tamil Nadu",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Amerika, Antarctica, Oceanië, Azië",
+      "index": 3598,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Libanon",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Afrika, Oceanië, Europa, Amerika, Azië",
+      "index": 3599,
+      "subject_en": "Lebanon",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Burundi",
+      "object": "Afrika",
+      "object_candidates": "Europa, Oceanië, Amerika, Azië, Antarctica, Afrika",
+      "index": 3600,
+      "subject_en": "Burundi",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Trivandrum",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Amerika, Afrika, Europa, Oceanië, Azië",
+      "index": 3601,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Republiek der Zeven Verenigde Nederlanden",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Afrika, Amerika, Antarctica, Azië, Europa",
+      "index": 3602,
+      "subject_en": "Dutch Republic",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Qatar",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Amerika, Europa, Antarctica, Afrika, Azië",
+      "index": 3603,
+      "subject_en": "Qatar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Afghanistan",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Amerika, Afrika, Antarctica, Europa, Azië",
+      "index": 3604,
+      "subject_en": "Afghanistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Het Kanaal",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Oceanië, Amerika, Antarctica, Europa",
+      "index": 3605,
+      "subject_en": "English Channel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Kraj Primorski",
+      "object": "Azië",
+      "object_candidates": "Afrika, Amerika, Antarctica, Oceanië, Europa, Azië",
+      "index": 3606,
+      "subject_en": "Primorsky Krai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Verenigde Arabische Emiraten",
+      "object": "Azië",
+      "object_candidates": "Amerika, Oceanië, Europa, Antarctica, Afrika, Azië",
+      "index": 3607,
+      "subject_en": "United Arab Emirates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Baikalmeer",
+      "object": "Azië",
+      "object_candidates": "Afrika, Antarctica, Amerika, Oceanië, Europa, Azië",
+      "index": 3608,
+      "subject_en": "Lake Baikal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Aconcagua",
+      "object": "Amerika",
+      "object_candidates": "Azië, Afrika, Europa, Oceanië, Antarctica, Amerika",
+      "index": 3609,
+      "subject_en": "Aconcagua",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Basel",
+      "object": "Europa",
+      "object_candidates": "Amerika, Afrika, Oceanië, Antarctica, Azië, Europa",
+      "index": 3610,
+      "subject_en": "Basel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Alexandereiland",
+      "object": "Antarctica",
+      "object_candidates": "Amerika, Azië, Afrika, Europa, Oceanië, Antarctica",
+      "index": 3611,
+      "subject_en": "Alexander Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Ojos del Salado",
+      "object": "Amerika",
+      "object_candidates": "Antarctica, Azië, Europa, Oceanië, Afrika, Amerika",
+      "index": 3612,
+      "subject_en": "Ojos del Salado",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Moldavië",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Afrika, Antarctica, Azië, Europa",
+      "index": 3613,
+      "subject_en": "Moldova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Macquarie-eiland",
+      "object": "Antarctica",
+      "object_candidates": "Afrika, Oceanië, Europa, Azië, Amerika, Antarctica",
+      "index": 3614,
+      "subject_en": "Macquarie Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Bombay",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Europa, Oceanië, Amerika, Afrika, Azië",
+      "index": 3615,
+      "subject_en": "Mumbai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Catalonië",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Afrika, Azië, Antarctica, Europa",
+      "index": 3616,
+      "subject_en": "Catalonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Madagaskar",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Europa, Azië, Antarctica, Oceanië, Afrika",
+      "index": 3617,
+      "subject_en": "Madagascar",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Neva",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Oceanië, Amerika, Antarctica, Europa",
+      "index": 3618,
+      "subject_en": "Neva",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Centraal-Afrikaanse Republiek",
+      "object": "Afrika",
+      "object_candidates": "Europa, Amerika, Antarctica, Azië, Oceanië, Afrika",
+      "index": 3619,
+      "subject_en": "Central African Republic",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Egypte",
+      "object": "Afrika",
+      "object_candidates": "Oceanië, Antarctica, Europa, Azië, Amerika, Afrika",
+      "index": 3620,
+      "subject_en": "Egypt",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Elzas-Lotharingen",
+      "object": "Europa",
+      "object_candidates": "Afrika, Antarctica, Amerika, Azië, Oceanië, Europa",
+      "index": 3621,
+      "subject_en": "Alsace-Lorraine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Angola",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Azië, Oceanië, Amerika, Europa, Afrika",
+      "index": 3622,
+      "subject_en": "Angola",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Midden-Oosten",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Amerika, Oceanië, Azië, Europa",
+      "index": 3623,
+      "subject_en": "Middle East",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Britse Rijk",
+      "object": "Amerika",
+      "object_candidates": "Antarctica, Azië, Oceanië, Europa, Afrika, Amerika",
+      "index": 3624,
+      "subject_en": "British Empire",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Athene",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Oceanië, Azië, Amerika, Afrika, Europa",
+      "index": 3625,
+      "subject_en": "Athens",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tigris",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Afrika, Europa, Amerika, Oceanië, Azië",
+      "index": 3626,
+      "subject_en": "Tigris",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Cambodja",
+      "object": "Azië",
+      "object_candidates": "Europa, Amerika, Afrika, Oceanië, Antarctica, Azië",
+      "index": 3627,
+      "subject_en": "Cambodia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Wolga-Bulgarije",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Amerika, Antarctica, Oceanië, Europa",
+      "index": 3628,
+      "subject_en": "Volga Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Mali",
+      "object": "Afrika",
+      "object_candidates": "Oceanië, Amerika, Antarctica, Azië, Europa, Afrika",
+      "index": 3629,
+      "subject_en": "Mali",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Vantaa",
+      "object": "Europa",
+      "object_candidates": "Azië, Oceanië, Amerika, Afrika, Antarctica, Europa",
+      "index": 3630,
+      "subject_en": "Vantaa",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Tsjoekotka",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Europa, Amerika, Afrika, Oceanië, Azië",
+      "index": 3631,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Guinee-Bissau",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Azië, Antarctica, Oceanië, Europa, Afrika",
+      "index": 3632,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Finland",
+      "object": "Europa",
+      "object_candidates": "Afrika, Oceanië, Azië, Antarctica, Amerika, Europa",
+      "index": 3633,
+      "subject_en": "Finland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Waals Gewest",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Amerika, Afrika, Antarctica, Europa",
+      "index": 3634,
+      "subject_en": "Wallonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Marokko",
+      "object": "Afrika",
+      "object_candidates": "Azië, Europa, Amerika, Oceanië, Antarctica, Afrika",
+      "index": 3635,
+      "subject_en": "Morocco",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Maharashtra",
+      "object": "Azië",
+      "object_candidates": "Afrika, Oceanië, Europa, Antarctica, Amerika, Azië",
+      "index": 3636,
+      "subject_en": "Maharashtra",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Nijl",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Azië, Antarctica, Europa, Oceanië, Afrika",
+      "index": 3637,
+      "subject_en": "Nile",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "geschiedenis van Europa",
+      "object": "Europa",
+      "object_candidates": "Azië, Afrika, Oceanië, Antarctica, Amerika, Europa",
+      "index": 3638,
+      "subject_en": "history of Europe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Demavend",
+      "object": "Azië",
+      "object_candidates": "Antarctica, Amerika, Oceanië, Europa, Afrika, Azië",
+      "index": 3639,
+      "subject_en": "Damavand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "kalifaat van de Omajjaden",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Antarctica, Afrika, Azië, Europa",
+      "index": 3640,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Katowice",
+      "object": "Europa",
+      "object_candidates": "Azië, Antarctica, Amerika, Oceanië, Afrika, Europa",
+      "index": 3641,
+      "subject_en": "Katowice",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Rijn",
+      "object": "Europa",
+      "object_candidates": "Afrika, Oceanië, Azië, Antarctica, Amerika, Europa",
+      "index": 3642,
+      "subject_en": "Rhine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Gelderland",
+      "object": "Europa",
+      "object_candidates": "Amerika, Oceanië, Afrika, Antarctica, Azië, Europa",
+      "index": 3643,
+      "subject_en": "Gelderland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Mauritius",
+      "object": "Afrika",
+      "object_candidates": "Amerika, Europa, Azië, Antarctica, Oceanië, Afrika",
+      "index": 3644,
+      "subject_en": "Mauritius",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Oostblok",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Amerika, Afrika, Azië, Europa",
+      "index": 3645,
+      "subject_en": "Eastern Bloc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Auckland",
+      "object": "Oceanië",
+      "object_candidates": "Amerika, Azië, Europa, Antarctica, Afrika, Oceanië",
+      "index": 3646,
+      "subject_en": "Auckland",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "geschiedenis van de Vikingen",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Afrika, Antarctica, Azië, Europa",
+      "index": 3647,
+      "subject_en": "Viking Age",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Niger",
+      "object": "Afrika",
+      "object_candidates": "Azië, Oceanië, Europa, Amerika, Antarctica, Afrika",
+      "index": 3648,
+      "subject_en": "Niger River",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Zuidwest-Azië",
+      "object": "Azië",
+      "object_candidates": "Europa, Amerika, Antarctica, Oceanië, Afrika, Azië",
+      "index": 3649,
+      "subject_en": "Western Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Tokelau-eilanden",
+      "object": "Oceanië",
+      "object_candidates": "Afrika, Amerika, Europa, Azië, Antarctica, Oceanië",
+      "index": 3650,
+      "subject_en": "Tokelau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Bihar",
+      "object": "Azië",
+      "object_candidates": "Amerika, Afrika, Europa, Antarctica, Oceanië, Azië",
+      "index": 3651,
+      "subject_en": "Bihar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Estland",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Afrika, Azië, Amerika, Europa",
+      "index": 3652,
+      "subject_en": "Estonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Franse Zuidelijke en Antarctische Gebieden",
+      "object": "Antarctica",
+      "object_candidates": "Europa, Amerika, Oceanië, Afrika, Azië, Antarctica",
+      "index": 3653,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Soedan",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Amerika, Europa, Azië, Oceanië, Afrika",
+      "index": 3654,
+      "subject_en": "Sudan",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Sealand",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Azië, Amerika, Afrika, Antarctica, Europa",
+      "index": 3655,
+      "subject_en": "Principality of Sealand",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Antarctisch Verdrag",
+      "object": "Antarctica",
+      "object_candidates": "Amerika, Azië, Afrika, Europa, Oceanië, Antarctica",
+      "index": 3656,
+      "subject_en": "Antarctic Treaty System",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Nepal",
+      "object": "Azië",
+      "object_candidates": "Europa, Afrika, Amerika, Antarctica, Oceanië, Azië",
+      "index": 3657,
+      "subject_en": "Nepal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Juan de Nova",
+      "object": "Afrika",
+      "object_candidates": "Oceanië, Antarctica, Europa, Azië, Amerika, Afrika",
+      "index": 3658,
+      "subject_en": "Juan de Nova Island",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Verenigde Staten van Amerika",
+      "object": "Oceanië",
+      "object_candidates": "Europa, Antarctica, Amerika, Afrika, Azië, Oceanië",
+      "index": 3659,
+      "subject_en": "United States of America",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Japan",
+      "object": "Azië",
+      "object_candidates": "Oceanië, Europa, Antarctica, Afrika, Amerika, Azië",
+      "index": 3660,
+      "subject_en": "Japan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Mozambique",
+      "object": "Afrika",
+      "object_candidates": "Azië, Oceanië, Europa, Antarctica, Amerika, Afrika",
+      "index": 3661,
+      "subject_en": "Mozambique",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Shimla",
+      "object": "Azië",
+      "object_candidates": "Europa, Antarctica, Oceanië, Amerika, Afrika, Azië",
+      "index": 3662,
+      "subject_en": "Shimla",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Helsinki",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Afrika, Oceanië, Azië, Amerika, Europa",
+      "index": 3663,
+      "subject_en": "Helsinki",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "San Marino",
+      "object": "Europa",
+      "object_candidates": "Antarctica, Azië, Afrika, Oceanië, Amerika, Europa",
+      "index": 3664,
+      "subject_en": "San Marino",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Shenzhen",
+      "object": "Azië",
+      "object_candidates": "Europa, Oceanië, Afrika, Antarctica, Amerika, Azië",
+      "index": 3665,
+      "subject_en": "Shenzhen",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Kongo-Vrijstaat",
+      "object": "Afrika",
+      "object_candidates": "Oceanië, Amerika, Azië, Europa, Antarctica, Afrika",
+      "index": 3666,
+      "subject_en": "Congo Free State",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Arabische Liga",
+      "object": "Azië",
+      "object_candidates": "Europa, Amerika, Afrika, Antarctica, Oceanië, Azië",
+      "index": 3667,
+      "subject_en": "Arab League",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Wisła",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Antarctica, Amerika, Azië, Afrika, Europa",
+      "index": 3668,
+      "subject_en": "Vistula",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Douro",
+      "object": "Europa",
+      "object_candidates": "Afrika, Azië, Antarctica, Oceanië, Amerika, Europa",
+      "index": 3669,
+      "subject_en": "Douro River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Zuid-Afrika",
+      "object": "Afrika",
+      "object_candidates": "Antarctica, Azië, Amerika, Europa, Oceanië, Afrika",
+      "index": 3670,
+      "subject_en": "South Africa",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Fiji",
+      "object": "Oceanië",
+      "object_candidates": "Europa, Afrika, Antarctica, Azië, Amerika, Oceanië",
+      "index": 3671,
+      "subject_en": "Fiji",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Guadalquivir",
+      "object": "Europa",
+      "object_candidates": "Oceanië, Amerika, Azië, Afrika, Antarctica, Europa",
+      "index": 3672,
+      "subject_en": "Guadalquivir",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Somalië",
+      "object": "Afrika",
+      "object_candidates": "Europa, Antarctica, Oceanië, Azië, Amerika, Afrika",
+      "index": 3673,
+      "subject_en": "Somalia",
+      "object_en": "Africa"
+    }
+  ],
+  "relation_id": "P30"
+}

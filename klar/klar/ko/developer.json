@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "<subject>의 개발자는 어떤 회사입니까? 대답은: <mask>",
+    "<subject>를 누가 개발했습니까? 대답은: <mask>",
+    "<subject>를 개발한 책임이 있는 회사는 무엇입니까? 대답은: <mask>",
+    "<subject>가 누에 의해 개발되었습니까? 대답은: <mask>",
+    "<subject>의 개발을 인정받은 조직은 무엇입니까? 대답은: <mask>",
+    " <subject>를 개발한 회사는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "macOS",
+      "object": "애플",
+      "object_candidates": "보잉, IBM, 구글, 어도비 시스템즈, 노키아, 인텔, 닌텐도, 마이크로소프트, 에어버스, 애플",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iOS",
+      "object": "애플",
+      "object_candidates": "IBM, 구글, 어도비 시스템즈, 닌텐도, 보잉, 에어버스, 노키아, 인텔, 마이크로소프트, 애플",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "사파리",
+      "object": "애플",
+      "object_candidates": "노키아, 에어버스, 보잉, 닌텐도, 어도비 시스템즈, 구글, 인텔, IBM, 마이크로소프트, 애플",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "포스트스크립트",
+      "object": "어도비 시스템즈",
+      "object_candidates": "인텔, 에어버스, 보잉, 노키아, 구글, IBM, 애플, 마이크로소프트, 닌텐도, 어도비 시스템즈",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "윈도 비스타",
+      "object": "마이크로소프트",
+      "object_candidates": "닌텐도, 노키아, 구글, 어도비 시스템즈, 애플, 보잉, 인텔, 에어버스, IBM, 마이크로소프트",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "인터넷 익스플로러",
+      "object": "마이크로소프트",
+      "object_candidates": "애플, 구글, 보잉, IBM, 닌텐도, 에어버스, 어도비 시스템즈, 노키아, 인텔, 마이크로소프트",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "보잉 B-17 플라잉 포트리스",
+      "object": "보잉",
+      "object_candidates": "애플, 에어버스, 닌텐도, 노키아, 구글, 인텔, 마이크로소프트, 어도비 시스템즈, IBM, 보잉",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "DirectX",
+      "object": "마이크로소프트",
+      "object_candidates": "애플, 닌텐도, 보잉, 어도비 시스템즈, IBM, 구글, 에어버스, 노키아, 인텔, 마이크로소프트",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 윈도우",
+      "object": "마이크로소프트",
+      "object_candidates": "닌텐도, 인텔, 어도비 시스템즈, 에어버스, 애플, 구글, 노키아, IBM, 보잉, 마이크로소프트",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "엑스박스 360",
+      "object": "마이크로소프트",
+      "object_candidates": "애플, 구글, 닌텐도, 어도비 시스템즈, 에어버스, 노키아, 보잉, IBM, 인텔, 마이크로소프트",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "엑스박스 원",
+      "object": "마이크로소프트",
+      "object_candidates": "에어버스, 어도비 시스템즈, 보잉, 노키아, 닌텐도, 애플, 인텔, 구글, IBM, 마이크로소프트",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "MS-DOS",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 노키아, 애플, 구글, 보잉, 에어버스, 닌텐도, IBM, 인텔, 마이크로소프트",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "포트란",
+      "object": "IBM",
+      "object_candidates": "어도비 시스템즈, 에어버스, 구글, 애플, 인텔, 닌텐도, 마이크로소프트, 노키아, 보잉, IBM",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "윈도 1.0",
+      "object": "마이크로소프트",
+      "object_candidates": "보잉, 닌텐도, 노키아, 인텔, 구글, IBM, 애플, 에어버스, 어도비 시스템즈, 마이크로소프트",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "닌텐도 3DS",
+      "object": "닌텐도",
+      "object_candidates": "노키아, 에어버스, 보잉, 마이크로소프트, 인텔, 애플, 어도비 시스템즈, IBM, 구글, 닌텐도",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "인텔 80386",
+      "object": "인텔",
+      "object_candidates": "애플, IBM, 노키아, 에어버스, 닌텐도, 구글, 마이크로소프트, 보잉, 어도비 시스템즈, 인텔",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "윈도우 10",
+      "object": "마이크로소프트",
+      "object_candidates": "노키아, 닌텐도, IBM, 애플, 인텔, 보잉, 에어버스, 어도비 시스템즈, 구글, 마이크로소프트",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 엑셀",
+      "object": "마이크로소프트",
+      "object_candidates": "노키아, 인텔, 보잉, 애플, 어도비 시스템즈, 닌텐도, IBM, 구글, 에어버스, 마이크로소프트",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 오피스",
+      "object": "마이크로소프트",
+      "object_candidates": "인텔, 애플, 어도비 시스템즈, 구글, 닌텐도, 보잉, 에어버스, 노키아, IBM, 마이크로소프트",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 워드",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 보잉, 인텔, 에어버스, IBM, 닌텐도, 노키아, 구글, 애플, 마이크로소프트",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "맥 OS",
+      "object": "애플",
+      "object_candidates": "노키아, 닌텐도, 마이크로소프트, 에어버스, IBM, 어도비 시스템즈, 인텔, 보잉, 구글, 애플",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "윈도 95",
+      "object": "마이크로소프트",
+      "object_candidates": "IBM, 어도비 시스템즈, 인텔, 구글, 노키아, 에어버스, 애플, 닌텐도, 보잉, 마이크로소프트",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 비주얼 스튜디오",
+      "object": "마이크로소프트",
+      "object_candidates": "애플, 어도비 시스템즈, IBM, 보잉, 닌텐도, 인텔, 구글, 에어버스, 노키아, 마이크로소프트",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "윈도 98",
+      "object": "마이크로소프트",
+      "object_candidates": "보잉, IBM, 애플, 닌텐도, 노키아, 에어버스, 어도비 시스템즈, 구글, 인텔, 마이크로소프트",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "어도비 애크러뱃",
+      "object": "어도비 시스템즈",
+      "object_candidates": "노키아, 애플, 마이크로소프트, 보잉, 에어버스, IBM, 구글, 인텔, 닌텐도, 어도비 시스템즈",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "PDF",
+      "object": "어도비 시스템즈",
+      "object_candidates": "IBM, 닌텐도, 인텔, 마이크로소프트, 노키아, 구글, 애플, 보잉, 에어버스, 어도비 시스템즈",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "인텔 코어 2",
+      "object": "인텔",
+      "object_candidates": "노키아, 보잉, 구글, 닌텐도, 어도비 시스템즈, 애플, IBM, 에어버스, 마이크로소프트, 인텔",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "어도비 플래시",
+      "object": "어도비 시스템즈",
+      "object_candidates": "에어버스, 애플, 보잉, 닌텐도, 노키아, 인텔, IBM, 구글, 마이크로소프트, 어도비 시스템즈",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "심비안 OS",
+      "object": "노키아",
+      "object_candidates": "에어버스, 마이크로소프트, 애플, IBM, 인텔, 구글, 닌텐도, 보잉, 어도비 시스템즈, 노키아",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "윈도 폰",
+      "object": "마이크로소프트",
+      "object_candidates": "구글, 에어버스, IBM, 닌텐도, 보잉, 애플, 인텔, 어도비 시스템즈, 노키아, 마이크로소프트",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "펜티엄",
+      "object": "인텔",
+      "object_candidates": "마이크로소프트, IBM, 보잉, 구글, 닌텐도, 에어버스, 애플, 어도비 시스템즈, 노키아, 인텔",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "어도비 포토샵",
+      "object": "어도비 시스템즈",
+      "object_candidates": "애플, 인텔, 보잉, 닌텐도, 노키아, 마이크로소프트, 에어버스, IBM, 구글, 어도비 시스템즈",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "퀵타임",
+      "object": "애플",
+      "object_candidates": "보잉, IBM, 인텔, 어도비 시스템즈, 구글, 에어버스, 닌텐도, 노키아, 마이크로소프트, 애플",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Wii U",
+      "object": "닌텐도",
+      "object_candidates": "IBM, 애플, 구글, 보잉, 인텔, 노키아, 마이크로소프트, 에어버스, 어도비 시스템즈, 닌텐도",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "윈도 XP",
+      "object": "마이크로소프트",
+      "object_candidates": "노키아, 보잉, 닌텐도, 인텔, 구글, IBM, 애플, 에어버스, 어도비 시스템즈, 마이크로소프트",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "윈도 2000",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 닌텐도, 인텔, 에어버스, 노키아, 애플, 구글, 보잉, IBM, 마이크로소프트",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "NTFS",
+      "object": "마이크로소프트",
+      "object_candidates": "인텔, 보잉, 애플, 어도비 시스템즈, 닌텐도, 에어버스, 노키아, 구글, IBM, 마이크로소프트",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "윈도 8",
+      "object": "마이크로소프트",
+      "object_candidates": "인텔, 구글, 어도비 시스템즈, 노키아, 닌텐도, 에어버스, 보잉, 애플, IBM, 마이크로소프트",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "아이팟",
+      "object": "애플",
+      "object_candidates": "마이크로소프트, 구글, IBM, 인텔, 어도비 시스템즈, 에어버스, 노키아, 닌텐도, 보잉, 애플",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "G메일",
+      "object": "구글",
+      "object_candidates": "보잉, 에어버스, 마이크로소프트, 노키아, 애플, 인텔, IBM, 어도비 시스템즈, 닌텐도, 구글",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 지도",
+      "object": "구글",
+      "object_candidates": "애플, 노키아, IBM, 에어버스, 닌텐도, 마이크로소프트, 어도비 시스템즈, 보잉, 인텔, 구글",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "윈도 라이브 메신저",
+      "object": "마이크로소프트",
+      "object_candidates": "보잉, 인텔, 어도비 시스템즈, 애플, IBM, 구글, 에어버스, 닌텐도, 노키아, 마이크로소프트",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "구글 스트리트 뷰",
+      "object": "구글",
+      "object_candidates": "보잉, 어도비 시스템즈, 노키아, 마이크로소프트, 에어버스, 인텔, IBM, 닌텐도, 애플, 구글",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "윈도 미디어 플레이어",
+      "object": "마이크로소프트",
+      "object_candidates": "인텔, 닌텐도, 에어버스, 어도비 시스템즈, 보잉, IBM, 노키아, 애플, 구글, 마이크로소프트",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "닷넷 프레임워크",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 인텔, 구글, 노키아, 에어버스, 닌텐도, IBM, 보잉, 애플, 마이크로소프트",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "윈도 업데이트",
+      "object": "마이크로소프트",
+      "object_candidates": "보잉, 어도비 시스템즈, 인텔, 애플, 에어버스, IBM, 노키아, 닌텐도, 구글, 마이크로소프트",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "보잉 B-52 스트래토포트리스",
+      "object": "보잉",
+      "object_candidates": "에어버스, 애플, 닌텐도, IBM, 마이크로소프트, 어도비 시스템즈, 인텔, 구글, 노키아, 보잉",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "아이튠즈",
+      "object": "애플",
+      "object_candidates": "닌텐도, 마이크로소프트, 인텔, 구글, 노키아, IBM, 에어버스, 어도비 시스템즈, 보잉, 애플",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "윈도 2.0",
+      "object": "마이크로소프트",
+      "object_candidates": "애플, 닌텐도, 노키아, 보잉, IBM, 인텔, 에어버스, 어도비 시스템즈, 구글, 마이크로소프트",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "애드센스",
+      "object": "구글",
+      "object_candidates": "어도비 시스템즈, 마이크로소프트, 에어버스, 애플, 노키아, IBM, 인텔, 닌텐도, 보잉, 구글",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "윈도 7",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 노키아, 에어버스, 애플, 닌텐도, IBM, 구글, 보잉, 인텔, 마이크로소프트",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "에어버스 A350",
+      "object": "에어버스",
+      "object_candidates": "애플, 어도비 시스템즈, 닌텐도, 인텔, 노키아, 구글, 보잉, IBM, 마이크로소프트, 에어버스",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "피카사",
+      "object": "구글",
+      "object_candidates": "노키아, 닌텐도, 보잉, 에어버스, IBM, 어도비 시스템즈, 인텔, 마이크로소프트, 애플, 구글",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 어스",
+      "object": "구글",
+      "object_candidates": "닌텐도, 보잉, 마이크로소프트, IBM, 에어버스, 노키아, 어도비 시스템즈, 인텔, 애플, 구글",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 플레이",
+      "object": "구글",
+      "object_candidates": "에어버스, 인텔, IBM, 노키아, 어도비 시스템즈, 애플, 마이크로소프트, 닌텐도, 보잉, 구글",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "iCloud",
+      "object": "애플",
+      "object_candidates": "노키아, 닌텐도, 마이크로소프트, 구글, 어도비 시스템즈, 인텔, 에어버스, IBM, 보잉, 애플",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "시리",
+      "object": "애플",
+      "object_candidates": "인텔, IBM, 노키아, 마이크로소프트, 어도비 시스템즈, 닌텐도, 보잉, 에어버스, 구글, 애플",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "앱 스토어",
+      "object": "애플",
+      "object_candidates": "인텔, IBM, 어도비 시스템즈, 보잉, 닌텐도, 구글, 노키아, 마이크로소프트, 에어버스, 애플",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "마이크로소프트 액세스",
+      "object": "마이크로소프트",
+      "object_candidates": "인텔, 닌텐도, 에어버스, 애플, 보잉, 어도비 시스템즈, 구글, IBM, 노키아, 마이크로소프트",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "애플 워치",
+      "object": "애플",
+      "object_candidates": "구글, 마이크로소프트, 에어버스, 인텔, 노키아, 어도비 시스템즈, 닌텐도, IBM, 보잉, 애플",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "애플 북스",
+      "object": "애플",
+      "object_candidates": "마이크로소프트, 에어버스, 보잉, IBM, 닌텐도, 어도비 시스템즈, 인텔, 구글, 노키아, 애플",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Google Drive",
+      "object": "구글",
+      "object_candidates": "닌텐도, IBM, 보잉, 어도비 시스템즈, 노키아, 마이크로소프트, 애플, 인텔, 에어버스, 구글",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 행아웃",
+      "object": "구글",
+      "object_candidates": "에어버스, 마이크로소프트, 어도비 시스템즈, 노키아, IBM, 닌텐도, 인텔, 애플, 보잉, 구글",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 캘린더",
+      "object": "구글",
+      "object_candidates": "마이크로소프트, 애플, IBM, 어도비 시스템즈, 닌텐도, 노키아, 보잉, 인텔, 에어버스, 구글",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "스카이프",
+      "object": "마이크로소프트",
+      "object_candidates": "구글, IBM, 인텔, 에어버스, 애플, 닌텐도, 보잉, 노키아, 어도비 시스템즈, 마이크로소프트",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "어도비 인디자인",
+      "object": "어도비 시스템즈",
+      "object_candidates": "구글, 애플, IBM, 에어버스, 마이크로소프트, 닌텐도, 인텔, 보잉, 노키아, 어도비 시스템즈",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "윈도 스토어",
+      "object": "마이크로소프트",
+      "object_candidates": "에어버스, 노키아, 구글, IBM, 어도비 시스템즈, 닌텐도, 보잉, 애플, 인텔, 마이크로소프트",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "인텔 8051",
+      "object": "인텔",
+      "object_candidates": "IBM, 에어버스, 노키아, 닌텐도, 마이크로소프트, 애플, 구글, 어도비 시스템즈, 보잉, 인텔",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "블로거",
+      "object": "구글",
+      "object_candidates": "애플, 어도비 시스템즈, 노키아, 보잉, 마이크로소프트, 인텔, 닌텐도, 에어버스, IBM, 구글",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 크롬",
+      "object": "구글",
+      "object_candidates": "IBM, 마이크로소프트, 보잉, 닌텐도, 애플, 인텔, 노키아, 에어버스, 어도비 시스템즈, 구글",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 번역",
+      "object": "구글",
+      "object_candidates": "보잉, 어도비 시스템즈, 애플, IBM, 마이크로소프트, 에어버스, 노키아, 인텔, 닌텐도, 구글",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 글래스",
+      "object": "구글",
+      "object_candidates": "마이크로소프트, 보잉, IBM, 노키아, 어도비 시스템즈, 닌텐도, 애플, 인텔, 에어버스, 구글",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "윈도 모바일",
+      "object": "마이크로소프트",
+      "object_candidates": "에어버스, 어도비 시스템즈, 애플, 닌텐도, 보잉, 노키아, 인텔, IBM, 구글, 마이크로소프트",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "윈도 Me",
+      "object": "마이크로소프트",
+      "object_candidates": "닌텐도, 인텔, 보잉, 애플, 노키아, 에어버스, IBM, 어도비 시스템즈, 구글, 마이크로소프트",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마인크래프트",
+      "object": "마이크로소프트",
+      "object_candidates": "구글, 보잉, 닌텐도, IBM, 에어버스, 노키아, 애플, 인텔, 어도비 시스템즈, 마이크로소프트",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "마이크로소프트 시큐리티 에센셜",
+      "object": "마이크로소프트",
+      "object_candidates": "어도비 시스템즈, 애플, 보잉, IBM, 노키아, 구글, 에어버스, 닌텐도, 인텔, 마이크로소프트",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

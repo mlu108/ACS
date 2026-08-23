@@ -1,0 +1,382 @@
+{
+  "name": "occupation",
+  "prompt_templates": [
+    "<subject>の職業は何ですか？答えは：<mask>。",
+    "<subject>は何を生計にしていますか？答えは：<mask>。",
+    "<subject>はどの職業に関連していますか？答えは：<mask>。",
+    "<subject>はどのキャリアを持っていますか？答えは：<mask>。",
+    "<subject>の職業名は何ですか？答えは：<mask>。",
+    " <subject>の職業は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "ハル・ベリー",
+      "object": "モデル",
+      "object_candidates": "政治家, 作曲家, 脚本家, ピアニスト, 小説家, 俳優, 劇作家, 物理学者, 写真家, モデル",
+      "index": 1959,
+      "subject_en": "Halle Berry",
+      "object_en": "model"
+    },
+    {
+      "subject": "ムハンマド・イクバール",
+      "object": "詩人",
+      "object_candidates": "政治家, 脚本家, ジャーナリスト, 小説家, 物理学者, 劇作家, モデル, 数学者, 哲学者, 詩人",
+      "index": 1960,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "poet"
+    },
+    {
+      "subject": "アニー・レノックス",
+      "object": "ソングライター",
+      "object_candidates": "モデル, 政治家, 作曲家, 天文学者, 脚本家, 詩人, 司書, 外交官, 写真家, ソングライター",
+      "index": 1961,
+      "subject_en": "Annie Lennox",
+      "object_en": "songwriter"
+    },
+    {
+      "subject": "ボエティウス",
+      "object": "哲学者",
+      "object_candidates": "天文学者, ピアニスト, 物理学者, 外交官, 小説家, 俳優, 政治家, 詩人, モデル, 哲学者",
+      "index": 1962,
+      "subject_en": "Boethius",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "ミケランジェロ・ブオナローティ",
+      "object": "詩人",
+      "object_candidates": "ピアニスト, 哲学者, 小説家, モデル, 物理学者, 数学者, ジャーナリスト, 政治家, ソングライター, 詩人",
+      "index": 1963,
+      "subject_en": "Michelangelo",
+      "object_en": "poet"
+    },
+    {
+      "subject": "ポリーナ・ガガーリナ",
+      "object": "俳優",
+      "object_candidates": "司書, 外交官, 小説家, 写真家, 天文学者, ジャーナリスト, 脚本家, モデル, 詩人, 俳優",
+      "index": 1964,
+      "subject_en": "Polina Gagarina",
+      "object_en": "actor"
+    },
+    {
+      "subject": "エルフリーデ・イェリネク",
+      "object": "詩人",
+      "object_candidates": "外交官, 天文学者, ソングライター, 司書, モデル, 哲学者, 劇作家, 俳優, 物理学者, 詩人",
+      "index": 1965,
+      "subject_en": "Elfriede Jelinek",
+      "object_en": "poet"
+    },
+    {
+      "subject": "エヴァ・ロンゴリア",
+      "object": "俳優",
+      "object_candidates": "哲学者, 政治家, 詩人, 脚本家, 数学者, ピアニスト, 作曲家, ソングライター, 小説家, 俳優",
+      "index": 1966,
+      "subject_en": "Eva Longoria",
+      "object_en": "actor"
+    },
+    {
+      "subject": "オーギュスタン・ジャン・フレネル",
+      "object": "物理学者",
+      "object_candidates": "ピアニスト, 哲学者, 作曲家, 司書, 劇作家, 写真家, 政治家, ソングライター, 外交官, 物理学者",
+      "index": 1967,
+      "subject_en": "Augustin-Jean Fresnel",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "イアン・カーマ",
+      "object": "政治家",
+      "object_candidates": "哲学者, 外交官, 数学者, 司書, ピアニスト, 物理学者, 俳優, 写真家, 作曲家, 政治家",
+      "index": 1968,
+      "subject_en": "Ian Khama",
+      "object_en": "politician"
+    },
+    {
+      "subject": "フレッド・アステア",
+      "object": "脚本家",
+      "object_candidates": "詩人, 政治家, 物理学者, ジャーナリスト, 小説家, 外交官, 作曲家, 俳優, ソングライター, 脚本家",
+      "index": 1969,
+      "subject_en": "Fred Astaire",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "J・B・プリーストリー",
+      "object": "小説家",
+      "object_candidates": "俳優, 写真家, モデル, 哲学者, 外交官, 物理学者, ピアニスト, ソングライター, 作曲家, 小説家",
+      "index": 1970,
+      "subject_en": "J. B. Priestley",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "ジャック・ヒューストン",
+      "object": "俳優",
+      "object_candidates": "詩人, ソングライター, 小説家, 天文学者, 司書, 哲学者, ジャーナリスト, 政治家, 脚本家, 俳優",
+      "index": 1971,
+      "subject_en": "Jack Huston",
+      "object_en": "actor"
+    },
+    {
+      "subject": "ヴェルナー・ハイゼンベルク",
+      "object": "物理学者",
+      "object_candidates": "作曲家, ジャーナリスト, 俳優, 小説家, 詩人, 数学者, 政治家, ピアニスト, モデル, 物理学者",
+      "index": 1972,
+      "subject_en": "Werner Heisenberg",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "ヒュー・ボネヴィル",
+      "object": "俳優",
+      "object_candidates": "政治家, ジャーナリスト, 作曲家, 外交官, 司書, 写真家, 小説家, ソングライター, ピアニスト, 俳優",
+      "index": 1973,
+      "subject_en": "Hugh Bonneville",
+      "object_en": "actor"
+    },
+    {
+      "subject": "アナス・フォー・ラスムセン",
+      "object": "政治家",
+      "object_candidates": "モデル, 数学者, 詩人, 外交官, 物理学者, ピアニスト, ジャーナリスト, 俳優, ソングライター, 政治家",
+      "index": 1974,
+      "subject_en": "Anders Fogh Rasmussen",
+      "object_en": "politician"
+    },
+    {
+      "subject": "エンリケ・グラナドス",
+      "object": "作曲家",
+      "object_candidates": "天文学者, 政治家, 写真家, 俳優, 哲学者, モデル, ピアニスト, ジャーナリスト, 司書, 作曲家",
+      "index": 1975,
+      "subject_en": "Enrique Granados",
+      "object_en": "composer"
+    },
+    {
+      "subject": "カレン・ギラン",
+      "object": "俳優",
+      "object_candidates": "数学者, ジャーナリスト, 劇作家, 作曲家, ピアニスト, モデル, 外交官, 脚本家, 司書, 俳優",
+      "index": 1976,
+      "subject_en": "Karen Gillan",
+      "object_en": "actor"
+    },
+    {
+      "subject": "ホルヘ・ルイス・ボルヘス",
+      "object": "司書",
+      "object_candidates": "写真家, 政治家, 作曲家, モデル, 数学者, 物理学者, 俳優, ソングライター, 劇作家, 司書",
+      "index": 1977,
+      "subject_en": "Jorge Luis Borges",
+      "object_en": "librarian"
+    },
+    {
+      "subject": "ジャック・オーディアール",
+      "object": "脚本家",
+      "object_candidates": "天文学者, 外交官, 詩人, 哲学者, ピアニスト, 俳優, モデル, 写真家, 司書, 脚本家",
+      "index": 1978,
+      "subject_en": "Jacques Audiard",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "ウォーレン・ベイティ",
+      "object": "脚本家",
+      "object_candidates": "ピアニスト, 物理学者, 天文学者, 外交官, 数学者, 俳優, 哲学者, 小説家, ソングライター, 脚本家",
+      "index": 1979,
+      "subject_en": "Warren Beatty",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "ヨハン・ヴォルフガング・フォン・ゲーテ",
+      "object": "政治家",
+      "object_candidates": "写真家, 作曲家, ソングライター, 脚本家, 外交官, ピアニスト, ジャーナリスト, 劇作家, 詩人, 政治家",
+      "index": 1980,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "politician"
+    },
+    {
+      "subject": "ラシダ・ジョーンズ",
+      "object": "俳優",
+      "object_candidates": "脚本家, ピアニスト, 劇作家, 天文学者, 数学者, 写真家, ジャーナリスト, 司書, 物理学者, 俳優",
+      "index": 1981,
+      "subject_en": "Rashida Jones",
+      "object_en": "actor"
+    },
+    {
+      "subject": "エマニュエル・シャブリエ",
+      "object": "作曲家",
+      "object_candidates": "ピアニスト, 脚本家, 劇作家, 写真家, 俳優, 政治家, 外交官, 数学者, ソングライター, 作曲家",
+      "index": 1982,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "composer"
+    },
+    {
+      "subject": "マルキ・ド・サド",
+      "object": "劇作家",
+      "object_candidates": "ピアニスト, ソングライター, 写真家, 数学者, 政治家, ジャーナリスト, 脚本家, 詩人, 作曲家, 劇作家",
+      "index": 1983,
+      "subject_en": "Marquis de Sade",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "マードゥリー・ディークシト",
+      "object": "俳優",
+      "object_candidates": "哲学者, 脚本家, 数学者, 天文学者, モデル, 写真家, ソングライター, 劇作家, 外交官, 俳優",
+      "index": 1984,
+      "subject_en": "Madhuri Dixit",
+      "object_en": "actor"
+    },
+    {
+      "subject": "アーノ・ペンジアス",
+      "object": "天文学者",
+      "object_candidates": "ピアニスト, 哲学者, 司書, モデル, 作曲家, 写真家, ソングライター, 数学者, 劇作家, 天文学者",
+      "index": 1985,
+      "subject_en": "Arno Allan Penzias",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "ミシェル・ウエルベック",
+      "object": "詩人",
+      "object_candidates": "司書, モデル, 哲学者, ピアニスト, ソングライター, ジャーナリスト, 天文学者, 劇作家, 写真家, 詩人",
+      "index": 1986,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "poet"
+    },
+    {
+      "subject": "アリストテレス",
+      "object": "数学者",
+      "object_candidates": "劇作家, ソングライター, 外交官, 天文学者, ピアニスト, 政治家, 作曲家, 小説家, 俳優, 数学者",
+      "index": 1987,
+      "subject_en": "Aristotle",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "カズオ・イシグロ",
+      "object": "小説家",
+      "object_candidates": "ジャーナリスト, 写真家, モデル, 物理学者, 哲学者, 劇作家, 俳優, 脚本家, ピアニスト, 小説家",
+      "index": 1988,
+      "subject_en": "Kazuo Ishiguro",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "ルー・リード",
+      "object": "写真家",
+      "object_candidates": "数学者, 劇作家, 天文学者, 哲学者, 政治家, モデル, ジャーナリスト, 物理学者, 司書, 写真家",
+      "index": 1989,
+      "subject_en": "Lou Reed",
+      "object_en": "photographer"
+    },
+    {
+      "subject": "クレメンス・フォン・メッテルニヒ",
+      "object": "外交官",
+      "object_candidates": "哲学者, 詩人, 劇作家, 政治家, 司書, ジャーナリスト, 小説家, 俳優, モデル, 外交官",
+      "index": 1990,
+      "subject_en": "Klemens von Metternich",
+      "object_en": "diplomat"
+    },
+    {
+      "subject": "ユスティヌス1世",
+      "object": "政治家",
+      "object_candidates": "脚本家, 哲学者, 外交官, 劇作家, 俳優, 数学者, 物理学者, モデル, ピアニスト, 政治家",
+      "index": 1991,
+      "subject_en": "Justin I",
+      "object_en": "politician"
+    },
+    {
+      "subject": "ヒース・レジャー",
+      "object": "俳優",
+      "object_candidates": "写真家, ジャーナリスト, 政治家, 物理学者, ソングライター, 外交官, 天文学者, 脚本家, 司書, 俳優",
+      "index": 1992,
+      "subject_en": "Heath Ledger",
+      "object_en": "actor"
+    },
+    {
+      "subject": "アゴスティニョ・ネト",
+      "object": "詩人",
+      "object_candidates": "外交官, 劇作家, 脚本家, ピアニスト, 司書, 俳優, ソングライター, モデル, 数学者, 詩人",
+      "index": 1993,
+      "subject_en": "Agostinho Neto",
+      "object_en": "poet"
+    },
+    {
+      "subject": "エドガー・アラン・ポー",
+      "object": "劇作家",
+      "object_candidates": "哲学者, ソングライター, モデル, 物理学者, 数学者, 天文学者, 外交官, 詩人, 写真家, 劇作家",
+      "index": 1994,
+      "subject_en": "Edgar Allan Poe",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "アレクサンドル・ソルジェニーツィン",
+      "object": "詩人",
+      "object_candidates": "作曲家, 政治家, 哲学者, 天文学者, 物理学者, 外交官, 劇作家, モデル, 司書, 詩人",
+      "index": 1995,
+      "subject_en": "Aleksandr Solzhenitsyn",
+      "object_en": "poet"
+    },
+    {
+      "subject": "スティーヴン・コルベア",
+      "object": "ジャーナリスト",
+      "object_candidates": "作曲家, 外交官, 哲学者, モデル, ピアニスト, 政治家, 天文学者, 俳優, 物理学者, ジャーナリスト",
+      "index": 1996,
+      "subject_en": "Stephen Colbert",
+      "object_en": "journalist"
+    },
+    {
+      "subject": "ホイットニー・ヒューストン",
+      "object": "作曲家",
+      "object_candidates": "哲学者, 外交官, 天文学者, 脚本家, 物理学者, 写真家, 数学者, ジャーナリスト, 政治家, 作曲家",
+      "index": 1997,
+      "subject_en": "Whitney Houston",
+      "object_en": "composer"
+    },
+    {
+      "subject": "ロペ・デ・ベガ",
+      "object": "劇作家",
+      "object_candidates": "数学者, 司書, モデル, 政治家, 物理学者, 作曲家, 写真家, 天文学者, ソングライター, 劇作家",
+      "index": 1998,
+      "subject_en": "Lope de Vega",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "ジャネット・ジャクソン",
+      "object": "モデル",
+      "object_candidates": "外交官, ジャーナリスト, 俳優, ピアニスト, 写真家, 司書, 作曲家, 物理学者, 政治家, モデル",
+      "index": 1999,
+      "subject_en": "Janet Jackson",
+      "object_en": "model"
+    },
+    {
+      "subject": "フランシス・プーランク",
+      "object": "ピアニスト",
+      "object_candidates": "劇作家, 政治家, 俳優, 作曲家, 詩人, 哲学者, 小説家, ジャーナリスト, ソングライター, ピアニスト",
+      "index": 2000,
+      "subject_en": "Francis Poulenc",
+      "object_en": "pianist"
+    },
+    {
+      "subject": "ジェイムズ・フェニモア・クーパー",
+      "object": "小説家",
+      "object_candidates": "モデル, 数学者, 脚本家, 作曲家, 物理学者, ソングライター, 俳優, 詩人, 司書, 小説家",
+      "index": 2001,
+      "subject_en": "James Fenimore Cooper",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "ピエール・アベラール",
+      "object": "哲学者",
+      "object_candidates": "外交官, 劇作家, モデル, 詩人, 俳優, 政治家, ソングライター, ジャーナリスト, 天文学者, 哲学者",
+      "index": 2002,
+      "subject_en": "Peter Abelard",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "ゲオルギー・リヴォフ",
+      "object": "政治家",
+      "object_candidates": "ソングライター, ピアニスト, 小説家, 司書, 哲学者, 脚本家, 俳優, 写真家, 数学者, 政治家",
+      "index": 2003,
+      "subject_en": "Georgy Lvov",
+      "object_en": "politician"
+    },
+    {
+      "subject": "ハワード・フィリップス・ラヴクラフト",
+      "object": "ジャーナリスト",
+      "object_candidates": "詩人, 司書, ソングライター, 小説家, 物理学者, 脚本家, 哲学者, 作曲家, 外交官, ジャーナリスト",
+      "index": 2004,
+      "subject_en": "H. P. Lovecraft",
+      "object_en": "journalist"
+    }
+  ],
+  "relation_id": "P106"
+}

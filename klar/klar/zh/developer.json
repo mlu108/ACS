@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "<subject>的开发公司是哪家？答案是：<mask>",
+    "<subject>是由谁开发的？答案是：<mask>",
+    "负责开发<subject>的公司是哪家？答案是：<mask>",
+    "<subject>是由谁开发的？答案是：<mask>",
+    "哪个组织因<subject>的开发而受到称赞？答案是：<mask>",
+    "<subject>的开发公司名叫<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "macOS",
+      "object": "苹果公司",
+      "object_candidates": "波音, 国际商业机器股份有限公司, Google, Adobe, 诺基亚, 英特尔, 任天堂, 微软, 空中客车, 苹果公司",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iOS",
+      "object": "苹果公司",
+      "object_candidates": "国际商业机器股份有限公司, Google, Adobe, 任天堂, 波音, 空中客车, 诺基亚, 英特尔, 微软, 苹果公司",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Safari",
+      "object": "苹果公司",
+      "object_candidates": "诺基亚, 空中客车, 波音, 任天堂, Adobe, Google, 英特尔, 国际商业机器股份有限公司, 微软, 苹果公司",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "后记语言",
+      "object": "Adobe",
+      "object_candidates": "英特尔, 空中客车, 波音, 诺基亚, Google, 国际商业机器股份有限公司, 苹果公司, 微软, 任天堂, Adobe",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Windows Vista",
+      "object": "微软",
+      "object_candidates": "任天堂, 诺基亚, Google, Adobe, 苹果公司, 波音, 英特尔, 空中客车, 国际商业机器股份有限公司, 微软",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "IE浏览器",
+      "object": "微软",
+      "object_candidates": "苹果公司, Google, 波音, 国际商业机器股份有限公司, 任天堂, 空中客车, Adobe, 诺基亚, 英特尔, 微软",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-17轰炸机",
+      "object": "波音",
+      "object_candidates": "苹果公司, 空中客车, 任天堂, 诺基亚, Google, 英特尔, 微软, Adobe, 国际商业机器股份有限公司, 波音",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "DirectX",
+      "object": "微软",
+      "object_candidates": "苹果公司, 任天堂, 波音, Adobe, 国际商业机器股份有限公司, Google, 空中客车, 诺基亚, 英特尔, 微软",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows",
+      "object": "微软",
+      "object_candidates": "任天堂, 英特尔, Adobe, 空中客车, 苹果公司, Google, 诺基亚, 国际商业机器股份有限公司, 波音, 微软",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox 360",
+      "object": "微软",
+      "object_candidates": "苹果公司, Google, 任天堂, Adobe, 空中客车, 诺基亚, 波音, 国际商业机器股份有限公司, 英特尔, 微软",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox One",
+      "object": "微软",
+      "object_candidates": "空中客车, Adobe, 波音, 诺基亚, 任天堂, 苹果公司, 英特尔, Google, 国际商业机器股份有限公司, 微软",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "微软磁碟作业系统",
+      "object": "微软",
+      "object_candidates": "Adobe, 诺基亚, 苹果公司, Google, 波音, 空中客车, 任天堂, 国际商业机器股份有限公司, 英特尔, 微软",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Fortran",
+      "object": "国际商业机器股份有限公司",
+      "object_candidates": "Adobe, 空中客车, Google, 苹果公司, 英特尔, 任天堂, 微软, 诺基亚, 波音, 国际商业机器股份有限公司",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "Windows 1.0",
+      "object": "微软",
+      "object_candidates": "波音, 任天堂, 诺基亚, 英特尔, Google, 国际商业机器股份有限公司, 苹果公司, 空中客车, Adobe, 微软",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "任天堂3DS",
+      "object": "任天堂",
+      "object_candidates": "诺基亚, 空中客车, 波音, 微软, 英特尔, 苹果公司, Adobe, 国际商业机器股份有限公司, Google, 任天堂",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "英特尔80386",
+      "object": "英特尔",
+      "object_candidates": "苹果公司, 国际商业机器股份有限公司, 诺基亚, 空中客车, 任天堂, Google, 微软, 波音, Adobe, 英特尔",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "视窗10",
+      "object": "微软",
+      "object_candidates": "诺基亚, 任天堂, 国际商业机器股份有限公司, 苹果公司, 英特尔, 波音, 空中客车, Adobe, Google, 微软",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Excel",
+      "object": "微软",
+      "object_candidates": "诺基亚, 英特尔, 波音, 苹果公司, Adobe, 任天堂, 国际商业机器股份有限公司, Google, 空中客车, 微软",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Office",
+      "object": "微软",
+      "object_candidates": "英特尔, 苹果公司, Adobe, Google, 任天堂, 波音, 空中客车, 诺基亚, 国际商业机器股份有限公司, 微软",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Word",
+      "object": "微软",
+      "object_candidates": "Adobe, 波音, 英特尔, 空中客车, 国际商业机器股份有限公司, 任天堂, 诺基亚, Google, 苹果公司, 微软",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "麦金塔操作系统",
+      "object": "苹果公司",
+      "object_candidates": "诺基亚, 任天堂, 微软, 空中客车, 国际商业机器股份有限公司, Adobe, 英特尔, 波音, Google, 苹果公司",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "视窗95",
+      "object": "微软",
+      "object_candidates": "国际商业机器股份有限公司, Adobe, 英特尔, Google, 诺基亚, 空中客车, 苹果公司, 任天堂, 波音, 微软",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "微软视觉工作室",
+      "object": "微软",
+      "object_candidates": "苹果公司, Adobe, 国际商业机器股份有限公司, 波音, 任天堂, 英特尔, Google, 空中客车, 诺基亚, 微软",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "视窗98",
+      "object": "微软",
+      "object_candidates": "波音, 国际商业机器股份有限公司, 苹果公司, 任天堂, 诺基亚, 空中客车, Adobe, Google, 英特尔, 微软",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe Acrobat",
+      "object": "Adobe",
+      "object_candidates": "诺基亚, 苹果公司, 微软, 波音, 空中客车, 国际商业机器股份有限公司, Google, 英特尔, 任天堂, Adobe",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "可移植文档格式",
+      "object": "Adobe",
+      "object_candidates": "国际商业机器股份有限公司, 任天堂, 英特尔, 微软, 诺基亚, Google, 苹果公司, 波音, 空中客车, Adobe",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Intel Core 2",
+      "object": "英特尔",
+      "object_candidates": "诺基亚, 波音, Google, 任天堂, Adobe, 苹果公司, 国际商业机器股份有限公司, 空中客车, 微软, 英特尔",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Adobe Flash",
+      "object": "Adobe",
+      "object_candidates": "空中客车, 苹果公司, 波音, 任天堂, 诺基亚, 英特尔, 国际商业机器股份有限公司, Google, 微软, Adobe",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "塞班",
+      "object": "诺基亚",
+      "object_candidates": "空中客车, 微软, 苹果公司, 国际商业机器股份有限公司, 英特尔, Google, 任天堂, 波音, Adobe, 诺基亚",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "视窗电话",
+      "object": "微软",
+      "object_candidates": "Google, 空中客车, 国际商业机器股份有限公司, 任天堂, 波音, 苹果公司, 英特尔, Adobe, 诺基亚, 微软",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "奔腾",
+      "object": "英特尔",
+      "object_candidates": "微软, 国际商业机器股份有限公司, 波音, Google, 任天堂, 空中客车, 苹果公司, Adobe, 诺基亚, 英特尔",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Adobe Photoshop",
+      "object": "Adobe",
+      "object_candidates": "苹果公司, 英特尔, 波音, 任天堂, 诺基亚, 微软, 空中客车, 国际商业机器股份有限公司, Google, Adobe",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "QuickTime",
+      "object": "苹果公司",
+      "object_candidates": "波音, 国际商业机器股份有限公司, 英特尔, Adobe, Google, 空中客车, 任天堂, 诺基亚, 微软, 苹果公司",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Wii U",
+      "object": "任天堂",
+      "object_candidates": "国际商业机器股份有限公司, 苹果公司, Google, 波音, 英特尔, 诺基亚, 微软, 空中客车, Adobe, 任天堂",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "Windows XP",
+      "object": "微软",
+      "object_candidates": "诺基亚, 波音, 任天堂, 英特尔, Google, 国际商业机器股份有限公司, 苹果公司, 空中客车, Adobe, 微软",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "视窗2000",
+      "object": "微软",
+      "object_candidates": "Adobe, 任天堂, 英特尔, 空中客车, 诺基亚, 苹果公司, Google, 波音, 国际商业机器股份有限公司, 微软",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "NTFS",
+      "object": "微软",
+      "object_candidates": "英特尔, 波音, 苹果公司, Adobe, 任天堂, 空中客车, 诺基亚, Google, 国际商业机器股份有限公司, 微软",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "视窗8",
+      "object": "微软",
+      "object_candidates": "英特尔, Google, Adobe, 诺基亚, 任天堂, 空中客车, 波音, 苹果公司, 国际商业机器股份有限公司, 微软",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "iPod",
+      "object": "苹果公司",
+      "object_candidates": "微软, Google, 国际商业机器股份有限公司, 英特尔, Adobe, 空中客车, 诺基亚, 任天堂, 波音, 苹果公司",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "波音, 空中客车, 微软, 诺基亚, 苹果公司, 英特尔, 国际商业机器股份有限公司, Adobe, 任天堂, Google",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google地图",
+      "object": "Google",
+      "object_candidates": "苹果公司, 诺基亚, 国际商业机器股份有限公司, 空中客车, 任天堂, 微软, Adobe, 波音, 英特尔, Google",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "视窗即时通讯",
+      "object": "微软",
+      "object_candidates": "波音, 英特尔, Adobe, 苹果公司, 国际商业机器股份有限公司, Google, 空中客车, 任天堂, 诺基亚, 微软",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google街景",
+      "object": "Google",
+      "object_candidates": "波音, Adobe, 诺基亚, 微软, 空中客车, 英特尔, 国际商业机器股份有限公司, 任天堂, 苹果公司, Google",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "视窗媒体播放器",
+      "object": "微软",
+      "object_candidates": "英特尔, 任天堂, 空中客车, Adobe, 波音, 国际商业机器股份有限公司, 诺基亚, 苹果公司, Google, 微软",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": ".NET框架",
+      "object": "微软",
+      "object_candidates": "Adobe, 英特尔, Google, 诺基亚, 空中客车, 任天堂, 国际商业机器股份有限公司, 波音, 苹果公司, 微软",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Update",
+      "object": "微软",
+      "object_candidates": "波音, Adobe, 英特尔, 苹果公司, 空中客车, 国际商业机器股份有限公司, 诺基亚, 任天堂, Google, 微软",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-52同温层堡垒轰炸机",
+      "object": "波音",
+      "object_candidates": "空中客车, 苹果公司, 任天堂, 国际商业机器股份有限公司, 微软, Adobe, 英特尔, Google, 诺基亚, 波音",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "iTunes",
+      "object": "苹果公司",
+      "object_candidates": "任天堂, 微软, 英特尔, Google, 诺基亚, 国际商业机器股份有限公司, 空中客车, Adobe, 波音, 苹果公司",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "视窗2.0",
+      "object": "微软",
+      "object_candidates": "苹果公司, 任天堂, 诺基亚, 波音, 国际商业机器股份有限公司, 英特尔, 空中客车, Adobe, Google, 微软",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google",
+      "object_candidates": "Adobe, 微软, 空中客车, 苹果公司, 诺基亚, 国际商业机器股份有限公司, 英特尔, 任天堂, 波音, Google",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "视窗7",
+      "object": "微软",
+      "object_candidates": "Adobe, 诺基亚, 空中客车, 苹果公司, 任天堂, 国际商业机器股份有限公司, Google, 波音, 英特尔, 微软",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "空中客车A350",
+      "object": "空中客车",
+      "object_candidates": "苹果公司, Adobe, 任天堂, 英特尔, 诺基亚, Google, 波音, 国际商业机器股份有限公司, 微软, 空中客车",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "Picasa",
+      "object": "Google",
+      "object_candidates": "诺基亚, 任天堂, 波音, 空中客车, 国际商业机器股份有限公司, Adobe, 英特尔, 微软, 苹果公司, Google",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "谷歌地球",
+      "object": "Google",
+      "object_candidates": "任天堂, 波音, 微软, 国际商业机器股份有限公司, 空中客车, 诺基亚, Adobe, 英特尔, 苹果公司, Google",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Play",
+      "object": "Google",
+      "object_candidates": "空中客车, 英特尔, 国际商业机器股份有限公司, 诺基亚, Adobe, 苹果公司, 微软, 任天堂, 波音, Google",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "iCloud",
+      "object": "苹果公司",
+      "object_candidates": "诺基亚, 任天堂, 微软, Google, Adobe, 英特尔, 空中客车, 国际商业机器股份有限公司, 波音, 苹果公司",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Siri",
+      "object": "苹果公司",
+      "object_candidates": "英特尔, 国际商业机器股份有限公司, 诺基亚, 微软, Adobe, 任天堂, 波音, 空中客车, Google, 苹果公司",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "App Store",
+      "object": "苹果公司",
+      "object_candidates": "英特尔, 国际商业机器股份有限公司, Adobe, 波音, 任天堂, Google, 诺基亚, 微软, 空中客车, 苹果公司",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Microsoft Access",
+      "object": "微软",
+      "object_candidates": "英特尔, 任天堂, 空中客车, 苹果公司, 波音, Adobe, Google, 国际商业机器股份有限公司, 诺基亚, 微软",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "苹果手表",
+      "object": "苹果公司",
+      "object_candidates": "Google, 微软, 空中客车, 英特尔, 诺基亚, Adobe, 任天堂, 国际商业机器股份有限公司, 波音, 苹果公司",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "IBooks",
+      "object": "苹果公司",
+      "object_candidates": "微软, 空中客车, 波音, 国际商业机器股份有限公司, 任天堂, Adobe, 英特尔, Google, 诺基亚, 苹果公司",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "任天堂, 国际商业机器股份有限公司, 波音, Adobe, 诺基亚, 微软, 苹果公司, 英特尔, 空中客车, Google",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google环聊",
+      "object": "Google",
+      "object_candidates": "空中客车, 微软, Adobe, 诺基亚, 国际商业机器股份有限公司, 任天堂, 英特尔, 苹果公司, 波音, Google",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google日历",
+      "object": "Google",
+      "object_candidates": "微软, 苹果公司, 国际商业机器股份有限公司, Adobe, 任天堂, 诺基亚, 波音, 英特尔, 空中客车, Google",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Skype",
+      "object": "微软",
+      "object_candidates": "Google, 国际商业机器股份有限公司, 英特尔, 空中客车, 苹果公司, 任天堂, 波音, 诺基亚, Adobe, 微软",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe InDesign",
+      "object": "Adobe",
+      "object_candidates": "Google, 苹果公司, 国际商业机器股份有限公司, 空中客车, 微软, 任天堂, 英特尔, 波音, 诺基亚, Adobe",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "微软商店",
+      "object": "微软",
+      "object_candidates": "空中客车, 诺基亚, Google, 国际商业机器股份有限公司, Adobe, 任天堂, 波音, 苹果公司, 英特尔, 微软",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Intel 8051",
+      "object": "英特尔",
+      "object_candidates": "国际商业机器股份有限公司, 空中客车, 诺基亚, 任天堂, 微软, 苹果公司, Google, Adobe, 波音, 英特尔",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "苹果公司, Adobe, 诺基亚, 波音, 微软, 英特尔, 任天堂, 空中客车, 国际商业机器股份有限公司, Google",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "谷歌浏览器",
+      "object": "Google",
+      "object_candidates": "国际商业机器股份有限公司, 微软, 波音, 任天堂, 苹果公司, 英特尔, 诺基亚, 空中客车, Adobe, Google",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "谷歌翻译",
+      "object": "Google",
+      "object_candidates": "波音, Adobe, 苹果公司, 国际商业机器股份有限公司, 微软, 空中客车, 诺基亚, 英特尔, 任天堂, Google",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "谷歌眼镜",
+      "object": "Google",
+      "object_candidates": "微软, 波音, 国际商业机器股份有限公司, 诺基亚, Adobe, 任天堂, 苹果公司, 英特尔, 空中客车, Google",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Mobile",
+      "object": "微软",
+      "object_candidates": "空中客车, Adobe, 苹果公司, 任天堂, 波音, 诺基亚, 英特尔, 国际商业机器股份有限公司, Google, 微软",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Me",
+      "object": "微软",
+      "object_candidates": "任天堂, 英特尔, 波音, 苹果公司, 诺基亚, 空中客车, 国际商业机器股份有限公司, Adobe, Google, 微软",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "我的世界",
+      "object": "微软",
+      "object_candidates": "Google, 波音, 任天堂, 国际商业机器股份有限公司, 空中客车, 诺基亚, 苹果公司, 英特尔, Adobe, 微软",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Security Essentials",
+      "object": "微软",
+      "object_candidates": "Adobe, 苹果公司, 波音, 国际商业机器股份有限公司, 诺基亚, Google, 空中客车, 任天堂, 英特尔, 微软",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

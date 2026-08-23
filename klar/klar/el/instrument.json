@@ -1,0 +1,382 @@
+{
+  "name": "instrument",
+  "prompt_templates": [
+    "Ποιο μουσικό όργανο παίζει ο <subject>; Η απάντηση είναι: <mask>",
+    "Ποιο μουσικό όργανο παίζεται από τον <subject>; Η απάντηση είναι: <mask>",
+    "Τι χρησιμοποιεί ο <subject> για να δημιουργήσει μουσική; Η απάντηση είναι: <mask>",
+    "Για ποιο όργανο είναι γνωστός ο <subject> που παίζει; Η απάντηση είναι: <mask>",
+    "Ποιο μουσικό εργαλείο είναι εξπέρ στο <subject>; Η απάντηση είναι: <mask>",
+    " Το μουσικό όργανο που παίζει το <subject> ονομάζεται <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Νατ Κινγκ Κόουλ",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, κιθάρα, Φυσαρμόνικα, κλαρινέτο, Βιόλα, πιάνο",
+      "index": 4757,
+      "subject_en": "Nat King Cole",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Τζίμι Πέιτζ",
+      "object": "Βιολί",
+      "object_candidates": "κιθάρα, κλαρινέτο, Βιόλα, πιάνο, Φυσαρμόνικα, Βιολί",
+      "index": 4758,
+      "subject_en": "Jimmy Page",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Νηλ Γιανγκ",
+      "object": "Φυσαρμόνικα",
+      "object_candidates": "κλαρινέτο, Βιολί, πιάνο, κιθάρα, Βιόλα, Φυσαρμόνικα",
+      "index": 4759,
+      "subject_en": "Neil Young",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "Αρίθα Φράνκλιν",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, Φυσαρμόνικα, Βιόλα, κλαρινέτο, κιθάρα, πιάνο",
+      "index": 4760,
+      "subject_en": "Aretha Franklin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Λέοναρντ Μπερνστάιν",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, Βιολί, Βιόλα, κιθάρα, κλαρινέτο, πιάνο",
+      "index": 4761,
+      "subject_en": "Leonard Bernstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Έρικ Κλάπτον",
+      "object": "Βιολί",
+      "object_candidates": "Βιόλα, κλαρινέτο, κιθάρα, πιάνο, Φυσαρμόνικα, Βιολί",
+      "index": 4762,
+      "subject_en": "Eric Clapton",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Εμμανυέλ Σαμπριέ",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, Βιόλα, Φυσαρμόνικα, κλαρινέτο, κιθάρα, πιάνο",
+      "index": 4763,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Σερζ Γκαινσμπούρ",
+      "object": "κιθάρα",
+      "object_candidates": "Βιόλα, κλαρινέτο, πιάνο, Φυσαρμόνικα, Βιολί, κιθάρα",
+      "index": 4764,
+      "subject_en": "Serge Gainsbourg",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Έντβαρ Γκρηγκ",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, κλαρινέτο, Βιολί, Βιόλα, κιθάρα, πιάνο",
+      "index": 4765,
+      "subject_en": "Edvard Grieg",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Ιτζάκ Πέρλμαν",
+      "object": "Βιολί",
+      "object_candidates": "κλαρινέτο, Φυσαρμόνικα, κιθάρα, Βιόλα, πιάνο, Βιολί",
+      "index": 4766,
+      "subject_en": "Itzhak Perlman",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Τζορτζ Μάρτιν",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, Βιόλα, Φυσαρμόνικα, κλαρινέτο, κιθάρα, πιάνο",
+      "index": 4767,
+      "subject_en": "George Martin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Μπομπ Ντίλαν",
+      "object": "Φυσαρμόνικα",
+      "object_candidates": "κλαρινέτο, Βιόλα, πιάνο, Βιολί, κιθάρα, Φυσαρμόνικα",
+      "index": 4768,
+      "subject_en": "Bob Dylan",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "Μάικ Σίνοντα",
+      "object": "κιθάρα",
+      "object_candidates": "Βιόλα, Βιολί, κλαρινέτο, πιάνο, Φυσαρμόνικα, κιθάρα",
+      "index": 4769,
+      "subject_en": "Mike Shinoda",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Τζάρεντ Λέτο",
+      "object": "κιθάρα",
+      "object_candidates": "Φυσαρμόνικα, Βιολί, κλαρινέτο, πιάνο, Βιόλα, κιθάρα",
+      "index": 4770,
+      "subject_en": "Jared Leto",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Βόλφγκανγκ Αμαντέους Μότσαρτ",
+      "object": "Βιόλα",
+      "object_candidates": "πιάνο, Φυσαρμόνικα, κλαρινέτο, Βιολί, κιθάρα, Βιόλα",
+      "index": 4771,
+      "subject_en": "Wolfgang Amadeus Mozart",
+      "object_en": "viola"
+    },
+    {
+      "subject": "Φίλιπ Γκλας",
+      "object": "πιάνο",
+      "object_candidates": "Βιόλα, Φυσαρμόνικα, Βιολί, κιθάρα, κλαρινέτο, πιάνο",
+      "index": 4772,
+      "subject_en": "Philip Glass",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Γκιουζέπε Ταρτίνι",
+      "object": "Βιολί",
+      "object_candidates": "Βιόλα, πιάνο, κιθάρα, κλαρινέτο, Φυσαρμόνικα, Βιολί",
+      "index": 4773,
+      "subject_en": "Giuseppe Tartini",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Φρανσίς Πουλένκ",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, Βιολί, Βιόλα, κιθάρα, κλαρινέτο, πιάνο",
+      "index": 4774,
+      "subject_en": "Francis Poulenc",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Μπραντ Ντέλσον",
+      "object": "κιθάρα",
+      "object_candidates": "Βιόλα, Φυσαρμόνικα, Βιολί, κλαρινέτο, πιάνο, κιθάρα",
+      "index": 4775,
+      "subject_en": "Brad Delson",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Lady Gaga",
+      "object": "πιάνο",
+      "object_candidates": "κλαρινέτο, Φυσαρμόνικα, κιθάρα, Βιόλα, Βιολί, πιάνο",
+      "index": 4776,
+      "subject_en": "Lady Gaga",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Έλβις Πρίσλεϊ",
+      "object": "κιθάρα",
+      "object_candidates": "πιάνο, Βιολί, Βιόλα, κλαρινέτο, Φυσαρμόνικα, κιθάρα",
+      "index": 4777,
+      "subject_en": "Elvis Presley",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Γιόχαν Στράους (πατέρας)",
+      "object": "Βιολί",
+      "object_candidates": "κιθάρα, πιάνο, Βιόλα, Φυσαρμόνικα, κλαρινέτο, Βιολί",
+      "index": 4778,
+      "subject_en": "Johann Strauss I",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Λέοναρντ Κόεν",
+      "object": "κιθάρα",
+      "object_candidates": "πιάνο, κλαρινέτο, Φυσαρμόνικα, Βιολί, Βιόλα, κιθάρα",
+      "index": 4779,
+      "subject_en": "Leonard Cohen",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Τζορτζ Γκέρσουιν",
+      "object": "πιάνο",
+      "object_candidates": "Βιόλα, κιθάρα, Βιολί, Φυσαρμόνικα, κλαρινέτο, πιάνο",
+      "index": 4780,
+      "subject_en": "George Gershwin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Ερνέστ Σοσόν",
+      "object": "πιάνο",
+      "object_candidates": "κλαρινέτο, Βιολί, Βιόλα, Φυσαρμόνικα, κιθάρα, πιάνο",
+      "index": 4781,
+      "subject_en": "Ernest Chausson",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Σελίν Ντιόν",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, Βιόλα, Φυσαρμόνικα, κιθάρα, κλαρινέτο, πιάνο",
+      "index": 4782,
+      "subject_en": "Céline Dion",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Μπρους Σπρίνγκστιν",
+      "object": "Φυσαρμόνικα",
+      "object_candidates": "κλαρινέτο, κιθάρα, Βιολί, πιάνο, Βιόλα, Φυσαρμόνικα",
+      "index": 4783,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "Καρλ Τσέρνι",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, κλαρινέτο, Βιολί, Βιόλα, κιθάρα, πιάνο",
+      "index": 4784,
+      "subject_en": "Carl Czerny",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Αντόνιο Βιβάλντι",
+      "object": "Βιολί",
+      "object_candidates": "Βιόλα, Φυσαρμόνικα, πιάνο, κλαρινέτο, κιθάρα, Βιολί",
+      "index": 4785,
+      "subject_en": "Antonio Vivaldi",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Τζίμι Χέντριξ",
+      "object": "κιθάρα",
+      "object_candidates": "κλαρινέτο, Βιόλα, Βιολί, Φυσαρμόνικα, πιάνο, κιθάρα",
+      "index": 4786,
+      "subject_en": "Jimi Hendrix",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Πάουλ Χίντεμιτ",
+      "object": "Βιόλα",
+      "object_candidates": "Φυσαρμόνικα, κλαρινέτο, κιθάρα, πιάνο, Βιολί, Βιόλα",
+      "index": 4787,
+      "subject_en": "Paul Hindemith",
+      "object_en": "viola"
+    },
+    {
+      "subject": "Τζον Κολτρέιν",
+      "object": "κλαρινέτο",
+      "object_candidates": "κιθάρα, Βιολί, πιάνο, Φυσαρμόνικα, Βιόλα, κλαρινέτο",
+      "index": 4788,
+      "subject_en": "John Coltrane",
+      "object_en": "clarinet"
+    },
+    {
+      "subject": "Τζεόρτζε Ενέσκου",
+      "object": "Βιολί",
+      "object_candidates": "κλαρινέτο, πιάνο, Φυσαρμόνικα, Βιόλα, κιθάρα, Βιολί",
+      "index": 4789,
+      "subject_en": "George Enescu",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Πωλ ΜακΚάρτνεϋ",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, κιθάρα, Φυσαρμόνικα, Βιόλα, κλαρινέτο, πιάνο",
+      "index": 4790,
+      "subject_en": "Paul McCartney",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Τομάζο Αλμπινόνι",
+      "object": "Βιολί",
+      "object_candidates": "κιθάρα, κλαρινέτο, Φυσαρμόνικα, πιάνο, Βιόλα, Βιολί",
+      "index": 4791,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Ρόμπερτ Σούμαν",
+      "object": "πιάνο",
+      "object_candidates": "κλαρινέτο, Βιόλα, Φυσαρμόνικα, κιθάρα, Βιολί, πιάνο",
+      "index": 4792,
+      "subject_en": "Robert Schumann",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Άρτουρ Ρούμπινσταϊν",
+      "object": "πιάνο",
+      "object_candidates": "κλαρινέτο, Φυσαρμόνικα, Βιολί, κιθάρα, Βιόλα, πιάνο",
+      "index": 4793,
+      "subject_en": "Arthur Rubinstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Θελόνιους Μονκ",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, Βιόλα, κιθάρα, Βιολί, κλαρινέτο, πιάνο",
+      "index": 4794,
+      "subject_en": "Thelonious Monk",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Μάικ Σίνοντα",
+      "object": "πιάνο",
+      "object_candidates": "Φυσαρμόνικα, Βιολί, κιθάρα, κλαρινέτο, Βιόλα, πιάνο",
+      "index": 4795,
+      "subject_en": "Mike Shinoda",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Έρικ Κλάπτον",
+      "object": "κιθάρα",
+      "object_candidates": "Φυσαρμόνικα, πιάνο, Βιόλα, κλαρινέτο, Βιολί, κιθάρα",
+      "index": 4796,
+      "subject_en": "Eric Clapton",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "Φραντς Λιστ",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, κλαρινέτο, κιθάρα, Βιόλα, Φυσαρμόνικα, πιάνο",
+      "index": 4797,
+      "subject_en": "Franz Liszt",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Στίβι Γουόντερ",
+      "object": "Φυσαρμόνικα",
+      "object_candidates": "κιθάρα, Βιόλα, πιάνο, Βιολί, κλαρινέτο, Φυσαρμόνικα",
+      "index": 4798,
+      "subject_en": "Stevie Wonder",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "Τζάρεντ Λέτο",
+      "object": "Βιολί",
+      "object_candidates": "Φυσαρμόνικα, Βιόλα, κιθάρα, κλαρινέτο, πιάνο, Βιολί",
+      "index": 4799,
+      "subject_en": "Jared Leto",
+      "object_en": "violin"
+    },
+    {
+      "subject": "Γιοχάνες Μπραμς",
+      "object": "πιάνο",
+      "object_candidates": "Βιόλα, Φυσαρμόνικα, κλαρινέτο, κιθάρα, Βιολί, πιάνο",
+      "index": 4800,
+      "subject_en": "Johannes Brahms",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Ρέι Τσαρλς",
+      "object": "πιάνο",
+      "object_candidates": "Βιολί, κλαρινέτο, Φυσαρμόνικα, κιθάρα, Βιόλα, πιάνο",
+      "index": 4801,
+      "subject_en": "Ray Charles",
+      "object_en": "piano"
+    },
+    {
+      "subject": "Μπράιαν Μέι",
+      "object": "κιθάρα",
+      "object_candidates": "Βιολί, πιάνο, Βιόλα, Φυσαρμόνικα, κλαρινέτο, κιθάρα",
+      "index": 4802,
+      "subject_en": "Brian May",
+      "object_en": "guitar"
+    }
+  ],
+  "relation_id": "P1303"
+}

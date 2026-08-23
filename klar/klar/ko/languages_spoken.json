@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "<subject>가 의사 통신에 사용한 언어는 무엇입니까? 대답: <mask>",
+    "<subject>가 어떤 언어로 말했습니까? 대답: <mask>",
+    "<subject>가 무슨 언어로 말했습니까? 대답: <mask>",
+    "<subject>가 의사 소통에 사용한 언어는 무엇입니까? 대답: <mask>",
+    "<subject>가 사용한 언어는 무엇이었습니까? 대답: <mask>",
+    " <subject>가 사용하는 언어는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "찰스 브론슨",
+      "object": "영어",
+      "object_candidates": "헝가리어, 히브리어, 러시아어, 독일어, 스웨덴어, 이탈리아어, 이집트어, 노르웨이어, 폴란드어, 영어",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "윌리엄 제임스",
+      "object": "영어",
+      "object_candidates": "헝가리어, 인도네시아어, 노르웨이어, 이집트어, 프랑스어, 페르시아어, 스웨덴어, 루마니아어, 이탈리아어, 영어",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "에르나 솔베르그",
+      "object": "노르웨이어",
+      "object_candidates": "라틴어, 이집트어, 인도네시아어, 페르시아어, 아제르바이잔어, 독일어, 영어, 한국어, 프랑스어, 노르웨이어",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "에프라임 카치르",
+      "object": "히브리어",
+      "object_candidates": "한국어, 스페인어, 스웨덴어, 이탈리아어, 루마니아어, 영어, 폴란드어, 라틴어, 중국어, 히브리어",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "박찬욱",
+      "object": "한국어",
+      "object_candidates": "프랑스어, 중국어, 독일어, 스페인어, 이집트어, 루마니아어, 라틴어, 페르시아어, 아제르바이잔어, 한국어",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "너새니얼 호손",
+      "object": "영어",
+      "object_candidates": "중국어, 네덜란드어, 프랑스어, 헝가리어, 인도네시아어, 이집트어, 라틴어, 스웨덴어, 러시아어, 영어",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "제임스 얼 존스",
+      "object": "영어",
+      "object_candidates": "노르웨이어, 히브리어, 인도네시아어, 스페인어, 헝가리어, 네덜란드어, 라틴어, 프랑스어, 핀란드어, 영어",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "토르 헤위에르달",
+      "object": "노르웨이어",
+      "object_candidates": "라틴어, 네덜란드어, 프랑스어, 스웨덴어, 한국어, 이집트어, 영어, 러시아어, 인도네시아어, 노르웨이어",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "제이슨 스테이섬",
+      "object": "영어",
+      "object_candidates": "독일어, 이탈리아어, 중국어, 노르웨이어, 한국어, 네덜란드어, 루마니아어, 히브리어, 라틴어, 영어",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "메리 울스턴크래프트",
+      "object": "프랑스어",
+      "object_candidates": "헝가리어, 이탈리아어, 핀란드어, 영어, 인도네시아어, 네덜란드어, 이집트어, 러시아어, 노르웨이어, 프랑스어",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "프리다 칼로",
+      "object": "스페인어",
+      "object_candidates": "폴란드어, 이집트어, 헝가리어, 중국어, 노르웨이어, 이탈리아어, 페르시아어, 러시아어, 히브리어, 스페인어",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "잔 모로",
+      "object": "프랑스어",
+      "object_candidates": "노르웨이어, 루마니아어, 러시아어, 히브리어, 스웨덴어, 네덜란드어, 한국어, 라틴어, 독일어, 프랑스어",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "나디아 불랑제",
+      "object": "프랑스어",
+      "object_candidates": "루마니아어, 러시아어, 라틴어, 인도네시아어, 중국어, 히브리어, 네덜란드어, 핀란드어, 폴란드어, 프랑스어",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "빅토리아 실브스테트",
+      "object": "프랑스어",
+      "object_candidates": "중국어, 스페인어, 독일어, 히브리어, 영어, 헝가리어, 노르웨이어, 이탈리아어, 라틴어, 프랑스어",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "앨프리드 러셀 월리스",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 독일어, 노르웨이어, 이집트어, 루마니아어, 중국어, 인도네시아어, 아제르바이잔어, 라틴어, 영어",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "람세스 2세",
+      "object": "이집트어",
+      "object_candidates": "독일어, 영어, 스웨덴어, 폴란드어, 한국어, 히브리어, 러시아어, 페르시아어, 핀란드어, 이집트어",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "크리스토프 빌리발트 글루크",
+      "object": "독일어",
+      "object_candidates": "프랑스어, 핀란드어, 라틴어, 이집트어, 중국어, 영어, 이탈리아어, 노르웨이어, 러시아어, 독일어",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "아브라암 드무아브르",
+      "object": "영어",
+      "object_candidates": "스페인어, 네덜란드어, 헝가리어, 인도네시아어, 히브리어, 이탈리아어, 독일어, 루마니아어, 스웨덴어, 영어",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "에후드 바라크",
+      "object": "영어",
+      "object_candidates": "한국어, 루마니아어, 헝가리어, 핀란드어, 프랑스어, 라틴어, 페르시아어, 스페인어, 인도네시아어, 영어",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "야코프 스베르들로프",
+      "object": "러시아어",
+      "object_candidates": "중국어, 폴란드어, 핀란드어, 영어, 프랑스어, 루마니아어, 스페인어, 스웨덴어, 이집트어, 러시아어",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "마르쿠스 리키니우스 크라수스",
+      "object": "라틴어",
+      "object_candidates": "프랑스어, 루마니아어, 아제르바이잔어, 폴란드어, 핀란드어, 노르웨이어, 중국어, 스페인어, 스웨덴어, 라틴어",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "장자크 아노",
+      "object": "프랑스어",
+      "object_candidates": "라틴어, 루마니아어, 폴란드어, 영어, 인도네시아어, 아제르바이잔어, 이탈리아어, 스웨덴어, 독일어, 프랑스어",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "베르길리우스",
+      "object": "라틴어",
+      "object_candidates": "독일어, 인도네시아어, 폴란드어, 페르시아어, 한국어, 이집트어, 아제르바이잔어, 스페인어, 프랑스어, 라틴어",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "테레사 수녀",
+      "object": "영어",
+      "object_candidates": "이집트어, 한국어, 인도네시아어, 중국어, 노르웨이어, 핀란드어, 페르시아어, 스페인어, 폴란드어, 영어",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "스티브 비코",
+      "object": "영어",
+      "object_candidates": "네덜란드어, 핀란드어, 러시아어, 노르웨이어, 아제르바이잔어, 페르시아어, 폴란드어, 라틴어, 스웨덴어, 영어",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "크리스티안 하위헌스",
+      "object": "라틴어",
+      "object_candidates": "스웨덴어, 중국어, 스페인어, 인도네시아어, 프랑스어, 이집트어, 폴란드어, 영어, 독일어, 라틴어",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "앙리 드 생시몽",
+      "object": "프랑스어",
+      "object_candidates": "한국어, 핀란드어, 라틴어, 히브리어, 페르시아어, 노르웨이어, 중국어, 루마니아어, 이탈리아어, 프랑스어",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "조지 마이클",
+      "object": "영어",
+      "object_candidates": "이집트어, 독일어, 폴란드어, 이탈리아어, 인도네시아어, 히브리어, 한국어, 페르시아어, 핀란드어, 영어",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "주세페 페아노",
+      "object": "이탈리아어",
+      "object_candidates": "핀란드어, 히브리어, 스웨덴어, 루마니아어, 프랑스어, 라틴어, 노르웨이어, 네덜란드어, 한국어, 이탈리아어",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "빌럼알렉산더르",
+      "object": "네덜란드어",
+      "object_candidates": "러시아어, 영어, 스웨덴어, 스페인어, 프랑스어, 인도네시아어, 이탈리아어, 히브리어, 핀란드어, 네덜란드어",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "트리스탕 차라",
+      "object": "프랑스어",
+      "object_candidates": "스페인어, 노르웨이어, 히브리어, 라틴어, 스웨덴어, 네덜란드어, 인도네시아어, 한국어, 중국어, 프랑스어",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "리처드 아크라이트",
+      "object": "영어",
+      "object_candidates": "라틴어, 노르웨이어, 이탈리아어, 인도네시아어, 핀란드어, 네덜란드어, 프랑스어, 러시아어, 스웨덴어, 영어",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "주제프 과르디올라",
+      "object": "스페인어",
+      "object_candidates": "중국어, 인도네시아어, 네덜란드어, 아제르바이잔어, 이집트어, 러시아어, 프랑스어, 라틴어, 이탈리아어, 스페인어",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "너지 임레",
+      "object": "헝가리어",
+      "object_candidates": "영어, 이탈리아어, 독일어, 히브리어, 핀란드어, 루마니아어, 네덜란드어, 스웨덴어, 프랑스어, 헝가리어",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "빌럼 에인트호번",
+      "object": "네덜란드어",
+      "object_candidates": "독일어, 이탈리아어, 영어, 헝가리어, 러시아어, 인도네시아어, 페르시아어, 한국어, 폴란드어, 네덜란드어",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "마르그레테 2세",
+      "object": "스웨덴어",
+      "object_candidates": "히브리어, 폴란드어, 루마니아어, 아제르바이잔어, 이탈리아어, 이집트어, 프랑스어, 중국어, 스페인어, 스웨덴어",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "사톈드라 나스 보스",
+      "object": "영어",
+      "object_candidates": "루마니아어, 라틴어, 히브리어, 스페인어, 아제르바이잔어, 인도네시아어, 이탈리아어, 이집트어, 핀란드어, 영어",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "어니스트 섀클턴",
+      "object": "영어",
+      "object_candidates": "라틴어, 인도네시아어, 헝가리어, 스페인어, 이탈리아어, 프랑스어, 히브리어, 독일어, 페르시아어, 영어",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "살바도르 아옌데",
+      "object": "스페인어",
+      "object_candidates": "인도네시아어, 네덜란드어, 이탈리아어, 루마니아어, 아제르바이잔어, 라틴어, 헝가리어, 스웨덴어, 노르웨이어, 스페인어",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "니콜라이 레스코프",
+      "object": "러시아어",
+      "object_candidates": "중국어, 독일어, 루마니아어, 노르웨이어, 영어, 이탈리아어, 히브리어, 인도네시아어, 스페인어, 러시아어",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "비토리오 에마누엘레 2세",
+      "object": "이탈리아어",
+      "object_candidates": "폴란드어, 이집트어, 네덜란드어, 히브리어, 독일어, 영어, 한국어, 핀란드어, 루마니아어, 이탈리아어",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "제오르제 에네스쿠",
+      "object": "루마니아어",
+      "object_candidates": "네덜란드어, 프랑스어, 이탈리아어, 아제르바이잔어, 이집트어, 노르웨이어, 인도네시아어, 러시아어, 한국어, 루마니아어",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "글로리아 에스테판",
+      "object": "스페인어",
+      "object_candidates": "러시아어, 스웨덴어, 인도네시아어, 페르시아어, 프랑스어, 핀란드어, 폴란드어, 노르웨이어, 한국어, 스페인어",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "마이클 무어",
+      "object": "영어",
+      "object_candidates": "중국어, 히브리어, 아제르바이잔어, 라틴어, 헝가리어, 인도네시아어, 스페인어, 핀란드어, 한국어, 영어",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "피에르 보마르셰",
+      "object": "프랑스어",
+      "object_candidates": "루마니아어, 중국어, 이탈리아어, 아제르바이잔어, 히브리어, 한국어, 폴란드어, 독일어, 스페인어, 프랑스어",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "베네데토 크로체",
+      "object": "이탈리아어",
+      "object_candidates": "러시아어, 헝가리어, 노르웨이어, 페르시아어, 스페인어, 라틴어, 스웨덴어, 한국어, 이집트어, 이탈리아어",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "라비 샹카르",
+      "object": "영어",
+      "object_candidates": "이집트어, 노르웨이어, 인도네시아어, 헝가리어, 독일어, 한국어, 히브리어, 폴란드어, 라틴어, 영어",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "샘 멘디스",
+      "object": "영어",
+      "object_candidates": "프랑스어, 핀란드어, 스웨덴어, 인도네시아어, 히브리어, 루마니아어, 폴란드어, 페르시아어, 한국어, 영어",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "이반 부닌",
+      "object": "러시아어",
+      "object_candidates": "독일어, 라틴어, 루마니아어, 네덜란드어, 페르시아어, 폴란드어, 영어, 프랑스어, 스페인어, 러시아어",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "아볼하산 바니사드르",
+      "object": "페르시아어",
+      "object_candidates": "독일어, 폴란드어, 이집트어, 노르웨이어, 헝가리어, 러시아어, 아제르바이잔어, 루마니아어, 영어, 페르시아어",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "앙군",
+      "object": "인도네시아어",
+      "object_candidates": "러시아어, 한국어, 폴란드어, 라틴어, 아제르바이잔어, 노르웨이어, 독일어, 네덜란드어, 핀란드어, 인도네시아어",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "클라크 게이블",
+      "object": "영어",
+      "object_candidates": "스웨덴어, 아제르바이잔어, 핀란드어, 이집트어, 인도네시아어, 한국어, 러시아어, 헝가리어, 노르웨이어, 영어",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "자크 라캉",
+      "object": "프랑스어",
+      "object_candidates": "아제르바이잔어, 핀란드어, 스페인어, 루마니아어, 페르시아어, 헝가리어, 인도네시아어, 영어, 중국어, 프랑스어",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "제임스 가너",
+      "object": "영어",
+      "object_candidates": "루마니아어, 폴란드어, 한국어, 프랑스어, 노르웨이어, 스페인어, 독일어, 핀란드어, 이집트어, 영어",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "마누엘 발스",
+      "object": "스페인어",
+      "object_candidates": "네덜란드어, 페르시아어, 인도네시아어, 한국어, 헝가리어, 이탈리아어, 이집트어, 프랑스어, 스웨덴어, 스페인어",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "아바스 키아로스타미",
+      "object": "페르시아어",
+      "object_candidates": "헝가리어, 히브리어, 아제르바이잔어, 라틴어, 네덜란드어, 스페인어, 폴란드어, 프랑스어, 한국어, 페르시아어",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "올리버 크롬웰",
+      "object": "영어",
+      "object_candidates": "인도네시아어, 노르웨이어, 스웨덴어, 네덜란드어, 프랑스어, 중국어, 독일어, 히브리어, 헝가리어, 영어",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "아우구스토 피노체트",
+      "object": "스페인어",
+      "object_candidates": "한국어, 라틴어, 러시아어, 독일어, 프랑스어, 인도네시아어, 폴란드어, 헝가리어, 페르시아어, 스페인어",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "프랑시스 풀랑크",
+      "object": "프랑스어",
+      "object_candidates": "히브리어, 영어, 스페인어, 러시아어, 폴란드어, 인도네시아어, 스웨덴어, 중국어, 한국어, 프랑스어",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "쥘 마스네",
+      "object": "프랑스어",
+      "object_candidates": "이탈리아어, 히브리어, 네덜란드어, 헝가리어, 노르웨이어, 핀란드어, 아제르바이잔어, 폴란드어, 중국어, 프랑스어",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "카를로스 마르체나",
+      "object": "스페인어",
+      "object_candidates": "페르시아어, 인도네시아어, 중국어, 폴란드어, 프랑스어, 스웨덴어, 아제르바이잔어, 라틴어, 독일어, 스페인어",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "루도비코 라자로 자멘호프",
+      "object": "영어",
+      "object_candidates": "한국어, 이집트어, 라틴어, 러시아어, 히브리어, 헝가리어, 루마니아어, 폴란드어, 독일어, 영어",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "무하마드 알리",
+      "object": "영어",
+      "object_candidates": "독일어, 이집트어, 한국어, 스페인어, 중국어, 라틴어, 헝가리어, 인도네시아어, 프랑스어, 영어",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "안나 마냐니",
+      "object": "이탈리아어",
+      "object_candidates": "영어, 인도네시아어, 스웨덴어, 네덜란드어, 독일어, 이집트어, 스페인어, 폴란드어, 페르시아어, 이탈리아어",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "아바",
+      "object": "스웨덴어",
+      "object_candidates": "히브리어, 중국어, 노르웨이어, 러시아어, 폴란드어, 라틴어, 루마니아어, 영어, 이탈리아어, 스웨덴어",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "예수",
+      "object": "히브리어",
+      "object_candidates": "페르시아어, 러시아어, 노르웨이어, 독일어, 폴란드어, 스페인어, 아제르바이잔어, 프랑스어, 핀란드어, 히브리어",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "주세페 토르나토레",
+      "object": "이탈리아어",
+      "object_candidates": "핀란드어, 헝가리어, 한국어, 스페인어, 루마니아어, 히브리어, 스웨덴어, 독일어, 중국어, 이탈리아어",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "그웬 스테파니",
+      "object": "영어",
+      "object_candidates": "이집트어, 노르웨이어, 프랑스어, 아제르바이잔어, 중국어, 독일어, 이탈리아어, 라틴어, 루마니아어, 영어",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "타키투스",
+      "object": "라틴어",
+      "object_candidates": "루마니아어, 폴란드어, 스페인어, 노르웨이어, 핀란드어, 네덜란드어, 이탈리아어, 한국어, 헝가리어, 라틴어",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "앨러니스 모리세트",
+      "object": "영어",
+      "object_candidates": "핀란드어, 인도네시아어, 스웨덴어, 아제르바이잔어, 네덜란드어, 러시아어, 라틴어, 페르시아어, 폴란드어, 영어",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "보이치에흐 야루젤스키",
+      "object": "폴란드어",
+      "object_candidates": "핀란드어, 이탈리아어, 프랑스어, 페르시아어, 독일어, 네덜란드어, 한국어, 중국어, 인도네시아어, 폴란드어",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "카일리 미노그",
+      "object": "영어",
+      "object_candidates": "히브리어, 페르시아어, 헝가리어, 독일어, 프랑스어, 아제르바이잔어, 러시아어, 이집트어, 인도네시아어, 영어",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "카를로스 푸엔테스",
+      "object": "스페인어",
+      "object_candidates": "아제르바이잔어, 한국어, 중국어, 라틴어, 스웨덴어, 이탈리아어, 페르시아어, 헝가리어, 이집트어, 스페인어",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "드와이트 D. 아이젠하워",
+      "object": "영어",
+      "object_candidates": "노르웨이어, 폴란드어, 페르시아어, 스웨덴어, 라틴어, 헝가리어, 히브리어, 프랑스어, 핀란드어, 영어",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "토마 피케티",
+      "object": "프랑스어",
+      "object_candidates": "아제르바이잔어, 페르시아어, 라틴어, 스웨덴어, 노르웨이어, 루마니아어, 영어, 네덜란드어, 러시아어, 프랑스어",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "알렉세이 브루실로프",
+      "object": "러시아어",
+      "object_candidates": "독일어, 히브리어, 인도네시아어, 폴란드어, 이탈리아어, 영어, 라틴어, 루마니아어, 이집트어, 러시아어",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "레프 카메네프",
+      "object": "러시아어",
+      "object_candidates": "프랑스어, 스페인어, 루마니아어, 중국어, 헝가리어, 네덜란드어, 아제르바이잔어, 라틴어, 노르웨이어, 러시아어",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "존 업다이크",
+      "object": "영어",
+      "object_candidates": "러시아어, 한국어, 이탈리아어, 헝가리어, 프랑스어, 인도네시아어, 중국어, 네덜란드어, 히브리어, 영어",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "안 파릴로",
+      "object": "프랑스어",
+      "object_candidates": "헝가리어, 아제르바이잔어, 영어, 스페인어, 히브리어, 중국어, 핀란드어, 러시아어, 이집트어, 프랑스어",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "펠리페 5세",
+      "object": "스페인어",
+      "object_candidates": "히브리어, 루마니아어, 핀란드어, 인도네시아어, 영어, 네덜란드어, 프랑스어, 헝가리어, 노르웨이어, 스페인어",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "에마뉘엘 세니에르",
+      "object": "프랑스어",
+      "object_candidates": "독일어, 아제르바이잔어, 스페인어, 헝가리어, 중국어, 폴란드어, 노르웨이어, 이집트어, 이탈리아어, 프랑스어",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "어니스트 러더퍼드",
+      "object": "영어",
+      "object_candidates": "한국어, 독일어, 페르시아어, 루마니아어, 이탈리아어, 스페인어, 중국어, 이집트어, 히브리어, 영어",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "유진 오닐",
+      "object": "영어",
+      "object_candidates": "핀란드어, 페르시아어, 스웨덴어, 중국어, 러시아어, 인도네시아어, 프랑스어, 폴란드어, 헝가리어, 영어",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "켈빈 남작 1세 윌리엄 톰슨",
+      "object": "영어",
+      "object_candidates": "히브리어, 이집트어, 노르웨이어, 프랑스어, 독일어, 스페인어, 라틴어, 인도네시아어, 아제르바이잔어, 영어",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "제니퍼 허드슨",
+      "object": "영어",
+      "object_candidates": "히브리어, 네덜란드어, 페르시아어, 루마니아어, 라틴어, 스웨덴어, 인도네시아어, 폴란드어, 한국어, 영어",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "헨리 키신저",
+      "object": "영어",
+      "object_candidates": "히브리어, 인도네시아어, 독일어, 라틴어, 스웨덴어, 아제르바이잔어, 폴란드어, 루마니아어, 헝가리어, 영어",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "교황 비오 10세",
+      "object": "라틴어",
+      "object_candidates": "폴란드어, 헝가리어, 프랑스어, 중국어, 루마니아어, 영어, 한국어, 노르웨이어, 스웨덴어, 라틴어",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "우제이르 하지배요프",
+      "object": "아제르바이잔어",
+      "object_candidates": "이탈리아어, 헝가리어, 루마니아어, 노르웨이어, 독일어, 영어, 스페인어, 폴란드어, 페르시아어, 아제르바이잔어",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "토머스 홉스",
+      "object": "라틴어",
+      "object_candidates": "독일어, 이집트어, 히브리어, 스웨덴어, 영어, 루마니아어, 핀란드어, 이탈리아어, 러시아어, 라틴어",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "주희",
+      "object": "중국어",
+      "object_candidates": "페르시아어, 인도네시아어, 핀란드어, 라틴어, 이집트어, 네덜란드어, 스페인어, 스웨덴어, 한국어, 중국어",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "가드 엘마레",
+      "object": "프랑스어",
+      "object_candidates": "러시아어, 중국어, 이집트어, 스페인어, 인도네시아어, 라틴어, 영어, 이탈리아어, 히브리어, 프랑스어",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "알베르트 리에라",
+      "object": "스페인어",
+      "object_candidates": "히브리어, 네덜란드어, 이집트어, 폴란드어, 중국어, 노르웨이어, 영어, 헝가리어, 라틴어, 스페인어",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "아우구스트 스트린드베리",
+      "object": "스웨덴어",
+      "object_candidates": "이집트어, 네덜란드어, 라틴어, 페르시아어, 인도네시아어, 히브리어, 영어, 중국어, 폴란드어, 스웨덴어",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "크리스틴 스콧 토머스",
+      "object": "프랑스어",
+      "object_candidates": "스웨덴어, 헝가리어, 루마니아어, 독일어, 네덜란드어, 이집트어, 이탈리아어, 핀란드어, 아제르바이잔어, 프랑스어",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "토머스 하디",
+      "object": "영어",
+      "object_candidates": "라틴어, 중국어, 헝가리어, 러시아어, 이탈리아어, 한국어, 아제르바이잔어, 독일어, 페르시아어, 영어",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "월터 크롱카이트",
+      "object": "영어",
+      "object_candidates": "폴란드어, 헝가리어, 루마니아어, 페르시아어, 러시아어, 독일어, 히브리어, 한국어, 아제르바이잔어, 영어",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "마이모니데스",
+      "object": "히브리어",
+      "object_candidates": "영어, 핀란드어, 아제르바이잔어, 독일어, 이탈리아어, 프랑스어, 노르웨이어, 라틴어, 중국어, 히브리어",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "요한 크라위프",
+      "object": "네덜란드어",
+      "object_candidates": "핀란드어, 중국어, 페르시아어, 라틴어, 프랑스어, 노르웨이어, 루마니아어, 스페인어, 독일어, 네덜란드어",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "가오싱젠",
+      "object": "중국어",
+      "object_candidates": "루마니아어, 한국어, 스웨덴어, 노르웨이어, 러시아어, 프랑스어, 아제르바이잔어, 스페인어, 헝가리어, 중국어",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "미하일 호도르콥스키",
+      "object": "러시아어",
+      "object_candidates": "영어, 중국어, 핀란드어, 폴란드어, 이집트어, 헝가리어, 스웨덴어, 페르시아어, 인도네시아어, 러시아어",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "장 시벨리우스",
+      "object": "핀란드어",
+      "object_candidates": "아제르바이잔어, 중국어, 폴란드어, 이집트어, 영어, 노르웨이어, 헝가리어, 네덜란드어, 러시아어, 핀란드어",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "루도비코 라자로 자멘호프",
+      "object": "러시아어",
+      "object_candidates": "이집트어, 아제르바이잔어, 라틴어, 핀란드어, 폴란드어, 루마니아어, 헝가리어, 인도네시아어, 노르웨이어, 러시아어",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "프리먼 다이슨",
+      "object": "영어",
+      "object_candidates": "독일어, 프랑스어, 스웨덴어, 인도네시아어, 루마니아어, 중국어, 페르시아어, 라틴어, 이탈리아어, 영어",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "알베르 카뮈",
+      "object": "프랑스어",
+      "object_candidates": "러시아어, 페르시아어, 폴란드어, 헝가리어, 히브리어, 이탈리아어, 이집트어, 영어, 스페인어, 프랑스어",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

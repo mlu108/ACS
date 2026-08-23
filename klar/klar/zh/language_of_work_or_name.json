@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "<subject>的原始语言是什么？答案是：<mask>。",
+    "<subject>最初是用哪种语言写的？答案是：<mask>。",
+    "<subject>最初是什么语言？答案是：<mask>。",
+    "<subject>原作使用了哪种语言？答案是：<mask>。",
+    "<subject>最初是用哪种语言制作的？答案是：<mask>。",
+    "<subject>最初的创作时使用的语言是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "巴黎圣母院",
+      "object": "法语",
+      "object_candidates": "荷兰语, 希腊语, 意大利语, 德语, 俄语, 芬兰语, 英语, 法语",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "狮子王",
+      "object": "英语",
+      "object_candidates": "俄语, 法语, 荷兰语, 希腊语, 德语, 意大利语, 芬兰语, 英语",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "无法触碰",
+      "object": "法语",
+      "object_candidates": "希腊语, 芬兰语, 德语, 英语, 荷兰语, 俄语, 意大利语, 法语",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "探险时光",
+      "object": "英语",
+      "object_candidates": "芬兰语, 法语, 荷兰语, 意大利语, 德语, 希腊语, 俄语, 英语",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "毒太阳",
+      "object": "俄语",
+      "object_candidates": "芬兰语, 希腊语, 意大利语, 德语, 英语, 法语, 荷兰语, 俄语",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "钢琴家",
+      "object": "英语",
+      "object_candidates": "意大利语, 希腊语, 荷兰语, 俄语, 德语, 芬兰语, 法语, 英语",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "基度山恩仇记",
+      "object": "法语",
+      "object_candidates": "俄语, 芬兰语, 德语, 荷兰语, 希腊语, 英语, 意大利语, 法语",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "贫民百万富翁",
+      "object": "英语",
+      "object_candidates": "芬兰语, 荷兰语, 意大利语, 希腊语, 俄语, 德语, 法语, 英语",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "自然",
+      "object": "英语",
+      "object_candidates": "芬兰语, 希腊语, 法语, 意大利语, 俄语, 荷兰语, 德语, 英语",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "教父",
+      "object": "英语",
+      "object_candidates": "法语, 希腊语, 德语, 俄语, 芬兰语, 荷兰语, 意大利语, 英语",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "魔鬼克星",
+      "object": "英语",
+      "object_candidates": "荷兰语, 法语, 希腊语, 德语, 芬兰语, 意大利语, 俄语, 英语",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "三剑客",
+      "object": "法语",
+      "object_candidates": "荷兰语, 希腊语, 英语, 德语, 芬兰语, 意大利语, 俄语, 法语",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "荷兰语维基百科",
+      "object": "荷兰语",
+      "object_candidates": "英语, 俄语, 希腊语, 法语, 意大利语, 德语, 芬兰语, 荷兰语",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "查理周刊",
+      "object": "法语",
+      "object_candidates": "意大利语, 俄语, 芬兰语, 英语, 希腊语, 荷兰语, 德语, 法语",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "低俗小说",
+      "object": "英语",
+      "object_candidates": "意大利语, 荷兰语, 俄语, 德语, 法语, 希腊语, 芬兰语, 英语",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "黄昏三镳客",
+      "object": "意大利语",
+      "object_candidates": "俄语, 英语, 德语, 法语, 荷兰语, 希腊语, 芬兰语, 意大利语",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "速度与激情",
+      "object": "英语",
+      "object_candidates": "俄语, 法语, 德语, 意大利语, 荷兰语, 希腊语, 芬兰语, 英语",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "魔笛",
+      "object": "德语",
+      "object_candidates": "意大利语, 荷兰语, 芬兰语, 英语, 法语, 希腊语, 俄语, 德语",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "爱卡莉",
+      "object": "英语",
+      "object_candidates": "希腊语, 荷兰语, 德语, 法语, 俄语, 芬兰语, 意大利语, 英语",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "苏联大百科全书",
+      "object": "俄语",
+      "object_candidates": "意大利语, 德语, 法语, 荷兰语, 芬兰语, 希腊语, 英语, 俄语",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "穿靴子的猫",
+      "object": "意大利语",
+      "object_candidates": "希腊语, 德语, 英语, 法语, 芬兰语, 荷兰语, 俄语, 意大利语",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "芬兰语维基百科",
+      "object": "芬兰语",
+      "object_candidates": "希腊语, 法语, 德语, 意大利语, 英语, 俄语, 荷兰语, 芬兰语",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "猫和老鼠",
+      "object": "英语",
+      "object_candidates": "俄语, 德语, 芬兰语, 希腊语, 荷兰语, 法语, 意大利语, 英语",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "丛林奇谭",
+      "object": "英语",
+      "object_candidates": "意大利语, 芬兰语, 俄语, 法语, 希腊语, 德语, 荷兰语, 英语",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "希腊语维基百科",
+      "object": "希腊语",
+      "object_candidates": "芬兰语, 俄语, 荷兰语, 法语, 德语, 英语, 意大利语, 希腊语",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "英语",
+      "object_candidates": "西班牙语, 意大利语, 土耳其语, 丹麦语, 孟加拉语, 德语, 法语, 朝鲜语, 保加利亚语, 英语",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git",
+      "object": "英语",
+      "object_candidates": "波兰语, 土耳其语, 拉丁语, 孟加拉语, 捷克语, 俄语, 西班牙语, 意大利语, 瑞典语, 英语",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "埃涅阿斯纪",
+      "object": "拉丁语",
+      "object_candidates": "越南语, 波兰语, 意大利语, 英语, 加泰罗尼亚语, 捷克语, 匈牙利语, 俄语, 孟加拉语, 拉丁语",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "俄语维基百科",
+      "object": "俄语",
+      "object_candidates": "朝鲜语, 瑞典语, 保加利亚语, 匈牙利语, 德语, 英语, 波兰语, 孟加拉语, 西班牙语, 俄语",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "星际迷航2",
+      "object": "英语",
+      "object_candidates": "孟加拉语, 乌克兰语, 德语, 瑞典语, 波兰语, 越南语, 保加利亚语, 拉丁语, 西班牙语, 英语",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "查理周刊",
+      "object": "法语",
+      "object_candidates": "德语, 爱沙尼亚语, 西班牙语, 土耳其语, 匈牙利语, 意大利语, 保加利亚语, 俄语, 英语, 法语",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "华盛顿邮报",
+      "object": "英语",
+      "object_candidates": "丹麦语, 爱沙尼亚语, 西班牙语, 德语, 俄语, 荷兰语, 朝鲜语, 瑞典语, 克罗地亚语, 英语",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "花花公子",
+      "object": "英语",
+      "object_candidates": "丹麦语, 加泰罗尼亚语, 爱沙尼亚语, 匈牙利语, 西班牙语, 瑞典语, 德语, 法语, 保加利亚语, 英语",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "新视野号",
+      "object": "英语",
+      "object_candidates": "意大利语, 加泰罗尼亚语, 乌克兰语, 匈牙利语, 孟加拉语, 芬兰语, 瑞典语, 波兰语, 荷兰语, 英语",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "阿依达",
+      "object": "意大利语",
+      "object_candidates": "土耳其语, 荷兰语, 匈牙利语, 波兰语, 拉丁语, 乌克兰语, 瑞典语, 加泰罗尼亚语, 保加利亚语, 意大利语",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "科学",
+      "object": "英语",
+      "object_candidates": "孟加拉语, 匈牙利语, 越南语, 德语, 乌克兰语, 保加利亚语, 克罗地亚语, 芬兰语, 拉丁语, 英语",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "乌云背后的幸福线",
+      "object": "英语",
+      "object_candidates": "荷兰语, 越南语, 孟加拉语, 德语, 拉丁语, 丹麦语, 匈牙利语, 保加利亚语, 俄语, 英语",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "新闻周刊",
+      "object": "英语",
+      "object_candidates": "保加利亚语, 加泰罗尼亚语, 拉丁语, 捷克语, 丹麦语, 孟加拉语, 意大利语, 克罗地亚语, 匈牙利语, 英语",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "第一滴血",
+      "object": "英语",
+      "object_candidates": "德语, 爱沙尼亚语, 意大利语, 波兰语, 西班牙语, 法语, 克罗地亚语, 保加利亚语, 丹麦语, 英语",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "小王子",
+      "object": "法语",
+      "object_candidates": "爱沙尼亚语, 俄语, 乌克兰语, 拉丁语, 意大利语, 西班牙语, 捷克语, 英语, 保加利亚语, 法语",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "英语",
+      "object_candidates": "乌克兰语, 芬兰语, 克罗地亚语, 意大利语, 保加利亚语, 德语, 瑞典语, 西班牙语, 法语, 英语",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "丹麦语维基百科",
+      "object": "丹麦语",
+      "object_candidates": "芬兰语, 克罗地亚语, 匈牙利语, 俄语, 拉丁语, 乌克兰语, 保加利亚语, 英语, 瑞典语, 丹麦语",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "世界报",
+      "object": "法语",
+      "object_candidates": "乌克兰语, 爱沙尼亚语, 丹麦语, 朝鲜语, 瑞典语, 克罗地亚语, 俄语, 德语, 芬兰语, 法语",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "费加罗报",
+      "object": "法语",
+      "object_candidates": "波兰语, 孟加拉语, 越南语, 拉丁语, 芬兰语, 俄语, 荷兰语, 瑞典语, 爱沙尼亚语, 法语",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "捷克语维基百科",
+      "object": "捷克语",
+      "object_candidates": "法语, 孟加拉语, 瑞典语, 克罗地亚语, 越南语, 乌克兰语, 爱沙尼亚语, 朝鲜语, 意大利语, 捷克语",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "卫报",
+      "object": "英语",
+      "object_candidates": "西班牙语, 意大利语, 保加利亚语, 匈牙利语, 荷兰语, 俄语, 孟加拉语, 丹麦语, 德语, 英语",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "克罗埃西亚语维基百科",
+      "object": "克罗地亚语",
+      "object_candidates": "匈牙利语, 越南语, 丹麦语, 法语, 西班牙语, 孟加拉语, 荷兰语, 俄语, 波兰语, 克罗地亚语",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "乌得勒支和约",
+      "object": "英语",
+      "object_candidates": "克罗地亚语, 乌克兰语, 越南语, 捷克语, 匈牙利语, 加泰罗尼亚语, 瑞典语, 保加利亚语, 西班牙语, 英语",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "低俗小说",
+      "object": "英语",
+      "object_candidates": "保加利亚语, 越南语, 捷克语, 乌克兰语, 芬兰语, 德语, 西班牙语, 丹麦语, 加泰罗尼亚语, 英语",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "威廉颂",
+      "object": "荷兰语",
+      "object_candidates": "土耳其语, 捷克语, 朝鲜语, 英语, 法语, 西班牙语, 匈牙利语, 德语, 乌克兰语, 荷兰语",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "瑞典语维基百科",
+      "object": "瑞典语",
+      "object_candidates": "保加利亚语, 爱沙尼亚语, 土耳其语, 意大利语, 克罗地亚语, 俄语, 西班牙语, 拉丁语, 匈牙利语, 瑞典语",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "波兰语维基百科",
+      "object": "波兰语",
+      "object_candidates": "爱沙尼亚语, 法语, 芬兰语, 丹麦语, 捷克语, 西班牙语, 加泰罗尼亚语, 荷兰语, 意大利语, 波兰语",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "爱沙尼亚语维基百科",
+      "object": "爱沙尼亚语",
+      "object_candidates": "匈牙利语, 德语, 法语, 越南语, 土耳其语, 朝鲜语, 西班牙语, 拉丁语, 乌克兰语, 爱沙尼亚语",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "艾比路",
+      "object": "英语",
+      "object_candidates": "意大利语, 爱沙尼亚语, 俄语, 西班牙语, 丹麦语, 法语, 德语, 加泰罗尼亚语, 捷克语, 英语",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "加泰罗尼亚语维基百科",
+      "object": "加泰罗尼亚语",
+      "object_candidates": "俄语, 爱沙尼亚语, 瑞典语, 土耳其语, 意大利语, 波兰语, 英语, 越南语, 朝鲜语, 加泰罗尼亚语",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "越南语维基百科",
+      "object": "越南语",
+      "object_candidates": "波兰语, 德语, 捷克语, 土耳其语, 荷兰语, 乌克兰语, 西班牙语, 克罗地亚语, 法语, 越南语",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "魔笛",
+      "object": "德语",
+      "object_candidates": "芬兰语, 克罗地亚语, 孟加拉语, 西班牙语, 俄语, 加泰罗尼亚语, 英语, 法语, 荷兰语, 德语",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "韩语维基百科",
+      "object": "朝鲜语",
+      "object_candidates": "越南语, 西班牙语, 芬兰语, 德语, 孟加拉语, 保加利亚语, 爱沙尼亚语, 荷兰语, 波兰语, 朝鲜语",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "法语",
+      "object_candidates": "丹麦语, 保加利亚语, 芬兰语, 加泰罗尼亚语, 拉丁语, 匈牙利语, 捷克语, 德语, 西班牙语, 法语",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "雾都孤儿",
+      "object": "英语",
+      "object_candidates": "加泰罗尼亚语, 朝鲜语, 法语, 克罗地亚语, 丹麦语, 爱沙尼亚语, 瑞典语, 波兰语, 俄语, 英语",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "爱丽丝梦游仙境",
+      "object": "英语",
+      "object_candidates": "加泰罗尼亚语, 拉丁语, 乌克兰语, 保加利亚语, 意大利语, 芬兰语, 丹麦语, 越南语, 土耳其语, 英语",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "傲慢与偏见",
+      "object": "英语",
+      "object_candidates": "丹麦语, 朝鲜语, 芬兰语, 意大利语, 匈牙利语, 法语, 孟加拉语, 西班牙语, 保加利亚语, 英语",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "时代杂志",
+      "object": "英语",
+      "object_candidates": "保加利亚语, 德语, 波兰语, 加泰罗尼亚语, 捷克语, 爱沙尼亚语, 西班牙语, 俄语, 乌克兰语, 英语",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "了不起的盖茨比",
+      "object": "英语",
+      "object_candidates": "保加利亚语, 朝鲜语, 土耳其语, 加泰罗尼亚语, 瑞典语, 西班牙语, 意大利语, 法语, 俄语, 英语",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "英语",
+      "object_candidates": "捷克语, 克罗地亚语, 丹麦语, 土耳其语, 孟加拉语, 芬兰语, 波兰语, 朝鲜语, 法语, 英语",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "西班牙语",
+      "object_candidates": "爱沙尼亚语, 德语, 俄语, 瑞典语, 越南语, 乌克兰语, 荷兰语, 拉丁语, 保加利亚语, 西班牙语",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "金色的孟加拉",
+      "object": "孟加拉语",
+      "object_candidates": "西班牙语, 拉丁语, 匈牙利语, 波兰语, 俄语, 意大利语, 爱沙尼亚语, 瑞典语, 英语, 孟加拉语",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "芬兰语",
+      "object_candidates": "土耳其语, 朝鲜语, 荷兰语, 意大利语, 俄语, 保加利亚语, 加泰罗尼亚语, 克罗地亚语, 乌克兰语, 芬兰语",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "德语维基百科",
+      "object": "德语",
+      "object_candidates": "匈牙利语, 保加利亚语, 荷兰语, 西班牙语, 乌克兰语, 孟加拉语, 土耳其语, 朝鲜语, 克罗地亚语, 德语",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "凡尔赛条约",
+      "object": "法语",
+      "object_candidates": "爱沙尼亚语, 西班牙语, 波兰语, 德语, 朝鲜语, 乌克兰语, 孟加拉语, 俄语, 英语, 法语",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "叶甫盖尼·奥涅金",
+      "object": "俄语",
+      "object_candidates": "朝鲜语, 越南语, 瑞典语, 波兰语, 芬兰语, 加泰罗尼亚语, 乌克兰语, 保加利亚语, 意大利语, 俄语",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "乌克兰语维基百科",
+      "object": "乌克兰语",
+      "object_candidates": "俄语, 捷克语, 意大利语, 保加利亚语, 加泰罗尼亚语, 荷兰语, 西班牙语, 爱沙尼亚语, 芬兰语, 乌克兰语",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "一九八四",
+      "object": "英语",
+      "object_candidates": "乌克兰语, 爱沙尼亚语, 加泰罗尼亚语, 意大利语, 克罗地亚语, 法语, 西班牙语, 保加利亚语, 拉丁语, 英语",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "汤姆·索亚历险记",
+      "object": "英语",
+      "object_candidates": "意大利语, 拉丁语, 捷克语, 朝鲜语, 西班牙语, 加泰罗尼亚语, 法语, 孟加拉语, 荷兰语, 英语",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "终结者：创世纪",
+      "object": "英语",
+      "object_candidates": "荷兰语, 法语, 孟加拉语, 爱沙尼亚语, 德语, 保加利亚语, 意大利语, 匈牙利语, 拉丁语, 英语",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "自然",
+      "object": "英语",
+      "object_candidates": "捷克语, 保加利亚语, 俄语, 丹麦语, 加泰罗尼亚语, 芬兰语, 德语, 土耳其语, 荷兰语, 英语",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "十日谈",
+      "object": "意大利语",
+      "object_candidates": "瑞典语, 孟加拉语, 芬兰语, 捷克语, 加泰罗尼亚语, 保加利亚语, 朝鲜语, 乌克兰语, 法语, 意大利语",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "芬兰语",
+      "object_candidates": "捷克语, 法语, 德语, 荷兰语, 越南语, 保加利亚语, 拉丁语, 孟加拉语, 匈牙利语, 芬兰语",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "经济学人",
+      "object": "英语",
+      "object_candidates": "波兰语, 荷兰语, 克罗地亚语, 西班牙语, 德语, 捷克语, 瑞典语, 芬兰语, 拉丁语, 英语",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "你古老，你自由",
+      "object": "瑞典语",
+      "object_candidates": "德语, 意大利语, 法语, 西班牙语, 保加利亚语, 爱沙尼亚语, 英语, 越南语, 拉丁语, 瑞典语",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "木偶奇遇记",
+      "object": "意大利语",
+      "object_candidates": "越南语, 捷克语, 克罗地亚语, 英语, 匈牙利语, 朝鲜语, 丹麦语, 荷兰语, 土耳其语, 意大利语",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "白鲸记",
+      "object": "英语",
+      "object_candidates": "瑞典语, 丹麦语, 克罗地亚语, 俄语, 越南语, 德语, 朝鲜语, 西班牙语, 法语, 英语",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "意大利语",
+      "object_candidates": "爱沙尼亚语, 克罗地亚语, 土耳其语, 芬兰语, 拉丁语, 德语, 乌克兰语, 丹麦语, 荷兰语, 意大利语",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "费加罗的婚礼",
+      "object": "意大利语",
+      "object_candidates": "英语, 瑞典语, 乌克兰语, 荷兰语, 土耳其语, 拉丁语, 加泰罗尼亚语, 俄语, 西班牙语, 意大利语",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "马斯特里赫特条约",
+      "object": "法语",
+      "object_candidates": "拉丁语, 乌克兰语, 瑞典语, 土耳其语, 匈牙利语, 朝鲜语, 爱沙尼亚语, 荷兰语, 捷克语, 法语",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "请取悦我",
+      "object": "英语",
+      "object_candidates": "拉丁语, 荷兰语, 匈牙利语, 土耳其语, 朝鲜语, 瑞典语, 俄语, 加泰罗尼亚语, 德语, 英语",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "保加利亚语维基百科",
+      "object": "保加利亚语",
+      "object_candidates": "克罗地亚语, 荷兰语, 加泰罗尼亚语, 拉丁语, 丹麦语, 爱沙尼亚语, 匈牙利语, 波兰语, 芬兰语, 保加利亚语",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "海盗湾",
+      "object": "西班牙语",
+      "object_candidates": "德语, 瑞典语, 拉丁语, 匈牙利语, 保加利亚语, 越南语, 法语, 朝鲜语, 芬兰语, 西班牙语",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "土耳其语维基百科",
+      "object": "土耳其语",
+      "object_candidates": "瑞典语, 芬兰语, 俄语, 越南语, 孟加拉语, 捷克语, 西班牙语, 朝鲜语, 加泰罗尼亚语, 土耳其语",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "匈牙利语维基百科",
+      "object": "匈牙利语",
+      "object_candidates": "芬兰语, 克罗地亚语, 西班牙语, 保加利亚语, 瑞典语, 意大利语, 朝鲜语, 孟加拉语, 丹麦语, 匈牙利语",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "安娜·卡列尼娜",
+      "object": "俄语",
+      "object_candidates": "匈牙利语, 意大利语, 芬兰语, 英语, 乌克兰语, 爱沙尼亚语, 波兰语, 西班牙语, 土耳其语, 俄语",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "塞尔维亚语维基百科",
+      "object": "塞尔维亚语",
+      "object_candidates": "越南语, 拉丁语, 芬兰语, 德语, 英语, 荷兰语, 保加利亚语, 土耳其语, 俄语, 塞尔维亚语",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "意大利语维基百科",
+      "object": "意大利语",
+      "object_candidates": "土耳其语, 芬兰语, 德语, 捷克语, 丹麦语, 加泰罗尼亚语, 朝鲜语, 瑞典语, 乌克兰语, 意大利语",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "西班牙语维基百科",
+      "object": "西班牙语",
+      "object_candidates": "加泰罗尼亚语, 丹麦语, 拉丁语, 意大利语, 匈牙利语, 爱沙尼亚语, 芬兰语, 孟加拉语, 克罗地亚语, 西班牙语",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "芬兰语维基百科",
+      "object": "芬兰语",
+      "object_candidates": "意大利语, 德语, 西班牙语, 加泰罗尼亚语, 匈牙利语, 朝鲜语, 孟加拉语, 丹麦语, 乌克兰语, 芬兰语",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "简单英语维基百科",
+      "object": "英语",
+      "object_candidates": "德语, 加泰罗尼亚语, 孟加拉语, 俄语, 越南语, 捷克语, 法语, 保加利亚语, 土耳其语, 英语",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "恶棍特工",
+      "object": "英语",
+      "object_candidates": "爱沙尼亚语, 加泰罗尼亚语, 法语, 土耳其语, 西班牙语, 匈牙利语, 拉丁语, 波兰语, 芬兰语, 英语",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "英语",
+      "object_candidates": "德语, 西班牙语, 法语, 匈牙利语, 捷克语, 加泰罗尼亚语, 孟加拉语, 越南语, 乌克兰语, 英语",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alexander",
+      "object": "英语",
+      "object_candidates": "拉丁语, 克罗地亚语, 丹麦语, 意大利语, 德语, 朝鲜语, 芬兰语, 乌克兰语, 加泰罗尼亚语, 英语",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "模仿游戏",
+      "object": "英语",
+      "object_candidates": "加泰罗尼亚语, 德语, 丹麦语, 法语, 捷克语, 芬兰语, 西班牙语, 克罗地亚语, 意大利语, 英语",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "唐·乔望尼",
+      "object": "意大利语",
+      "object_candidates": "丹麦语, 匈牙利语, 西班牙语, 芬兰语, 荷兰语, 朝鲜语, 捷克语, 爱沙尼亚语, 法语, 意大利语",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "英语",
+      "object_candidates": "捷克语, 波兰语, 德语, 越南语, 保加利亚语, 拉丁语, 乌克兰语, 意大利语, 匈牙利语, 英语",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "互联网档案馆",
+      "object": "英语",
+      "object_candidates": "爱沙尼亚语, 意大利语, 匈牙利语, 拉丁语, 保加利亚语, 丹麦语, 德语, 捷克语, 荷兰语, 英语",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "波希米亚狂想曲",
+      "object": "英语",
+      "object_candidates": "俄语, 克罗地亚语, 保加利亚语, 丹麦语, 芬兰语, 瑞典语, 荷兰语, 法语, 德语, 英语",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "法语维基百科",
+      "object": "法语",
+      "object_candidates": "乌克兰语, 西班牙语, 波兰语, 保加利亚语, 瑞典语, 孟加拉语, 丹麦语, 芬兰语, 捷克语, 法语",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "洛杉矶时报",
+      "object": "英语",
+      "object_candidates": "土耳其语, 拉丁语, 匈牙利语, 爱沙尼亚语, 朝鲜语, 丹麦语, 西班牙语, 瑞典语, 捷克语, 英语",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "阿帕奇超文本协议服务",
+      "object": "英语",
+      "object_candidates": "乌克兰语, 丹麦语, 捷克语, 波兰语, 瑞典语, 法语, 拉丁语, 西班牙语, 爱沙尼亚语, 英语",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "俄罗斯新闻社",
+      "object": "俄语",
+      "object_candidates": "英语, 保加利亚语, 西班牙语, 匈牙利语, 乌克兰语, 丹麦语, 芬兰语, 越南语, 克罗地亚语, 俄语",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "<subject>を法律用語として使用している国はどこですか？答えは：<mask>です。",
+    "<subject>が法的な用語として適用される管轄区域はどこですか？答えは：<mask>です。",
+    "法的用語<subject>が適用される地域はどこですか？答えは：<mask>です。",
+    "どの法的エンティティが<subject>を使用していますか？答えは：<mask>です。",
+    "<subject>が認識されている法的用語はどの地域ですか？答えは：<mask>です。",
+    " <subject>が適用される法域は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "共和国大統領",
+      "object": "フランス",
+      "object_candidates": "ソマリア, スイス, ルーマニア, シンガポール, ノルウェー, キューバ, リトアニア, 中華民国, モナコ, フランス",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "カナダ首相",
+      "object": "カナダ",
+      "object_candidates": "ウクライナ, メキシコ, ソマリア, モナコ, トルコ, アイルランド, 日本, イラク, オランダ, カナダ",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "オーストラリア労働党",
+      "object": "オーストラリア",
+      "object_candidates": "ポルトガル, カナダ, オーストリア, リビア, ノルウェー, モナコ, イタリア, フィンランド, キューバ, オーストラリア",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "メキシコの大統領",
+      "object": "メキシコ",
+      "object_candidates": "ジャマイカ, キューバ, マレーシア, スイス, ブルガリア, イタリア, デンマーク, カナダ, フランス, メキシコ",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "ドイツの首相",
+      "object": "ドイツ",
+      "object_candidates": "ブルガリア, ノルウェー, リビア, クロアチア, ポルトガル, イラン, デンマーク, ベラルーシ, フィリピン, ドイツ",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ドイツ連邦共和国基本法",
+      "object": "ドイツ",
+      "object_candidates": "スイス, ベトナム, アルバニア, ポルトガル, ルーマニア, オーストラリア, オーストリア, リトアニア, イラク, ドイツ",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "カナダ議会",
+      "object": "カナダ",
+      "object_candidates": "ブルガリア, ノルウェー, イタリア, 日本, キューバ, ポルトガル, ハイチ, ベトナム, ベラルーシ, カナダ",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "ローク・サバー",
+      "object": "インド",
+      "object_candidates": "フランス, オーストリア, 日本, シンガポール, パキスタン, ウクライナ, ジャマイカ, ロシア, アルゼンチン, インド",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "クネセト",
+      "object": "イスラエル",
+      "object_candidates": "ベトナム, アルバニア, リビア, フィリピン, ドイツ, クロアチア, スウェーデン, マカオ, イラク, イスラエル",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "内閣総理大臣",
+      "object": "日本",
+      "object_candidates": "デンマーク, トルコ, メキシコ, スウェーデン, クロアチア, イタリア, オランダ, 中華民国, マカオ, 日本",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "アイルランドの大統領",
+      "object": "アイルランド",
+      "object_candidates": "カナダ, ベラルーシ, オランダ, リトアニア, メキシコ, スウェーデン, インド, パキスタン, リビア, アイルランド",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "オーストラリア・ドル",
+      "object": "オーストラリア",
+      "object_candidates": "ハイチ, 中華民国, オランダ, マカオ, ルーマニア, リトアニア, マレーシア, デンマーク, ジャマイカ, オーストラリア",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "パキスタンの大統領",
+      "object": "パキスタン",
+      "object_candidates": "ベトナム, スウェーデン, ボリビア, シンガポール, トルコ, デンマーク, ポルトガル, カナダ, イラン, パキスタン",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "ロシア連邦大統領",
+      "object": "ロシア",
+      "object_candidates": "ベトナム, インド, キューバ, フランス, ルーマニア, フィンランド, カナダ, シンガポール, パキスタン, ロシア",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "連邦首相 (オーストリア)",
+      "object": "オーストリア",
+      "object_candidates": "スペイン, フィリピン, ポルトガル, ボリビア, インド, ベラルーシ, ルーマニア, カナダ, 日本, オーストリア",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "リクスダーゲン",
+      "object": "スウェーデン",
+      "object_candidates": "アルバニア, シンガポール, ウクライナ, ベトナム, オランダ, マレーシア, フランス, モナコ, フィンランド, スウェーデン",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "スペインの国旗",
+      "object": "スペイン",
+      "object_candidates": "ボリビア, メキシコ, ノルウェー, イラク, フィンランド, アルゼンチン, カナダ, オランダ, ベトナム, スペイン",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "フランスの国旗",
+      "object": "フランス",
+      "object_candidates": "パキスタン, ハイチ, オーストリア, シンガポール, ロシア, リトアニア, ベラルーシ, ベトナム, ドイツ, フランス",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "ウクライナの大統領",
+      "object": "ウクライナ",
+      "object_candidates": "オランダ, メキシコ, イスラエル, ベラルーシ, トルコ, スペイン, リトアニア, オーストラリア, ノルウェー, ウクライナ",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "フランスの首相",
+      "object": "フランス",
+      "object_candidates": "イラク, パキスタン, ポルトガル, トルコ, フィリピン, クロアチア, オランダ, シンガポール, インド, フランス",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "デンマークの国旗",
+      "object": "デンマーク",
+      "object_candidates": "スペイン, 日本, イラク, ノルウェー, ポルトガル, イスラエル, シンガポール, トルコ, カナダ, デンマーク",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "ドイツ連邦議会",
+      "object": "ドイツ",
+      "object_candidates": "ソマリア, アイルランド, メキシコ, スウェーデン, 日本, リビア, カナダ, インド, イスラエル, ドイツ",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "アイルランドの国旗",
+      "object": "アイルランド",
+      "object_candidates": "リトアニア, フィリピン, ポルトガル, キューバ, フランス, ボリビア, モナコ, イラン, パキスタン, アイルランド",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "連邦大統領",
+      "object": "オーストリア",
+      "object_candidates": "ロシア, オーストラリア, ベトナム, リトアニア, イスラエル, パキスタン, ジャマイカ, トルコ, フィンランド, オーストリア",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "パキスタンの首相",
+      "object": "パキスタン",
+      "object_candidates": "マレーシア, アルゼンチン, オーストラリア, ノルウェー, ベトナム, ジャマイカ, シンガポール, イスラエル, イラン, パキスタン",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "連邦大統領",
+      "object": "ドイツ",
+      "object_candidates": "ボリビア, リトアニア, マカオ, キューバ, ノルウェー, モナコ, ベラルーシ, ブルガリア, ロシア, ドイツ",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "スウェーデンの首相",
+      "object": "スウェーデン",
+      "object_candidates": "シンガポール, アイルランド, カナダ, ドイツ, オランダ, スイス, フィンランド, スペイン, デンマーク, スウェーデン",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "国民議会",
+      "object": "フランス",
+      "object_candidates": "トルコ, スイス, キューバ, メキシコ, デンマーク, マレーシア, ノルウェー, 中華民国, オーストリア, フランス",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "スイスの国旗",
+      "object": "スイス",
+      "object_candidates": "フィリピン, ボリビア, ロシア, ジャマイカ, オーストリア, ポルトガル, アイルランド, イラン, ベラルーシ, スイス",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "ロシアの首相",
+      "object": "ロシア",
+      "object_candidates": "ハイチ, ウクライナ, マレーシア, スイス, スペイン, ポルトガル, イタリア, ジャマイカ, キューバ, ロシア",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "シンガポールの国旗",
+      "object": "シンガポール",
+      "object_candidates": "ポルトガル, ボリビア, ドイツ, マカオ, ソマリア, ベトナム, オーストリア, デンマーク, ブルガリア, シンガポール",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "元老院",
+      "object": "フランス",
+      "object_candidates": "フィンランド, デンマーク, ポルトガル, ソマリア, パキスタン, マレーシア, キューバ, イラン, 中華民国, フランス",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "ウクライナの首相",
+      "object": "ウクライナ",
+      "object_candidates": "イスラエル, ロシア, キューバ, フィンランド, トルコ, フランス, ソマリア, モナコ, ベトナム, ウクライナ",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "ロシアの国旗",
+      "object": "ロシア",
+      "object_candidates": "フランス, マカオ, ベラルーシ, ブルガリア, インド, オーストラリア, アイルランド, スイス, イタリア, ロシア",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "カナダの国旗",
+      "object": "カナダ",
+      "object_candidates": "ボリビア, マカオ, フィンランド, リビア, ハイチ, インド, ベラルーシ, オーストラリア, イラン, カナダ",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "ルーマニアの大統領",
+      "object": "ルーマニア",
+      "object_candidates": "イラン, フランス, メキシコ, イタリア, 中華民国, マレーシア, キューバ, ハイチ, アイルランド, ルーマニア",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "オランダの国旗",
+      "object": "オランダ",
+      "object_candidates": "スウェーデン, ソマリア, シンガポール, オーストリア, ボリビア, ポルトガル, ベラルーシ, イラク, オーストラリア, オランダ",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "マレーシアの首相",
+      "object": "マレーシア",
+      "object_candidates": "スペイン, ベトナム, イラン, イスラエル, リトアニア, フィンランド, ブルガリア, ポルトガル, デンマーク, マレーシア",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "ジャマイカの国旗",
+      "object": "ジャマイカ",
+      "object_candidates": "クロアチア, マレーシア, ドイツ, イタリア, スイス, オーストラリア, ブルガリア, スペイン, モナコ, ジャマイカ",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "アルゼンチンの国旗",
+      "object": "アルゼンチン",
+      "object_candidates": "ジャマイカ, ノルウェー, オランダ, フランス, リトアニア, イスラエル, オーストラリア, インド, ブルガリア, アルゼンチン",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "ノルウェーの国旗",
+      "object": "ノルウェー",
+      "object_candidates": "リトアニア, カナダ, モナコ, イラン, ドイツ, オーストラリア, スウェーデン, オーストリア, 中華民国, ノルウェー",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "代議院",
+      "object": "スペイン",
+      "object_candidates": "イスラエル, イラク, ロシア, リトアニア, フィリピン, デンマーク, パキスタン, ボリビア, ウクライナ, スペイン",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "天皇",
+      "object": "日本",
+      "object_candidates": "スウェーデン, パキスタン, クロアチア, リトアニア, トルコ, フィリピン, アイルランド, ルーマニア, モナコ, 日本",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "リトアニアの国旗",
+      "object": "リトアニア",
+      "object_candidates": "ハイチ, スイス, ロシア, イスラエル, マレーシア, ボリビア, オランダ, スペイン, 日本, リトアニア",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "ブルガリアの国旗",
+      "object": "ブルガリア",
+      "object_candidates": "モナコ, ベラルーシ, メキシコ, アルバニア, スウェーデン, ウクライナ, フランス, トルコ, オランダ, ブルガリア",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "イラクの大統領",
+      "object": "イラク",
+      "object_candidates": "イラン, トルコ, ハイチ, シンガポール, クロアチア, マレーシア, フィンランド, フィリピン, ベトナム, イラク",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "トルコの国旗",
+      "object": "トルコ",
+      "object_candidates": "カナダ, シンガポール, マカオ, 日本, イラク, マレーシア, アルゼンチン, スウェーデン, ボリビア, トルコ",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "マレーシアの国旗",
+      "object": "マレーシア",
+      "object_candidates": "マカオ, ボリビア, スイス, ベラルーシ, ルーマニア, ロシア, ハイチ, ジャマイカ, ノルウェー, マレーシア",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "ベラルーシの国旗",
+      "object": "ベラルーシ",
+      "object_candidates": "デンマーク, ドイツ, ロシア, メキシコ, スイス, インド, スウェーデン, ブルガリア, マカオ, ベラルーシ",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "キューバの国旗",
+      "object": "キューバ",
+      "object_candidates": "ルーマニア, アイルランド, メキシコ, 中華民国, オーストリア, マレーシア, パキスタン, フランス, マカオ, キューバ",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "ベトナムの国旗",
+      "object": "ベトナム",
+      "object_candidates": "フィンランド, パキスタン, インド, シンガポール, オーストラリア, ルーマニア, ベラルーシ, 中華民国, モナコ, ベトナム",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "ボリビアの国旗",
+      "object": "ボリビア",
+      "object_candidates": "スイス, インド, イスラエル, オーストラリア, 中華民国, ルーマニア, ロシア, パキスタン, フィンランド, ボリビア",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "インドの国旗",
+      "object": "インド",
+      "object_candidates": "モナコ, 中華民国, オランダ, スウェーデン, リビア, クロアチア, マカオ, ソマリア, リトアニア, インド",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "マカオ・パタカ",
+      "object": "マカオ",
+      "object_candidates": "ハイチ, メキシコ, オーストラリア, オランダ, ブルガリア, ノルウェー, シンガポール, アルバニア, オーストリア, マカオ",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "モナコの国旗",
+      "object": "モナコ",
+      "object_candidates": "トルコ, 中華民国, イラン, フィンランド, インド, デンマーク, ベラルーシ, イラク, リビア, モナコ",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "ソマリアの国旗",
+      "object": "ソマリア",
+      "object_candidates": "クロアチア, スペイン, トルコ, マレーシア, ブルガリア, オランダ, フランス, ノルウェー, リビア, ソマリア",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "イスラエルの大統領",
+      "object": "イスラエル",
+      "object_candidates": "ドイツ, ポルトガル, リトアニア, ブルガリア, ジャマイカ, 日本, トルコ, ルーマニア, 中華民国, イスラエル",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "スウェーデンの国旗",
+      "object": "スウェーデン",
+      "object_candidates": "カナダ, ノルウェー, ベラルーシ, リトアニア, ベトナム, スペイン, ルーマニア, アルバニア, 中華民国, スウェーデン",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "中華民国の国旗",
+      "object": "中華民国",
+      "object_candidates": "スイス, 日本, ベラルーシ, リトアニア, ベトナム, マカオ, インド, ハイチ, アイルランド, 中華民国",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "オーストラリアの国旗",
+      "object": "オーストラリア",
+      "object_candidates": "フィリピン, イラク, アルゼンチン, インド, ポルトガル, カナダ, イスラエル, ドイツ, モナコ, オーストラリア",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "ウクライナの国旗",
+      "object": "ウクライナ",
+      "object_candidates": "フィンランド, トルコ, デンマーク, インド, ドイツ, オーストリア, アイルランド, イスラエル, ポルトガル, ウクライナ",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "ベラルーシの大統領",
+      "object": "ベラルーシ",
+      "object_candidates": "ソマリア, イスラエル, インド, ブルガリア, スイス, 日本, アルゼンチン, デンマーク, フランス, ベラルーシ",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "ハイチの国旗",
+      "object": "ハイチ",
+      "object_candidates": "アイルランド, モナコ, ルーマニア, オーストリア, アルゼンチン, ベトナム, 日本, ソマリア, ボリビア, ハイチ",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "メキシコの国章",
+      "object": "メキシコ",
+      "object_candidates": "リトアニア, キューバ, イスラエル, リビア, ノルウェー, オーストリア, イラン, マカオ, スウェーデン, メキシコ",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "フィンランドの国旗",
+      "object": "フィンランド",
+      "object_candidates": "フランス, カナダ, ブルガリア, スペイン, フィリピン, ドイツ, ベラルーシ, ロシア, ソマリア, フィンランド",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "クロアチアの国旗",
+      "object": "クロアチア",
+      "object_candidates": "ドイツ, ポルトガル, ジャマイカ, アルゼンチン, マレーシア, ノルウェー, カナダ, ソマリア, ハイチ, クロアチア",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "フィンランドの大統領",
+      "object": "フィンランド",
+      "object_candidates": "ブルガリア, イラク, シンガポール, イタリア, 中華民国, クロアチア, カナダ, マレーシア, リトアニア, フィンランド",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "アルバニアの国旗",
+      "object": "アルバニア",
+      "object_candidates": "イスラエル, パキスタン, ベラルーシ, ソマリア, ハイチ, トルコ, スウェーデン, スイス, デンマーク, アルバニア",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "イタリアの国旗",
+      "object": "イタリア",
+      "object_candidates": "イスラエル, イラン, 日本, ベトナム, スウェーデン, 中華民国, ボリビア, フィリピン, フィンランド, イタリア",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "ドイツの国旗",
+      "object": "ドイツ",
+      "object_candidates": "ロシア, スウェーデン, フィリピン, リビア, スペイン, アイルランド, インド, スイス, シンガポール, ドイツ",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "リビアの国旗",
+      "object": "リビア",
+      "object_candidates": "オーストラリア, ブルガリア, モナコ, パキスタン, マレーシア, ハイチ, イスラエル, シンガポール, ルーマニア, リビア",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "フィリピンの国旗",
+      "object": "フィリピン",
+      "object_candidates": "オランダ, リビア, イスラエル, ベラルーシ, アルゼンチン, キューバ, 中華民国, オーストリア, スウェーデン, フィリピン",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "ドイツ",
+      "object_candidates": "カナダ, パキスタン, 日本, イタリア, ソマリア, ハイチ, ウクライナ, フィンランド, フランス, ドイツ",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "イランの大統領",
+      "object": "イラン",
+      "object_candidates": "ロシア, イタリア, スイス, オーストラリア, クロアチア, スペイン, アルバニア, シンガポール, インド, イラン",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "パキスタンの国旗",
+      "object": "パキスタン",
+      "object_candidates": "スペイン, スウェーデン, シンガポール, ボリビア, ハイチ, カナダ, ポルトガル, 中華民国, リトアニア, パキスタン",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "ポルトガルの国旗",
+      "object": "ポルトガル",
+      "object_candidates": "ドイツ, キューバ, オーストラリア, アイルランド, アルバニア, シンガポール, フィンランド, イスラエル, ロシア, ポルトガル",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "ギリシャの国旗",
+      "object": "ギリシャ",
+      "object_candidates": "イラク, オーストリア, クロアチア, イスラエル, カナダ, メキシコ, インド, オランダ, ベラルーシ, ギリシャ",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "メキシコの国旗",
+      "object": "メキシコ",
+      "object_candidates": "ロシア, シンガポール, スペイン, 中華民国, アルバニア, イラク, オランダ, アイルランド, イタリア, メキシコ",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "日本の国旗",
+      "object": "日本",
+      "object_candidates": "インド, トルコ, フランス, フィンランド, ロシア, メキシコ, ベラルーシ, ルーマニア, シンガポール, 日本",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

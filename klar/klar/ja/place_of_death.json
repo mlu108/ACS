@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "<subject> はどこで死んだのですか？ 回答は: <mask>",
+    "<subject> はどの都市で亡くなりましたか？ 回答は: <mask>",
+    "<subject> の死の場所はどこでしたか？ 回答は: <mask>",
+    "<subject> の死亡地点はどこでしたか？ 回答は: <mask>",
+    "<subject> の死を記念する場所はどこですか？ 回答は: <mask>",
+    " <subject>が亡くなった場所は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "ミケランジェロ・ブオナローティ",
+      "object": "ローマ",
+      "object_candidates": "プラハ, ワルシャワ, サリー, フィレンツェ, ベオグラード, イスタンブール, リヨン, ヘルシンキ, カルタゴ, ローマ",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ココ・シャネル",
+      "object": "パリ",
+      "object_candidates": "サリー, ローマ, マディーナ, ロンドン, 東京都, ダマスカス, ストックホルム, ワルシャワ, ベオグラード, パリ",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "クレメンス14世",
+      "object": "ローマ",
+      "object_candidates": "ニュルンベルク, リヨン, ヘルシンキ, カーブル, マディソン, ロンドン, パリ, カイロ, モスクワ, ローマ",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ウマル・イブン・ハッターブ",
+      "object": "マディーナ",
+      "object_candidates": "モスクワ, ベオグラード, カルタゴ, ワルシャワ, サリー, ストックホルム, フィレンツェ, ヴェネツィア, ロンドン, マディーナ",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "クレメンス3世",
+      "object": "ローマ",
+      "object_candidates": "ストックホルム, マディーナ, ロンドン, バグダード, ワルシャワ, ベオグラード, ヴェネツィア, ダマスカス, サリー, ローマ",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "デキムス・カエリウス・カルウィヌス・バルビヌス",
+      "object": "ローマ",
+      "object_candidates": "イスタンブール, ストックホルム, プラハ, ベルリン, カイロ, マドリード, カーブル, ニュルンベルク, マディソン, ローマ",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "フラント・ディンク",
+      "object": "イスタンブール",
+      "object_candidates": "エルサレム, 東京都, モスクワ, ヘルシンキ, ローマ, ロンドン, カーブル, フィレンツェ, マドリード, イスタンブール",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "ニケフォロス3世ボタネイアテス",
+      "object": "コンスタンティノープル",
+      "object_candidates": "台北市, モスクワ, ストックホルム, アテネ, カーブル, ニュルンベルク, ダマスカス, パリ, サリー, コンスタンティノープル",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "ヨハン・パッヘルベル",
+      "object": "ニュルンベルク",
+      "object_candidates": "デトロイト, アテネ, マドリード, 東京都, ベオグラード, カーブル, ローマ, プラハ, モスクワ, ニュルンベルク",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "ヴァーツラフ・ニジンスキー",
+      "object": "ロンドン",
+      "object_candidates": "ローマ, 東京都, マディソン, イスタンブール, マディーナ, コンスタンティノープル, ヴェネツィア, サリー, バグダード, ロンドン",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "レオ10世",
+      "object": "ローマ",
+      "object_candidates": "ベオグラード, カルタゴ, サリー, カイロ, マディソン, パリ, エルサレム, ヴェネツィア, 台北市, ローマ",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ドナテッロ",
+      "object": "フィレンツェ",
+      "object_candidates": "デトロイト, ストックホルム, アテネ, ワルシャワ, カーブル, バグダード, ロンドン, エルサレム, マディーナ, フィレンツェ",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "蒋経国",
+      "object": "台北市",
+      "object_candidates": "バグダード, ダマスカス, アテネ, ベルリン, ヘルシンキ, リヨン, デトロイト, ニュルンベルク, マドリード, 台北市",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "ロバート・フック",
+      "object": "ロンドン",
+      "object_candidates": "イスタンブール, カイロ, コンスタンティノープル, ベルリン, 東京都, マドリード, サリー, リヨン, 台北市, ロンドン",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "ローザ・パークス",
+      "object": "デトロイト",
+      "object_candidates": "パリ, イスタンブール, マドリード, バグダード, ベルリン, ストックホルム, マディソン, カイロ, アテネ, デトロイト",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "ヨハネス8世パレオロゴス",
+      "object": "コンスタンティノープル",
+      "object_candidates": "ストックホルム, ワルシャワ, モスクワ, アテネ, バグダード, 台北市, カイロ, フィレンツェ, イスタンブール, コンスタンティノープル",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "ジョン・ディー",
+      "object": "サリー",
+      "object_candidates": "ローマ, ワルシャワ, バグダード, コンスタンティノープル, 東京都, フィレンツェ, リヨン, デトロイト, プラハ, サリー",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "フェルナンデル",
+      "object": "パリ",
+      "object_candidates": "ワルシャワ, サリー, カイロ, アテネ, エルサレム, プラハ, ヴェネツィア, リヨン, ヘルシンキ, パリ",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ミカエル2世",
+      "object": "コンスタンティノープル",
+      "object_candidates": "ワルシャワ, イスタンブール, 東京都, ニュルンベルク, モスクワ, カイロ, ヴェネツィア, リヨン, サリー, コンスタンティノープル",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "カール・リープクネヒト",
+      "object": "ベルリン",
+      "object_candidates": "ヘルシンキ, カイロ, 台北市, ロンドン, パリ, ワルシャワ, イスタンブール, マドリード, ダマスカス, ベルリン",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "リヒャルト・ワーグナー",
+      "object": "ヴェネツィア",
+      "object_candidates": "モスクワ, ベオグラード, エルサレム, ワルシャワ, サリー, パリ, デトロイト, バグダード, ダマスカス, ヴェネツィア",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "アンティステネス",
+      "object": "アテネ",
+      "object_candidates": "モスクワ, カイロ, マディーナ, コンスタンティノープル, ヘルシンキ, サリー, カーブル, パリ, フィレンツェ, アテネ",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "マックス・エルンスト",
+      "object": "パリ",
+      "object_candidates": "ロンドン, ストックホルム, 東京都, ニュルンベルク, ローマ, アテネ, ヴェネツィア, モスクワ, ベオグラード, パリ",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "マルティン・ブーバー",
+      "object": "エルサレム",
+      "object_candidates": "カーブル, バグダード, ストックホルム, モスクワ, イスタンブール, サリー, リヨン, ニュルンベルク, ベオグラード, エルサレム",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "ヨーゼフ・ゲッベルス",
+      "object": "ベルリン",
+      "object_candidates": "ロンドン, カルタゴ, プラハ, アテネ, コンスタンティノープル, マディーナ, ローマ, カーブル, マディソン, ベルリン",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "シャルル・ド・モンテスキュー",
+      "object": "パリ",
+      "object_candidates": "ストックホルム, カーブル, カイロ, バグダード, ニュルンベルク, コンスタンティノープル, ダマスカス, マディーナ, リヨン, パリ",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ニコラウス5世",
+      "object": "ローマ",
+      "object_candidates": "モスクワ, サリー, リヨン, デトロイト, ニュルンベルク, バグダード, カイロ, マディソン, ダマスカス, ローマ",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "シャルロット・コルデー",
+      "object": "パリ",
+      "object_candidates": "バグダード, ワルシャワ, エルサレム, カーブル, イスタンブール, カイロ, 東京都, マディーナ, 台北市, パリ",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ザーヒル・シャー",
+      "object": "カーブル",
+      "object_candidates": "マディーナ, エルサレム, ダマスカス, ヴェネツィア, マディソン, デトロイト, モスクワ, フィレンツェ, サリー, カーブル",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "インノケンティウス11世",
+      "object": "ローマ",
+      "object_candidates": "ロンドン, ベルリン, カイロ, ヴェネツィア, ダマスカス, マディソン, カルタゴ, フィレンツェ, アテネ, ローマ",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ゴルディアヌス2世",
+      "object": "カルタゴ",
+      "object_candidates": "マディソン, リヨン, プラハ, ローマ, ベオグラード, エルサレム, バグダード, ダマスカス, デトロイト, カルタゴ",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "ムスティスラフ・ロストロポーヴィチ",
+      "object": "モスクワ",
+      "object_candidates": "リヨン, イスタンブール, アテネ, ニュルンベルク, マディソン, ベルリン, マドリード, 東京都, マディーナ, モスクワ",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ピウス3世",
+      "object": "ローマ",
+      "object_candidates": "イスタンブール, ロンドン, プラハ, リヨン, パリ, ワルシャワ, ベオグラード, カーブル, マドリード, ローマ",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "アブドルカリーム・カーシム",
+      "object": "バグダード",
+      "object_candidates": "東京都, ローマ, フィレンツェ, ロンドン, パリ, カイロ, 台北市, リヨン, ダマスカス, バグダード",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "グレゴリウス16世",
+      "object": "ローマ",
+      "object_candidates": "コンスタンティノープル, ワルシャワ, 台北市, バグダード, カーブル, ロンドン, マドリード, カルタゴ, ダマスカス, ローマ",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "アラム・ハチャトゥリアン",
+      "object": "モスクワ",
+      "object_candidates": "エルサレム, バグダード, ニュルンベルク, アテネ, ロンドン, ヘルシンキ, デトロイト, 東京都, カルタゴ, モスクワ",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ハインリヒ・フォン・クライスト",
+      "object": "ベルリン",
+      "object_candidates": "ローマ, ロンドン, モスクワ, リヨン, バグダード, カーブル, フィレンツェ, ワルシャワ, サリー, ベルリン",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "アブデュルハミト1世",
+      "object": "コンスタンティノープル",
+      "object_candidates": "イスタンブール, カーブル, ヴェネツィア, カイロ, マディーナ, 東京都, デトロイト, ベオグラード, パリ, コンスタンティノープル",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "アレクサンデル8世",
+      "object": "ローマ",
+      "object_candidates": "リヨン, 台北市, カルタゴ, マディソン, イスタンブール, ワルシャワ, コンスタンティノープル, ロンドン, マドリード, ローマ",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ヨハン・クリスティアン・バッハ",
+      "object": "ロンドン",
+      "object_candidates": "アテネ, ベルリン, パリ, カーブル, ヘルシンキ, エルサレム, ダマスカス, マドリード, リヨン, ロンドン",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "サミュエル・ジョンソン",
+      "object": "ロンドン",
+      "object_candidates": "カルタゴ, イスタンブール, マディーナ, ストックホルム, ベルリン, ワルシャワ, モスクワ, カイロ, アテネ, ロンドン",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "ジャック＝イヴ・クストー",
+      "object": "パリ",
+      "object_candidates": "アテネ, ベルリン, ヴェネツィア, ベオグラード, ニュルンベルク, ローマ, コンスタンティノープル, エルサレム, バグダード, パリ",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ソフィア・コワレフスカヤ",
+      "object": "ストックホルム",
+      "object_candidates": "パリ, ヘルシンキ, ベルリン, マディソン, アテネ, フィレンツェ, デトロイト, プラハ, カーブル, ストックホルム",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "ゲオルク・ヴィルヘルム・フリードリヒ・ヘーゲル",
+      "object": "ベルリン",
+      "object_candidates": "アテネ, マディソン, カーブル, マドリード, バグダード, プラハ, ストックホルム, イスタンブール, マディーナ, ベルリン",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "サンドロ・ボッティチェッリ",
+      "object": "フィレンツェ",
+      "object_candidates": "ベオグラード, マディーナ, イスタンブール, マディソン, ニュルンベルク, デトロイト, ストックホルム, カーブル, エルサレム, フィレンツェ",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "サミュエル・テイラー・コールリッジ",
+      "object": "ロンドン",
+      "object_candidates": "ストックホルム, ワルシャワ, マディーナ, デトロイト, エルサレム, ベオグラード, リヨン, モスクワ, カルタゴ, ロンドン",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "イブン・ハルドゥーン",
+      "object": "カイロ",
+      "object_candidates": "リヨン, ベルリン, ニュルンベルク, エルサレム, ヴェネツィア, モスクワ, イスタンブール, 台北市, ダマスカス, カイロ",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "ヘンリー4世",
+      "object": "ロンドン",
+      "object_candidates": "イスタンブール, アテネ, カイロ, ローマ, ニュルンベルク, ダマスカス, マドリード, ヴェネツィア, ベルリン, ロンドン",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "トマゾ・アルビノーニ",
+      "object": "ヴェネツィア",
+      "object_candidates": "パリ, エルサレム, マディーナ, リヨン, フィレンツェ, デトロイト, ヘルシンキ, ベオグラード, 台北市, ヴェネツィア",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "パーヴォ・ヌルミ",
+      "object": "ヘルシンキ",
+      "object_candidates": "台北市, サリー, ストックホルム, フィレンツェ, カーブル, パリ, ロンドン, ベオグラード, リヨン, ヘルシンキ",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "クレメンス1世",
+      "object": "ローマ",
+      "object_candidates": "ロンドン, バグダード, ヘルシンキ, イスタンブール, ベオグラード, パリ, カルタゴ, コンスタンティノープル, ワルシャワ, ローマ",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ルイ17世",
+      "object": "パリ",
+      "object_candidates": "マドリード, ヴェネツィア, コンスタンティノープル, ストックホルム, モスクワ, フィレンツェ, マディーナ, ダマスカス, ニュルンベルク, パリ",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "黒川紀章",
+      "object": "東京都",
+      "object_candidates": "フィレンツェ, アテネ, カルタゴ, モスクワ, ワルシャワ, カイロ, ヴェネツィア, パリ, ローマ, 東京都",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "マクシミリアン・ロベスピエール",
+      "object": "パリ",
+      "object_candidates": "フィレンツェ, モスクワ, マディーナ, ダマスカス, ローマ, 東京都, ニュルンベルク, ストックホルム, バグダード, パリ",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ジョルジョーネ",
+      "object": "ヴェネツィア",
+      "object_candidates": "パリ, ローマ, アテネ, モスクワ, ヘルシンキ, ロンドン, コンスタンティノープル, マディーナ, リヨン, ヴェネツィア",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "ペータル1世",
+      "object": "ベオグラード",
+      "object_candidates": "東京都, バグダード, ロンドン, パリ, 台北市, カーブル, ヘルシンキ, アテネ, ニュルンベルク, ベオグラード",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "ルドヴィコ・ザメンホフ",
+      "object": "ワルシャワ",
+      "object_candidates": "ロンドン, ニュルンベルク, アテネ, ベオグラード, リヨン, ヘルシンキ, バグダード, コンスタンティノープル, パリ, ワルシャワ",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "イブラーヒーム・パシャ",
+      "object": "カイロ",
+      "object_candidates": "パリ, マディソン, サリー, プラハ, ベオグラード, ワルシャワ, アテネ, ダマスカス, イスタンブール, カイロ",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "クレメンス12世",
+      "object": "ローマ",
+      "object_candidates": "ベルリン, イスタンブール, カイロ, 東京都, コンスタンティノープル, ベオグラード, 台北市, カーブル, パリ, ローマ",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "エイレナイオス",
+      "object": "リヨン",
+      "object_candidates": "デトロイト, ヘルシンキ, サリー, マディーナ, ニュルンベルク, ロンドン, フィレンツェ, コンスタンティノープル, モスクワ, リヨン",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "ジャック・デリダ",
+      "object": "パリ",
+      "object_candidates": "カルタゴ, ベルリン, デトロイト, アテネ, ローマ, ベオグラード, ダマスカス, カイロ, リヨン, パリ",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "カルロス4世",
+      "object": "ローマ",
+      "object_candidates": "プラハ, マドリード, アテネ, ヴェネツィア, ワルシャワ, 東京都, ヘルシンキ, モスクワ, エルサレム, ローマ",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "レイフ・ヴォーン・ウィリアムズ",
+      "object": "ロンドン",
+      "object_candidates": "ローマ, マドリード, アテネ, ベルリン, マディーナ, パリ, デトロイト, リヨン, カイロ, ロンドン",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "アンドレイ・グロムイコ",
+      "object": "モスクワ",
+      "object_candidates": "マドリード, 台北市, デトロイト, アテネ, ヴェネツィア, ダマスカス, カルタゴ, ロンドン, ニュルンベルク, モスクワ",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ウルリカ・エレオノーラ",
+      "object": "ストックホルム",
+      "object_candidates": "アテネ, 台北市, サリー, ワルシャワ, エルサレム, フィレンツェ, マドリード, ダマスカス, パリ, ストックホルム",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "オーティス・レディング",
+      "object": "マディソン",
+      "object_candidates": "パリ, ヴェネツィア, ローマ, カルタゴ, フィレンツェ, イスタンブール, カーブル, バグダード, ストックホルム, マディソン",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "アンリ・ルソー",
+      "object": "パリ",
+      "object_candidates": "サリー, フィレンツェ, カルタゴ, ヘルシンキ, ヴェネツィア, バグダード, ニュルンベルク, ダマスカス, ベオグラード, パリ",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ムアーウィヤ",
+      "object": "ダマスカス",
+      "object_candidates": "ストックホルム, 東京都, デトロイト, コンスタンティノープル, マディソン, マドリード, サリー, プラハ, パリ, ダマスカス",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "ルイ・アラゴン",
+      "object": "パリ",
+      "object_candidates": "カイロ, マドリード, マディーナ, サリー, エルサレム, ワルシャワ, マディソン, バグダード, ダマスカス, パリ",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "バイバルス",
+      "object": "ダマスカス",
+      "object_candidates": "モスクワ, サリー, パリ, エルサレム, ロンドン, マディーナ, アテネ, マドリード, ベオグラード, ダマスカス",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "クラウス・フォン・シュタウフェンベルク",
+      "object": "ベルリン",
+      "object_candidates": "ロンドン, プラハ, ワルシャワ, カーブル, パリ, リヨン, 台北市, ベオグラード, デトロイト, ベルリン",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ドナト・ブラマンテ",
+      "object": "ローマ",
+      "object_candidates": "エルサレム, ヘルシンキ, リヨン, ストックホルム, ベルリン, モスクワ, カーブル, バグダード, ワルシャワ, ローマ",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "フランシスコ・フランコ",
+      "object": "マドリード",
+      "object_candidates": "ローマ, リヨン, アテネ, モスクワ, エルサレム, プラハ, コンスタンティノープル, ベルリン, デトロイト, マドリード",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "クロード・ベルナール",
+      "object": "パリ",
+      "object_candidates": "マディーナ, コンスタンティノープル, デトロイト, ダマスカス, リヨン, サリー, ストックホルム, マディソン, ベルリン, パリ",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ガマール・アブドゥル＝ナーセル",
+      "object": "カイロ",
+      "object_candidates": "マディーナ, イスタンブール, ニュルンベルク, ストックホルム, デトロイト, 台北市, フィレンツェ, ヴェネツィア, ワルシャワ, カイロ",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "ヤーコフ・スヴェルドロフ",
+      "object": "モスクワ",
+      "object_candidates": "台北市, バグダード, デトロイト, ニュルンベルク, ダマスカス, ロンドン, ベルリン, ヴェネツィア, コンスタンティノープル, モスクワ",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "シャルル・ルイ・アルフォンス・ラヴラン",
+      "object": "パリ",
+      "object_candidates": "マドリード, ロンドン, ベルリン, エルサレム, ローマ, ワルシャワ, バグダード, アテネ, ベオグラード, パリ",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ティコ・ブラーエ",
+      "object": "プラハ",
+      "object_candidates": "カルタゴ, ヘルシンキ, マディーナ, 東京都, ローマ, ストックホルム, フィレンツェ, イスタンブール, バグダード, プラハ",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "エドワード・ヒース",
+      "object": "ソールズベリー",
+      "object_candidates": "サリー, パリ, 台北市, コンスタンティノープル, マディソン, ワルシャワ, ベルリン, ロンドン, カルタゴ, ソールズベリー",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

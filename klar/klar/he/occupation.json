@@ -1,0 +1,382 @@
+{
+  "name": "occupation",
+  "prompt_templates": [
+    "מה המקצוע של <subject>? התשובה היא: <mask>.",
+    "מה <subject> עושה למחייתו? התשובה היא: <mask>.",
+    "עם איזה מקצוע <subject> קשור? התשובה היא: <mask>.",
+    "איזה קריירה יש ל<subject>? התשובה היא: <mask>.",
+    "מה תואר העבודה של <subject>? התשובה היא: <mask>.",
+    " המקצוע של <subject> הוא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "האלי ברי",
+      "object": "דוגמן",
+      "object_candidates": "פוליטיקאי, מלחין, תסריטאי, פסנתרן, מחבר רומנים, שחקן, מחזאי, פיזיקאי, צלם, דוגמן",
+      "index": 1959,
+      "subject_en": "Halle Berry",
+      "object_en": "model"
+    },
+    {
+      "subject": "מוחמד איקבאל",
+      "object": "משורר",
+      "object_candidates": "פוליטיקאי, תסריטאי, עיתונאי, מחבר רומנים, פיזיקאי, מחזאי, דוגמן, מתמטיקאי, פילוסוף, משורר",
+      "index": 1960,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "poet"
+    },
+    {
+      "subject": "אנני לנוקס",
+      "object": "פזמונאי",
+      "object_candidates": "דוגמן, פוליטיקאי, מלחין, אסטרונום, תסריטאי, משורר, ספרן, דיפלומט, צלם, פזמונאי",
+      "index": 1961,
+      "subject_en": "Annie Lennox",
+      "object_en": "songwriter"
+    },
+    {
+      "subject": "בואתיוס",
+      "object": "פילוסוף",
+      "object_candidates": "אסטרונום, פסנתרן, פיזיקאי, דיפלומט, מחבר רומנים, שחקן, פוליטיקאי, משורר, דוגמן, פילוסוף",
+      "index": 1962,
+      "subject_en": "Boethius",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "מיכלאנג'לו",
+      "object": "משורר",
+      "object_candidates": "פסנתרן, פילוסוף, מחבר רומנים, דוגמן, פיזיקאי, מתמטיקאי, עיתונאי, פוליטיקאי, פזמונאי, משורר",
+      "index": 1963,
+      "subject_en": "Michelangelo",
+      "object_en": "poet"
+    },
+    {
+      "subject": "פולינה גאגארינה",
+      "object": "שחקן",
+      "object_candidates": "ספרן, דיפלומט, מחבר רומנים, צלם, אסטרונום, עיתונאי, תסריטאי, דוגמן, משורר, שחקן",
+      "index": 1964,
+      "subject_en": "Polina Gagarina",
+      "object_en": "actor"
+    },
+    {
+      "subject": "אלפרידה ילינק",
+      "object": "משורר",
+      "object_candidates": "דיפלומט, אסטרונום, פזמונאי, ספרן, דוגמן, פילוסוף, מחזאי, שחקן, פיזיקאי, משורר",
+      "index": 1965,
+      "subject_en": "Elfriede Jelinek",
+      "object_en": "poet"
+    },
+    {
+      "subject": "אווה לונגוריה",
+      "object": "שחקן",
+      "object_candidates": "פילוסוף, פוליטיקאי, משורר, תסריטאי, מתמטיקאי, פסנתרן, מלחין, פזמונאי, מחבר רומנים, שחקן",
+      "index": 1966,
+      "subject_en": "Eva Longoria",
+      "object_en": "actor"
+    },
+    {
+      "subject": "אוגוסטן ז'אן פרנל",
+      "object": "פיזיקאי",
+      "object_candidates": "פסנתרן, פילוסוף, מלחין, ספרן, מחזאי, צלם, פוליטיקאי, פזמונאי, דיפלומט, פיזיקאי",
+      "index": 1967,
+      "subject_en": "Augustin-Jean Fresnel",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "יאן קאמה",
+      "object": "פוליטיקאי",
+      "object_candidates": "פילוסוף, דיפלומט, מתמטיקאי, ספרן, פסנתרן, פיזיקאי, שחקן, צלם, מלחין, פוליטיקאי",
+      "index": 1968,
+      "subject_en": "Ian Khama",
+      "object_en": "politician"
+    },
+    {
+      "subject": "פרד אסטר",
+      "object": "תסריטאי",
+      "object_candidates": "משורר, פוליטיקאי, פיזיקאי, עיתונאי, מחבר רומנים, דיפלומט, מלחין, שחקן, פזמונאי, תסריטאי",
+      "index": 1969,
+      "subject_en": "Fred Astaire",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "ג'. ב. פריסטלי",
+      "object": "מחבר רומנים",
+      "object_candidates": "שחקן, צלם, דוגמן, פילוסוף, דיפלומט, פיזיקאי, פסנתרן, פזמונאי, מלחין, מחבר רומנים",
+      "index": 1970,
+      "subject_en": "J. B. Priestley",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "ג'ק יוסטון",
+      "object": "שחקן",
+      "object_candidates": "משורר, פזמונאי, מחבר רומנים, אסטרונום, ספרן, פילוסוף, עיתונאי, פוליטיקאי, תסריטאי, שחקן",
+      "index": 1971,
+      "subject_en": "Jack Huston",
+      "object_en": "actor"
+    },
+    {
+      "subject": "ורנר הייזנברג",
+      "object": "פיזיקאי",
+      "object_candidates": "מלחין, עיתונאי, שחקן, מחבר רומנים, משורר, מתמטיקאי, פוליטיקאי, פסנתרן, דוגמן, פיזיקאי",
+      "index": 1972,
+      "subject_en": "Werner Heisenberg",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "יו בונוויל",
+      "object": "שחקן",
+      "object_candidates": "פוליטיקאי, עיתונאי, מלחין, דיפלומט, ספרן, צלם, מחבר רומנים, פזמונאי, פסנתרן, שחקן",
+      "index": 1973,
+      "subject_en": "Hugh Bonneville",
+      "object_en": "actor"
+    },
+    {
+      "subject": "אנדרס פוג ראסמוסן",
+      "object": "פוליטיקאי",
+      "object_candidates": "דוגמן, מתמטיקאי, משורר, דיפלומט, פיזיקאי, פסנתרן, עיתונאי, שחקן, פזמונאי, פוליטיקאי",
+      "index": 1974,
+      "subject_en": "Anders Fogh Rasmussen",
+      "object_en": "politician"
+    },
+    {
+      "subject": "אנריקה גרנדוס",
+      "object": "מלחין",
+      "object_candidates": "אסטרונום, פוליטיקאי, צלם, שחקן, פילוסוף, דוגמן, פסנתרן, עיתונאי, ספרן, מלחין",
+      "index": 1975,
+      "subject_en": "Enrique Granados",
+      "object_en": "composer"
+    },
+    {
+      "subject": "קארן גילאן",
+      "object": "שחקן",
+      "object_candidates": "מתמטיקאי, עיתונאי, מחזאי, מלחין, פסנתרן, דוגמן, דיפלומט, תסריטאי, ספרן, שחקן",
+      "index": 1976,
+      "subject_en": "Karen Gillan",
+      "object_en": "actor"
+    },
+    {
+      "subject": "חורחה לואיס בורחס",
+      "object": "ספרן",
+      "object_candidates": "צלם, פוליטיקאי, מלחין, דוגמן, מתמטיקאי, פיזיקאי, שחקן, פזמונאי, מחזאי, ספרן",
+      "index": 1977,
+      "subject_en": "Jorge Luis Borges",
+      "object_en": "librarian"
+    },
+    {
+      "subject": "ז'אק אודיאר",
+      "object": "תסריטאי",
+      "object_candidates": "אסטרונום, דיפלומט, משורר, פילוסוף, פסנתרן, שחקן, דוגמן, צלם, ספרן, תסריטאי",
+      "index": 1978,
+      "subject_en": "Jacques Audiard",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "וורן בייטי",
+      "object": "תסריטאי",
+      "object_candidates": "פסנתרן, פיזיקאי, אסטרונום, דיפלומט, מתמטיקאי, שחקן, פילוסוף, מחבר רומנים, פזמונאי, תסריטאי",
+      "index": 1979,
+      "subject_en": "Warren Beatty",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "יוהאן וולפגנג פון גתה",
+      "object": "פוליטיקאי",
+      "object_candidates": "צלם, מלחין, פזמונאי, תסריטאי, דיפלומט, פסנתרן, עיתונאי, מחזאי, משורר, פוליטיקאי",
+      "index": 1980,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "politician"
+    },
+    {
+      "subject": "ראשידה ג'ונס",
+      "object": "שחקן",
+      "object_candidates": "תסריטאי, פסנתרן, מחזאי, אסטרונום, מתמטיקאי, צלם, עיתונאי, ספרן, פיזיקאי, שחקן",
+      "index": 1981,
+      "subject_en": "Rashida Jones",
+      "object_en": "actor"
+    },
+    {
+      "subject": "עמנואל שברייה",
+      "object": "מלחין",
+      "object_candidates": "פסנתרן, תסריטאי, מחזאי, צלם, שחקן, פוליטיקאי, דיפלומט, מתמטיקאי, פזמונאי, מלחין",
+      "index": 1982,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "composer"
+    },
+    {
+      "subject": "המרקיז דה סאד",
+      "object": "מחזאי",
+      "object_candidates": "פסנתרן, פזמונאי, צלם, מתמטיקאי, פוליטיקאי, עיתונאי, תסריטאי, משורר, מלחין, מחזאי",
+      "index": 1983,
+      "subject_en": "Marquis de Sade",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "מדהורי דיקסיט",
+      "object": "שחקן",
+      "object_candidates": "פילוסוף, תסריטאי, מתמטיקאי, אסטרונום, דוגמן, צלם, פזמונאי, מחזאי, דיפלומט, שחקן",
+      "index": 1984,
+      "subject_en": "Madhuri Dixit",
+      "object_en": "actor"
+    },
+    {
+      "subject": "ארנו פנזיאס",
+      "object": "אסטרונום",
+      "object_candidates": "פסנתרן, פילוסוף, ספרן, דוגמן, מלחין, צלם, פזמונאי, מתמטיקאי, מחזאי, אסטרונום",
+      "index": 1985,
+      "subject_en": "Arno Allan Penzias",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "מישל וולבק",
+      "object": "משורר",
+      "object_candidates": "ספרן, דוגמן, פילוסוף, פסנתרן, פזמונאי, עיתונאי, אסטרונום, מחזאי, צלם, משורר",
+      "index": 1986,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "poet"
+    },
+    {
+      "subject": "אריסטו",
+      "object": "מתמטיקאי",
+      "object_candidates": "מחזאי, פזמונאי, דיפלומט, אסטרונום, פסנתרן, פוליטיקאי, מלחין, מחבר רומנים, שחקן, מתמטיקאי",
+      "index": 1987,
+      "subject_en": "Aristotle",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "קאזואו אישיגורו",
+      "object": "מחבר רומנים",
+      "object_candidates": "עיתונאי, צלם, דוגמן, פיזיקאי, פילוסוף, מחזאי, שחקן, תסריטאי, פסנתרן, מחבר רומנים",
+      "index": 1988,
+      "subject_en": "Kazuo Ishiguro",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "לו ריד",
+      "object": "צלם",
+      "object_candidates": "מתמטיקאי, מחזאי, אסטרונום, פילוסוף, פוליטיקאי, דוגמן, עיתונאי, פיזיקאי, ספרן, צלם",
+      "index": 1989,
+      "subject_en": "Lou Reed",
+      "object_en": "photographer"
+    },
+    {
+      "subject": "קלמנס ונצל פון מטרניך",
+      "object": "דיפלומט",
+      "object_candidates": "פילוסוף, משורר, מחזאי, פוליטיקאי, ספרן, עיתונאי, מחבר רומנים, שחקן, דוגמן, דיפלומט",
+      "index": 1990,
+      "subject_en": "Klemens von Metternich",
+      "object_en": "diplomat"
+    },
+    {
+      "subject": "יוסטיניוס הראשון, קיסר האימפריה הביזנטית",
+      "object": "פוליטיקאי",
+      "object_candidates": "תסריטאי, פילוסוף, דיפלומט, מחזאי, שחקן, מתמטיקאי, פיזיקאי, דוגמן, פסנתרן, פוליטיקאי",
+      "index": 1991,
+      "subject_en": "Justin I",
+      "object_en": "politician"
+    },
+    {
+      "subject": "הית' לדג'ר",
+      "object": "שחקן",
+      "object_candidates": "צלם, עיתונאי, פוליטיקאי, פיזיקאי, פזמונאי, דיפלומט, אסטרונום, תסריטאי, ספרן, שחקן",
+      "index": 1992,
+      "subject_en": "Heath Ledger",
+      "object_en": "actor"
+    },
+    {
+      "subject": "אגושטיניו נטו",
+      "object": "משורר",
+      "object_candidates": "דיפלומט, מחזאי, תסריטאי, פסנתרן, ספרן, שחקן, פזמונאי, דוגמן, מתמטיקאי, משורר",
+      "index": 1993,
+      "subject_en": "Agostinho Neto",
+      "object_en": "poet"
+    },
+    {
+      "subject": "אדגר אלן פו",
+      "object": "מחזאי",
+      "object_candidates": "פילוסוף, פזמונאי, דוגמן, פיזיקאי, מתמטיקאי, אסטרונום, דיפלומט, משורר, צלם, מחזאי",
+      "index": 1994,
+      "subject_en": "Edgar Allan Poe",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "אלכסנדר סולז'ניצין",
+      "object": "משורר",
+      "object_candidates": "מלחין, פוליטיקאי, פילוסוף, אסטרונום, פיזיקאי, דיפלומט, מחזאי, דוגמן, ספרן, משורר",
+      "index": 1995,
+      "subject_en": "Aleksandr Solzhenitsyn",
+      "object_en": "poet"
+    },
+    {
+      "subject": "סטיבן קולבר",
+      "object": "עיתונאי",
+      "object_candidates": "מלחין, דיפלומט, פילוסוף, דוגמן, פסנתרן, פוליטיקאי, אסטרונום, שחקן, פיזיקאי, עיתונאי",
+      "index": 1996,
+      "subject_en": "Stephen Colbert",
+      "object_en": "journalist"
+    },
+    {
+      "subject": "ויטני יוסטון",
+      "object": "מלחין",
+      "object_candidates": "פילוסוף, דיפלומט, אסטרונום, תסריטאי, פיזיקאי, צלם, מתמטיקאי, עיתונאי, פוליטיקאי, מלחין",
+      "index": 1997,
+      "subject_en": "Whitney Houston",
+      "object_en": "composer"
+    },
+    {
+      "subject": "לופה דה וגה",
+      "object": "מחזאי",
+      "object_candidates": "מתמטיקאי, ספרן, דוגמן, פוליטיקאי, פיזיקאי, מלחין, צלם, אסטרונום, פזמונאי, מחזאי",
+      "index": 1998,
+      "subject_en": "Lope de Vega",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "ג'נט ג'קסון",
+      "object": "דוגמן",
+      "object_candidates": "דיפלומט, עיתונאי, שחקן, פסנתרן, צלם, ספרן, מלחין, פיזיקאי, פוליטיקאי, דוגמן",
+      "index": 1999,
+      "subject_en": "Janet Jackson",
+      "object_en": "model"
+    },
+    {
+      "subject": "פרנסיס פולנק",
+      "object": "פסנתרן",
+      "object_candidates": "מחזאי, פוליטיקאי, שחקן, מלחין, משורר, פילוסוף, מחבר רומנים, עיתונאי, פזמונאי, פסנתרן",
+      "index": 2000,
+      "subject_en": "Francis Poulenc",
+      "object_en": "pianist"
+    },
+    {
+      "subject": "ג'יימס פנימור קופר",
+      "object": "מחבר רומנים",
+      "object_candidates": "דוגמן, מתמטיקאי, תסריטאי, מלחין, פיזיקאי, פזמונאי, שחקן, משורר, ספרן, מחבר רומנים",
+      "index": 2001,
+      "subject_en": "James Fenimore Cooper",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "פייר אבלר",
+      "object": "פילוסוף",
+      "object_candidates": "דיפלומט, מחזאי, דוגמן, משורר, שחקן, פוליטיקאי, פזמונאי, עיתונאי, אסטרונום, פילוסוף",
+      "index": 2002,
+      "subject_en": "Peter Abelard",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "גאורגי לבוב",
+      "object": "פוליטיקאי",
+      "object_candidates": "פזמונאי, פסנתרן, מחבר רומנים, ספרן, פילוסוף, תסריטאי, שחקן, צלם, מתמטיקאי, פוליטיקאי",
+      "index": 2003,
+      "subject_en": "Georgy Lvov",
+      "object_en": "politician"
+    },
+    {
+      "subject": "הווארד פיליפס לאבקרפט",
+      "object": "עיתונאי",
+      "object_candidates": "משורר, ספרן, פזמונאי, מחבר רומנים, פיזיקאי, תסריטאי, פילוסוף, מלחין, דיפלומט, עיתונאי",
+      "index": 2004,
+      "subject_en": "H. P. Lovecraft",
+      "object_en": "journalist"
+    }
+  ],
+  "relation_id": "P106"
+}

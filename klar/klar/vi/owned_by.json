@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "Ai sở hữu <subject>? Câu trả lời là: <mask>",
+    "Công ty hoặc người nào sở hữu <subject>? Câu trả lời là: <mask>",
+    "Ai là chủ sở hữu hiện tại của <subject>? Câu trả lời là: <mask>",
+    "<subject> thuộc sở hữu của ai? Câu trả lời là: <mask>",
+    "Thực thể nào sở hữu <subject>? Câu trả lời là: <mask>",
+    " Chủ sở hữu của <subject> là <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati Motor Holding S.p.A.",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Berlin, Paris, Toyota, Sony, Milano, Pháp, BBC, Ba Lan, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Lamborghini",
+      "object": "Audi",
+      "object_candidates": "Paris, Yahoo!, Genova, Milano, Amazon.com, Ba Lan, Microsoft, Toyota, Pháp, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Tháp Eiffel",
+      "object": "Paris",
+      "object_candidates": "Lviv, Qatar, Yahoo!, Milano, Pháp, Microsoft, Sony, Ba Lan, Torino, Paris",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Đức",
+      "object_candidates": "Torino, Sony, Paris, Berlin, Genova, Ba Lan, Qatar, Toyota, Chicago, Đức",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Google Search",
+      "object": "Google",
+      "object_candidates": "Torino, Sony, Đức, Genova, Ba Lan, Qatar, Yahoo!, Chicago, Milano, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Lviv, Google, Pháp, Chicago, BBC, Palermo, Ba Lan, Genova, Đức, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "Chicago, Milano, Lviv, Paris, Napoli, Pháp, Đức, Torino, BBC, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "CD",
+      "object": "Sony",
+      "object_candidates": "Toyota, Lviv, BBC, Milano, Google, Yahoo!, Napoli, Genova, Paris, Sony",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sân bay Quốc tế O'Hare",
+      "object": "Chicago",
+      "object_candidates": "BBC, Genova, Pháp, Qatar, Audi, Toyota, Amsterdam, Amazon.com, Lviv, Chicago",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "Pháp, Lviv, Genova, Audi, Yahoo!, Napoli, Palermo, Paris, Amsterdam, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony",
+      "object_candidates": "Torino, Google, Yahoo!, Amazon.com, Lviv, Microsoft, Audi, Toyota, Đức, Sony",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures",
+      "object": "Sony",
+      "object_candidates": "Đức, Chicago, Microsoft, Napoli, Lviv, Amazon.com, Audi, BBC, Qatar, Sony",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Audi, Napoli, Paris, Sony, Lviv, Toyota, Palermo, Qatar, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Maps",
+      "object": "Google",
+      "object_candidates": "Sony, Palermo, Pháp, Torino, Napoli, Milano, Toyota, Berlin, Lviv, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "Sony",
+      "object_candidates": "Qatar, Genova, Google, Torino, Paris, Milano, BBC, Toyota, Microsoft, Sony",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sân vận động Công viên các Hoàng tử",
+      "object": "Paris",
+      "object_candidates": "Lviv, Ba Lan, Toyota, Đức, Berlin, Yahoo!, BBC, Microsoft, Google, Paris",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Chế độ xem phố",
+      "object": "Google",
+      "object_candidates": "Audi, Microsoft, Amsterdam, Napoli, Berlin, Sony, Palermo, Lviv, Ba Lan, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "Microsoft",
+      "object_candidates": "Berlin, Chicago, Milano, Yahoo!, Paris, Toyota, Google, Sony, Torino, Microsoft",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Stadio Giuseppe Meazza",
+      "object": "Milano",
+      "object_candidates": "Genova, Sony, Đức, Amazon.com, Qatar, Ba Lan, Paris, Audi, Chicago, Milano",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon.com",
+      "object_candidates": "Pháp, Chicago, Audi, Ba Lan, Paris, Google, Sony, Qatar, Palermo, Amazon.com",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "AdSense",
+      "object": "Google",
+      "object_candidates": "Napoli, Ba Lan, Palermo, Audi, Microsoft, Lviv, Amsterdam, Qatar, Genova, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "Amazon.com",
+      "object_candidates": "Milano, Napoli, Pháp, Đức, Amsterdam, Lviv, Microsoft, Genova, Palermo, Amazon.com",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Stadio Renzo Barbera",
+      "object": "Palermo",
+      "object_candidates": "Sony, Qatar, Đức, Amsterdam, Pháp, Audi, Google, Berlin, BBC, Palermo",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Chicago, Đức, BBC, Microsoft, Qatar, Pháp, Torino, Ba Lan, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "Ba Lan, Milano, Microsoft, Palermo, Pháp, Amsterdam, Genova, Lviv, BBC, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Trái đất",
+      "object": "Google",
+      "object_candidates": "Amsterdam, Microsoft, Yahoo!, Amazon.com, Toyota, Audi, Chicago, Lviv, Genova, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "Paris, Berlin, Microsoft, Đức, Sony, BBC, Napoli, Pháp, Genova, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Khải Hoàn Môn",
+      "object": "Pháp",
+      "object_candidates": "Napoli, Audi, Amsterdam, Berlin, Qatar, Google, Paris, Đức, Microsoft, Pháp",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Lâu đài Fontainebleau",
+      "object": "Pháp",
+      "object_candidates": "Toyota, Sony, Amsterdam, Amazon.com, Ba Lan, Milano, Palermo, Audi, Genova, Pháp",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Genova, Audi, Amazon.com, Sony, Paris, Qatar, Ba Lan, Lviv, Berlin, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Books",
+      "object": "Google",
+      "object_candidates": "Đức, Milano, Audi, Yahoo!, Qatar, Torino, Napoli, Sony, Paris, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Stadio Olimpico di Torino",
+      "object": "Torino",
+      "object_candidates": "Google, Amsterdam, Pháp, Milano, Genova, Microsoft, Berlin, Palermo, Sony, Torino",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Qatar",
+      "object_candidates": "Yahoo!, Milano, Amazon.com, Pháp, Paris, Napoli, Toyota, Sony, Lviv, Qatar",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "The Night Watch",
+      "object": "Amsterdam",
+      "object_candidates": "Milano, Lviv, Audi, Pháp, Torino, BBC, Toyota, Napoli, Ba Lan, Amsterdam",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Sony, Toyota, Ba Lan, Audi, Paris, Lviv, Microsoft, Amazon.com, Milano, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Sân vận động Olympic",
+      "object": "Berlin",
+      "object_candidates": "Qatar, Paris, Milano, Microsoft, Amsterdam, BBC, Chicago, Audi, Torino, Berlin",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT Polish Airlines",
+      "object": "Ba Lan",
+      "object_candidates": "Lviv, Paris, Chicago, Amazon.com, Yahoo!, Amsterdam, Google, Sony, Đức, Ba Lan",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Sân vận động Luigi Ferraris",
+      "object": "Genova",
+      "object_candidates": "Qatar, Sony, Microsoft, Ba Lan, Berlin, Napoli, Đức, Toyota, BBC, Genova",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Google Dịch",
+      "object": "Google",
+      "object_candidates": "Napoli, Qatar, Amsterdam, Ba Lan, Yahoo!, Microsoft, Chicago, Milano, Pháp, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "The Shard",
+      "object": "Qatar",
+      "object_candidates": "Lviv, Amsterdam, Napoli, Amazon.com, Sony, Genova, BBC, Microsoft, Chicago, Qatar",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Stade de France",
+      "object": "Pháp",
+      "object_candidates": "Genova, Lviv, Yahoo!, Toyota, Google, Microsoft, Torino, Chicago, Amazon.com, Pháp",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Arena Lviv",
+      "object": "Lviv",
+      "object_candidates": "Napoli, Amazon.com, Chicago, Torino, Pháp, Đức, Audi, Toyota, Qatar, Lviv",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Microsoft",
+      "object_candidates": "Toyota, Qatar, Chicago, Napoli, Palermo, Sony, Amsterdam, Audi, Paris, Microsoft",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, Microsoft, Ba Lan, Milano, Torino, Đức, Genova, Chicago, Amsterdam, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Sân vận động San Paolo",
+      "object": "Napoli",
+      "object_candidates": "Berlin, Microsoft, Google, Genova, Amsterdam, Yahoo!, Paris, Palermo, Lviv, Napoli",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Stadio delle Alpi",
+      "object": "Torino",
+      "object_candidates": "Toyota, Sony, Lviv, Đức, Google, Amsterdam, Chicago, Paris, Yahoo!, Torino",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Sân bay quốc tế Dubai",
+      "object": "Emirates of Dubai",
+      "object_candidates": "Yahoo!, Genova, Qatar, Amazon.com, Palermo, Google, BBC, Torino, Paris, Emirates of Dubai",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google",
+      "object_candidates": "Microsoft, Torino, Genova, Ba Lan, Palermo, Audi, Paris, Toyota, Chicago, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Mona Lisa",
+      "object": "Pháp",
+      "object_candidates": "Paris, Torino, Microsoft, Milano, Yahoo!, Palermo, Napoli, Berlin, Genova, Pháp",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon.com",
+      "object_candidates": "Qatar, Toyota, Yahoo!, Amsterdam, Đức, Audi, Pháp, Microsoft, Genova, Amazon.com",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

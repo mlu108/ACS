@@ -1,0 +1,382 @@
+{
+  "name": "occupation",
+  "prompt_templates": [
+    "شغل <subject> چیست؟ پاسخ: <mask>.",
+    "<subject> برای زندگی چه کاری انجام می‌دهد؟ پاسخ: <mask>.",
+    "کدام شغل با <subject> مرتبط است؟ پاسخ: <mask>.",
+    "چه حرفه‌ای <subject> دارد؟ پاسخ: <mask>.",
+    "عنوان شغلی <subject> چیست؟ پاسخ: <mask>.",
+    " شغل <subject> <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "هلی بری",
+      "object": "مدل (شخص)",
+      "object_candidates": "سیاست‌مدار, آهنگساز, فیلم‌نامه‌نویس, نوازنده پیانو, رمان‌نویس, هنرپیشه, نمایشنامه‌نویس, فیزیک‌دان, عکاس, مدل (شخص)",
+      "index": 1959,
+      "subject_en": "Halle Berry",
+      "object_en": "model"
+    },
+    {
+      "subject": "اقبال لاهوری",
+      "object": "شاعر",
+      "object_candidates": "سیاست‌مدار, فیلم‌نامه‌نویس, روزنامه‌نگار, رمان‌نویس, فیزیک‌دان, نمایشنامه‌نویس, مدل (شخص), ریاضی‌دان, فیلسوف, شاعر",
+      "index": 1960,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "poet"
+    },
+    {
+      "subject": "آنی لنکس",
+      "object": "ترانه‌سرا",
+      "object_candidates": "مدل (شخص), سیاست‌مدار, آهنگساز, ستاره‌شناس, فیلم‌نامه‌نویس, شاعر, کتابدار, دیپلمات, عکاس, ترانه‌سرا",
+      "index": 1961,
+      "subject_en": "Annie Lennox",
+      "object_en": "songwriter"
+    },
+    {
+      "subject": "بوئتیوس",
+      "object": "فیلسوف",
+      "object_candidates": "ستاره‌شناس, نوازنده پیانو, فیزیک‌دان, دیپلمات, رمان‌نویس, هنرپیشه, سیاست‌مدار, شاعر, مدل (شخص), فیلسوف",
+      "index": 1962,
+      "subject_en": "Boethius",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "میکل‌ آنژ",
+      "object": "شاعر",
+      "object_candidates": "نوازنده پیانو, فیلسوف, رمان‌نویس, مدل (شخص), فیزیک‌دان, ریاضی‌دان, روزنامه‌نگار, سیاست‌مدار, ترانه‌سرا, شاعر",
+      "index": 1963,
+      "subject_en": "Michelangelo",
+      "object_en": "poet"
+    },
+    {
+      "subject": "پولینا گاگارینا",
+      "object": "هنرپیشه",
+      "object_candidates": "کتابدار, دیپلمات, رمان‌نویس, عکاس, ستاره‌شناس, روزنامه‌نگار, فیلم‌نامه‌نویس, مدل (شخص), شاعر, هنرپیشه",
+      "index": 1964,
+      "subject_en": "Polina Gagarina",
+      "object_en": "actor"
+    },
+    {
+      "subject": "الفریده یلینک",
+      "object": "شاعر",
+      "object_candidates": "دیپلمات, ستاره‌شناس, ترانه‌سرا, کتابدار, مدل (شخص), فیلسوف, نمایشنامه‌نویس, هنرپیشه, فیزیک‌دان, شاعر",
+      "index": 1965,
+      "subject_en": "Elfriede Jelinek",
+      "object_en": "poet"
+    },
+    {
+      "subject": "اوا لونگوریا",
+      "object": "هنرپیشه",
+      "object_candidates": "فیلسوف, سیاست‌مدار, شاعر, فیلم‌نامه‌نویس, ریاضی‌دان, نوازنده پیانو, آهنگساز, ترانه‌سرا, رمان‌نویس, هنرپیشه",
+      "index": 1966,
+      "subject_en": "Eva Longoria",
+      "object_en": "actor"
+    },
+    {
+      "subject": "اگوستن-ژان فرسنل",
+      "object": "فیزیک‌دان",
+      "object_candidates": "نوازنده پیانو, فیلسوف, آهنگساز, کتابدار, نمایشنامه‌نویس, عکاس, سیاست‌مدار, ترانه‌سرا, دیپلمات, فیزیک‌دان",
+      "index": 1967,
+      "subject_en": "Augustin-Jean Fresnel",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "یان خاما",
+      "object": "سیاست‌مدار",
+      "object_candidates": "فیلسوف, دیپلمات, ریاضی‌دان, کتابدار, نوازنده پیانو, فیزیک‌دان, هنرپیشه, عکاس, آهنگساز, سیاست‌مدار",
+      "index": 1968,
+      "subject_en": "Ian Khama",
+      "object_en": "politician"
+    },
+    {
+      "subject": "فرد آستر",
+      "object": "فیلم‌نامه‌نویس",
+      "object_candidates": "شاعر, سیاست‌مدار, فیزیک‌دان, روزنامه‌نگار, رمان‌نویس, دیپلمات, آهنگساز, هنرپیشه, ترانه‌سرا, فیلم‌نامه‌نویس",
+      "index": 1969,
+      "subject_en": "Fred Astaire",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "جی. بی. پریستلی",
+      "object": "رمان‌نویس",
+      "object_candidates": "هنرپیشه, عکاس, مدل (شخص), فیلسوف, دیپلمات, فیزیک‌دان, نوازنده پیانو, ترانه‌سرا, آهنگساز, رمان‌نویس",
+      "index": 1970,
+      "subject_en": "J. B. Priestley",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "جک هیوستون",
+      "object": "هنرپیشه",
+      "object_candidates": "شاعر, ترانه‌سرا, رمان‌نویس, ستاره‌شناس, کتابدار, فیلسوف, روزنامه‌نگار, سیاست‌مدار, فیلم‌نامه‌نویس, هنرپیشه",
+      "index": 1971,
+      "subject_en": "Jack Huston",
+      "object_en": "actor"
+    },
+    {
+      "subject": "ورنر کارل هایزنبرگ",
+      "object": "فیزیک‌دان",
+      "object_candidates": "آهنگساز, روزنامه‌نگار, هنرپیشه, رمان‌نویس, شاعر, ریاضی‌دان, سیاست‌مدار, نوازنده پیانو, مدل (شخص), فیزیک‌دان",
+      "index": 1972,
+      "subject_en": "Werner Heisenberg",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "هوگو بونوویل",
+      "object": "هنرپیشه",
+      "object_candidates": "سیاست‌مدار, روزنامه‌نگار, آهنگساز, دیپلمات, کتابدار, عکاس, رمان‌نویس, ترانه‌سرا, نوازنده پیانو, هنرپیشه",
+      "index": 1973,
+      "subject_en": "Hugh Bonneville",
+      "object_en": "actor"
+    },
+    {
+      "subject": "آندرس فوگ راسموسن",
+      "object": "سیاست‌مدار",
+      "object_candidates": "مدل (شخص), ریاضی‌دان, شاعر, دیپلمات, فیزیک‌دان, نوازنده پیانو, روزنامه‌نگار, هنرپیشه, ترانه‌سرا, سیاست‌مدار",
+      "index": 1974,
+      "subject_en": "Anders Fogh Rasmussen",
+      "object_en": "politician"
+    },
+    {
+      "subject": "انریکه گرانادوس",
+      "object": "آهنگساز",
+      "object_candidates": "ستاره‌شناس, سیاست‌مدار, عکاس, هنرپیشه, فیلسوف, مدل (شخص), نوازنده پیانو, روزنامه‌نگار, کتابدار, آهنگساز",
+      "index": 1975,
+      "subject_en": "Enrique Granados",
+      "object_en": "composer"
+    },
+    {
+      "subject": "کارن گیلان",
+      "object": "هنرپیشه",
+      "object_candidates": "ریاضی‌دان, روزنامه‌نگار, نمایشنامه‌نویس, آهنگساز, نوازنده پیانو, مدل (شخص), دیپلمات, فیلم‌نامه‌نویس, کتابدار, هنرپیشه",
+      "index": 1976,
+      "subject_en": "Karen Gillan",
+      "object_en": "actor"
+    },
+    {
+      "subject": "خورخه لوئیس بورخس",
+      "object": "کتابدار",
+      "object_candidates": "عکاس, سیاست‌مدار, آهنگساز, مدل (شخص), ریاضی‌دان, فیزیک‌دان, هنرپیشه, ترانه‌سرا, نمایشنامه‌نویس, کتابدار",
+      "index": 1977,
+      "subject_en": "Jorge Luis Borges",
+      "object_en": "librarian"
+    },
+    {
+      "subject": "ژاک اودیار",
+      "object": "فیلم‌نامه‌نویس",
+      "object_candidates": "ستاره‌شناس, دیپلمات, شاعر, فیلسوف, نوازنده پیانو, هنرپیشه, مدل (شخص), عکاس, کتابدار, فیلم‌نامه‌نویس",
+      "index": 1978,
+      "subject_en": "Jacques Audiard",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "وارن بیتی",
+      "object": "فیلم‌نامه‌نویس",
+      "object_candidates": "نوازنده پیانو, فیزیک‌دان, ستاره‌شناس, دیپلمات, ریاضی‌دان, هنرپیشه, فیلسوف, رمان‌نویس, ترانه‌سرا, فیلم‌نامه‌نویس",
+      "index": 1979,
+      "subject_en": "Warren Beatty",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "یوهان ولفگانگ گوته",
+      "object": "سیاست‌مدار",
+      "object_candidates": "عکاس, آهنگساز, ترانه‌سرا, فیلم‌نامه‌نویس, دیپلمات, نوازنده پیانو, روزنامه‌نگار, نمایشنامه‌نویس, شاعر, سیاست‌مدار",
+      "index": 1980,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "politician"
+    },
+    {
+      "subject": "رشیدا جونز",
+      "object": "هنرپیشه",
+      "object_candidates": "فیلم‌نامه‌نویس, نوازنده پیانو, نمایشنامه‌نویس, ستاره‌شناس, ریاضی‌دان, عکاس, روزنامه‌نگار, کتابدار, فیزیک‌دان, هنرپیشه",
+      "index": 1981,
+      "subject_en": "Rashida Jones",
+      "object_en": "actor"
+    },
+    {
+      "subject": "امانوئل شابریه",
+      "object": "آهنگساز",
+      "object_candidates": "نوازنده پیانو, فیلم‌نامه‌نویس, نمایشنامه‌نویس, عکاس, هنرپیشه, سیاست‌مدار, دیپلمات, ریاضی‌دان, ترانه‌سرا, آهنگساز",
+      "index": 1982,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "composer"
+    },
+    {
+      "subject": "مارکی دوساد",
+      "object": "نمایشنامه‌نویس",
+      "object_candidates": "نوازنده پیانو, ترانه‌سرا, عکاس, ریاضی‌دان, سیاست‌مدار, روزنامه‌نگار, فیلم‌نامه‌نویس, شاعر, آهنگساز, نمایشنامه‌نویس",
+      "index": 1983,
+      "subject_en": "Marquis de Sade",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "مدوری دیکشیت",
+      "object": "هنرپیشه",
+      "object_candidates": "فیلسوف, فیلم‌نامه‌نویس, ریاضی‌دان, ستاره‌شناس, مدل (شخص), عکاس, ترانه‌سرا, نمایشنامه‌نویس, دیپلمات, هنرپیشه",
+      "index": 1984,
+      "subject_en": "Madhuri Dixit",
+      "object_en": "actor"
+    },
+    {
+      "subject": "آرنو آلان پنزیاس",
+      "object": "ستاره‌شناس",
+      "object_candidates": "نوازنده پیانو, فیلسوف, کتابدار, مدل (شخص), آهنگساز, عکاس, ترانه‌سرا, ریاضی‌دان, نمایشنامه‌نویس, ستاره‌شناس",
+      "index": 1985,
+      "subject_en": "Arno Allan Penzias",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "میشل ولبک",
+      "object": "شاعر",
+      "object_candidates": "کتابدار, مدل (شخص), فیلسوف, نوازنده پیانو, ترانه‌سرا, روزنامه‌نگار, ستاره‌شناس, نمایشنامه‌نویس, عکاس, شاعر",
+      "index": 1986,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "poet"
+    },
+    {
+      "subject": "ارسطو",
+      "object": "ریاضی‌دان",
+      "object_candidates": "نمایشنامه‌نویس, ترانه‌سرا, دیپلمات, ستاره‌شناس, نوازنده پیانو, سیاست‌مدار, آهنگساز, رمان‌نویس, هنرپیشه, ریاضی‌دان",
+      "index": 1987,
+      "subject_en": "Aristotle",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "کازو ایشی‌گورو",
+      "object": "رمان‌نویس",
+      "object_candidates": "روزنامه‌نگار, عکاس, مدل (شخص), فیزیک‌دان, فیلسوف, نمایشنامه‌نویس, هنرپیشه, فیلم‌نامه‌نویس, نوازنده پیانو, رمان‌نویس",
+      "index": 1988,
+      "subject_en": "Kazuo Ishiguro",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "لو رید",
+      "object": "عکاس",
+      "object_candidates": "ریاضی‌دان, نمایشنامه‌نویس, ستاره‌شناس, فیلسوف, سیاست‌مدار, مدل (شخص), روزنامه‌نگار, فیزیک‌دان, کتابدار, عکاس",
+      "index": 1989,
+      "subject_en": "Lou Reed",
+      "object_en": "photographer"
+    },
+    {
+      "subject": "کلمنز ونزل فن مترنیخ",
+      "object": "دیپلمات",
+      "object_candidates": "فیلسوف, شاعر, نمایشنامه‌نویس, سیاست‌مدار, کتابدار, روزنامه‌نگار, رمان‌نویس, هنرپیشه, مدل (شخص), دیپلمات",
+      "index": 1990,
+      "subject_en": "Klemens von Metternich",
+      "object_en": "diplomat"
+    },
+    {
+      "subject": "ژوستین یکم",
+      "object": "سیاست‌مدار",
+      "object_candidates": "فیلم‌نامه‌نویس, فیلسوف, دیپلمات, نمایشنامه‌نویس, هنرپیشه, ریاضی‌دان, فیزیک‌دان, مدل (شخص), نوازنده پیانو, سیاست‌مدار",
+      "index": 1991,
+      "subject_en": "Justin I",
+      "object_en": "politician"
+    },
+    {
+      "subject": "هیت لجر",
+      "object": "هنرپیشه",
+      "object_candidates": "عکاس, روزنامه‌نگار, سیاست‌مدار, فیزیک‌دان, ترانه‌سرا, دیپلمات, ستاره‌شناس, فیلم‌نامه‌نویس, کتابدار, هنرپیشه",
+      "index": 1992,
+      "subject_en": "Heath Ledger",
+      "object_en": "actor"
+    },
+    {
+      "subject": "آگوستینیو نتو",
+      "object": "شاعر",
+      "object_candidates": "دیپلمات, نمایشنامه‌نویس, فیلم‌نامه‌نویس, نوازنده پیانو, کتابدار, هنرپیشه, ترانه‌سرا, مدل (شخص), ریاضی‌دان, شاعر",
+      "index": 1993,
+      "subject_en": "Agostinho Neto",
+      "object_en": "poet"
+    },
+    {
+      "subject": "ادگار آلن پو",
+      "object": "نمایشنامه‌نویس",
+      "object_candidates": "فیلسوف, ترانه‌سرا, مدل (شخص), فیزیک‌دان, ریاضی‌دان, ستاره‌شناس, دیپلمات, شاعر, عکاس, نمایشنامه‌نویس",
+      "index": 1994,
+      "subject_en": "Edgar Allan Poe",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "آلکساندر سولژنیتسین",
+      "object": "شاعر",
+      "object_candidates": "آهنگساز, سیاست‌مدار, فیلسوف, ستاره‌شناس, فیزیک‌دان, دیپلمات, نمایشنامه‌نویس, مدل (شخص), کتابدار, شاعر",
+      "index": 1995,
+      "subject_en": "Aleksandr Solzhenitsyn",
+      "object_en": "poet"
+    },
+    {
+      "subject": "استیون کلبر",
+      "object": "روزنامه‌نگار",
+      "object_candidates": "آهنگساز, دیپلمات, فیلسوف, مدل (شخص), نوازنده پیانو, سیاست‌مدار, ستاره‌شناس, هنرپیشه, فیزیک‌دان, روزنامه‌نگار",
+      "index": 1996,
+      "subject_en": "Stephen Colbert",
+      "object_en": "journalist"
+    },
+    {
+      "subject": "ویتنی هیوستون",
+      "object": "آهنگساز",
+      "object_candidates": "فیلسوف, دیپلمات, ستاره‌شناس, فیلم‌نامه‌نویس, فیزیک‌دان, عکاس, ریاضی‌دان, روزنامه‌نگار, سیاست‌مدار, آهنگساز",
+      "index": 1997,
+      "subject_en": "Whitney Houston",
+      "object_en": "composer"
+    },
+    {
+      "subject": "لوپه د وگا",
+      "object": "نمایشنامه‌نویس",
+      "object_candidates": "ریاضی‌دان, کتابدار, مدل (شخص), سیاست‌مدار, فیزیک‌دان, آهنگساز, عکاس, ستاره‌شناس, ترانه‌سرا, نمایشنامه‌نویس",
+      "index": 1998,
+      "subject_en": "Lope de Vega",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "جنت جکسون",
+      "object": "مدل (شخص)",
+      "object_candidates": "دیپلمات, روزنامه‌نگار, هنرپیشه, نوازنده پیانو, عکاس, کتابدار, آهنگساز, فیزیک‌دان, سیاست‌مدار, مدل (شخص)",
+      "index": 1999,
+      "subject_en": "Janet Jackson",
+      "object_en": "model"
+    },
+    {
+      "subject": "فرانسیس پولنک",
+      "object": "نوازنده پیانو",
+      "object_candidates": "نمایشنامه‌نویس, سیاست‌مدار, هنرپیشه, آهنگساز, شاعر, فیلسوف, رمان‌نویس, روزنامه‌نگار, ترانه‌سرا, نوازنده پیانو",
+      "index": 2000,
+      "subject_en": "Francis Poulenc",
+      "object_en": "pianist"
+    },
+    {
+      "subject": "جیمز فنیمور کوپر",
+      "object": "رمان‌نویس",
+      "object_candidates": "مدل (شخص), ریاضی‌دان, فیلم‌نامه‌نویس, آهنگساز, فیزیک‌دان, ترانه‌سرا, هنرپیشه, شاعر, کتابدار, رمان‌نویس",
+      "index": 2001,
+      "subject_en": "James Fenimore Cooper",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "پی‌یر آبلار",
+      "object": "فیلسوف",
+      "object_candidates": "دیپلمات, نمایشنامه‌نویس, مدل (شخص), شاعر, هنرپیشه, سیاست‌مدار, ترانه‌سرا, روزنامه‌نگار, ستاره‌شناس, فیلسوف",
+      "index": 2002,
+      "subject_en": "Peter Abelard",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "گئورگی لووف",
+      "object": "سیاست‌مدار",
+      "object_candidates": "ترانه‌سرا, نوازنده پیانو, رمان‌نویس, کتابدار, فیلسوف, فیلم‌نامه‌نویس, هنرپیشه, عکاس, ریاضی‌دان, سیاست‌مدار",
+      "index": 2003,
+      "subject_en": "Georgy Lvov",
+      "object_en": "politician"
+    },
+    {
+      "subject": "هوارد فیلیپس لاوکرفت",
+      "object": "روزنامه‌نگار",
+      "object_candidates": "شاعر, کتابدار, ترانه‌سرا, رمان‌نویس, فیزیک‌دان, فیلم‌نامه‌نویس, فیلسوف, آهنگساز, دیپلمات, روزنامه‌نگار",
+      "index": 2004,
+      "subject_en": "H. P. Lovecraft",
+      "object_en": "journalist"
+    }
+  ],
+  "relation_id": "P106"
+}

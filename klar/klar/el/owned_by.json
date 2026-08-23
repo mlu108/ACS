@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "Ποιος είναι ο ιδιοκτήτης του <subject>; Η απάντηση είναι: <mask>",
+    "Ποια εταιρεία ή πρόσωπο είναι ο ιδιοκτήτης του <subject>; Η απάντηση είναι: <mask>",
+    "Ποιος είναι ο τρέχων ιδιοκτήτης του <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποιον ανήκει το <subject>; Η απάντηση είναι: <mask>",
+    "Ποιος οντότητα έχει την ιδιοκτησία του <subject>; Η απάντηση είναι: <mask>",
+    " Ο ιδιοκτήτης του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Βερολίνο, Παρίσι, Toyota, Sony, Μιλάνο, Γαλλία, BBC, Πολωνία, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Lamborghini",
+      "object": "Audi",
+      "object_candidates": "Παρίσι, Yahoo!, Γένοβα, Μιλάνο, Amazon.com, Πολωνία, Microsoft, Toyota, Γαλλία, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Πύργος του Άιφελ",
+      "object": "Παρίσι",
+      "object_candidates": "Λβιβ, Κατάρ, Yahoo!, Μιλάνο, Γαλλία, Microsoft, Sony, Πολωνία, Τορίνο, Παρίσι",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Γερμανικοί Σιδηρόδρομοι",
+      "object": "Γερμανία",
+      "object_candidates": "Τορίνο, Sony, Παρίσι, Βερολίνο, Γένοβα, Πολωνία, Κατάρ, Toyota, Σικάγο, Γερμανία",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Google Αναζήτηση",
+      "object": "Google",
+      "object_candidates": "Τορίνο, Sony, Γερμανία, Γένοβα, Πολωνία, Κατάρ, Yahoo!, Σικάγο, Μιλάνο, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Λβιβ, Google, Γαλλία, Σικάγο, BBC, Παλέρμο, Πολωνία, Γένοβα, Γερμανία, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "Σικάγο, Μιλάνο, Λβιβ, Παρίσι, Νάπολη, Γαλλία, Γερμανία, Τορίνο, BBC, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "compact disc",
+      "object": "Sony",
+      "object_candidates": "Toyota, Λβιβ, BBC, Μιλάνο, Google, Yahoo!, Νάπολη, Γένοβα, Παρίσι, Sony",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Διεθνές Αεροδρόμιο Ο΄Χερ",
+      "object": "Σικάγο",
+      "object_candidates": "BBC, Γένοβα, Γαλλία, Κατάρ, Audi, Toyota, Άμστερνταμ, Amazon.com, Λβιβ, Σικάγο",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "Γαλλία, Λβιβ, Γένοβα, Audi, Yahoo!, Νάπολη, Παλέρμο, Παρίσι, Άμστερνταμ, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony",
+      "object_candidates": "Τορίνο, Google, Yahoo!, Amazon.com, Λβιβ, Microsoft, Audi, Toyota, Γερμανία, Sony",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures",
+      "object": "Sony",
+      "object_candidates": "Γερμανία, Σικάγο, Microsoft, Νάπολη, Λβιβ, Amazon.com, Audi, BBC, Κατάρ, Sony",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Audi, Νάπολη, Παρίσι, Sony, Λβιβ, Toyota, Παλέρμο, Κατάρ, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Χάρτες Google",
+      "object": "Google",
+      "object_candidates": "Sony, Παλέρμο, Γαλλία, Τορίνο, Νάπολη, Μιλάνο, Toyota, Βερολίνο, Λβιβ, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "Sony",
+      "object_candidates": "Κατάρ, Γένοβα, Google, Τορίνο, Παρίσι, Μιλάνο, BBC, Toyota, Microsoft, Sony",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Παρκ ντε Πρενς",
+      "object": "Παρίσι",
+      "object_candidates": "Λβιβ, Πολωνία, Toyota, Γερμανία, Βερολίνο, Yahoo!, BBC, Microsoft, Google, Παρίσι",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google",
+      "object_candidates": "Audi, Microsoft, Άμστερνταμ, Νάπολη, Βερολίνο, Sony, Παλέρμο, Λβιβ, Πολωνία, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "Microsoft",
+      "object_candidates": "Βερολίνο, Σικάγο, Μιλάνο, Yahoo!, Παρίσι, Toyota, Google, Sony, Τορίνο, Microsoft",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Γήπεδο Τζιουζέπε Μεάτσα",
+      "object": "Μιλάνο",
+      "object_candidates": "Γένοβα, Sony, Γερμανία, Amazon.com, Κατάρ, Πολωνία, Παρίσι, Audi, Σικάγο, Μιλάνο",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon.com",
+      "object_candidates": "Γαλλία, Σικάγο, Audi, Πολωνία, Παρίσι, Google, Sony, Κατάρ, Παλέρμο, Amazon.com",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "AdSense",
+      "object": "Google",
+      "object_candidates": "Νάπολη, Πολωνία, Παλέρμο, Audi, Microsoft, Λβιβ, Άμστερνταμ, Κατάρ, Γένοβα, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "Amazon.com",
+      "object_candidates": "Μιλάνο, Νάπολη, Γαλλία, Γερμανία, Άμστερνταμ, Λβιβ, Microsoft, Γένοβα, Παλέρμο, Amazon.com",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Στάντιο Ρέντζο Μπαρμπέρα",
+      "object": "Παλέρμο",
+      "object_candidates": "Sony, Κατάρ, Γερμανία, Άμστερνταμ, Γαλλία, Audi, Google, Βερολίνο, BBC, Παλέρμο",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Σικάγο, Γερμανία, BBC, Microsoft, Κατάρ, Γαλλία, Τορίνο, Πολωνία, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "Πολωνία, Μιλάνο, Microsoft, Παλέρμο, Γαλλία, Άμστερνταμ, Γένοβα, Λβιβ, BBC, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google",
+      "object_candidates": "Άμστερνταμ, Microsoft, Yahoo!, Amazon.com, Toyota, Audi, Σικάγο, Λβιβ, Γένοβα, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "Παρίσι, Βερολίνο, Microsoft, Γερμανία, Sony, BBC, Νάπολη, Γαλλία, Γένοβα, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Αψίδα του Θριάμβου",
+      "object": "Γαλλία",
+      "object_candidates": "Νάπολη, Audi, Άμστερνταμ, Βερολίνο, Κατάρ, Google, Παρίσι, Γερμανία, Microsoft, Γαλλία",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ανάκτορο Φονταινεμπλώ",
+      "object": "Γαλλία",
+      "object_candidates": "Toyota, Sony, Άμστερνταμ, Amazon.com, Πολωνία, Μιλάνο, Παλέρμο, Audi, Γένοβα, Γαλλία",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Γένοβα, Audi, Amazon.com, Sony, Παρίσι, Κατάρ, Πολωνία, Λβιβ, Βερολίνο, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Books",
+      "object": "Google",
+      "object_candidates": "Γερμανία, Μιλάνο, Audi, Yahoo!, Κατάρ, Τορίνο, Νάπολη, Sony, Παρίσι, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Ολυμπιακό Στάδιο Τορίνου",
+      "object": "Τορίνο",
+      "object_candidates": "Google, Άμστερνταμ, Γαλλία, Μιλάνο, Γένοβα, Microsoft, Βερολίνο, Παλέρμο, Sony, Τορίνο",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Κατάρ",
+      "object_candidates": "Yahoo!, Μιλάνο, Amazon.com, Γαλλία, Παρίσι, Νάπολη, Toyota, Sony, Λβιβ, Κατάρ",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Νυχτερινή περίπολος",
+      "object": "Άμστερνταμ",
+      "object_candidates": "Μιλάνο, Λβιβ, Audi, Γαλλία, Τορίνο, BBC, Toyota, Νάπολη, Πολωνία, Άμστερνταμ",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Sony, Toyota, Πολωνία, Audi, Παρίσι, Λβιβ, Microsoft, Amazon.com, Μιλάνο, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Ολυμπιακό Στάδιο Βερολίνου",
+      "object": "Βερολίνο",
+      "object_candidates": "Κατάρ, Παρίσι, Μιλάνο, Microsoft, Άμστερνταμ, BBC, Σικάγο, Audi, Τορίνο, Βερολίνο",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT Πολωνικές Αερογραμμές",
+      "object": "Πολωνία",
+      "object_candidates": "Λβιβ, Παρίσι, Σικάγο, Amazon.com, Yahoo!, Άμστερνταμ, Google, Sony, Γερμανία, Πολωνία",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Στάδιο Λουίτζι Φεράρις",
+      "object": "Γένοβα",
+      "object_candidates": "Κατάρ, Sony, Microsoft, Πολωνία, Βερολίνο, Νάπολη, Γερμανία, Toyota, BBC, Γένοβα",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Μετάφραση Google",
+      "object": "Google",
+      "object_candidates": "Νάπολη, Κατάρ, Άμστερνταμ, Πολωνία, Yahoo!, Microsoft, Σικάγο, Μιλάνο, Γαλλία, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Σαρντ",
+      "object": "Κατάρ",
+      "object_candidates": "Λβιβ, Άμστερνταμ, Νάπολη, Amazon.com, Sony, Γένοβα, BBC, Microsoft, Σικάγο, Κατάρ",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Σταντ ντε Φρανς",
+      "object": "Γαλλία",
+      "object_candidates": "Γένοβα, Λβιβ, Yahoo!, Toyota, Google, Microsoft, Τορίνο, Σικάγο, Amazon.com, Γαλλία",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Αρένα Λβιβ",
+      "object": "Λβιβ",
+      "object_candidates": "Νάπολη, Amazon.com, Σικάγο, Τορίνο, Γαλλία, Γερμανία, Audi, Toyota, Κατάρ, Λβιβ",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Microsoft",
+      "object_candidates": "Toyota, Κατάρ, Σικάγο, Νάπολη, Παλέρμο, Sony, Άμστερνταμ, Audi, Παρίσι, Microsoft",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, Microsoft, Πολωνία, Μιλάνο, Τορίνο, Γερμανία, Γένοβα, Σικάγο, Άμστερνταμ, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Στάντιο Σαν Πάολο",
+      "object": "Νάπολη",
+      "object_candidates": "Βερολίνο, Microsoft, Google, Γένοβα, Άμστερνταμ, Yahoo!, Παρίσι, Παλέρμο, Λβιβ, Νάπολη",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Στάδιο Ντέλλε Άλπι",
+      "object": "Τορίνο",
+      "object_candidates": "Toyota, Sony, Λβιβ, Γερμανία, Google, Άμστερνταμ, Σικάγο, Παρίσι, Yahoo!, Τορίνο",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Διεθνές Αεροδρόμιο του Ντουμπάι",
+      "object": "Εμιράτο του Ντουμπάι",
+      "object_candidates": "Yahoo!, Γένοβα, Κατάρ, Amazon.com, Παλέρμο, Google, BBC, Τορίνο, Παρίσι, Εμιράτο του Ντουμπάι",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google",
+      "object_candidates": "Microsoft, Τορίνο, Γένοβα, Πολωνία, Παλέρμο, Audi, Παρίσι, Toyota, Σικάγο, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Μόνα Λίζα",
+      "object": "Γαλλία",
+      "object_candidates": "Παρίσι, Τορίνο, Microsoft, Μιλάνο, Yahoo!, Παλέρμο, Νάπολη, Βερολίνο, Γένοβα, Γαλλία",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon.com",
+      "object_candidates": "Κατάρ, Toyota, Yahoo!, Άμστερνταμ, Γερμανία, Audi, Γαλλία, Microsoft, Γένοβα, Amazon.com",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

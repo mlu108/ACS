@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "Melyik országban van <subject> jogi kifejezésként? A válasz: <mask>.",
+    "<subject> mely joghatóságban jogi kifejezés? A válasz: <mask>.",
+    "Hol alkalmazzák a jogi kifejezést <subject>? A válasz: <mask>.",
+    "Mely jogi szerv használja <subject>-t? A válasz: <mask>.",
+    "Mely régióban ismerik el jogi kifejezésként <subject>-t? A válasz: <mask>.",
+    " A joghatóság"
+  ],
+  "samples": [
+    {
+      "subject": "Franciaország elnöke",
+      "object": "Franciaország",
+      "object_candidates": "Szomália, Svájc, Románia, Szingapúr, Norvégia, Kuba, Litvánia, Kínai Köztársaság, Monaco, Franciaország",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "Kanada miniszterelnöke",
+      "object": "Kanada",
+      "object_candidates": "Ukrajna, Mexikó, Szomália, Monaco, Törökország, Írország, Japán, Irak, Hollandia, Kanada",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Ausztrál Munkapárt",
+      "object": "Ausztrália",
+      "object_candidates": "Portugália, Kanada, Ausztria, Líbia, Norvégia, Monaco, Olaszország, Finnország, Kuba, Ausztrália",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Mexikó elnöke",
+      "object": "Mexikó",
+      "object_candidates": "Jamaica, Kuba, Malajzia, Svájc, Bulgária, Olaszország, Dánia, Kanada, Franciaország, Mexikó",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "német kancellár",
+      "object": "Németország",
+      "object_candidates": "Bulgária, Norvégia, Líbia, Horvátország, Portugália, Irán, Dánia, Fehéroroszország, Fülöp-szigetek, Németország",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "A Németországi Szövetségi Köztársaság alkotmánya",
+      "object": "Németország",
+      "object_candidates": "Svájc, Vietnám, Albánia, Portugália, Románia, Ausztrália, Ausztria, Litvánia, Irak, Németország",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Kanadai Parlament",
+      "object": "Kanada",
+      "object_candidates": "Bulgária, Norvégia, Olaszország, Japán, Kuba, Portugália, Haiti, Vietnám, Fehéroroszország, Kanada",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Lok Szabha",
+      "object": "India",
+      "object_candidates": "Franciaország, Ausztria, Japán, Szingapúr, Pakisztán, Ukrajna, Jamaica, Oroszország, Argentína, India",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "Knesszet",
+      "object": "Izrael",
+      "object_candidates": "Vietnám, Albánia, Líbia, Fülöp-szigetek, Németország, Horvátország, Svédország, Makaó, Irak, Izrael",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Japán miniszterelnöke",
+      "object": "Japán",
+      "object_candidates": "Dánia, Törökország, Mexikó, Svédország, Horvátország, Olaszország, Hollandia, Kínai Köztársaság, Makaó, Japán",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "az Ír Köztársaság elnöke",
+      "object": "Írország",
+      "object_candidates": "Kanada, Fehéroroszország, Hollandia, Litvánia, Mexikó, Svédország, India, Pakisztán, Líbia, Írország",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "ausztrál dollár",
+      "object": "Ausztrália",
+      "object_candidates": "Haiti, Kínai Köztársaság, Hollandia, Makaó, Románia, Litvánia, Malajzia, Dánia, Jamaica, Ausztrália",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Pakisztán elnöke",
+      "object": "Pakisztán",
+      "object_candidates": "Vietnám, Svédország, Bolívia, Szingapúr, Törökország, Dánia, Portugália, Kanada, Irán, Pakisztán",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Oroszország elnöke",
+      "object": "Oroszország",
+      "object_candidates": "Vietnám, India, Kuba, Franciaország, Románia, Finnország, Kanada, Szingapúr, Pakisztán, Oroszország",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "szövetségi kancellár",
+      "object": "Ausztria",
+      "object_candidates": "Spanyolország, Fülöp-szigetek, Portugália, Bolívia, India, Fehéroroszország, Románia, Kanada, Japán, Ausztria",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Riksdag",
+      "object": "Svédország",
+      "object_candidates": "Albánia, Szingapúr, Ukrajna, Vietnám, Hollandia, Malajzia, Franciaország, Monaco, Finnország, Svédország",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Spanyolország zászlaja",
+      "object": "Spanyolország",
+      "object_candidates": "Bolívia, Mexikó, Norvégia, Irak, Finnország, Argentína, Kanada, Hollandia, Vietnám, Spanyolország",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Franciaország zászlaja",
+      "object": "Franciaország",
+      "object_candidates": "Pakisztán, Haiti, Ausztria, Szingapúr, Oroszország, Litvánia, Fehéroroszország, Vietnám, Németország, Franciaország",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ukrajna elnöke",
+      "object": "Ukrajna",
+      "object_candidates": "Hollandia, Mexikó, Izrael, Fehéroroszország, Törökország, Spanyolország, Litvánia, Ausztrália, Norvégia, Ukrajna",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Franciaország miniszterelnöke",
+      "object": "Franciaország",
+      "object_candidates": "Irak, Pakisztán, Portugália, Törökország, Fülöp-szigetek, Horvátország, Hollandia, Szingapúr, India, Franciaország",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Dánia zászlaja",
+      "object": "Dánia",
+      "object_candidates": "Spanyolország, Japán, Irak, Norvégia, Portugália, Izrael, Szingapúr, Törökország, Kanada, Dánia",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Bundestag",
+      "object": "Németország",
+      "object_candidates": "Szomália, Írország, Mexikó, Svédország, Japán, Líbia, Kanada, India, Izrael, Németország",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Írország zászlaja",
+      "object": "Írország",
+      "object_candidates": "Litvánia, Fülöp-szigetek, Portugália, Kuba, Franciaország, Bolívia, Monaco, Irán, Pakisztán, Írország",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Szövetségi elnök",
+      "object": "Ausztria",
+      "object_candidates": "Oroszország, Ausztrália, Vietnám, Litvánia, Izrael, Pakisztán, Jamaica, Törökország, Finnország, Ausztria",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Pakisztán miniszterelnöke",
+      "object": "Pakisztán",
+      "object_candidates": "Malajzia, Argentína, Ausztrália, Norvégia, Vietnám, Jamaica, Szingapúr, Izrael, Irán, Pakisztán",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "szövetségi elnök",
+      "object": "Németország",
+      "object_candidates": "Bolívia, Litvánia, Makaó, Kuba, Norvégia, Monaco, Fehéroroszország, Bulgária, Oroszország, Németország",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Svédország miniszterelnöke",
+      "object": "Svédország",
+      "object_candidates": "Szingapúr, Írország, Kanada, Németország, Hollandia, Svájc, Finnország, Spanyolország, Dánia, Svédország",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Francia Nemzetgyűlés",
+      "object": "Franciaország",
+      "object_candidates": "Törökország, Svájc, Kuba, Mexikó, Dánia, Malajzia, Norvégia, Kínai Köztársaság, Ausztria, Franciaország",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "Svájc zászlaja",
+      "object": "Svájc",
+      "object_candidates": "Fülöp-szigetek, Bolívia, Oroszország, Jamaica, Ausztria, Portugália, Írország, Irán, Fehéroroszország, Svájc",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Oroszország miniszterelnöke",
+      "object": "Oroszország",
+      "object_candidates": "Haiti, Ukrajna, Malajzia, Svájc, Spanyolország, Portugália, Olaszország, Jamaica, Kuba, Oroszország",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Szingapúr zászlaja",
+      "object": "Szingapúr",
+      "object_candidates": "Portugália, Bolívia, Németország, Makaó, Szomália, Vietnám, Ausztria, Dánia, Bulgária, Szingapúr",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "Francia szenátus",
+      "object": "Franciaország",
+      "object_candidates": "Finnország, Dánia, Portugália, Szomália, Pakisztán, Malajzia, Kuba, Irán, Kínai Köztársaság, Franciaország",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ukrajna miniszterelnöke",
+      "object": "Ukrajna",
+      "object_candidates": "Izrael, Oroszország, Kuba, Finnország, Törökország, Franciaország, Szomália, Monaco, Vietnám, Ukrajna",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Oroszország zászlaja",
+      "object": "Oroszország",
+      "object_candidates": "Franciaország, Makaó, Fehéroroszország, Bulgária, India, Ausztrália, Írország, Svájc, Olaszország, Oroszország",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Kanada zászlaja",
+      "object": "Kanada",
+      "object_candidates": "Bolívia, Makaó, Finnország, Líbia, Haiti, India, Fehéroroszország, Ausztrália, Irán, Kanada",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Románia elnöke",
+      "object": "Románia",
+      "object_candidates": "Irán, Franciaország, Mexikó, Olaszország, Kínai Köztársaság, Malajzia, Kuba, Haiti, Írország, Románia",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Hollandia zászlaja",
+      "object": "Hollandia",
+      "object_candidates": "Svédország, Szomália, Szingapúr, Ausztria, Bolívia, Portugália, Fehéroroszország, Irak, Ausztrália, Hollandia",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Malajzia miniszterelnöke",
+      "object": "Malajzia",
+      "object_candidates": "Spanyolország, Vietnám, Irán, Izrael, Litvánia, Finnország, Bulgária, Portugália, Dánia, Malajzia",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Jamaica zászlaja",
+      "object": "Jamaica",
+      "object_candidates": "Horvátország, Malajzia, Németország, Olaszország, Svájc, Ausztrália, Bulgária, Spanyolország, Monaco, Jamaica",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Argentína zászlaja",
+      "object": "Argentína",
+      "object_candidates": "Jamaica, Norvégia, Hollandia, Franciaország, Litvánia, Izrael, Ausztrália, India, Bulgária, Argentína",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Norvégia zászlaja",
+      "object": "Norvégia",
+      "object_candidates": "Litvánia, Kanada, Monaco, Irán, Németország, Ausztrália, Svédország, Ausztria, Kínai Köztársaság, Norvégia",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Képviselőház",
+      "object": "Spanyolország",
+      "object_candidates": "Izrael, Irak, Oroszország, Litvánia, Fülöp-szigetek, Dánia, Pakisztán, Bolívia, Ukrajna, Spanyolország",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Tennó",
+      "object": "Japán",
+      "object_candidates": "Svédország, Pakisztán, Horvátország, Litvánia, Törökország, Fülöp-szigetek, Írország, Románia, Monaco, Japán",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Litvánia zászlaja",
+      "object": "Litvánia",
+      "object_candidates": "Haiti, Svájc, Oroszország, Izrael, Malajzia, Bolívia, Hollandia, Spanyolország, Japán, Litvánia",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Bulgária zászlaja",
+      "object": "Bulgária",
+      "object_candidates": "Monaco, Fehéroroszország, Mexikó, Albánia, Svédország, Ukrajna, Franciaország, Törökország, Hollandia, Bulgária",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Irak államfőinek listája",
+      "object": "Irak",
+      "object_candidates": "Irán, Törökország, Haiti, Szingapúr, Horvátország, Malajzia, Finnország, Fülöp-szigetek, Vietnám, Irak",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Törökország zászlaja",
+      "object": "Törökország",
+      "object_candidates": "Kanada, Szingapúr, Makaó, Japán, Irak, Malajzia, Argentína, Svédország, Bolívia, Törökország",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Malajzia zászlaja",
+      "object": "Malajzia",
+      "object_candidates": "Makaó, Bolívia, Svájc, Fehéroroszország, Románia, Oroszország, Haiti, Jamaica, Norvégia, Malajzia",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Fehéroroszország zászlaja",
+      "object": "Fehéroroszország",
+      "object_candidates": "Dánia, Németország, Oroszország, Mexikó, Svájc, India, Svédország, Bulgária, Makaó, Fehéroroszország",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Kuba zászlaja",
+      "object": "Kuba",
+      "object_candidates": "Románia, Írország, Mexikó, Kínai Köztársaság, Ausztria, Malajzia, Pakisztán, Franciaország, Makaó, Kuba",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Vietnám zászlaja",
+      "object": "Vietnám",
+      "object_candidates": "Finnország, Pakisztán, India, Szingapúr, Ausztrália, Románia, Fehéroroszország, Kínai Köztársaság, Monaco, Vietnám",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Bolívia zászlaja",
+      "object": "Bolívia",
+      "object_candidates": "Svájc, India, Izrael, Ausztrália, Kínai Köztársaság, Románia, Oroszország, Pakisztán, Finnország, Bolívia",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "India zászlaja",
+      "object": "India",
+      "object_candidates": "Monaco, Kínai Köztársaság, Hollandia, Svédország, Líbia, Horvátország, Makaó, Szomália, Litvánia, India",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "Makaói pataca",
+      "object": "Makaó",
+      "object_candidates": "Haiti, Mexikó, Ausztrália, Hollandia, Bulgária, Norvégia, Szingapúr, Albánia, Ausztria, Makaó",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "Monaco zászlaja",
+      "object": "Monaco",
+      "object_candidates": "Törökország, Kínai Köztársaság, Irán, Finnország, India, Dánia, Fehéroroszország, Irak, Líbia, Monaco",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "Szomália zászlaja",
+      "object": "Szomália",
+      "object_candidates": "Horvátország, Spanyolország, Törökország, Malajzia, Bulgária, Hollandia, Franciaország, Norvégia, Líbia, Szomália",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Izrael elnöke",
+      "object": "Izrael",
+      "object_candidates": "Németország, Portugália, Litvánia, Bulgária, Jamaica, Japán, Törökország, Románia, Kínai Köztársaság, Izrael",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Svédország zászlaja",
+      "object": "Svédország",
+      "object_candidates": "Kanada, Norvégia, Fehéroroszország, Litvánia, Vietnám, Spanyolország, Románia, Albánia, Kínai Köztársaság, Svédország",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "A Kínai Köztársaság zászlaja",
+      "object": "Kínai Köztársaság",
+      "object_candidates": "Svájc, Japán, Fehéroroszország, Litvánia, Vietnám, Makaó, India, Haiti, Írország, Kínai Köztársaság",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Ausztrália zászlaja",
+      "object": "Ausztrália",
+      "object_candidates": "Fülöp-szigetek, Irak, Argentína, India, Portugália, Kanada, Izrael, Németország, Monaco, Ausztrália",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Ukrajna zászlaja",
+      "object": "Ukrajna",
+      "object_candidates": "Finnország, Törökország, Dánia, India, Németország, Ausztria, Írország, Izrael, Portugália, Ukrajna",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Fehéroroszország elnöke",
+      "object": "Fehéroroszország",
+      "object_candidates": "Szomália, Izrael, India, Bulgária, Svájc, Japán, Argentína, Dánia, Franciaország, Fehéroroszország",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Haiti zászlaja",
+      "object": "Haiti",
+      "object_candidates": "Írország, Monaco, Románia, Ausztria, Argentína, Vietnám, Japán, Szomália, Bolívia, Haiti",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Mexikó címere",
+      "object": "Mexikó",
+      "object_candidates": "Litvánia, Kuba, Izrael, Líbia, Norvégia, Ausztria, Irán, Makaó, Svédország, Mexikó",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Finnország zászlaja",
+      "object": "Finnország",
+      "object_candidates": "Franciaország, Kanada, Bulgária, Spanyolország, Fülöp-szigetek, Németország, Fehéroroszország, Oroszország, Szomália, Finnország",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Horvátország zászlaja",
+      "object": "Horvátország",
+      "object_candidates": "Németország, Portugália, Jamaica, Argentína, Malajzia, Norvégia, Kanada, Szomália, Haiti, Horvátország",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "Finnország elnöke",
+      "object": "Finnország",
+      "object_candidates": "Bulgária, Irak, Szingapúr, Olaszország, Kínai Köztársaság, Horvátország, Kanada, Malajzia, Litvánia, Finnország",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Albánia zászlaja",
+      "object": "Albánia",
+      "object_candidates": "Izrael, Pakisztán, Fehéroroszország, Szomália, Haiti, Törökország, Svédország, Svájc, Dánia, Albánia",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Olaszország zászlaja",
+      "object": "Olaszország",
+      "object_candidates": "Izrael, Irán, Japán, Vietnám, Svédország, Kínai Köztársaság, Bolívia, Fülöp-szigetek, Finnország, Olaszország",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Németország zászlaja",
+      "object": "Németország",
+      "object_candidates": "Oroszország, Svédország, Fülöp-szigetek, Líbia, Spanyolország, Írország, India, Svájc, Szingapúr, Németország",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Líbia zászlaja",
+      "object": "Líbia",
+      "object_candidates": "Ausztrália, Bulgária, Monaco, Pakisztán, Malajzia, Haiti, Izrael, Szingapúr, Románia, Líbia",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "A Fülöp-szigetek zászlaja",
+      "object": "Fülöp-szigetek",
+      "object_candidates": "Hollandia, Líbia, Izrael, Fehéroroszország, Argentína, Kuba, Kínai Köztársaság, Ausztria, Svédország, Fülöp-szigetek",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "Németország",
+      "object_candidates": "Kanada, Pakisztán, Japán, Olaszország, Szomália, Haiti, Ukrajna, Finnország, Franciaország, Németország",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Irán elnöke",
+      "object": "Irán",
+      "object_candidates": "Oroszország, Olaszország, Svájc, Ausztrália, Horvátország, Spanyolország, Albánia, Szingapúr, India, Irán",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Pakisztán zászlaja",
+      "object": "Pakisztán",
+      "object_candidates": "Spanyolország, Svédország, Szingapúr, Bolívia, Haiti, Kanada, Portugália, Kínai Köztársaság, Litvánia, Pakisztán",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Portugália zászlaja",
+      "object": "Portugália",
+      "object_candidates": "Németország, Kuba, Ausztrália, Írország, Albánia, Szingapúr, Finnország, Izrael, Oroszország, Portugália",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Görögország zászlaja",
+      "object": "Görögország",
+      "object_candidates": "Irak, Ausztria, Horvátország, Izrael, Kanada, Mexikó, India, Hollandia, Fehéroroszország, Görögország",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Mexikó zászlaja",
+      "object": "Mexikó",
+      "object_candidates": "Oroszország, Szingapúr, Spanyolország, Kínai Köztársaság, Albánia, Irak, Hollandia, Írország, Olaszország, Mexikó",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Japán zászlaja",
+      "object": "Japán",
+      "object_candidates": "India, Törökország, Franciaország, Finnország, Oroszország, Mexikó, Fehéroroszország, Románia, Szingapúr, Japán",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

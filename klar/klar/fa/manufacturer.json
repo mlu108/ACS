@@ -1,0 +1,294 @@
+{
+  "name": "manufacturer",
+  "prompt_templates": [
+    "کدام شرکت <subject> را تولید می‌کند؟ پاسخ: <mask>.",
+    "چه کسی <subject> را تولید می‌کند؟ پاسخ: <mask>.",
+    "چه کسی تولیدکننده <subject> است؟ پاسخ: <mask>.",
+    "چه کسی <subject> را می‌سازد؟ پاسخ: <mask>.",
+    "کدام تولیدکننده مسئول <subject> است؟ پاسخ: <mask>.",
+    " تولیدکننده <subject> نام دارد <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "فراری انزو",
+      "object": "فراری",
+      "object_candidates": "مایکروسافت, خدا, تویوتا, ایرباس, هوندا, ب‌ام‌و, اینتل, اپل, نینتندو, فراری",
+      "index": 3284,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "ویندوز ۲۰۰۰",
+      "object": "مایکروسافت",
+      "object_candidates": "نینتندو, اینتل, هوندا, فراری, بوئینگ, ب‌ام‌و, خدا, اپل, تویوتا, مایکروسافت",
+      "index": 3285,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ایرباس آ-۳۳۰",
+      "object": "ایرباس",
+      "object_candidates": "مایکروسافت, ب‌ام‌و, فراری, اپل, تویوتا, نینتندو, بوئینگ, اینتل, هوندا, ایرباس",
+      "index": 3286,
+      "subject_en": "Airbus A330",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "هوندا سیویک",
+      "object": "هوندا",
+      "object_candidates": "بوئینگ, ایرباس, خدا, اپل, مایکروسافت, ب‌ام‌و, نینتندو, اینتل, فراری, هوندا",
+      "index": 3287,
+      "subject_en": "Honda Civic",
+      "object_en": "Honda"
+    },
+    {
+      "subject": "فراری ۴۵۸ ایتالیا",
+      "object": "فراری",
+      "object_candidates": "ب‌ام‌و, تویوتا, اینتل, مایکروسافت, اپل, خدا, ایرباس, هوندا, نینتندو, فراری",
+      "index": 3288,
+      "subject_en": "Ferrari 458",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "بوئینگ ۷۷۷",
+      "object": "بوئینگ",
+      "object_candidates": "هوندا, ایرباس, فراری, خدا, ب‌ام‌و, اینتل, اپل, تویوتا, نینتندو, بوئینگ",
+      "index": 3289,
+      "subject_en": "Boeing 777",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "ویندوز ۷",
+      "object": "مایکروسافت",
+      "object_candidates": "خدا, اینتل, هوندا, بوئینگ, تویوتا, اپل, ایرباس, نینتندو, فراری, مایکروسافت",
+      "index": 3290,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "نینتندو ۳دی‌اس",
+      "object": "نینتندو",
+      "object_candidates": "اینتل, ب‌ام‌و, ایرباس, خدا, تویوتا, فراری, بوئینگ, هوندا, مایکروسافت, نینتندو",
+      "index": 3291,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "هوندا آکورد",
+      "object": "هوندا",
+      "object_candidates": "فراری, مایکروسافت, ب‌ام‌و, خدا, بوئینگ, نینتندو, تویوتا, اینتل, اپل, هوندا",
+      "index": 3292,
+      "subject_en": "Honda Accord",
+      "object_en": "Honda"
+    },
+    {
+      "subject": "آی فون",
+      "object": "اپل",
+      "object_candidates": "نینتندو, خدا, تویوتا, ب‌ام‌و, هوندا, ایرباس, مایکروسافت, فراری, بوئینگ, اپل",
+      "index": 3293,
+      "subject_en": "iPhone",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "اینتل ۸۰۰۸",
+      "object": "اینتل",
+      "object_candidates": "نینتندو, بوئینگ, ایرباس, فراری, اپل, ب‌ام‌و, هوندا, مایکروسافت, تویوتا, اینتل",
+      "index": 3294,
+      "subject_en": "Intel 8008",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "تویوتا کمری",
+      "object": "تویوتا",
+      "object_candidates": "ایرباس, اینتل, اپل, هوندا, ب‌ام‌و, بوئینگ, فراری, خدا, مایکروسافت, تویوتا",
+      "index": 3295,
+      "subject_en": "Toyota Camry",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "ایرباس آ-۳۸۰",
+      "object": "ایرباس",
+      "object_candidates": "نینتندو, بوئینگ, ب‌ام‌و, خدا, اپل, فراری, مایکروسافت, تویوتا, اینتل, ایرباس",
+      "index": 3296,
+      "subject_en": "Airbus A380",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "آیفون ۴اس",
+      "object": "اپل",
+      "object_candidates": "مایکروسافت, اینتل, نینتندو, تویوتا, فراری, خدا, ایرباس, ب‌ام‌و, هوندا, اپل",
+      "index": 3297,
+      "subject_en": "iPhone 4S",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "نینتندو دی‌اس",
+      "object": "نینتندو",
+      "object_candidates": "خدا, اپل, بوئینگ, ب‌ام‌و, هوندا, مایکروسافت, تویوتا, اینتل, ایرباس, نینتندو",
+      "index": 3298,
+      "subject_en": "Nintendo DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "بوئینگ بی-۱۷ فلایینگ فورترس",
+      "object": "بوئینگ",
+      "object_candidates": "اینتل, خدا, تویوتا, مایکروسافت, فراری, هوندا, ایرباس, ب‌ام‌و, نینتندو, بوئینگ",
+      "index": 3299,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "اپل I",
+      "object": "اپل",
+      "object_candidates": "بوئینگ, خدا, ب‌ام‌و, ایرباس, نینتندو, هوندا, تویوتا, مایکروسافت, اینتل, اپل",
+      "index": 3300,
+      "subject_en": "Apple I",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ایکس‌باکس",
+      "object": "مایکروسافت",
+      "object_candidates": "اپل, خدا, نینتندو, تویوتا, بوئینگ, ایرباس, فراری, ب‌ام‌و, اینتل, مایکروسافت",
+      "index": 3301,
+      "subject_en": "Xbox",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "تویوتا کورولا",
+      "object": "تویوتا",
+      "object_candidates": "مایکروسافت, ایرباس, هوندا, بوئینگ, ب‌ام‌و, فراری, اینتل, خدا, اپل, تویوتا",
+      "index": 3302,
+      "subject_en": "Toyota Corolla",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "آی‌فون ۳جی‌اس",
+      "object": "اپل",
+      "object_candidates": "اینتل, ایرباس, نینتندو, فراری, ب‌ام‌و, بوئینگ, خدا, تویوتا, مایکروسافت, اپل",
+      "index": 3303,
+      "subject_en": "iPhone 3GS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آی‌پاد",
+      "object": "اپل",
+      "object_candidates": "خدا, ایرباس, هوندا, نینتندو, مایکروسافت, ب‌ام‌و, اینتل, فراری, بوئینگ, اپل",
+      "index": 3304,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ب‌ام‌و ایکس۳",
+      "object": "ب‌ام‌و",
+      "object_candidates": "تویوتا, خدا, ایرباس, اپل, فراری, اینتل, هوندا, مایکروسافت, نینتندو, ب‌ام‌و",
+      "index": 3305,
+      "subject_en": "BMW X3",
+      "object_en": "BMW"
+    },
+    {
+      "subject": "ان‌ئی‌اس",
+      "object": "نینتندو",
+      "object_candidates": "خدا, مایکروسافت, هوندا, ب‌ام‌و, بوئینگ, ایرباس, اینتل, تویوتا, فراری, نینتندو",
+      "index": 3306,
+      "subject_en": "Nintendo Entertainment System",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "آی‌پد",
+      "object": "اپل",
+      "object_candidates": "ب‌ام‌و, مایکروسافت, اینتل, نینتندو, هوندا, بوئینگ, فراری, تویوتا, خدا, اپل",
+      "index": 3307,
+      "subject_en": "iPad",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ایرباس آ-۳۰۰",
+      "object": "ایرباس",
+      "object_candidates": "نینتندو, بوئینگ, خدا, هوندا, اینتل, تویوتا, ب‌ام‌و, اپل, فراری, ایرباس",
+      "index": 3308,
+      "subject_en": "A300",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "فراری لافراری",
+      "object": "فراری",
+      "object_candidates": "ب‌ام‌و, بوئینگ, مایکروسافت, نینتندو, تویوتا, هوندا, اینتل, ایرباس, خدا, فراری",
+      "index": 3309,
+      "subject_en": "LaFerrari",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "گیم بوی ادوانس",
+      "object": "نینتندو",
+      "object_candidates": "ایرباس, اینتل, هوندا, تویوتا, مایکروسافت, اپل, خدا, بوئینگ, ب‌ام‌و, نینتندو",
+      "index": 3310,
+      "subject_en": "Game Boy Advance",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "ایرباس آ-۳۲۰",
+      "object": "ایرباس",
+      "object_candidates": "خدا, تویوتا, ب‌ام‌و, مایکروسافت, فراری, بوئینگ, اپل, هوندا, نینتندو, ایرباس",
+      "index": 3311,
+      "subject_en": "A320 family",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "ویندوز ویستا",
+      "object": "مایکروسافت",
+      "object_candidates": "بوئینگ, ایرباس, ب‌ام‌و, اپل, نینتندو, خدا, هوندا, اینتل, فراری, مایکروسافت",
+      "index": 3312,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "فرشته",
+      "object": "خدا",
+      "object_candidates": "اینتل, بوئینگ, فراری, هوندا, نینتندو, ایرباس, تویوتا, اپل, ب‌ام‌و, خدا",
+      "index": 3313,
+      "subject_en": "angel",
+      "object_en": "God"
+    },
+    {
+      "subject": "سوپر نینتندو",
+      "object": "نینتندو",
+      "object_candidates": "اپل, ب‌ام‌و, ایرباس, فراری, اینتل, مایکروسافت, بوئینگ, تویوتا, هوندا, نینتندو",
+      "index": 3314,
+      "subject_en": "Super Nintendo Entertainment System",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "ایرباس آ-۳۵۰",
+      "object": "ایرباس",
+      "object_candidates": "خدا, ب‌ام‌و, فراری, مایکروسافت, نینتندو, تویوتا, اپل, اینتل, هوندا, ایرباس",
+      "index": 3315,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "ایرباس آ-۳۱۰",
+      "object": "ایرباس",
+      "object_candidates": "اپل, هوندا, نینتندو, خدا, بوئینگ, مایکروسافت, ب‌ام‌و, اینتل, تویوتا, ایرباس",
+      "index": 3316,
+      "subject_en": "A310",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "ایرباس آ-۳۴۰",
+      "object": "ایرباس",
+      "object_candidates": "اینتل, مایکروسافت, بوئینگ, هوندا, اپل, فراری, خدا, ب‌ام‌و, تویوتا, ایرباس",
+      "index": 3317,
+      "subject_en": "Airbus A340",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "وی یو",
+      "object": "نینتندو",
+      "object_candidates": "تویوتا, اپل, مایکروسافت, فراری, بوئینگ, اینتل, ب‌ام‌و, خدا, ایرباس, نینتندو",
+      "index": 3318,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    }
+  ],
+  "relation_id": "P176"
+}

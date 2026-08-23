@@ -1,0 +1,1014 @@
+{
+  "name": "religion",
+  "prompt_templates": [
+    "Какая религия принадлежит к <subject>? Ответ: <mask>",
+    "Какая религиозная вера <subject>? Ответ: <mask>",
+    "Какую веру следует <subject>? Ответ: <mask>",
+    "Какая религия практикуется <subject>? Ответ: <mask>",
+    "В какой религии участвует <subject>? Ответ: <mask>",
+    " Официальная религия <subject> — это <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Будда Шакьямуни",
+      "object": "буддизм",
+      "object_candidates": "ислам, иудаизм, индуизм, мусульманин, христианство, саентология, католичество, буддизм",
+      "index": 4632,
+      "subject_en": "Gautama Buddha",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Аврелий Августин",
+      "object": "христианство",
+      "object_candidates": "католичество, ислам, иудаизм, саентология, мусульманин, буддизм, индуизм, христианство",
+      "index": 4633,
+      "subject_en": "Augustine of Hippo",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "албанцы",
+      "object": "мусульманин",
+      "object_candidates": "ислам, индуизм, буддизм, иудаизм, саентология, христианство, католичество, мусульманин",
+      "index": 4634,
+      "subject_en": "Albanians",
+      "object_en": "Muslim"
+    },
+    {
+      "subject": "Беда Достопочтенный",
+      "object": "христианство",
+      "object_candidates": "мусульманин, иудаизм, католичество, буддизм, индуизм, ислам, саентология, христианство",
+      "index": 4635,
+      "subject_en": "Bede",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Константин I Великий",
+      "object": "христианство",
+      "object_candidates": "католичество, иудаизм, буддизм, индуизм, саентология, мусульманин, ислам, христианство",
+      "index": 4636,
+      "subject_en": "Constantine the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Иаков",
+      "object": "иудаизм",
+      "object_candidates": "буддизм, саентология, христианство, католичество, индуизм, ислам, мусульманин, иудаизм",
+      "index": 4637,
+      "subject_en": "Jacob",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "епископ",
+      "object": "христианство",
+      "object_candidates": "буддизм, католичество, ислам, иудаизм, саентология, индуизм, мусульманин, христианство",
+      "index": 4638,
+      "subject_en": "bishop",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Гонорий III",
+      "object": "христианство",
+      "object_candidates": "иудаизм, мусульманин, ислам, буддизм, индуизм, католичество, саентология, христианство",
+      "index": 4639,
+      "subject_en": "Honorius III",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Григорий IX",
+      "object": "христианство",
+      "object_candidates": "католичество, иудаизм, мусульманин, ислам, индуизм, буддизм, саентология, христианство",
+      "index": 4640,
+      "subject_en": "Gregory IX",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Афганистан",
+      "object": "ислам",
+      "object_candidates": "индуизм, мусульманин, иудаизм, саентология, буддизм, католичество, христианство, ислам",
+      "index": 4641,
+      "subject_en": "Afghanistan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Иисус Христос",
+      "object": "иудаизм",
+      "object_candidates": "мусульманин, ислам, саентология, христианство, буддизм, индуизм, католичество, иудаизм",
+      "index": 4642,
+      "subject_en": "Jesus Christ",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "арабы",
+      "object": "ислам",
+      "object_candidates": "католичество, буддизм, христианство, индуизм, мусульманин, иудаизм, саентология, ислам",
+      "index": 4643,
+      "subject_en": "Iraqi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ибн Баттута",
+      "object": "ислам",
+      "object_candidates": "индуизм, иудаизм, мусульманин, саентология, христианство, буддизм, католичество, ислам",
+      "index": 4644,
+      "subject_en": "Ibn Battuta",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мухаммед",
+      "object": "ислам",
+      "object_candidates": "саентология, мусульманин, иудаизм, католичество, буддизм, христианство, индуизм, ислам",
+      "index": 4645,
+      "subject_en": "Muhammad",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "мусульманин",
+      "object": "ислам",
+      "object_candidates": "саентология, католичество, иудаизм, мусульманин, индуизм, христианство, буддизм, ислам",
+      "index": 4646,
+      "subject_en": "Muslim",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Маймонид",
+      "object": "иудаизм",
+      "object_candidates": "индуизм, ислам, католичество, буддизм, мусульманин, саентология, христианство, иудаизм",
+      "index": 4647,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Малкольм Икс",
+      "object": "ислам",
+      "object_candidates": "буддизм, христианство, мусульманин, саентология, католичество, индуизм, иудаизм, ислам",
+      "index": 4648,
+      "subject_en": "Malcolm X",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "узбеки",
+      "object": "ислам",
+      "object_candidates": "христианство, буддизм, саентология, иудаизм, мусульманин, католичество, индуизм, ислам",
+      "index": 4649,
+      "subject_en": "Uzbeks",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "синагога",
+      "object": "иудаизм",
+      "object_candidates": "мусульманин, саентология, ислам, индуизм, христианство, католичество, буддизм, иудаизм",
+      "index": 4650,
+      "subject_en": "synagogue",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Мехмед IV",
+      "object": "ислам",
+      "object_candidates": "христианство, иудаизм, саентология, буддизм, индуизм, католичество, мусульманин, ислам",
+      "index": 4651,
+      "subject_en": "Mehmed IV",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Авраам",
+      "object": "иудаизм",
+      "object_candidates": "мусульманин, католичество, буддизм, саентология, ислам, индуизм, христианство, иудаизм",
+      "index": 4652,
+      "subject_en": "Abraham",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Ибн Рушд",
+      "object": "ислам",
+      "object_candidates": "иудаизм, саентология, мусульманин, буддизм, христианство, католичество, индуизм, ислам",
+      "index": 4653,
+      "subject_en": "Averroes",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ибн Хальдун",
+      "object": "ислам",
+      "object_candidates": "иудаизм, саентология, буддизм, индуизм, христианство, католичество, мусульманин, ислам",
+      "index": 4654,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Давид",
+      "object": "иудаизм",
+      "object_candidates": "мусульманин, буддизм, католичество, саентология, христианство, ислам, индуизм, иудаизм",
+      "index": 4655,
+      "subject_en": "David",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Сулейман I",
+      "object": "ислам",
+      "object_candidates": "индуизм, христианство, саентология, мусульманин, католичество, иудаизм, буддизм, ислам",
+      "index": 4656,
+      "subject_en": "Suleiman the Magnificent",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "арабы",
+      "object": "христианство",
+      "object_candidates": "католичество, индуизм, иудаизм, саентология, мусульманин, ислам, буддизм, христианство",
+      "index": 4657,
+      "subject_en": "Iraqi",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Джалаладдин Руми",
+      "object": "ислам",
+      "object_candidates": "христианство, мусульманин, иудаизм, католичество, буддизм, саентология, индуизм, ислам",
+      "index": 4658,
+      "subject_en": "Rumi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Абу Хамид аль-Газали",
+      "object": "ислам",
+      "object_candidates": "буддизм, мусульманин, христианство, индуизм, иудаизм, католичество, саентология, ислам",
+      "index": 4659,
+      "subject_en": "Al-Ghazali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Омейядский халифат",
+      "object": "ислам",
+      "object_candidates": "буддизм, христианство, католичество, саентология, индуизм, иудаизм, мусульманин, ислам",
+      "index": 4660,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Иштван I Святой",
+      "object": "христианство",
+      "object_candidates": "ислам, буддизм, саентология, мусульманин, католичество, иудаизм, индуизм, христианство",
+      "index": 4661,
+      "subject_en": "Stephen I of Hungary",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Карл Великий",
+      "object": "христианство",
+      "object_candidates": "ислам, иудаизм, католичество, буддизм, саентология, мусульманин, индуизм, христианство",
+      "index": 4662,
+      "subject_en": "Charlemagne",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Церковь адвентистов седьмого дня",
+      "object": "христианство",
+      "object_candidates": "буддизм, католичество, иудаизм, индуизм, саентология, ислам, мусульманин, христианство",
+      "index": 4663,
+      "subject_en": "Seventh-day Adventist Church",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Владимир Святославич",
+      "object": "христианство",
+      "object_candidates": "саентология, буддизм, католичество, ислам, индуизм, иудаизм, мусульманин, христианство",
+      "index": 4664,
+      "subject_en": "Vladimir the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Храм Гроба Господня",
+      "object": "христианство",
+      "object_candidates": "католичество, саентология, иудаизм, буддизм, мусульманин, ислам, индуизм, христианство",
+      "index": 4665,
+      "subject_en": "Church of the Holy Sepulchre",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Муавия I",
+      "object": "ислам",
+      "object_candidates": "саентология, иудаизм, индуизм, буддизм, мусульманин, католичество, христианство, ислам",
+      "index": 4666,
+      "subject_en": "Muawiyah I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Хлодвиг I",
+      "object": "христианство",
+      "object_candidates": "иудаизм, мусульманин, саентология, индуизм, буддизм, католичество, ислам, христианство",
+      "index": 4667,
+      "subject_en": "Clovis I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Империя Тан",
+      "object": "буддизм",
+      "object_candidates": "саентология, христианство, ислам, католичество, иудаизм, мусульманин, индуизм, буддизм",
+      "index": 4668,
+      "subject_en": "Tang Empire",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Умар ибн аль-Хаттаб",
+      "object": "ислам",
+      "object_candidates": "индуизм, мусульманин, буддизм, иудаизм, католичество, саентология, христианство, ислам",
+      "index": 4669,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мухаммад Икбал",
+      "object": "ислам",
+      "object_candidates": "буддизм, саентология, мусульманин, католичество, иудаизм, индуизм, христианство, ислам",
+      "index": 4670,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Эль Хадж Омар Бонго Ондимба",
+      "object": "ислам",
+      "object_candidates": "христианство, индуизм, католичество, мусульманин, буддизм, иудаизм, саентология, ислам",
+      "index": 4671,
+      "subject_en": "Omar Bongo",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Николай V",
+      "object": "христианство",
+      "object_candidates": "иудаизм, буддизм, ислам, индуизм, католичество, мусульманин, саентология, христианство",
+      "index": 4672,
+      "subject_en": "Nicholas V",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Рухолла Мусави Хомейни",
+      "object": "ислам",
+      "object_candidates": "иудаизм, саентология, христианство, католичество, индуизм, мусульманин, буддизм, ислам",
+      "index": 4673,
+      "subject_en": "Ruhollah Khomeini",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Бонифаций VIII",
+      "object": "христианство",
+      "object_candidates": "иудаизм, мусульманин, ислам, индуизм, буддизм, католичество, саентология, христианство",
+      "index": 4674,
+      "subject_en": "Boniface VIII",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Аиша бинт Абу Бакр",
+      "object": "ислам",
+      "object_candidates": "индуизм, мусульманин, саентология, иудаизм, буддизм, христианство, католичество, ислам",
+      "index": 4675,
+      "subject_en": "Aisha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Нагарджуна",
+      "object": "буддизм",
+      "object_candidates": "мусульманин, иудаизм, индуизм, ислам, христианство, саентология, католичество, буддизм",
+      "index": 4676,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Хусейн ибн Али",
+      "object": "ислам",
+      "object_candidates": "христианство, католичество, мусульманин, саентология, буддизм, индуизм, иудаизм, ислам",
+      "index": 4677,
+      "subject_en": "Husayn ibn Ali",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Брахман",
+      "object": "индуизм",
+      "object_candidates": "иудаизм, саентология, христианство, ислам, буддизм, мусульманин, католичество, индуизм",
+      "index": 4678,
+      "subject_en": "Brahman",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Салах ад-Дин",
+      "object": "ислам",
+      "object_candidates": "католичество, иудаизм, христианство, буддизм, индуизм, саентология, мусульманин, ислам",
+      "index": 4679,
+      "subject_en": "Saladin",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "католическая церковь",
+      "object": "католичество",
+      "object_candidates": "иудаизм, буддизм, саентология, индуизм, христианство, ислам, мусульманин, католичество",
+      "index": 4680,
+      "subject_en": "Catholic Church",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "Теодор Герцль",
+      "object": "иудаизм",
+      "object_candidates": "католичество, саентология, мусульманин, буддизм, христианство, индуизм, ислам, иудаизм",
+      "index": 4681,
+      "subject_en": "Theodor Herzl",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Камбуджадеша",
+      "object": "индуизм",
+      "object_candidates": "саентология, иудаизм, католичество, буддизм, христианство, мусульманин, ислам, индуизм",
+      "index": 4682,
+      "subject_en": "Khmer Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Абдул-Азиз ибн Абдуррахман Аль Сауд",
+      "object": "ислам",
+      "object_candidates": "мусульманин, буддизм, саентология, индуизм, христианство, иудаизм, католичество, ислам",
+      "index": 4683,
+      "subject_en": "Ibn Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Хосни Мубарак",
+      "object": "ислам",
+      "object_candidates": "саентология, иудаизм, мусульманин, христианство, индуизм, католичество, буддизм, ислам",
+      "index": 4684,
+      "subject_en": "Hosni Mubarak",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Сильвестр I",
+      "object": "христианство",
+      "object_candidates": "иудаизм, католичество, ислам, индуизм, мусульманин, буддизм, саентология, христианство",
+      "index": 4685,
+      "subject_en": "Sylvester I",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Майкл Рубенс Блумберг",
+      "object": "иудаизм",
+      "object_candidates": "саентология, христианство, ислам, буддизм, мусульманин, индуизм, католичество, иудаизм",
+      "index": 4686,
+      "subject_en": "Michael Bloomberg",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Али ибн Абу Талиб",
+      "object": "ислам",
+      "object_candidates": "иудаизм, католичество, буддизм, христианство, индуизм, саентология, мусульманин, ислам",
+      "index": 4687,
+      "subject_en": "Alī ibn Abī Ṭālib",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Доку Хаматович Умаров",
+      "object": "ислам",
+      "object_candidates": "саентология, мусульманин, индуизм, католичество, христианство, буддизм, иудаизм, ислам",
+      "index": 4688,
+      "subject_en": "Dokka Umarov",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мухаммед Али Египетский",
+      "object": "ислам",
+      "object_candidates": "иудаизм, индуизм, буддизм, саентология, христианство, мусульманин, католичество, ислам",
+      "index": 4689,
+      "subject_en": "Muhammad Ali Pasha",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ричард I Львиное Сердце",
+      "object": "христианство",
+      "object_candidates": "иудаизм, католичество, индуизм, мусульманин, саентология, буддизм, ислам, христианство",
+      "index": 4690,
+      "subject_en": "Richard I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Усман ибн Аффан",
+      "object": "ислам",
+      "object_candidates": "католичество, христианство, индуизм, саентология, мусульманин, иудаизм, буддизм, ислам",
+      "index": 4691,
+      "subject_en": "Uthman ibn Affan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Али Хаменеи",
+      "object": "ислам",
+      "object_candidates": "саентология, христианство, индуизм, мусульманин, иудаизм, буддизм, католичество, ислам",
+      "index": 4692,
+      "subject_en": "Ali Khamenei",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Том Круз",
+      "object": "саентология",
+      "object_candidates": "католичество, буддизм, ислам, иудаизм, мусульманин, христианство, индуизм, саентология",
+      "index": 4693,
+      "subject_en": "Tom Cruise",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "Махатма Ганди",
+      "object": "индуизм",
+      "object_candidates": "мусульманин, иудаизм, католичество, христианство, саентология, буддизм, ислам, индуизм",
+      "index": 4694,
+      "subject_en": "Mohandas Karamchand Gandhi",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Хамид Карзай",
+      "object": "ислам",
+      "object_candidates": "христианство, мусульманин, буддизм, индуизм, саентология, иудаизм, католичество, ислам",
+      "index": 4695,
+      "subject_en": "Hamid Karzai",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Альберт Швейцер",
+      "object": "христианство",
+      "object_candidates": "саентология, иудаизм, индуизм, ислам, католичество, мусульманин, буддизм, христианство",
+      "index": 4696,
+      "subject_en": "Albert Schweitzer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Сукарно",
+      "object": "ислам",
+      "object_candidates": "католичество, саентология, буддизм, индуизм, христианство, иудаизм, мусульманин, ислам",
+      "index": 4697,
+      "subject_en": "Sukarno",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Сухарто",
+      "object": "ислам",
+      "object_candidates": "индуизм, саентология, буддизм, католичество, христианство, иудаизм, мусульманин, ислам",
+      "index": 4698,
+      "subject_en": "Suharto",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ice Cube",
+      "object": "ислам",
+      "object_candidates": "христианство, индуизм, иудаизм, католичество, саентология, буддизм, мусульманин, ислам",
+      "index": 4699,
+      "subject_en": "Ice Cube",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ильич Рамирес Санчес",
+      "object": "ислам",
+      "object_candidates": "католичество, христианство, мусульманин, саентология, буддизм, индуизм, иудаизм, ислам",
+      "index": 4700,
+      "subject_en": "Carlos the Jackal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мамун",
+      "object": "ислам",
+      "object_candidates": "иудаизм, христианство, католичество, саентология, индуизм, буддизм, мусульманин, ислам",
+      "index": 4701,
+      "subject_en": "al-Maʾmun",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Фатима Захра",
+      "object": "ислам",
+      "object_candidates": "индуизм, буддизм, христианство, саентология, мусульманин, иудаизм, католичество, ислам",
+      "index": 4702,
+      "subject_en": "Fatimah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мухаммад Али Джинна",
+      "object": "ислам",
+      "object_candidates": "саентология, христианство, иудаизм, буддизм, католичество, мусульманин, индуизм, ислам",
+      "index": 4703,
+      "subject_en": "Mohammad Ali Jinnah",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Южный Вьетнам",
+      "object": "буддизм",
+      "object_candidates": "иудаизм, саентология, католичество, индуизм, христианство, ислам, мусульманин, буддизм",
+      "index": 4704,
+      "subject_en": "South Vietnam",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Абдул-Хамид II",
+      "object": "ислам",
+      "object_candidates": "христианство, мусульманин, католичество, буддизм, индуизм, саентология, иудаизм, ислам",
+      "index": 4705,
+      "subject_en": "Abdul Hamid II",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Алевиты",
+      "object": "ислам",
+      "object_candidates": "иудаизм, мусульманин, буддизм, саентология, индуизм, католичество, христианство, ислам",
+      "index": 4706,
+      "subject_en": "Alevism",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Аун Сан Су Чжи",
+      "object": "буддизм",
+      "object_candidates": "ислам, индуизм, христианство, саентология, католичество, мусульманин, иудаизм, буддизм",
+      "index": 4707,
+      "subject_en": "Aung San Suu Kyi",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Харун ар-Рашид",
+      "object": "ислам",
+      "object_candidates": "католичество, иудаизм, индуизм, буддизм, саентология, мусульманин, христианство, ислам",
+      "index": 4708,
+      "subject_en": "Harun al-Rashid",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Исаия",
+      "object": "иудаизм",
+      "object_candidates": "мусульманин, буддизм, ислам, саентология, христианство, индуизм, католичество, иудаизм",
+      "index": 4709,
+      "subject_en": "Isaiah",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Абу Бакр",
+      "object": "ислам",
+      "object_candidates": "саентология, индуизм, буддизм, мусульманин, иудаизм, христианство, католичество, ислам",
+      "index": 4710,
+      "subject_en": "Abu Bakr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Государство Гуптов",
+      "object": "индуизм",
+      "object_candidates": "ислам, католичество, буддизм, мусульманин, саентология, христианство, иудаизм, индуизм",
+      "index": 4711,
+      "subject_en": "Gupta Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Акбар I Великий",
+      "object": "ислам",
+      "object_candidates": "христианство, католичество, мусульманин, саентология, иудаизм, индуизм, буддизм, ислам",
+      "index": 4712,
+      "subject_en": "Akbar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "имам",
+      "object": "ислам",
+      "object_candidates": "католичество, буддизм, индуизм, христианство, иудаизм, мусульманин, саентология, ислам",
+      "index": 4713,
+      "subject_en": "Imam",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Людовик XIV",
+      "object": "католичество",
+      "object_candidates": "ислам, буддизм, саентология, христианство, иудаизм, мусульманин, индуизм, католичество",
+      "index": 4714,
+      "subject_en": "Louis XIV of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "День Святой Троицы",
+      "object": "христианство",
+      "object_candidates": "иудаизм, мусульманин, буддизм, ислам, католичество, индуизм, саентология, христианство",
+      "index": 4715,
+      "subject_en": "Pentecost",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Отче наш",
+      "object": "христианство",
+      "object_candidates": "мусульманин, католичество, индуизм, саентология, ислам, буддизм, иудаизм, христианство",
+      "index": 4716,
+      "subject_en": "Lord's Prayer",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Скандербег",
+      "object": "христианство",
+      "object_candidates": "мусульманин, католичество, саентология, ислам, индуизм, иудаизм, буддизм, христианство",
+      "index": 4717,
+      "subject_en": "Skanderbeg",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Сёгунат Токугава",
+      "object": "буддизм",
+      "object_candidates": "мусульманин, христианство, иудаизм, саентология, ислам, католичество, индуизм, буддизм",
+      "index": 4718,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Генрих III",
+      "object": "католичество",
+      "object_candidates": "иудаизм, саентология, буддизм, христианство, индуизм, мусульманин, ислам, католичество",
+      "index": 4719,
+      "subject_en": "Henry III of France",
+      "object_en": "Catholicism"
+    },
+    {
+      "subject": "Мухаммед Омар",
+      "object": "ислам",
+      "object_candidates": "католичество, мусульманин, иудаизм, христианство, саентология, буддизм, индуизм, ислам",
+      "index": 4720,
+      "subject_en": "Mohammed Omar",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Карл V",
+      "object": "христианство",
+      "object_candidates": "индуизм, саентология, буддизм, мусульманин, католичество, иудаизм, ислам, христианство",
+      "index": 4721,
+      "subject_en": "Charles V of France",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Империя Маурьев",
+      "object": "индуизм",
+      "object_candidates": "мусульманин, католичество, саентология, иудаизм, ислам, буддизм, христианство, индуизм",
+      "index": 4722,
+      "subject_en": "Maurya Empire",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Рамакришна",
+      "object": "индуизм",
+      "object_candidates": "мусульманин, буддизм, христианство, иудаизм, саентология, католичество, ислам, индуизм",
+      "index": 4723,
+      "subject_en": "Ramakrishna",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Сюаньцзан",
+      "object": "буддизм",
+      "object_candidates": "индуизм, мусульманин, иудаизм, саентология, ислам, христианство, католичество, буддизм",
+      "index": 4724,
+      "subject_en": "Xuanzang",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Осман I",
+      "object": "ислам",
+      "object_candidates": "индуизм, иудаизм, католичество, саентология, буддизм, мусульманин, христианство, ислам",
+      "index": 4725,
+      "subject_en": "Osman I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Левий Матфей",
+      "object": "христианство",
+      "object_candidates": "католичество, иудаизм, мусульманин, ислам, саентология, индуизм, буддизм, христианство",
+      "index": 4726,
+      "subject_en": "Matthew the Apostle",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Мехмед II",
+      "object": "ислам",
+      "object_candidates": "мусульманин, христианство, буддизм, иудаизм, саентология, индуизм, католичество, ислам",
+      "index": 4727,
+      "subject_en": "Mehmed the Conqueror",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ханна Арендт",
+      "object": "иудаизм",
+      "object_candidates": "христианство, мусульманин, саентология, ислам, индуизм, католичество, буддизм, иудаизм",
+      "index": 4728,
+      "subject_en": "Hannah Arendt",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Джон Траволта",
+      "object": "саентология",
+      "object_candidates": "индуизм, христианство, буддизм, ислам, католичество, мусульманин, иудаизм, саентология",
+      "index": 4729,
+      "subject_en": "John Travolta",
+      "object_en": "Ciencias"
+    },
+    {
+      "subject": "Ромул Август",
+      "object": "христианство",
+      "object_candidates": "индуизм, католичество, саентология, мусульманин, ислам, буддизм, иудаизм, христианство",
+      "index": 4730,
+      "subject_en": "Romulus Augustus",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Джозеф Пристли",
+      "object": "христианство",
+      "object_candidates": "ислам, буддизм, саентология, католичество, иудаизм, мусульманин, индуизм, христианство",
+      "index": 4731,
+      "subject_en": "Joseph Priestley",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Скандербег",
+      "object": "ислам",
+      "object_candidates": "иудаизм, христианство, саентология, буддизм, индуизм, мусульманин, католичество, ислам",
+      "index": 4732,
+      "subject_en": "Skanderbeg",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Хафиз Ширази",
+      "object": "ислам",
+      "object_candidates": "иудаизм, саентология, христианство, мусульманин, католичество, индуизм, буддизм, ислам",
+      "index": 4733,
+      "subject_en": "Hafez",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Жан-Жак Руссо",
+      "object": "христианство",
+      "object_candidates": "индуизм, католичество, иудаизм, ислам, мусульманин, буддизм, саентология, христианство",
+      "index": 4734,
+      "subject_en": "Jean-Jacques Rousseau",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Альфред Великий",
+      "object": "христианство",
+      "object_candidates": "мусульманин, буддизм, иудаизм, индуизм, саентология, католичество, ислам, христианство",
+      "index": 4735,
+      "subject_en": "Alfred the Great",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Чжэн Хэ",
+      "object": "ислам",
+      "object_candidates": "мусульманин, саентология, буддизм, иудаизм, индуизм, католичество, христианство, ислам",
+      "index": 4736,
+      "subject_en": "Zheng He",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ураза-байрам",
+      "object": "ислам",
+      "object_candidates": "буддизм, мусульманин, католичество, саентология, иудаизм, христианство, индуизм, ислам",
+      "index": 4737,
+      "subject_en": "Eid al-Fitr",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Джавахарлал Неру",
+      "object": "индуизм",
+      "object_candidates": "католичество, христианство, буддизм, саентология, мусульманин, иудаизм, ислам, индуизм",
+      "index": 4738,
+      "subject_en": "Jawaharlal Nehru",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Шах-Джахан",
+      "object": "ислам",
+      "object_candidates": "мусульманин, иудаизм, католичество, индуизм, саентология, буддизм, христианство, ислам",
+      "index": 4739,
+      "subject_en": "Shah Jahan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Альморавиды",
+      "object": "ислам",
+      "object_candidates": "саентология, мусульманин, иудаизм, католичество, христианство, буддизм, индуизм, ислам",
+      "index": 4740,
+      "subject_en": "Almoravid dynasty",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Монгольская Народная Республика",
+      "object": "буддизм",
+      "object_candidates": "индуизм, христианство, католичество, мусульманин, ислам, саентология, иудаизм, буддизм",
+      "index": 4741,
+      "subject_en": "Mongolian People's Republic",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Свен I Вилобородый",
+      "object": "христианство",
+      "object_candidates": "ислам, католичество, мусульманин, иудаизм, саентология, индуизм, буддизм, христианство",
+      "index": 4742,
+      "subject_en": "Sweyn I of Denmark",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Сарвепалли Радхакришнан",
+      "object": "индуизм",
+      "object_candidates": "ислам, католичество, мусульманин, саентология, христианство, иудаизм, буддизм, индуизм",
+      "index": 4743,
+      "subject_en": "Sarvepalli Radhakrishnan",
+      "object_en": "Hinduism"
+    },
+    {
+      "subject": "Тадж-Махал",
+      "object": "ислам",
+      "object_candidates": "иудаизм, христианство, буддизм, саентология, мусульманин, индуизм, католичество, ислам",
+      "index": 4744,
+      "subject_en": "Taj Mahal",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Мухаммед Мурси",
+      "object": "ислам",
+      "object_candidates": "католичество, буддизм, иудаизм, саентология, мусульманин, индуизм, христианство, ислам",
+      "index": 4745,
+      "subject_en": "Mohamed Morsi",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Ахмед I",
+      "object": "ислам",
+      "object_candidates": "христианство, буддизм, иудаизм, саентология, католичество, мусульманин, индуизм, ислам",
+      "index": 4746,
+      "subject_en": "Ahmed I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Франц Кафка",
+      "object": "иудаизм",
+      "object_candidates": "ислам, мусульманин, католичество, индуизм, христианство, саентология, буддизм, иудаизм",
+      "index": 4747,
+      "subject_en": "Franz Kafka",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Халифа ибн Зайд аль-Нахайян",
+      "object": "ислам",
+      "object_candidates": "саентология, буддизм, христианство, католичество, иудаизм, мусульманин, индуизм, ислам",
+      "index": 4748,
+      "subject_en": "Khalifa bin Zayed Al Nahyan",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Эдуард I",
+      "object": "христианство",
+      "object_candidates": "ислам, католичество, иудаизм, буддизм, саентология, индуизм, мусульманин, христианство",
+      "index": 4749,
+      "subject_en": "Edward I of England",
+      "object_en": "Christianity"
+    },
+    {
+      "subject": "Мэрилин Монро",
+      "object": "иудаизм",
+      "object_candidates": "католичество, индуизм, ислам, саентология, христианство, буддизм, мусульманин, иудаизм",
+      "index": 4750,
+      "subject_en": "Marilyn Monroe",
+      "object_en": "Judaism"
+    },
+    {
+      "subject": "Бабур",
+      "object": "ислам",
+      "object_candidates": "католичество, буддизм, мусульманин, саентология, индуизм, иудаизм, христианство, ислам",
+      "index": 4751,
+      "subject_en": "Babur",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Селим I",
+      "object": "ислам",
+      "object_candidates": "католичество, индуизм, христианство, мусульманин, иудаизм, буддизм, саентология, ислам",
+      "index": 4752,
+      "subject_en": "Selim I",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Фахд ибн Абдул-Азиз Аль-Сауд",
+      "object": "ислам",
+      "object_candidates": "буддизм, мусульманин, католичество, саентология, иудаизм, христианство, индуизм, ислам",
+      "index": 4753,
+      "subject_en": "Fahd bin Abdulaziz Al Saud",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Первез Мушарраф",
+      "object": "ислам",
+      "object_candidates": "индуизм, мусульманин, буддизм, саентология, иудаизм, католичество, христианство, ислам",
+      "index": 4754,
+      "subject_en": "Pervez Musharraf",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Анвар Садат",
+      "object": "ислам",
+      "object_candidates": "мусульманин, буддизм, иудаизм, саентология, индуизм, христианство, католичество, ислам",
+      "index": 4755,
+      "subject_en": "Anwar Sadat",
+      "object_en": "Islam"
+    },
+    {
+      "subject": "Лев IX",
+      "object": "христианство",
+      "object_candidates": "индуизм, католичество, иудаизм, саентология, ислам, мусульманин, буддизм, христианство",
+      "index": 4756,
+      "subject_en": "Leo IX",
+      "object_en": "Christianity"
+    }
+  ],
+  "relation_id": "P140"
+}

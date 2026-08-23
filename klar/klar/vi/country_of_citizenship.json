@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "Quốc tịch của <subject> là quốc gia nào? Câu trả lời là: <mask>",
+    "Thế quốc tịch của <subject> là gì? Câu trả lời là: <mask>",
+    "<subject> có quốc tịch của quốc gia nào? Câu trả lời là: <mask>",
+    "<subject> là công dân ở đâu? Câu trả lời là: <mask>",
+    "Quốc gia nào cấp quốc tịch cho <subject>? Câu trả lời là: <mask>",
+    " Quốc tịch của <subject> là <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Boris Spassky",
+      "object": "Pháp",
+      "object_candidates": "Cộng hòa Ireland, Úc, Qatar, Liban, Kurdistan, Thụy Sĩ, Bulgaria, Ấn Độ, Argentina, Pháp",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ada Yonath",
+      "object": "Israel",
+      "object_candidates": "Brasil, Úc, Qatar, Liban, Thụy Điển, Nhật Bản, Hy Lạp, Việt Nam, Na Uy, Israel",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Lionel Messi",
+      "object": "Argentina",
+      "object_candidates": "Nhật Bản, Cộng hòa Ireland, Đan Mạch, Đức, Thụy Điển, Liban, Bulgaria, Hy Lạp, Israel, Argentina",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Carlos II của Tây Ban Nha",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Việt Nam, Canada, Na Uy, Thụy Sĩ, Israel, Đan Mạch, Thụy Điển, Áo, Argentina, Tây Ban Nha",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Adriano Celentano",
+      "object": "Ý",
+      "object_candidates": "Việt Nam, Áo, Đức, Kurdistan, Đan Mạch, Frankfurt am Main, Hy Lạp, Israel, Na Uy, Ý",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Georgi Parvanov",
+      "object": "Bulgaria",
+      "object_candidates": "Úc, Hy Lạp, Ý, Brasil, Qatar, Israel, Việt Nam, Đức, Vương quốc Anh, Bulgaria",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Dilma Rousseff",
+      "object": "Brasil",
+      "object_candidates": "Cộng hòa Ireland, Frankfurt am Main, Kurdistan, Canada, Đan Mạch, Thụy Sĩ, Nhật Bản, Tây Ban Nha, Úc, Brasil",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Ronaldo",
+      "object": "Brasil",
+      "object_candidates": "Liban, Thụy Sĩ, Ý, Đức, Canada, Đan Mạch, Vương quốc Anh, Argentina, Áo, Brasil",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Traianus",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Qatar, Thụy Sĩ, Đan Mạch, Na Uy, Brasil, Kurdistan, Việt Nam, Vương quốc Anh, Argentina, Tây Ban Nha",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Ronaldinho",
+      "object": "Brasil",
+      "object_candidates": "Thụy Sĩ, Nhật Bản, Israel, Bulgaria, Việt Nam, Thụy Điển, Canada, Tây Ban Nha, Liban, Brasil",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Scott Morrison",
+      "object": "Úc",
+      "object_candidates": "Đức, Cộng hòa Ireland, Frankfurt am Main, Ba Lan, Canada, Áo, Nhật Bản, Thụy Điển, Ý, Úc",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Hồ Chí Minh",
+      "object": "Việt Nam",
+      "object_candidates": "Ấn Độ, Nhật Bản, Israel, Argentina, Thụy Điển, Pháp, Qatar, Hy Lạp, Ba Lan, Việt Nam",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Alain Robert",
+      "object": "Pháp",
+      "object_candidates": "Argentina, Frankfurt am Main, Hy Lạp, Việt Nam, Israel, Cộng hòa Ireland, Ba Lan, Kurdistan, Na Uy, Pháp",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ferdinand de Saussure",
+      "object": "Thụy Sĩ",
+      "object_candidates": "Ấn Độ, Argentina, Kurdistan, Brasil, Canada, Qatar, Áo, Nhật Bản, Ba Lan, Thụy Sĩ",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Auguste Rodin",
+      "object": "Pháp",
+      "object_candidates": "Tây Ban Nha, Frankfurt am Main, Ý, Israel, Ấn Độ, Argentina, Bulgaria, Brasil, Áo, Pháp",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "Đức",
+      "object_candidates": "Qatar, Vương quốc Anh, Nhật Bản, Liban, Argentina, Ý, Bulgaria, Áo, Brasil, Đức",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "Frankfurt am Main",
+      "object_candidates": "Thụy Điển, Cộng hòa Ireland, Argentina, Liban, Bulgaria, Israel, Ý, Hy Lạp, Nhật Bản, Frankfurt am Main",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Massimo D'Alema",
+      "object": "Ý",
+      "object_candidates": "Liban, Ấn Độ, Thụy Điển, Pháp, Tây Ban Nha, Úc, Ba Lan, Đan Mạch, Việt Nam, Ý",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Rudolf Hess",
+      "object": "Đức",
+      "object_candidates": "Ba Lan, Úc, Ý, Pháp, Việt Nam, Argentina, Kurdistan, Brasil, Đan Mạch, Đức",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Henry V của Anh",
+      "object": "Vương quốc Anh",
+      "object_candidates": "Bulgaria, Đức, Israel, Cộng hòa Ireland, Thụy Điển, Việt Nam, Brasil, Canada, Thụy Sĩ, Vương quốc Anh",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Michel Houellebecq",
+      "object": "Pháp",
+      "object_candidates": "Thụy Sĩ, Ấn Độ, Đan Mạch, Tây Ban Nha, Nhật Bản, Na Uy, Ba Lan, Brasil, Áo, Pháp",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Masaccio",
+      "object": "Ý",
+      "object_candidates": "Đan Mạch, Vương quốc Anh, Frankfurt am Main, Brasil, Bulgaria, Pháp, Canada, Úc, Hy Lạp, Ý",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "France Gall",
+      "object": "Pháp",
+      "object_candidates": "Canada, Vương quốc Anh, Việt Nam, Áo, Ý, Israel, Frankfurt am Main, Ấn Độ, Hy Lạp, Pháp",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Rafael Alberti",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Áo, Bulgaria, Liban, Na Uy, Ý, Việt Nam, Israel, Ba Lan, Úc, Tây Ban Nha",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Bernardo Houssay",
+      "object": "Argentina",
+      "object_candidates": "Qatar, Đức, Israel, Canada, Vương quốc Anh, Thụy Sĩ, Việt Nam, Kurdistan, Bulgaria, Argentina",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Miyazawa Kiichi",
+      "object": "Nhật Bản",
+      "object_candidates": "Brasil, Na Uy, Pháp, Ấn Độ, Bulgaria, Qatar, Thụy Điển, Israel, Vương quốc Anh, Nhật Bản",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Oscar I của Thụy Điển",
+      "object": "Thụy Điển",
+      "object_candidates": "Pháp, Thụy Sĩ, Đan Mạch, Ấn Độ, Tây Ban Nha, Đức, Ba Lan, Qatar, Israel, Thụy Điển",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Carl Bosch",
+      "object": "Đức",
+      "object_candidates": "Kurdistan, Argentina, Tây Ban Nha, Thụy Điển, Israel, Pháp, Thụy Sĩ, Frankfurt am Main, Cộng hòa Ireland, Đức",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Jiddu Krishnamurti",
+      "object": "Ấn Độ",
+      "object_candidates": "Qatar, Ý, Na Uy, Đức, Vương quốc Anh, Hy Lạp, Cộng hòa Ireland, Kurdistan, Liban, Ấn Độ",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "Elizabeth I của Anh",
+      "object": "Vương quốc Anh",
+      "object_candidates": "Pháp, Ấn Độ, Ba Lan, Tây Ban Nha, Canada, Argentina, Áo, Đan Mạch, Thụy Điển, Vương quốc Anh",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "Pháp",
+      "object_candidates": "Qatar, Frankfurt am Main, Liban, Ý, Ấn Độ, Kurdistan, Bulgaria, Ba Lan, Úc, Pháp",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Grzegorz Lato",
+      "object": "Ba Lan",
+      "object_candidates": "Pháp, Ý, Úc, Cộng hòa Ireland, Bulgaria, Đức, Nhật Bản, Tây Ban Nha, Hy Lạp, Ba Lan",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Kurt Waldheim",
+      "object": "Áo",
+      "object_candidates": "Israel, Việt Nam, Tây Ban Nha, Thụy Sĩ, Kurdistan, Argentina, Úc, Frankfurt am Main, Cộng hòa Ireland, Áo",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Margaret Atwood",
+      "object": "Canada",
+      "object_candidates": "Argentina, Na Uy, Brasil, Đức, Liban, Úc, Đan Mạch, Bulgaria, Kurdistan, Canada",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Enzo Ferrari",
+      "object": "Ý",
+      "object_candidates": "Ấn Độ, Liban, Tây Ban Nha, Áo, Argentina, Cộng hòa Ireland, Canada, Israel, Brasil, Ý",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Bourvil",
+      "object": "Pháp",
+      "object_candidates": "Ấn Độ, Na Uy, Argentina, Úc, Nhật Bản, Frankfurt am Main, Vương quốc Anh, Israel, Tây Ban Nha, Pháp",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Wolfgang Ernst Pauli",
+      "object": "Áo",
+      "object_candidates": "Canada, Việt Nam, Đan Mạch, Cộng hòa Ireland, Thụy Điển, Hy Lạp, Ba Lan, Nhật Bản, Kurdistan, Áo",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Charles VI của Pháp",
+      "object": "Pháp",
+      "object_candidates": "Ba Lan, Áo, Đức, Đan Mạch, Bulgaria, Ấn Độ, Canada, Tây Ban Nha, Cộng hòa Ireland, Pháp",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Michel Aoun",
+      "object": "Liban",
+      "object_candidates": "Việt Nam, Đan Mạch, Argentina, Cộng hòa Ireland, Nhật Bản, Frankfurt am Main, Brasil, Ba Lan, Ý, Liban",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Magnus Carlsen",
+      "object": "Na Uy",
+      "object_candidates": "Frankfurt am Main, Tây Ban Nha, Pháp, Kurdistan, Úc, Ấn Độ, Argentina, Liban, Hy Lạp, Na Uy",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Henryk Sienkiewicz",
+      "object": "Ba Lan",
+      "object_candidates": "Liban, Brasil, Israel, Tây Ban Nha, Qatar, Nhật Bản, Pháp, Đan Mạch, Canada, Ba Lan",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Arthur",
+      "object": "Vương quốc Anh",
+      "object_candidates": "Argentina, Qatar, Tây Ban Nha, Cộng hòa Ireland, Na Uy, Ba Lan, Ý, Thụy Điển, Kurdistan, Vương quốc Anh",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "James II của Anh",
+      "object": "Vương quốc Anh",
+      "object_candidates": "Na Uy, Thụy Sĩ, Bulgaria, Thụy Điển, Việt Nam, Ấn Độ, Hy Lạp, Brasil, Tây Ban Nha, Vương quốc Anh",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Hamad bin Khalifa Al Thani",
+      "object": "Qatar",
+      "object_candidates": "Tây Ban Nha, Bulgaria, Ý, Thụy Điển, Ấn Độ, Ba Lan, Frankfurt am Main, Thụy Sĩ, Nhật Bản, Qatar",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Francisco de Goya",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Ý, Pháp, Ba Lan, Canada, Israel, Úc, Liban, Hy Lạp, Brasil, Tây Ban Nha",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Jalal Talabani",
+      "object": "Kurdistan",
+      "object_candidates": "Cộng hòa Ireland, Vương quốc Anh, Ý, Ba Lan, Pháp, Frankfurt am Main, Qatar, Hy Lạp, Bulgaria, Kurdistan",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Floriano Peixoto",
+      "object": "Brasil",
+      "object_candidates": "Frankfurt am Main, Ba Lan, Thụy Điển, Ý, Kurdistan, Na Uy, Áo, Pháp, Thụy Sĩ, Brasil",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Antonis Samaras",
+      "object": "Hy Lạp",
+      "object_candidates": "Vương quốc Anh, Úc, Đan Mạch, Qatar, Ấn Độ, Ý, Pháp, Argentina, Liban, Hy Lạp",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Beppe Grillo",
+      "object": "Ý",
+      "object_candidates": "Vương quốc Anh, Ấn Độ, Tây Ban Nha, Hy Lạp, Israel, Úc, Frankfurt am Main, Pháp, Liban, Ý",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Frederick IX của Đan Mạch",
+      "object": "Đan Mạch",
+      "object_candidates": "Qatar, Áo, Canada, Pháp, Na Uy, Frankfurt am Main, Thụy Điển, Úc, Brasil, Đan Mạch",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Michael Fassbender",
+      "object": "Cộng hòa Ireland",
+      "object_candidates": "Canada, Tây Ban Nha, Qatar, Brasil, Áo, Kurdistan, Đức, Pháp, Bulgaria, Cộng hòa Ireland",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Alexandra của Đan Mạch",
+      "object": "Đan Mạch",
+      "object_candidates": "Áo, Thụy Điển, Argentina, Thụy Sĩ, Israel, Úc, Brasil, Ba Lan, Vương quốc Anh, Đan Mạch",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Miguel Hidalgo y Costilla",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Israel, Thụy Sĩ, Frankfurt am Main, Na Uy, Cộng hòa Ireland, Vương quốc Anh, Ý, Argentina, Úc, Tây Ban Nha",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Edmund Husserl",
+      "object": "Đức",
+      "object_candidates": "Ý, Liban, Ấn Độ, Thụy Điển, Ba Lan, Áo, Pháp, Kurdistan, Việt Nam, Đức",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lise Meitner",
+      "object": "Thụy Điển",
+      "object_candidates": "Tây Ban Nha, Qatar, Thụy Sĩ, Áo, Liban, Canada, Úc, Pháp, Ba Lan, Thụy Điển",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Albert II của Bỉ",
+      "object": "Bỉ",
+      "object_candidates": "Ba Lan, Thụy Điển, Ý, Qatar, Hy Lạp, Na Uy, Việt Nam, Thụy Sĩ, Tây Ban Nha, Bỉ",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Mahavira",
+      "object": "Ấn Độ",
+      "object_candidates": "Argentina, Đức, Việt Nam, Ý, Ba Lan, Úc, Canada, Kurdistan, Brasil, Ấn Độ",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Svante Arrhenius",
+      "object": "Thụy Điển",
+      "object_candidates": "Áo, Đức, Israel, Brasil, Na Uy, Qatar, Úc, Hy Lạp, Pháp, Thụy Điển",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Mario Monti",
+      "object": "Ý",
+      "object_candidates": "Tây Ban Nha, Đan Mạch, Ấn Độ, Đức, Pháp, Cộng hòa Ireland, Bulgaria, Qatar, Vương quốc Anh, Ý",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Pierre Janssen",
+      "object": "Pháp",
+      "object_candidates": "Ấn Độ, Israel, Tây Ban Nha, Cộng hòa Ireland, Liban, Ba Lan, Thụy Sĩ, Đan Mạch, Thụy Điển, Pháp",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

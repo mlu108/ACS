@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "پایتخت <subject> کجا واقع شده است؟ پاسخ: <mask>",
+    "پایتخت <subject> چیست؟ پاسخ: <mask>",
+    "کدام شهر به عنوان پایتخت <subject> خدمت می‌کند؟ پاسخ: <mask>",
+    "نام پایتخت <subject> را بگویید. پاسخ: <mask>",
+    "کجا <subject> پایتخت خود را دارد؟ پاسخ: <mask>",
+    " پایتخت <subject> نام دارد <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "جمهوری آذربایجان",
+      "object": "باکو",
+      "object_candidates": "گوادالاخارا، خالیسکو, کلمبو, برگن, سالونیک, کلکته, مانیل, لینکلن, رالی، کارولینای شمالی, بابل, باکو",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "نبراسکا",
+      "object": "لینکلن",
+      "object_candidates": "آمستردام, کاردیف, وینچستر, حلب, هوبارت, همیلتون, اکستر, یوکوهاما, صوفیه, لینکلن",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "همپشایر",
+      "object": "وینچستر",
+      "object_candidates": "آکسفورد, پرت, ونیز, پالرمو, نیس, آنکارا, جاکارتا, والنسیا, ممفیس, وینچستر",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "استان اسکندریه",
+      "object": "اسکندریه",
+      "object_candidates": "بغداد, توکیو, مکه, داروین, ریورساید, گپ، پروانس آلپ‌-کوت دازور, سئول, بانکوک, کیوتو, اسکندریه",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "پادشاهی ایتالیا",
+      "object": "فلورانس",
+      "object_candidates": "آکسفورد, کلمبیا، کارولینای جنوبی, وینیپگ, حلب, وینچستر, لینکلن, بخارست, هانوفر, تولدو، اسپانیا, فلورانس",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "دوک‌نشین بزرگ فنلاند",
+      "object": "هلسینکی",
+      "object_candidates": "ادو, لینکلن، انگلستان, بلفاست, طرابلس, لندن, کرایست‌چرچ, اسلو, وین, بوستون, هلسینکی",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "تلنگانا",
+      "object": "حیدرآباد",
+      "object_candidates": "ونیز, برن, آدلاید, مونتگمری, بمبئی, تالین, فینیکس, هلسینکی, نیس, حیدرآباد",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "استرالیای جنوبی",
+      "object": "آدلاید",
+      "object_candidates": "استکهلم, بریزبن, گلاستر, ریگا, پکن, تولوز, تیرانا, ادو, ناپل, آدلاید",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "پادشاهی اسکاتلند",
+      "object": "ادینبرو",
+      "object_candidates": "لوزان, آوگسبورگ, تیرانا, تور, باری, آنکارا, سیراکوز, سارایوو, دنور, ادینبرو",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "جمهوری دوم لهستان",
+      "object": "ورشو",
+      "object_candidates": "هارتفورد, پییر, باکو, قسطنطنیه, ویلنیوس, رالی، کارولینای شمالی, کلمبیا، کارولینای جنوبی, میامی, هالیفاکس, ورشو",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "ناحیه کانتربوری",
+      "object": "کرایست‌چرچ",
+      "object_candidates": "هوبارت, جنوا, کانبرا, بیسمارک، داکوتای شمالی, شهر بروکسل, منچستر, هرفورد, اسلو, تولوز, کرایست‌چرچ",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "پادشاهی فرانسه",
+      "object": "پاریس",
+      "object_candidates": "لیسبون, هانوفر, شهر بروکسل, فینیکس, جورج تاون, حیدرآباد, برست، بلاروس, مونیخ, منچستر, پاریس",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "آلبرتا",
+      "object": "ادمونتون",
+      "object_candidates": "بویزی، آیداهو, بارسلون, پراویدنس, قازان, بغداد, هانوفر, کاردیف, تالین, آدلاید, ادمونتون",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "آلمان",
+      "object": "برلین",
+      "object_candidates": "آکسفورد, بن, پالرمو, ناپل, اورشلیم, بانکوک, بوستون, استانبول, بلفاست, برلین",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ایندیانا",
+      "object": "ایندیاناپولیس",
+      "object_candidates": "ویکتوریا، بریتیش کلمبیا, مونیخ, کلمبوس, اودسا, تایپه, هاوانا, شهر دبی, پراگ, کمبریج, ایندیاناپولیس",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "امپراتوری دوم فرانسه",
+      "object": "پاریس",
+      "object_candidates": "کپنهاگ, لنسینگ, بولونیا, آدلاید, آوکلند, داروین, فینیکس, مدیسن، ویسکانسین, اورشلیم, پاریس",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "کمبریج‌شایر",
+      "object": "کمبریج",
+      "object_candidates": "کاردیف, لینکلن, سیلم, بخارست, گپ، پروانس آلپ‌-کوت دازور, کی‌یف, ممفیس, درسدن, همیلتون, کمبریج",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "پادشاهی سیسیل",
+      "object": "ناپل",
+      "object_candidates": "ریچموند، ویرجینیا, کیوتو, برگن, کانبرا, آوکلند, مسکو, پراگ, بلفاست, دوبلین, ناپل",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "اندر الوآر",
+      "object": "تور",
+      "object_candidates": "سالونیک, برلین, استانبول, مونته‌ویدئو, دهلی, جاکارتا, شهر بروکسل, وین, گپ، پروانس آلپ‌-کوت دازور, تور",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "آپولیا",
+      "object": "باری",
+      "object_candidates": "واترفورد, گوانگ‌ژو, تولوز, اورشلیم, گالوی, لنسینگ, لوزان, میامی, هریسبورگ, باری",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "استان فلاندری شرقی",
+      "object": "گنت",
+      "object_candidates": "اسلو, کیل, هیروشیما, کی‌یف, بمبئی, آمستردام, تور, ووستر, ساکرامنتو, گنت",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "دانمارک",
+      "object": "کپنهاگ",
+      "object_candidates": "جاکارتا, فلورانس, ویلنیوس, ادو, مادرید, مدیسن، ویسکانسین, تولدو، اسپانیا, ناپل, پکن, کپنهاگ",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "میشیگان",
+      "object": "لنسینگ",
+      "object_candidates": "لیوبلیانا, کاردیف, فلورانس, دوبلین, ساکرامنتو, لیسبون, کمبریج, ادمونتون, نشویل, لنسینگ",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "ایوبیان",
+      "object": "قاهره",
+      "object_candidates": "کانبرا, مینسک, رم, لندن, جنوا, نانجینگ, واترفورد, درسدن, مدینه, قاهره",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "حکومت خلفای راشدین",
+      "object": "مدینه",
+      "object_candidates": "سبیا, وینیپگ, برن, شهر بروکسل, برست، بلاروس, تالین, پاریس, ساکرامنتو, تور, مدینه",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "شوگون‌سالاری توکوگاوا",
+      "object": "ادو",
+      "object_candidates": "پالما د مایورکا, هریسبورگ, هلسینکی, میلان, وینیپگ, تالین, لستر, بابل, کنکورد, ادو",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "اتحاد جماهیر شوروی سوسیالیستی",
+      "object": "مسکو",
+      "object_candidates": "گپ، پروانس آلپ‌-کوت دازور, طرابلس, بابل, کلکته, هانوفر, باکو, عدن, والنسیا, هونولولو, مسکو",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "پادشاهی رومانی",
+      "object": "بخارست",
+      "object_candidates": "کراچی, بارسلون, توکیو, آوکلند, گوانگ‌ژو, کلمبیا، کارولینای جنوبی, گپ، پروانس آلپ‌-کوت دازور, اورشلیم, تایپه, بخارست",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "تاسمانی",
+      "object": "هوبارت",
+      "object_candidates": "کمبریج, وین, داروین, بوستون, ادمونتون, بیروت, ناپل, لیل, لینکلن, هوبارت",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "شهرستان لیمریک",
+      "object": "لیمرک",
+      "object_candidates": "اکستر, کلمبوس, لستر, سیاتل, فلورانس, ساگا, وینیپگ, کاراکاس, قسطنطنیه, لیمرک",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "خلفای فاطمی",
+      "object": "قاهره",
+      "object_candidates": "لندن, رالی، کارولینای شمالی, فینیکس, اکستر, ریورساید, پاریس, برلین, کی‌یف, پرستون (لانکاشیر), قاهره",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "منطقه آوکلند",
+      "object": "آوکلند",
+      "object_candidates": "کپنهاگ, لستر, یوکوهاما, آکسفورد, گلاستر, پرستون (لانکاشیر), کورک, کینگستون, هالیفاکس, آوکلند",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "نیوهمپشایر",
+      "object": "کنکورد",
+      "object_candidates": "بریزبن, کیوتو, زالتسبورگ, ریورساید, آناپولیس, پییر, کابل, عدن, ادینبرو, کنکورد",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "استان اودسا",
+      "object": "اودسا",
+      "object_candidates": "پرت, لوبلین, تور, مانیل, همیلتون, نانجینگ, بابل, دنور, مینسک, اودسا",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "استرالیا",
+      "object": "کانبرا",
+      "object_candidates": "کارلایل، کامبریا, صوفیه, حلب, تولوز, بوردو, پرستون (لانکاشیر), فینیکس, کیل, ترنتون, کانبرا",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "امپراتوری عثمانی",
+      "object": "استانبول",
+      "object_candidates": "تایپه, جنوا, بولونیا, کلکته, دنور, فلورانس, ممفیس, گپ، پروانس آلپ‌-کوت دازور, ایروان, استانبول",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "جنوب غربی انگلستان",
+      "object": "بریستول",
+      "object_candidates": "باکو, آنکارا, لیل, کلکته, وین, تورنتو, باری, کیوتو, ماینتس, بریستول",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "تگزاس",
+      "object": "آستین، تگزاس",
+      "object_candidates": "بلگراد, میامی, ریگا, بن, بوستون, پکن, رم, کلمبو, استراسبورگ, آستین، تگزاس",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "امپراتوری لاتین",
+      "object": "قسطنطنیه",
+      "object_candidates": "برگن, پاریس, ساگا, واترفورد, مونته‌ویدئو, بوداپست, هاوانا, لوزان, لیل, قسطنطنیه",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "مجارستان",
+      "object": "بوداپست",
+      "object_candidates": "مینسک, هرفورد, ناگویا، آیچی, سئول, هالیفاکس, بازل, ایندیاناپولیس, سیلم, آمستردام, بوداپست",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "روسیه",
+      "object": "مسکو",
+      "object_candidates": "اورشلیم, سیراکوز, پرستون (لانکاشیر), بریزبن, گالوی, آستین، تگزاس, لیما, نشویل, صوفیه, مسکو",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ونتو",
+      "object": "ونیز",
+      "object_candidates": "نانجینگ, پرستون (لانکاشیر), ادو, چارلستون, دمشق, داروین, پرت, وین, ویکتوریا، بریتیش کلمبیا, ونیز",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "ووسترشایر",
+      "object": "ووستر",
+      "object_candidates": "مونته‌ویدئو, سیلم, کلمبوس, تورین, ادو, کپنهاگ, هرفورد, لووف, طرابلس, ووستر",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "پادشاهی سیسیل",
+      "object": "پالرمو",
+      "object_candidates": "ایروان, کلمبوس, پراگ, سالونیک, آتن, هانوفر, جکسون، میسیسیپی, اتاوا, کاردیف, پالرمو",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "پنسیلوانیا",
+      "object": "هریسبورگ",
+      "object_candidates": "کارلایل، کامبریا, سبیا, آنکارا, سیلم, هونولولو, ریگا, پرستون (لانکاشیر), پراگ, قازان, هریسبورگ",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "ایالات پاپی",
+      "object": "رم",
+      "object_candidates": "فلورانس, بریزبن, بانکوک, اسکندریه, لیل, گوادالاخارا، خالیسکو, رجاینا, لنسینگ, جنوا, رم",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "شهرستان گالوی",
+      "object": "گالوی",
+      "object_candidates": "بابل, وست‌مینستر, دنیدن, قسطنطنیه, زاگرب, لینکلن، انگلستان, استانبول, گوادالاخارا، خالیسکو, هریسبورگ, گالوی",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "امپراتوری اتریش",
+      "object": "وین",
+      "object_candidates": "هریسبورگ, یوکوهاما, ممفیس, لینکلن, آستین، تگزاس, همیلتون, تیرانا, رجاینا, والنسیا, وین",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "هند شرقی هلند",
+      "object": "جاکارتا",
+      "object_candidates": "کلکته, اورشلیم, لیوبلیانا, ویلنیوس, وین, آناپولیس, سارایوو, بازل, مونتگمری, جاکارتا",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "اسرائیل",
+      "object": "اورشلیم",
+      "object_candidates": "ادو, بویزی، آیداهو, بمبئی, ساکرامنتو, تورنتو, بوستون, آستین، تگزاس, میامی, بیسمارک، داکوتای شمالی, اورشلیم",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "استان آیچی",
+      "object": "ناگویا، آیچی",
+      "object_candidates": "برست، بلاروس, کلمبیا، کارولینای جنوبی, بویزی، آیداهو, مونتگمری, اسلو, اودسا, هارتفورد, بوردو, کاردیف, ناگویا، آیچی",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "لسترشایر",
+      "object": "لستر",
+      "object_candidates": "اسلو, گوانگ‌ژو, لیل, کرایست‌چرچ, صوفیه, جاکارتا, تولوز, بازل, ماینتس, لستر",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "شهرستان کینگ، واشینگتن",
+      "object": "سیاتل",
+      "object_candidates": "میلان, لینکلن، انگلستان, صوفیه, مونیخ, کاراکاس, کی‌یف, مسکو, ریگا, هانوفر, سیاتل",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "دوک‌نشین آتن",
+      "object": "آتن",
+      "object_candidates": "هرفورد, تیرانا, نشویل, گلاستر, بلگراد, قازان, نیس, اسپرینگ‌فیلد, تهران, آتن",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "هلند",
+      "object": "آمستردام",
+      "object_candidates": "برلین, کابل, تهران, اسکندریه, ممفیس, کلکته, اورشلیم, وینچستر, اکستر, آمستردام",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "آلبانی",
+      "object": "تیرانا",
+      "object_candidates": "رالی، کارولینای شمالی, کیوتو, ورشو, ممفیس, لوبلین, بنگلور, کارلایل، کامبریا, تالین, لیوبلیانا, تیرانا",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "استان جنوا",
+      "object": "جنوا",
+      "object_candidates": "کاردیف, واترفورد, شهر بروکسل, آوگسبورگ, ممفیس, هریسبورگ, بوردو, وست‌مینستر, ونیز, جنوا",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "تایوان",
+      "object": "تایپه",
+      "object_candidates": "ویکتوریا، بریتیش کلمبیا, قاهره, سیاتل, آستین، تگزاس, گنت, کینگستون, بن, کی‌یف, آنکارا, تایپه",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "چکسلواکی",
+      "object": "پراگ",
+      "object_candidates": "پراویدنس, واترفورد, گوادالاخارا، خالیسکو, مونته‌ویدئو, ویکتوریا، بریتیش کلمبیا, ادو, اکستر, میامی, لوبلین, پراگ",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "دبی، امارات",
+      "object": "شهر دبی",
+      "object_candidates": "اسلو, اسپرینگ‌فیلد, لیسبون, الجزیره, کلمبیا، کارولینای جنوبی, ادینبرو, برن, گالوی, نانجینگ, شهر دبی",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "داکوتای شمالی",
+      "object": "بیسمارک، داکوتای شمالی",
+      "object_candidates": "نانجینگ, وینچستر, درسدن, هونولولو, طرابلس, لینکلن، انگلستان, حیدرآباد, داروین, بازل, بیسمارک، داکوتای شمالی",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "اندلس",
+      "object": "سبیا",
+      "object_candidates": "پرستون (لانکاشیر), قاهره, سالونیک, سارایوو, استراسبورگ, دنیدن, توکیو, ورشو, هلسینکی, سبیا",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "مهاراشترا",
+      "object": "بمبئی",
+      "object_candidates": "ورشو, گنت, آمستردام, برست، بلاروس, وینیپگ, ادمونتون, کیل, لنسینگ, واترفورد, بمبئی",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "کارناتاکا",
+      "object": "بنگلور",
+      "object_candidates": "جورج تاون, بیسمارک، داکوتای شمالی, لوبلین, لنسینگ, ادو, برن, کانبرا, سالونیک, ریگا, بنگلور",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "اندونزی",
+      "object": "جاکارتا",
+      "object_candidates": "کرمان, درسدن, ایندیاناپولیس, الجزیره, تورین, وینچستر, کلمبو, پییر, فینیکس, جاکارتا",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "جمهوری اجتماعی ایتالیا",
+      "object": "رم",
+      "object_candidates": "زاگرب, بانکوک, دنور, آکسفورد, اسکندریه, ووستر, لوبلین, پراویدنس, آوکلند, رم",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "امپراتوری هابسبورگ",
+      "object": "وین",
+      "object_candidates": "بارسلون, گلاستر, بیسمارک، داکوتای شمالی, حلب, لیما, کاردیف, ساگا, کلمبو, آدلاید, وین",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "پرتغال",
+      "object": "لیسبون",
+      "object_candidates": "دمشق, مونتگمری, صوفیه, تورین, ادمونتون, نیس, ممفیس, ماینتس, هاوانا, لیسبون",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "جزایر بالئاری",
+      "object": "پالما د مایورکا",
+      "object_candidates": "استکهلم, ونیز, آدلاید, بابل, کلکته, مسکو, لنسینگ, تورین, کرایست‌چرچ, پالما د مایورکا",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "استان بولونیا",
+      "object": "بولونیا",
+      "object_candidates": "وینیپگ, ریگا, بمبئی, وینچستر, ورشو, گپ، پروانس آلپ‌-کوت دازور, تالین, داروین, پالما د مایورکا, بولونیا",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "کوبا",
+      "object": "هاوانا",
+      "object_candidates": "مونته‌ویدئو, مسکو, بیسمارک، داکوتای شمالی, استراسبورگ, رالی، کارولینای شمالی, سیراکوز, پییر, آناپولیس, بن, هاوانا",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "استان تولدو",
+      "object": "تولدو، اسپانیا",
+      "object_candidates": "دهلی, باری, ترنتون, آستین، تگزاس, گالوی, بانکوک, کلمبوس, کرمان, ورشو, تولدو، اسپانیا",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "استان سیه‌نا",
+      "object": "سیه‌نا",
+      "object_candidates": "سالونیک, منچستر, پالرمو, بریستول, برست، بلاروس, ناگویا، آیچی, تیرانا, ونیز, کمبریج, سیه‌نا",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "شهرستان هونولولو، هاوایی",
+      "object": "هونولولو",
+      "object_candidates": "بوردو, برلین, هیروشیما, براتیسلاوا, گالوی, سالونیک, ماینتس, آمستردام, کابل, هونولولو",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "امپراتوری روم",
+      "object": "قسطنطنیه",
+      "object_candidates": "مونته‌ویدئو, زالتسبورگ, گنت, سیه‌نا, شاین، وایومینگ, آوگسبورگ, باری, میلان, برلین, قسطنطنیه",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "کانتیکت",
+      "object": "هارتفورد",
+      "object_candidates": "ایندیاناپولیس, اکستر, دمشق, سیاتل, لیل, پالرمو, صوفیه, وین, حیدرآباد, هارتفورد",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "اسکاتلند",
+      "object": "ادینبرو",
+      "object_candidates": "وست‌مینستر, کورک, وین, هلسینکی, لیوبلیانا, ریچموند، ویرجینیا, ووستر, ترنتون, ریورساید, ادینبرو",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "استان آنکارا",
+      "object": "آنکارا",
+      "object_candidates": "تایپه, ریچموند، ویرجینیا, پرستون (لانکاشیر), آمستردام, برست، بلاروس, مانیل, بوستون, مدینه, تورنتو, آنکارا",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "لاتزیو",
+      "object": "رم",
+      "object_candidates": "استانبول, قازان, شهر بروکسل, بویزی، آیداهو, بخارست, والنسیا, گوانگ‌ژو, اسکندریه, مدینه, رم",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "جمهوری خلق لهستان",
+      "object": "ورشو",
+      "object_candidates": "کیوتو, سیدنی, گوادالاخارا، خالیسکو, اسلو, سیلم, الجزیره, نایروبی, واترفورد, وینیپگ, ورشو",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "ایالت بازل اشتاد",
+      "object": "بازل",
+      "object_candidates": "پالرمو, ماینتس, مسکو, کانبرا, مونیخ, ایروان, ووستر, اودسا, سبیا, بازل",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "کالیفرنیا",
+      "object": "ساکرامنتو",
+      "object_candidates": "تیرانا, گپ، پروانس آلپ‌-کوت دازور, استانبول, چنای, مادرید, هرفورد, بوداپست, واترفورد, رالی، کارولینای شمالی, ساکرامنتو",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "زالتسبورگ",
+      "object": "زالتسبورگ",
+      "object_candidates": "نیس, تولوز, مینسک, اودسا, سیدنی, لنسینگ, اکستر, طرابلس, بارسلون, زالتسبورگ",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "استان کیوتو",
+      "object": "کیوتو",
+      "object_candidates": "والنسیا, هیروشیما, جنوا, تولوز, سالونیک, سبیا, کورک, اسلو, لنسینگ, کیوتو",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "استان فلورانس",
+      "object": "فلورانس",
+      "object_candidates": "آکسفورد, تولدو، اسپانیا, مدیسن، ویسکانسین, پراگ, وین, وست‌مینستر, کاراکاس, ادو, مادرید, فلورانس",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "عراق",
+      "object": "بغداد",
+      "object_candidates": "توکیو, داکا, مسکو, آستین، تگزاس, نشویل, بویزی، آیداهو, زاگرب, بانکوک, نانجینگ, بغداد",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "کامپانیا",
+      "object": "ناپل",
+      "object_candidates": "توکیو, والنسیا, لکھنو, مونته‌ویدئو, دهلی, هرفورد, ویلنیوس, بغداد, لینکلن، انگلستان, ناپل",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "ژاپن",
+      "object": "توکیو",
+      "object_candidates": "پالما د مایورکا, قاهره, رم, ساکرامنتو, حیدرآباد, پاریس, همیلتون, بویزی، آیداهو, کینگستون, توکیو",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "شهرستان میامی-دید، فلوریدا",
+      "object": "میامی",
+      "object_candidates": "قازان, ماینتس, بیروت, باری, همیلتون, برست، بلاروس, چارلستون, مدیسن، ویسکانسین, نانجینگ, میامی",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "استان کرمان",
+      "object": "کرمان",
+      "object_candidates": "تورین, داکا, مونیخ, توکیو, میامی, سئول, استراسبورگ, تیرانا, بولونیا, کرمان",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "آلپ-ماریتیم",
+      "object": "نیس",
+      "object_candidates": "سیه‌نا, لووف, برن, آناپولیس, توکیو, منچستر, کمبریج, هالیفاکس, هاوانا, نیس",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "استونی",
+      "object": "تالین",
+      "object_candidates": "دنور, تورین, دمشق, کابل, بولونیا, دنیدن, کلمبوس, وین, ویکتوریا، بریتیش کلمبیا, تالین",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "استرالیای غربی",
+      "object": "پرت",
+      "object_candidates": "تورنتو, لنسینگ, بن, لیمرک, لکھنو, لیل, رجاینا, صوفیه, آوکلند, پرت",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "استان لووف",
+      "object": "لووف",
+      "object_candidates": "کرمان, آدلاید, بغداد, پالرمو, سیراکوز, گنت, کاردیف, اورشلیم, دوبلین, لووف",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "نیو ساوت ولز",
+      "object": "سیدنی",
+      "object_candidates": "برن, بازل, لیسبون, الجزیره, تایپه, براتیسلاوا, پییر, یوکوهاما, هونولولو, سیدنی",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "شهرستان ریورساید، کالیفرنیا",
+      "object": "ریورساید",
+      "object_candidates": "باکو, کارلایل، کامبریا, شهر دبی, فینیکس, اسلو, پالرمو, مادرید, ساکرامنتو, لیوبلیانا, ریورساید",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "ونزوئلا",
+      "object": "کاراکاس",
+      "object_candidates": "میلان, بریزبن, سیاتل, یوکوهاما, هوبارت, بویزی، آیداهو, ویلنیوس, لنسینگ, طرابلس, کاراکاس",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "مانیتوبا",
+      "object": "وینیپگ",
+      "object_candidates": "کورک, پالما د مایورکا, کانبرا, هاوانا, هونولولو, هالیفاکس, لیما, بغداد, گوادالاخارا، خالیسکو, وینیپگ",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "پادشاهی ایتالیا",
+      "object": "تورین",
+      "object_candidates": "داکا, هارتفورد, بوستون, ساگا, پراویدنس, کراچی, بانکوک, کلکته, عدن, تورین",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "لمباردی",
+      "object": "میلان",
+      "object_candidates": "ورشو, فلورانس, مونتگمری, ادو, دنیدن, مدینه, حیدرآباد, گوانگ‌ژو, آدلاید, میلان",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "ایران",
+      "object": "تهران",
+      "object_candidates": "طرابلس, پییر, ادمونتون, بارسلون, مینسک, مدینه, استانبول, همیلتون, یوکوهاما, تهران",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "پادشاهی بریتانیای کبیر",
+      "object": "لندن",
+      "object_candidates": "برست، بلاروس, رجاینا, تورین, زالتسبورگ, دنور, تولوز, باری, ریچموند، ویرجینیا, لیمرک, لندن",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "لیبی",
+      "object": "طرابلس",
+      "object_candidates": "اتاوا, براتیسلاوا, اسکندریه, آکسفورد, بیسمارک، داکوتای شمالی, مانیل, جاکارتا, مدینه, آدلاید, طرابلس",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "دوک‌نشین بزرگ مسکو",
+      "object": "مسکو",
+      "object_candidates": "جورج تاون, نانجینگ, پالما د مایورکا, هریسبورگ, کینگستون, پییر, لوبلین, کراچی, عدن, مسکو",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "قلمرو پایتختی استرالیا",
+      "object": "کانبرا",
+      "object_candidates": "مکه, پرت, آناپولیس, کیوتو, شاین، وایومینگ, لکھنو, بن, برلین, بمبئی, کانبرا",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "دولت ویشی فرانسه",
+      "object": "پاریس",
+      "object_candidates": "کابل, کورک, چارلستون, بیسمارک، داکوتای شمالی, کرایست‌چرچ, وینیپگ, کینگستون, داروین, آستین، تگزاس, پاریس",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "با-رن",
+      "object": "استراسبورگ",
+      "object_candidates": "پالما د مایورکا, کلمبوس, رجاینا, مانیل, بمبئی, سئول, ساگا, بنگلور, واترفورد, استراسبورگ",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "شهرستان ویلنیوس",
+      "object": "ویلنیوس",
+      "object_candidates": "سارایوو, ایندیاناپولیس, سیراکوز, ویکتوریا، بریتیش کلمبیا, ادو, کیوتو, پکن, ناگویا، آیچی, تورین, ویلنیوس",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "بروکسل",
+      "object": "شهر بروکسل",
+      "object_candidates": "لیل, تیرانا, کلمبوس, والنسیا, آمستردام, ماینتس, ادینبرو, هوبارت, هرفورد, شهر بروکسل",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "سسکچوان",
+      "object": "رجاینا",
+      "object_candidates": "پییر, داروین, سارایوو, تهران, شاین، وایومینگ, پالما د مایورکا, گوانگ‌ژو, ونیز, اسپرینگ‌فیلد, رجاینا",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "استان تهران",
+      "object": "تهران",
+      "object_candidates": "منچستر, پاریس, تایپه, مینسک, استانبول, ساکرامنتو, مونیخ, هرفورد, کی‌یف, تهران",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "امیلیا-رومانیا",
+      "object": "بولونیا",
+      "object_candidates": "سیه‌نا, کلمبو, اسپرینگ‌فیلد, آستین، تگزاس, سیاتل, آوکلند, مدیسن، ویسکانسین, کابل, بوداپست, بولونیا",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "ایرلند",
+      "object": "دوبلین",
+      "object_candidates": "ممفیس, آمستردام, گنت, والنسیا, آناپولیس, ویلنیوس, کیل, سالونیک, ترنتون, دوبلین",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "اروگوئه",
+      "object": "مونته‌ویدئو",
+      "object_candidates": "بوستون, بارسلون, توکیو, اسپرینگ‌فیلد, کاردیف, کلکته, دنور, ووستر, سئول, مونته‌ویدئو",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "هخامنشیان",
+      "object": "بابل",
+      "object_candidates": "کورک, برگن, استکهلم, بنگلور, داکا, ورشو, بیسمارک، داکوتای شمالی, کی‌یف, حیدرآباد, بابل",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "پرو",
+      "object": "لیما",
+      "object_candidates": "ساگا, لستر, هرفورد, وست‌مینستر, مینسک, داروین, سئول, ادو, جنوا, لیما",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "سری‌لانکا",
+      "object": "کلمبو",
+      "object_candidates": "واترفورد, صوفیه, ممفیس, سالونیک, وینیپگ, کرمان, لیسبون, مونیخ, تولدو، اسپانیا, کلمبو",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "پادشاهی عراق",
+      "object": "بغداد",
+      "object_candidates": "ادینبرو, باری, همیلتون, داروین, تولدو، اسپانیا, هلسینکی, دنور, براتیسلاوا, نشویل, بغداد",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "ایالات مؤتلفه آمریکا",
+      "object": "مونتگمری",
+      "object_candidates": "مدینه, سبیا, لووف, بن, وست‌مینستر, والنسیا, وینیپگ, لوبلین, عدن, مونتگمری",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "پادشاهی صربستان",
+      "object": "بلگراد",
+      "object_candidates": "لندن, کی‌یف, لیما, زالتسبورگ, رم, ویلنیوس, نایروبی, زاگرب, فلورانس, بلگراد",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "شهرستان واترفورد",
+      "object": "واترفورد",
+      "object_candidates": "ساکرامنتو, ساگا, دوبلین, هریسبورگ, رم, هرفورد, برلین, آوکلند, لیسبون, واترفورد",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "صربستان و مونته‌نگرو",
+      "object": "بلگراد",
+      "object_candidates": "بازل, گپ، پروانس آلپ‌-کوت دازور, بیروت, باکو, ریچموند، ویرجینیا, شهر دبی, هرفورد, میامی, قسطنطنیه, بلگراد",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "اوکراین",
+      "object": "کی‌یف",
+      "object_candidates": "ناگویا، آیچی, توکیو, لیمرک, هرفورد, شهر بروکسل, کابل, هانوفر, وینیپگ, جنوا, کی‌یف",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "بوسنی و هرزگوین",
+      "object": "سارایوو",
+      "object_candidates": "کارلایل، کامبریا, آنکارا, منچستر, دمشق, دهلی, عدن, ایندیاناپولیس, سیدنی, الجزیره, سارایوو",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "ارمنستان",
+      "object": "ایروان",
+      "object_candidates": "بمبئی, لیمرک, کانبرا, میلان, نایروبی, اودسا, تولوز, پکن, سیدنی, ایروان",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "خلافت عباسیان",
+      "object": "دمشق",
+      "object_candidates": "پکن, برن, کلمبوس, بوستون, تورنتو, سیلم, هلسینکی, سیه‌نا, ادو, دمشق",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "خالیسکو",
+      "object": "گوادالاخارا، خالیسکو",
+      "object_candidates": "نانجینگ, کیل, اتاوا, ووستر, جنوا, جاکارتا, مسکو, سارایوو, آنکارا, گوادالاخارا، خالیسکو",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "بنگلادش",
+      "object": "داکا",
+      "object_candidates": "کاراکاس, آتن, لندن, بیسمارک، داکوتای شمالی, ناگویا، آیچی, رم, قازان, مدیسن، ویسکانسین, تایپه, داکا",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "آلاباما",
+      "object": "مونتگمری",
+      "object_candidates": "واترفورد, پراگ, کرمان, رالی، کارولینای شمالی, لیما, باکو, بابل, شاین، وایومینگ, دمشق, مونتگمری",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "ایلی‌نوی",
+      "object": "اسپرینگ‌فیلد",
+      "object_candidates": "بیسمارک، داکوتای شمالی, دمشق, اسکندریه, لنسینگ, دوبلین, بوداپست, کینگستون, بلگراد, همیلتون, اسپرینگ‌فیلد",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "لینکولن‌شایر",
+      "object": "لینکلن، انگلستان",
+      "object_candidates": "پراویدنس, الجزیره, سئول, کورک, ونیز, بمبئی, پالرمو, برلین, کرایست‌چرچ, لینکلن، انگلستان",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "امپراتوری اسپانیا",
+      "object": "مادرید",
+      "object_candidates": "نانجینگ, دنیدن, استانبول, مکه, استکهلم, کراچی, مینسک, برن, لیسبون, مادرید",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "نور-پا-دو-کاله",
+      "object": "لیل",
+      "object_candidates": "مکه, بریزبن, جنوا, سئول, عدن, نایروبی, کلمبوس, پرت, کینگستون, لیل",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "ویسکانسین",
+      "object": "مدیسن، ویسکانسین",
+      "object_candidates": "بلفاست, پییر, دهلی, گوادالاخارا، خالیسکو, ناگویا، آیچی, فینیکس, گنت, شهر بروکسل, باری, مدیسن، ویسکانسین",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "سیسیل",
+      "object": "پالرمو",
+      "object_candidates": "مونته‌ویدئو, ادمونتون, بغداد, چارلستون, بازل, بانکوک, رجاینا, سئول, آدلاید, پالرمو",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "پادشاهی ایرلند",
+      "object": "دوبلین",
+      "object_candidates": "فینیکس, آناپولیس, کاراکاس, ساگا, بن, ناگویا، آیچی, سیه‌نا, جکسون، میسیسیپی, آوگسبورگ, دوبلین",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "فیلیپین",
+      "object": "مانیل",
+      "object_candidates": "لیما, لینکلن، انگلستان, لنسینگ, هاوانا, بارسلون, تولدو، اسپانیا, میلان, طرابلس, ریگا, مانیل",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "جمهوری ونیز",
+      "object": "ونیز",
+      "object_candidates": "گالوی, آستین، تگزاس, والنسیا, استانبول, الجزیره, چارلستون, اسکندریه, ووستر, آدلاید, ونیز",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "استان حلب",
+      "object": "حلب",
+      "object_candidates": "بمبئی, ونیز, داروین, کاراکاس, نشویل, لیما, فینیکس, کورک, آناپولیس, حلب",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "کلرادو",
+      "object": "دنور",
+      "object_candidates": "استراسبورگ, دمشق, طرابلس, کاردیف, بخارست, میامی, دوبلین, لیمرک, اورشلیم, دنور",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "یونان",
+      "object": "آتن",
+      "object_candidates": "سالونیک, نانجینگ, دنیدن, حلب, لیسبون, استراسبورگ, جکسون، میسیسیپی, مانیل, هالیفاکس, آتن",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "دولت مستقل کرواسی",
+      "object": "زاگرب",
+      "object_candidates": "آستین، تگزاس, باری, پرت, بارسلون, هلسینکی, میلان, همیلتون, دوبلین, استراسبورگ, زاگرب",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "هلند",
+      "object": "آمستردام",
+      "object_candidates": "کراچی, هیروشیما, لندن, گنت, اسکندریه, جنوا, همیلتون, هوبارت, بابل, آمستردام",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "آریزونا",
+      "object": "فینیکس",
+      "object_candidates": "ریگا, کراچی, کلمبو, گنت, مونته‌ویدئو, لووف, قسطنطنیه, پکن, پاریس, فینیکس",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "ایتالیا",
+      "object": "رم",
+      "object_candidates": "کیل, کرایست‌چرچ, فینیکس, استراسبورگ, لندن, مکه, آدلاید, کاردیف, بخارست, رم",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "پادشاهی یوگسلاوی",
+      "object": "بلگراد",
+      "object_candidates": "استراسبورگ, شاین، وایومینگ, استکهلم, آدلاید, نشویل, سئول, کلمبیا، کارولینای جنوبی, مونیخ, توکیو, بلگراد",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "بریتانیا",
+      "object": "لندن",
+      "object_candidates": "سالونیک, براتیسلاوا, سئول, اورشلیم, نایروبی, کلکته, قازان, چارلستون, بوداپست, لندن",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "جمهوری سوسیالیست خلق آلبانی",
+      "object": "تیرانا",
+      "object_candidates": "نایروبی, بغداد, تولدو، اسپانیا, لووف, بولونیا, آوکلند, سیدنی, توکیو, کپنهاگ, تیرانا",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "صربستان",
+      "object": "بلگراد",
+      "object_candidates": "آدلاید, ساگا, بنگلور, کلمبوس, اورشلیم, فلورانس, کلمبیا، کارولینای جنوبی, قسطنطنیه, میامی, بلگراد",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "پادشاهی لیبی",
+      "object": "طرابلس",
+      "object_candidates": "کلمبوس, همیلتون, وین, اسلو, کلمبیا، کارولینای جنوبی, مونتگمری, مونیخ, سئول, گالوی, طرابلس",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "کانادا",
+      "object": "اتاوا",
+      "object_candidates": "حلب, اورشلیم, کینگستون, بریستول, ماینتس, فینیکس, اسپرینگ‌فیلد, بوستون, سیراکوز, اتاوا",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "استان کاناگاوا",
+      "object": "یوکوهاما",
+      "object_candidates": "ایروان, باری, هالیفاکس, سبیا, بوردو, وین, بنگلور, آوگسبورگ, کلمبیا، کارولینای جنوبی, یوکوهاما",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "منطقه بوهمی مرکزی",
+      "object": "پراگ",
+      "object_candidates": "میامی, لیوبلیانا, ترنتون, جاکارتا, کاردیف, بریزبن, مونته‌ویدئو, بغداد, کرایست‌چرچ, پراگ",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "فرانسه",
+      "object": "پاریس",
+      "object_candidates": "مسکو, بوردو, لستر, پرت, مادرید, ورشو, پکن, سیدنی, کیل, پاریس",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "بلغارستان",
+      "object": "صوفیه",
+      "object_candidates": "واترفورد, بازل, هریسبورگ, نشویل, پراگ, لیوبلیانا, اسکندریه, کپنهاگ, آتن, صوفیه",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "دوون",
+      "object": "اکستر",
+      "object_candidates": "پرستون (لانکاشیر), ایندیاناپولیس, لوزان, تالین, چنای, میامی, ماینتس, کابل, پاریس, اکستر",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "مقدونیه مرکزی",
+      "object": "سالونیک",
+      "object_candidates": "نانجینگ, سیلم, کراچی, برگن, مونته‌ویدئو, لینکلن، انگلستان, سارایوو, کلمبیا، کارولینای جنوبی, کاردیف, سالونیک",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "امارت سیسیل",
+      "object": "پالرمو",
+      "object_candidates": "وینچستر, هالیفاکس, کنکورد, ورشو, کی‌یف, کاراکاس, میامی, منچستر, ادمونتون, پالرمو",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "گویان",
+      "object": "جورج تاون",
+      "object_candidates": "اسکندریه, بازل, قازان, جکسون، میسیسیپی, بغداد, مونیخ, پرستون (لانکاشیر), مادرید, آدلاید, جورج تاون",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "پادشاهی مجارستان",
+      "object": "بوداپست",
+      "object_candidates": "درسدن, هانوفر, کلمبوس, تورنتو, بازل, گلاستر, میلان, هلسینکی, سیاتل, بوداپست",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "زاکسن",
+      "object": "درسدن",
+      "object_candidates": "کاراکاس, آوگسبورگ, حیدرآباد, کلمبوس, تورنتو, بوداپست, پالرمو, داروین, بیسمارک، داکوتای شمالی, درسدن",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "دودمان مینگ",
+      "object": "نانجینگ",
+      "object_candidates": "میلان, باری, تهران, لستر, برگن, نایروبی, همیلتون, ویلنیوس, کپنهاگ, نانجینگ",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "استان مکه",
+      "object": "مکه",
+      "object_candidates": "بغداد, بریزبن, ادو, درسدن, دمشق, فلورانس, کلکته, باکو, ممفیس, مکه",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "ایالت مصر",
+      "object": "قاهره",
+      "object_candidates": "نشویل, بخارست, طرابلس, هاوانا, لیما, وست‌مینستر, گپ، پروانس آلپ‌-کوت دازور, دهلی, بلفاست, قاهره",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "انجمن لهستان",
+      "object": "ورشو",
+      "object_candidates": "بلفاست, دنور, فینیکس, مونته‌ویدئو, میامی, عدن, پالرمو, کانبرا, اتاوا, ورشو",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "ایرلند شمالی",
+      "object": "بلفاست",
+      "object_candidates": "جورج تاون, پرستون (لانکاشیر), آستین، تگزاس, تالین, کمبریج, والنسیا, برن, چنای, لیل, بلفاست",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "اسپانیا",
+      "object": "مادرید",
+      "object_candidates": "حلب, آوکلند, مونته‌ویدئو, آتن, اسپرینگ‌فیلد, ورشو, دنور, سئول, بیروت, مادرید",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "فرانسه متروپل",
+      "object": "پاریس",
+      "object_candidates": "واترفورد, لیسبون, مدینه, فلورانس, بابل, تیرانا, مکه, بمبئی, کی‌یف, پاریس",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "تاتارستان",
+      "object": "قازان",
+      "object_candidates": "میامی, سارایوو, نیس, لستر, کابل, ورشو, رم, آمستردام, بریزبن, قازان",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "منطقه بریست",
+      "object": "برست، بلاروس",
+      "object_candidates": "صوفیه, کرایست‌چرچ, لستر, جنوا, سیراکوز, لیوبلیانا, گوانگ‌ژو, لکھنو, تایپه, برست، بلاروس",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "قیومیت بریتانیا بر فلسطین",
+      "object": "اورشلیم",
+      "object_candidates": "تایپه, زالتسبورگ, هریسبورگ, بریستول, برن, تهران, بولونیا, دنیدن, لووف, اورشلیم",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "استان پالرمو",
+      "object": "پالرمو",
+      "object_candidates": "کاردیف, دنیدن, ساکرامنتو, ممفیس, دمشق, فینیکس, مونتگمری, گوادالاخارا، خالیسکو, جاکارتا, پالرمو",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "پادشاهی بایرن",
+      "object": "مونیخ",
+      "object_candidates": "کانبرا, ادو, چنای, لکھنو, شهر بروکسل, کمبریج, لیل, گلاستر, آنکارا, مونیخ",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "تامیل نادو",
+      "object": "چنای",
+      "object_candidates": "ادمونتون, کیوتو, پراگ, دوبلین, بریزبن, کینگستون, بن, رجاینا, پالما د مایورکا, چنای",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "بلاروس",
+      "object": "مینسک",
+      "object_candidates": "هریسبورگ, کراچی, نانجینگ, توکیو, آتن, بنگلور, گلاستر, کلکته, کیوتو, مینسک",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "گلاسترشایر",
+      "object": "گلاستر",
+      "object_candidates": "سبیا, کلکته, الجزیره, پالرمو, بیروت, برست، بلاروس, نشویل, توکیو, قاهره, گلاستر",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "ایالت وو",
+      "object": "لوزان",
+      "object_candidates": "فینیکس, ماینتس, شهر بروکسل, ورشو, کورک, لستر, لیوبلیانا, کابل, براتیسلاوا, لوزان",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "اتحادیه اروپا",
+      "object": "استراسبورگ",
+      "object_candidates": "مونیخ, کراچی, بریزبن, اسلو, مدینه, آتن, مکه, لیل, لنسینگ, استراسبورگ",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "اوتار پرادش",
+      "object": "لکھنو",
+      "object_candidates": "آستین، تگزاس, بریزبن, هاوانا, داکا, قازان, آمستردام, سبیا, برن, ادینبرو, لکھنو",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "جمهوری صرب بوسنی",
+      "object": "سارایوو",
+      "object_candidates": "ویلنیوس, هرفورد, بنگلور, گلاستر, بمبئی, جاکارتا, مونیخ, ویکتوریا، بریتیش کلمبیا, لستر, سارایوو",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "استان سارایوو",
+      "object": "سارایوو",
+      "object_candidates": "لیوبلیانا, لینکلن, مونتگمری, تالین, جکسون، میسیسیپی, بوداپست, داکا, عدن, کرمان, سارایوو",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "جمهوری شورایی مجارستان",
+      "object": "بوداپست",
+      "object_candidates": "لوزان, پراویدنس, بغداد, جورج تاون, پرستون (لانکاشیر), الجزیره, کاردیف, لیوبلیانا, قسطنطنیه, بوداپست",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "پادشاهی افغانستان",
+      "object": "کابل",
+      "object_candidates": "لستر, سیلم, لوزان, بمبئی, سیراکوز, داروین, بوردو, پییر, هوبارت, کابل",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "استان لوبلین",
+      "object": "لوبلین",
+      "object_candidates": "مونته‌ویدئو, بریستول, کنکورد, سارایوو, ویلنیوس, مسکو, نشویل, ویکتوریا، بریتیش کلمبیا, تورنتو, لوبلین",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "ویرجینیا",
+      "object": "ریچموند، ویرجینیا",
+      "object_candidates": "میامی, سارایوو, کرایست‌چرچ, آمستردام, ویکتوریا، بریتیش کلمبیا, آناپولیس, نشویل, هاوانا, لندن, ریچموند، ویرجینیا",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "پادشاهی انگلیس",
+      "object": "وینچستر",
+      "object_candidates": "مدیسن، ویسکانسین, ترنتون, ووستر, کمبریج, کنکورد, هیروشیما, پکن, آتن, بن, وینچستر",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "استان مدینه",
+      "object": "مدینه",
+      "object_candidates": "بلفاست, ساکرامنتو, حیدرآباد, مکه, پرت, داکا, بوستون, رجاینا, بوداپست, مدینه",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "بخش استکهلم",
+      "object": "استکهلم",
+      "object_candidates": "گوانگ‌ژو, حلب, گالوی, حیدرآباد, الجزیره, بریستول, شاین، وایومینگ, وین, هاوانا, استکهلم",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "جمهوری سوسیالیستی آذربایجان شوروی",
+      "object": "باکو",
+      "object_candidates": "استراسبورگ, آناپولیس, کلمبوس, بلگراد, حلب, درسدن, مونته‌ویدئو, گلاستر, بمبئی, باکو",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "پادشاهی یونان",
+      "object": "آتن",
+      "object_candidates": "ایروان, ممفیس, اکستر, مینسک, کراچی, ناگویا، آیچی, ریورساید, بریستول, کپنهاگ, آتن",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "کره جنوبی",
+      "object": "سئول",
+      "object_candidates": "کینگستون, ویکتوریا، بریتیش کلمبیا, هانوفر, بلگراد, باکو, ویلنیوس, هارتفورد, جاکارتا, لیسبون, سئول",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "شوالیه‌های مالت",
+      "object": "رم",
+      "object_candidates": "ویکتوریا، بریتیش کلمبیا, نانجینگ, هالیفاکس, بارسلون, اسپرینگ‌فیلد, جورج تاون, مونتگمری, بریستول, شهر دبی, رم",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "کامبریا",
+      "object": "کارلایل، کامبریا",
+      "object_candidates": "جکسون، میسیسیپی, هرفورد, ماینتس, مدینه, ایروان, برلین, یوکوهاما, مونته‌ویدئو, نشویل, کارلایل، کامبریا",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "نیدرزاکسن",
+      "object": "هانوفر",
+      "object_candidates": "پرستون (لانکاشیر), واترفورد, براتیسلاوا, دنیدن, دمشق, کی‌یف, باکو, کلمبیا، کارولینای جنوبی, آنکارا, هانوفر",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "پادشاهی انگلیس",
+      "object": "وست‌مینستر",
+      "object_candidates": "لیما, واترفورد, جکسون، میسیسیپی, سیلم, مادرید, ممفیس, دوبلین, اودسا, ترنتون, وست‌مینستر",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "استان تورین",
+      "object": "تورین",
+      "object_candidates": "تهران, کپنهاگ, گپ، پروانس آلپ‌-کوت دازور, نیس, ونیز, آوکلند, مانیل, بابل, لوزان, تورین",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "کارولینای شمالی",
+      "object": "رالی، کارولینای شمالی",
+      "object_candidates": "مادرید, آستین، تگزاس, هیروشیما, نشویل, کرایست‌چرچ, پراگ, ویکتوریا، بریتیش کلمبیا, تورنتو, جکسون، میسیسیپی, رالی، کارولینای شمالی",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "قلمرو شمالی",
+      "object": "داروین",
+      "object_candidates": "آکسفورد, تورنتو, یوکوهاما, اسپرینگ‌فیلد, آوکلند, هرفورد, فینیکس, هوبارت, ویلنیوس, داروین",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "پادشاهی هانوور",
+      "object": "هانوفر",
+      "object_candidates": "آدلاید, تهران, کیل, زاگرب, مونیخ, بابل, لیل, تیرانا, ماینتس, هانوفر",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "هوردالاند",
+      "object": "برگن",
+      "object_candidates": "شهر دبی, استکهلم, قسطنطنیه, مکه, داکا, بغداد, کلمبو, کورک, وست‌مینستر, برگن",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "داکوتای جنوبی",
+      "object": "پییر",
+      "object_candidates": "اودسا, هیروشیما, بنگلور, زاگرب, ونیز, حلب, لینکلن, پالما د مایورکا, سئول, پییر",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "آلزاس",
+      "object": "استراسبورگ",
+      "object_candidates": "شهر دبی, پرت, زالتسبورگ, آتن, چنای, تورین, بازل, بارسلون, وینچستر, استراسبورگ",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "انتاریو",
+      "object": "تورنتو",
+      "object_candidates": "دوبلین, آکسفورد, کلمبوس, کارلایل، کامبریا, رم, تولوز, تایپه, یوکوهاما, لووف, تورنتو",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "ماساچوست",
+      "object": "بوستون",
+      "object_candidates": "سیدنی, بن, ادو, بلگراد, ممفیس, چنای, ووستر, مانیل, جورج تاون, بوستون",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "پادشاهی بلغارستان",
+      "object": "صوفیه",
+      "object_candidates": "کلمبوس, کینگستون, وینچستر, ویلنیوس, قاهره, وینیپگ, بریزبن, ماینتس, بوردو, صوفیه",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "استان ناپل",
+      "object": "ناپل",
+      "object_candidates": "باکو, سیه‌نا, بویزی، آیداهو, هریسبورگ, کرایست‌چرچ, سبیا, دنیدن, کابل, رالی، کارولینای شمالی, ناپل",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "رومانی",
+      "object": "بخارست",
+      "object_candidates": "ووستر, لکھنو, بوردو, اسلو, لیوبلیانا, پکن, وین, درسدن, بوستون, بخارست",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "سوئیس",
+      "object": "برن",
+      "object_candidates": "کورک, میامی, پراویدنس, ایندیاناپولیس, لیسبون, رم, درسدن, جاکارتا, مینسک, برن",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "اتریش",
+      "object": "وین",
+      "object_candidates": "کلکته, بیروت, ایندیاناپولیس, ناگویا، آیچی, ادو, کاراکاس, لینکلن، انگلستان, بنگلور, باری, وین",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "اسلواکی",
+      "object": "براتیسلاوا",
+      "object_candidates": "بوداپست, رم, لیما, لیسبون, داکا, جنوا, سیلم, بازل, کلمبیا، کارولینای جنوبی, براتیسلاوا",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "انگلستان",
+      "object": "لندن",
+      "object_candidates": "تورین, برگن, هاوانا, برن, کنکورد, ناپل, ونیز, گالوی, بانکوک, لندن",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "مصر",
+      "object": "قاهره",
+      "object_candidates": "فینیکس, الجزیره, قسطنطنیه, گوادالاخارا، خالیسکو, لندن, باکو, گپ، پروانس آلپ‌-کوت دازور, سبیا, آوگسبورگ, قاهره",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "اوسیما",
+      "object": "هلسینکی",
+      "object_candidates": "مونته‌ویدئو, تیرانا, اودسا, آتن, گلاستر, سیراکوز, کپنهاگ, هریسبورگ, وینیپگ, هلسینکی",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "لانکاشایر",
+      "object": "پرستون (لانکاشیر)",
+      "object_candidates": "کراچی, پکن, سالونیک, رم, صوفیه, آوگسبورگ, ریورساید, آدلاید, بنگلور, پرستون (لانکاشیر)",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "استان هیروشیما",
+      "object": "هیروشیما",
+      "object_candidates": "کرایست‌چرچ, شاین، وایومینگ, لستر, تورنتو, جورج تاون, برلین, نایروبی, بخارست, بازل, هیروشیما",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "امپراتوری مقدس روم",
+      "object": "وین",
+      "object_candidates": "شهر بروکسل, بلگراد, شهر دبی, اسپرینگ‌فیلد, بوداپست, آوکلند, پاریس, الجزیره, لوزان, وین",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "پادشاهی متحد بریتانیای کبیر و ایرلند",
+      "object": "لندن",
+      "object_candidates": "دهلی, میلان, تهران, ریچموند، ویرجینیا, وینچستر, پییر, آدلاید, برگن, بریستول, لندن",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "آلمان نازی",
+      "object": "برلین",
+      "object_candidates": "سارایوو, آمستردام, بارسلون, نانجینگ, فینیکس, بیسمارک، داکوتای شمالی, بوداپست, استکهلم, لندن, برلین",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "استان سیراکوز",
+      "object": "سیراکوز",
+      "object_candidates": "بریزبن, رجاینا, کلمبیا، کارولینای جنوبی, واترفورد, جورج تاون, فینیکس, هانوفر, کنکورد, توکیو, سیراکوز",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "جمهوری سوسیالیستی فدراتیو روسیه شوروی",
+      "object": "مسکو",
+      "object_candidates": "هرفورد, نیس, نایروبی, بوردو, مانیل, ادینبرو, بانکوک, ساگا, کرایست‌چرچ, مسکو",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "وایومینگ",
+      "object": "شاین، وایومینگ",
+      "object_candidates": "دمشق, کلمبیا، کارولینای جنوبی, هلسینکی, آناپولیس, همیلتون, لوبلین, گلاستر, واترفورد, ترنتون, شاین، وایومینگ",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "جمهوری سوسیالیستی اوکراین شوروی",
+      "object": "کی‌یف",
+      "object_candidates": "منچستر, پراگ, گنت, اودسا, مادرید, ساگا, نانجینگ, مانیل, کلکته, کی‌یف",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "امپراتوری روم شرقی",
+      "object": "قسطنطنیه",
+      "object_candidates": "کمبریج, برست، بلاروس, قازان, کرمان, کلمبو, درسدن, مانیل, لیما, کرایست‌چرچ, قسطنطنیه",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "خلافت اموی",
+      "object": "دمشق",
+      "object_candidates": "باری, وست‌مینستر, آوکلند, بیسمارک، داکوتای شمالی, بن, ووستر, استکهلم, کنکورد, نانجینگ, دمشق",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "تایلند",
+      "object": "بانکوک",
+      "object_candidates": "مادرید, گلاستر, منچستر, هلسینکی, پرت, سیدنی, لوزان, ناپل, اتاوا, بانکوک",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "آندرا پرادش",
+      "object": "حیدرآباد",
+      "object_candidates": "هیروشیما, براتیسلاوا, تورنتو, مانیل, مونته‌ویدئو, ایروان, الجزیره, قازان, ممفیس, حیدرآباد",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "نروژ",
+      "object": "اسلو",
+      "object_candidates": "ادو, وست‌مینستر, ورشو, مادرید, کمبریج, درسدن, ادمونتون, بوردو, پییر, اسلو",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "راینلاند-فالتس",
+      "object": "ماینتس",
+      "object_candidates": "لنسینگ, لووف, دمشق, لکھنو, مدینه, آتن, پرت, نانجینگ, پالما د مایورکا, ماینتس",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "ترکیه",
+      "object": "آنکارا",
+      "object_candidates": "بریزبن, صوفیه, پییر, سیراکوز, ادمونتون, پکن, ممفیس, بانکوک, کمبریج, آنکارا",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "استان ریف دمشق",
+      "object": "دمشق",
+      "object_candidates": "کینگستون, کنکورد, بغداد, کرمان, بوستون, جاکارتا, جکسون، میسیسیپی, لیمرک, لیسبون, دمشق",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "شوابیا (باواریا)",
+      "object": "آوگسبورگ",
+      "object_candidates": "گلاستر, دوبلین, مدیسن، ویسکانسین, دمشق, منچستر, تهران, ادینبرو, هرفورد, بلفاست, آوگسبورگ",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "اشغال ژاپن",
+      "object": "توکیو",
+      "object_candidates": "استراسبورگ, رالی، کارولینای شمالی, هارتفورد, مسکو, رجاینا, تایپه, گنت, فینیکس, تیرانا, توکیو",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "رود آیلند",
+      "object": "پراویدنس",
+      "object_candidates": "مینسک, داروین, سالونیک, مونیخ, لنسینگ, سیلم, لیما, ادو, نیس, پراویدنس",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "آیداهو",
+      "object": "بویزی، آیداهو",
+      "object_candidates": "پکن, باکو, صوفیه, لیل, هیروشیما, بیروت, مدینه, لندن, بلگراد, بویزی، آیداهو",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "کرواسی",
+      "object": "زاگرب",
+      "object_candidates": "تیرانا, بلفاست, سبیا, بارسلون, همیلتون, ادو, طرابلس, هلسینکی, گالوی, زاگرب",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "شهرستان کورک",
+      "object": "کورک",
+      "object_candidates": "بغداد, وست‌مینستر, یوکوهاما, تالین, الجزیره, بیروت, استراسبورگ, هانوفر, هیروشیما, کورک",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "استان ونیز",
+      "object": "ونیز",
+      "object_candidates": "استراسبورگ, کمبریج, لوزان, پرستون (لانکاشیر), دمشق, تولدو، اسپانیا, لندن, گپ، پروانس آلپ‌-کوت دازور, اتاوا, ونیز",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "وسکس",
+      "object": "وینچستر",
+      "object_candidates": "اسلو, تورنتو, طرابلس, لنسینگ, زالتسبورگ, رم, ونیز, قاهره, کلکته, وینچستر",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "امپراتوری روم",
+      "object": "رم",
+      "object_candidates": "ادو, ویکتوریا، بریتیش کلمبیا, پکن, مونتگمری, کلمبیا، کارولینای جنوبی, میلان, کپنهاگ, الجزیره, آوگسبورگ, رم",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "الجزایر",
+      "object": "الجزیره",
+      "object_candidates": "بغداد, لوزان, مانیل, ادینبرو, دوبلین, هریسبورگ, ونیز, لکھنو, درسدن, الجزیره",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "بریتیش کلمبیا",
+      "object": "ویکتوریا، بریتیش کلمبیا",
+      "object_candidates": "پاریس, هلسینکی, کانبرا, سیراکوز, بیروت, ممفیس, وینچستر, قازان, اودسا, ویکتوریا، بریتیش کلمبیا",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "بنگال غربی",
+      "object": "کلکته",
+      "object_candidates": "استراسبورگ, پراگ, سبیا, اودسا, پرستون (لانکاشیر), کابل, رجاینا, اکستر, پالرمو, کلکته",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "پادشاهی بوهم",
+      "object": "پراگ",
+      "object_candidates": "توکیو, داروین, بازل, جکسون، میسیسیپی, داکا, طرابلس, برن, ماینتس, ویکتوریا، بریتیش کلمبیا, پراگ",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "استان مسکو",
+      "object": "مسکو",
+      "object_candidates": "جکسون، میسیسیپی, کانبرا, قازان, بنگلور, بن, نیس, زاگرب, سارایوو, پرستون (لانکاشیر), مسکو",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "لبنان",
+      "object": "بیروت",
+      "object_candidates": "صوفیه, مونیخ, اکستر, شهر بروکسل, آمستردام, وست‌مینستر, زاگرب, بخارست, مونته‌ویدئو, بیروت",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "لتونی",
+      "object": "ریگا",
+      "object_candidates": "پکن, لووف, تورنتو, چارلستون, آدلاید, آمستردام, آناپولیس, پاریس, رجاینا, ریگا",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "امپراتوری ژاپن",
+      "object": "توکیو",
+      "object_candidates": "ساکرامنتو, کمبریج, تیرانا, حیدرآباد, پرت, رم, کراچی, نیس, دهلی, توکیو",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "ولز",
+      "object": "کاردیف",
+      "object_candidates": "هریسبورگ, گوانگ‌ژو, بارسلون, مکه, پراویدنس, سیه‌نا, نانجینگ, لینکلن، انگلستان, لنسینگ, کاردیف",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "سلطنت دهلی",
+      "object": "دهلی",
+      "object_candidates": "گالوی, کی‌یف, اورشلیم, بارسلون, بولونیا, لینکلن, هانوفر, توکیو, براتیسلاوا, دهلی",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "جمهوری دموکراتیک افغانستان",
+      "object": "کابل",
+      "object_candidates": "تورنتو, تیرانا, سبیا, آدلاید, رالی، کارولینای شمالی, بویزی، آیداهو, پرت, لیمرک, وینیپگ, کابل",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "لهستان",
+      "object": "ورشو",
+      "object_candidates": "عدن, هلسینکی, بخارست, هانوفر, آناپولیس, تالین, بیروت, آوکلند, مدینه, ورشو",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "قاجاریان",
+      "object": "تهران",
+      "object_candidates": "بیسمارک، داکوتای شمالی, کمبریج, سئول, نشویل, آنکارا, دمشق, آتن, اسکندریه, بازل, تهران",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "خلافت عباسیان",
+      "object": "بغداد",
+      "object_candidates": "استکهلم, نانجینگ, ووستر, فلورانس, لینکلن، انگلستان, هوبارت, عدن, زالتسبورگ, جورج تاون, بغداد",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "استان سند",
+      "object": "کراچی",
+      "object_candidates": "مونیخ, دنیدن, هریسبورگ, تولوز, برلین, گوانگ‌ژو, سیه‌نا, کپنهاگ, آوگسبورگ, کراچی",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "آکرشوس",
+      "object": "اسلو",
+      "object_candidates": "برگن, بیسمارک، داکوتای شمالی, لیوبلیانا, لیمرک, هیروشیما, منچستر, مانیل, تالین, آناپولیس, اسلو",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "یمن جنوبی",
+      "object": "عدن",
+      "object_candidates": "بغداد, طرابلس, بولونیا, سالونیک, مانیل, درسدن, کرمان, لنسینگ, اکستر, عدن",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "آکیتن-لیموزن-پواتو-شرانت",
+      "object": "بوردو",
+      "object_candidates": "آناپولیس, برلین, آوکلند, سارایوو, قاهره, مکه, کراچی, طرابلس, مونته‌ویدئو, بوردو",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "شمال غربی انگلستان",
+      "object": "منچستر",
+      "object_candidates": "اتاوا, گوادالاخارا، خالیسکو, استکهلم, تور, تایپه, پکن, واترفورد, گوانگ‌ژو, گالوی, منچستر",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "جمهوری خلق چین",
+      "object": "پکن",
+      "object_candidates": "بازل, پراگ, تورنتو, کانبرا, باکو, اورشلیم, رالی، کارولینای شمالی, سئول, مادرید, پکن",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "پادشاهی کهن مصر",
+      "object": "ممفیس",
+      "object_candidates": "هونولولو, چارلستون, آوگسبورگ, گوادالاخارا، خالیسکو, زالتسبورگ, کینگستون, مدیسن، ویسکانسین, بریزبن, کرمان, ممفیس",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "برمودا",
+      "object": "همیلتون",
+      "object_candidates": "زالتسبورگ, آتن, هریسبورگ, بلفاست, بیسمارک، داکوتای شمالی, شاین، وایومینگ, کیل, ناپل, نیس, همیلتون",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "اوت-گارون",
+      "object": "تولوز",
+      "object_candidates": "تیرانا, کیوتو, واترفورد, گالوی, مونته‌ویدئو, آستین، تگزاس, آتن, لیوبلیانا, اسلو, تولوز",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "جمهوری متحده عربی",
+      "object": "قاهره",
+      "object_candidates": "لووف, آنکارا, بوردو, میلان, ونیز, کینگستون, بلگراد, درسدن, لیوبلیانا, قاهره",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "هرفوردشایر",
+      "object": "هرفورد",
+      "object_candidates": "گلاستر, گوادالاخارا، خالیسکو, نیس, بوردو, پراگ, تیرانا, تالین, هوبارت, هلسینکی, هرفورد",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "ژیروند",
+      "object": "بوردو",
+      "object_candidates": "بمبئی, کورک, اسلو, بویزی، آیداهو, ادمونتون, شاین، وایومینگ, بنگلور, مونته‌ویدئو, عدن, بوردو",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "استان میلان",
+      "object": "میلان",
+      "object_candidates": "هوبارت, رجاینا, سیدنی, بیسمارک، داکوتای شمالی, وین, ریورساید, لیوبلیانا, ایروان, بوستون, میلان",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "فنلاند",
+      "object": "هلسینکی",
+      "object_candidates": "ادمونتون, پاریس, رالی، کارولینای شمالی, بارسلون, سیه‌نا, گوادالاخارا، خالیسکو, هارتفورد, آوکلند, قسطنطنیه, هلسینکی",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "سوریه",
+      "object": "دمشق",
+      "object_candidates": "ونیز, ممفیس, لووف, پرستون (لانکاشیر), ادو, لیل, سیاتل, کرایست‌چرچ, رالی، کارولینای شمالی, دمشق",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "بخش خودمختار والنسیا",
+      "object": "والنسیا",
+      "object_candidates": "کارلایل، کامبریا, بولونیا, ایروان, نانجینگ, پییر, بغداد, براتیسلاوا, هیروشیما, مینسک, والنسیا",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "جمهوری سوسیالیستی بلاروس شوروی",
+      "object": "مینسک",
+      "object_candidates": "آمستردام, هلسینکی, پکن, طرابلس, اسکندریه, دوبلین, میلان, رالی، کارولینای شمالی, باری, مینسک",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "جمهوری جنوا",
+      "object": "جنوا",
+      "object_candidates": "پاریس, حیدرآباد, بانکوک, بریستول, آوگسبورگ, برن, بغداد, وین, کپنهاگ, جنوا",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "بلژیک",
+      "object": "شهر بروکسل",
+      "object_candidates": "فلورانس, اکستر, آمستردام, نشویل, تیرانا, شهر دبی, همیلتون, بویزی، آیداهو, استراسبورگ, شهر بروکسل",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "استان تیرانا",
+      "object": "تیرانا",
+      "object_candidates": "هریسبورگ, رالی، کارولینای شمالی, برگن, لیوبلیانا, داکا, پییر, ریورساید, جورج تاون, اسکندریه, تیرانا",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "لیگوریا",
+      "object": "جنوا",
+      "object_candidates": "میامی, آدلاید, هلسینکی, ناپل, گلاستر, پراگ, بوردو, بیسمارک، داکوتای شمالی, رالی، کارولینای شمالی, جنوا",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "ناحیه آکیتن",
+      "object": "بوردو",
+      "object_candidates": "ویکتوریا، بریتیش کلمبیا, هاوانا, سارایوو, اسکندریه, رالی، کارولینای شمالی, ناپل, کرایست‌چرچ, دنیدن, منچستر, بوردو",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "اتریش-مجارستان",
+      "object": "وین",
+      "object_candidates": "بریزبن, یوکوهاما, آدلاید, پرستون (لانکاشیر), پراگ, چارلستون, اسپرینگ‌فیلد, جاکارتا, لینکلن، انگلستان, وین",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "استان رم",
+      "object": "رم",
+      "object_candidates": "ساکرامنتو, گوادالاخارا، خالیسکو, کمبریج, ماینتس, بریستول, دهلی, لستر, ناگویا، آیچی, نانجینگ, رم",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "استان استکهلم",
+      "object": "استکهلم",
+      "object_candidates": "گلاستر, ناپل, واترفورد, لیل, کاراکاس, منچستر, چنای, بیروت, میلان, استکهلم",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "پادشاهی مصر",
+      "object": "قاهره",
+      "object_candidates": "مانیل, کرایست‌چرچ, لووف, وست‌مینستر, اتاوا, جورج تاون, وینیپگ, اکستر, هارتفورد, قاهره",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "تنسی",
+      "object": "نشویل",
+      "object_candidates": "بلگراد, ناگویا، آیچی, هریسبورگ, کراچی, لکھنو, مینسک, فلورانس, مکه, بارسلون, نشویل",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "استان ساگا",
+      "object": "ساگا",
+      "object_candidates": "ریورساید, ادینبرو, بانکوک, ساکرامنتو, تور, تولدو، اسپانیا, دهلی, طرابلس, آکسفورد, ساگا",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "سوئد",
+      "object": "استکهلم",
+      "object_candidates": "قازان, عدن, پراگ, رم, اسلو, سبیا, کراچی, میلان, کلکته, استکهلم",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "الجزایر فرانسه",
+      "object": "الجزیره",
+      "object_candidates": "بابل, آدلاید, جاکارتا, چنای, کلمبیا، کارولینای جنوبی, گنت, کلکته, بخارست, بارسلون, الجزیره",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "اوهایو",
+      "object": "کلمبوس",
+      "object_candidates": "ادو, کورک, ویلنیوس, نشویل, باری, سیلم, کینگستون, کلمبو, هوبارت, کلمبوس",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "کارولینای جنوبی",
+      "object": "کلمبیا، کارولینای جنوبی",
+      "object_candidates": "پکن, کاراکاس, آستین، تگزاس, وست‌مینستر, لندن, زاگرب, بلفاست, تولدو، اسپانیا, ریگا, کلمبیا، کارولینای جنوبی",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "جامائیکا",
+      "object": "کینگستون",
+      "object_candidates": "آنکارا, شهر دبی, بخارست, اتاوا, اودسا, برن, بیروت, باری, هالیفاکس, کینگستون",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "روس کیف",
+      "object": "کی‌یف",
+      "object_candidates": "برگن, لوزان, واترفورد, کلکته, والنسیا, کلمبیا، کارولینای جنوبی, حلب, کراچی, پراویدنس, کی‌یف",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "اوت-آلپ",
+      "object": "گپ، پروانس آلپ‌-کوت دازور",
+      "object_candidates": "مونتگمری, تور, منچستر, باری, فلورانس, بولونیا, آوکلند, بوردو, مانیل, گپ، پروانس آلپ‌-کوت دازور",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "پادشاهی انگلیس",
+      "object": "لندن",
+      "object_candidates": "واترفورد, بنگلور, یوکوهاما, کیل, ورشو, هونولولو, بویزی، آیداهو, پرت, کیوتو, لندن",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "کاتالونیا",
+      "object": "بارسلون",
+      "object_candidates": "بریستول, ونیز, پالما د مایورکا, وینیپگ, مانیل, هریسبورگ, هلسینکی, هارتفورد, سیاتل, بارسلون",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "کمون پاریس",
+      "object": "پاریس",
+      "object_candidates": "جکسون، میسیسیپی, پییر, تورنتو, آتن, آدلاید, چارلستون, کرایست‌چرچ, برن, مادرید, پاریس",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "پیمونت",
+      "object": "تورین",
+      "object_candidates": "اکستر, مونتگمری, جاکارتا, هیروشیما, جکسون، میسیسیپی, حلب, سیلم, مدیسن، ویسکانسین, گلاستر, تورین",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "جمهوری چک",
+      "object": "پراگ",
+      "object_candidates": "بوستون, بابل, کیل, عدن, برست، بلاروس, نیس, پالرمو, تولدو، اسپانیا, کپنهاگ, پراگ",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "نوا اسکوشیا",
+      "object": "هالیفاکس",
+      "object_candidates": "کارلایل، کامبریا, لینکلن, مکه, لنسینگ, لیسبون, آوکلند, کانبرا, آتن, ویکتوریا، بریتیش کلمبیا, هالیفاکس",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "آکسفوردشایر",
+      "object": "آکسفورد",
+      "object_candidates": "استانبول, داکا, ووستر, نایروبی, کلمبیا، کارولینای جنوبی, کرایست‌چرچ, کانبرا, سیلم, لیسبون, آکسفورد",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "اتحادیه اروپا",
+      "object": "شهر بروکسل",
+      "object_candidates": "تولوز, پییر, هاوانا, سیدنی, لوزان, رم, کرایست‌چرچ, نیس, دوبلین, شهر بروکسل",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "جمهوری فدرال سوسیالیستی یوگسلاوی",
+      "object": "بلگراد",
+      "object_candidates": "تهران, شهر بروکسل, ادمونتون, هلسینکی, دمشق, بیسمارک، داکوتای شمالی, ایروان, اسپرینگ‌فیلد, منچستر, بلگراد",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "راج انگلیس",
+      "object": "کلکته",
+      "object_candidates": "دنور, گوانگ‌ژو, رم, مکه, لیمرک, پاریس, پرستون (لانکاشیر), تیرانا, دهلی, کلکته",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "دودمان چینگ",
+      "object": "پکن",
+      "object_candidates": "بخارست, ویکتوریا، بریتیش کلمبیا, کلمبو, سیاتل, تورین, حلب, لیمرک, زالتسبورگ, ماینتس, پکن",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "دوک‌نشین بزرگ لیتوانی",
+      "object": "ویلنیوس",
+      "object_candidates": "پالما د مایورکا, وینیپگ, ادمونتون, پراگ, بریستول, اتاوا, بولونیا, والنسیا, تهران, ویلنیوس",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "پادشاهی ساردنی",
+      "object": "تورین",
+      "object_candidates": "اکستر, یوکوهاما, کینگستون, هونولولو, صوفیه, درسدن, لیوبلیانا, تولوز, استراسبورگ, تورین",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "مریلند",
+      "object": "آناپولیس",
+      "object_candidates": "اکستر, وینیپگ, ریچموند، ویرجینیا, مدیسن، ویسکانسین, استکهلم, بوستون, تورین, گوادالاخارا، خالیسکو, ایروان, آناپولیس",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "جمهوری وایمار",
+      "object": "برلین",
+      "object_candidates": "اودسا, برست، بلاروس, استکهلم, باری, کپنهاگ, زالتسبورگ, مانیل, تور, آمستردام, برلین",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ایالات مؤتلفه آمریکا",
+      "object": "ریچموند، ویرجینیا",
+      "object_candidates": "سیاتل, میلان, کی‌یف, رم, بن, تورنتو, هوبارت, مسکو, بوداپست, ریچموند، ویرجینیا",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "نوستریا",
+      "object": "پاریس",
+      "object_candidates": "لستر, کمبریج, سیه‌نا, زالتسبورگ, استراسبورگ, گنت, شهر دبی, مدینه, جکسون، میسیسیپی, پاریس",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "بایرن",
+      "object": "مونیخ",
+      "object_candidates": "بریزبن, دوبلین, بوداپست, کی‌یف, هالیفاکس, مونتگمری, پییر, پکن, برن, مونیخ",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "هاوائی",
+      "object": "هونولولو",
+      "object_candidates": "همیلتون, طرابلس, الجزیره, کلمبو, دنیدن, ممفیس, استکهلم, حلب, نایروبی, هونولولو",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "آلمان تحت اشغال متفقین",
+      "object": "برلین",
+      "object_candidates": "لندن, سیراکوز, هانوفر, کلمبیا، کارولینای جنوبی, بلگراد, بوستون, درسدن, ادو, اسلو, برلین",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "کوئینزلند",
+      "object": "بریزبن",
+      "object_candidates": "کلکته, لینکلن, سیاتل, داروین, دنور, هرفورد, وینیپگ, پراگ, بریستول, بریزبن",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "بوهم",
+      "object": "پراگ",
+      "object_candidates": "سیدنی, توکیو, وینچستر, گوانگ‌ژو, باکو, تور, استکهلم, منچستر, پالما د مایورکا, پراگ",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "امارت اسلامی افغانستان",
+      "object": "کابل",
+      "object_candidates": "ونیز, لیوبلیانا, بویزی، آیداهو, اسپرینگ‌فیلد, وینچستر, هانوفر, مینسک, وینیپگ, دوبلین, کابل",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "استان حمص",
+      "object": "دمشق",
+      "object_candidates": "رم, کراچی, شهر بروکسل, هریسبورگ, الجزیره, ریورساید, براتیسلاوا, ایروان, تالین, دمشق",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "ویرجینیای غربی",
+      "object": "چارلستون",
+      "object_candidates": "ایندیاناپولیس, شهر بروکسل, بولونیا, هانوفر, توکیو, پکن, تولدو، اسپانیا, اسکندریه, ویلنیوس, چارلستون",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "کنیا",
+      "object": "نایروبی",
+      "object_candidates": "چارلستون, منچستر, تور, کاراکاس, آکسفورد, تهران, جنوا, زالتسبورگ, آستین، تگزاس, نایروبی",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "آلمان غربی",
+      "object": "بن",
+      "object_candidates": "بلفاست, بخارست, سیاتل, سبیا, چارلستون, بریستول, هریسبورگ, ویکتوریا، بریتیش کلمبیا, پالرمو, بن",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "اسلوونی",
+      "object": "لیوبلیانا",
+      "object_candidates": "کاراکاس, لکھنو, هارتفورد, کلمبوس, تایپه, رالی، کارولینای شمالی, عدن, ساگا, کرایست‌چرچ, لیوبلیانا",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "اوتاگو",
+      "object": "دنیدن",
+      "object_candidates": "آناپولیس, بازل, پالما د مایورکا, مونته‌ویدئو, هارتفورد, حلب, لینکلن، انگلستان, استراسبورگ, ریگا, دنیدن",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "جیانگسو",
+      "object": "نانجینگ",
+      "object_candidates": "بخارست, مینسک, بویزی، آیداهو, کیل, هاوانا, آوکلند, یوکوهاما, لکھنو, لیوبلیانا, نانجینگ",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "نیوجرسی",
+      "object": "ترنتون",
+      "object_candidates": "کنکورد, مدینه, استکهلم, تالین, گلاستر, کابل, بخارست, ناپل, مسکو, ترنتون",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "اورگن",
+      "object": "سیلم",
+      "object_candidates": "شاین، وایومینگ, زالتسبورگ, چنای, استراسبورگ, جاکارتا, هاوانا, بوداپست, داروین, استکهلم, سیلم",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "پادشاهی ایتالیا",
+      "object": "رم",
+      "object_candidates": "لنسینگ, براتیسلاوا, داکا, اتاوا, آکسفورد, کینگستون, کلمبوس, حلب, تورنتو, رم",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "اشلسویگ-هولشتاین",
+      "object": "کیل",
+      "object_candidates": "بلفاست, لستر, کیوتو, دهلی, بازل, ماینتس, مدینه, آکسفورد, آنکارا, کیل",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "لیتوانی",
+      "object": "ویلنیوس",
+      "object_candidates": "کرایست‌چرچ, کیل, هلسینکی, اسکندریه, استکهلم, تولوز, کمبریج, میامی, آوگسبورگ, ویلنیوس",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "میسیسیپی",
+      "object": "جکسون، میسیسیپی",
+      "object_candidates": "اسپرینگ‌فیلد, کورک, بخارست, ویکتوریا، بریتیش کلمبیا, لنسینگ, پییر, کاراکاس, کی‌یف, لوبلین, جکسون، میسیسیپی",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "اتریش-مجارستان",
+      "object": "بوداپست",
+      "object_candidates": "داروین, ریچموند، ویرجینیا, بیسمارک، داکوتای شمالی, درسدن, اتاوا, مدیسن، ویسکانسین, کلمبیا، کارولینای جنوبی, جکسون، میسیسیپی, اسکندریه, بوداپست",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "منطقه مینسک",
+      "object": "مینسک",
+      "object_candidates": "کلکته, ریگا, ساگا, ویلنیوس, تولوز, چارلستون, استراسبورگ, گالوی, بوردو, مینسک",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "گوانگ‌دونگ",
+      "object": "گوانگ‌ژو",
+      "object_candidates": "منچستر, آدلاید, بانکوک, اسکندریه, کینگستون, مدیسن، ویسکانسین, برگن, تیرانا, بریستول, گوانگ‌ژو",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "جمهوری روم",
+      "object": "رم",
+      "object_candidates": "توکیو, هاوانا, پرستون (لانکاشیر), آتن, بازل, مادرید, کلمبیا، کارولینای جنوبی, حیدرآباد, تالین, رم",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "پادشاهی پروس",
+      "object": "برلین",
+      "object_candidates": "دهلی, باکو, آوگسبورگ, مانیل, فلورانس, سبیا, پاریس, زالتسبورگ, هلسینکی, برلین",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "افغانستان",
+      "object": "کابل",
+      "object_candidates": "اسپرینگ‌فیلد, سالونیک, پرت, کپنهاگ, کانبرا, واترفورد, استانبول, وست‌مینستر, دنور, کابل",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "شیلی",
+      "object": "سانتیاگو",
+      "object_candidates": "جکسون، میسیسیپی, اسکندریه, ویکتوریا، بریتیش کلمبیا, مسکو, تور, رالی، کارولینای شمالی, حلب, لکھنو, والنسیا, سانتیاگو",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "یوگسلاوی",
+      "object": "بلگراد",
+      "object_candidates": "لندن, کورک, لستر, برن, تایپه, بخارست, کمبریج, رجاینا, عدن, بلگراد",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "مایرکا",
+      "object": "پالما د مایورکا",
+      "object_candidates": "درسدن, باکو, استکهلم, لووف, گلاستر, رجاینا, ادینبرو, آتن, وینچستر, پالما د مایورکا",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "نورفک",
+      "object": "نورویچ",
+      "object_candidates": "ایروان, لینکلن، انگلستان, کانبرا, بنگلور, سئول, ریورساید, وینیپگ, چارلستون, بازل, نورویچ",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "ماسوویان وویوودشیپ",
+      "object": "ورشو",
+      "object_candidates": "اودسا, کارلایل، کامبریا, کنکورد, مسکو, کانبرا, داروین, بیسمارک، داکوتای شمالی, بلفاست, الجزیره, ورشو",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "فلاندر",
+      "object": "شهر بروکسل",
+      "object_candidates": "تیرانا, گپ، پروانس آلپ‌-کوت دازور, ورشو, رالی، کارولینای شمالی, مسکو, آتن, کاردیف, فلورانس, بمبئی, شهر بروکسل",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

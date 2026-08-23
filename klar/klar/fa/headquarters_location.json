@@ -1,0 +1,422 @@
+{
+  "name": "headquarters_location",
+  "prompt_templates": [
+    "مقر <subject> کجاست؟ پاسخ: <mask>",
+    "مقر <subject> در کدام شهر واقع شده است؟ پاسخ: <mask>",
+    "مکان مقر <subject> چیست؟ پاسخ: <mask>",
+    "مقر <subject> را کجا می‌توان یافت؟ پاسخ: <mask>",
+    "کدام مکان میزبان مقر <subject> است؟ پاسخ: <mask>",
+    " دفتر مرکزی <subject> در <mask> قرار دارد"
+  ],
+  "samples": [
+    {
+      "subject": "باشگاه فوتبال پاریس سن ژرمن",
+      "object": "پاریس",
+      "object_candidates": "پکن, کابل, نانسی, استکهلم, لیون, برلین, مونیخ, فلورانس, لایپزیگ, پاریس",
+      "index": 6101,
+      "subject_en": "Paris Saint-Germain F.C.",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "دانشگاه فلورانس",
+      "object": "فلورانس",
+      "object_candidates": "رم, شیکاگو, سئول, پکن, کیوتو, تویوتا، آیچی, بارسلون, مونترآل, برلین, فلورانس",
+      "index": 6102,
+      "subject_en": "University of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "حزب ملی سوسیالیست کارگران آلمان",
+      "object": "مونیخ",
+      "object_candidates": "استمفورد، کنتیکت, تایپه, کی‌یف, کیوتو, لندن, رم, تویوتا، آیچی, مونترآل, کابل, مونیخ",
+      "index": 6103,
+      "subject_en": "Nazi Party",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "اتحادیه کشورهای دریای مدیترانه",
+      "object": "بارسلون",
+      "object_candidates": "ژنو, پکن, سارایوو, پراویدنس, کی‌یف, آتن, استمفورد، کنتیکت, کمبریج, شفیلد, بارسلون",
+      "index": 6104,
+      "subject_en": "Union for the Mediterranean",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "پلیس بین‌الملل",
+      "object": "لیون",
+      "object_candidates": "جورج تاون, سارایوو, فرانکفورت آم ماین, برلین, بارسلون, تهران, مسکو, استمفورد، کنتیکت, کابل, لیون",
+      "index": 6105,
+      "subject_en": "Interpol",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "حزب پیشروی دموکرات",
+      "object": "تایپه",
+      "object_candidates": "لندن, سیاتل, سارایوو, بن, استکهلم, کیوتو, بارسلون, میشیگان، میشیگان, لیون, تایپه",
+      "index": 6106,
+      "subject_en": "Democratic Progressive Party",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "ای‌ام‌آی گروپ",
+      "object": "لندن",
+      "object_candidates": "مسکو, پاریس, کابل, لایپزیگ, لیون, میشیگان، میشیگان, تویوتا، آیچی, تهران, شفیلد, لندن",
+      "index": 6107,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "باشگاه فوتبال نانسی",
+      "object": "نانسی",
+      "object_candidates": "آتن, کلن, سئول, لندن, برلین, سارایوو, کی‌یف, رم, پراویدنس, نانسی",
+      "index": 6108,
+      "subject_en": "A.S. Nancy-Lorraine",
+      "object_en": "Nancy"
+    },
+    {
+      "subject": "sound clud",
+      "object": "برلین",
+      "object_candidates": "ژنو, سیاتل, کمبریج, فلورانس, کلن, جورج تاون, پراویدنس, کابل, پاریس, برلین",
+      "index": 6109,
+      "subject_en": "SoundCloud",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "کادیلاک",
+      "object": "میشیگان، میشیگان",
+      "object_candidates": "مونیخ, شیکاگو, کمبریج, پاریس, کابل, فرانکفورت آم ماین, مونترآل, مسکو, نانسی, میشیگان، میشیگان",
+      "index": 6110,
+      "subject_en": "Cadillac",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "پالیدور رکوردز",
+      "object": "لندن",
+      "object_candidates": "لیون, مسکو, استکهلم, فلورانس, رم, جورج تاون, تهران, لایپزیگ, میشیگان، میشیگان, لندن",
+      "index": 6111,
+      "subject_en": "Polydor Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "نینتندو",
+      "object": "کیوتو",
+      "object_candidates": "شیکاگو, کمبریج, فرانکفورت آم ماین, ژنو, استکهلم, کلن, سیاتل, تایپه, بارسلون, کیوتو",
+      "index": 6112,
+      "subject_en": "Nintendo",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "دانشگاه کمبریج",
+      "object": "کمبریج",
+      "object_candidates": "بن, میشیگان، میشیگان, نانسی, شیکاگو, لیون, سارایوو, استمفورد، کنتیکت, سئول, جورج تاون, کمبریج",
+      "index": 6113,
+      "subject_en": "University of Cambridge",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "ژرمن‌وینگز",
+      "object": "کلن",
+      "object_candidates": "کمبریج, برلین, تویوتا، آیچی, لیون, پکن, استمفورد، کنتیکت, مونترآل, سیاتل, نانسی, کلن",
+      "index": 6114,
+      "subject_en": "Germanwings",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "دانشگاه واشینگتن",
+      "object": "سیاتل",
+      "object_candidates": "استمفورد، کنتیکت, پراویدنس, کابل, استکهلم, کمبریج, مونترآل, سارایوو, برلین, تایپه, سیاتل",
+      "index": 6115,
+      "subject_en": "University of Washington",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "اریکسون",
+      "object": "استکهلم",
+      "object_candidates": "تویوتا، آیچی, رم, لیون, فلورانس, کیوتو, برلین, تهران, کی‌یف, پراویدنس, استکهلم",
+      "index": 6116,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "باشگاه فوتبال برنتفورد",
+      "object": "لندن",
+      "object_candidates": "کیوتو, پراویدنس, جورج تاون, پاریس, استکهلم, کی‌یف, مونیخ, سیاتل, مسکو, لندن",
+      "index": 6117,
+      "subject_en": "Brentford F.C.",
+      "object_en": "London"
+    },
+    {
+      "subject": "حزب دموکراتیک خلق افغانستان",
+      "object": "کابل",
+      "object_candidates": "مونیخ, لایپزیگ, کمبریج, کیوتو, سارایوو, لندن, فرانکفورت آم ماین, استکهلم, شفیلد, کابل",
+      "index": 6118,
+      "subject_en": "People's Democratic Party of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "سامسونگ",
+      "object": "سئول",
+      "object_candidates": "فلورانس, بن, شفیلد, آتن, جورج تاون, فرانکفورت آم ماین, مونترآل, مسکو, میشیگان، میشیگان, سئول",
+      "index": 6119,
+      "subject_en": "Samsung",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "باشگاه فوتبال بیجینگ گوان",
+      "object": "پکن",
+      "object_candidates": "بارسلون, لندن, سئول, شیکاگو, لایپزیگ, میشیگان، میشیگان, کمبریج, آتن, رم, پکن",
+      "index": 6120,
+      "subject_en": "Beijing Guoan F.C.",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "کمینترن",
+      "object": "مسکو",
+      "object_candidates": "شفیلد, لایپزیگ, تایپه, کیوتو, رم, مونترآل, تهران, جورج تاون, نانسی, مسکو",
+      "index": 6121,
+      "subject_en": "Comintern",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "رکوردهای جهانی گینس",
+      "object": "لندن",
+      "object_candidates": "کی‌یف, سیاتل, پراویدنس, شفیلد, مونترآل, مونیخ, کمبریج, برلین, فلورانس, لندن",
+      "index": 6122,
+      "subject_en": "Guinness World Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "فیده",
+      "object": "آتن",
+      "object_candidates": "جورج تاون, بارسلون, نانسی, کی‌یف, تهران, شیکاگو, کابل, فرانکفورت آم ماین, سارایوو, آتن",
+      "index": 6123,
+      "subject_en": "FIDE",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "رولکس",
+      "object": "ژنو",
+      "object_candidates": "نانسی, لیون, استمفورد، کنتیکت, مونترآل, برلین, لندن, مسکو, تایپه, شفیلد, ژنو",
+      "index": 6124,
+      "subject_en": "Rolex",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "کلیسای آشوری مشرق",
+      "object": "شیکاگو",
+      "object_candidates": "جورج تاون, کمبریج, رم, کیوتو, نانسی, استکهلم, تویوتا، آیچی, برلین, کلن, شیکاگو",
+      "index": 6125,
+      "subject_en": "Assyrian Church of the East",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "دانشگاه پاریس",
+      "object": "پاریس",
+      "object_candidates": "لایپزیگ, بن, شفیلد, لیون, تهران, پکن, سئول, میشیگان، میشیگان, نانسی, پاریس",
+      "index": 6126,
+      "subject_en": "University of Paris",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "فدراسیون بین‌المللی تنیس",
+      "object": "لندن",
+      "object_candidates": "تویوتا، آیچی, شفیلد, جورج تاون, پراویدنس, مونترآل, بارسلون, کی‌یف, سارایوو, کمبریج, لندن",
+      "index": 6127,
+      "subject_en": "International Tennis Federation",
+      "object_en": "London"
+    },
+    {
+      "subject": "دویچه وله",
+      "object": "بن",
+      "object_candidates": "تویوتا، آیچی, سارایوو, شیکاگو, شفیلد, سئول, پاریس, تهران, مونترآل, کابل, بن",
+      "index": 6128,
+      "subject_en": "Deutsche Welle",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "باشگاه فوتبال شفیلد ونزدی",
+      "object": "شفیلد",
+      "object_candidates": "پراویدنس, کلن, فلورانس, میشیگان، میشیگان, استکهلم, کمبریج, لندن, کابل, کی‌یف, شفیلد",
+      "index": 6129,
+      "subject_en": "Sheffield Wednesday F.C.",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "سازمان تجارت جهانی",
+      "object": "ژنو",
+      "object_candidates": "کابل, فلورانس, لایپزیگ, برلین, سئول, آتن, شفیلد, مونترآل, تهران, ژنو",
+      "index": 6130,
+      "subject_en": "World Trade Organization",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "آر.بی. لایپزیگ",
+      "object": "لایپزیگ",
+      "object_candidates": "کمبریج, لیون, پراویدنس, آتن, مونیخ, استمفورد، کنتیکت, تایپه, مسکو, کیوتو, لایپزیگ",
+      "index": 6131,
+      "subject_en": "RB Leipzig",
+      "object_en": "Leipzig"
+    },
+    {
+      "subject": "فدراسیون فوتبال آمریکا",
+      "object": "شیکاگو",
+      "object_candidates": "پکن, تویوتا، آیچی, سارایوو, مسکو, فلورانس, فرانکفورت آم ماین, میشیگان، میشیگان, پراویدنس, سئول, شیکاگو",
+      "index": 6132,
+      "subject_en": "United States Soccer Federation",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "بی‌پی",
+      "object": "لندن",
+      "object_candidates": "آتن, کلن, ژنو, استکهلم, بارسلون, مونترآل, میشیگان، میشیگان, برلین, بن, لندن",
+      "index": 6133,
+      "subject_en": "BP",
+      "object_en": "London"
+    },
+    {
+      "subject": "لنوو",
+      "object": "پکن",
+      "object_candidates": "کمبریج, استکهلم, تهران, بارسلون, فرانکفورت آم ماین, مونترآل, مسکو, پاریس, رم, پکن",
+      "index": 6134,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "تویوتا",
+      "object": "تویوتا، آیچی",
+      "object_candidates": "کمبریج, مونترآل, لندن, رم, آتن, لایپزیگ, شیکاگو, نانسی, تهران, تویوتا، آیچی",
+      "index": 6135,
+      "subject_en": "Toyota",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "فرهنگستان علوم فرانسه",
+      "object": "پاریس",
+      "object_candidates": "مونیخ, سئول, کلن, فرانکفورت آم ماین, لایپزیگ, کیوتو, ژنو, میشیگان، میشیگان, فلورانس, پاریس",
+      "index": 6136,
+      "subject_en": "French Academy of Sciences",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "فدراسیون فوتبال آلمان",
+      "object": "فرانکفورت آم ماین",
+      "object_candidates": "لیون, آتن, پکن, ژنو, سارایوو, سئول, مونیخ, سیاتل, استکهلم, فرانکفورت آم ماین",
+      "index": 6137,
+      "subject_en": "German Football Association",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "انستیتوی کارولینسکا",
+      "object": "استکهلم",
+      "object_candidates": "بن, نانسی, سئول, پاریس, فرانکفورت آم ماین, مونیخ, فلورانس, کیوتو, میشیگان، میشیگان, استکهلم",
+      "index": 6138,
+      "subject_en": "Karolinska Institute",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "سپاه پاسداران انقلاب اسلامی",
+      "object": "تهران",
+      "object_candidates": "پراویدنس, آتن, مونیخ, کمبریج, سیاتل, استمفورد، کنتیکت, فرانکفورت آم ماین, میشیگان، میشیگان, رم, تهران",
+      "index": 6139,
+      "subject_en": "Army of the Guardians of the Islamic Revolution",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "مدرسه علوم سیاسی پاریس",
+      "object": "پاریس",
+      "object_candidates": "کی‌یف, بارسلون, نانسی, پکن, فلورانس, جورج تاون, استمفورد، کنتیکت, لایپزیگ, ژنو, پاریس",
+      "index": 6140,
+      "subject_en": "Sciences Po",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "باشگاه فوتبال دینامو کیف",
+      "object": "کی‌یف",
+      "object_candidates": "ژنو, آتن, سئول, تویوتا، آیچی, نانسی, جورج تاون, رم, فلورانس, استمفورد، کنتیکت, کی‌یف",
+      "index": 6141,
+      "subject_en": "FC Dynamo Kyiv",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "باشگاه فوتبال سارایوو",
+      "object": "سارایوو",
+      "object_candidates": "پکن, کی‌یف, تهران, کمبریج, بارسلون, مونترآل, شفیلد, آتن, تویوتا، آیچی, سارایوو",
+      "index": 6142,
+      "subject_en": "F.K. Sarajevo",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "سازمان فضایی اروپا",
+      "object": "پاریس",
+      "object_candidates": "تهران, رم, ژنو, مسکو, تایپه, برلین, شیکاگو, کلن, لایپزیگ, پاریس",
+      "index": 6143,
+      "subject_en": "European Space Agency",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "دانشگاه براون",
+      "object": "پراویدنس",
+      "object_candidates": "کلن, کابل, لندن, فلورانس, لایپزیگ, بارسلون, شفیلد, تهران, تایپه, پراویدنس",
+      "index": 6144,
+      "subject_en": "Brown University",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "دانشگاه ژنو",
+      "object": "ژنو",
+      "object_candidates": "کیوتو, مونیخ, نانسی, استکهلم, پاریس, برلین, مونترآل, کی‌یف, پکن, ژنو",
+      "index": 6145,
+      "subject_en": "University of Geneva",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "فرقه دومینیکن",
+      "object": "رم",
+      "object_candidates": "لیون, کیوتو, ژنو, تایپه, مونیخ, پاریس, لایپزیگ, شفیلد, مسکو, رم",
+      "index": 6146,
+      "subject_en": "Dominican Order",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "دبلیو دبلیو ای",
+      "object": "استمفورد، کنتیکت",
+      "object_candidates": "کیوتو, آتن, سئول, بارسلون, کی‌یف, پکن, نانسی, ژنو, رم, استمفورد، کنتیکت",
+      "index": 6147,
+      "subject_en": "WWE",
+      "object_en": "Stamford"
+    },
+    {
+      "subject": "دانشگاه مک‌گیل",
+      "object": "مونترآل",
+      "object_candidates": "لندن, لایپزیگ, سئول, تویوتا، آیچی, ژنو, فرانکفورت آم ماین, پراویدنس, رم, کمبریج, مونترآل",
+      "index": 6148,
+      "subject_en": "McGill University",
+      "object_en": "Montreal"
+    },
+    {
+      "subject": "جامعه و بازار مشترک کارائیب",
+      "object": "جورج تاون",
+      "object_candidates": "فرانکفورت آم ماین, لندن, پکن, استمفورد، کنتیکت, بن, برلین, سیاتل, رم, کلن, جورج تاون",
+      "index": 6149,
+      "subject_en": "Caribbean Community Secretariat",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "لکسوس",
+      "object": "ناگویا، آیچی",
+      "object_candidates": "لندن, بارسلون, کلن, برلین, مسکو, بن, تایپه, مونیخ, پراویدنس, ناگویا، آیچی",
+      "index": 6150,
+      "subject_en": "Lexus",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "باشگاه فوتبال شفیلد یونایتد",
+      "object": "شفیلد",
+      "object_candidates": "رم, شیکاگو, استمفورد، کنتیکت, مسکو, میشیگان، میشیگان, نانسی, استکهلم, مونیخ, تهران, شفیلد",
+      "index": 6151,
+      "subject_en": "Sheffield United F.C.",
+      "object_en": "Sheffield"
+    }
+  ],
+  "relation_id": "P159"
+}

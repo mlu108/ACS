@@ -1,0 +1,422 @@
+{
+  "name": "headquarters_location",
+  "prompt_templates": [
+    "Πού βρίσκονται τα κεντρικά γραφεία της <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια πόλη βρίσκονται τα κεντρικά γραφεία της <subject>; Η απάντηση είναι: <mask>",
+    "Πού βρίσκεται η τοποθεσία των κεντρικών γραφείων της <subject>; Η απάντηση είναι: <mask>",
+    "Πού μπορούν να βρεθούν τα κεντρικά γραφεία της <subject>; Η απάντηση είναι: <mask>",
+    "Ποιος χώρος φιλοξενεί τα κεντρικά γραφεία της <subject>; Η απάντηση είναι: <mask>",
+    " Η έδρα του <subject> βρίσκεται στο <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Παρί Σεν Ζερμέν",
+      "object": "Παρίσι",
+      "object_candidates": "Πεκίνο, Καμπούλ, Νανσύ, Στοκχόλμη, Λυών, Βερολίνο, Μόναχο, Φλωρεντία, Λειψία, Παρίσι",
+      "index": 6101,
+      "subject_en": "Paris Saint-Germain F.C.",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Πανεπιστήμιο της Φλωρεντίας",
+      "object": "Φλωρεντία",
+      "object_candidates": "Ρώμη, Σικάγο, Σεούλ, Πεκίνο, Κιότο, Τογιότα, Βαρκελώνη, Μόντρεαλ, Βερολίνο, Φλωρεντία",
+      "index": 6102,
+      "subject_en": "University of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Εθνικοσοσιαλιστικό Γερμανικό Εργατικό Κόμμα",
+      "object": "Μόναχο",
+      "object_candidates": "Στάμφορντ, Ταϊπέι, Κίεβο, Κιότο, Λονδίνο, Ρώμη, Τογιότα, Μόντρεαλ, Καμπούλ, Μόναχο",
+      "index": 6103,
+      "subject_en": "Nazi Party",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Ένωση για τη Μεσόγειο",
+      "object": "Βαρκελώνη",
+      "object_candidates": "Γενεύη, Πεκίνο, Σαράγιεβο, Πρόβιντενς, Κίεβο, Αθήνα, Στάμφορντ, Κέιμπριτζ, Σέφιλντ, Βαρκελώνη",
+      "index": 6104,
+      "subject_en": "Union for the Mediterranean",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "Ιντερπόλ",
+      "object": "Λυών",
+      "object_candidates": "Τζώρτζταουν, Σαράγιεβο, Φραγκφούρτη, Βερολίνο, Βαρκελώνη, Τεχεράνη, Μόσχα, Στάμφορντ, Καμπούλ, Λυών",
+      "index": 6105,
+      "subject_en": "Interpol",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "Δημοκρατικό Προοδευτικό Κόμμα της Ταϊβάν",
+      "object": "Ταϊπέι",
+      "object_candidates": "Λονδίνο, Σιάτλ, Σαράγιεβο, Βόννη, Στοκχόλμη, Κιότο, Βαρκελώνη, Ντιτρόιτ, Λυών, Ταϊπέι",
+      "index": 6106,
+      "subject_en": "Democratic Progressive Party",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "EMI",
+      "object": "Λονδίνο",
+      "object_candidates": "Μόσχα, Παρίσι, Καμπούλ, Λειψία, Λυών, Ντιτρόιτ, Τογιότα, Τεχεράνη, Σέφιλντ, Λονδίνο",
+      "index": 6107,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "ΑΣ Νανσί-Λωρραίνη",
+      "object": "Νανσύ",
+      "object_candidates": "Αθήνα, Κολωνία, Σεούλ, Λονδίνο, Βερολίνο, Σαράγιεβο, Κίεβο, Ρώμη, Πρόβιντενς, Νανσύ",
+      "index": 6108,
+      "subject_en": "A.S. Nancy-Lorraine",
+      "object_en": "Nancy"
+    },
+    {
+      "subject": "SoundCloud",
+      "object": "Βερολίνο",
+      "object_candidates": "Γενεύη, Σιάτλ, Κέιμπριτζ, Φλωρεντία, Κολωνία, Τζώρτζταουν, Πρόβιντενς, Καμπούλ, Παρίσι, Βερολίνο",
+      "index": 6109,
+      "subject_en": "SoundCloud",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Cadillac",
+      "object": "Ντιτρόιτ",
+      "object_candidates": "Μόναχο, Σικάγο, Κέιμπριτζ, Παρίσι, Καμπούλ, Φραγκφούρτη, Μόντρεαλ, Μόσχα, Νανσύ, Ντιτρόιτ",
+      "index": 6110,
+      "subject_en": "Cadillac",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Polydor Records",
+      "object": "Λονδίνο",
+      "object_candidates": "Λυών, Μόσχα, Στοκχόλμη, Φλωρεντία, Ρώμη, Τζώρτζταουν, Τεχεράνη, Λειψία, Ντιτρόιτ, Λονδίνο",
+      "index": 6111,
+      "subject_en": "Polydor Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "Nintendo",
+      "object": "Κιότο",
+      "object_candidates": "Σικάγο, Κέιμπριτζ, Φραγκφούρτη, Γενεύη, Στοκχόλμη, Κολωνία, Σιάτλ, Ταϊπέι, Βαρκελώνη, Κιότο",
+      "index": 6112,
+      "subject_en": "Nintendo",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "Πανεπιστήμιο του Κέιμπριτζ",
+      "object": "Κέιμπριτζ",
+      "object_candidates": "Βόννη, Ντιτρόιτ, Νανσύ, Σικάγο, Λυών, Σαράγιεβο, Στάμφορντ, Σεούλ, Τζώρτζταουν, Κέιμπριτζ",
+      "index": 6113,
+      "subject_en": "University of Cambridge",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "Germanwings",
+      "object": "Κολωνία",
+      "object_candidates": "Κέιμπριτζ, Βερολίνο, Τογιότα, Λυών, Πεκίνο, Στάμφορντ, Μόντρεαλ, Σιάτλ, Νανσύ, Κολωνία",
+      "index": 6114,
+      "subject_en": "Germanwings",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "Πανεπιστήμιο της Ουάσινγκτον",
+      "object": "Σιάτλ",
+      "object_candidates": "Στάμφορντ, Πρόβιντενς, Καμπούλ, Στοκχόλμη, Κέιμπριτζ, Μόντρεαλ, Σαράγιεβο, Βερολίνο, Ταϊπέι, Σιάτλ",
+      "index": 6115,
+      "subject_en": "University of Washington",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Ericsson",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Τογιότα, Ρώμη, Λυών, Φλωρεντία, Κιότο, Βερολίνο, Τεχεράνη, Κίεβο, Πρόβιντενς, Στοκχόλμη",
+      "index": 6116,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Μπρέντφορντ ΦΚ",
+      "object": "Λονδίνο",
+      "object_candidates": "Κιότο, Πρόβιντενς, Τζώρτζταουν, Παρίσι, Στοκχόλμη, Κίεβο, Μόναχο, Σιάτλ, Μόσχα, Λονδίνο",
+      "index": 6117,
+      "subject_en": "Brentford F.C.",
+      "object_en": "London"
+    },
+    {
+      "subject": "Λαϊκό Δημοκρατικό Κόμμα του Αφγανιστάν",
+      "object": "Καμπούλ",
+      "object_candidates": "Μόναχο, Λειψία, Κέιμπριτζ, Κιότο, Σαράγιεβο, Λονδίνο, Φραγκφούρτη, Στοκχόλμη, Σέφιλντ, Καμπούλ",
+      "index": 6118,
+      "subject_en": "People's Democratic Party of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Samsung",
+      "object": "Σεούλ",
+      "object_candidates": "Φλωρεντία, Βόννη, Σέφιλντ, Αθήνα, Τζώρτζταουν, Φραγκφούρτη, Μόντρεαλ, Μόσχα, Ντιτρόιτ, Σεούλ",
+      "index": 6119,
+      "subject_en": "Samsung",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Μπέιγινγκ Γκουόαν ΦΚ",
+      "object": "Πεκίνο",
+      "object_candidates": "Βαρκελώνη, Λονδίνο, Σεούλ, Σικάγο, Λειψία, Ντιτρόιτ, Κέιμπριτζ, Αθήνα, Ρώμη, Πεκίνο",
+      "index": 6120,
+      "subject_en": "Beijing Guoan F.C.",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Κομμουνιστική Διεθνής",
+      "object": "Μόσχα",
+      "object_candidates": "Σέφιλντ, Λειψία, Ταϊπέι, Κιότο, Ρώμη, Μόντρεαλ, Τεχεράνη, Τζώρτζταουν, Νανσύ, Μόσχα",
+      "index": 6121,
+      "subject_en": "Comintern",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Βιβλίο Γκίνες",
+      "object": "Λονδίνο",
+      "object_candidates": "Κίεβο, Σιάτλ, Πρόβιντενς, Σέφιλντ, Μόντρεαλ, Μόναχο, Κέιμπριτζ, Βερολίνο, Φλωρεντία, Λονδίνο",
+      "index": 6122,
+      "subject_en": "Guinness World Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "Διεθνής Σκακιστική Ομοσπονδία",
+      "object": "Αθήνα",
+      "object_candidates": "Τζώρτζταουν, Βαρκελώνη, Νανσύ, Κίεβο, Τεχεράνη, Σικάγο, Καμπούλ, Φραγκφούρτη, Σαράγιεβο, Αθήνα",
+      "index": 6123,
+      "subject_en": "FIDE",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Rolex",
+      "object": "Γενεύη",
+      "object_candidates": "Νανσύ, Λυών, Στάμφορντ, Μόντρεαλ, Βερολίνο, Λονδίνο, Μόσχα, Ταϊπέι, Σέφιλντ, Γενεύη",
+      "index": 6124,
+      "subject_en": "Rolex",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "Ασσυριακή Αποστολική Εκκλησία της Ανατολής",
+      "object": "Σικάγο",
+      "object_candidates": "Τζώρτζταουν, Κέιμπριτζ, Ρώμη, Κιότο, Νανσύ, Στοκχόλμη, Τογιότα, Βερολίνο, Κολωνία, Σικάγο",
+      "index": 6125,
+      "subject_en": "Assyrian Church of the East",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "Πανεπιστήμιο του Παρισιού",
+      "object": "Παρίσι",
+      "object_candidates": "Λειψία, Βόννη, Σέφιλντ, Λυών, Τεχεράνη, Πεκίνο, Σεούλ, Ντιτρόιτ, Νανσύ, Παρίσι",
+      "index": 6126,
+      "subject_en": "University of Paris",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Διεθνής Ομοσπονδία Αντισφαίρισης",
+      "object": "Λονδίνο",
+      "object_candidates": "Τογιότα, Σέφιλντ, Τζώρτζταουν, Πρόβιντενς, Μόντρεαλ, Βαρκελώνη, Κίεβο, Σαράγιεβο, Κέιμπριτζ, Λονδίνο",
+      "index": 6127,
+      "subject_en": "International Tennis Federation",
+      "object_en": "London"
+    },
+    {
+      "subject": "Deutsche Welle",
+      "object": "Βόννη",
+      "object_candidates": "Τογιότα, Σαράγιεβο, Σικάγο, Σέφιλντ, Σεούλ, Παρίσι, Τεχεράνη, Μόντρεαλ, Καμπούλ, Βόννη",
+      "index": 6128,
+      "subject_en": "Deutsche Welle",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "Σέφιλντ Γουένσντεϊ",
+      "object": "Σέφιλντ",
+      "object_candidates": "Πρόβιντενς, Κολωνία, Φλωρεντία, Ντιτρόιτ, Στοκχόλμη, Κέιμπριτζ, Λονδίνο, Καμπούλ, Κίεβο, Σέφιλντ",
+      "index": 6129,
+      "subject_en": "Sheffield Wednesday F.C.",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "Παγκόσμιος Οργανισμός Εμπορίου",
+      "object": "Γενεύη",
+      "object_candidates": "Καμπούλ, Φλωρεντία, Λειψία, Βερολίνο, Σεούλ, Αθήνα, Σέφιλντ, Μόντρεαλ, Τεχεράνη, Γενεύη",
+      "index": 6130,
+      "subject_en": "World Trade Organization",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "ΡΜ Λειψία",
+      "object": "Λειψία",
+      "object_candidates": "Κέιμπριτζ, Λυών, Πρόβιντενς, Αθήνα, Μόναχο, Στάμφορντ, Ταϊπέι, Μόσχα, Κιότο, Λειψία",
+      "index": 6131,
+      "subject_en": "RB Leipzig",
+      "object_en": "Leipzig"
+    },
+    {
+      "subject": "Ποδοσφαιρική Ομοσπονδία ΗΠΑ",
+      "object": "Σικάγο",
+      "object_candidates": "Πεκίνο, Τογιότα, Σαράγιεβο, Μόσχα, Φλωρεντία, Φραγκφούρτη, Ντιτρόιτ, Πρόβιντενς, Σεούλ, Σικάγο",
+      "index": 6132,
+      "subject_en": "United States Soccer Federation",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BP",
+      "object": "Λονδίνο",
+      "object_candidates": "Αθήνα, Κολωνία, Γενεύη, Στοκχόλμη, Βαρκελώνη, Μόντρεαλ, Ντιτρόιτ, Βερολίνο, Βόννη, Λονδίνο",
+      "index": 6133,
+      "subject_en": "BP",
+      "object_en": "London"
+    },
+    {
+      "subject": "Lenovo",
+      "object": "Πεκίνο",
+      "object_candidates": "Κέιμπριτζ, Στοκχόλμη, Τεχεράνη, Βαρκελώνη, Φραγκφούρτη, Μόντρεαλ, Μόσχα, Παρίσι, Ρώμη, Πεκίνο",
+      "index": 6134,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Toyota",
+      "object": "Τογιότα",
+      "object_candidates": "Κέιμπριτζ, Μόντρεαλ, Λονδίνο, Ρώμη, Αθήνα, Λειψία, Σικάγο, Νανσύ, Τεχεράνη, Τογιότα",
+      "index": 6135,
+      "subject_en": "Toyota",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Γαλλική Ακαδημία Επιστημών",
+      "object": "Παρίσι",
+      "object_candidates": "Μόναχο, Σεούλ, Κολωνία, Φραγκφούρτη, Λειψία, Κιότο, Γενεύη, Ντιτρόιτ, Φλωρεντία, Παρίσι",
+      "index": 6136,
+      "subject_en": "French Academy of Sciences",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "DFB",
+      "object": "Φραγκφούρτη",
+      "object_candidates": "Λυών, Αθήνα, Πεκίνο, Γενεύη, Σαράγιεβο, Σεούλ, Μόναχο, Σιάτλ, Στοκχόλμη, Φραγκφούρτη",
+      "index": 6137,
+      "subject_en": "German Football Association",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Ινστιτούτο Καρολίνσκα",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Βόννη, Νανσύ, Σεούλ, Παρίσι, Φραγκφούρτη, Μόναχο, Φλωρεντία, Κιότο, Ντιτρόιτ, Στοκχόλμη",
+      "index": 6138,
+      "subject_en": "Karolinska Institute",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "στρατός των φρουρών της Ισλαμικής Επανάστασης",
+      "object": "Τεχεράνη",
+      "object_candidates": "Πρόβιντενς, Αθήνα, Μόναχο, Κέιμπριτζ, Σιάτλ, Στάμφορντ, Φραγκφούρτη, Ντιτρόιτ, Ρώμη, Τεχεράνη",
+      "index": 6139,
+      "subject_en": "Army of the Guardians of the Islamic Revolution",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Ινστιτούτο Πολιτικών Επιστημών του Παρισιού",
+      "object": "Παρίσι",
+      "object_candidates": "Κίεβο, Βαρκελώνη, Νανσύ, Πεκίνο, Φλωρεντία, Τζώρτζταουν, Στάμφορντ, Λειψία, Γενεύη, Παρίσι",
+      "index": 6140,
+      "subject_en": "Sciences Po",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ΦΚ Ντιναμό Κιέβου",
+      "object": "Κίεβο",
+      "object_candidates": "Γενεύη, Αθήνα, Σεούλ, Τογιότα, Νανσύ, Τζώρτζταουν, Ρώμη, Φλωρεντία, Στάμφορντ, Κίεβο",
+      "index": 6141,
+      "subject_en": "FC Dynamo Kyiv",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "ΦΚ Σαράγεβο",
+      "object": "Σαράγιεβο",
+      "object_candidates": "Πεκίνο, Κίεβο, Τεχεράνη, Κέιμπριτζ, Βαρκελώνη, Μόντρεαλ, Σέφιλντ, Αθήνα, Τογιότα, Σαράγιεβο",
+      "index": 6142,
+      "subject_en": "F.K. Sarajevo",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Ευρωπαϊκός Οργανισμός Διαστήματος",
+      "object": "Παρίσι",
+      "object_candidates": "Τεχεράνη, Ρώμη, Γενεύη, Μόσχα, Ταϊπέι, Βερολίνο, Σικάγο, Κολωνία, Λειψία, Παρίσι",
+      "index": 6143,
+      "subject_en": "European Space Agency",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Πανεπιστήμιο Μπράουν",
+      "object": "Πρόβιντενς",
+      "object_candidates": "Κολωνία, Καμπούλ, Λονδίνο, Φλωρεντία, Λειψία, Βαρκελώνη, Σέφιλντ, Τεχεράνη, Ταϊπέι, Πρόβιντενς",
+      "index": 6144,
+      "subject_en": "Brown University",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "Πανεπιστήμιο της Γενεύης",
+      "object": "Γενεύη",
+      "object_candidates": "Κιότο, Μόναχο, Νανσύ, Στοκχόλμη, Παρίσι, Βερολίνο, Μόντρεαλ, Κίεβο, Πεκίνο, Γενεύη",
+      "index": 6145,
+      "subject_en": "University of Geneva",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "Τάγμα των Δομινικανών",
+      "object": "Ρώμη",
+      "object_candidates": "Λυών, Κιότο, Γενεύη, Ταϊπέι, Μόναχο, Παρίσι, Λειψία, Σέφιλντ, Μόσχα, Ρώμη",
+      "index": 6146,
+      "subject_en": "Dominican Order",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "World Wrestling Entertainment",
+      "object": "Στάμφορντ",
+      "object_candidates": "Κιότο, Αθήνα, Σεούλ, Βαρκελώνη, Κίεβο, Πεκίνο, Νανσύ, Γενεύη, Ρώμη, Στάμφορντ",
+      "index": 6147,
+      "subject_en": "WWE",
+      "object_en": "Stamford"
+    },
+    {
+      "subject": "Πανεπιστήμιο ΜακΓκιλ",
+      "object": "Μόντρεαλ",
+      "object_candidates": "Λονδίνο, Λειψία, Σεούλ, Τογιότα, Γενεύη, Φραγκφούρτη, Πρόβιντενς, Ρώμη, Κέιμπριτζ, Μόντρεαλ",
+      "index": 6148,
+      "subject_en": "McGill University",
+      "object_en": "Montreal"
+    },
+    {
+      "subject": "Καραϊβική Κοινότητα",
+      "object": "Τζώρτζταουν",
+      "object_candidates": "Φραγκφούρτη, Λονδίνο, Πεκίνο, Στάμφορντ, Βόννη, Βερολίνο, Σιάτλ, Ρώμη, Κολωνία, Τζώρτζταουν",
+      "index": 6149,
+      "subject_en": "Caribbean Community Secretariat",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Ναγκόγια",
+      "object_candidates": "Λονδίνο, Βαρκελώνη, Κολωνία, Βερολίνο, Μόσχα, Βόννη, Ταϊπέι, Μόναχο, Πρόβιντενς, Ναγκόγια",
+      "index": 6150,
+      "subject_en": "Lexus",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "Σέφιλντ Γιουνάιτεντ",
+      "object": "Σέφιλντ",
+      "object_candidates": "Ρώμη, Σικάγο, Στάμφορντ, Μόσχα, Ντιτρόιτ, Νανσύ, Στοκχόλμη, Μόναχο, Τεχεράνη, Σέφιλντ",
+      "index": 6151,
+      "subject_en": "Sheffield United F.C.",
+      "object_en": "Sheffield"
+    }
+  ],
+  "relation_id": "P159"
+}

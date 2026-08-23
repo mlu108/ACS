@@ -1,0 +1,1716 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "کشور یا ایالتی که <subject> پایتخت آن است چیست؟ پاسخ: <mask>",
+    "کجا <subject> پایتخت است؟ پاسخ: <mask>",
+    "کدام کشور یا ایالت <subject> را به عنوان پایتخت خود دارد؟ پاسخ: <mask>",
+    "کدام مکان <subject> را به عنوان پایتخت دارد؟ پاسخ: <mask>",
+    "کجا <subject> به عنوان پایتخت خدمت می‌کند؟ پاسخ: <mask>",
+    " <subject> پایتخت کشوری به نام <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "ادمونتون",
+      "object": "آلبرتا",
+      "object_candidates": "چکسلواکی, لائوس, گجرات, بایرن, ساراواک, بنگلادش, تگزاس, قطر, پروانس, آلبرتا",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "آنکارا",
+      "object": "ترکیه",
+      "object_candidates": "زامبیا, آلمان, سنگال, لهستان, فیلیپین, لتونی, لیبی, آرکانزاس, گرینلند, ترکیه",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "آمستردام",
+      "object": "هلند",
+      "object_candidates": "لتونی, ان, کانزاس, بایرن, نپال, اسلوونی, مالی, کانتیکت, رودیژا, هلند",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "باکو",
+      "object": "جمهوری آذربایجان",
+      "object_candidates": "هلند, بلژیک, بوتسوانا, مهاراشترا, دانمارک, نیجر, اوکراین, سومالی, یمن, جمهوری آذربایجان",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "قاهره",
+      "object": "مصر",
+      "object_candidates": "عمان, بولیوی, نابارا, قزاقستان, مریلند, کانتیکت, انگلستان, موزامبیک, پادشاهی یهودا, مصر",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "کپنهاگ",
+      "object": "دانمارک",
+      "object_candidates": "ماساچوست, اسلواکی, ونزوئلا, اسرائیل, عراق, فلاندر, آیداهو, بنگلادش, گواتمالا, دانمارک",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "بارسلون",
+      "object": "کاتالونیا",
+      "object_candidates": "کانتون لوکزامبورگ, کلرادو, توسکانی, بحرین, بلیز, سیچوآن, دبی، امارات, اردن, لائوس, کاتالونیا",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "بوئنوس آیرس",
+      "object": "آرژانتین",
+      "object_candidates": "قطر, آراگون, آلمان, مونته‌نگرو, یوتا, روسیه, بولیوی, پرتغال, ساراواک, آرژانتین",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "مونیخ",
+      "object": "بایرن",
+      "object_candidates": "کوئینزلند, پرتغال, ایندیانا, برونئی, لهستان, کانتیکت, فلاندر, ازبکستان, پادشاهی یهودا, بایرن",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "فلورانس",
+      "object": "توسکانی",
+      "object_candidates": "لیبریا, مونته‌نگرو, گوانگ‌دونگ, صربستان, ایرلند, لوئیزیانا, بلاروس, هند, نروژ, توسکانی",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "رم",
+      "object": "ایتالیا",
+      "object_candidates": "افغانستان, اندونزی, برزیل, ماساچوست, مالت, زیمبابوه, آلمان, ونزوئلا, بوتان, ایتالیا",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "الجزیره",
+      "object": "الجزایر",
+      "object_candidates": "هائیتی, بلژیک, گرجستان, مالاوی, گینه, پاکستان, زیمبابوه, سنگال, ساراواک, الجزایر",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "طرابلس",
+      "object": "لیبی",
+      "object_candidates": "اروگوئه, پروانس, قطر, تاجیکستان, مجارستان, قرقیزستان, پاکستان, کنیا, لهستان, لیبی",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "کانبرا",
+      "object": "استرالیا",
+      "object_candidates": "آلاسکا, مینه‌سوتا, گرینلند, هاریانا, کوئینزلند, کرواسی, مراکش, بلغارستان, ترکیه, استرالیا",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "ویندهوک",
+      "object": "نامیبیا",
+      "object_candidates": "بلژیک, کویت, سوریه, نپال, ژاپن, گینه, ایرلند, فیلیپین, توسکانی, نامیبیا",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "هراکلیون",
+      "object": "کرت",
+      "object_candidates": "پرتغال, اردن, اتیوپی, تایوان, پنجاب, آلاسکا, آلمان, ان, ایندیانا, کرت",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "بغداد",
+      "object": "عراق",
+      "object_candidates": "رودیژا, افغانستان, روسیه, هلند, برزیل, کویت, بلاروس, مراکش, بلغارستان, عراق",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "ادینبرو",
+      "object": "اسکاتلند",
+      "object_candidates": "تلنگانا, بیهار, لوئیزیانا, نیکاراگوئه, هلند, آرکانزاس, برزیل, یوتا, اکلاهما, اسکاتلند",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "کابل",
+      "object": "افغانستان",
+      "object_candidates": "ولز, ازبکستان, کارناتاکا, یمن, سیچوآن, آلاسکا, قطر, وایومینگ, پاکستان, افغانستان",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "بن",
+      "object": "آلمان",
+      "object_candidates": "بلاروس, تگزاس, نپال, فیلیپین, آراگون, بایرن, میشیگان, آرکانزاس, لیبریا, آلمان",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "برلین",
+      "object": "آلمان",
+      "object_candidates": "گرینلند, پیمونت, عمان, ونزوئلا, فیجی, لتونی, تایوان, نروژ, رومانی, آلمان",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "پورتو نووو",
+      "object": "بنین",
+      "object_candidates": "یوتا, قرقیزستان, اسپانیا, اسلوونی, آراگون, تگزاس, اروگوئه, بولیوی, اوگاندا, بنین",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "گابورون",
+      "object": "بوتسوانا",
+      "object_candidates": "رومانی, کالیفرنیا, ساردنی, تایلند, استونی, صربستان, اروگوئه, مانیتوبا, هاریانا, بوتسوانا",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "پاریس",
+      "object": "فرانسه",
+      "object_candidates": "هائیتی, پاکستان, بیهار, برزیل, کویت, نامیبیا, فلوریدا, کرالا, قزاقستان, فرانسه",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "بمبئی",
+      "object": "مهاراشترا",
+      "object_candidates": "کوبا, مانیتوبا, نورد, ساموآ, میشیگان, سیچوآن, نیجر, تنسی, کانتون لوکزامبورگ, مهاراشترا",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "اسلو",
+      "object": "نروژ",
+      "object_candidates": "ماداگاسکار, فرانسه, انتاریو, ترکیه, کویت, پیمونت, بلغارستان, تانزانیا, کانتیکت, نروژ",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "اورشلیم",
+      "object": "پادشاهی یهودا",
+      "object_candidates": "بورگوین, سوریه, سوئیس, گرینلند, برزیل, مالاوی, مصر, تایلند, وایومینگ, پادشاهی یهودا",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "بیشکک",
+      "object": "قرقیزستان",
+      "object_candidates": "بیهار, سیچوآن, ارمنستان, پنجاب, چاد, عمان, کارناتاکا, تلنگانا, تاسمانی, قرقیزستان",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "بخارست",
+      "object": "رومانی",
+      "object_candidates": "انگلستان, نابارا, زیمبابوه, آیداهو, لیبریا, تایلند, شهرستان آلبا, لتونی, مصر, رومانی",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "ملبورن",
+      "object": "ویکتوریا",
+      "object_candidates": "ساراواک, ان, الجزایر, آکسفوردشایر, اکوادور, هسن, کلرادو, آلبرتا, موریس, ویکتوریا",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "پکن",
+      "object": "تایوان",
+      "object_candidates": "مراکش, بنگلادش, سوئد, ایرلند, یون‌نان, آلاسکا, کرالا, مصر, اسلواکی, تایوان",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "چونگ‌کینگ",
+      "object": "تایوان",
+      "object_candidates": "وایومینگ, هاوائی, لتونی, ان, مالت, تاجیکستان, گرینلند, تاسمانی, ازبکستان, تایوان",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "هاوانا",
+      "object": "کوبا",
+      "object_candidates": "مالزی, پروانس, مالت, لوئیزیانا, یون‌نان, کاتالونیا, لسترشایر, تونس, گواتمالا, کوبا",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "دنور",
+      "object": "کلرادو",
+      "object_candidates": "آراگون, آنگولا, سوریه, سومالی, لیبی, فنلاند, زالتسبورگ, انتاریو, پروانس, کلرادو",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "موگادیشو",
+      "object": "سومالی",
+      "object_candidates": "هلند, لیتوانی, ساموآ, فرانسه, اروگوئه, تایوان, غنا, ایران, یون‌نان, سومالی",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "کاردیف",
+      "object": "ولز",
+      "object_candidates": "قطر, مریلند, فلاندر, پرو, بلاروس, نروژ, اوگاندا, ایتالیا, هند, ولز",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "دوبلین",
+      "object": "ایرلند",
+      "object_candidates": "موریس, ویتنام, آلبانی, اندونزی, مکزیک, مینه‌سوتا, گینه, فرانسه, جمهوری آذربایجان, ایرلند",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "تونس",
+      "object": "تونس",
+      "object_candidates": "آرکانزاس, استرالیا, پنجاب, بوتان, لائوس, کالیفرنیا, بنین, آلبرتا, تایلند, تونس",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "ریو د ژانیرو",
+      "object": "برزیل",
+      "object_candidates": "سیچوآن, لوئیزیانا, اکلاهما, پادشاهی انگلیس, ویکتوریا, یوتا, قبرس, سودان, ساراواک, برزیل",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "والتا",
+      "object": "مالت",
+      "object_candidates": "گابن, غنا, فیجی, سوئیس, مراکش, کامبوج, مریلند, کانزاس, یونان, مالت",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "لندن",
+      "object": "انگلستان",
+      "object_candidates": "فیلیپین, نورماندی, قزاقستان, صباح, قبرس, سوئد, گجرات, آلبرتا, آنگولا, انگلستان",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "رباط",
+      "object": "مراکش",
+      "object_candidates": "ونزوئلا, قبرس, کانادا, قرقیزستان, تاجیکستان, صربستان, بولیوی, کوئینزلند, مالت, مراکش",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "ریگا",
+      "object": "لتونی",
+      "object_candidates": "تایلند, تگزاس, لیبریا, موریس, مالت, ساراواک, براندنبورگ, سیچوآن, زالتسبورگ, لتونی",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "دمشق",
+      "object": "سوریه",
+      "object_candidates": "صباح, تایلند, مانیتوبا, تاجیکستان, یمن, اوگاندا, عراق, آلبرتا, ماساچوست, سوریه",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "دارالسلام",
+      "object": "تانزانیا",
+      "object_candidates": "پیمونت, بلاروس, بحرین, شیلی, سیچوآن, گواتمالا, دانمارک, بوتسوانا, قرقیزستان, تانزانیا",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "لندن",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "گوانگ‌دونگ, روسیه, اسلواکی, اوکراین, رواندا, قطر, اکوادور, ایندیانا, تگزاس, پادشاهی انگلیس",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "استکهلم",
+      "object": "سوئد",
+      "object_candidates": "بولیوی, توسکانی, قزاقستان, زیمبابوه, مصر, زالتسبورگ, پرو, هاوائی, اوکراین, سوئد",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "هلسینکی",
+      "object": "فنلاند",
+      "object_candidates": "نپال, شهرستان آلبا, لیبریا, آرکانزاس, کانتون لوکزامبورگ, مریلند, مراکش, بلیز, رودیژا, فنلاند",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "پراگ",
+      "object": "بوهم",
+      "object_candidates": "زالتسبورگ, کوبا, بلاروس, الجزایر, آلبانی, هسن, آراگون, تنسی, جمهوری آذربایجان, بوهم",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "ایندیاناپولیس",
+      "object": "ایندیانا",
+      "object_candidates": "تایلند, فلوریدا, کانتیکت, هند, پاناما, آنگولا, نیکاراگوئه, بلغارستان, مکزیک, ایندیانا",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "مادرید",
+      "object": "اسپانیا",
+      "object_candidates": "رواندا, فلوریدا, لیبی, لهستان, کالیفرنیا, فرانسه, اکوادور, راجستان, رودیژا, اسپانیا",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "گواتمالاسیتی",
+      "object": "گواتمالا",
+      "object_candidates": "چاد, ایرلند, کانادا, تگزاس, باربادوس, آنگولا, بیهار, آلبانی, لتونی, گواتمالا",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "ورشو",
+      "object": "لهستان",
+      "object_candidates": "هائیتی, ترکیه, پادشاهی انگلیس, بایرن, مالت, دبی، امارات, ایتالیا, گوا, کانزاس, لهستان",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "گوانگ‌ژو",
+      "object": "گوانگ‌دونگ",
+      "object_candidates": "زامبیا, سوریه, بایرن, برونئی, برزیل, سیچوآن, اوکراین, زاکسن, شهرستان آلبا, گوانگ‌دونگ",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "درسدن",
+      "object": "زاکسن",
+      "object_candidates": "آرکانزاس, تایلند, گواتمالا, پروانس, اردن, زالتسبورگ, مالزی, هاوائی, کانادا, زاکسن",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "پورتو پرنس",
+      "object": "هائیتی",
+      "object_candidates": "ژاپن, آنگولا, چکسلواکی, آرژانتین, کارناتاکا, بحرین, گینه, فرانسه, مهاراشترا, هائیتی",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "آتن",
+      "object": "یونان",
+      "object_candidates": "مصر, کانتیکت, مالی, مجارستان, اکلاهما, هندوراس, ارمنستان, آنگولا, زالتسبورگ, یونان",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "هوبارت",
+      "object": "تاسمانی",
+      "object_candidates": "اردن, صربستان, گرجستان, برزیل, کانتون لوکزامبورگ, آیووا, پاکستان, اکلاهما, بیهار, تاسمانی",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "تالین",
+      "object": "استونی",
+      "object_candidates": "پنجاب, نابارا, پرتغال, پنسیلوانیا, فیلیپین, براندنبورگ, فیجی, موزامبیک, کرواسی, استونی",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "توکیو",
+      "object": "ژاپن",
+      "object_candidates": "ویکتوریا, اوگاندا, مصر, مجارستان, لبنان, رواندا, افغانستان, تایوان, ساردنی, ژاپن",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "وین",
+      "object": "اتریش",
+      "object_candidates": "چکسلواکی, گجرات, اسرائیل, ترکیه, انگلستان, قزاقستان, یوتا, آنگولا, یمن, اتریش",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "لیوبلیانا",
+      "object": "اسلوونی",
+      "object_candidates": "اسرائیل, سنگال, مونته‌نگرو, سیسیل, فنلاند, نیجریه, تاجیکستان, افغانستان, گینه, اسلوونی",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "اورشلیم",
+      "object": "اسرائیل",
+      "object_candidates": "سنگال, ونزوئلا, تلنگانا, جمهوری آذربایجان, برونئی, مجارستان, مهاراشترا, آکسفوردشایر, تگزاس, اسرائیل",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "جاکارتا",
+      "object": "اندونزی",
+      "object_candidates": "موزامبیک, اردن, کالیفرنیا, شیلی, گوانگ‌دونگ, اکلاهما, برونئی, کارناتاکا, راجستان, اندونزی",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "تورین",
+      "object": "پیمونت",
+      "object_candidates": "سنگال, ایتالیا, یوگسلاوی, کوئینزلند, مونته‌نگرو, گوا, گینه, آلاسکا, انتاریو, پیمونت",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "نایروبی",
+      "object": "کنیا",
+      "object_candidates": "بلیز, لتونی, لیبریا, انگلستان, بوتان, پنجاب, ازبکستان, تایوان, کانتیکت, کنیا",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "کوالالامپور",
+      "object": "مالزی",
+      "object_candidates": "ایندیانا, رودیژا, یوگسلاوی, کانادا, تایوان, سوئد, ترکیه, میشیگان, گجرات, مالزی",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "اسلام‌آباد",
+      "object": "پاکستان",
+      "object_candidates": "مالت, گجرات, ماداگاسکار, لیتوانی, گرجستان, لیبی, تایلند, کنیا, بلیز, پاکستان",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "کاتماندو",
+      "object": "نپال",
+      "object_candidates": "رودیژا, شهرستان آلبا, ایتالیا, استونی, ازبکستان, براندنبورگ, پروانس, نیجر, الجزایر, نپال",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "خارطوم",
+      "object": "سودان",
+      "object_candidates": "اوکراین, آلاسکا, استان کبک, پروانس, لیبریا, ویکتوریا, پرو, کوبا, کرالا, سودان",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "ویلنیوس",
+      "object": "لیتوانی",
+      "object_candidates": "نابارا, بنین, شهرستان آلبا, کلرادو, نیجر, نیجریه, بوتسوانا, هاریانا, هسن, لیتوانی",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "بیروت",
+      "object": "لبنان",
+      "object_candidates": "فیلیپین, کوبا, کنیا, گوانگ‌دونگ, کاتالونیا, بوتان, کانادا, ویتنام, ماساچوست, لبنان",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "لیسبون",
+      "object": "پرتغال",
+      "object_candidates": "نروژ, زیمبابوه, مکزیک, زاکسن, سیسیل, ولز, لتونی, استرالیا, لیبریا, پرتغال",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "لوآندا",
+      "object": "آنگولا",
+      "object_candidates": "هند, هائیتی, لتونی, ژاپن, کرواسی, پاکستان, یوگسلاوی, مانیتوبا, تایلند, آنگولا",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "مسکو",
+      "object": "روسیه",
+      "object_candidates": "تایلند, ماداگاسکار, کنیا, آیووا, کوئینزلند, بحرین, افغانستان, رواندا, آلاسکا, روسیه",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "وینیپگ",
+      "object": "مانیتوبا",
+      "object_candidates": "لهستان, آلبرتا, زامبیا, آراگون, هائیتی, فیلیپین, شهرستان آلبا, تایوان, مجارستان, مانیتوبا",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "لیلونگوه",
+      "object": "مالاوی",
+      "object_candidates": "وایومینگ, افغانستان, کوئینزلند, چاد, استان کبک, تانزانیا, لهستان, کنیا, بوهم, مالاوی",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "مکزیکو سیتی",
+      "object": "مکزیک",
+      "object_candidates": "انتاریو, لیبریا, جمهوری آذربایجان, فلوریدا, گجرات, اسپانیا, ارمنستان, ساردنی, بیهار, مکزیک",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "ماپوتو",
+      "object": "موزامبیک",
+      "object_candidates": "پاکستان, غنا, بنگلادش, اندونزی, آرکانزاس, آنگولا, کانادا, نیجر, لائوس, موزامبیک",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "بوستون",
+      "object": "ماساچوست",
+      "object_candidates": "میشیگان, مجارستان, باربادوس, شهرستان آلبا, بوتان, آلبانی, اسپانیا, کاتالونیا, قرقیزستان, ماساچوست",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "اتاوا",
+      "object": "کانادا",
+      "object_candidates": "ماساچوست, ساراواک, اتریش, تاسمانی, کالیفرنیا, آلاسکا, کوئینزلند, گرجستان, گینه, کانادا",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "مونته‌ویدئو",
+      "object": "اروگوئه",
+      "object_candidates": "مینه‌سوتا, هائیتی, رودیژا, هندوراس, آرکانزاس, فلوریدا, پنجاب, رومانی, قطر, اروگوئه",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "منامه",
+      "object": "بحرین",
+      "object_candidates": "پرتغال, پیمونت, آرژانتین, تگزاس, کانتیکت, نیجر, لائوس, غنا, اوگاندا, بحرین",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "بنگلور",
+      "object": "کارناتاکا",
+      "object_candidates": "آرژانتین, قزاقستان, مالاوی, گرینلند, کامبوج, ازبکستان, هلند, ساموآ, بلغارستان, کارناتاکا",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "بوداپست",
+      "object": "مجارستان",
+      "object_candidates": "شهرستان آلبا, پروانس, نورماندی, ارمنستان, عراق, پنجاب, لیبریا, مانیتوبا, هلند, مجارستان",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "تگوسیگالپا",
+      "object": "هندوراس",
+      "object_candidates": "تونس, کویت, راجستان, بورگوین, آکسفوردشایر, شهرستان آلبا, آرکانزاس, تاسمانی, نورماندی, هندوراس",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "گاندی‌نگر",
+      "object": "گجرات",
+      "object_candidates": "یوتا, کرواسی, کاتالونیا, مالاوی, ساردنی, فرانسه, هائیتی, تایوان, بورگوین, گجرات",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "پودگوریتسا",
+      "object": "مونته‌نگرو",
+      "object_candidates": "بنین, ویکتوریا, تنسی, یمن, رومانی, اکوادور, سیچوآن, هائیتی, زالتسبورگ, مونته‌نگرو",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "تورنتو",
+      "object": "انتاریو",
+      "object_candidates": "ساموآ, بحرین, بوهم, بلغارستان, راجستان, فیجی, کویت, سیسیل, صربستان, انتاریو",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "پاناماسیتی",
+      "object": "پاناما",
+      "object_candidates": "پنسیلوانیا, آرژانتین, ویکتوریا, کانادا, لبنان, زاکسن, کوزووو, کنیا, اسپانیا, پاناما",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "داکار",
+      "object": "سنگال",
+      "object_candidates": "گابن, لتونی, میشیگان, بوتسوانا, یوتا, بلژیک, لیتوانی, تلنگانا, وایومینگ, سنگال",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "لاگوس",
+      "object": "نیجریه",
+      "object_candidates": "استان کبک, کوزووو, آکسفوردشایر, مصر, یون‌نان, اسکاتلند, اوکراین, بنین, تانزانیا, نیجریه",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "بانکوک",
+      "object": "تایلند",
+      "object_candidates": "پرتغال, کرواسی, مجارستان, یوگسلاوی, اردن, کارناتاکا, آیووا, قبرس, لیبریا, تایلند",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "سانتیاگو",
+      "object": "شیلی",
+      "object_candidates": "نروژ, اوگاندا, رودیژا, کویت, کالیفرنیا, مراکش, ایندیانا, پرتغال, بنگلادش, شیلی",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "دهلی نو",
+      "object": "هند",
+      "object_candidates": "کانتیکت, کرالا, عمان, انگلستان, هسن, راجستان, اکوادور, فیجی, فنلاند, هند",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "بلگراد",
+      "object": "صربستان",
+      "object_candidates": "فلوریدا, تونس, انگلستان, مهاراشترا, کرواسی, بیهار, نابارا, شهرستان آلبا, گواتمالا, صربستان",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "کالیاری",
+      "object": "ساردنی",
+      "object_candidates": "زاکسن, پیمونت, تاسمانی, هائیتی, نابارا, اسلوونی, کویت, استان کبک, بلژیک, ساردنی",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "کاراکاس",
+      "object": "ونزوئلا",
+      "object_candidates": "ترکیه, گوانگ‌دونگ, یوگسلاوی, نپال, نورد, اوکراین, بلاروس, سوریه, سیچوآن, ونزوئلا",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "نیکوزیا",
+      "object": "قبرس",
+      "object_candidates": "کانتیکت, یونان, یوگسلاوی, هاوائی, مکزیک, ماداگاسکار, راجستان, کوبا, افغانستان, قبرس",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "کی‌یف",
+      "object": "اوکراین",
+      "object_candidates": "شهرستان آلبا, اندونزی, سومالی, لیتوانی, زالتسبورگ, غنا, اتیوپی, برزیل, لائوس, اوکراین",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "تایپه",
+      "object": "تایوان",
+      "object_candidates": "توسکانی, سوئیس, الجزایر, مکزیک, زاکسن, کوئینزلند, سوریه, باربادوس, زامبیا, تایوان",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "آبوجا",
+      "object": "نیجریه",
+      "object_candidates": "پروانس, شیلی, اوکراین, باربادوس, آلبانی, گابن, ساردنی, گرینلند, هائیتی, نیجریه",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "صوفیه",
+      "object": "بلغارستان",
+      "object_candidates": "مالت, اکلاهما, باربادوس, تگزاس, توسکانی, لیبریا, بلاروس, کرت, گابن, بلغارستان",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "سالت‌لیک‌سیتی",
+      "object": "یوتا",
+      "object_candidates": "نیکاراگوئه, ترکیه, قطر, چاد, یون‌نان, دانمارک, مانیتوبا, ویکتوریا, ونزوئلا, یوتا",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "پالرمو",
+      "object": "سیسیل",
+      "object_candidates": "کامبوج, بورگوین, برونئی, اسکاتلند, کاتالونیا, پروانس, مراکش, برزیل, گوا, سیسیل",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "تهران",
+      "object": "ایران",
+      "object_candidates": "بلاروس, آرکانزاس, رودیژا, ویکتوریا, یوگسلاوی, زاکسن, تانزانیا, صربستان, مالزی, ایران",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "کبک",
+      "object": "استان کبک",
+      "object_candidates": "نیجریه, بلژیک, تلنگانا, بوتسوانا, دبی، امارات, جمهوری آذربایجان, برزیل, ایران, اسرائیل, استان کبک",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "پراگ",
+      "object": "چکسلواکی",
+      "object_candidates": "بلیز, عراق, توسکانی, تایوان, اتیوپی, کویت, پروانس, سودان, الجزایر, چکسلواکی",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "داکا",
+      "object": "بنگلادش",
+      "object_candidates": "شهرستان آلبا, قرقیزستان, وایومینگ, اسلوونی, افغانستان, بایرن, کانادا, رواندا, غنا, بنگلادش",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "بریزبن",
+      "object": "کوئینزلند",
+      "object_candidates": "اندونزی, ماساچوست, زالتسبورگ, اسلواکی, صربستان, کویت, ایران, شهرستان آلبا, مهاراشترا, کوئینزلند",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "هراره",
+      "object": "زیمبابوه",
+      "object_candidates": "مراکش, آلمان, نیجریه, تاسمانی, کارناتاکا, استرالیا, هسن, بلاروس, بوهم, زیمبابوه",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "اکس‌آن‌پروانس",
+      "object": "پروانس",
+      "object_candidates": "هائیتی, کرالا, کامبوج, اروگوئه, پاناما, ترکیه, چاد, توسکانی, آیووا, پروانس",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "مونروویا",
+      "object": "لیبریا",
+      "object_candidates": "گجرات, انگلستان, تانزانیا, بلیز, جمهوری آذربایجان, نورد, سودان, قبرس, فرانسه, لیبریا",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "برن",
+      "object": "سوئیس",
+      "object_candidates": "دانمارک, مکزیک, فرانسه, بوتان, انگلستان, اندونزی, انتاریو, آلاسکا, سوئد, سوئیس",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "آدیس آبابا",
+      "object": "اتیوپی",
+      "object_candidates": "موریس, لهستان, زالتسبورگ, نپال, مجارستان, سنگال, بوتان, افغانستان, عمان, اتیوپی",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "زاگرب",
+      "object": "کرواسی",
+      "object_candidates": "پرتغال, نپال, بحرین, آیووا, بیهار, بلاروس, گوانگ‌دونگ, تاسمانی, تایلند, کرواسی",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "پنوم‌پن",
+      "object": "کامبوج",
+      "object_candidates": "بولیوی, چکسلواکی, ژاپن, کوزووو, لسترشایر, ازبکستان, آلاسکا, برونئی, بنگلادش, کامبوج",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "دوشنبه",
+      "object": "تاجیکستان",
+      "object_candidates": "بنگلادش, تلنگانا, فیلیپین, کوبا, هسن, بایرن, صباح, آرکانزاس, توسکانی, تاجیکستان",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "لنسینگ",
+      "object": "میشیگان",
+      "object_candidates": "سیسیل, ولز, هند, بوهم, اوگاندا, قبرس, برونئی, لتونی, فیلیپین, میشیگان",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "کوچینگ",
+      "object": "ساراواک",
+      "object_candidates": "پادشاهی انگلیس, لیبی, بولیوی, نپال, ان, فرانسه, آیداهو, تاسمانی, اسلواکی, ساراواک",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "مانیل",
+      "object": "فیلیپین",
+      "object_candidates": "شیلی, غنا, ماساچوست, مکزیک, دبی، امارات, اسکاتلند, ونزوئلا, مریلند, اوکراین, فیلیپین",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "وست‌مینستر",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "لیتوانی, شیلی, سیسیل, تاسمانی, فنلاند, گواتمالا, نیجریه, کنیا, آراگون, پادشاهی انگلیس",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "کیتو",
+      "object": "اکوادور",
+      "object_candidates": "بلیز, تایلند, صباح, کرواسی, کارناتاکا, تایوان, کالیفرنیا, برزیل, قزاقستان, اکوادور",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "لستر",
+      "object": "لسترشایر",
+      "object_candidates": "استان کبک, اسلوونی, آرژانتین, آیووا, آلبانی, بلاروس, چکسلواکی, ساراواک, فنلاند, لسترشایر",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "کون‌مینگ",
+      "object": "یون‌نان",
+      "object_candidates": "بیهار, اسکاتلند, کرالا, شهرستان آلبا, نروژ, هندوراس, کالیفرنیا, ویکتوریا, مینه‌سوتا, یون‌نان",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "ماناگوآ",
+      "object": "نیکاراگوئه",
+      "object_candidates": "کرت, کانادا, هاوائی, مکزیک, گوانگ‌دونگ, مجارستان, آرکانزاس, فیجی, زامبیا, نیکاراگوئه",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "سوکره",
+      "object": "بولیوی",
+      "object_candidates": "پنسیلوانیا, صربستان, لیبی, شهرستان آلبا, زیمبابوه, تونس, مصر, اروگوئه, تایلند, بولیوی",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "هونولولو",
+      "object": "هاوائی",
+      "object_candidates": "بلیز, اسلوونی, کرالا, فرانسه, ویکتوریا, آلبرتا, مانیتوبا, کالیفرنیا, سنگال, هاوائی",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "وینتیان",
+      "object": "لائوس",
+      "object_candidates": "گینه, ماساچوست, گرجستان, پروانس, ساردنی, چاد, لیبی, کلرادو, یونان, لائوس",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "چنگدو",
+      "object": "سیچوآن",
+      "object_candidates": "پادشاهی یهودا, شهرستان آلبا, بنین, رواندا, اوگاندا, گوا, لهستان, میشیگان, کانادا, سیچوآن",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "ساراگوسا",
+      "object": "آراگون",
+      "object_candidates": "تلنگانا, مونته‌نگرو, ترکیه, یوتا, کانزاس, کانتون لوکزامبورگ, بوتان, مکزیک, اوکراین, آراگون",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "آکسفورد",
+      "object": "آکسفوردشایر",
+      "object_candidates": "فنلاند, لسترشایر, هائیتی, شهرستان آلبا, لهستان, نامیبیا, اسرائیل, بنگلادش, آلاسکا, آکسفوردشایر",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "چندی‌گر",
+      "object": "هاریانا",
+      "object_candidates": "ایران, برزیل, مانیتوبا, پیمونت, مالاوی, قرقیزستان, زامبیا, ارمنستان, کامبوج, هاریانا",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "نیامی",
+      "object": "نیجر",
+      "object_candidates": "آراگون, گابن, ونزوئلا, پیمونت, بلیز, ایران, گینه, قزاقستان, روسیه, نیجر",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "نانجینگ",
+      "object": "تایوان",
+      "object_candidates": "گواتمالا, اردن, لوئیزیانا, صربستان, استرالیا, زاکسن, زامبیا, مالت, آکسفوردشایر, تایوان",
+      "index": 3884
+    },
+    {
+      "subject": "دوحه",
+      "object": "قطر",
+      "object_candidates": "ازبکستان, مالت, بوتان, ایندیانا, اسلواکی, کرت, ژاپن, پنجاب, انگلستان, قطر",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "هراره",
+      "object": "رودیژا",
+      "object_candidates": "رومانی, گوانگ‌دونگ, فیجی, مونته‌نگرو, مالزی, کانزاس, عراق, مراکش, کرواسی, رودیژا",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "آپیا",
+      "object": "ساموآ",
+      "object_candidates": "پادشاهی انگلیس, بنگلادش, آیداهو, فنلاند, کامبوج, مراکش, بولیوی, گینه, بلاروس, ساموآ",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "براتیسلاوا",
+      "object": "اسلواکی",
+      "object_candidates": "نابارا, تانزانیا, آیداهو, چاد, میشیگان, ایرلند, اندونزی, شهرستان آلبا, ژاپن, اسلواکی",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "کوتا کینابالو",
+      "object": "صباح",
+      "object_candidates": "تاسمانی, اکلاهما, فلاندر, مراکش, نورد, گابن, جمهوری آذربایجان, سنگال, کرواسی, صباح",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "تاشکند",
+      "object": "ازبکستان",
+      "object_candidates": "یوگسلاوی, فرانسه, هائیتی, میشیگان, نروژ, افغانستان, پنسیلوانیا, آلبرتا, لیتوانی, ازبکستان",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "دودوما",
+      "object": "تانزانیا",
+      "object_candidates": "کانزاس, بنگلادش, نورد, کرواسی, کلرادو, استان کبک, رواندا, اردن, جمهوری آذربایجان, تانزانیا",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "تیرانا",
+      "object": "آلبانی",
+      "object_candidates": "کرالا, پروانس, نیجریه, لیبی, فلاندر, زامبیا, سیچوآن, بلاروس, صربستان, آلبانی",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "کامپالا",
+      "object": "اوگاندا",
+      "object_candidates": "لتونی, سوریه, روسیه, سوئیس, تنسی, تایلند, اسلواکی, هاریانا, بوتسوانا, اوگاندا",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "هانوی",
+      "object": "ویتنام",
+      "object_candidates": "اتریش, عمان, گواتمالا, یمن, بنین, ازبکستان, دانمارک, نورماندی, کاتالونیا, ویتنام",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "عدن",
+      "object": "یمن",
+      "object_candidates": "پرو, لائوس, شهرستان آلبا, نورماندی, روسیه, ساموآ, اسرائیل, نیکاراگوئه, بوهم, یمن",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "لوساکا",
+      "object": "زامبیا",
+      "object_candidates": "کانتون لوکزامبورگ, تاسمانی, جمهوری آذربایجان, یمن, استونی, پرتغال, کنیا, گوا, اندونزی, زامبیا",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "ایروان",
+      "object": "ارمنستان",
+      "object_candidates": "مالت, آکسفوردشایر, کلرادو, عراق, مصر, ساموآ, توسکانی, سوریه, لسترشایر, ارمنستان",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "کویت",
+      "object": "کویت",
+      "object_candidates": "ارمنستان, فلاندر, زاکسن, برزیل, یمن, مالزی, ژاپن, گواتمالا, ازبکستان, کویت",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "پورت‌لوئیس",
+      "object": "موریس",
+      "object_candidates": "توسکانی, تنسی, گواتمالا, اردن, اسلواکی, هاریانا, زاکسن, گابن, کلرادو, موریس",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "آکرا",
+      "object": "غنا",
+      "object_candidates": "وایومینگ, کالیفرنیا, بنین, هلند, ساراواک, ایران, کانزاس, بنگلادش, سوئد, غنا",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "جایپور",
+      "object": "راجستان",
+      "object_candidates": "انگلستان, نپال, کویت, لائوس, لیتوانی, تایلند, ارمنستان, بنین, روسیه, راجستان",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "مینسک",
+      "object": "بلاروس",
+      "object_candidates": "فنلاند, لتونی, گرینلند, اسلوونی, آلبرتا, برونئی, آلمان, نورماندی, استان کبک, بلاروس",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "دی موین، آیووا",
+      "object": "آیووا",
+      "object_candidates": "پنجاب, یوگسلاوی, ماداگاسکار, ساردنی, لسترشایر, استونی, بحرین, مالاوی, آلبانی, آیووا",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "پتنا",
+      "object": "بیهار",
+      "object_candidates": "کانادا, کلرادو, لیتوانی, عمان, پاناما, برزیل, کارناتاکا, براندنبورگ, افغانستان, بیهار",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "باتون‌روژ",
+      "object": "لوئیزیانا",
+      "object_candidates": "پادشاهی یهودا, یمن, دانمارک, کرواسی, لتونی, سوئیس, انتاریو, براندنبورگ, بولیوی, لوئیزیانا",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "یوگیاکارتا",
+      "object": "اندونزی",
+      "object_candidates": "ایندیانا, هندوراس, بحرین, تانزانیا, بوهم, اروگوئه, رواندا, کوئینزلند, نامیبیا, اندونزی",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "نورسلطان",
+      "object": "قزاقستان",
+      "object_candidates": "صباح, اتیوپی, پاناما, مینه‌سوتا, سوئد, کرواسی, پرتغال, ارمنستان, گابن, قزاقستان",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "ویسبادن",
+      "object": "هسن",
+      "object_candidates": "کارناتاکا, جمهوری آذربایجان, مالزی, لائوس, بورگوین, پنسیلوانیا, بلاروس, پیمونت, ویکتوریا, هسن",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "دیژون",
+      "object": "بورگوین",
+      "object_candidates": "پروانس, کرواسی, مینه‌سوتا, کانتون لوکزامبورگ, آلبانی, نیجریه, کنیا, هاوائی, پیمونت, بورگوین",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "روان",
+      "object": "نورماندی",
+      "object_candidates": "سوئیس, لتونی, یون‌نان, میشیگان, آلبرتا, کوبا, تونس, اندونزی, بلژیک, نورماندی",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "اکلاهوما سیتی",
+      "object": "اکلاهما",
+      "object_candidates": "کلرادو, زیمبابوه, قزاقستان, ماساچوست, استونی, کانادا, مکزیک, لسترشایر, آکسفوردشایر, اکلاهما",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "لیتل راک (آرکانزاس)",
+      "object": "آرکانزاس",
+      "object_candidates": "تایوان, بایرن, ویتنام, هاوائی, الجزایر, بولیوی, آنگولا, لیتوانی, آلاسکا, آرکانزاس",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "انجامنا",
+      "object": "چاد",
+      "object_candidates": "رواندا, سنگال, سومالی, اسلواکی, انتاریو, فنلاند, نامیبیا, هائیتی, نورماندی, چاد",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "امان",
+      "object": "اردن",
+      "object_candidates": "استرالیا, پروانس, دانمارک, گواتمالا, هندوراس, نامیبیا, تگزاس, سوریه, بوهم, اردن",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "تریواندروم",
+      "object": "کرالا",
+      "object_candidates": "اردن, مانیتوبا, سومالی, کرواسی, فلوریدا, اسکاتلند, چاد, ماساچوست, کانتون لوکزامبورگ, کرالا",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "بریج‌تاون",
+      "object": "باربادوس",
+      "object_candidates": "تنسی, ایتالیا, غنا, آلاسکا, پادشاهی انگلیس, صباح, تاجیکستان, کانادا, آکسفوردشایر, باربادوس",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "شهر دبی",
+      "object": "دبی، امارات",
+      "object_candidates": "کانتون لوکزامبورگ, ولز, تونس, استرالیا, پنجاب, ارمنستان, پرتغال, مالت, تلنگانا, دبی، امارات",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "پوتسدام",
+      "object": "براندنبورگ",
+      "object_candidates": "اکوادور, نابارا, کوبا, کانتیکت, ونزوئلا, فلاندر, دانمارک, یوتا, آراگون, براندنبورگ",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "آنتاناناریوو",
+      "object": "ماداگاسکار",
+      "object_candidates": "فلوریدا, آیووا, پادشاهی انگلیس, عمان, فرانسه, غنا, تایلند, سوئیس, اوکراین, ماداگاسکار",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "باماکو",
+      "object": "مالی",
+      "object_candidates": "آراگون, ماساچوست, بورگوین, فیجی, استونی, مالاوی, شیلی, فلاندر, پیمونت, مالی",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "آناپولیس",
+      "object": "مریلند",
+      "object_candidates": "اسلواکی, تونس, اسلوونی, تگزاس, نامیبیا, فلوریدا, نروژ, هند, استونی, مریلند",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "حیدرآباد",
+      "object": "تلنگانا",
+      "object_candidates": "بلاروس, الجزایر, نابارا, انگلستان, لائوس, لیتوانی, کرالا, لبنان, هاریانا, تلنگانا",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "چندی‌گر",
+      "object": "پنجاب",
+      "object_candidates": "گجرات, ساموآ, مهاراشترا, عراق, پرتغال, مالاوی, فلاندر, بایرن, اندونزی, پنجاب",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "بورگ-آن-برس",
+      "object": "ان",
+      "object_candidates": "اتریش, مریلند, اسلواکی, بوتان, گوا, ویتنام, لهستان, هندوراس, آلاسکا, ان",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "سووا",
+      "object": "فیجی",
+      "object_candidates": "آیووا, ویکتوریا, آرژانتین, بایرن, گوانگ‌دونگ, هند, توسکانی, پروانس, راجستان, فیجی",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "هریسبورگ",
+      "object": "پنسیلوانیا",
+      "object_candidates": "کانزاس, ونزوئلا, ایتالیا, بیهار, راجستان, لائوس, لیبی, اسلوونی, مانیتوبا, پنسیلوانیا",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "صنعا",
+      "object": "یمن",
+      "object_candidates": "سیسیل, بیهار, نروژ, آلبرتا, یونان, لبنان, فیجی, بنین, هاریانا, یمن",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "پانجی",
+      "object": "گوا",
+      "object_candidates": "لیبی, رواندا, عراق, اکلاهما, پرو, گرینلند, یونان, قرقیزستان, رومانی, گوا",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "بندر سری بگاوان",
+      "object": "برونئی",
+      "object_candidates": "ساموآ, آکسفوردشایر, لیبی, مالت, هسن, کرواسی, هلند, آیداهو, گابن, برونئی",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "شاین، وایومینگ",
+      "object": "وایومینگ",
+      "object_candidates": "قبرس, ساموآ, گینه, آلمان, مانیتوبا, راجستان, مجارستان, آنگولا, اوکراین, وایومینگ",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "پامپلونا",
+      "object": "نابارا",
+      "object_candidates": "اردن, هندوراس, بلاروس, گواتمالا, بورگوین, شیلی, کرت, کرالا, گوا, نابارا",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "لیبرویل",
+      "object": "گابن",
+      "object_candidates": "بولیوی, اوکراین, گرجستان, تلنگانا, فلاندر, زالتسبورگ, انگلستان, کانزاس, ویتنام, گابن",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "پریشتینا",
+      "object": "کوزووو",
+      "object_candidates": "نیجر, اسپانیا, مجارستان, فلوریدا, بلاروس, کرالا, فیلیپین, بوتسوانا, سنگال, کوزووو",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "نوک",
+      "object": "گرینلند",
+      "object_candidates": "یون‌نان, آنگولا, کانتیکت, دبی، امارات, رومانی, استان کبک, ونزوئلا, چاد, آلمان, گرینلند",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "وینچستر",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "یونان, ژاپن, پاکستان, هند, غنا, چکسلواکی, کالیفرنیا, ولز, کاتالونیا, پادشاهی انگلیس",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "بلگراد",
+      "object": "یوگسلاوی",
+      "object_candidates": "بوتان, ایتالیا, کوزووو, بایرن, نابارا, کرت, زامبیا, استرالیا, لیتوانی, یوگسلاوی",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "هارتفورد",
+      "object": "کانتیکت",
+      "object_candidates": "اوکراین, صباح, تایوان, هلند, کلرادو, نروژ, مالاوی, مانیتوبا, کویت, کانتیکت",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "لیما",
+      "object": "پرو",
+      "object_candidates": "ونزوئلا, ازبکستان, وایومینگ, صباح, سوئیس, موریس, کاتالونیا, یمن, ماساچوست, پرو",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "کوناکری",
+      "object": "گینه",
+      "object_candidates": "عمان, فرانسه, هائیتی, کانادا, نامیبیا, رواندا, گابن, آیووا, برزیل, گینه",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "جونو، آلاسکا",
+      "object": "آلاسکا",
+      "object_candidates": "اسکاتلند, نورد, آکسفوردشایر, استرالیا, بیهار, تانزانیا, هند, پنجاب, هسن, آلاسکا",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "بلموپان",
+      "object": "بلیز",
+      "object_candidates": "هند, تایوان, انگلستان, اکوادور, نورماندی, لهستان, میشیگان, گینه, ماداگاسکار, بلیز",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "ساکرامنتو",
+      "object": "کالیفرنیا",
+      "object_candidates": "برونئی, موزامبیک, اسلواکی, استان کبک, استرالیا, اسرائیل, پنجاب, شیلی, سوئد, کالیفرنیا",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "سیتی لندن",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "تایلند, بلیز, آیووا, قطر, فلوریدا, مجارستان, غنا, ساردنی, پادشاهی یهودا, پادشاهی انگلیس",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "کیگالی",
+      "object": "رواندا",
+      "object_candidates": "پنسیلوانیا, آرژانتین, کانزاس, گابن, بیهار, نابارا, بوتان, نورماندی, تاسمانی, رواندا",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "شهر بروکسل",
+      "object": "بلژیک",
+      "object_candidates": "لائوس, اکلاهما, تایوان, نپال, ایتالیا, نابارا, فرانسه, گواتمالا, گوا, بلژیک",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "تیمفو",
+      "object": "بوتان",
+      "object_candidates": "هند, دانمارک, ویتنام, مجارستان, هسن, مالاوی, چکسلواکی, تاسمانی, کانتون لوکزامبورگ, بوتان",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "نافپلیو",
+      "object": "یونان",
+      "object_candidates": "ترکیه, تلنگانا, لیبریا, انگلستان, تاسمانی, غنا, برزیل, نیجریه, اسپانیا, یونان",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "البا لولیا",
+      "object": "شهرستان آلبا",
+      "object_candidates": "سومالی, هسن, سوئد, اندونزی, عمان, اوکراین, تاسمانی, یونان, لهستان, شهرستان آلبا",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "بویزی، آیداهو",
+      "object": "آیداهو",
+      "object_candidates": "رواندا, کانتون لوکزامبورگ, رودیژا, آکسفوردشایر, بلاروس, اوکراین, عراق, پاناما, فلوریدا, آیداهو",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "نشویل",
+      "object": "تنسی",
+      "object_candidates": "نیجریه, بایرن, استان کبک, بنگلادش, هلند, پادشاهی انگلیس, پنجاب, اتیوپی, لبنان, تنسی",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "آرلن (بلژیک)",
+      "object": "کانتون لوکزامبورگ",
+      "object_candidates": "یونان, بوتسوانا, اکلاهما, نورماندی, کاتالونیا, پادشاهی یهودا, باربادوس, کارناتاکا, پاکستان, کانتون لوکزامبورگ",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "زالتسبورگ",
+      "object": "زالتسبورگ",
+      "object_candidates": "کاتالونیا, کالیفرنیا, غنا, تانزانیا, نیجریه, ولز, نورد, تلنگانا, گجرات, زالتسبورگ",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "آستین، تگزاس",
+      "object": "تگزاس",
+      "object_candidates": "زیمبابوه, افغانستان, بیهار, تاجیکستان, آرژانتین, استان کبک, لوئیزیانا, اوکراین, ایندیانا, تگزاس",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "سنت پل، مینه‌سوتا",
+      "object": "مینه‌سوتا",
+      "object_candidates": "زاکسن, هسن, پاناما, یوتا, لیبریا, یوگسلاوی, اسلواکی, دانمارک, چکسلواکی, مینه‌سوتا",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "مسقط",
+      "object": "عمان",
+      "object_candidates": "بلغارستان, نروژ, تانزانیا, کالیفرنیا, انگلستان, بحرین, اوگاندا, برونئی, نابارا, عمان",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "تالاهاسی",
+      "object": "فلوریدا",
+      "object_candidates": "عراق, صباح, مجارستان, جمهوری آذربایجان, کانادا, لتونی, بحرین, کرالا, صربستان, فلوریدا",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "تفلیس",
+      "object": "گرجستان",
+      "object_candidates": "کنیا, هند, تایلند, چکسلواکی, ایندیانا, بحرین, سوریه, آلبرتا, فیجی, گرجستان",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "شهر بروکسل",
+      "object": "فلاندر",
+      "object_candidates": "کرالا, آنگولا, کرواسی, یون‌نان, الجزایر, کانادا, استان کبک, پرو, ماساچوست, فلاندر",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "الخلیل",
+      "object": "پادشاهی یهودا",
+      "object_candidates": "ساردنی, شیلی, گواتمالا, بایرن, توسکانی, زاکسن, بولیوی, هاوائی, انتاریو, پادشاهی یهودا",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "لیل",
+      "object": "نورد",
+      "object_candidates": "هاریانا, استونی, اتریش, کلرادو, باربادوس, زیمبابوه, موریس, زاکسن, بلیز, نورد",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "توپیکا",
+      "object": "کانزاس",
+      "object_candidates": "ارمنستان, یوگسلاوی, اسپانیا, اتریش, کوبا, آنگولا, گابن, کامبوج, افغانستان, کانزاس",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "سانتیاگو د کمپوستلا",
+      "object": "گالیسیا",
+      "object_candidates": "لیبی, زالتسبورگ, نروژ, تونس, تلنگانا, آلاسکا, راجستان, بلیز, توسکانی, گالیسیا",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

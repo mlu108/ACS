@@ -1,0 +1,1710 @@
+{
+  "name": "continent",
+  "prompt_templates": [
+    "Σε ποία ηπείρο βρίσκεται η <subject>; Η απάντηση είναι: <mask>",
+    "Ποια είναι η ηπείρος της <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια ηπείρο μπορείτε να βρείτε την <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποιο μέρος του κόσμου σε όρους ηπείρων ανήκει η <subject>; Η απάντηση είναι: <mask>",
+    "Πού μπορούμε να βρούμε την <subject> σε όρους ηπείρων; Η απάντηση είναι: <mask>",
+    " Η ήπειρος όπου βρίσκεται το <subject> ονομάζεται <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Τουρκία",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αμερική, Ανταρκτική, Ωκεανία, Αφρική, Ασία",
+      "index": 3462,
+      "subject_en": "Turkey",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ναμίμπια",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ωκεανία, Ευρώπη, Ασία, Αμερική, Αφρική",
+      "index": 3463,
+      "subject_en": "Namibia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Αυστραλιανή Ανταρκτική Περιοχή",
+      "object": "Ανταρκτική",
+      "object_candidates": "Αφρική, Ασία, Αμερική, Ευρώπη, Ωκεανία, Ανταρκτική",
+      "index": 3464,
+      "subject_en": "Australian Antarctic Territory",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Κοτσί",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Αφρική, Ωκεανία, Αμερική, Ασία",
+      "index": 3465,
+      "subject_en": "Kochi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Γερμανία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αφρική, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3466,
+      "subject_en": "Germany",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τσέσιν",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Αφρική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3467,
+      "subject_en": "Cieszyn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ένωση Σοβιετικών Σοσιαλιστικών Δημοκρατιών",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ασία, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3468,
+      "subject_en": "Soviet Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γιόρκσιρ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αμερική, Ασία, Αφρική, Ωκεανία, Ευρώπη",
+      "index": 3469,
+      "subject_en": "Yorkshire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νήσοι Πίτκερν",
+      "object": "Ωκεανία",
+      "object_candidates": "Ασία, Αφρική, Ανταρκτική, Ευρώπη, Αμερική, Ωκεανία",
+      "index": 3470,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Αρμενία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Αφρική, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3471,
+      "subject_en": "Armenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ανόι",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Αμερική, Ωκεανία, Αφρική, Ασία",
+      "index": 3472,
+      "subject_en": "Hanoi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Τάλιν",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ασία, Ανταρκτική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3473,
+      "subject_en": "Tallinn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βόρεια Βραβάντη",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Ωκεανία, Αμερική, Ασία, Ευρώπη",
+      "index": 3474,
+      "subject_en": "North Brabant",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τάγος",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ασία, Ευρώπη",
+      "index": 3475,
+      "subject_en": "Tagus river",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Σαουδική Αραβία",
+      "object": "Ασία",
+      "object_candidates": "Αμερική, Ευρώπη, Ωκεανία, Αφρική, Ανταρκτική, Ασία",
+      "index": 3476,
+      "subject_en": "Saudi Arabia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Αυστραλία",
+      "object": "Ωκεανία",
+      "object_candidates": "Ανταρκτική, Αμερική, Αφρική, Ευρώπη, Ασία, Ωκεανία",
+      "index": 3477,
+      "subject_en": "Australia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Ερυθραία",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ασία, Ωκεανία, Αμερική, Ευρώπη, Αφρική",
+      "index": 3478,
+      "subject_en": "Eritrea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Τουλούζη",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3479,
+      "subject_en": "Toulouse",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νότια Κορέα",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Αφρική, Ωκεανία, Αμερική, Ασία",
+      "index": 3480,
+      "subject_en": "South Korea",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Χάγη",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αφρική, Ασία, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3481,
+      "subject_en": "The Hague",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Δανία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αμερική, Ανταρκτική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3482,
+      "subject_en": "Denmark",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ηνωμένο Βασίλειο",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ανταρκτική, Αφρική, Ασία, Ωκεανία, Ευρώπη",
+      "index": 3483,
+      "subject_en": "United Kingdom",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βρετανική Αυτοκρατορία",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Αμερική, Ευρώπη, Ωκεανία, Ανταρκτική, Αφρική",
+      "index": 3484,
+      "subject_en": "British Empire",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Νότια Ασία",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Αμερική, Αφρική, Ευρώπη, Ασία",
+      "index": 3485,
+      "subject_en": "South Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βουλγαρία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ασία, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3486,
+      "subject_en": "Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Πετσόρα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αφρική, Αμερική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3487,
+      "subject_en": "Pechora River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κιριμπάτι",
+      "object": "Ωκεανία",
+      "object_candidates": "Αφρική, Αμερική, Ασία, Ανταρκτική, Ευρώπη, Ωκεανία",
+      "index": 3488,
+      "subject_en": "Kiribati",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Άιγκερ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αμερική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3489,
+      "subject_en": "Eiger",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τσεχοσλοβακία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Αφρική, Ασία, Αμερική, Ευρώπη",
+      "index": 3490,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Αυστρία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Αφρική, Ανταρκτική, Αμερική, Ευρώπη",
+      "index": 3491,
+      "subject_en": "Austria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ελλάδα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3492,
+      "subject_en": "Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ουαλία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Ασία, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3493,
+      "subject_en": "Wales",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ινδονησία",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ανταρκτική, Ευρώπη, Αμερική, Ωκεανία, Ασία",
+      "index": 3494,
+      "subject_en": "Indonesia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βιετνάμ",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αμερική, Ωκεανία, Αφρική, Ευρώπη, Ασία",
+      "index": 3495,
+      "subject_en": "Vietnam",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ευρωπαϊκή Ένωση",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Αμερική, Ασία, Ωκεανία, Ανταρκτική, Ευρώπη",
+      "index": 3496,
+      "subject_en": "European Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γιουγκοσλαβία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Αμερική, Ωκεανία, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3497,
+      "subject_en": "Yugoslavia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ουαλίς και Φουτουνά",
+      "object": "Ωκεανία",
+      "object_candidates": "Ασία, Ευρώπη, Ανταρκτική, Αμερική, Αφρική, Ωκεανία",
+      "index": 3498,
+      "subject_en": "Wallis and Futuna",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Μερκία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3499,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Υπερανταρκτικά Όρη",
+      "object": "Ανταρκτική",
+      "object_candidates": "Ασία, Αμερική, Ωκεανία, Ευρώπη, Αφρική, Ανταρκτική",
+      "index": 3500,
+      "subject_en": "Transantarctic Mountains",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Τιφλίδα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Αφρική, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3501,
+      "subject_en": "Tbilisi",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βέρνη",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3502,
+      "subject_en": "Bern",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Παρίσι",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Ασία, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3503,
+      "subject_en": "Paris",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Χαμπάροφσκ",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ανταρκτική, Ωκεανία, Ευρώπη, Αμερική, Ασία",
+      "index": 3504,
+      "subject_en": "Khabarovsk",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Νέο Δελχί",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Αμερική, Ευρώπη, Ανταρκτική, Αφρική, Ασία",
+      "index": 3505,
+      "subject_en": "New Delhi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Αζερμπαϊτζάν",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ωκεανία, Ευρώπη, Ασία",
+      "index": 3506,
+      "subject_en": "Azerbaijan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Τίβερης",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αφρική, Αμερική, Ασία, Ανταρκτική, Ευρώπη",
+      "index": 3507,
+      "subject_en": "Tiber",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Σλοβενία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ανταρκτική, Αμερική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3508,
+      "subject_en": "Slovenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ποταμός Ιρτίς",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ευρώπη, Ωκεανία, Ανταρκτική, Αμερική, Ασία",
+      "index": 3509,
+      "subject_en": "Irtysh river",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Τσαντιγκάρ",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Ωκεανία, Ανταρκτική, Αμερική, Ασία",
+      "index": 3510,
+      "subject_en": "Chandigarh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Δεσποτάτο της Ηπείρου",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Ασία, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3511,
+      "subject_en": "Despotate of Epirus",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Αγγλία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ωκεανία, Ασία, Ευρώπη",
+      "index": 3512,
+      "subject_en": "England",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μητροπολιτική Γαλλία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ωκεανία, Αμερική, Ασία, Ανταρκτική, Ευρώπη",
+      "index": 3513,
+      "subject_en": "Metropolitan France",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κομόρες",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Ωκεανία, Αμερική, Ασία, Αφρική",
+      "index": 3514,
+      "subject_en": "Comoros",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ανατολική Φραγκία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Ανταρκτική, Αφρική, Ασία, Ευρώπη",
+      "index": 3515,
+      "subject_en": "East Francia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βασίλειο των Κάτω Χωρών",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ασία, Ωκεανία, Ευρώπη",
+      "index": 3516,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νησιά Μάρσαλ",
+      "object": "Ωκεανία",
+      "object_candidates": "Ανταρκτική, Ασία, Αφρική, Αμερική, Ευρώπη, Ωκεανία",
+      "index": 3517,
+      "subject_en": "Marshall Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Νταμάν και Ντιού",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ευρώπη, Αφρική, Αμερική, Ανταρκτική, Ασία",
+      "index": 3518,
+      "subject_en": "Daman and Diu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Λεσότο",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ανταρκτική, Ασία, Ευρώπη, Ωκεανία, Αφρική",
+      "index": 3519,
+      "subject_en": "Lesotho",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Λίγηρας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ασία, Αμερική, Αφρική, Ευρώπη",
+      "index": 3520,
+      "subject_en": "Loire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μαγιότ",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Αμερική, Ευρώπη, Ασία, Ωκεανία, Αφρική",
+      "index": 3521,
+      "subject_en": "Mayotte",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ομόσπονδες Πολιτείες της Μικρονησίας",
+      "object": "Ωκεανία",
+      "object_candidates": "Αμερική, Ανταρκτική, Ασία, Αφρική, Ευρώπη, Ωκεανία",
+      "index": 3522,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Βόρεια Ολλανδία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αφρική, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3523,
+      "subject_en": "North Holland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βόρεια Μακεδονία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ασία, Αμερική, Αφρική, Ευρώπη",
+      "index": 3524,
+      "subject_en": "North Macedonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Λιβερία",
+      "object": "Αφρική",
+      "object_candidates": "Ωκεανία, Ασία, Αμερική, Ανταρκτική, Ευρώπη, Αφρική",
+      "index": 3525,
+      "subject_en": "Liberia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Έλβας",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Ασία, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3526,
+      "subject_en": "Elbe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βανουάτου",
+      "object": "Ωκεανία",
+      "object_candidates": "Αφρική, Ασία, Ευρώπη, Αμερική, Ανταρκτική, Ωκεανία",
+      "index": 3527,
+      "subject_en": "Vanuatu",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Κραϊόβα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ανταρκτική, Ωκεανία, Αφρική, Αμερική, Ευρώπη",
+      "index": 3528,
+      "subject_en": "Craiova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Χιμάτσαλ Πραντές",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ωκεανία, Αμερική, Ευρώπη, Ανταρκτική, Ασία",
+      "index": 3529,
+      "subject_en": "Himachal Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Νήσοι Κουκ",
+      "object": "Ωκεανία",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ευρώπη, Ασία, Ωκεανία",
+      "index": 3530,
+      "subject_en": "Cook Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Ανταρκτική πλάκα",
+      "object": "Ανταρκτική",
+      "object_candidates": "Ασία, Αφρική, Ωκεανία, Ευρώπη, Αμερική, Ανταρκτική",
+      "index": 3531,
+      "subject_en": "Antarctic Plate",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Χονγκ Κονγκ",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Ανταρκτική, Ωκεανία, Αμερική, Ασία",
+      "index": 3532,
+      "subject_en": "Hong Kong",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Αγία Πετρούπολη",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Ανταρκτική, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3533,
+      "subject_en": "Saint Petersburg",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τατζικιστάν",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Ανταρκτική, Ωκεανία, Αμερική, Αφρική, Ασία",
+      "index": 3534,
+      "subject_en": "Tajikistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Έρημος Καλαχάρι",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ωκεανία, Αμερική, Ευρώπη, Ανταρκτική, Αφρική",
+      "index": 3535,
+      "subject_en": "Kalahari Desert",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Τουρκμενιστάν",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ανταρκτική, Ωκεανία, Αμερική, Ευρώπη, Ασία",
+      "index": 3536,
+      "subject_en": "Turkmenistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Αρχαία Ελλάδα",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ασία, Αφρική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3537,
+      "subject_en": "Ancient Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μόσχα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αμερική, Ανταρκτική, Αφρική, Ωκεανία, Ευρώπη",
+      "index": 3538,
+      "subject_en": "Moscow",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γκόα",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Ανταρκτική, Αμερική, Ωκεανία, Ασία",
+      "index": 3539,
+      "subject_en": "Goa",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ταϊλάνδη",
+      "object": "Ασία",
+      "object_candidates": "Αμερική, Ευρώπη, Ωκεανία, Αφρική, Ανταρκτική, Ασία",
+      "index": 3540,
+      "subject_en": "Thailand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ευφράτης",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Ανταρκτική, Ωκεανία, Αμερική, Ασία",
+      "index": 3541,
+      "subject_en": "Euphrates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Σκάλδης",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Ανταρκτική, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3542,
+      "subject_en": "Scheldt",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Σκωτία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ασία, Αφρική, Ωκεανία, Ανταρκτική, Ευρώπη",
+      "index": 3543,
+      "subject_en": "Scotland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βασίλειο της Βουργουνδίας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Ανταρκτική, Αμερική, Αφρική, Ευρώπη",
+      "index": 3544,
+      "subject_en": "Kingdom of Burgundy",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κανγκτσενγιούνγκα",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ευρώπη, Αμερική, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3545,
+      "subject_en": "Kanchenjunga",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Σλοβακία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Ωκεανία, Ασία, Αμερική, Ευρώπη",
+      "index": 3546,
+      "subject_en": "Slovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Καμερούν",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ωκεανία, Ανταρκτική, Ασία, Αμερική, Αφρική",
+      "index": 3547,
+      "subject_en": "Cameroon",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ρουβίκωνας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Ωκεανία, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3548,
+      "subject_en": "Rubicon",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Αυστροουγγαρία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Αφρική, Ανταρκτική, Αμερική, Ευρώπη",
+      "index": 3549,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ηνωμένο Βασίλειο της Μεγάλης Βρετανίας και Ιρλανδίας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αμερική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3550,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Λίμνη Βοστόκ",
+      "object": "Ανταρκτική",
+      "object_candidates": "Ασία, Αμερική, Ευρώπη, Αφρική, Ωκεανία, Ανταρκτική",
+      "index": 3551,
+      "subject_en": "Lake Vostok",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Ισημερινή Γουινέα",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ωκεανία, Ανταρκτική, Ασία, Αμερική, Αφρική",
+      "index": 3552,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ισπανία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ασία, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3553,
+      "subject_en": "Spain",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νιγηρία",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ωκεανία, Ανταρκτική, Ασία, Αμερική, Αφρική",
+      "index": 3554,
+      "subject_en": "Nigeria",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Εσουατίνι",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Αμερική, Ωκεανία, Ασία, Αφρική",
+      "index": 3555,
+      "subject_en": "Eswatini",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Όρος Βίνσεν",
+      "object": "Ανταρκτική",
+      "object_candidates": "Ωκεανία, Αφρική, Ευρώπη, Αμερική, Ασία, Ανταρκτική",
+      "index": 3556,
+      "subject_en": "Vinson Massif",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Σεϋχέλλες",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ανταρκτική, Ωκεανία, Ευρώπη, Αμερική, Αφρική",
+      "index": 3557,
+      "subject_en": "Seychelles",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Νίγηρας",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ευρώπη, Ανταρκτική, Ωκεανία, Αμερική, Αφρική",
+      "index": 3558,
+      "subject_en": "Niger",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Πορτογαλία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3559,
+      "subject_en": "Portugal",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νιούε",
+      "object": "Ωκεανία",
+      "object_candidates": "Ασία, Αμερική, Ευρώπη, Αφρική, Ανταρκτική, Ωκεανία",
+      "index": 3560,
+      "subject_en": "Niue",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Ιρλανδικό Ελεύθερο Κράτος",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Ανταρκτική, Αφρική, Αμερική, Ευρώπη",
+      "index": 3561,
+      "subject_en": "Irish Free State",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τίσα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Ανταρκτική, Αφρική, Αμερική, Ευρώπη",
+      "index": 3562,
+      "subject_en": "Tisza",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βοσνία και Ερζεγοβίνη",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Ασία, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3563,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μέση Ανατολή",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ωκεανία, Αμερική, Ανταρκτική, Ευρώπη, Αφρική",
+      "index": 3564,
+      "subject_en": "Middle East",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Χαλιφάτο των Αββασιδών",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ωκεανία, Ευρώπη, Ανταρκτική, Αμερική, Αφρική",
+      "index": 3565,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Παλάου",
+      "object": "Ωκεανία",
+      "object_candidates": "Ανταρκτική, Αμερική, Αφρική, Ασία, Ευρώπη, Ωκεανία",
+      "index": 3566,
+      "subject_en": "Palau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Μελίγια",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ανταρκτική, Ευρώπη, Ασία, Ωκεανία, Αφρική",
+      "index": 3567,
+      "subject_en": "Melilla",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Μαυροβούνιο",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αμερική, Ωκεανία, Ανταρκτική, Αφρική, Ευρώπη",
+      "index": 3568,
+      "subject_en": "Montenegro",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μανιπούρ",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Ωκεανία, Αφρική, Ανταρκτική, Αμερική, Ασία",
+      "index": 3569,
+      "subject_en": "Manipur",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ουέλλινγκτον",
+      "object": "Ωκεανία",
+      "object_candidates": "Ασία, Ευρώπη, Αμερική, Ανταρκτική, Αφρική, Ωκεανία",
+      "index": 3570,
+      "subject_en": "Wellington",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Τζιμπουτί",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ωκεανία, Αμερική, Ασία, Ανταρκτική, Αφρική",
+      "index": 3571,
+      "subject_en": "Djibouti",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Μπενίν",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Αμερική, Ανταρκτική, Ασία, Ωκεανία, Αφρική",
+      "index": 3572,
+      "subject_en": "Benin",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ιράν",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ευρώπη, Αμερική, Ωκεανία, Ανταρκτική, Ασία",
+      "index": 3573,
+      "subject_en": "Iran",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Γκροσγκλόκνερ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αμερική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3574,
+      "subject_en": "Grossglockner",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γιβραλτάρ",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3575,
+      "subject_en": "Gibraltar",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Λευκό Όρος",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Ασία, Αμερική, Ωκεανία, Ευρώπη",
+      "index": 3576,
+      "subject_en": "Mont Blanc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Δημοκρατία της Ιρλανδίας",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Αμερική, Ωκεανία, Ασία, Ευρώπη",
+      "index": 3577,
+      "subject_en": "Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κουβέιτ",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ωκεανία, Ευρώπη, Αμερική, Αφρική, Ασία",
+      "index": 3578,
+      "subject_en": "Kuwait",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Τιμπού",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Αφρική, Ευρώπη, Ανταρκτική, Αμερική, Ασία",
+      "index": 3579,
+      "subject_en": "Thimphu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Γιανγκτσέ",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ευρώπη, Αμερική, Ανταρκτική, Αφρική, Ασία",
+      "index": 3580,
+      "subject_en": "Yangtze",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Καζακστάν",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ωκεανία, Αμερική, Ασία, Ευρώπη",
+      "index": 3581,
+      "subject_en": "Kazakhstan",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βασίλειο της Σαξονίας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Ανταρκτική, Αμερική, Αφρική, Ευρώπη",
+      "index": 3582,
+      "subject_en": "Kingdom of Saxony",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ιραουάντι",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ωκεανία, Ανταρκτική, Αμερική, Ευρώπη, Ασία",
+      "index": 3583,
+      "subject_en": "Irrawaddy River",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Λάος",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Αφρική, Αμερική, Ανταρκτική, Ευρώπη, Ασία",
+      "index": 3584,
+      "subject_en": "Laos",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ελβετία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ασία, Αφρική, Αμερική, Ευρώπη",
+      "index": 3585,
+      "subject_en": "Switzerland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γκντύνια",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Ωκεανία, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3586,
+      "subject_en": "Gdynia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Δνείστερος",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Αφρική, Ασία, Ωκεανία, Ανταρκτική, Ευρώπη",
+      "index": 3587,
+      "subject_en": "Dniester",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Πούνε",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Αμερική, Ευρώπη, Ωκεανία, Ανταρκτική, Ασία",
+      "index": 3588,
+      "subject_en": "Pune",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ράτζκοτ",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3589,
+      "subject_en": "Rajkot",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Κριβί Ριχ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Ανταρκτική, Αφρική, Ασία, Ευρώπη",
+      "index": 3590,
+      "subject_en": "Kryvyi Rih",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ιν",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ασία, Αφρική, Αμερική, Ευρώπη",
+      "index": 3591,
+      "subject_en": "Inn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τασκένδη",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Αμερική, Ωκεανία, Ανταρκτική, Ευρώπη, Ασία",
+      "index": 3592,
+      "subject_en": "Tashkent",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Νταουγκάβα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ασία, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3593,
+      "subject_en": "Daugava River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γιαμού και Κασμίρ",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ευρώπη, Ανταρκτική, Αφρική, Αμερική, Ασία",
+      "index": 3594,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Μαλαισία",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αμερική, Αφρική, Ωκεανία, Ανταρκτική, Ασία",
+      "index": 3595,
+      "subject_en": "Malaysia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ούταρ Πραντές",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ευρώπη, Ανταρκτική, Αμερική, Αφρική, Ασία",
+      "index": 3596,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βάρτα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ασία, Ωκεανία, Ευρώπη",
+      "index": 3597,
+      "subject_en": "Warta",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ταμίλ Ναντού",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3598,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Λίβανος",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αφρική, Ωκεανία, Ευρώπη, Αμερική, Ασία",
+      "index": 3599,
+      "subject_en": "Lebanon",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Μπουρούντι",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ωκεανία, Αμερική, Ασία, Ανταρκτική, Αφρική",
+      "index": 3600,
+      "subject_en": "Burundi",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Θιρουβανανθαπουράμ",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αμερική, Αφρική, Ευρώπη, Ωκεανία, Ασία",
+      "index": 3601,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ολλανδική Δημοκρατία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αφρική, Αμερική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3602,
+      "subject_en": "Dutch Republic",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κατάρ",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Αμερική, Ευρώπη, Ανταρκτική, Αφρική, Ασία",
+      "index": 3603,
+      "subject_en": "Qatar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Αφγανιστάν",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη, Ασία",
+      "index": 3604,
+      "subject_en": "Afghanistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Μάγχη",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Ωκεανία, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3605,
+      "subject_en": "English Channel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κράι Πριμόρσκι",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη, Ασία",
+      "index": 3606,
+      "subject_en": "Primorsky Krai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ηνωμένα Αραβικά Εμιράτα",
+      "object": "Ασία",
+      "object_candidates": "Αμερική, Ωκεανία, Ευρώπη, Ανταρκτική, Αφρική, Ασία",
+      "index": 3607,
+      "subject_en": "United Arab Emirates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βαϊκάλη",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ανταρκτική, Αμερική, Ωκεανία, Ευρώπη, Ασία",
+      "index": 3608,
+      "subject_en": "Lake Baikal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ακονκάγκουα",
+      "object": "Αμερική",
+      "object_candidates": "Ασία, Αφρική, Ευρώπη, Ωκεανία, Ανταρκτική, Αμερική",
+      "index": 3609,
+      "subject_en": "Aconcagua",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Βασιλεία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Αφρική, Ωκεανία, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3610,
+      "subject_en": "Basel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γη Αλεξάνδρου Α΄",
+      "object": "Ανταρκτική",
+      "object_candidates": "Αμερική, Ασία, Αφρική, Ευρώπη, Ωκεανία, Ανταρκτική",
+      "index": 3611,
+      "subject_en": "Alexander Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Όχος ντελ Σαλάδο",
+      "object": "Αμερική",
+      "object_candidates": "Ανταρκτική, Ασία, Ευρώπη, Ωκεανία, Αφρική, Αμερική",
+      "index": 3612,
+      "subject_en": "Ojos del Salado",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Μολδαβία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Αφρική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3613,
+      "subject_en": "Moldova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νήσος Μακουάρι",
+      "object": "Ανταρκτική",
+      "object_candidates": "Αφρική, Ωκεανία, Ευρώπη, Ασία, Αμερική, Ανταρκτική",
+      "index": 3614,
+      "subject_en": "Macquarie Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Μουμπάι",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Ωκεανία, Αμερική, Αφρική, Ασία",
+      "index": 3615,
+      "subject_en": "Mumbai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Καταλονία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Αφρική, Ασία, Ανταρκτική, Ευρώπη",
+      "index": 3616,
+      "subject_en": "Catalonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μαδαγασκάρη",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ευρώπη, Ασία, Ανταρκτική, Ωκεανία, Αφρική",
+      "index": 3617,
+      "subject_en": "Madagascar",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Νέβας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Ωκεανία, Αμερική, Ανταρκτική, Ευρώπη",
+      "index": 3618,
+      "subject_en": "Neva",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κεντροαφρικανική Δημοκρατία",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Αμερική, Ανταρκτική, Ασία, Ωκεανία, Αφρική",
+      "index": 3619,
+      "subject_en": "Central African Republic",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Αίγυπτος",
+      "object": "Αφρική",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ευρώπη, Ασία, Αμερική, Αφρική",
+      "index": 3620,
+      "subject_en": "Egypt",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Αλσατία-Λωρραίνη",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ανταρκτική, Αμερική, Ασία, Ωκεανία, Ευρώπη",
+      "index": 3621,
+      "subject_en": "Alsace-Lorraine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ανγκόλα",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ασία, Ωκεανία, Αμερική, Ευρώπη, Αφρική",
+      "index": 3622,
+      "subject_en": "Angola",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Μέση Ανατολή",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Αμερική, Ωκεανία, Ασία, Ευρώπη",
+      "index": 3623,
+      "subject_en": "Middle East",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βρετανική Αυτοκρατορία",
+      "object": "Αμερική",
+      "object_candidates": "Ανταρκτική, Ασία, Ωκεανία, Ευρώπη, Αφρική, Αμερική",
+      "index": 3624,
+      "subject_en": "British Empire",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "Αθήνα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ωκεανία, Ασία, Αμερική, Αφρική, Ευρώπη",
+      "index": 3625,
+      "subject_en": "Athens",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Τίγρης ποταμός",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αφρική, Ευρώπη, Αμερική, Ωκεανία, Ασία",
+      "index": 3626,
+      "subject_en": "Tigris",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Καμπότζη",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αμερική, Αφρική, Ωκεανία, Ανταρκτική, Ασία",
+      "index": 3627,
+      "subject_en": "Cambodia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βουλγαρία του Βόλγα",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Αμερική, Ανταρκτική, Ωκεανία, Ευρώπη",
+      "index": 3628,
+      "subject_en": "Volga Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μαλί",
+      "object": "Αφρική",
+      "object_candidates": "Ωκεανία, Αμερική, Ανταρκτική, Ασία, Ευρώπη, Αφρική",
+      "index": 3629,
+      "subject_en": "Mali",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Βάνταα",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ωκεανία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3630,
+      "subject_en": "Vantaa",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Αυτόνομος θύλακας Τσουκότκα",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Ευρώπη, Αμερική, Αφρική, Ωκεανία, Ασία",
+      "index": 3631,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Γουινέα-Μπισσάου",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ασία, Ανταρκτική, Ωκεανία, Ευρώπη, Αφρική",
+      "index": 3632,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Φινλανδία",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ωκεανία, Ασία, Ανταρκτική, Αμερική, Ευρώπη",
+      "index": 3633,
+      "subject_en": "Finland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Βαλλωνία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3634,
+      "subject_en": "Wallonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μαρόκο",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ευρώπη, Αμερική, Ωκεανία, Ανταρκτική, Αφρική",
+      "index": 3635,
+      "subject_en": "Morocco",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Μαχαράστρα",
+      "object": "Ασία",
+      "object_candidates": "Αφρική, Ωκεανία, Ευρώπη, Ανταρκτική, Αμερική, Ασία",
+      "index": 3636,
+      "subject_en": "Maharashtra",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Νείλος",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ασία, Ανταρκτική, Ευρώπη, Ωκεανία, Αφρική",
+      "index": 3637,
+      "subject_en": "Nile",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ιστορία της Ευρώπης",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Αφρική, Ωκεανία, Ανταρκτική, Αμερική, Ευρώπη",
+      "index": 3638,
+      "subject_en": "history of Europe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νταμαβάντ",
+      "object": "Ασία",
+      "object_candidates": "Ανταρκτική, Αμερική, Ωκεανία, Ευρώπη, Αφρική, Ασία",
+      "index": 3639,
+      "subject_en": "Damavand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Χαλιφάτο των Ομεϋαδών",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Ανταρκτική, Αφρική, Ασία, Ευρώπη",
+      "index": 3640,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Κατοβίτσε",
+      "object": "Ευρώπη",
+      "object_candidates": "Ασία, Ανταρκτική, Αμερική, Ωκεανία, Αφρική, Ευρώπη",
+      "index": 3641,
+      "subject_en": "Katowice",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ρήνος",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ωκεανία, Ασία, Ανταρκτική, Αμερική, Ευρώπη",
+      "index": 3642,
+      "subject_en": "Rhine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Χέλντερλαντ",
+      "object": "Ευρώπη",
+      "object_candidates": "Αμερική, Ωκεανία, Αφρική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3643,
+      "subject_en": "Gelderland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Μαυρίκιος",
+      "object": "Αφρική",
+      "object_candidates": "Αμερική, Ευρώπη, Ασία, Ανταρκτική, Ωκεανία, Αφρική",
+      "index": 3644,
+      "subject_en": "Mauritius",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ανατολικό μπλοκ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Αμερική, Αφρική, Ασία, Ευρώπη",
+      "index": 3645,
+      "subject_en": "Eastern Bloc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Ώκλαντ",
+      "object": "Ωκεανία",
+      "object_candidates": "Αμερική, Ασία, Ευρώπη, Ανταρκτική, Αφρική, Ωκεανία",
+      "index": 3646,
+      "subject_en": "Auckland",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Εποχή των Βίκινγκ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Αφρική, Ανταρκτική, Ασία, Ευρώπη",
+      "index": 3647,
+      "subject_en": "Viking Age",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νίγηρας ποταμός",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ωκεανία, Ευρώπη, Αμερική, Ανταρκτική, Αφρική",
+      "index": 3648,
+      "subject_en": "Niger River",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Δυτική Ασία",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αμερική, Ανταρκτική, Ωκεανία, Αφρική, Ασία",
+      "index": 3649,
+      "subject_en": "Western Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Τοκελάου",
+      "object": "Ωκεανία",
+      "object_candidates": "Αφρική, Αμερική, Ευρώπη, Ασία, Ανταρκτική, Ωκεανία",
+      "index": 3650,
+      "subject_en": "Tokelau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Μπιχάρ",
+      "object": "Ασία",
+      "object_candidates": "Αμερική, Αφρική, Ευρώπη, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3651,
+      "subject_en": "Bihar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Εσθονία",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Αφρική, Ασία, Αμερική, Ευρώπη",
+      "index": 3652,
+      "subject_en": "Estonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Γαλλικά Νότια και Ανταρκτικά Εδάφη",
+      "object": "Ανταρκτική",
+      "object_candidates": "Ευρώπη, Αμερική, Ωκεανία, Αφρική, Ασία, Ανταρκτική",
+      "index": 3653,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Σουδάν",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Αμερική, Ευρώπη, Ασία, Ωκεανία, Αφρική",
+      "index": 3654,
+      "subject_en": "Sudan",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Πριγκιπάτο του Σίλαντ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ασία, Αμερική, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3655,
+      "subject_en": "Principality of Sealand",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Συνθήκη της Ανταρκτικής",
+      "object": "Ανταρκτική",
+      "object_candidates": "Αμερική, Ασία, Αφρική, Ευρώπη, Ωκεανία, Ανταρκτική",
+      "index": 3656,
+      "subject_en": "Antarctic Treaty System",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "Νεπάλ",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αφρική, Αμερική, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3657,
+      "subject_en": "Nepal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Νήσος Χουάν ντε Νόβα",
+      "object": "Αφρική",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Ευρώπη, Ασία, Αμερική, Αφρική",
+      "index": 3658,
+      "subject_en": "Juan de Nova Island",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Ηνωμένες Πολιτείες Αμερικής",
+      "object": "Ωκεανία",
+      "object_candidates": "Ευρώπη, Ανταρκτική, Αμερική, Αφρική, Ασία, Ωκεανία",
+      "index": 3659,
+      "subject_en": "United States of America",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Ιαπωνία",
+      "object": "Ασία",
+      "object_candidates": "Ωκεανία, Ευρώπη, Ανταρκτική, Αφρική, Αμερική, Ασία",
+      "index": 3660,
+      "subject_en": "Japan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Μοζαμβίκη",
+      "object": "Αφρική",
+      "object_candidates": "Ασία, Ωκεανία, Ευρώπη, Ανταρκτική, Αμερική, Αφρική",
+      "index": 3661,
+      "subject_en": "Mozambique",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Σίμλα",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Ανταρκτική, Ωκεανία, Αμερική, Αφρική, Ασία",
+      "index": 3662,
+      "subject_en": "Shimla",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ελσίνκι",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Αφρική, Ωκεανία, Ασία, Αμερική, Ευρώπη",
+      "index": 3663,
+      "subject_en": "Helsinki",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Άγιος Μαρίνος",
+      "object": "Ευρώπη",
+      "object_candidates": "Ανταρκτική, Ασία, Αφρική, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3664,
+      "subject_en": "San Marino",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Σεντσέν",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Ωκεανία, Αφρική, Ανταρκτική, Αμερική, Ασία",
+      "index": 3665,
+      "subject_en": "Shenzhen",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Ελεύθερη Πολιτεία του Κονγκό",
+      "object": "Αφρική",
+      "object_candidates": "Ωκεανία, Αμερική, Ασία, Ευρώπη, Ανταρκτική, Αφρική",
+      "index": 3666,
+      "subject_en": "Congo Free State",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Αραβικός Σύνδεσμος",
+      "object": "Ασία",
+      "object_candidates": "Ευρώπη, Αμερική, Αφρική, Ανταρκτική, Ωκεανία, Ασία",
+      "index": 3667,
+      "subject_en": "Arab League",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "Βιστούλας",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Ανταρκτική, Αμερική, Ασία, Αφρική, Ευρώπη",
+      "index": 3668,
+      "subject_en": "Vistula",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Δούρος",
+      "object": "Ευρώπη",
+      "object_candidates": "Αφρική, Ασία, Ανταρκτική, Ωκεανία, Αμερική, Ευρώπη",
+      "index": 3669,
+      "subject_en": "Douro River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Νότια Αφρική",
+      "object": "Αφρική",
+      "object_candidates": "Ανταρκτική, Ασία, Αμερική, Ευρώπη, Ωκεανία, Αφρική",
+      "index": 3670,
+      "subject_en": "South Africa",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "Φίτζι",
+      "object": "Ωκεανία",
+      "object_candidates": "Ευρώπη, Αφρική, Ανταρκτική, Ασία, Αμερική, Ωκεανία",
+      "index": 3671,
+      "subject_en": "Fiji",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "Γουαδαλκιβίρ",
+      "object": "Ευρώπη",
+      "object_candidates": "Ωκεανία, Αμερική, Ασία, Αφρική, Ανταρκτική, Ευρώπη",
+      "index": 3672,
+      "subject_en": "Guadalquivir",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "Σομαλία",
+      "object": "Αφρική",
+      "object_candidates": "Ευρώπη, Ανταρκτική, Ωκεανία, Ασία, Αμερική, Αφρική",
+      "index": 3673,
+      "subject_en": "Somalia",
+      "object_en": "Africa"
+    }
+  ],
+  "relation_id": "P30"
+}

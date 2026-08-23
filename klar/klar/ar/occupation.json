@@ -1,0 +1,382 @@
+{
+  "name": "occupation",
+  "prompt_templates": [
+    "ما هي مهنة <subject>؟ الجواب: <mask>.",
+    "ماذا يفعل <subject> لكسب قوت يومه؟ الجواب: <mask>.",
+    "ما هي المهنة المرتبطة بـ<subject>؟ الجواب: <mask>.",
+    "ما هي مهنة <subject>؟ الجواب: <mask>.",
+    "ما هو اللقب الوظيفي لـ<subject>؟ الجواب: <mask>.",
+    " مهنة <subject> هي <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "هالي بيري",
+      "object": "عارض",
+      "object_candidates": "سياسي, ملحن, كاتب سيناريو, عازف بيانو, روائي, ممثل, كاتب مسرحي, فيزيائي, مصور, عارض",
+      "index": 1959,
+      "subject_en": "Halle Berry",
+      "object_en": "model"
+    },
+    {
+      "subject": "محمد إقبال",
+      "object": "شاعر",
+      "object_candidates": "سياسي, كاتب سيناريو, صحفي, روائي, فيزيائي, كاتب مسرحي, عارض, رياضياتي, فيلسوف, شاعر",
+      "index": 1960,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "poet"
+    },
+    {
+      "subject": "آني لينوكس",
+      "object": "كاتب أغاني",
+      "object_candidates": "عارض, سياسي, ملحن, عالم فلك, كاتب سيناريو, شاعر, أمين مكتبة, دبلوماسي, مصور, كاتب أغاني",
+      "index": 1961,
+      "subject_en": "Annie Lennox",
+      "object_en": "songwriter"
+    },
+    {
+      "subject": "بوثيوس",
+      "object": "فيلسوف",
+      "object_candidates": "عالم فلك, عازف بيانو, فيزيائي, دبلوماسي, روائي, ممثل, سياسي, شاعر, عارض, فيلسوف",
+      "index": 1962,
+      "subject_en": "Boethius",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "ميكيلانجيلو",
+      "object": "شاعر",
+      "object_candidates": "عازف بيانو, فيلسوف, روائي, عارض, فيزيائي, رياضياتي, صحفي, سياسي, كاتب أغاني, شاعر",
+      "index": 1963,
+      "subject_en": "Michelangelo",
+      "object_en": "poet"
+    },
+    {
+      "subject": "بولينا غاغارينا",
+      "object": "ممثل",
+      "object_candidates": "أمين مكتبة, دبلوماسي, روائي, مصور, عالم فلك, صحفي, كاتب سيناريو, عارض, شاعر, ممثل",
+      "index": 1964,
+      "subject_en": "Polina Gagarina",
+      "object_en": "actor"
+    },
+    {
+      "subject": "إلفريدي يلينيك",
+      "object": "شاعر",
+      "object_candidates": "دبلوماسي, عالم فلك, كاتب أغاني, أمين مكتبة, عارض, فيلسوف, كاتب مسرحي, ممثل, فيزيائي, شاعر",
+      "index": 1965,
+      "subject_en": "Elfriede Jelinek",
+      "object_en": "poet"
+    },
+    {
+      "subject": "إيفا لانغوريا",
+      "object": "ممثل",
+      "object_candidates": "فيلسوف, سياسي, شاعر, كاتب سيناريو, رياضياتي, عازف بيانو, ملحن, كاتب أغاني, روائي, ممثل",
+      "index": 1966,
+      "subject_en": "Eva Longoria",
+      "object_en": "actor"
+    },
+    {
+      "subject": "أوغستان-جان فرينل",
+      "object": "فيزيائي",
+      "object_candidates": "عازف بيانو, فيلسوف, ملحن, أمين مكتبة, كاتب مسرحي, مصور, سياسي, كاتب أغاني, دبلوماسي, فيزيائي",
+      "index": 1967,
+      "subject_en": "Augustin-Jean Fresnel",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "إيان خاما",
+      "object": "سياسي",
+      "object_candidates": "فيلسوف, دبلوماسي, رياضياتي, أمين مكتبة, عازف بيانو, فيزيائي, ممثل, مصور, ملحن, سياسي",
+      "index": 1968,
+      "subject_en": "Ian Khama",
+      "object_en": "politician"
+    },
+    {
+      "subject": "فريد أستير",
+      "object": "كاتب سيناريو",
+      "object_candidates": "شاعر, سياسي, فيزيائي, صحفي, روائي, دبلوماسي, ملحن, ممثل, كاتب أغاني, كاتب سيناريو",
+      "index": 1969,
+      "subject_en": "Fred Astaire",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "جيه.بي بريستلي",
+      "object": "روائي",
+      "object_candidates": "ممثل, مصور, عارض, فيلسوف, دبلوماسي, فيزيائي, عازف بيانو, كاتب أغاني, ملحن, روائي",
+      "index": 1970,
+      "subject_en": "J. B. Priestley",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "جاك هيوستن",
+      "object": "ممثل",
+      "object_candidates": "شاعر, كاتب أغاني, روائي, عالم فلك, أمين مكتبة, فيلسوف, صحفي, سياسي, كاتب سيناريو, ممثل",
+      "index": 1971,
+      "subject_en": "Jack Huston",
+      "object_en": "actor"
+    },
+    {
+      "subject": "فيرنر هايزنبيرغ",
+      "object": "فيزيائي",
+      "object_candidates": "ملحن, صحفي, ممثل, روائي, شاعر, رياضياتي, سياسي, عازف بيانو, عارض, فيزيائي",
+      "index": 1972,
+      "subject_en": "Werner Heisenberg",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "هيو بونفيل",
+      "object": "ممثل",
+      "object_candidates": "سياسي, صحفي, ملحن, دبلوماسي, أمين مكتبة, مصور, روائي, كاتب أغاني, عازف بيانو, ممثل",
+      "index": 1973,
+      "subject_en": "Hugh Bonneville",
+      "object_en": "actor"
+    },
+    {
+      "subject": "أندرس فوغ راسموسن",
+      "object": "سياسي",
+      "object_candidates": "عارض, رياضياتي, شاعر, دبلوماسي, فيزيائي, عازف بيانو, صحفي, ممثل, كاتب أغاني, سياسي",
+      "index": 1974,
+      "subject_en": "Anders Fogh Rasmussen",
+      "object_en": "politician"
+    },
+    {
+      "subject": "إنريكي غرانادوس",
+      "object": "ملحن",
+      "object_candidates": "عالم فلك, سياسي, مصور, ممثل, فيلسوف, عارض, عازف بيانو, صحفي, أمين مكتبة, ملحن",
+      "index": 1975,
+      "subject_en": "Enrique Granados",
+      "object_en": "composer"
+    },
+    {
+      "subject": "كارين جيلان",
+      "object": "ممثل",
+      "object_candidates": "رياضياتي, صحفي, كاتب مسرحي, ملحن, عازف بيانو, عارض, دبلوماسي, كاتب سيناريو, أمين مكتبة, ممثل",
+      "index": 1976,
+      "subject_en": "Karen Gillan",
+      "object_en": "actor"
+    },
+    {
+      "subject": "خورخي لويس بورخيس",
+      "object": "أمين مكتبة",
+      "object_candidates": "مصور, سياسي, ملحن, عارض, رياضياتي, فيزيائي, ممثل, كاتب أغاني, كاتب مسرحي, أمين مكتبة",
+      "index": 1977,
+      "subject_en": "Jorge Luis Borges",
+      "object_en": "librarian"
+    },
+    {
+      "subject": "جاك أوديار",
+      "object": "كاتب سيناريو",
+      "object_candidates": "عالم فلك, دبلوماسي, شاعر, فيلسوف, عازف بيانو, ممثل, عارض, مصور, أمين مكتبة, كاتب سيناريو",
+      "index": 1978,
+      "subject_en": "Jacques Audiard",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "وارن بيتي",
+      "object": "كاتب سيناريو",
+      "object_candidates": "عازف بيانو, فيزيائي, عالم فلك, دبلوماسي, رياضياتي, ممثل, فيلسوف, روائي, كاتب أغاني, كاتب سيناريو",
+      "index": 1979,
+      "subject_en": "Warren Beatty",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "يوهان غوته",
+      "object": "سياسي",
+      "object_candidates": "مصور, ملحن, كاتب أغاني, كاتب سيناريو, دبلوماسي, عازف بيانو, صحفي, كاتب مسرحي, شاعر, سياسي",
+      "index": 1980,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "politician"
+    },
+    {
+      "subject": "رشيدة جونز",
+      "object": "ممثل",
+      "object_candidates": "كاتب سيناريو, عازف بيانو, كاتب مسرحي, عالم فلك, رياضياتي, مصور, صحفي, أمين مكتبة, فيزيائي, ممثل",
+      "index": 1981,
+      "subject_en": "Rashida Jones",
+      "object_en": "actor"
+    },
+    {
+      "subject": "إيمانويل شابرييه",
+      "object": "ملحن",
+      "object_candidates": "عازف بيانو, كاتب سيناريو, كاتب مسرحي, مصور, ممثل, سياسي, دبلوماسي, رياضياتي, كاتب أغاني, ملحن",
+      "index": 1982,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "composer"
+    },
+    {
+      "subject": "ماركيز دي ساد",
+      "object": "كاتب مسرحي",
+      "object_candidates": "عازف بيانو, كاتب أغاني, مصور, رياضياتي, سياسي, صحفي, كاتب سيناريو, شاعر, ملحن, كاتب مسرحي",
+      "index": 1983,
+      "subject_en": "Marquis de Sade",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "مادهوري ديكسيت",
+      "object": "ممثل",
+      "object_candidates": "فيلسوف, كاتب سيناريو, رياضياتي, عالم فلك, عارض, مصور, كاتب أغاني, كاتب مسرحي, دبلوماسي, ممثل",
+      "index": 1984,
+      "subject_en": "Madhuri Dixit",
+      "object_en": "actor"
+    },
+    {
+      "subject": "آرنو بينزياس",
+      "object": "عالم فلك",
+      "object_candidates": "عازف بيانو, فيلسوف, أمين مكتبة, عارض, ملحن, مصور, كاتب أغاني, رياضياتي, كاتب مسرحي, عالم فلك",
+      "index": 1985,
+      "subject_en": "Arno Allan Penzias",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "ميشال ويلبك",
+      "object": "شاعر",
+      "object_candidates": "أمين مكتبة, عارض, فيلسوف, عازف بيانو, كاتب أغاني, صحفي, عالم فلك, كاتب مسرحي, مصور, شاعر",
+      "index": 1986,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "poet"
+    },
+    {
+      "subject": "أرسطو",
+      "object": "رياضياتي",
+      "object_candidates": "كاتب مسرحي, كاتب أغاني, دبلوماسي, عالم فلك, عازف بيانو, سياسي, ملحن, روائي, ممثل, رياضياتي",
+      "index": 1987,
+      "subject_en": "Aristotle",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "كازوو إيشيغورو",
+      "object": "روائي",
+      "object_candidates": "صحفي, مصور, عارض, فيزيائي, فيلسوف, كاتب مسرحي, ممثل, كاتب سيناريو, عازف بيانو, روائي",
+      "index": 1988,
+      "subject_en": "Kazuo Ishiguro",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "لو ريد",
+      "object": "مصور",
+      "object_candidates": "رياضياتي, كاتب مسرحي, عالم فلك, فيلسوف, سياسي, عارض, صحفي, فيزيائي, أمين مكتبة, مصور",
+      "index": 1989,
+      "subject_en": "Lou Reed",
+      "object_en": "photographer"
+    },
+    {
+      "subject": "كليمنس فون مترنيش",
+      "object": "دبلوماسي",
+      "object_candidates": "فيلسوف, شاعر, كاتب مسرحي, سياسي, أمين مكتبة, صحفي, روائي, ممثل, عارض, دبلوماسي",
+      "index": 1990,
+      "subject_en": "Klemens von Metternich",
+      "object_en": "diplomat"
+    },
+    {
+      "subject": "جستين الأول",
+      "object": "سياسي",
+      "object_candidates": "كاتب سيناريو, فيلسوف, دبلوماسي, كاتب مسرحي, ممثل, رياضياتي, فيزيائي, عارض, عازف بيانو, سياسي",
+      "index": 1991,
+      "subject_en": "Justin I",
+      "object_en": "politician"
+    },
+    {
+      "subject": "هيث ليدجر",
+      "object": "ممثل",
+      "object_candidates": "مصور, صحفي, سياسي, فيزيائي, كاتب أغاني, دبلوماسي, عالم فلك, كاتب سيناريو, أمين مكتبة, ممثل",
+      "index": 1992,
+      "subject_en": "Heath Ledger",
+      "object_en": "actor"
+    },
+    {
+      "subject": "أغوستينيو نيتو",
+      "object": "شاعر",
+      "object_candidates": "دبلوماسي, كاتب مسرحي, كاتب سيناريو, عازف بيانو, أمين مكتبة, ممثل, كاتب أغاني, عارض, رياضياتي, شاعر",
+      "index": 1993,
+      "subject_en": "Agostinho Neto",
+      "object_en": "poet"
+    },
+    {
+      "subject": "إدغار آلان بو",
+      "object": "كاتب مسرحي",
+      "object_candidates": "فيلسوف, كاتب أغاني, عارض, فيزيائي, رياضياتي, عالم فلك, دبلوماسي, شاعر, مصور, كاتب مسرحي",
+      "index": 1994,
+      "subject_en": "Edgar Allan Poe",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "ألكسندر سولجنيتسين",
+      "object": "شاعر",
+      "object_candidates": "ملحن, سياسي, فيلسوف, عالم فلك, فيزيائي, دبلوماسي, كاتب مسرحي, عارض, أمين مكتبة, شاعر",
+      "index": 1995,
+      "subject_en": "Aleksandr Solzhenitsyn",
+      "object_en": "poet"
+    },
+    {
+      "subject": "ستيفن كولبير",
+      "object": "صحفي",
+      "object_candidates": "ملحن, دبلوماسي, فيلسوف, عارض, عازف بيانو, سياسي, عالم فلك, ممثل, فيزيائي, صحفي",
+      "index": 1996,
+      "subject_en": "Stephen Colbert",
+      "object_en": "journalist"
+    },
+    {
+      "subject": "ويتني هيوستن",
+      "object": "ملحن",
+      "object_candidates": "فيلسوف, دبلوماسي, عالم فلك, كاتب سيناريو, فيزيائي, مصور, رياضياتي, صحفي, سياسي, ملحن",
+      "index": 1997,
+      "subject_en": "Whitney Houston",
+      "object_en": "composer"
+    },
+    {
+      "subject": "لوبي دي فيغا",
+      "object": "كاتب مسرحي",
+      "object_candidates": "رياضياتي, أمين مكتبة, عارض, سياسي, فيزيائي, ملحن, مصور, عالم فلك, كاتب أغاني, كاتب مسرحي",
+      "index": 1998,
+      "subject_en": "Lope de Vega",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "جانيت جاكسون",
+      "object": "عارض",
+      "object_candidates": "دبلوماسي, صحفي, ممثل, عازف بيانو, مصور, أمين مكتبة, ملحن, فيزيائي, سياسي, عارض",
+      "index": 1999,
+      "subject_en": "Janet Jackson",
+      "object_en": "model"
+    },
+    {
+      "subject": "فرانسيس بولنك",
+      "object": "عازف بيانو",
+      "object_candidates": "كاتب مسرحي, سياسي, ممثل, ملحن, شاعر, فيلسوف, روائي, صحفي, كاتب أغاني, عازف بيانو",
+      "index": 2000,
+      "subject_en": "Francis Poulenc",
+      "object_en": "pianist"
+    },
+    {
+      "subject": "جيمس فينيمور كوبر",
+      "object": "روائي",
+      "object_candidates": "عارض, رياضياتي, كاتب سيناريو, ملحن, فيزيائي, كاتب أغاني, ممثل, شاعر, أمين مكتبة, روائي",
+      "index": 2001,
+      "subject_en": "James Fenimore Cooper",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "بيار أبيلار",
+      "object": "فيلسوف",
+      "object_candidates": "دبلوماسي, كاتب مسرحي, عارض, شاعر, ممثل, سياسي, كاتب أغاني, صحفي, عالم فلك, فيلسوف",
+      "index": 2002,
+      "subject_en": "Peter Abelard",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "غيورغي لفوف",
+      "object": "سياسي",
+      "object_candidates": "كاتب أغاني, عازف بيانو, روائي, أمين مكتبة, فيلسوف, كاتب سيناريو, ممثل, مصور, رياضياتي, سياسي",
+      "index": 2003,
+      "subject_en": "Georgy Lvov",
+      "object_en": "politician"
+    },
+    {
+      "subject": "هوارد فيليبس لافكرافت",
+      "object": "صحفي",
+      "object_candidates": "شاعر, أمين مكتبة, كاتب أغاني, روائي, فيزيائي, كاتب سيناريو, فيلسوف, ملحن, دبلوماسي, صحفي",
+      "index": 2004,
+      "subject_en": "H. P. Lovecraft",
+      "object_en": "journalist"
+    }
+  ],
+  "relation_id": "P106"
+}

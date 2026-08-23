@@ -1,0 +1,2976 @@
+{
+  "name": "continent",
+  "prompt_templates": [
+    "کدام قاره <subject> در آن واقع شده است؟ پاسخ: <mask>",
+    "قاره <subject> چیست؟ پاسخ: <mask>",
+    "در کدام قاره می‌توانید <subject> را پیدا کنید؟ پاسخ: <mask>",
+    "کدام بخش از جهان از نظر قاره‌ها به <subject> تعلق دارد؟ پاسخ: <mask>",
+    "کجا می‌توانیم <subject> را از نظر قاره‌ها پیدا کنیم؟ پاسخ: <mask>",
+    " قاره‌ای که <subject> در آن قرار دارد <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "ترکیه",
+      "object": "آسیا",
+      "object_candidates": "اروپا, قاره آمریکا, جنوبگان, اقیانوسیه, آفریقا, آسیا",
+      "index": 3462,
+      "subject_en": "Turkey",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نامیبیا",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, اقیانوسیه, اروپا, آسیا, قاره آمریکا, آفریقا",
+      "index": 3463,
+      "subject_en": "Namibia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "قلمرو جنوبگان استرالیا",
+      "object": "جنوبگان",
+      "object_candidates": "آفریقا, آسیا, قاره آمریکا, اروپا, اقیانوسیه, جنوبگان",
+      "index": 3464,
+      "subject_en": "Australian Antarctic Territory",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "کوچی (شهر هند)",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اروپا, آفریقا, اقیانوسیه, قاره آمریکا, آسیا",
+      "index": 3465,
+      "subject_en": "Kochi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "آلمان",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, آفریقا, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3466,
+      "subject_en": "Germany",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "چیشن",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, آفریقا, جنوبگان, آسیا, اروپا",
+      "index": 3467,
+      "subject_en": "Cieszyn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اتحاد جماهیر شوروی سوسیالیستی",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, آسیا, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3468,
+      "subject_en": "Soviet Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "یورکشایر",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, قاره آمریکا, آسیا, آفریقا, اقیانوسیه, اروپا",
+      "index": 3469,
+      "subject_en": "Yorkshire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزایر پیت‌کرن",
+      "object": "اقیانوسیه",
+      "object_candidates": "آسیا, آفریقا, جنوبگان, اروپا, قاره آمریکا, اقیانوسیه",
+      "index": 3470,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "ارمنستان",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, آفریقا, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3471,
+      "subject_en": "Armenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "هانوی",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اروپا, قاره آمریکا, اقیانوسیه, آفریقا, آسیا",
+      "index": 3472,
+      "subject_en": "Hanoi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تالین",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, آسیا, جنوبگان, اقیانوسیه, آفریقا, اروپا",
+      "index": 3473,
+      "subject_en": "Tallinn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "برابانت شمالی",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, اقیانوسیه, قاره آمریکا, آسیا, اروپا",
+      "index": 3474,
+      "subject_en": "North Brabant",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تاقوس",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, آسیا, اروپا",
+      "index": 3475,
+      "subject_en": "Tagus river",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "عربستان سعودی",
+      "object": "آسیا",
+      "object_candidates": "قاره آمریکا, اروپا, اقیانوسیه, آفریقا, جنوبگان, آسیا",
+      "index": 3476,
+      "subject_en": "Saudi Arabia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "استرالیا",
+      "object": "اقیانوسیه",
+      "object_candidates": "جنوبگان, قاره آمریکا, آفریقا, اروپا, آسیا, اقیانوسیه",
+      "index": 3477,
+      "subject_en": "Australia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "اریتره",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, آسیا, اقیانوسیه, قاره آمریکا, اروپا, آفریقا",
+      "index": 3478,
+      "subject_en": "Eritrea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تولوز",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3479,
+      "subject_en": "Toulouse",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کره جنوبی",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اروپا, آفریقا, اقیانوسیه, قاره آمریکا, آسیا",
+      "index": 3480,
+      "subject_en": "South Korea",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لاهه",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آفریقا, آسیا, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3481,
+      "subject_en": "The Hague",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دانمارک",
+      "object": "اروپا",
+      "object_candidates": "آسیا, قاره آمریکا, جنوبگان, اقیانوسیه, آفریقا, اروپا",
+      "index": 3482,
+      "subject_en": "Denmark",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "بریتانیا",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, جنوبگان, آفریقا, آسیا, اقیانوسیه, اروپا",
+      "index": 3483,
+      "subject_en": "United Kingdom",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "امپراتوری بریتانیا",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, قاره آمریکا, اروپا, اقیانوسیه, جنوبگان, آفریقا",
+      "index": 3484,
+      "subject_en": "British Empire",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "جنوب آسیا",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, جنوبگان, قاره آمریکا, آفریقا, اروپا, آسیا",
+      "index": 3485,
+      "subject_en": "South Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بلغارستان",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, آسیا, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3486,
+      "subject_en": "Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "رود پیچورا",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آفریقا, قاره آمریکا, جنوبگان, آسیا, اروپا",
+      "index": 3487,
+      "subject_en": "Pechora River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کیریباتی",
+      "object": "اقیانوسیه",
+      "object_candidates": "آفریقا, قاره آمریکا, آسیا, جنوبگان, اروپا, اقیانوسیه",
+      "index": 3488,
+      "subject_en": "Kiribati",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "ایگر",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, آفریقا, اروپا",
+      "index": 3489,
+      "subject_en": "Eiger",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "چکسلواکی",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آفریقا, آسیا, قاره آمریکا, اروپا",
+      "index": 3490,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اتریش",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, آفریقا, جنوبگان, قاره آمریکا, اروپا",
+      "index": 3491,
+      "subject_en": "Austria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "یونان",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3492,
+      "subject_en": "Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ولز",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, آسیا, آفریقا, جنوبگان, اروپا",
+      "index": 3493,
+      "subject_en": "Wales",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اندونزی",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, جنوبگان, اروپا, قاره آمریکا, اقیانوسیه, آسیا",
+      "index": 3494,
+      "subject_en": "Indonesia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ویتنام",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, قاره آمریکا, اقیانوسیه, آفریقا, اروپا, آسیا",
+      "index": 3495,
+      "subject_en": "Vietnam",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "اتحادیه اروپا",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, قاره آمریکا, آسیا, اقیانوسیه, جنوبگان, اروپا",
+      "index": 3496,
+      "subject_en": "European Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "یوگسلاوی",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, قاره آمریکا, اقیانوسیه, جنوبگان, آسیا, اروپا",
+      "index": 3497,
+      "subject_en": "Yugoslavia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "والیس و فوتونا",
+      "object": "اقیانوسیه",
+      "object_candidates": "آسیا, اروپا, جنوبگان, قاره آمریکا, آفریقا, اقیانوسیه",
+      "index": 3498,
+      "subject_en": "Wallis and Futuna",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "مرسیا",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3499,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کوهستان ترانس‌آنتراکتیک",
+      "object": "جنوبگان",
+      "object_candidates": "آسیا, قاره آمریکا, اقیانوسیه, اروپا, آفریقا, جنوبگان",
+      "index": 3500,
+      "subject_en": "Transantarctic Mountains",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "تفلیس",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, آفریقا, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3501,
+      "subject_en": "Tbilisi",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "برن",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, قاره آمریکا, آفریقا, جنوبگان, اروپا",
+      "index": 3502,
+      "subject_en": "Bern",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پاریس",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3503,
+      "subject_en": "Paris",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "خاباروفسک",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, جنوبگان, اقیانوسیه, اروپا, قاره آمریکا, آسیا",
+      "index": 3504,
+      "subject_en": "Khabarovsk",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "دهلی نو",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, اروپا, جنوبگان, آفریقا, آسیا",
+      "index": 3505,
+      "subject_en": "New Delhi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جمهوری آذربایجان",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, اقیانوسیه, اروپا, آسیا",
+      "index": 3506,
+      "subject_en": "Azerbaijan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تیبر",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آفریقا, قاره آمریکا, آسیا, جنوبگان, اروپا",
+      "index": 3507,
+      "subject_en": "Tiber",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اسلوونی",
+      "object": "اروپا",
+      "object_candidates": "آسیا, جنوبگان, قاره آمریکا, اقیانوسیه, آفریقا, اروپا",
+      "index": 3508,
+      "subject_en": "Slovenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ایرتیش",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اروپا, اقیانوسیه, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3509,
+      "subject_en": "Irtysh river",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "چندی‌گر",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, اقیانوسیه, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3510,
+      "subject_en": "Chandigarh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "امارت اپیروس",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آسیا, آفریقا, جنوبگان, اروپا",
+      "index": 3511,
+      "subject_en": "Despotate of Epirus",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "انگلستان",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, اقیانوسیه, آسیا, اروپا",
+      "index": 3512,
+      "subject_en": "England",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "فرانسه متروپل",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, اقیانوسیه, قاره آمریکا, آسیا, جنوبگان, اروپا",
+      "index": 3513,
+      "subject_en": "Metropolitan France",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مجمع‌الجزایر قمر",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, اروپا, اقیانوسیه, قاره آمریکا, آسیا, آفریقا",
+      "index": 3514,
+      "subject_en": "Comoros",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فرانک خاوری",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, جنوبگان, آفریقا, آسیا, اروپا",
+      "index": 3515,
+      "subject_en": "East Francia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "هلند",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, آسیا, اقیانوسیه, اروپا",
+      "index": 3516,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزایر مارشال",
+      "object": "اقیانوسیه",
+      "object_candidates": "جنوبگان, آسیا, آفریقا, قاره آمریکا, اروپا, اقیانوسیه",
+      "index": 3517,
+      "subject_en": "Marshall Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "دامان و دیو",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, اروپا, آفریقا, قاره آمریکا, جنوبگان, آسیا",
+      "index": 3518,
+      "subject_en": "Daman and Diu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لسوتو",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, جنوبگان, آسیا, اروپا, اقیانوسیه, آفریقا",
+      "index": 3519,
+      "subject_en": "Lesotho",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "لوار",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آسیا, قاره آمریکا, آفریقا, اروپا",
+      "index": 3520,
+      "subject_en": "Loire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مایوت",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, قاره آمریکا, اروپا, آسیا, اقیانوسیه, آفریقا",
+      "index": 3521,
+      "subject_en": "Mayotte",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "میکرونزی",
+      "object": "اقیانوسیه",
+      "object_candidates": "قاره آمریکا, جنوبگان, آسیا, آفریقا, اروپا, اقیانوسیه",
+      "index": 3522,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "هلند شمالی",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, آفریقا, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3523,
+      "subject_en": "North Holland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مقدونیه شمالی",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آسیا, قاره آمریکا, آفریقا, اروپا",
+      "index": 3524,
+      "subject_en": "North Macedonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "لیبریا",
+      "object": "آفریقا",
+      "object_candidates": "اقیانوسیه, آسیا, قاره آمریکا, جنوبگان, اروپا, آفریقا",
+      "index": 3525,
+      "subject_en": "Liberia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "البه",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3526,
+      "subject_en": "Elbe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "وانواتو",
+      "object": "اقیانوسیه",
+      "object_candidates": "آفریقا, آسیا, اروپا, قاره آمریکا, جنوبگان, اقیانوسیه",
+      "index": 3527,
+      "subject_en": "Vanuatu",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "کرایووا",
+      "object": "اروپا",
+      "object_candidates": "آسیا, جنوبگان, اقیانوسیه, آفریقا, قاره آمریکا, اروپا",
+      "index": 3528,
+      "subject_en": "Craiova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "هیماچال پرادش",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اقیانوسیه, قاره آمریکا, اروپا, جنوبگان, آسیا",
+      "index": 3529,
+      "subject_en": "Himachal Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جزایر کوک",
+      "object": "اقیانوسیه",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, اروپا, آسیا, اقیانوسیه",
+      "index": 3530,
+      "subject_en": "Cook Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "صفحه جنوبگان",
+      "object": "جنوبگان",
+      "object_candidates": "آسیا, آفریقا, اقیانوسیه, اروپا, قاره آمریکا, جنوبگان",
+      "index": 3531,
+      "subject_en": "Antarctic Plate",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "هنگ کنگ",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, جنوبگان, اقیانوسیه, قاره آمریکا, آسیا",
+      "index": 3532,
+      "subject_en": "Hong Kong",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سن پترزبورگ",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, جنوبگان, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3533,
+      "subject_en": "Saint Petersburg",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تاجیکستان",
+      "object": "آسیا",
+      "object_candidates": "اروپا, جنوبگان, اقیانوسیه, قاره آمریکا, آفریقا, آسیا",
+      "index": 3534,
+      "subject_en": "Tajikistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بیابان کالاهاری",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اقیانوسیه, قاره آمریکا, اروپا, جنوبگان, آفریقا",
+      "index": 3535,
+      "subject_en": "Kalahari Desert",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ترکمنستان",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, جنوبگان, اقیانوسیه, قاره آمریکا, اروپا, آسیا",
+      "index": 3536,
+      "subject_en": "Turkmenistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "یونان باستان",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, آسیا, آفریقا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3537,
+      "subject_en": "Ancient Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مسکو",
+      "object": "اروپا",
+      "object_candidates": "آسیا, قاره آمریکا, جنوبگان, آفریقا, اقیانوسیه, اروپا",
+      "index": 3538,
+      "subject_en": "Moscow",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "گوا",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, جنوبگان, قاره آمریکا, اقیانوسیه, آسیا",
+      "index": 3539,
+      "subject_en": "Goa",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تایلند",
+      "object": "آسیا",
+      "object_candidates": "قاره آمریکا, اروپا, اقیانوسیه, آفریقا, جنوبگان, آسیا",
+      "index": 3540,
+      "subject_en": "Thailand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "فرات",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, جنوبگان, اقیانوسیه, قاره آمریکا, آسیا",
+      "index": 3541,
+      "subject_en": "Euphrates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "رود شلده",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, جنوبگان, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3542,
+      "subject_en": "Scheldt",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اسکاتلند",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, آسیا, آفریقا, اقیانوسیه, جنوبگان, اروپا",
+      "index": 3543,
+      "subject_en": "Scotland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پادشاهی بورگوندی",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, جنوبگان, قاره آمریکا, آفریقا, اروپا",
+      "index": 3544,
+      "subject_en": "Kingdom of Burgundy",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کانگچنجونگا",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اروپا, قاره آمریکا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3545,
+      "subject_en": "Kanchenjunga",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "اسلواکی",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, اقیانوسیه, آسیا, قاره آمریکا, اروپا",
+      "index": 3546,
+      "subject_en": "Slovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کامرون",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, اقیانوسیه, جنوبگان, آسیا, قاره آمریکا, آفریقا",
+      "index": 3547,
+      "subject_en": "Cameroon",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "روبیکن",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, اقیانوسیه, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3548,
+      "subject_en": "Rubicon",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اتریش-مجارستان",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, آفریقا, جنوبگان, قاره آمریکا, اروپا",
+      "index": 3549,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پادشاهی متحد بریتانیای کبیر و ایرلند",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, آفریقا, اروپا",
+      "index": 3550,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دریاچه وستوک",
+      "object": "جنوبگان",
+      "object_candidates": "آسیا, قاره آمریکا, اروپا, آفریقا, اقیانوسیه, جنوبگان",
+      "index": 3551,
+      "subject_en": "Lake Vostok",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "گینه استوایی",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, اقیانوسیه, جنوبگان, آسیا, قاره آمریکا, آفریقا",
+      "index": 3552,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "اسپانیا",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, آسیا, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3553,
+      "subject_en": "Spain",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نیجریه",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, اقیانوسیه, جنوبگان, آسیا, قاره آمریکا, آفریقا",
+      "index": 3554,
+      "subject_en": "Nigeria",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "اسواتینی",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, اروپا, قاره آمریکا, اقیانوسیه, آسیا, آفریقا",
+      "index": 3555,
+      "subject_en": "Eswatini",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "توده وینسون",
+      "object": "جنوبگان",
+      "object_candidates": "اقیانوسیه, آفریقا, اروپا, قاره آمریکا, آسیا, جنوبگان",
+      "index": 3556,
+      "subject_en": "Vinson Massif",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "سیشل",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, جنوبگان, اقیانوسیه, اروپا, قاره آمریکا, آفریقا",
+      "index": 3557,
+      "subject_en": "Seychelles",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "نیجر",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اروپا, جنوبگان, اقیانوسیه, قاره آمریکا, آفریقا",
+      "index": 3558,
+      "subject_en": "Niger",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "پرتغال",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, قاره آمریکا, آفریقا, جنوبگان, اروپا",
+      "index": 3559,
+      "subject_en": "Portugal",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نیووی",
+      "object": "اقیانوسیه",
+      "object_candidates": "آسیا, قاره آمریکا, اروپا, آفریقا, جنوبگان, اقیانوسیه",
+      "index": 3560,
+      "subject_en": "Niue",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "دولت آزاد ایرلند",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, جنوبگان, آفریقا, قاره آمریکا, اروپا",
+      "index": 3561,
+      "subject_en": "Irish Free State",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تیسزا",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, جنوبگان, آفریقا, قاره آمریکا, اروپا",
+      "index": 3562,
+      "subject_en": "Tisza",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "بوسنی و هرزگوین",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آسیا, آفریقا, جنوبگان, اروپا",
+      "index": 3563,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "خاورمیانه",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اقیانوسیه, قاره آمریکا, جنوبگان, اروپا, آفریقا",
+      "index": 3564,
+      "subject_en": "Middle East",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "خلافت عباسیان",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اقیانوسیه, اروپا, جنوبگان, قاره آمریکا, آفریقا",
+      "index": 3565,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "پالائو",
+      "object": "اقیانوسیه",
+      "object_candidates": "جنوبگان, قاره آمریکا, آفریقا, آسیا, اروپا, اقیانوسیه",
+      "index": 3566,
+      "subject_en": "Palau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "ملیلیه",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, جنوبگان, اروپا, آسیا, اقیانوسیه, آفریقا",
+      "index": 3567,
+      "subject_en": "Melilla",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مونته‌نگرو",
+      "object": "اروپا",
+      "object_candidates": "آسیا, قاره آمریکا, اقیانوسیه, جنوبگان, آفریقا, اروپا",
+      "index": 3568,
+      "subject_en": "Montenegro",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مانیپور",
+      "object": "آسیا",
+      "object_candidates": "اروپا, اقیانوسیه, آفریقا, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3569,
+      "subject_en": "Manipur",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ولینگتون",
+      "object": "اقیانوسیه",
+      "object_candidates": "آسیا, اروپا, قاره آمریکا, جنوبگان, آفریقا, اقیانوسیه",
+      "index": 3570,
+      "subject_en": "Wellington",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "جیبوتی",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, اقیانوسیه, قاره آمریکا, آسیا, جنوبگان, آفریقا",
+      "index": 3571,
+      "subject_en": "Djibouti",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "بنین",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, قاره آمریکا, جنوبگان, آسیا, اقیانوسیه, آفریقا",
+      "index": 3572,
+      "subject_en": "Benin",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ایران",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اروپا, قاره آمریکا, اقیانوسیه, جنوبگان, آسیا",
+      "index": 3573,
+      "subject_en": "Iran",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "گروسگلوکنر",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, آفریقا, اروپا",
+      "index": 3574,
+      "subject_en": "Grossglockner",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جبل طارق",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3575,
+      "subject_en": "Gibraltar",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مون بلان",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, آسیا, قاره آمریکا, اقیانوسیه, اروپا",
+      "index": 3576,
+      "subject_en": "Mont Blanc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ایرلند",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, قاره آمریکا, اقیانوسیه, آسیا, اروپا",
+      "index": 3577,
+      "subject_en": "Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کویت",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اقیانوسیه, اروپا, قاره آمریکا, آفریقا, آسیا",
+      "index": 3578,
+      "subject_en": "Kuwait",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تیمفو",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, آفریقا, اروپا, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3579,
+      "subject_en": "Thimphu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "رود یانگ‌تسه",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, اروپا, قاره آمریکا, جنوبگان, آفریقا, آسیا",
+      "index": 3580,
+      "subject_en": "Yangtze",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "قزاقستان",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, اقیانوسیه, قاره آمریکا, آسیا, اروپا",
+      "index": 3581,
+      "subject_en": "Kazakhstan",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پادشاهی ساکسونی",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, جنوبگان, قاره آمریکا, آفریقا, اروپا",
+      "index": 3582,
+      "subject_en": "Kingdom of Saxony",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "رود ایراوادی",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اقیانوسیه, جنوبگان, قاره آمریکا, اروپا, آسیا",
+      "index": 3583,
+      "subject_en": "Irrawaddy River",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لائوس",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, آفریقا, قاره آمریکا, جنوبگان, اروپا, آسیا",
+      "index": 3584,
+      "subject_en": "Laos",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سوئیس",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آسیا, آفریقا, قاره آمریکا, اروپا",
+      "index": 3585,
+      "subject_en": "Switzerland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "گدنیا",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, اقیانوسیه, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3586,
+      "subject_en": "Gdynia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نیستر",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, آفریقا, آسیا, اقیانوسیه, جنوبگان, اروپا",
+      "index": 3587,
+      "subject_en": "Dniester",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پونه",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, قاره آمریکا, اروپا, اقیانوسیه, جنوبگان, آسیا",
+      "index": 3588,
+      "subject_en": "Pune",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "راجکوت",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3589,
+      "subject_en": "Rajkot",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "کریفیی ریه",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, جنوبگان, آفریقا, آسیا, اروپا",
+      "index": 3590,
+      "subject_en": "Kryvyi Rih",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "این",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آسیا, آفریقا, قاره آمریکا, اروپا",
+      "index": 3591,
+      "subject_en": "Inn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تاشکند",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, قاره آمریکا, اقیانوسیه, جنوبگان, اروپا, آسیا",
+      "index": 3592,
+      "subject_en": "Tashkent",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "دائوگاوا",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, آسیا, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3593,
+      "subject_en": "Daugava River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جامو و کشمیر",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, اروپا, جنوبگان, آفریقا, قاره آمریکا, آسیا",
+      "index": 3594,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "مالزی",
+      "object": "آسیا",
+      "object_candidates": "اروپا, قاره آمریکا, آفریقا, اقیانوسیه, جنوبگان, آسیا",
+      "index": 3595,
+      "subject_en": "Malaysia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "اوتار پرادش",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, اروپا, جنوبگان, قاره آمریکا, آفریقا, آسیا",
+      "index": 3596,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "وارتا",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, آسیا, اقیانوسیه, اروپا",
+      "index": 3597,
+      "subject_en": "Warta",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تامیل نادو",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3598,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لبنان",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, آفریقا, اقیانوسیه, اروپا, قاره آمریکا, آسیا",
+      "index": 3599,
+      "subject_en": "Lebanon",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بوروندی",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, اقیانوسیه, قاره آمریکا, آسیا, جنوبگان, آفریقا",
+      "index": 3600,
+      "subject_en": "Burundi",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تریواندروم",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, قاره آمریکا, آفریقا, اروپا, اقیانوسیه, آسیا",
+      "index": 3601,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جمهوری هلند",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آفریقا, قاره آمریکا, جنوبگان, آسیا, اروپا",
+      "index": 3602,
+      "subject_en": "Dutch Republic",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "قطر",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, اروپا, جنوبگان, آفریقا, آسیا",
+      "index": 3603,
+      "subject_en": "Qatar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "افغانستان",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آفریقا, جنوبگان, اروپا, آسیا",
+      "index": 3604,
+      "subject_en": "Afghanistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "کانال مانش",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, اقیانوسیه, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3605,
+      "subject_en": "English Channel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سرزمین پریمورسکی",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا, آسیا",
+      "index": 3606,
+      "subject_en": "Primorsky Krai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "امارات متحده عربی",
+      "object": "آسیا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, اروپا, جنوبگان, آفریقا, آسیا",
+      "index": 3607,
+      "subject_en": "United Arab Emirates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "دریاچه بایکال",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, جنوبگان, قاره آمریکا, اقیانوسیه, اروپا, آسیا",
+      "index": 3608,
+      "subject_en": "Lake Baikal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "آکونکاگوا",
+      "object": "قاره آمریکا",
+      "object_candidates": "آسیا, آفریقا, اروپا, اقیانوسیه, جنوبگان, قاره آمریکا",
+      "index": 3609,
+      "subject_en": "Aconcagua",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "بازل",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, آفریقا, اقیانوسیه, جنوبگان, آسیا, اروپا",
+      "index": 3610,
+      "subject_en": "Basel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزیره الکساندر",
+      "object": "جنوبگان",
+      "object_candidates": "قاره آمریکا, آسیا, آفریقا, اروپا, اقیانوسیه, جنوبگان",
+      "index": 3611,
+      "subject_en": "Alexander Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "اوخوس دل سالادو",
+      "object": "قاره آمریکا",
+      "object_candidates": "جنوبگان, آسیا, اروپا, اقیانوسیه, آفریقا, قاره آمریکا",
+      "index": 3612,
+      "subject_en": "Ojos del Salado",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "مولداوی",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, آفریقا, جنوبگان, آسیا, اروپا",
+      "index": 3613,
+      "subject_en": "Moldova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزیره مک‌کواری",
+      "object": "جنوبگان",
+      "object_candidates": "آفریقا, اقیانوسیه, اروپا, آسیا, قاره آمریکا, جنوبگان",
+      "index": 3614,
+      "subject_en": "Macquarie Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "بمبئی",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اروپا, اقیانوسیه, قاره آمریکا, آفریقا, آسیا",
+      "index": 3615,
+      "subject_en": "Mumbai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "کاتالونیا",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, آفریقا, آسیا, جنوبگان, اروپا",
+      "index": 3616,
+      "subject_en": "Catalonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ماداگاسکار",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, اروپا, آسیا, جنوبگان, اقیانوسیه, آفریقا",
+      "index": 3617,
+      "subject_en": "Madagascar",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "رود نوا",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, اقیانوسیه, قاره آمریکا, جنوبگان, اروپا",
+      "index": 3618,
+      "subject_en": "Neva",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جمهوری آفریقای مرکزی",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, قاره آمریکا, جنوبگان, آسیا, اقیانوسیه, آفریقا",
+      "index": 3619,
+      "subject_en": "Central African Republic",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مصر",
+      "object": "آفریقا",
+      "object_candidates": "اقیانوسیه, جنوبگان, اروپا, آسیا, قاره آمریکا, آفریقا",
+      "index": 3620,
+      "subject_en": "Egypt",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "آلزاس-لورن",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, جنوبگان, قاره آمریکا, آسیا, اقیانوسیه, اروپا",
+      "index": 3621,
+      "subject_en": "Alsace-Lorraine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "آنگولا",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, آسیا, اقیانوسیه, قاره آمریکا, اروپا, آفریقا",
+      "index": 3622,
+      "subject_en": "Angola",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "خاورمیانه",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, قاره آمریکا, اقیانوسیه, آسیا, اروپا",
+      "index": 3623,
+      "subject_en": "Middle East",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "امپراتوری بریتانیا",
+      "object": "قاره آمریکا",
+      "object_candidates": "جنوبگان, آسیا, اقیانوسیه, اروپا, آفریقا, قاره آمریکا",
+      "index": 3624,
+      "subject_en": "British Empire",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "آتن",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, اقیانوسیه, آسیا, قاره آمریکا, آفریقا, اروپا",
+      "index": 3625,
+      "subject_en": "Athens",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دجله",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, آفریقا, اروپا, قاره آمریکا, اقیانوسیه, آسیا",
+      "index": 3626,
+      "subject_en": "Tigris",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "کامبوج",
+      "object": "آسیا",
+      "object_candidates": "اروپا, قاره آمریکا, آفریقا, اقیانوسیه, جنوبگان, آسیا",
+      "index": 3627,
+      "subject_en": "Cambodia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بلغارستان ولگا",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, قاره آمریکا, جنوبگان, اقیانوسیه, اروپا",
+      "index": 3628,
+      "subject_en": "Volga Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مالی",
+      "object": "آفریقا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, جنوبگان, آسیا, اروپا, آفریقا",
+      "index": 3629,
+      "subject_en": "Mali",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "وانتا",
+      "object": "اروپا",
+      "object_candidates": "آسیا, اقیانوسیه, قاره آمریکا, آفریقا, جنوبگان, اروپا",
+      "index": 3630,
+      "subject_en": "Vantaa",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "چوکوتکا",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, اروپا, قاره آمریکا, آفریقا, اقیانوسیه, آسیا",
+      "index": 3631,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "گینه بیسائو",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, آسیا, جنوبگان, اقیانوسیه, اروپا, آفریقا",
+      "index": 3632,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فنلاند",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, اقیانوسیه, آسیا, جنوبگان, قاره آمریکا, اروپا",
+      "index": 3633,
+      "subject_en": "Finland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "والونیا",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, قاره آمریکا, آفریقا, جنوبگان, اروپا",
+      "index": 3634,
+      "subject_en": "Wallonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مراکش",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اروپا, قاره آمریکا, اقیانوسیه, جنوبگان, آفریقا",
+      "index": 3635,
+      "subject_en": "Morocco",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مهاراشترا",
+      "object": "آسیا",
+      "object_candidates": "آفریقا, اقیانوسیه, اروپا, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3636,
+      "subject_en": "Maharashtra",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نیل",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, آسیا, جنوبگان, اروپا, اقیانوسیه, آفریقا",
+      "index": 3637,
+      "subject_en": "Nile",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تاریخ اروپا",
+      "object": "اروپا",
+      "object_candidates": "آسیا, آفریقا, اقیانوسیه, جنوبگان, قاره آمریکا, اروپا",
+      "index": 3638,
+      "subject_en": "history of Europe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دماوند",
+      "object": "آسیا",
+      "object_candidates": "جنوبگان, قاره آمریکا, اقیانوسیه, اروپا, آفریقا, آسیا",
+      "index": 3639,
+      "subject_en": "Damavand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "خلافت اموی",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, جنوبگان, آفریقا, آسیا, اروپا",
+      "index": 3640,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "کاتوویتس",
+      "object": "اروپا",
+      "object_candidates": "آسیا, جنوبگان, قاره آمریکا, اقیانوسیه, آفریقا, اروپا",
+      "index": 3641,
+      "subject_en": "Katowice",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "راین",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, اقیانوسیه, آسیا, جنوبگان, قاره آمریکا, اروپا",
+      "index": 3642,
+      "subject_en": "Rhine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "خلدرلاند",
+      "object": "اروپا",
+      "object_candidates": "قاره آمریکا, اقیانوسیه, آفریقا, جنوبگان, آسیا, اروپا",
+      "index": 3643,
+      "subject_en": "Gelderland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "موریس",
+      "object": "آفریقا",
+      "object_candidates": "قاره آمریکا, اروپا, آسیا, جنوبگان, اقیانوسیه, آفریقا",
+      "index": 3644,
+      "subject_en": "Mauritius",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "بلوک شرق",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, قاره آمریکا, آفریقا, آسیا, اروپا",
+      "index": 3645,
+      "subject_en": "Eastern Bloc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "آوکلند",
+      "object": "اقیانوسیه",
+      "object_candidates": "قاره آمریکا, آسیا, اروپا, جنوبگان, آفریقا, اقیانوسیه",
+      "index": 3646,
+      "subject_en": "Auckland",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "عصر وایکینگ‌ها",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آفریقا, جنوبگان, آسیا, اروپا",
+      "index": 3647,
+      "subject_en": "Viking Age",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "رودخانه نیجر",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اقیانوسیه, اروپا, قاره آمریکا, جنوبگان, آفریقا",
+      "index": 3648,
+      "subject_en": "Niger River",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "غرب آسیا",
+      "object": "آسیا",
+      "object_candidates": "اروپا, قاره آمریکا, جنوبگان, اقیانوسیه, آفریقا, آسیا",
+      "index": 3649,
+      "subject_en": "Western Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "توکلائو",
+      "object": "اقیانوسیه",
+      "object_candidates": "آفریقا, قاره آمریکا, اروپا, آسیا, جنوبگان, اقیانوسیه",
+      "index": 3650,
+      "subject_en": "Tokelau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "بیهار",
+      "object": "آسیا",
+      "object_candidates": "قاره آمریکا, آفریقا, اروپا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3651,
+      "subject_en": "Bihar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "استونی",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, آفریقا, آسیا, قاره آمریکا, اروپا",
+      "index": 3652,
+      "subject_en": "Estonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سرزمین‌های جنوبی و جنوبگانی فرانسه",
+      "object": "جنوبگان",
+      "object_candidates": "اروپا, قاره آمریکا, اقیانوسیه, آفریقا, آسیا, جنوبگان",
+      "index": 3653,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "سودان",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, قاره آمریکا, اروپا, آسیا, اقیانوسیه, آفریقا",
+      "index": 3654,
+      "subject_en": "Sudan",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "سیلند",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, آسیا, قاره آمریکا, آفریقا, جنوبگان, اروپا",
+      "index": 3655,
+      "subject_en": "Principality of Sealand",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "پیمان‌نامه جنوبگان",
+      "object": "جنوبگان",
+      "object_candidates": "قاره آمریکا, آسیا, آفریقا, اروپا, اقیانوسیه, جنوبگان",
+      "index": 3656,
+      "subject_en": "Antarctic Treaty System",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "نپال",
+      "object": "آسیا",
+      "object_candidates": "اروپا, آفریقا, قاره آمریکا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3657,
+      "subject_en": "Nepal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ژوان دو نوا",
+      "object": "آفریقا",
+      "object_candidates": "اقیانوسیه, جنوبگان, اروپا, آسیا, قاره آمریکا, آفریقا",
+      "index": 3658,
+      "subject_en": "Juan de Nova Island",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ایالات متحده آمریکا",
+      "object": "اقیانوسیه",
+      "object_candidates": "اروپا, جنوبگان, قاره آمریکا, آفریقا, آسیا, اقیانوسیه",
+      "index": 3659,
+      "subject_en": "United States of America",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "ژاپن",
+      "object": "آسیا",
+      "object_candidates": "اقیانوسیه, اروپا, جنوبگان, آفریقا, قاره آمریکا, آسیا",
+      "index": 3660,
+      "subject_en": "Japan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "موزامبیک",
+      "object": "آفریقا",
+      "object_candidates": "آسیا, اقیانوسیه, اروپا, جنوبگان, قاره آمریکا, آفریقا",
+      "index": 3661,
+      "subject_en": "Mozambique",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "شیملا",
+      "object": "آسیا",
+      "object_candidates": "اروپا, جنوبگان, اقیانوسیه, قاره آمریکا, آفریقا, آسیا",
+      "index": 3662,
+      "subject_en": "Shimla",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "هلسینکی",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آفریقا, اقیانوسیه, آسیا, قاره آمریکا, اروپا",
+      "index": 3663,
+      "subject_en": "Helsinki",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سان مارینو",
+      "object": "اروپا",
+      "object_candidates": "جنوبگان, آسیا, آفریقا, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3664,
+      "subject_en": "San Marino",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "شنژن",
+      "object": "آسیا",
+      "object_candidates": "اروپا, اقیانوسیه, آفریقا, جنوبگان, قاره آمریکا, آسیا",
+      "index": 3665,
+      "subject_en": "Shenzhen",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ایالت آزاد کنگو",
+      "object": "آفریقا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آسیا, اروپا, جنوبگان, آفریقا",
+      "index": 3666,
+      "subject_en": "Congo Free State",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "اتحادیه کشورهای عرب",
+      "object": "آسیا",
+      "object_candidates": "اروپا, قاره آمریکا, آفریقا, جنوبگان, اقیانوسیه, آسیا",
+      "index": 3667,
+      "subject_en": "Arab League",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ویستولا",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, جنوبگان, قاره آمریکا, آسیا, آفریقا, اروپا",
+      "index": 3668,
+      "subject_en": "Vistula",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دورو",
+      "object": "اروپا",
+      "object_candidates": "آفریقا, آسیا, جنوبگان, اقیانوسیه, قاره آمریکا, اروپا",
+      "index": 3669,
+      "subject_en": "Douro River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "آفریقای جنوبی",
+      "object": "آفریقا",
+      "object_candidates": "جنوبگان, آسیا, قاره آمریکا, اروپا, اقیانوسیه, آفریقا",
+      "index": 3670,
+      "subject_en": "South Africa",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فیجی",
+      "object": "اقیانوسیه",
+      "object_candidates": "اروپا, آفریقا, جنوبگان, آسیا, قاره آمریکا, اقیانوسیه",
+      "index": 3671,
+      "subject_en": "Fiji",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "گوادلکیویر",
+      "object": "اروپا",
+      "object_candidates": "اقیانوسیه, قاره آمریکا, آسیا, آفریقا, جنوبگان, اروپا",
+      "index": 3672,
+      "subject_en": "Guadalquivir",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سومالی",
+      "object": "آفریقا",
+      "object_candidates": "اروپا, جنوبگان, اقیانوسیه, آسیا, قاره آمریکا, آفریقا",
+      "index": 3673,
+      "subject_en": "Somalia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مسجدالاقصی",
+      "object": "اورشلیم",
+      "object_candidates": "میدلزبورو, ونکوور, مریلند, لوتن, سوئد, روسیه, عراق, بولونیا, یمن, اورشلیم",
+      "index": 3963
+    },
+    {
+      "subject": "خیابان پنجم",
+      "object": "منهتن",
+      "object_candidates": "مغولستان, کانادا, لوتن, اسپانیا, هلند, آرکانزاس, سیاتل, اورشلیم, ونکوور, منهتن",
+      "index": 3964
+    },
+    {
+      "subject": "استان صلاح‌الدین",
+      "object": "عراق",
+      "object_candidates": "بولونیا, فلوریدا, روسیه, فرانکفورت آم ماین, پادشاهی انگلیس, صربستان, شهرستان آلبا, اورشلیم, زاکسن, عراق",
+      "index": 3965
+    },
+    {
+      "subject": "شهرستان آب‌شوران",
+      "object": "جمهوری آذربایجان",
+      "object_candidates": "سوریه, اردن, اوکراین, آراگون, زاکسن, یمن, میدلزبورو, فرانکفورت آم ماین, میزوری, جمهوری آذربایجان",
+      "index": 3966
+    },
+    {
+      "subject": "لوفکین، تگزاس",
+      "object": "تگزاس",
+      "object_candidates": "اسپانیا, مغولستان, دالاس, هند, ایتالیا, فرانکفورت آم ماین, سوریه, اتیوپی, اردن, تگزاس",
+      "index": 3967
+    },
+    {
+      "subject": "استان سومالی",
+      "object": "اتیوپی",
+      "object_candidates": "آراگون, دالاس, زاکسن, اسپانیا, ایالت مونتانا, عراق, یمن, ایتالیا, آرکانزاس, اتیوپی",
+      "index": 3968
+    },
+    {
+      "subject": "هلند شمالی",
+      "object": "هلند",
+      "object_candidates": "ساردنی, عراق, میزوری, فلوریدا, پراویدنس, اوکراین, روسیه, تگزاس, هند, هلند",
+      "index": 3969
+    },
+    {
+      "subject": "هوپ (آرکانزاس)",
+      "object": "آرکانزاس",
+      "object_candidates": "زاکسن, اسپانیا, ایتالیا, سیاتل, بایرن, اردن, اوکراین, مغولستان, صربستان, آرکانزاس",
+      "index": 3970
+    },
+    {
+      "subject": "ترور جان اف کندی",
+      "object": "دالاس",
+      "object_candidates": "مغولستان, شهرستان آلبا, ایالت مونتانا, آراگون, بایرن, بولونیا, میزوری, ونکوور, روسیه, دالاس",
+      "index": 3971
+    },
+    {
+      "subject": "دانشگاه جانز هاپکینز",
+      "object": "مریلند",
+      "object_candidates": "فرانکفورت آم ماین, اسکاتلند, بولونیا, پراویدنس, دالاس, منهتن, هلند, شهرستان آلبا, پادشاهی انگلیس, مریلند",
+      "index": 3972
+    },
+    {
+      "subject": "ایتالیای شمالی",
+      "object": "ایتالیا",
+      "object_candidates": "مریلند, اوکراین, دالاس, اردن, اورشلیم, فرانکفورت آم ماین, ونکوور, پادشاهی انگلیس, بولونیا, ایتالیا",
+      "index": 3973
+    },
+    {
+      "subject": "استان ساراگوسا",
+      "object": "آراگون",
+      "object_candidates": "اردن, اتیوپی, یمن, استانبول, ایالت مونتانا, ونکوور, صربستان, بولونیا, جمهوری آذربایجان, آراگون",
+      "index": 3974
+    },
+    {
+      "subject": "بازی‌های المپیک زمستانی ۲۰۱۰",
+      "object": "ونکوور",
+      "object_candidates": "دالاس, آرکانزاس, اوکراین, صربستان, هند, سیاتل, اتیوپی, بولونیا, یمن, ونکوور",
+      "index": 3975
+    },
+    {
+      "subject": "دانشگاه براون",
+      "object": "پراویدنس",
+      "object_candidates": "هند, یمن, ساردنی, میزوری, آرکانزاس, شهرستان آلبا, اتیوپی, بایرن, ایتالیا, پراویدنس",
+      "index": 3976
+    },
+    {
+      "subject": "دریاچه کنستانس",
+      "object": "بایرن",
+      "object_candidates": "آراگون, جمهوری آذربایجان, میزوری, اردن, منهتن, مغولستان, اوکراین, شهرستان آلبا, یمن, بایرن",
+      "index": 3977
+    },
+    {
+      "subject": "بخش خودمختار والنسیا",
+      "object": "اسپانیا",
+      "object_candidates": "میدلزبورو, ونکوور, فلوریدا, مغولستان, پادشاهی انگلیس, ایتالیا, تگزاس, اوکراین, آرکانزاس, اسپانیا",
+      "index": 3978
+    },
+    {
+      "subject": "دانشگاه واشینگتن",
+      "object": "سیاتل",
+      "object_candidates": "روسیه, مریلند, هلند, تگزاس, پادشاهی انگلیس, زاکسن, عراق, دالاس, صربستان, سیاتل",
+      "index": 3979
+    },
+    {
+      "subject": "باشگاه فوتبال میدلزبورو",
+      "object": "میدلزبورو",
+      "object_candidates": "آرکانزاس, آراگون, اسپانیا, سوریه, دالاس, سیاتل, بولونیا, ونکوور, ایتالیا, میدلزبورو",
+      "index": 3980
+    },
+    {
+      "subject": "سیکیم",
+      "object": "هند",
+      "object_candidates": "زاکسن, عراق, منهتن, مغولستان, پراویدنس, اورشلیم, فلوریدا, اتیوپی, استانبول, هند",
+      "index": 3981
+    },
+    {
+      "subject": "استان مثنی",
+      "object": "عراق",
+      "object_candidates": "مریلند, فلوریدا, اسکاتلند, شهرستان آلبا, هلند, ساردنی, آراگون, اسپانیا, دالاس, عراق",
+      "index": 3982
+    },
+    {
+      "subject": "کتابخانه ملی آلمان",
+      "object": "فرانکفورت آم ماین",
+      "object_candidates": "بولونیا, اردن, ساردنی, مریلند, آراگون, استانبول, سیاتل, میدلزبورو, تگزاس, فرانکفورت آم ماین",
+      "index": 3983
+    },
+    {
+      "subject": "استان کبک",
+      "object": "کانادا",
+      "object_candidates": "عراق, میزوری, مغولستان, شهرستان آلبا, بایرن, آرکانزاس, دالاس, اورشلیم, استانبول, کانادا",
+      "index": 3984
+    },
+    {
+      "subject": "دانشگاه بولونیا",
+      "object": "بولونیا",
+      "object_candidates": "فرانکفورت آم ماین, دالاس, یمن, ونکوور, ساردنی, ایتالیا, سیاتل, اتیوپی, صربستان, بولونیا",
+      "index": 3985
+    },
+    {
+      "subject": "استان ترنوپیل",
+      "object": "اوکراین",
+      "object_candidates": "اورشلیم, هند, روسیه, کانادا, لوتن, بولونیا, عراق, یمن, میزوری, اوکراین",
+      "index": 3986
+    },
+    {
+      "subject": "کمنیتز",
+      "object": "زاکسن",
+      "object_candidates": "پادشاهی انگلیس, اسپانیا, شهرستان آلبا, ایتالیا, میزوری, ساردنی, بایرن, یمن, ونکوور, زاکسن",
+      "index": 3987
+    },
+    {
+      "subject": "استان ساراتوف",
+      "object": "روسیه",
+      "object_candidates": "استانبول, سوریه, یمن, ونکوور, اسکاتلند, کانادا, فرانکفورت آم ماین, اردن, شهرستان آلبا, روسیه",
+      "index": 3988
+    },
+    {
+      "subject": "البا لولیا",
+      "object": "شهرستان آلبا",
+      "object_candidates": "تگزاس, استانبول, ایتالیا, بلغارستان, اتیوپی, اورشلیم, هند, پادشاهی انگلیس, فلوریدا, شهرستان آلبا",
+      "index": 3989
+    },
+    {
+      "subject": "شتلند",
+      "object": "اسکاتلند",
+      "object_candidates": "سوئد, تگزاس, اتیوپی, لوتن, عراق, سیاتل, دالاس, زاکسن, اردن, اسکاتلند",
+      "index": 3990
+    },
+    {
+      "subject": "کوه هرتسل",
+      "object": "اورشلیم",
+      "object_candidates": "لوتن, روسیه, جمهوری آذربایجان, کانادا, شهرستان آلبا, تگزاس, پراویدنس, ایتالیا, اوکراین, اورشلیم",
+      "index": 3991
+    },
+    {
+      "subject": "زرقاء",
+      "object": "اردن",
+      "object_candidates": "هند, استانبول, اسپانیا, پراویدنس, سیاتل, میدلزبورو, دالاس, یمن, اورشلیم, اردن",
+      "index": 3992
+    },
+    {
+      "subject": "مستعمرات سیزده‌گانه",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "هند, کانادا, اسکاتلند, بولونیا, اوکراین, بایرن, ونکوور, مریلند, سوئد, پادشاهی انگلیس",
+      "index": 3993
+    },
+    {
+      "subject": "میزورام",
+      "object": "هند",
+      "object_candidates": "جمهوری آذربایجان, تگزاس, سوریه, روسیه, سیاتل, لوتن, منهتن, کانادا, صربستان, هند",
+      "index": 3994
+    },
+    {
+      "subject": "استان خنتی",
+      "object": "مغولستان",
+      "object_candidates": "منهتن, یمن, اوکراین, اورشلیم, دالاس, سوئد, سیاتل, ایالت مونتانا, بایرن, مغولستان",
+      "index": 3995
+    },
+    {
+      "subject": "استان مأرب",
+      "object": "یمن",
+      "object_candidates": "مریلند, منهتن, بلغارستان, بولونیا, میزوری, هند, پراویدنس, شهرستان آلبا, لوتن, یمن",
+      "index": 3996
+    },
+    {
+      "subject": "استان استکهلم",
+      "object": "سوئد",
+      "object_candidates": "تگزاس, اردن, ایالت مونتانا, فرانکفورت آم ماین, آراگون, اسکاتلند, میدلزبورو, یمن, بلغارستان, سوئد",
+      "index": 3997
+    },
+    {
+      "subject": "استان البیا تمپیو",
+      "object": "ساردنی",
+      "object_candidates": "زاکسن, استانبول, اوکراین, ایتالیا, شهرستان آلبا, بولونیا, سوریه, دالاس, اورشلیم, ساردنی",
+      "index": 3998
+    },
+    {
+      "subject": "فرودگاه لوتن لندن",
+      "object": "لوتن",
+      "object_candidates": "آرکانزاس, سوریه, اوکراین, اورشلیم, عراق, فلوریدا, اتیوپی, دالاس, بلغارستان, لوتن",
+      "index": 3999
+    },
+    {
+      "subject": "استان حمات",
+      "object": "سوریه",
+      "object_candidates": "مریلند, پادشاهی انگلیس, استانبول, فرانکفورت آم ماین, بلغارستان, عراق, هلند, یمن, کانادا, سوریه",
+      "index": 4000
+    },
+    {
+      "subject": "پارک ملی یلوستون",
+      "object": "ایالت مونتانا",
+      "object_candidates": "اسپانیا, بایرن, کانادا, هلند, بولونیا, سیاتل, اوکراین, تگزاس, سوئد, ایالت مونتانا",
+      "index": 4001
+    },
+    {
+      "subject": "مسجد سلطان احمد",
+      "object": "استانبول",
+      "object_candidates": "سوریه, صربستان, مغولستان, بایرن, فرانکفورت آم ماین, بولونیا, سوئد, بلغارستان, اوکراین, استانبول",
+      "index": 4002
+    },
+    {
+      "subject": "استان میکولائیف",
+      "object": "اوکراین",
+      "object_candidates": "ایتالیا, شهرستان آلبا, روسیه, کانادا, پادشاهی انگلیس, لوتن, سوریه, سیاتل, ونکوور, اوکراین",
+      "index": 4003
+    },
+    {
+      "subject": "استان کیوستندیل",
+      "object": "بلغارستان",
+      "object_candidates": "استانبول, اورشلیم, پراویدنس, سوئد, فلوریدا, اتیوپی, ونکوور, اسکاتلند, پادشاهی انگلیس, بلغارستان",
+      "index": 4004
+    },
+    {
+      "subject": "ناگالند",
+      "object": "هند",
+      "object_candidates": "شهرستان آلبا, صربستان, فلوریدا, اوکراین, هلند, ایتالیا, لوتن, زاکسن, فرانکفورت آم ماین, هند",
+      "index": 4005
+    },
+    {
+      "subject": "ناحیه زلاتیبور",
+      "object": "صربستان",
+      "object_candidates": "اورشلیم, سیاتل, میدلزبورو, تگزاس, فرانکفورت آم ماین, هند, استانبول, جمهوری آذربایجان, بولونیا, صربستان",
+      "index": 4006
+    },
+    {
+      "subject": "سنت لوئیس",
+      "object": "میزوری",
+      "object_candidates": "مریلند, آرکانزاس, بایرن, ایالت مونتانا, لوتن, اوکراین, دالاس, بولونیا, اسکاتلند, میزوری",
+      "index": 4007
+    },
+    {
+      "subject": "پایگاه فضایی کندی",
+      "object": "فلوریدا",
+      "object_candidates": "هند, صربستان, شهرستان آلبا, اردن, میدلزبورو, میزوری, ایتالیا, ونکوور, پراویدنس, فلوریدا",
+      "index": 4008
+    },
+    {
+      "subject": "تیمز",
+      "object": "آکسفوردشایر",
+      "object_candidates": "سوریه, ایالت مونتانا, بایرن, فرانکفورت آم ماین, هلند, تگزاس, لوتن, اردن, پادشاهی انگلیس, آکسفوردشایر",
+      "index": 4009
+    },
+    {
+      "subject": "ویسمار",
+      "object": "آلمان",
+      "object_candidates": "سوئیس, ژاپن, اتریش, برزیل, ازبکستان, مجارستان, هائیتی, یونان, هلند, آلمان",
+      "index": 4185
+    },
+    {
+      "subject": "دیدیموتیچو",
+      "object": "یونان",
+      "object_candidates": "هند, مولداوی, هائیتی, هلند, پرتغال, آلمان, فرانسه, آرژانتین, جمهوری آذربایجان, یونان",
+      "index": 4186
+    },
+    {
+      "subject": "زمین‌لرزه و سونامی اقیانوس هند",
+      "object": "اندونزی",
+      "object_candidates": "یونان, لهستان, سوریه, هائیتی, آرژانتین, برزیل, اسپانیا, سوئیس, جمهوری آذربایجان, اندونزی",
+      "index": 4187
+    },
+    {
+      "subject": "اوفا",
+      "object": "روسیه",
+      "object_candidates": "فنلاند, ترکیه, آرژانتین, هلند, پرتغال, برزیل, اتریش, افغانستان, ایتالیا, روسیه",
+      "index": 4188
+    },
+    {
+      "subject": "گاگائوزیا",
+      "object": "مولداوی",
+      "object_candidates": "فرانسه, ازبکستان, سوئیس, سوریه, آلمان, مجارستان, افغانستان, پرتغال, هائیتی, مولداوی",
+      "index": 4189
+    },
+    {
+      "subject": "باستیا",
+      "object": "فرانسه",
+      "object_candidates": "مولداوی, یونان, اسپانیا, سوریه, جمهوری آذربایجان, افغانستان, ایتالیا, لهستان, فنلاند, فرانسه",
+      "index": 4190
+    },
+    {
+      "subject": "استان حسکه",
+      "object": "سوریه",
+      "object_candidates": "روسیه, اندونزی, مصر, ترکیه, هائیتی, برزیل, اتریش, یمن, هلند, سوریه",
+      "index": 4191
+    },
+    {
+      "subject": "استارا زاگورا",
+      "object": "بلغارستان",
+      "object_candidates": "ایرلند, مصر, برزیل, فنلاند, مجارستان, فرانسه, روسیه, هند, آلمان, بلغارستان",
+      "index": 4192
+    },
+    {
+      "subject": "تارن-ا-گارون",
+      "object": "فرانسه",
+      "object_candidates": "آلمان, اتریش, هائیتی, جمهوری آذربایجان, مجارستان, یمن, هند, اندونزی, پرتغال, فرانسه",
+      "index": 4193
+    },
+    {
+      "subject": "ایالت شاف هاوزن",
+      "object": "سوئیس",
+      "object_candidates": "روسیه, جمهوری آذربایجان, کانادا, سوریه, آرژانتین, مولداوی, پرتغال, ایرلند, ژاپن, سوئیس",
+      "index": 4194
+    },
+    {
+      "subject": "کوه‌های کارپات",
+      "object": "اتریش",
+      "object_candidates": "روسیه, پرتغال, افغانستان, هلند, جمهوری آذربایجان, فرانسه, یونان, بلغارستان, کانادا, اتریش",
+      "index": 4195
+    },
+    {
+      "subject": "لیریا",
+      "object": "پرتغال",
+      "object_candidates": "آلمان, ترکیه, لهستان, هند, یونان, کانادا, ازبکستان, سوریه, برزیل, پرتغال",
+      "index": 4196
+    },
+    {
+      "subject": "کاپوئرا",
+      "object": "برزیل",
+      "object_candidates": "ازبکستان, افغانستان, آلمان, ترکیه, سوریه, هند, یمن, مولداوی, هائیتی, برزیل",
+      "index": 4197
+    },
+    {
+      "subject": "شرکت خودروسازی اپل",
+      "object": "آلمان",
+      "object_candidates": "افغانستان, هند, هلند, برزیل, فرانسه, ژاپن, یونان, اندونزی, ترکیه, آلمان",
+      "index": 4198
+    },
+    {
+      "subject": "خاسافیورت",
+      "object": "روسیه",
+      "object_candidates": "ترکیه, ژاپن, ایتالیا, لهستان, هند, برزیل, سوئیس, آرژانتین, مجارستان, روسیه",
+      "index": 4199
+    },
+    {
+      "subject": "ابو سمبل",
+      "object": "مصر",
+      "object_candidates": "ایرلند, هائیتی, فرانسه, هند, یمن, روسیه, لهستان, آلمان, افغانستان, مصر",
+      "index": 4200
+    },
+    {
+      "subject": "مردم گرجی",
+      "object": "جمهوری آذربایجان",
+      "object_candidates": "روسیه, افغانستان, سوئیس, ایرلند, بلغارستان, اسپانیا, اندونزی, مجارستان, هلند, جمهوری آذربایجان",
+      "index": 4201
+    },
+    {
+      "subject": "باشگاه فوتبال فلومیننزه",
+      "object": "برزیل",
+      "object_candidates": "یونان, ایتالیا, اندونزی, روسیه, اسپانیا, هائیتی, پرتغال, هلند, مصر, برزیل",
+      "index": 4202
+    },
+    {
+      "subject": "ناومبورگ",
+      "object": "آلمان",
+      "object_candidates": "بلغارستان, سوریه, هائیتی, مصر, پرتغال, هلند, سوئیس, فرانسه, روسیه, آلمان",
+      "index": 4203
+    },
+    {
+      "subject": "هیسپانیولا",
+      "object": "هائیتی",
+      "object_candidates": "آلمان, فرانسه, هند, بلغارستان, جمهوری آذربایجان, اندونزی, یونان, افغانستان, اسپانیا, هائیتی",
+      "index": 4204
+    },
+    {
+      "subject": "پوآسی",
+      "object": "فرانسه",
+      "object_candidates": "مولداوی, مجارستان, اندونزی, یونان, اتریش, هائیتی, مصر, کانادا, برزیل, فرانسه",
+      "index": 4205
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۱۹۶۰",
+      "object": "ایتالیا",
+      "object_candidates": "افغانستان, فرانسه, اندونزی, یمن, اتریش, ژاپن, مجارستان, سوریه, ترکیه, ایتالیا",
+      "index": 4206
+    },
+    {
+      "subject": "تنگه کرچ",
+      "object": "روسیه",
+      "object_candidates": "فرانسه, آرژانتین, مجارستان, هلند, هائیتی, برزیل, مولداوی, اتریش, سوریه, روسیه",
+      "index": 4207
+    },
+    {
+      "subject": "موزه گوگنهایم بیلبائو",
+      "object": "اسپانیا",
+      "object_candidates": "لهستان, مصر, سوئیس, مولداوی, بلغارستان, کانادا, برزیل, ایرلند, هائیتی, اسپانیا",
+      "index": 4208
+    },
+    {
+      "subject": "حزب مردم برای آزادی و دموکراسی",
+      "object": "هلند",
+      "object_candidates": "اسپانیا, ازبکستان, افغانستان, ژاپن, اتریش, مصر, کانادا, مولداوی, یمن, هلند",
+      "index": 4209
+    },
+    {
+      "subject": "پاموک‌کاله",
+      "object": "ترکیه",
+      "object_candidates": "یونان, هند, بلغارستان, آلمان, ازبکستان, مصر, اندونزی, فنلاند, هلند, ترکیه",
+      "index": 4210
+    },
+    {
+      "subject": "سرزمین کامچاتکا",
+      "object": "روسیه",
+      "object_candidates": "لهستان, برزیل, کانادا, افغانستان, اتریش, هند, ایتالیا, آلمان, مجارستان, روسیه",
+      "index": 4211
+    },
+    {
+      "subject": "مونیخ",
+      "object": "آلمان",
+      "object_candidates": "جمهوری آذربایجان, هند, سوئیس, پرتغال, یونان, مجارستان, ترکیه, کانادا, لهستان, آلمان",
+      "index": 4212
+    },
+    {
+      "subject": "کارلو ( ایرلند)",
+      "object": "ایرلند",
+      "object_candidates": "یمن, اسپانیا, پرتغال, یونان, آرژانتین, ژاپن, برزیل, اندونزی, هلند, ایرلند",
+      "index": 4213
+    },
+    {
+      "subject": "استان فنلاند غربی",
+      "object": "فنلاند",
+      "object_candidates": "مجارستان, برزیل, روسیه, ترکیه, سوریه, پرتغال, ایتالیا, ایرلند, آلمان, فنلاند",
+      "index": 4214
+    },
+    {
+      "subject": "اوشاوا",
+      "object": "کانادا",
+      "object_candidates": "هلند, ترکیه, یونان, آلمان, ژاپن, سوئیس, یمن, افغانستان, روسیه, کانادا",
+      "index": 4215
+    },
+    {
+      "subject": "عدن",
+      "object": "یمن",
+      "object_candidates": "برزیل, مصر, ایتالیا, ایرلند, مجارستان, کانادا, فرانسه, روسیه, ژاپن, یمن",
+      "index": 4216
+    },
+    {
+      "subject": "لریدا",
+      "object": "اسپانیا",
+      "object_candidates": "سوئیس, یونان, آلمان, اندونزی, ایرلند, ازبکستان, روسیه, فنلاند, هلند, اسپانیا",
+      "index": 4217
+    },
+    {
+      "subject": "بیلبائو",
+      "object": "اسپانیا",
+      "object_candidates": "برزیل, مجارستان, آلمان, یمن, یونان, ژاپن, هلند, جمهوری آذربایجان, ترکیه, اسپانیا",
+      "index": 4218
+    },
+    {
+      "subject": "استان بیله‌جک",
+      "object": "ترکیه",
+      "object_candidates": "کانادا, یونان, مجارستان, هائیتی, اندونزی, فرانسه, سوریه, آلمان, ژاپن, ترکیه",
+      "index": 4219
+    },
+    {
+      "subject": "نریونگری",
+      "object": "روسیه",
+      "object_candidates": "آرژانتین, برزیل, هلند, یونان, هند, فنلاند, جمهوری آذربایجان, مولداوی, فرانسه, روسیه",
+      "index": 4220
+    },
+    {
+      "subject": "ترنتو",
+      "object": "ایتالیا",
+      "object_candidates": "برزیل, آرژانتین, ژاپن, هلند, یمن, ایرلند, سوئیس, مولداوی, افغانستان, ایتالیا",
+      "index": 4221
+    },
+    {
+      "subject": "کلومب",
+      "object": "فرانسه",
+      "object_candidates": "آلمان, اسپانیا, ترکیه, ژاپن, لهستان, مصر, روسیه, یونان, سوریه, فرانسه",
+      "index": 4222
+    },
+    {
+      "subject": "فروزینونه",
+      "object": "ایتالیا",
+      "object_candidates": "مصر, یمن, ژاپن, مولداوی, ترکیه, هلند, ایرلند, هند, کانادا, ایتالیا",
+      "index": 4223
+    },
+    {
+      "subject": "پرپینان",
+      "object": "فرانسه",
+      "object_candidates": "ایرلند, پرتغال, بلغارستان, هائیتی, اتریش, ترکیه, روسیه, ازبکستان, ژاپن, فرانسه",
+      "index": 4224
+    },
+    {
+      "subject": "فرودگاه جدید استانبول",
+      "object": "ترکیه",
+      "object_candidates": "فنلاند, سوئیس, هلند, یونان, آرژانتین, اسپانیا, بلغارستان, سوریه, مصر, ترکیه",
+      "index": 4225
+    },
+    {
+      "subject": "بودا",
+      "object": "مجارستان",
+      "object_candidates": "یونان, ایرلند, ژاپن, برزیل, روسیه, یمن, مولداوی, جمهوری آذربایجان, مصر, مجارستان",
+      "index": 4226
+    },
+    {
+      "subject": "لیگ برتر فوتبال هلند",
+      "object": "هلند",
+      "object_candidates": "افغانستان, کانادا, اندونزی, جمهوری آذربایجان, اتریش, روسیه, مصر, مولداوی, هند, هلند",
+      "index": 4227
+    },
+    {
+      "subject": "سارنیا",
+      "object": "کانادا",
+      "object_candidates": "ترکیه, برزیل, روسیه, اندونزی, جمهوری آذربایجان, یونان, آرژانتین, ایرلند, هلند, کانادا",
+      "index": 4228
+    },
+    {
+      "subject": "کرپانتره",
+      "object": "فرانسه",
+      "object_candidates": "مصر, ازبکستان, ترکیه, اتریش, مولداوی, ایتالیا, فنلاند, روسیه, مجارستان, فرانسه",
+      "index": 4229
+    },
+    {
+      "subject": "کاتالونیا",
+      "object": "اسپانیا",
+      "object_candidates": "آلمان, ترکیه, آرژانتین, مصر, مولداوی, کانادا, هند, لهستان, ایرلند, اسپانیا",
+      "index": 4230
+    },
+    {
+      "subject": "قلعه باستیل",
+      "object": "فرانسه",
+      "object_candidates": "هند, هلند, آلمان, فنلاند, کانادا, اندونزی, هائیتی, مجارستان, ازبکستان, فرانسه",
+      "index": 4231
+    },
+    {
+      "subject": "نینتندو",
+      "object": "ژاپن",
+      "object_candidates": "اسپانیا, ایتالیا, آلمان, جمهوری آذربایجان, مصر, یمن, اندونزی, هلند, فنلاند, ژاپن",
+      "index": 4232
+    },
+    {
+      "subject": "نخشب",
+      "object": "ازبکستان",
+      "object_candidates": "فنلاند, هائیتی, جمهوری آذربایجان, کانادا, ترکیه, مجارستان, مولداوی, ژاپن, فرانسه, ازبکستان",
+      "index": 4233
+    },
+    {
+      "subject": "سرود ملی آرژانتین",
+      "object": "آرژانتین",
+      "object_candidates": "اسپانیا, مجارستان, لهستان, سوریه, اتریش, برزیل, افغانستان, سوئیس, کانادا, آرژانتین",
+      "index": 4234
+    },
+    {
+      "subject": "لاختی",
+      "object": "فنلاند",
+      "object_candidates": "ژاپن, پرتغال, یونان, افغانستان, مصر, سوریه, اسپانیا, هائیتی, مجارستان, فنلاند",
+      "index": 4235
+    },
+    {
+      "subject": ".af",
+      "object": "افغانستان",
+      "object_candidates": "ترکیه, مصر, بلغارستان, فنلاند, هند, لهستان, یمن, روسیه, ایرلند, افغانستان",
+      "index": 4236
+    },
+    {
+      "subject": "خلیج بوتنی",
+      "object": "فنلاند",
+      "object_candidates": "آرژانتین, ایتالیا, لهستان, افغانستان, ژاپن, جمهوری آذربایجان, ترکیه, مجارستان, یمن, فنلاند",
+      "index": 4237
+    },
+    {
+      "subject": "نوا فرایبورگو",
+      "object": "برزیل",
+      "object_candidates": "پرتغال, ایرلند, اتریش, هند, آرژانتین, سوئیس, کانادا, یمن, ژاپن, برزیل",
+      "index": 4238
+    },
+    {
+      "subject": "اتحادیه فوتبال لهستان",
+      "object": "لهستان",
+      "object_candidates": "ایتالیا, آرژانتین, فرانسه, اندونزی, افغانستان, بلغارستان, مولداوی, کانادا, اتریش, لهستان",
+      "index": 4239
+    },
+    {
+      "subject": "بووه",
+      "object": "فرانسه",
+      "object_candidates": "مولداوی, لهستان, اتریش, ژاپن, هلند, ازبکستان, روسیه, یمن, اندونزی, فرانسه",
+      "index": 4240
+    },
+    {
+      "subject": "سند",
+      "object": "هند",
+      "object_candidates": "ترکیه, برزیل, یمن, مصر, کانادا, لهستان, ژاپن, اندونزی, آرژانتین, هند",
+      "index": 4241
+    },
+    {
+      "subject": "دارمشتات",
+      "object": "آلمان",
+      "object_candidates": "ازبکستان, سوریه, اندونزی, ایرلند, بلغارستان, یمن, روسیه, هائیتی, کانادا, آلمان",
+      "index": 4242
+    },
+    {
+      "subject": "ایمپریا",
+      "object": "ایتالیا",
+      "object_candidates": "ایرلند, ازبکستان, آلمان, مصر, بلغارستان, هند, روسیه, فرانسه, یمن, ایتالیا",
+      "index": 4243
+    },
+    {
+      "subject": "دانشگاه کیوتو",
+      "object": "ژاپن",
+      "object_candidates": "پرتغال, اتریش, ایتالیا, لهستان, ازبکستان, سوئیس, بلغارستان, اندونزی, یمن, ژاپن",
+      "index": 4244
+    },
+    {
+      "subject": "استان کیوتو",
+      "object": "ژاپن",
+      "object_candidates": "کانادا, جمهوری آذربایجان, اتریش, هند, آلمان, ایتالیا, روسیه, ایرلند, اندونزی, ژاپن",
+      "index": 4245
+    },
+    {
+      "subject": "کومینتانگ",
+      "object": "تایوان",
+      "object_candidates": "سوریه, سوئیس, لهستان, مجارستان, افغانستان, یونان, هلند, ازبکستان, پرتغال, تایوان",
+      "index": 4246
+    },
+    {
+      "subject": "حزب برای آزادی",
+      "object": "هلند",
+      "object_candidates": "هند, اندونزی, آرژانتین, ایتالیا, اسپانیا, مولداوی, یمن, فرانسه, ژاپن, هلند",
+      "index": 4247
+    },
+    {
+      "subject": "درن‌بیرن",
+      "object": "اتریش",
+      "object_candidates": "هائیتی, جمهوری آذربایجان, آرژانتین, فرانسه, مولداوی, یمن, ایتالیا, کانادا, هلند, اتریش",
+      "index": 4248
+    },
+    {
+      "subject": "برج ایفل",
+      "object": "پاریس",
+      "object_candidates": "کرت, اسکاتلند, بالکان, فرانسه, مادرید, ادینبرو, ارمنستان, استونی, سوریه, پاریس",
+      "index": 4382
+    },
+    {
+      "subject": "کلیسای جامع کلن",
+      "object": "کلن",
+      "object_candidates": "ارمنستان, برلین, اسلو, تورنتو, ادینبرو, نانجینگ, لیسبون, اسکاتلند, فنلاند, کلن",
+      "index": 4383
+    },
+    {
+      "subject": "پیمان لوزان",
+      "object": "لوزان",
+      "object_candidates": "نورماندی, شام, بلژیک, اوکراین, قسطنطنیه, روسیه, بارسلون, مجارستان, جنوا, لوزان",
+      "index": 4384
+    },
+    {
+      "subject": "دانشگاه ادینبرو",
+      "object": "ادینبرو",
+      "object_candidates": "کن, مغولستان, لایپزیگ, مادرید, ورشو, مصر, فرانسه, نورماندی, لیبی, ادینبرو",
+      "index": 4385
+    },
+    {
+      "subject": "نبرد لایپزیگ",
+      "object": "لایپزیگ",
+      "object_candidates": "لیسبون, ژنو, سیدنی, کرواسی, یمن, پاریس, استونی, لندن, قفقاز, لایپزیگ",
+      "index": 4386
+    },
+    {
+      "subject": "کشورهای پساشوروی",
+      "object": "روسیه",
+      "object_candidates": "ژنو, قسطنطنیه, اسکاتلند, برلین, مجارستان, مصر, توکیو, نورماندی, مغولستان, روسیه",
+      "index": 4387
+    },
+    {
+      "subject": "کشورهای پساشوروی",
+      "object": "قزاقستان",
+      "object_candidates": "اروپا, پاریس, ژنو, لندن, تورنتو, اسلو, بلاروس, قفقاز, بلژیک, قزاقستان",
+      "index": 4388
+    },
+    {
+      "subject": "انقلاب ۱۹۵۶ مجارستان",
+      "object": "مجارستان",
+      "object_candidates": "آتلانتا, یمن, برست، بلاروس, قفقاز, لیسبون, نانجینگ, اسکاتلند, استونی, قزاقستان, مجارستان",
+      "index": 4389
+    },
+    {
+      "subject": "حملات در نروژ",
+      "object": "اسلو",
+      "object_candidates": "مجارستان, اقیانوسیه, توکیو, اسکاندیناوی, جنوا, کمبریج, مصر, بالکان, مادرید, اسلو",
+      "index": 4390
+    },
+    {
+      "subject": "انقلاب لیبی",
+      "object": "لیبی",
+      "object_candidates": "ازبکستان, برست، بلاروس, بارسلون, کویت, واترلو, مجارستان, مادرید, رواندا, قسطنطنیه, لیبی",
+      "index": 4391
+    },
+    {
+      "subject": "جنگ جهانی دوم",
+      "object": "اروپا",
+      "object_candidates": "یمن, ورشو, عراق, گنت, کمبریج, نانجینگ, اسکندریه, قزاقستان, واترلو, اروپا",
+      "index": 4392
+    },
+    {
+      "subject": "حادثه سقوط شهاب سنگ در روسیه ۲۰۱۳",
+      "object": "روسیه",
+      "object_candidates": "سوریه, تورنتو, لایپزیگ, جنوا, ژنو, لیتوانی, کرت, گنت, بلاروس, روسیه",
+      "index": 4393
+    },
+    {
+      "subject": "عملیات بارباروسا",
+      "object": "بلاروس",
+      "object_candidates": "گنت, سیدنی, تونس, لیسبون, ارمنستان, یونان, مسکو, مادرید, منهتن, بلاروس",
+      "index": 4394
+    },
+    {
+      "subject": "جنگ داخلی روسیه",
+      "object": "ایران",
+      "object_candidates": "مغولستان, اسکندریه, ورشو, کویت, مونیخ, بلژیک, لوکزامبورگ, اسکاتلند, مصر, ایران",
+      "index": 4395
+    },
+    {
+      "subject": "انقلاب تونس",
+      "object": "تونس",
+      "object_candidates": "مصر, اسرائیل, کرواسی, برلین, ایران, شام, جنوا, اروپا, اوکراین, تونس",
+      "index": 4396
+    },
+    {
+      "subject": "نبرد کرت",
+      "object": "کرت",
+      "object_candidates": "مادرید, سوریه, مجارستان, کویت, بارسلون, منهتن, سیدنی, واترلو, نورماندی, کرت",
+      "index": 4397
+    },
+    {
+      "subject": "کشتار نانکینگ",
+      "object": "نانجینگ",
+      "object_candidates": "استانبول, کرواسی, لایپزیگ, هلند, پاریس, قسطنطنیه, کمبریج, ادینبرو, آتلانتا, نانجینگ",
+      "index": 4398
+    },
+    {
+      "subject": "برج اوستانکینو",
+      "object": "مسکو",
+      "object_candidates": "جمهوری آذربایجان, توکیو, استونی, کیوتو, ادینبرو, اروپا, لوکزامبورگ, فنلاند, ژنو, مسکو",
+      "index": 4399
+    },
+    {
+      "subject": "یورش به باستیل",
+      "object": "پاریس",
+      "object_candidates": "منهتن, کویت, کلن, واترلو, بالکان, آسیا, اسکاندیناوی, تورنتو, ورشو, پاریس",
+      "index": 4400
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۲۰۰۰",
+      "object": "سیدنی",
+      "object_candidates": "مسکو, اروپا, لوکزامبورگ, ایران, اقیانوسیه, کیوتو, سوریه, آکسفورد, نانجینگ, سیدنی",
+      "index": 4401
+    },
+    {
+      "subject": "سرن",
+      "object": "ژنو",
+      "object_candidates": "رواندا, قزاقستان, تونس, کرواسی, پادشاهی انگلیس, کرت, آکسفورد, هلند, جمهوری آذربایجان, ژنو",
+      "index": 4402
+    },
+    {
+      "subject": "جشنواره بین‌المللی فیلم برلین",
+      "object": "برلین",
+      "object_candidates": "عراق, بالکان, پادشاهی انگلیس, مصر, ایران, اسلو, لیسبون, استونی, مسکو, برلین",
+      "index": 4403
+    },
+    {
+      "subject": "کنگره برلین",
+      "object": "برلین",
+      "object_candidates": "آسیا, مونیخ, مسکو, ونیز, بالکان, جنوا, اسکاندیناوی, کن, منهتن, برلین",
+      "index": 4404
+    },
+    {
+      "subject": "عملیات بارباروسا",
+      "object": "اوکراین",
+      "object_candidates": "اسکندریه, آفریقا, سیدنی, ایران, ژنو, نورماندی, لیتوانی, جمهوری آذربایجان, قسطنطنیه, اوکراین",
+      "index": 4405
+    },
+    {
+      "subject": "جنگ داخلی سوریه",
+      "object": "سوریه",
+      "object_candidates": "اوکراین, لایپزیگ, کرواسی, اسکندریه, لوکزامبورگ, لیسبون, لوزان, اسکاتلند, تورنتو, سوریه",
+      "index": 4406
+    },
+    {
+      "subject": "دانشگاه آکسفورد",
+      "object": "آکسفورد",
+      "object_candidates": "لوکزامبورگ, اوکراین, ارمنستان, یونان, کرواسی, سوریه, بلاروس, هلند, قفقاز, آکسفورد",
+      "index": 4407
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۲۰۱۲",
+      "object": "لندن",
+      "object_candidates": "بلژیک, کن, استانبول, لیتوانی, جنوا, پادشاهی انگلیس, ایران, یونان, کرت, لندن",
+      "index": 4408
+    },
+    {
+      "subject": "ایاصوفیه",
+      "object": "استانبول",
+      "object_candidates": "لندن, لهستان, بارسلون, توکیو, لوزان, استونی, نانجینگ, مسکو, ایران, استانبول",
+      "index": 4409
+    },
+    {
+      "subject": "هنر رمانسک",
+      "object": "اروپا",
+      "object_candidates": "هلند, لیبی, اقیانوسیه, برلین, ونیز, کن, مجارستان, لیسبون, مغولستان, اروپا",
+      "index": 4410
+    },
+    {
+      "subject": "عملیات باگریشن",
+      "object": "بلاروس",
+      "object_candidates": "روسیه, هلند, آتلانتا, قسطنطنیه, کن, پادشاهی انگلیس, مادرید, لیسبون, ایران, بلاروس",
+      "index": 4411
+    },
+    {
+      "subject": "حمله ایتالیا به اتیوپی",
+      "object": "اتیوپی",
+      "object_candidates": "توکیو, بالکان, اسلو, کویت, کیوتو, اروپا, جنوا, ژنو, لوکزامبورگ, اتیوپی",
+      "index": 4412
+    },
+    {
+      "subject": "مؤسسه فناوری ماساچوست",
+      "object": "کمبریج",
+      "object_candidates": "اتیوپی, رواندا, جمهوری آذربایجان, عراق, فنلاند, جنوا, بالکان, تونس, کرت, کمبریج",
+      "index": 4413
+    },
+    {
+      "subject": "همه‌پرسی استقلال اسکاتلند، ۲۰۱۴",
+      "object": "اسکاتلند",
+      "object_candidates": "لهستان, آکسفورد, قفقاز, نانجینگ, شام, برست، بلاروس, یونان, استونی, آسیا, اسکاتلند",
+      "index": 4414
+    },
+    {
+      "subject": "جنگ واترلو",
+      "object": "واترلو",
+      "object_candidates": "اسلو, اسکندریه, یمن, هلند, کلن, ایران, اسکاندیناوی, آتلانتا, اقیانوسیه, واترلو",
+      "index": 4415
+    },
+    {
+      "subject": "دانشگاه یورک",
+      "object": "تورنتو",
+      "object_candidates": "قفقاز, اقیانوسیه, ازبکستان, سیدنی, جنوا, لوکزامبورگ, فرانسه, اسکندریه, پاریس, تورنتو",
+      "index": 4416
+    },
+    {
+      "subject": "جنگ‌ جهانی اول",
+      "object": "آفریقا",
+      "object_candidates": "آکسفورد, بالکان, قسطنطنیه, اتیوپی, لایپزیگ, کویت, لوزان, رواندا, لیتوانی, آفریقا",
+      "index": 4417
+    },
+    {
+      "subject": "نبرد فرانسه",
+      "object": "بلژیک",
+      "object_candidates": "اسرائیل, کلن, کرت, مجارستان, بالکان, اقیانوسیه, لندن, فنلاند, آتلانتا, بلژیک",
+      "index": 4418
+    },
+    {
+      "subject": "اشغال لهستان",
+      "object": "لهستان",
+      "object_candidates": "آفریقا, لایپزیگ, برلین, اسلو, قزاقستان, اسکندریه, بلاروس, کن, اوکراین, لهستان",
+      "index": 4419
+    },
+    {
+      "subject": "جنگ‌های صلیبی دوم",
+      "object": "شام",
+      "object_candidates": "عراق, استونی, آتلانتا, قفقاز, مصر, لایپزیگ, مسکو, واترلو, برست، بلاروس, شام",
+      "index": 4420
+    },
+    {
+      "subject": "عهدنامه برست-لیتوفسک",
+      "object": "برست، بلاروس",
+      "object_candidates": "فنلاند, ژنو, آسیا, ادینبرو, لوزان, روسیه, عراق, کرواسی, اسکندریه, برست، بلاروس",
+      "index": 4421
+    },
+    {
+      "subject": "جنگ قره‌باغ",
+      "object": "ارمنستان",
+      "object_candidates": "فنلاند, جنوا, اوکراین, کیوتو, اسکندریه, برلین, مصر, کرت, فرانسه, ارمنستان",
+      "index": 4422
+    },
+    {
+      "subject": "جنگ خلیج فارس",
+      "object": "عراق",
+      "object_candidates": "اسکاتلند, مصر, قفقاز, آکسفورد, بالکان, فرانسه, کن, گنت, مونیخ, عراق",
+      "index": 4423
+    },
+    {
+      "subject": "جشنواره بین‌المللی فیلم تورنتو",
+      "object": "تورنتو",
+      "object_candidates": "ایران, بالکان, کن, لهستان, توکیو, اسکاتلند, پاریس, بارسلون, ونیز, تورنتو",
+      "index": 4424
+    },
+    {
+      "subject": "جنگ خلیج فارس",
+      "object": "کویت",
+      "object_candidates": "هلند, عراق, ونیز, کرواسی, کلن, یونان, اسرائیل, اسلو, پادشاهی انگلیس, کویت",
+      "index": 4425
+    },
+    {
+      "subject": "جنگ‌های صلیبی دوم",
+      "object": "مصر",
+      "object_candidates": "استانبول, کرت, رواندا, کن, بلاروس, اسرائیل, قفقاز, استونی, پادشاهی انگلیس, مصر",
+      "index": 4426
+    },
+    {
+      "subject": "نبرد کریمه",
+      "object": "بالکان",
+      "object_candidates": "منهتن, ونیز, قسطنطنیه, کرت, اسکندریه, یمن, کوبا, فرانسه, لوزان, بالکان",
+      "index": 4427
+    },
+    {
+      "subject": "نبرد کریمه",
+      "object": "قفقاز",
+      "object_candidates": "سیدنی, سوریه, ارمنستان, لندن, مجارستان, آتلانتا, بلاروس, مادرید, قسطنطنیه, قفقاز",
+      "index": 4428
+    },
+    {
+      "subject": "بمب‌گذاری ۲۰۰۴ قطار مادرید",
+      "object": "مادرید",
+      "object_candidates": "ادینبرو, جنوا, لهستان, یونان, کرت, کیوتو, لیسبون, اتیوپی, اسکاتلند, مادرید",
+      "index": 4429
+    },
+    {
+      "subject": "توطئه باروت",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "برلین, اوکراین, لیتوانی, مسکو, قزاقستان, نانجینگ, نورماندی, لوکزامبورگ, منهتن, پادشاهی انگلیس",
+      "index": 4430
+    },
+    {
+      "subject": "کتابخانه اسکندریه مصر",
+      "object": "اسکندریه",
+      "object_candidates": "بلژیک, بارسلون, کیوتو, اتیوپی, اوکراین, لهستان, واترلو, لیبی, اسکاندیناوی, اسکندریه",
+      "index": 4431
+    },
+    {
+      "subject": "نبرد مارنگو",
+      "object": "جنوا",
+      "object_candidates": "کرت, برلین, کرواسی, بالکان, شام, برست، بلاروس, کوبا, قفقاز, فرانسه, جنوا",
+      "index": 4432
+    },
+    {
+      "subject": "نبرد فرانسه",
+      "object": "هلند",
+      "object_candidates": "لیبی, کرواسی, لوزان, سیدنی, نورماندی, سوریه, کوبا, توکیو, آتلانتا, هلند",
+      "index": 4433
+    },
+    {
+      "subject": "نسل‌کشی رواندا",
+      "object": "رواندا",
+      "object_candidates": "کرواسی, اسلو, نانجینگ, شام, لیتوانی, اسکندریه, ایران, ادینبرو, استانبول, رواندا",
+      "index": 4434
+    },
+    {
+      "subject": "انقلاب یمن",
+      "object": "یمن",
+      "object_candidates": "یونان, ارمنستان, عراق, مادرید, بلژیک, ورشو, قفقاز, کوبا, لایپزیگ, یمن",
+      "index": 4435
+    },
+    {
+      "subject": "عملیات مارکت گاردن",
+      "object": "هلند",
+      "object_candidates": "یونان, قزاقستان, برست، بلاروس, کن, ونیز, مونیخ, لهستان, برلین, تونس, هلند",
+      "index": 4436
+    },
+    {
+      "subject": "جنگ زمستان",
+      "object": "فنلاند",
+      "object_candidates": "کوبا, مصر, نانجینگ, منهتن, اسلو, واترلو, اسکندریه, مسکو, لندن, فنلاند",
+      "index": 4437
+    },
+    {
+      "subject": "کشورهای پساشوروی",
+      "object": "اوکراین",
+      "object_candidates": "اسلو, اسکاندیناوی, کمبریج, لایپزیگ, ازبکستان, لهستان, فرانسه, رواندا, برلین, اوکراین",
+      "index": 4438
+    },
+    {
+      "subject": "مقاومت فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "کن, آفریقا, استانبول, گنت, لایپزیگ, کویت, لوزان, ونیز, رواندا, فرانسه",
+      "index": 4439
+    },
+    {
+      "subject": "کشورهای پساشوروی",
+      "object": "بلاروس",
+      "object_candidates": "فنلاند, ژنو, کرواسی, گنت, مادرید, مسکو, لوزان, اسرائیل, تورنتو, بلاروس",
+      "index": 4440
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۱۹۹۶",
+      "object": "آتلانتا",
+      "object_candidates": "واترلو, آکسفورد, سوریه, کرواسی, فرانسه, ژنو, استونی, لوزان, کلن, آتلانتا",
+      "index": 4441
+    },
+    {
+      "subject": "پیمان کیوتو",
+      "object": "کیوتو",
+      "object_candidates": "اسکاندیناوی, رواندا, بلاروس, لیتوانی, فرانسه, اوکراین, عراق, اسرائیل, کن, کیوتو",
+      "index": 4442
+    },
+    {
+      "subject": "کشورهای پساشوروی",
+      "object": "ازبکستان",
+      "object_candidates": "بلاروس, توکیو, جنوا, ادینبرو, اوکراین, لایپزیگ, نانجینگ, جمهوری آذربایجان, تونس, ازبکستان",
+      "index": 4443
+    },
+    {
+      "subject": "انقلاب فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "اسکاتلند, ادینبرو, آفریقا, کویت, سوریه, بلاروس, کمبریج, لایپزیگ, لندن, فرانسه",
+      "index": 4444
+    },
+    {
+      "subject": "جنگ داخلی فنلاند",
+      "object": "فنلاند",
+      "object_candidates": "مغولستان, اسکاندیناوی, لایپزیگ, بارسلون, کوبا, برست، بلاروس, لندن, جمهوری آذربایجان, رواندا, فنلاند",
+      "index": 4445
+    },
+    {
+      "subject": "بحران موشکی کوبا",
+      "object": "کوبا",
+      "object_candidates": "کرت, بلاروس, قزاقستان, جنوا, مونیخ, یمن, مصر, آکسفورد, آسیا, کوبا",
+      "index": 4446
+    },
+    {
+      "subject": "جنگ جهانی دوم",
+      "object": "آسیا",
+      "object_candidates": "بلژیک, ایران, تورنتو, بلاروس, بالکان, مسکو, ورشو, اسکاتلند, لیتوانی, آسیا",
+      "index": 4447
+    },
+    {
+      "subject": "عملیات بارباروسا",
+      "object": "لیتوانی",
+      "object_candidates": "لوکزامبورگ, منهتن, کلن, ونیز, مجارستان, استانبول, قسطنطنیه, ورشو, پادشاهی انگلیس, لیتوانی",
+      "index": 4448
+    },
+    {
+      "subject": "جنگ اقیانوس آرام",
+      "object": "اقیانوسیه",
+      "object_candidates": "گنت, پاریس, نورماندی, قفقاز, توکیو, لیسبون, واترلو, لوکزامبورگ, شام, اقیانوسیه",
+      "index": 4449
+    },
+    {
+      "subject": "جنگ خلیج فارس",
+      "object": "اسرائیل",
+      "object_candidates": "بالکان, ایران, یونان, لوزان, تورنتو, اسکندریه, بلاروس, ارمنستان, ادینبرو, اسرائیل",
+      "index": 4450
+    },
+    {
+      "subject": "تئاتر برادوی",
+      "object": "منهتن",
+      "object_candidates": "کویت, سوریه, مجارستان, ونیز, اسکندریه, آسیا, مادرید, پادشاهی انگلیس, رواندا, منهتن",
+      "index": 4451
+    },
+    {
+      "subject": "واقعه المپیک مونیخ",
+      "object": "مونیخ",
+      "object_candidates": "قفقاز, لیبی, ورشو, واترلو, پادشاهی انگلیس, برلین, هلند, ادینبرو, ژنو, مونیخ",
+      "index": 4452
+    },
+    {
+      "subject": "جنگ عراق",
+      "object": "عراق",
+      "object_candidates": "اوکراین, قفقاز, سیدنی, بارسلون, جنوا, پاریس, ایران, مادرید, نورماندی, عراق",
+      "index": 4453
+    },
+    {
+      "subject": "آتیک",
+      "object": "یونان",
+      "object_candidates": "کیوتو, آفریقا, لیتوانی, فنلاند, مغولستان, فرانسه, بلاروس, کرت, تورنتو, یونان",
+      "index": 4454
+    },
+    {
+      "subject": "قیام ورشو",
+      "object": "ورشو",
+      "object_candidates": "آتلانتا, سوریه, اقیانوسیه, مغولستان, بارسلون, توکیو, ایران, استونی, لیتوانی, ورشو",
+      "index": 4455
+    },
+    {
+      "subject": "جنگ قره‌باغ",
+      "object": "جمهوری آذربایجان",
+      "object_candidates": "پادشاهی انگلیس, ایران, اسکاندیناوی, بارسلون, آسیا, قفقاز, کرواسی, قزاقستان, اسکاتلند, جمهوری آذربایجان",
+      "index": 4456
+    },
+    {
+      "subject": "نبرد فرانسه",
+      "object": "لوکزامبورگ",
+      "object_candidates": "روسیه, سیدنی, لیبی, لیتوانی, اسکاتلند, اسکاندیناوی, اسلو, کرت, بلژیک, لوکزامبورگ",
+      "index": 4457
+    },
+    {
+      "subject": "جنگ‌ جهانی اول",
+      "object": "اروپا",
+      "object_candidates": "پادشاهی انگلیس, لندن, جنوا, اقیانوسیه, فنلاند, یونان, رواندا, تورنتو, لیبی, اروپا",
+      "index": 4458
+    },
+    {
+      "subject": "انقلاب کوبا",
+      "object": "کوبا",
+      "object_candidates": "مصر, فنلاند, آکسفورد, تورنتو, سیدنی, اوکراین, کلن, ایران, مغولستان, کوبا",
+      "index": 4459
+    },
+    {
+      "subject": "جنگ جهانی دوم",
+      "object": "روسیه",
+      "object_candidates": "لایپزیگ, بارسلون, لیبی, بالکان, اسکاتلند, فرانسه, ونیز, یونان, کلن, روسیه",
+      "index": 4460
+    },
+    {
+      "subject": "نبرد نرماندی",
+      "object": "نورماندی",
+      "object_candidates": "قفقاز, ژنو, تورنتو, رواندا, مجارستان, استانبول, لیسبون, فرانسه, هلند, نورماندی",
+      "index": 4461
+    },
+    {
+      "subject": "جشنواره فیلم کن",
+      "object": "کن",
+      "object_candidates": "یمن, ژنو, بلژیک, هلند, ونیز, لوکزامبورگ, مونیخ, آکسفورد, گنت, کن",
+      "index": 4462
+    },
+    {
+      "subject": "عملیات بارباروسا",
+      "object": "استونی",
+      "object_candidates": "ارمنستان, جنوا, نورماندی, کلن, کرواسی, هلند, گنت, کیوتو, برست، بلاروس, استونی",
+      "index": 4463
+    },
+    {
+      "subject": "جنگ جهانی دوم",
+      "object": "آفریقا",
+      "object_candidates": "ورشو, کویت, ژنو, ارمنستان, اسکندریه, جمهوری آذربایجان, عراق, اقیانوسیه, قزاقستان, آفریقا",
+      "index": 4464
+    },
+    {
+      "subject": "پیمان لیسبون",
+      "object": "لیسبون",
+      "object_candidates": "تورنتو, ایران, آتلانتا, مونیخ, ادینبرو, هلند, اوکراین, ژنو, اسکاندیناوی, لیسبون",
+      "index": 4465
+    },
+    {
+      "subject": "جنگ داخلی روسیه",
+      "object": "مغولستان",
+      "object_candidates": "فرانسه, فنلاند, اسکاتلند, آکسفورد, مادرید, بارسلون, مصر, مجارستان, نانجینگ, مغولستان",
+      "index": 4466
+    },
+    {
+      "subject": "بمب‌گذاری لندن",
+      "object": "لندن",
+      "object_candidates": "اوکراین, لوکزامبورگ, ژنو, بلاروس, مونیخ, آفریقا, جمهوری آذربایجان, نانجینگ, شام, لندن",
+      "index": 4467
+    },
+    {
+      "subject": "جنگ‌های داخلی انگلستان",
+      "object": "پادشاهی انگلیس",
+      "object_candidates": "کویت, کوبا, مجارستان, ونیز, اروپا, ازبکستان, واترلو, اوکراین, کیوتو, پادشاهی انگلیس",
+      "index": 4468
+    },
+    {
+      "subject": "جنگ جهانی دوم",
+      "object": "اسکاندیناوی",
+      "object_candidates": "فرانسه, لیبی, یونان, تونس, آتلانتا, اتیوپی, هلند, لیتوانی, برست، بلاروس, اسکاندیناوی",
+      "index": 4469
+    },
+    {
+      "subject": "جشنواره فیلم ونیز",
+      "object": "ونیز",
+      "object_candidates": "ایران, پادشاهی انگلیس, تورنتو, کوبا, برلین, لوزان, فنلاند, مسکو, اوکراین, ونیز",
+      "index": 4470
+    },
+    {
+      "subject": "باشگاه فوتبال خنت",
+      "object": "گنت",
+      "object_candidates": "کمبریج, بلژیک, جنوا, آفریقا, اسکندریه, ونیز, فنلاند, ادینبرو, اسلو, گنت",
+      "index": 4471
+    },
+    {
+      "subject": "تهاجم نظامی شوروی به لهستان",
+      "object": "لهستان",
+      "object_candidates": "نانجینگ, لایپزیگ, پاریس, ژنو, استانبول, یونان, اسکاتلند, تورنتو, فنلاند, لهستان",
+      "index": 4472
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۲۰۲۰",
+      "object": "توکیو",
+      "object_candidates": "اوکراین, قسطنطنیه, ایران, بالکان, فنلاند, اتیوپی, مصر, شام, کرواسی, توکیو",
+      "index": 4473
+    },
+    {
+      "subject": "جنگ‌ جهانی اول",
+      "object": "آسیا",
+      "object_candidates": "ازبکستان, لهستان, سوریه, لوکزامبورگ, برلین, بارسلون, بلژیک, اسلو, عراق, آسیا",
+      "index": 4474
+    },
+    {
+      "subject": "جنگ صدساله",
+      "object": "فرانسه",
+      "object_candidates": "کن, ایران, برست، بلاروس, قفقاز, عراق, بلاروس, پادشاهی انگلیس, نورماندی, ونیز, فرانسه",
+      "index": 4475
+    },
+    {
+      "subject": "سقوط قسطنطنیه",
+      "object": "قسطنطنیه",
+      "object_candidates": "سیدنی, اسلو, آفریقا, اروپا, کیوتو, قزاقستان, کویت, مادرید, لیتوانی, قسطنطنیه",
+      "index": 4476
+    },
+    {
+      "subject": "جنگ استقلال کرواسی",
+      "object": "کرواسی",
+      "object_candidates": "آفریقا, لیتوانی, توکیو, مصر, کوبا, رواندا, یونان, قزاقستان, کمبریج, کرواسی",
+      "index": 4477
+    },
+    {
+      "subject": "نبرد فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "ارمنستان, لهستان, پادشاهی انگلیس, عراق, سیدنی, استونی, قفقاز, ورشو, یمن, فرانسه",
+      "index": 4478
+    },
+    {
+      "subject": "بازی‌های المپیک تابستانی ۱۹۹۲",
+      "object": "بارسلون",
+      "object_candidates": "مصر, آسیا, نانجینگ, ونیز, یونان, ایران, آفریقا, کوبا, اروپا, بارسلون",
+      "index": 4479
+    },
+    {
+      "subject": "عملیات بارباروسا",
+      "object": "مولداوی",
+      "object_candidates": "اسلو, فنلاند, سیدنی, بالکان, نورماندی, برست، بلاروس, آکسفورد, رواندا, شام, مولداوی",
+      "index": 4480
+    },
+    {
+      "subject": "موزه بریتانیا",
+      "object": "لندن",
+      "object_candidates": "فنلاند, اوکراین, جمهوری آذربایجان, شام, بلژیک, نانجینگ, اسلو, مصر, لایپزیگ, لندن",
+      "index": 4481
+    }
+  ],
+  "relation_id": "P30"
+}

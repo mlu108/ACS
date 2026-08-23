@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "Amb quin idioma va comunicar <subject>? La resposta és: <mask>.",
+    "En quina llengua va parlar <subject>? La resposta és: <mask>.",
+    "Quina llengua va parlar <subject>? La resposta és: <mask>.",
+    "Amb quin idioma va comunicar <subject>? La resposta és: <mask>.",
+    "Quins idiomes va parlar <subject>? La resposta és: <mask>.",
+    " La llengua que parla <subject> és <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Charles Bronson",
+      "object": "anglès",
+      "object_candidates": "hongarès, hebreu, rus, alemany, suec, italià, egipci, noruec, polonès, anglès",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "William James",
+      "object": "anglès",
+      "object_candidates": "hongarès, indonesi, noruec, egipci, francès, persa, suec, romanès, italià, anglès",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "Erna Solberg",
+      "object": "noruec",
+      "object_candidates": "llatí, egipci, indonesi, persa, àzeri, alemany, anglès, coreà, francès, noruec",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "Efraïm Qatsir",
+      "object": "hebreu",
+      "object_candidates": "coreà, castellà, suec, italià, romanès, anglès, polonès, llatí, xinès, hebreu",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Park Chan-wook",
+      "object": "coreà",
+      "object_candidates": "francès, xinès, alemany, castellà, egipci, romanès, llatí, persa, àzeri, coreà",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Nathaniel Hawthorne",
+      "object": "anglès",
+      "object_candidates": "xinès, neerlandès, francès, hongarès, indonesi, egipci, llatí, suec, rus, anglès",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "James Earl Jones",
+      "object": "anglès",
+      "object_candidates": "noruec, hebreu, indonesi, castellà, hongarès, neerlandès, llatí, francès, finès, anglès",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "Thor Heyerdahl",
+      "object": "noruec",
+      "object_candidates": "llatí, neerlandès, francès, suec, coreà, egipci, anglès, rus, indonesi, noruec",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "Jason Statham",
+      "object": "anglès",
+      "object_candidates": "alemany, italià, xinès, noruec, coreà, neerlandès, romanès, hebreu, llatí, anglès",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mary Wollstonecraft",
+      "object": "francès",
+      "object_candidates": "hongarès, italià, finès, anglès, indonesi, neerlandès, egipci, rus, noruec, francès",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "Frida Kahlo",
+      "object": "castellà",
+      "object_candidates": "polonès, egipci, hongarès, xinès, noruec, italià, persa, rus, hebreu, castellà",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Jeanne Moreau",
+      "object": "francès",
+      "object_candidates": "noruec, romanès, rus, hebreu, suec, neerlandès, coreà, llatí, alemany, francès",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "Nadia Boulanger",
+      "object": "francès",
+      "object_candidates": "romanès, rus, llatí, indonesi, xinès, hebreu, neerlandès, finès, polonès, francès",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "Victoria Silvstedt",
+      "object": "francès",
+      "object_candidates": "xinès, castellà, alemany, hebreu, anglès, hongarès, noruec, italià, llatí, francès",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "Alfred Russel Wallace",
+      "object": "anglès",
+      "object_candidates": "italià, alemany, noruec, egipci, romanès, xinès, indonesi, àzeri, llatí, anglès",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ramsès II",
+      "object": "egipci",
+      "object_candidates": "alemany, anglès, suec, polonès, coreà, hebreu, rus, persa, finès, egipci",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "Christoph Willibald Gluck",
+      "object": "alemany",
+      "object_candidates": "francès, finès, llatí, egipci, xinès, anglès, italià, noruec, rus, alemany",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "Abraham de Moivre",
+      "object": "anglès",
+      "object_candidates": "castellà, neerlandès, hongarès, indonesi, hebreu, italià, alemany, romanès, suec, anglès",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ehud Barak",
+      "object": "anglès",
+      "object_candidates": "coreà, romanès, hongarès, finès, francès, llatí, persa, castellà, indonesi, anglès",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "Iàkov Sverdlov",
+      "object": "rus",
+      "object_candidates": "xinès, polonès, finès, anglès, francès, romanès, castellà, suec, egipci, rus",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Marc Licini Cras Dives I",
+      "object": "llatí",
+      "object_candidates": "francès, romanès, àzeri, polonès, finès, noruec, xinès, castellà, suec, llatí",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Jean-Jacques Annaud",
+      "object": "francès",
+      "object_candidates": "llatí, romanès, polonès, anglès, indonesi, àzeri, italià, suec, alemany, francès",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "Virgili",
+      "object": "llatí",
+      "object_candidates": "alemany, indonesi, polonès, persa, coreà, egipci, àzeri, castellà, francès, llatí",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Teresa de Calcuta",
+      "object": "anglès",
+      "object_candidates": "egipci, coreà, indonesi, xinès, noruec, finès, persa, castellà, polonès, anglès",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Steve Biko",
+      "object": "anglès",
+      "object_candidates": "neerlandès, finès, rus, noruec, àzeri, persa, polonès, llatí, suec, anglès",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "Christiaan Huygens",
+      "object": "llatí",
+      "object_candidates": "suec, xinès, castellà, indonesi, francès, egipci, polonès, anglès, alemany, llatí",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Claude-Henri de Rouvroy, Comte de Saint-Simon",
+      "object": "francès",
+      "object_candidates": "coreà, finès, llatí, hebreu, persa, noruec, xinès, romanès, italià, francès",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "George Michael",
+      "object": "anglès",
+      "object_candidates": "egipci, alemany, polonès, italià, indonesi, hebreu, coreà, persa, finès, anglès",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "Giuseppe Peano",
+      "object": "italià",
+      "object_candidates": "finès, hebreu, suec, romanès, francès, llatí, noruec, neerlandès, coreà, italià",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Guillem Alexandre dels Països Baixos",
+      "object": "neerlandès",
+      "object_candidates": "rus, anglès, suec, castellà, francès, indonesi, italià, hebreu, finès, neerlandès",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Tristan Tzara",
+      "object": "francès",
+      "object_candidates": "castellà, noruec, hebreu, llatí, suec, neerlandès, indonesi, coreà, xinès, francès",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "Richard Arkwright",
+      "object": "anglès",
+      "object_candidates": "llatí, noruec, italià, indonesi, finès, neerlandès, francès, rus, suec, anglès",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "Josep Guardiola i Sala",
+      "object": "castellà",
+      "object_candidates": "xinès, indonesi, neerlandès, àzeri, egipci, rus, francès, llatí, italià, castellà",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Imre Nagy",
+      "object": "hongarès",
+      "object_candidates": "anglès, italià, alemany, hebreu, finès, romanès, neerlandès, suec, francès, hongarès",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "neerlandès",
+      "object_candidates": "alemany, italià, anglès, hongarès, rus, indonesi, persa, coreà, polonès, neerlandès",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Margarida II de Dinamarca",
+      "object": "suec",
+      "object_candidates": "hebreu, polonès, romanès, àzeri, italià, egipci, francès, xinès, castellà, suec",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Satyendra Nath Bose",
+      "object": "anglès",
+      "object_candidates": "romanès, llatí, hebreu, castellà, àzeri, indonesi, italià, egipci, finès, anglès",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ernest Shackleton",
+      "object": "anglès",
+      "object_candidates": "llatí, indonesi, hongarès, castellà, italià, francès, hebreu, alemany, persa, anglès",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "Salvador Allende Gossens",
+      "object": "castellà",
+      "object_candidates": "indonesi, neerlandès, italià, romanès, àzeri, llatí, hongarès, suec, noruec, castellà",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Nikolai Leskov",
+      "object": "rus",
+      "object_candidates": "xinès, alemany, romanès, noruec, anglès, italià, hebreu, indonesi, castellà, rus",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Víctor Manuel II d'Itàlia",
+      "object": "italià",
+      "object_candidates": "polonès, egipci, neerlandès, hebreu, alemany, anglès, coreà, finès, romanès, italià",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "George Enescu",
+      "object": "romanès",
+      "object_candidates": "neerlandès, francès, italià, àzeri, egipci, noruec, indonesi, rus, coreà, romanès",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "Gloria Estefan",
+      "object": "castellà",
+      "object_candidates": "rus, suec, indonesi, persa, francès, finès, polonès, noruec, coreà, castellà",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Michael Moore",
+      "object": "anglès",
+      "object_candidates": "xinès, hebreu, àzeri, llatí, hongarès, indonesi, castellà, finès, coreà, anglès",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pierre-Augustin Caron de Beaumarchais",
+      "object": "francès",
+      "object_candidates": "romanès, xinès, italià, àzeri, hebreu, coreà, polonès, alemany, castellà, francès",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "Benedetto Croce",
+      "object": "italià",
+      "object_candidates": "rus, hongarès, noruec, persa, castellà, llatí, suec, coreà, egipci, italià",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Ravi Shankar",
+      "object": "anglès",
+      "object_candidates": "egipci, noruec, indonesi, hongarès, alemany, coreà, hebreu, polonès, llatí, anglès",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sam Mendes",
+      "object": "anglès",
+      "object_candidates": "francès, finès, suec, indonesi, hebreu, romanès, polonès, persa, coreà, anglès",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ivan Bunin",
+      "object": "rus",
+      "object_candidates": "alemany, llatí, romanès, neerlandès, persa, polonès, anglès, francès, castellà, rus",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Abolhassan Banisadr",
+      "object": "persa",
+      "object_candidates": "alemany, polonès, egipci, noruec, hongarès, rus, àzeri, romanès, anglès, persa",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Anggun",
+      "object": "indonesi",
+      "object_candidates": "rus, coreà, polonès, llatí, àzeri, noruec, alemany, neerlandès, finès, indonesi",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Clark Gable",
+      "object": "anglès",
+      "object_candidates": "suec, àzeri, finès, egipci, indonesi, coreà, rus, hongarès, noruec, anglès",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jacques Lacan",
+      "object": "francès",
+      "object_candidates": "àzeri, finès, castellà, romanès, persa, hongarès, indonesi, anglès, xinès, francès",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "James Garner",
+      "object": "anglès",
+      "object_candidates": "romanès, polonès, coreà, francès, noruec, castellà, alemany, finès, egipci, anglès",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "Manuel Valls",
+      "object": "castellà",
+      "object_candidates": "neerlandès, persa, indonesi, coreà, hongarès, italià, egipci, francès, suec, castellà",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Abbas Kiarostami",
+      "object": "persa",
+      "object_candidates": "hongarès, hebreu, àzeri, llatí, neerlandès, castellà, polonès, francès, coreà, persa",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Oliver Cromwell",
+      "object": "anglès",
+      "object_candidates": "indonesi, noruec, suec, neerlandès, francès, xinès, alemany, hebreu, hongarès, anglès",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "Augusto Pinochet Ugarte",
+      "object": "castellà",
+      "object_candidates": "coreà, llatí, rus, alemany, francès, indonesi, polonès, hongarès, persa, castellà",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Francis Poulenc",
+      "object": "francès",
+      "object_candidates": "hebreu, anglès, castellà, rus, polonès, indonesi, suec, xinès, coreà, francès",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "Jules Massenet",
+      "object": "francès",
+      "object_candidates": "italià, hebreu, neerlandès, hongarès, noruec, finès, àzeri, polonès, xinès, francès",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "Carlos Marchena López",
+      "object": "castellà",
+      "object_candidates": "persa, indonesi, xinès, polonès, francès, suec, àzeri, llatí, alemany, castellà",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Lluís Llàtzer Zamenhof",
+      "object": "anglès",
+      "object_candidates": "coreà, egipci, llatí, rus, hebreu, hongarès, romanès, polonès, alemany, anglès",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "Muhammad Ali",
+      "object": "anglès",
+      "object_candidates": "alemany, egipci, coreà, castellà, xinès, llatí, hongarès, indonesi, francès, anglès",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "Anna Magnani",
+      "object": "italià",
+      "object_candidates": "anglès, indonesi, suec, neerlandès, alemany, egipci, castellà, polonès, persa, italià",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ABBA",
+      "object": "suec",
+      "object_candidates": "hebreu, xinès, noruec, rus, polonès, llatí, romanès, anglès, italià, suec",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Jesús de Natzaret",
+      "object": "hebreu",
+      "object_candidates": "persa, rus, noruec, alemany, polonès, castellà, àzeri, francès, finès, hebreu",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Giuseppe Tornatore",
+      "object": "italià",
+      "object_candidates": "finès, hongarès, coreà, castellà, romanès, hebreu, suec, alemany, xinès, italià",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Gwen Stefani",
+      "object": "anglès",
+      "object_candidates": "egipci, noruec, francès, àzeri, xinès, alemany, italià, llatí, romanès, anglès",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tàcit",
+      "object": "llatí",
+      "object_candidates": "romanès, polonès, castellà, noruec, finès, neerlandès, italià, coreà, hongarès, llatí",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Alanis Morissette",
+      "object": "anglès",
+      "object_candidates": "finès, indonesi, suec, àzeri, neerlandès, rus, llatí, persa, polonès, anglès",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wojciech Jaruzelski",
+      "object": "polonès",
+      "object_candidates": "finès, italià, francès, persa, alemany, neerlandès, coreà, xinès, indonesi, polonès",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Kylie Minogue",
+      "object": "anglès",
+      "object_candidates": "hebreu, persa, hongarès, alemany, francès, àzeri, rus, egipci, indonesi, anglès",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "Carlos Fuentes Macías",
+      "object": "castellà",
+      "object_candidates": "àzeri, coreà, xinès, llatí, suec, italià, persa, hongarès, egipci, castellà",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Dwight David Eisenhower",
+      "object": "anglès",
+      "object_candidates": "noruec, polonès, persa, suec, llatí, hongarès, hebreu, francès, finès, anglès",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "Thomas Piketty",
+      "object": "francès",
+      "object_candidates": "àzeri, persa, llatí, suec, noruec, romanès, anglès, neerlandès, rus, francès",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Aleksei Brusílov",
+      "object": "rus",
+      "object_candidates": "alemany, hebreu, indonesi, polonès, italià, anglès, llatí, romanès, egipci, rus",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Lev Kàmenev",
+      "object": "rus",
+      "object_candidates": "francès, castellà, romanès, xinès, hongarès, neerlandès, àzeri, llatí, noruec, rus",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "John Updike",
+      "object": "anglès",
+      "object_candidates": "rus, coreà, italià, hongarès, francès, indonesi, xinès, neerlandès, hebreu, anglès",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "Anne Parillaud",
+      "object": "francès",
+      "object_candidates": "hongarès, àzeri, anglès, castellà, hebreu, xinès, finès, rus, egipci, francès",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "Felip V d'Espanya",
+      "object": "castellà",
+      "object_candidates": "hebreu, romanès, finès, indonesi, anglès, neerlandès, francès, hongarès, noruec, castellà",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "francès",
+      "object_candidates": "alemany, àzeri, castellà, hongarès, xinès, polonès, noruec, egipci, italià, francès",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ernest Rutherford",
+      "object": "anglès",
+      "object_candidates": "coreà, alemany, persa, romanès, italià, castellà, xinès, egipci, hebreu, anglès",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "Eugene Gladstone O'Neill",
+      "object": "anglès",
+      "object_candidates": "finès, persa, suec, xinès, rus, indonesi, francès, polonès, hongarès, anglès",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "William Thomson",
+      "object": "anglès",
+      "object_candidates": "hebreu, egipci, noruec, francès, alemany, castellà, llatí, indonesi, àzeri, anglès",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jennifer Hudson",
+      "object": "anglès",
+      "object_candidates": "hebreu, neerlandès, persa, romanès, llatí, suec, indonesi, polonès, coreà, anglès",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "Henry Kissinger",
+      "object": "anglès",
+      "object_candidates": "hebreu, indonesi, alemany, llatí, suec, àzeri, polonès, romanès, hongarès, anglès",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pius X",
+      "object": "llatí",
+      "object_candidates": "polonès, hongarès, francès, xinès, romanès, anglès, coreà, noruec, suec, llatí",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Üzeyir Hacıbəyov",
+      "object": "àzeri",
+      "object_candidates": "italià, hongarès, romanès, noruec, alemany, anglès, castellà, polonès, persa, àzeri",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Thomas Hobbes",
+      "object": "llatí",
+      "object_candidates": "alemany, egipci, hebreu, suec, anglès, romanès, finès, italià, rus, llatí",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Zhu Xi",
+      "object": "xinès",
+      "object_candidates": "persa, indonesi, finès, llatí, egipci, neerlandès, castellà, suec, coreà, xinès",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Gad Elmalah",
+      "object": "francès",
+      "object_candidates": "rus, xinès, egipci, castellà, indonesi, llatí, anglès, italià, hebreu, francès",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "Albert Riera Ortega",
+      "object": "castellà",
+      "object_candidates": "hebreu, neerlandès, egipci, polonès, xinès, noruec, anglès, hongarès, llatí, castellà",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "August Strindberg",
+      "object": "suec",
+      "object_candidates": "egipci, neerlandès, llatí, persa, indonesi, hebreu, anglès, xinès, polonès, suec",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Kristin Scott Thomas",
+      "object": "francès",
+      "object_candidates": "suec, hongarès, romanès, alemany, neerlandès, egipci, italià, finès, àzeri, francès",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "Thomas Hardy",
+      "object": "anglès",
+      "object_candidates": "llatí, xinès, hongarès, rus, italià, coreà, àzeri, alemany, persa, anglès",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "Walter Cronkite",
+      "object": "anglès",
+      "object_candidates": "polonès, hongarès, romanès, persa, rus, alemany, hebreu, coreà, àzeri, anglès",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "Maimònides",
+      "object": "hebreu",
+      "object_candidates": "anglès, finès, àzeri, alemany, italià, francès, noruec, llatí, xinès, hebreu",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Johan Cruyff",
+      "object": "neerlandès",
+      "object_candidates": "finès, xinès, persa, llatí, francès, noruec, romanès, castellà, alemany, neerlandès",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Gao Xingjian",
+      "object": "xinès",
+      "object_candidates": "romanès, coreà, suec, noruec, rus, francès, àzeri, castellà, hongarès, xinès",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Mikhail Khodorkovski",
+      "object": "rus",
+      "object_candidates": "anglès, xinès, finès, polonès, egipci, hongarès, suec, persa, indonesi, rus",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Jean Sibelius",
+      "object": "finès",
+      "object_candidates": "àzeri, xinès, polonès, egipci, anglès, noruec, hongarès, neerlandès, rus, finès",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Lluís Llàtzer Zamenhof",
+      "object": "rus",
+      "object_candidates": "egipci, àzeri, llatí, finès, polonès, romanès, hongarès, indonesi, noruec, rus",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Freeman J. Dyson",
+      "object": "anglès",
+      "object_candidates": "alemany, francès, suec, indonesi, romanès, xinès, persa, llatí, italià, anglès",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "Albert Camus",
+      "object": "francès",
+      "object_candidates": "rus, persa, polonès, hongarès, hebreu, italià, egipci, anglès, castellà, francès",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

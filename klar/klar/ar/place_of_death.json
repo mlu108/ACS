@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "أين توفي <subject>? الإجابة: <mask>",
+    "في أي مدينة توفي <subject>? الإجابة: <mask>",
+    "أين كان مكان وفاة <subject>? الإجابة: <mask>",
+    "ما هو موقع وفاة <subject>? الإجابة: <mask>",
+    "أي مكان يشير إلى وفاة <subject>? الإجابة: <mask>",
+    " مكان وفاة <subject> هو <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "ميكيلانجيلو",
+      "object": "روما",
+      "object_candidates": "براغ, وارسو, سري, فلورنسا, بلغراد, إسطنبول, ليون, هلسنكي, الموقع الأثري بقرطاج, روما",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "كوكو شانيل",
+      "object": "باريس",
+      "object_candidates": "سري, روما, المدينة المنورة, لندن, طوكيو, دمشق, ستوكهولم, وارسو, بلغراد, باريس",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "كليمنت الرابع عشر",
+      "object": "روما",
+      "object_candidates": "نورنبرغ, ليون, هلسنكي, كابل, ماديسون، ويسكنسن, لندن, باريس, القاهرة, موسكو, روما",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "عمر بن الخطاب",
+      "object": "المدينة المنورة",
+      "object_candidates": "موسكو, بلغراد, الموقع الأثري بقرطاج, وارسو, سري, ستوكهولم, فلورنسا, البندقية, لندن, المدينة المنورة",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "كليمنت الثالث",
+      "object": "روما",
+      "object_candidates": "ستوكهولم, المدينة المنورة, لندن, بغداد, وارسو, بلغراد, البندقية, دمشق, سري, روما",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "بلبنوس",
+      "object": "روما",
+      "object_candidates": "إسطنبول, ستوكهولم, براغ, برلين, القاهرة, مدريد, كابل, نورنبرغ, ماديسون، ويسكنسن, روما",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "هرانت دينك",
+      "object": "إسطنبول",
+      "object_candidates": "القدس, طوكيو, موسكو, هلسنكي, روما, لندن, كابل, فلورنسا, مدريد, إسطنبول",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "نقفور الثالث بوتانياتيس",
+      "object": "القسطنطينية",
+      "object_candidates": "تايبيه, موسكو, ستوكهولم, أثينا, كابل, نورنبرغ, دمشق, باريس, سري, القسطنطينية",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "يوهان باتشيلبيل",
+      "object": "نورنبرغ",
+      "object_candidates": "ديترويت, أثينا, مدريد, طوكيو, بلغراد, كابل, روما, براغ, موسكو, نورنبرغ",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "فاسلاف نغينسكاي",
+      "object": "لندن",
+      "object_candidates": "روما, طوكيو, ماديسون، ويسكنسن, إسطنبول, المدينة المنورة, القسطنطينية, البندقية, سري, بغداد, لندن",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "ليو العاشر",
+      "object": "روما",
+      "object_candidates": "بلغراد, الموقع الأثري بقرطاج, سري, القاهرة, ماديسون، ويسكنسن, باريس, القدس, البندقية, تايبيه, روما",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "دوناتيلو",
+      "object": "فلورنسا",
+      "object_candidates": "ديترويت, ستوكهولم, أثينا, وارسو, كابل, بغداد, لندن, القدس, المدينة المنورة, فلورنسا",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "تشيانغ تشينغ كو",
+      "object": "تايبيه",
+      "object_candidates": "بغداد, دمشق, أثينا, برلين, هلسنكي, ليون, ديترويت, نورنبرغ, مدريد, تايبيه",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "روبرت هوك",
+      "object": "لندن",
+      "object_candidates": "إسطنبول, القاهرة, القسطنطينية, برلين, طوكيو, مدريد, سري, ليون, تايبيه, لندن",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "روزا باركس",
+      "object": "ديترويت",
+      "object_candidates": "باريس, إسطنبول, مدريد, بغداد, برلين, ستوكهولم, ماديسون، ويسكنسن, القاهرة, أثينا, ديترويت",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "يوحنا الثامن باليولوج",
+      "object": "القسطنطينية",
+      "object_candidates": "ستوكهولم, وارسو, موسكو, أثينا, بغداد, تايبيه, القاهرة, فلورنسا, إسطنبول, القسطنطينية",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "جون دي",
+      "object": "سري",
+      "object_candidates": "روما, وارسو, بغداد, القسطنطينية, طوكيو, فلورنسا, ليون, ديترويت, براغ, سري",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "فرناندل",
+      "object": "باريس",
+      "object_candidates": "وارسو, سري, القاهرة, أثينا, القدس, براغ, البندقية, ليون, هلسنكي, باريس",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ميخائيل الثاني",
+      "object": "القسطنطينية",
+      "object_candidates": "وارسو, إسطنبول, طوكيو, نورنبرغ, موسكو, القاهرة, البندقية, ليون, سري, القسطنطينية",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "كارل ليبكنخت",
+      "object": "برلين",
+      "object_candidates": "هلسنكي, القاهرة, تايبيه, لندن, باريس, وارسو, إسطنبول, مدريد, دمشق, برلين",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ريتشارد فاغنر",
+      "object": "البندقية",
+      "object_candidates": "موسكو, بلغراد, القدس, وارسو, سري, باريس, ديترويت, بغداد, دمشق, البندقية",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "أنتيستنيس",
+      "object": "أثينا",
+      "object_candidates": "موسكو, القاهرة, المدينة المنورة, القسطنطينية, هلسنكي, سري, كابل, باريس, فلورنسا, أثينا",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "ماكس إرنست",
+      "object": "باريس",
+      "object_candidates": "لندن, ستوكهولم, طوكيو, نورنبرغ, روما, أثينا, البندقية, موسكو, بلغراد, باريس",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "مارتن بوبر",
+      "object": "القدس",
+      "object_candidates": "كابل, بغداد, ستوكهولم, موسكو, إسطنبول, سري, ليون, نورنبرغ, بلغراد, القدس",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "يوزف غوبلز",
+      "object": "برلين",
+      "object_candidates": "لندن, الموقع الأثري بقرطاج, براغ, أثينا, القسطنطينية, المدينة المنورة, روما, كابل, ماديسون، ويسكنسن, برلين",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "مونتسكيو",
+      "object": "باريس",
+      "object_candidates": "ستوكهولم, كابل, القاهرة, بغداد, نورنبرغ, القسطنطينية, دمشق, المدينة المنورة, ليون, باريس",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "نقولا الخامس",
+      "object": "روما",
+      "object_candidates": "موسكو, سري, ليون, ديترويت, نورنبرغ, بغداد, القاهرة, ماديسون، ويسكنسن, دمشق, روما",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "شارلوت كورديه",
+      "object": "باريس",
+      "object_candidates": "بغداد, وارسو, القدس, كابل, إسطنبول, القاهرة, طوكيو, المدينة المنورة, تايبيه, باريس",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "محمد ظاهر شاه",
+      "object": "كابل",
+      "object_candidates": "المدينة المنورة, القدس, دمشق, البندقية, ماديسون، ويسكنسن, ديترويت, موسكو, فلورنسا, سري, كابل",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "إينوسنت الحادي عشر",
+      "object": "روما",
+      "object_candidates": "لندن, برلين, القاهرة, البندقية, دمشق, ماديسون، ويسكنسن, الموقع الأثري بقرطاج, فلورنسا, أثينا, روما",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "كورديان الثاني",
+      "object": "الموقع الأثري بقرطاج",
+      "object_candidates": "ماديسون، ويسكنسن, ليون, براغ, روما, بلغراد, القدس, بغداد, دمشق, ديترويت, الموقع الأثري بقرطاج",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "مستيسلاف روستروبوفيتش",
+      "object": "موسكو",
+      "object_candidates": "ليون, إسطنبول, أثينا, نورنبرغ, ماديسون، ويسكنسن, برلين, مدريد, طوكيو, المدينة المنورة, موسكو",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "بيوس الثالث",
+      "object": "روما",
+      "object_candidates": "إسطنبول, لندن, براغ, ليون, باريس, وارسو, بلغراد, كابل, مدريد, روما",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "عبد الكريم قاسم",
+      "object": "بغداد",
+      "object_candidates": "طوكيو, روما, فلورنسا, لندن, باريس, القاهرة, تايبيه, ليون, دمشق, بغداد",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "غريغوري السادس عشر",
+      "object": "روما",
+      "object_candidates": "القسطنطينية, وارسو, تايبيه, بغداد, كابل, لندن, مدريد, الموقع الأثري بقرطاج, دمشق, روما",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "آرام خاتشاتوريان",
+      "object": "موسكو",
+      "object_candidates": "القدس, بغداد, نورنبرغ, أثينا, لندن, هلسنكي, ديترويت, طوكيو, الموقع الأثري بقرطاج, موسكو",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "هاينريش فون كلايست",
+      "object": "برلين",
+      "object_candidates": "روما, لندن, موسكو, ليون, بغداد, كابل, فلورنسا, وارسو, سري, برلين",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "عبد الحميد الأول",
+      "object": "القسطنطينية",
+      "object_candidates": "إسطنبول, كابل, البندقية, القاهرة, المدينة المنورة, طوكيو, ديترويت, بلغراد, باريس, القسطنطينية",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "ألكسندر الثامن",
+      "object": "روما",
+      "object_candidates": "ليون, تايبيه, الموقع الأثري بقرطاج, ماديسون، ويسكنسن, إسطنبول, وارسو, القسطنطينية, لندن, مدريد, روما",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "يوهان كريستيان باخ",
+      "object": "لندن",
+      "object_candidates": "أثينا, برلين, باريس, كابل, هلسنكي, القدس, دمشق, مدريد, ليون, لندن",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "صمويل جونسون",
+      "object": "لندن",
+      "object_candidates": "الموقع الأثري بقرطاج, إسطنبول, المدينة المنورة, ستوكهولم, برلين, وارسو, موسكو, القاهرة, أثينا, لندن",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "جاك إيف كوستو",
+      "object": "باريس",
+      "object_candidates": "أثينا, برلين, البندقية, بلغراد, نورنبرغ, روما, القسطنطينية, القدس, بغداد, باريس",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "صوفيا كوفاليفسكايا",
+      "object": "ستوكهولم",
+      "object_candidates": "باريس, هلسنكي, برلين, ماديسون، ويسكنسن, أثينا, فلورنسا, ديترويت, براغ, كابل, ستوكهولم",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "جورج فيلهلم فريدريش هيغل",
+      "object": "برلين",
+      "object_candidates": "أثينا, ماديسون، ويسكنسن, كابل, مدريد, بغداد, براغ, ستوكهولم, إسطنبول, المدينة المنورة, برلين",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ساندرو بوتيتشيلي",
+      "object": "فلورنسا",
+      "object_candidates": "بلغراد, المدينة المنورة, إسطنبول, ماديسون، ويسكنسن, نورنبرغ, ديترويت, ستوكهولم, كابل, القدس, فلورنسا",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "صامويل تايلر كولريدج",
+      "object": "لندن",
+      "object_candidates": "ستوكهولم, وارسو, المدينة المنورة, ديترويت, القدس, بلغراد, ليون, موسكو, الموقع الأثري بقرطاج, لندن",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "ابن خلدون",
+      "object": "القاهرة",
+      "object_candidates": "ليون, برلين, نورنبرغ, القدس, البندقية, موسكو, إسطنبول, تايبيه, دمشق, القاهرة",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "هنري الرابع ملك إنجلترا",
+      "object": "لندن",
+      "object_candidates": "إسطنبول, أثينا, القاهرة, روما, نورنبرغ, دمشق, مدريد, البندقية, برلين, لندن",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "تومازو ألبينوني",
+      "object": "البندقية",
+      "object_candidates": "باريس, القدس, المدينة المنورة, ليون, فلورنسا, ديترويت, هلسنكي, بلغراد, تايبيه, البندقية",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "بآفو نورمي",
+      "object": "هلسنكي",
+      "object_candidates": "تايبيه, سري, ستوكهولم, فلورنسا, كابل, باريس, لندن, بلغراد, ليون, هلسنكي",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "كليمنت الأول",
+      "object": "روما",
+      "object_candidates": "لندن, بغداد, هلسنكي, إسطنبول, بلغراد, باريس, الموقع الأثري بقرطاج, القسطنطينية, وارسو, روما",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "لويس السابع عشر",
+      "object": "باريس",
+      "object_candidates": "مدريد, البندقية, القسطنطينية, ستوكهولم, موسكو, فلورنسا, المدينة المنورة, دمشق, نورنبرغ, باريس",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "كيشو كوروكاوا",
+      "object": "طوكيو",
+      "object_candidates": "فلورنسا, أثينا, الموقع الأثري بقرطاج, موسكو, وارسو, القاهرة, البندقية, باريس, روما, طوكيو",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "ماكسميليان روبسبيار",
+      "object": "باريس",
+      "object_candidates": "فلورنسا, موسكو, المدينة المنورة, دمشق, روما, طوكيو, نورنبرغ, ستوكهولم, بغداد, باريس",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "جورجوني",
+      "object": "البندقية",
+      "object_candidates": "باريس, روما, أثينا, موسكو, هلسنكي, لندن, القسطنطينية, المدينة المنورة, ليون, البندقية",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "بيتر الأول ملك صربيا",
+      "object": "بلغراد",
+      "object_candidates": "طوكيو, بغداد, لندن, باريس, تايبيه, كابل, هلسنكي, أثينا, نورنبرغ, بلغراد",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "لودفيك زامنهوف",
+      "object": "وارسو",
+      "object_candidates": "لندن, نورنبرغ, أثينا, بلغراد, ليون, هلسنكي, بغداد, القسطنطينية, باريس, وارسو",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "إبراهيم محمد علي باشا",
+      "object": "القاهرة",
+      "object_candidates": "باريس, ماديسون، ويسكنسن, سري, براغ, بلغراد, وارسو, أثينا, دمشق, إسطنبول, القاهرة",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "كليمنت الثاني عشر",
+      "object": "روما",
+      "object_candidates": "برلين, إسطنبول, القاهرة, طوكيو, القسطنطينية, بلغراد, تايبيه, كابل, باريس, روما",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "إيرينيئوس",
+      "object": "ليون",
+      "object_candidates": "ديترويت, هلسنكي, سري, المدينة المنورة, نورنبرغ, لندن, فلورنسا, القسطنطينية, موسكو, ليون",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "جاك دريدا",
+      "object": "باريس",
+      "object_candidates": "الموقع الأثري بقرطاج, برلين, ديترويت, أثينا, روما, بلغراد, دمشق, القاهرة, ليون, باريس",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "كارلوس الرابع",
+      "object": "روما",
+      "object_candidates": "براغ, مدريد, أثينا, البندقية, وارسو, طوكيو, هلسنكي, موسكو, القدس, روما",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ريف فون ويليامز",
+      "object": "لندن",
+      "object_candidates": "روما, مدريد, أثينا, برلين, المدينة المنورة, باريس, ديترويت, ليون, القاهرة, لندن",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "أندري غروميكو",
+      "object": "موسكو",
+      "object_candidates": "مدريد, تايبيه, ديترويت, أثينا, البندقية, دمشق, الموقع الأثري بقرطاج, لندن, نورنبرغ, موسكو",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "أولريكا إليونورا ملكة السويد",
+      "object": "ستوكهولم",
+      "object_candidates": "أثينا, تايبيه, سري, وارسو, القدس, فلورنسا, مدريد, دمشق, باريس, ستوكهولم",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "أوتيس ريدينغ",
+      "object": "ماديسون، ويسكنسن",
+      "object_candidates": "باريس, البندقية, روما, الموقع الأثري بقرطاج, فلورنسا, إسطنبول, كابل, بغداد, ستوكهولم, ماديسون، ويسكنسن",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "هنري روسو",
+      "object": "باريس",
+      "object_candidates": "سري, فلورنسا, الموقع الأثري بقرطاج, هلسنكي, البندقية, بغداد, نورنبرغ, دمشق, بلغراد, باريس",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "معاوية بن أبي سفيان",
+      "object": "دمشق",
+      "object_candidates": "ستوكهولم, طوكيو, ديترويت, القسطنطينية, ماديسون، ويسكنسن, مدريد, سري, براغ, باريس, دمشق",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "لويس أراغون",
+      "object": "باريس",
+      "object_candidates": "القاهرة, مدريد, المدينة المنورة, سري, القدس, وارسو, ماديسون، ويسكنسن, بغداد, دمشق, باريس",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "الظاهر بيبرس",
+      "object": "دمشق",
+      "object_candidates": "موسكو, سري, باريس, القدس, لندن, المدينة المنورة, أثينا, مدريد, بلغراد, دمشق",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "كلاوس فون شتاوفنبرج",
+      "object": "برلين",
+      "object_candidates": "لندن, براغ, وارسو, كابل, باريس, ليون, تايبيه, بلغراد, ديترويت, برلين",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "دوناتو برامانتي",
+      "object": "روما",
+      "object_candidates": "القدس, هلسنكي, ليون, ستوكهولم, برلين, موسكو, كابل, بغداد, وارسو, روما",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "فرانثيسكو فرانكو",
+      "object": "مدريد",
+      "object_candidates": "روما, ليون, أثينا, موسكو, القدس, براغ, القسطنطينية, برلين, ديترويت, مدريد",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "كلود برنارد",
+      "object": "باريس",
+      "object_candidates": "المدينة المنورة, القسطنطينية, ديترويت, دمشق, ليون, سري, ستوكهولم, ماديسون، ويسكنسن, برلين, باريس",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "جمال عبد الناصر",
+      "object": "القاهرة",
+      "object_candidates": "المدينة المنورة, إسطنبول, نورنبرغ, ستوكهولم, ديترويت, تايبيه, فلورنسا, البندقية, وارسو, القاهرة",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "ياكوف سفيردلوف",
+      "object": "موسكو",
+      "object_candidates": "تايبيه, بغداد, ديترويت, نورنبرغ, دمشق, لندن, برلين, البندقية, القسطنطينية, موسكو",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "شارل لافران",
+      "object": "باريس",
+      "object_candidates": "مدريد, لندن, برلين, القدس, روما, وارسو, بغداد, أثينا, بلغراد, باريس",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "تيخو براهي",
+      "object": "براغ",
+      "object_candidates": "الموقع الأثري بقرطاج, هلسنكي, المدينة المنورة, طوكيو, روما, ستوكهولم, فلورنسا, إسطنبول, بغداد, براغ",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "إدوارد هيث",
+      "object": "ساليسبري",
+      "object_candidates": "سري, باريس, تايبيه, القسطنطينية, ماديسون، ويسكنسن, وارسو, برلين, لندن, الموقع الأثري بقرطاج, ساليسبري",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "איפה <subject> מת? התשובה היא: <mask>",
+    "באיזו עיר <subject> נפטר? התשובה היא: <mask>",
+    "איפה היה מקום המוות של <subject>? התשובה היא: <mask>",
+    "מה היה המיקום של מותו של <subject>? התשובה היא: <mask>",
+    "איזה מקום מסמן את מותו של <subject>? התשובה היא: <mask>",
+    " המקום שבו נפטר <subject> הוא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "מיכלאנג'לו",
+      "object": "רומא",
+      "object_candidates": "פראג, ורשה, סארי, פירנצה, בלגרד, איסטנבול, ליון, הלסינקי, קרתגו, רומא",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "קוקו שאנל",
+      "object": "פריז",
+      "object_candidates": "סארי, רומא, אל-מדינה, לונדון, טוקיו, דמשק, סטוקהולם, ורשה, בלגרד, פריז",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "קלמנס הארבעה עשר",
+      "object": "רומא",
+      "object_candidates": "נירנברג, ליון, הלסינקי, קאבול, מדיסון, לונדון, פריז, קהיר, מוסקבה, רומא",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "עומר בן אל-ח'טאב",
+      "object": "אל-מדינה",
+      "object_candidates": "מוסקבה, בלגרד, קרתגו, ורשה, סארי, סטוקהולם, פירנצה, ונציה, לונדון, אל-מדינה",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "קלמנס השלישי",
+      "object": "רומא",
+      "object_candidates": "סטוקהולם, אל-מדינה, לונדון, בגדאד, ורשה, בלגרד, ונציה, דמשק, סארי, רומא",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "בלבינוס",
+      "object": "רומא",
+      "object_candidates": "איסטנבול, סטוקהולם, פראג, ברלין, קהיר, מדריד, קאבול, נירנברג, מדיסון, רומא",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "הראנט דינק",
+      "object": "איסטנבול",
+      "object_candidates": "ירושלים, טוקיו, מוסקבה, הלסינקי, רומא, לונדון, קאבול, פירנצה, מדריד, איסטנבול",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "ניקפורוס השלישי בוטניאטסוס, קיסר האימפריה הביזנטית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "טאיפיי, מוסקבה, סטוקהולם, אתונה, קאבול, נירנברג, דמשק, פריז, סארי, קונסטנטינופול",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "יוהאן פכלבל",
+      "object": "נירנברג",
+      "object_candidates": "דטרויט, אתונה, מדריד, טוקיו, בלגרד, קאבול, רומא, פראג, מוסקבה, נירנברג",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "ואצלב ניז'ינסקי",
+      "object": "לונדון",
+      "object_candidates": "רומא, טוקיו, מדיסון, איסטנבול, אל-מדינה, קונסטנטינופול, ונציה, סארי, בגדאד, לונדון",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "לאו העשירי",
+      "object": "רומא",
+      "object_candidates": "בלגרד, קרתגו, סארי, קהיר, מדיסון, פריז, ירושלים, ונציה, טאיפיי, רומא",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "דונטלו",
+      "object": "פירנצה",
+      "object_candidates": "דטרויט, סטוקהולם, אתונה, ורשה, קאבול, בגדאד, לונדון, ירושלים, אל-מדינה, פירנצה",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "צי'אנג צ'ינג-קואו",
+      "object": "טאיפיי",
+      "object_candidates": "בגדאד, דמשק, אתונה, ברלין, הלסינקי, ליון, דטרויט, נירנברג, מדריד, טאיפיי",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "רוברט הוק",
+      "object": "לונדון",
+      "object_candidates": "איסטנבול, קהיר, קונסטנטינופול, ברלין, טוקיו, מדריד, סארי, ליון, טאיפיי, לונדון",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "רוזה פארקס",
+      "object": "דטרויט",
+      "object_candidates": "פריז, איסטנבול, מדריד, בגדאד, ברלין, סטוקהולם, מדיסון, קהיר, אתונה, דטרויט",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "יוחנן השמיני, קיסר האימפריה הביזנטית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "סטוקהולם, ורשה, מוסקבה, אתונה, בגדאד, טאיפיי, קהיר, פירנצה, איסטנבול, קונסטנטינופול",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "ג'ון די",
+      "object": "סארי",
+      "object_candidates": "רומא, ורשה, בגדאד, קונסטנטינופול, טוקיו, פירנצה, ליון, דטרויט, פראג, סארי",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "פרננדל",
+      "object": "פריז",
+      "object_candidates": "ורשה, סארי, קהיר, אתונה, ירושלים, פראג, ונציה, ליון, הלסינקי, פריז",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "מיכאל השני, קיסר האימפריה הביזנטית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "ורשה, איסטנבול, טוקיו, נירנברג, מוסקבה, קהיר, ונציה, ליון, סארי, קונסטנטינופול",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "קרל ליבקנכט",
+      "object": "ברלין",
+      "object_candidates": "הלסינקי, קהיר, טאיפיי, לונדון, פריז, ורשה, איסטנבול, מדריד, דמשק, ברלין",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ריכרד וגנר",
+      "object": "ונציה",
+      "object_candidates": "מוסקבה, בלגרד, ירושלים, ורשה, סארי, פריז, דטרויט, בגדאד, דמשק, ונציה",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "אנטיסתנס",
+      "object": "אתונה",
+      "object_candidates": "מוסקבה, קהיר, אל-מדינה, קונסטנטינופול, הלסינקי, סארי, קאבול, פריז, פירנצה, אתונה",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "מקס ארנסט",
+      "object": "פריז",
+      "object_candidates": "לונדון, סטוקהולם, טוקיו, נירנברג, רומא, אתונה, ונציה, מוסקבה, בלגרד, פריז",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "מרטין בובר",
+      "object": "ירושלים",
+      "object_candidates": "קאבול, בגדאד, סטוקהולם, מוסקבה, איסטנבול, סארי, ליון, נירנברג, בלגרד, ירושלים",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "יוזף גבלס",
+      "object": "ברלין",
+      "object_candidates": "לונדון, קרתגו, פראג, אתונה, קונסטנטינופול, אל-מדינה, רומא, קאבול, מדיסון, ברלין",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "מונטסקייה",
+      "object": "פריז",
+      "object_candidates": "סטוקהולם, קאבול, קהיר, בגדאד, נירנברג, קונסטנטינופול, דמשק, אל-מדינה, ליון, פריז",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ניקולאוס החמישי",
+      "object": "רומא",
+      "object_candidates": "מוסקבה, סארי, ליון, דטרויט, נירנברג, בגדאד, קהיר, מדיסון, דמשק, רומא",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "שארלוט קורדה",
+      "object": "פריז",
+      "object_candidates": "בגדאד, ורשה, ירושלים, קאבול, איסטנבול, קהיר, טוקיו, אל-מדינה, טאיפיי, פריז",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "מוחמד זאהיר שאה",
+      "object": "קאבול",
+      "object_candidates": "אל-מדינה, ירושלים, דמשק, ונציה, מדיסון, דטרויט, מוסקבה, פירנצה, סארי, קאבול",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "אינוקנטיוס האחד עשר",
+      "object": "רומא",
+      "object_candidates": "לונדון, ברלין, קהיר, ונציה, דמשק, מדיסון, קרתגו, פירנצה, אתונה, רומא",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "גורדיאנוס השני",
+      "object": "קרתגו",
+      "object_candidates": "מדיסון, ליון, פראג, רומא, בלגרד, ירושלים, בגדאד, דמשק, דטרויט, קרתגו",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "מסטיסלב רוסטרופוביץ'",
+      "object": "מוסקבה",
+      "object_candidates": "ליון, איסטנבול, אתונה, נירנברג, מדיסון, ברלין, מדריד, טוקיו, אל-מדינה, מוסקבה",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "פיוס השלישי",
+      "object": "רומא",
+      "object_candidates": "איסטנבול, לונדון, פראג, ליון, פריז, ורשה, בלגרד, קאבול, מדריד, רומא",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "עבד אל-כרים קאסם",
+      "object": "בגדאד",
+      "object_candidates": "טוקיו, רומא, פירנצה, לונדון, פריז, קהיר, טאיפיי, ליון, דמשק, בגדאד",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "גרגוריוס השישה עשר",
+      "object": "רומא",
+      "object_candidates": "קונסטנטינופול, ורשה, טאיפיי, בגדאד, קאבול, לונדון, מדריד, קרתגו, דמשק, רומא",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "אראם חאצ'טוריאן",
+      "object": "מוסקבה",
+      "object_candidates": "ירושלים, בגדאד, נירנברג, אתונה, לונדון, הלסינקי, דטרויט, טוקיו, קרתגו, מוסקבה",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "היינריך פון קלייסט",
+      "object": "ברלין",
+      "object_candidates": "רומא, לונדון, מוסקבה, ליון, בגדאד, קאבול, פירנצה, ורשה, סארי, ברלין",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "אבדילהמיט הראשון",
+      "object": "קונסטנטינופול",
+      "object_candidates": "איסטנבול, קאבול, ונציה, קהיר, אל-מדינה, טוקיו, דטרויט, בלגרד, פריז, קונסטנטינופול",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "אלכסנדר השמיני",
+      "object": "רומא",
+      "object_candidates": "ליון, טאיפיי, קרתגו, מדיסון, איסטנבול, ורשה, קונסטנטינופול, לונדון, מדריד, רומא",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "יוהאן כריסטיאן באך",
+      "object": "לונדון",
+      "object_candidates": "אתונה, ברלין, פריז, קאבול, הלסינקי, ירושלים, דמשק, מדריד, ליון, לונדון",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "סמואל ג'ונסון",
+      "object": "לונדון",
+      "object_candidates": "קרתגו, איסטנבול, אל-מדינה, סטוקהולם, ברלין, ורשה, מוסקבה, קהיר, אתונה, לונדון",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "ז'אק קוסטו",
+      "object": "פריז",
+      "object_candidates": "אתונה, ברלין, ונציה, בלגרד, נירנברג, רומא, קונסטנטינופול, ירושלים, בגדאד, פריז",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "סופיה קובלבסקיה",
+      "object": "סטוקהולם",
+      "object_candidates": "פריז, הלסינקי, ברלין, מדיסון, אתונה, פירנצה, דטרויט, פראג, קאבול, סטוקהולם",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "גאורג וילהלם פרידריך הגל",
+      "object": "ברלין",
+      "object_candidates": "אתונה, מדיסון, קאבול, מדריד, בגדאד, פראג, סטוקהולם, איסטנבול, אל-מדינה, ברלין",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "סנדרו בוטיצ'לי",
+      "object": "פירנצה",
+      "object_candidates": "בלגרד, אל-מדינה, איסטנבול, מדיסון, נירנברג, דטרויט, סטוקהולם, קאבול, ירושלים, פירנצה",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "סמואל טיילור קולרידג'",
+      "object": "לונדון",
+      "object_candidates": "סטוקהולם, ורשה, אל-מדינה, דטרויט, ירושלים, בלגרד, ליון, מוסקבה, קרתגו, לונדון",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "אבן ח'לדון",
+      "object": "קהיר",
+      "object_candidates": "ליון, ברלין, נירנברג, ירושלים, ונציה, מוסקבה, איסטנבול, טאיפיי, דמשק, קהיר",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "הנרי הרביעי, מלך אנגליה",
+      "object": "לונדון",
+      "object_candidates": "איסטנבול, אתונה, קהיר, רומא, נירנברג, דמשק, מדריד, ונציה, ברלין, לונדון",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "תומאזו אלבינוני",
+      "object": "ונציה",
+      "object_candidates": "פריז, ירושלים, אל-מדינה, ליון, פירנצה, דטרויט, הלסינקי, בלגרד, טאיפיי, ונציה",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "פאבו נורמי",
+      "object": "הלסינקי",
+      "object_candidates": "טאיפיי, סארי, סטוקהולם, פירנצה, קאבול, פריז, לונדון, בלגרד, ליון, הלסינקי",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "קלמנס הראשון",
+      "object": "רומא",
+      "object_candidates": "לונדון, בגדאד, הלסינקי, איסטנבול, בלגרד, פריז, קרתגו, קונסטנטינופול, ורשה, רומא",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "לואי השבעה עשר, מלך צרפת",
+      "object": "פריז",
+      "object_candidates": "מדריד, ונציה, קונסטנטינופול, סטוקהולם, מוסקבה, פירנצה, אל-מדינה, דמשק, נירנברג, פריז",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "קישו קורוקווה",
+      "object": "טוקיו",
+      "object_candidates": "פירנצה, אתונה, קרתגו, מוסקבה, ורשה, קהיר, ונציה, פריז, רומא, טוקיו",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "מקסימיליאן רובספייר בן שרמוטה",
+      "object": "פריז",
+      "object_candidates": "פירנצה, מוסקבה, אל-מדינה, דמשק, רומא, טוקיו, נירנברג, סטוקהולם, בגדאד, פריז",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ג'ורג'ונה",
+      "object": "ונציה",
+      "object_candidates": "פריז, רומא, אתונה, מוסקבה, הלסינקי, לונדון, קונסטנטינופול, אל-מדינה, ליון, ונציה",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "פטר הראשון",
+      "object": "בלגרד",
+      "object_candidates": "טוקיו, בגדאד, לונדון, פריז, טאיפיי, קאבול, הלסינקי, אתונה, נירנברג, בלגרד",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "אליעזר לודוויג זמנהוף",
+      "object": "ורשה",
+      "object_candidates": "לונדון, נירנברג, אתונה, בלגרד, ליון, הלסינקי, בגדאד, קונסטנטינופול, פריז, ורשה",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "אבראהים פאשא",
+      "object": "קהיר",
+      "object_candidates": "פריז, מדיסון, סארי, פראג, בלגרד, ורשה, אתונה, דמשק, איסטנבול, קהיר",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "קלמנס השנים עשר",
+      "object": "רומא",
+      "object_candidates": "ברלין, איסטנבול, קהיר, טוקיו, קונסטנטינופול, בלגרד, טאיפיי, קאבול, פריז, רומא",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "אירנאוס",
+      "object": "ליון",
+      "object_candidates": "דטרויט, הלסינקי, סארי, אל-מדינה, נירנברג, לונדון, פירנצה, קונסטנטינופול, מוסקבה, ליון",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "ז'אק דרידה",
+      "object": "פריז",
+      "object_candidates": "קרתגו, ברלין, דטרויט, אתונה, רומא, בלגרד, דמשק, קהיר, ליון, פריז",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "קרלוס הרביעי, מלך ספרד",
+      "object": "רומא",
+      "object_candidates": "פראג, מדריד, אתונה, ונציה, ורשה, טוקיו, הלסינקי, מוסקבה, ירושלים, רומא",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "רייף וון ויליאמס",
+      "object": "לונדון",
+      "object_candidates": "רומא, מדריד, אתונה, ברלין, אל-מדינה, פריז, דטרויט, ליון, קהיר, לונדון",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "אנדריי גרומיקו",
+      "object": "מוסקבה",
+      "object_candidates": "מדריד, טאיפיי, דטרויט, אתונה, ונציה, דמשק, קרתגו, לונדון, נירנברג, מוסקבה",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "אולריקה אלאונורה, מלכת שוודיה",
+      "object": "סטוקהולם",
+      "object_candidates": "אתונה, טאיפיי, סארי, ורשה, ירושלים, פירנצה, מדריד, דמשק, פריז, סטוקהולם",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "אוטיס רדינג",
+      "object": "מדיסון",
+      "object_candidates": "פריז, ונציה, רומא, קרתגו, פירנצה, איסטנבול, קאבול, בגדאד, סטוקהולם, מדיסון",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "אנרי רוסו",
+      "object": "פריז",
+      "object_candidates": "סארי, פירנצה, קרתגו, הלסינקי, ונציה, בגדאד, נירנברג, דמשק, בלגרד, פריז",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "מועאויה הראשון",
+      "object": "דמשק",
+      "object_candidates": "סטוקהולם, טוקיו, דטרויט, קונסטנטינופול, מדיסון, מדריד, סארי, פראג, פריז, דמשק",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "לואי אראגון",
+      "object": "פריז",
+      "object_candidates": "קהיר, מדריד, אל-מדינה, סארי, ירושלים, ורשה, מדיסון, בגדאד, דמשק, פריז",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ביברס",
+      "object": "דמשק",
+      "object_candidates": "מוסקבה, סארי, פריז, ירושלים, לונדון, אל-מדינה, אתונה, מדריד, בלגרד, דמשק",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "קלאוס שנק פון שטאופנברג",
+      "object": "ברלין",
+      "object_candidates": "לונדון, פראג, ורשה, קאבול, פריז, ליון, טאיפיי, בלגרד, דטרויט, ברלין",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "דונטו ברמנטה",
+      "object": "רומא",
+      "object_candidates": "ירושלים, הלסינקי, ליון, סטוקהולם, ברלין, מוסקבה, קאבול, בגדאד, ורשה, רומא",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "פרנסיסקו פרנקו",
+      "object": "מדריד",
+      "object_candidates": "רומא, ליון, אתונה, מוסקבה, ירושלים, פראג, קונסטנטינופול, ברלין, דטרויט, מדריד",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "קלוד ברנאר",
+      "object": "פריז",
+      "object_candidates": "אל-מדינה, קונסטנטינופול, דטרויט, דמשק, ליון, סארי, סטוקהולם, מדיסון, ברלין, פריז",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "גמאל עבד אל נאצר",
+      "object": "קהיר",
+      "object_candidates": "אל-מדינה, איסטנבול, נירנברג, סטוקהולם, דטרויט, טאיפיי, פירנצה, ונציה, ורשה, קהיר",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "יעקב סברדלוב",
+      "object": "מוסקבה",
+      "object_candidates": "טאיפיי, בגדאד, דטרויט, נירנברג, דמשק, לונדון, ברלין, ונציה, קונסטנטינופול, מוסקבה",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "שארל לואי אלפונס לבראן",
+      "object": "פריז",
+      "object_candidates": "מדריד, לונדון, ברלין, ירושלים, רומא, ורשה, בגדאד, אתונה, בלגרד, פריז",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "טיכו ברהה",
+      "object": "פראג",
+      "object_candidates": "קרתגו, הלסינקי, אל-מדינה, טוקיו, רומא, סטוקהולם, פירנצה, איסטנבול, בגדאד, פראג",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "אדוארד הית'",
+      "object": "סולסברי",
+      "object_candidates": "סארי, פריז, טאיפיי, קונסטנטינופול, מדיסון, ורשה, ברלין, לונדון, קרתגו, סולסברי",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

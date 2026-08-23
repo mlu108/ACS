@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "<subject> başkenti nerede bulunuyor? Cevap: <mask>",
+    "<subject>'nin başkenti nedir? Cevap: <mask>",
+    "<subject>'ın başkenti hangi şehirdir? Cevap: <mask>",
+    "<subject>'ın başkent şehrini adı nedir? Cevap: <mask>",
+    "<subject> hangi şehirde başkentini bulunduruyor? Cevap: <mask>",
+    " <subject>’in başkenti <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Azerbaycan",
+      "object": "Bakü",
+      "object_candidates": "Guadalajara, Kolombo, Pierre, Georgetown, Beyrut, Halep, Lincoln, Darwin, Babil, Bakü",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Nebraska",
+      "object": "Lincoln",
+      "object_candidates": "Amsterdam, Delhi, Winchester, Denver, Hobart, Toulouse, Selanik, Sofya, Exeter, Lincoln",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "Hampshire",
+      "object": "Winchester",
+      "object_candidates": "Annapolis, Perth, Venedik, Palermo, Nice, Ankara, Cakarta, Nashville, Hamilton, Winchester",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "İskenderiye",
+      "object": "İskenderiye",
+      "object_candidates": "Bağdat, Tokyo, Belfast, Bergen, Riverside, Barselona, Carlisle, Oslo, Kyoto, İskenderiye",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "İtalya Krallığı",
+      "object": "Floransa",
+      "object_candidates": "Annapolis, Kingston, Winnipeg, Denver, Winchester, Lincoln, Bükreș, Westminster, Toledo, Floransa",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Finlandiya Grandüklüğü",
+      "object": "Helsinki",
+      "object_candidates": "Edo, Madrid, Kazan, Trablus, Londra, Christchurch, Mainz, Viyana, Bern, Helsinki",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Telangana",
+      "object": "Haydarabad",
+      "object_candidates": "Venedik, Bratislava, Adelaide, Montgomery, Mumbai, Tallinn, Ottawa, Helsinki, Nice, Haydarabad",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Güney Avustralya",
+      "object": "Adelaide",
+      "object_candidates": "Seul, Charleston, Lozan, Cardiff, Memphis, Hereford, Tiran, Edo, Napoli, Adelaide",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "İskoçya Krallığı",
+      "object": "Edinburgh",
+      "object_candidates": "Lucknow, Providence, Tiran, Tours, Bari, Ankara, Cheyenne, Saraybosna, Zagreb, Edinburgh",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "İkinci Polonya Cumhuriyeti",
+      "object": "Varşova",
+      "object_candidates": "Hartford, Toronto, Bakü, Konstantinopolis, Vilnius, Darwin, Kingston, Miami, Oxford, Varşova",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Canterbury Bölgesi",
+      "object": "Christchurch",
+      "object_candidates": "Hobart, Cenova, Canberra, Bismarck, Brüksel, Pekin, Valensiya, Mainz, Hereford, Christchurch",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "Fransa Krallığı",
+      "object": "Paris",
+      "object_candidates": "Lizbon, Westminster, Brüksel, Ottawa, Dresden, Haydarabad, Münih, Chennai, Pekin, Paris",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Alberta",
+      "object": "Edmonton",
+      "object_candidates": "Cork, Halifax, Boise, Brest, Bağdat, Westminster, Delhi, Tallinn, Adelaide, Edmonton",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "Almanya",
+      "object": "Berlin",
+      "object_candidates": "Annapolis, Ljubljana, Palermo, Napoli, Kudüs, Oslo, Bern, İstanbul, Kazan, Berlin",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Indiana",
+      "object": "Indianapolis",
+      "object_candidates": "Kalküta, Chennai, Columbia, Odessa, Taipei, Havana, Dubai, Prag, Cambridge, Indianapolis",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "İkinci Fransız İmparatorluğu",
+      "object": "Paris",
+      "object_candidates": "Kopenhag, Lansing, Bologna, Adelaide, Auckland, Bergen, Ottawa, Manila, Kudüs, Paris",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Cambridgeshire",
+      "object": "Cambridge",
+      "object_candidates": "Delhi, Lincoln, Kiel, Bükreș, Barselona, Kiev, Hamilton, Nankin, Toulouse, Cambridge",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "Sicilya Krallığı",
+      "object": "Napoli",
+      "object_candidates": "Stockholm, Kyoto, Pierre, Canberra, Auckland, Moskova, Prag, Kazan, Dublin, Napoli",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Indre-et-Loire",
+      "object": "Tours",
+      "object_candidates": "Georgetown, Berlin, İstanbul, Montevideo, Karaçi, Cakarta, Brüksel, Viyana, Barselona, Tours",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "Puglia",
+      "object": "Bari",
+      "object_candidates": "Waterford, Santiago, Hereford, Kudüs, Galway, Lansing, Lucknow, Miami, Harrisburg, Bari",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "Doğu Flandre",
+      "object": "Gent",
+      "object_candidates": "Mainz, Jackson, Siraküza, Kiev, Mumbai, Amsterdam, Tours, Worcester, Sacramento, Gent",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "Danimarka",
+      "object": "Kopenhag",
+      "object_candidates": "Cakarta, Floransa, Vilnius, Edo, Lille, Manila, Toledo, Napoli, Memphis, Kopenhag",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "Michigan",
+      "object": "Lansing",
+      "object_candidates": "Dunedin, Delhi, Floransa, Dublin, Sacramento, Lizbon, Cambridge, Edmonton, Saga, Lansing",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "Eyyubiler",
+      "object": "Kahire",
+      "object_candidates": "Canberra, Gloucester, Roma, Londra, Cenova, Mekke, Waterford, Nankin, Medine, Kahire",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Raşidun Halifeliği",
+      "object": "Medine",
+      "object_candidates": "Sevilla, Winnipeg, Bratislava, Brüksel, Münih, Tallinn, Paris, Sacramento, Tours, Medine",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Tokugawa şogunluğu",
+      "object": "Edo",
+      "object_candidates": "Palma de Mallorca, Harrisburg, Helsinki, Milano, Winnipeg, Tallinn, Leicester, Babil, Concord, Edo",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "Sovyet Sosyalist Cumhuriyetler Birliği",
+      "object": "Moskova",
+      "object_candidates": "Barselona, Trablus, Babil, Beyrut, Westminster, Bakü, Bordeaux, Nashville, Honolulu, Moskova",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Romanya Krallığı",
+      "object": "Bükreș",
+      "object_candidates": "Aden, Halifax, Tokyo, Auckland, Santiago, Kingston, Barselona, Kudüs, Taipei, Bükreș",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "Tasmanya",
+      "object": "Hobart",
+      "object_candidates": "Cambridge, Viyana, Bergen, Bern, Edmonton, Riga, Napoli, Madison, Lincoln, Hobart",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "County Limerick",
+      "object": "Limerick",
+      "object_candidates": "Selanik, Columbia, Leicester, Seattle, Floransa, Columbus, Winnipeg, Caracas, Konstantinopolis, Limerick",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "Fatımiler Devleti",
+      "object": "Kahire",
+      "object_candidates": "Londra, Darwin, Ottawa, Selanik, Riverside, Paris, Berlin, Kiev, Hiroşima, Kahire",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Auckland Bölgesi",
+      "object": "Auckland",
+      "object_candidates": "Kopenhag, Leicester, Sofya, Annapolis, Lozan, Hiroşima, Cezayir, Gap, Oxford, Auckland",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "New Hampshire",
+      "object": "Concord",
+      "object_candidates": "Charleston, Kyoto, Salzburg, Riverside, Brisbane, Toronto, Lublin, Bordeaux, Edinburgh, Concord",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "Odessa Oblastı",
+      "object": "Odessa",
+      "object_candidates": "Perth, Richmond, Tours, Halep, Toulouse, Mekke, Babil, Zagreb, Gloucester, Odessa",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "Avustralya",
+      "object": "Canberra",
+      "object_candidates": "Hannover, Exeter, Denver, Hereford, Manchester, Hiroşima, Ottawa, Jackson, Salem, Canberra",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Osmanlı İmparatorluğu",
+      "object": "İstanbul",
+      "object_candidates": "Taipei, Cenova, Bologna, Beyrut, Zagreb, Floransa, Hamilton, Barselona, Erivan, İstanbul",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Güney Batı İngiltere",
+      "object": "Bristol",
+      "object_candidates": "Bakü, Ankara, Madison, Beyrut, Viyana, Boston, Bari, Kyoto, Augsburg, Bristol",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "Teksas",
+      "object": "Austin",
+      "object_candidates": "Belgrad, Miami, Cardiff, Ljubljana, Bern, Memphis, Roma, Kolombo, Strazburg, Austin",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "Latin İmparatorluğu",
+      "object": "Konstantinopolis",
+      "object_candidates": "Pierre, Paris, Columbus, Waterford, Montevideo, Budapeşte, Havana, Lucknow, Madison, Konstantinopolis",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Macaristan",
+      "object": "Budapeşte",
+      "object_candidates": "Gloucester, Valensiya, Nagoya, Carlisle, Oxford, Basel, Indianapolis, Kiel, Amsterdam, Budapeşte",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Rusya",
+      "object": "Moskova",
+      "object_candidates": "Kudüs, Cheyenne, Hiroşima, Charleston, Galway, Austin, Lima, Saga, Exeter, Moskova",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Veneto",
+      "object": "Venedik",
+      "object_candidates": "Mekke, Hiroşima, Edo, Nairobi, Şam, Bergen, Perth, Viyana, Kalküta, Venedik",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Worcestershire",
+      "object": "Worcester",
+      "object_candidates": "Montevideo, Kiel, Columbia, Torino, Edo, Kopenhag, Valensiya, Lviv, Trablus, Worcester",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "Sicilya Krallığı",
+      "object": "Palermo",
+      "object_candidates": "Erivan, Columbia, Prag, Georgetown, Atina, Westminster, Guangzhou, Yokohama, Delhi, Palermo",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Pensilvanya",
+      "object": "Harrisburg",
+      "object_candidates": "Hannover, Sevilla, Ankara, Kiel, Honolulu, Cardiff, Hiroşima, Prag, Brest, Harrisburg",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "Papalık Devleti",
+      "object": "Roma",
+      "object_candidates": "Floransa, Charleston, Oslo, İskenderiye, Madison, Guadalajara, Regina, Lansing, Cenova, Roma",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Galway County",
+      "object": "Galway",
+      "object_candidates": "Babil, Raleigh, Trenton, Konstantinopolis, Phoenix, Madrid, İstanbul, Guadalajara, Harrisburg, Galway",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "Avusturya İmparatorluğu",
+      "object": "Viyana",
+      "object_candidates": "Harrisburg, Sofya, Hamilton, Lincoln, Austin, Toulouse, Tiran, Regina, Nashville, Viyana",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Hollanda Doğu Hint Adaları",
+      "object": "Cakarta",
+      "object_candidates": "Beyrut, Kudüs, Dunedin, Vilnius, Viyana, Brisbane, Saraybosna, Basel, Montgomery, Cakarta",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "İsrail",
+      "object": "Kudüs",
+      "object_candidates": "Edo, Cork, Mumbai, Sacramento, Boston, Bern, Austin, Miami, Bismarck, Kudüs",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Aichi",
+      "object": "Nagoya",
+      "object_candidates": "Münih, Kingston, Cork, Montgomery, Mainz, Odessa, Hartford, Manchester, Delhi, Nagoya",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "Leicestershire",
+      "object": "Leicester",
+      "object_candidates": "Mainz, Santiago, Madison, Christchurch, Exeter, Cakarta, Hereford, Basel, Augsburg, Leicester",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "King County, Washington",
+      "object": "Seattle",
+      "object_candidates": "Milano, Madrid, Exeter, Chennai, Caracas, Kiev, Moskova, Cardiff, Westminster, Seattle",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Atina Dukalığı",
+      "object": "Atina",
+      "object_candidates": "Valensiya, Tiran, Saga, Lozan, Belgrad, Brest, Nice, Springfield, Tahran, Atina",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Hollanda Krallığı",
+      "object": "Amsterdam",
+      "object_candidates": "Berlin, Lublin, Tahran, İskenderiye, Hamilton, Beyrut, Kudüs, Winchester, Selanik, Amsterdam",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Arnavutluk",
+      "object": "Tiran",
+      "object_candidates": "Darwin, Kyoto, Varşova, Hamilton, Richmond, Bangalore, Hannover, Tallinn, Dunedin, Tiran",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Genova ili",
+      "object": "Cenova",
+      "object_candidates": "Delhi, Waterford, Brüksel, Providence, Hamilton, Harrisburg, Manchester, Raleigh, Venedik, Cenova",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Çin Cumhuriyeti",
+      "object": "Taipei",
+      "object_candidates": "Kalküta, Kahire, Seattle, Austin, Gent, Gap, Ljubljana, Kiev, Ankara, Taipei",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Çekoslovakya",
+      "object": "Prag",
+      "object_candidates": "Boise, Waterford, Guadalajara, Montevideo, Kalküta, Edo, Selanik, Miami, Richmond, Prag",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Dubai Emirliği",
+      "object": "Dubai",
+      "object_candidates": "Mainz, Springfield, Lizbon, Victoria, Kingston, Edinburgh, Bratislava, Galway, Mekke, Dubai",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "Kuzey Dakota",
+      "object": "Bismarck",
+      "object_candidates": "Mekke, Winchester, Nankin, Honolulu, Trablus, Madrid, Haydarabad, Bergen, Basel, Bismarck",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "Endülüs",
+      "object": "Sevilla",
+      "object_candidates": "Hiroşima, Kahire, Georgetown, Saraybosna, Strazburg, Trenton, Tokyo, Varşova, Helsinki, Sevilla",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "Maharaştra",
+      "object": "Mumbai",
+      "object_candidates": "Varşova, Gent, Amsterdam, Münih, Winnipeg, Edmonton, Jackson, Lansing, Waterford, Mumbai",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "Karnataka",
+      "object": "Bangalore",
+      "object_candidates": "Dresden, Bismarck, Richmond, Lansing, Edo, Bratislava, Canberra, Georgetown, Cardiff, Bangalore",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "Endonezya",
+      "object": "Cakarta",
+      "object_candidates": "Kirman, Nankin, Indianapolis, Victoria, Torino, Winchester, Kolombo, Toronto, Ottawa, Cakarta",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "İtalyan Sosyal Cumhuriyeti",
+      "object": "Roma",
+      "object_candidates": "Phoenix, Oslo, Zagreb, Annapolis, İskenderiye, Worcester, Richmond, Boise, Auckland, Roma",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Habsburg Monarşisi",
+      "object": "Viyana",
+      "object_candidates": "Halifax, Lozan, Bismarck, Denver, Lima, Delhi, Columbus, Kolombo, Adelaide, Viyana",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Portekiz",
+      "object": "Lizbon",
+      "object_candidates": "Şam, Montgomery, Exeter, Torino, Edmonton, Nice, Hamilton, Augsburg, Havana, Lizbon",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "Balear Adaları",
+      "object": "Palma de Mallorca",
+      "object_candidates": "Seul, Venedik, Adelaide, Babil, Beyrut, Moskova, Lansing, Torino, Christchurch, Palma de Mallorca",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Bologna ili",
+      "object": "Bologna",
+      "object_candidates": "Winnipeg, Cardiff, Mumbai, Winchester, Varşova, Barselona, Tallinn, Bergen, Palma de Mallorca, Bologna",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "Küba",
+      "object": "Havana",
+      "object_candidates": "Montevideo, Moskova, Bismarck, Strazburg, Darwin, Cheyenne, Toronto, Brisbane, Ljubljana, Havana",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "Toledo ili",
+      "object": "Toledo",
+      "object_candidates": "Karaçi, Bari, Salem, Austin, Galway, Oslo, Columbia, Kirman, Varşova, Toledo",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "Siena ili",
+      "object": "Siena",
+      "object_candidates": "Georgetown, Pekin, Palermo, Bristol, Münih, Nagoya, Tiran, Venedik, Cambridge, Siena",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "Honolulu ilçesi",
+      "object": "Honolulu",
+      "object_candidates": "Manchester, Berlin, Siraküza, Preston, Galway, Georgetown, Augsburg, Amsterdam, Lublin, Honolulu",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Roma İmparatorluğu",
+      "object": "Konstantinopolis",
+      "object_candidates": "Montevideo, Salzburg, Gent, Siena, Bangkok, Providence, Bari, Milano, Berlin, Konstantinopolis",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Connecticut",
+      "object": "Hartford",
+      "object_candidates": "Indianapolis, Selanik, Şam, Seattle, Madison, Palermo, Exeter, Viyana, Haydarabad, Hartford",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "İskoçya",
+      "object": "Edinburgh",
+      "object_candidates": "Raleigh, Cezayir, Viyana, Helsinki, Dunedin, Stockholm, Worcester, Salem, Riverside, Edinburgh",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "Ankara",
+      "object": "Ankara",
+      "object_candidates": "Taipei, Stockholm, Hiroşima, Amsterdam, Münih, Halep, Bern, Medine, Boston, Ankara",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Lazio",
+      "object": "Roma",
+      "object_candidates": "İstanbul, Brest, Brüksel, Cork, Bükreș, Nashville, Santiago, İskenderiye, Medine, Roma",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Polonya Halk Cumhuriyeti",
+      "object": "Varşova",
+      "object_candidates": "Kyoto, Sidney, Guadalajara, Mainz, Kiel, Victoria, Bonn, Waterford, Winnipeg, Varşova",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Basel-Stadt",
+      "object": "Basel",
+      "object_candidates": "Palermo, Augsburg, Moskova, Canberra, Chennai, Erivan, Worcester, Odessa, Sevilla, Basel",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "Kaliforniya",
+      "object": "Sacramento",
+      "object_candidates": "Tiran, Barselona, İstanbul, Minsk, Lille, Valensiya, Budapeşte, Waterford, Darwin, Sacramento",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "Salzburg",
+      "object": "Salzburg",
+      "object_candidates": "Nice, Hereford, Gloucester, Odessa, Sidney, Lansing, Selanik, Trablus, Halifax, Salzburg",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "Kyoto",
+      "object": "Kyoto",
+      "object_candidates": "Nashville, Siraküza, Cenova, Hereford, Georgetown, Sevilla, Cezayir, Mainz, Lansing, Kyoto",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "Firenze ili",
+      "object": "Floransa",
+      "object_candidates": "Annapolis, Toledo, Manila, Prag, Viyana, Raleigh, Caracas, Edo, Lille, Floransa",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Irak",
+      "object": "Bağdat",
+      "object_candidates": "Tokyo, Dakka, Moskova, Austin, Saga, Cork, Phoenix, Oslo, Mekke, Bağdat",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Campania",
+      "object": "Napoli",
+      "object_candidates": "Tokyo, Nashville, Kâbil, Montevideo, Karaçi, Valensiya, Vilnius, Bağdat, Madrid, Napoli",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Japonya",
+      "object": "Tokyo",
+      "object_candidates": "Palma de Mallorca, Kahire, Roma, Sacramento, Haydarabad, Paris, Toulouse, Cork, Gap, Tokyo",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Miami-Dade County",
+      "object": "Miami",
+      "object_candidates": "Brest, Augsburg, Riga, Bari, Toulouse, Münih, Nairobi, Manila, Mekke, Miami",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "Kirman Eyaleti",
+      "object": "Kirman",
+      "object_candidates": "Torino, Dakka, Chennai, Tokyo, Miami, Carlisle, Strazburg, Tiran, Bologna, Kirman",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "Alpes-Maritimes",
+      "object": "Nice",
+      "object_candidates": "Siena, Lviv, Bratislava, Brisbane, Tokyo, Pekin, Cambridge, Oxford, Havana, Nice",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "Estonya",
+      "object": "Tallinn",
+      "object_candidates": "Zagreb, Torino, Şam, Lublin, Bologna, Trenton, Columbia, Viyana, Kalküta, Tallinn",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "Batı Avustralya",
+      "object": "Perth",
+      "object_candidates": "Boston, Lansing, Ljubljana, Limerick, Kâbil, Madison, Regina, Exeter, Auckland, Perth",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "Lviv Oblastı",
+      "object": "Lviv",
+      "object_candidates": "Kirman, Adelaide, Bağdat, Palermo, Cheyenne, Gent, Delhi, Kudüs, Dublin, Lviv",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "Yeni Güney Galler",
+      "object": "Sidney",
+      "object_candidates": "Bratislava, Basel, Lizbon, Victoria, Taipei, Preston, Toronto, Sofya, Honolulu, Sidney",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "Riverside County",
+      "object": "Riverside",
+      "object_candidates": "Bakü, Hannover, Dubai, Ottawa, Mainz, Palermo, Lille, Sacramento, Dunedin, Riverside",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "Venezuela",
+      "object": "Caracas",
+      "object_candidates": "Milano, Charleston, Seattle, Sofya, Hobart, Cork, Vilnius, Lansing, Trablus, Caracas",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "Manitoba",
+      "object": "Winnipeg",
+      "object_candidates": "Cezayir, Palma de Mallorca, Canberra, Havana, Honolulu, Oxford, Lima, Bağdat, Guadalajara, Winnipeg",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "İtalya Krallığı",
+      "object": "Torino",
+      "object_candidates": "Dakka, Hartford, Bern, Columbus, Boise, Aden, Oslo, Beyrut, Bordeaux, Torino",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Lombardiya",
+      "object": "Milano",
+      "object_candidates": "Varşova, Floransa, Montgomery, Edo, Trenton, Medine, Haydarabad, Santiago, Adelaide, Milano",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "İran",
+      "object": "Tahran",
+      "object_candidates": "Trablus, Toronto, Edmonton, Halifax, Gloucester, Medine, İstanbul, Toulouse, Sofya, Tahran",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Büyük Britanya Krallığı",
+      "object": "Londra",
+      "object_candidates": "Münih, Regina, Torino, Salzburg, Zagreb, Hereford, Bari, Stockholm, Limerick, Londra",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "Libya",
+      "object": "Trablus",
+      "object_candidates": "Yokohama, Preston, İskenderiye, Annapolis, Bismarck, Halep, Cakarta, Medine, Adelaide, Trablus",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Moskova Knezliği",
+      "object": "Moskova",
+      "object_candidates": "Dresden, Mekke, Palma de Mallorca, Harrisburg, Gap, Toronto, Richmond, Aden, Bordeaux, Moskova",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Avustralya Başkent Bölgesi",
+      "object": "Canberra",
+      "object_candidates": "Belfast, Perth, Brisbane, Kyoto, Bangkok, Kâbil, Ljubljana, Berlin, Mumbai, Canberra",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Vichy Fransası",
+      "object": "Paris",
+      "object_candidates": "Lublin, Cezayir, Nairobi, Bismarck, Christchurch, Winnipeg, Gap, Bergen, Austin, Paris",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Bas-Rhin",
+      "object": "Strazburg",
+      "object_candidates": "Palma de Mallorca, Columbia, Regina, Halep, Mumbai, Carlisle, Columbus, Bangalore, Waterford, Strazburg",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Vilnius County",
+      "object": "Vilnius",
+      "object_candidates": "Saraybosna, Indianapolis, Cheyenne, Kalküta, Edo, Kyoto, Memphis, Nagoya, Torino, Vilnius",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Brüksel Başkent Bölgesi",
+      "object": "Brüksel",
+      "object_candidates": "Madison, Tiran, Columbia, Nashville, Amsterdam, Augsburg, Edinburgh, Hobart, Valensiya, Brüksel",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Saskatchewan",
+      "object": "Regina",
+      "object_candidates": "Toronto, Bergen, Saraybosna, Tahran, Bangkok, Palma de Mallorca, Santiago, Venedik, Springfield, Regina",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "Tahran Eyaleti",
+      "object": "Tahran",
+      "object_candidates": "Pekin, Paris, Taipei, Gloucester, İstanbul, Sacramento, Chennai, Valensiya, Kiev, Tahran",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Emilia-Romagna",
+      "object": "Bologna",
+      "object_candidates": "Siena, Kolombo, Springfield, Austin, Seattle, Auckland, Manila, Lublin, Budapeşte, Bologna",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "İrlanda",
+      "object": "Dublin",
+      "object_candidates": "Hamilton, Amsterdam, Gent, Nashville, Brisbane, Vilnius, Jackson, Georgetown, Salem, Dublin",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Uruguay",
+      "object": "Montevideo",
+      "object_candidates": "Bern, Halifax, Tokyo, Springfield, Delhi, Beyrut, Zagreb, Worcester, Carlisle, Montevideo",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "Ahameniş İmparatorluğu",
+      "object": "Babil",
+      "object_candidates": "Cezayir, Pierre, Seul, Bangalore, Dakka, Varşova, Bismarck, Kiev, Haydarabad, Babil",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "Peru",
+      "object": "Lima",
+      "object_candidates": "Columbus, Leicester, Valensiya, Raleigh, Gloucester, Bergen, Carlisle, Edo, Cenova, Lima",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "Sri Lanka",
+      "object": "Kolombo",
+      "object_candidates": "Waterford, Exeter, Hamilton, Georgetown, Winnipeg, Kirman, Lizbon, Chennai, Toledo, Kolombo",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "Irak Krallığı",
+      "object": "Bağdat",
+      "object_candidates": "Edinburgh, Bari, Toulouse, Bergen, Toledo, Helsinki, Zagreb, Preston, Saga, Bağdat",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Amerika Konfedere Devletleri",
+      "object": "Montgomery",
+      "object_candidates": "Medine, Sevilla, Lviv, Ljubljana, Raleigh, Nashville, Winnipeg, Richmond, Bordeaux, Montgomery",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Sırbistan Krallığı",
+      "object": "Belgrad",
+      "object_candidates": "Londra, Kiev, Lima, Salzburg, Roma, Vilnius, Bonn, Phoenix, Floransa, Belgrad",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Waterford County",
+      "object": "Waterford",
+      "object_candidates": "Sacramento, Columbus, Dublin, Harrisburg, Roma, Valensiya, Berlin, Auckland, Lizbon, Waterford",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "Sırbistan-Karadağ",
+      "object": "Belgrad",
+      "object_candidates": "Basel, Barselona, Riga, Bakü, Stockholm, Dubai, Valensiya, Miami, Konstantinopolis, Belgrad",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Ukrayna",
+      "object": "Kiev",
+      "object_candidates": "Nagoya, Tokyo, Limerick, Valensiya, Brüksel, Lublin, Westminster, Winnipeg, Cenova, Kiev",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Bosna-Hersek",
+      "object": "Saraybosna",
+      "object_candidates": "Hannover, Ankara, Pekin, Şam, Karaçi, Bordeaux, Indianapolis, Sidney, Victoria, Saraybosna",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Ermenistan",
+      "object": "Erivan",
+      "object_candidates": "Mumbai, Limerick, Canberra, Milano, Bonn, Odessa, Hereford, Memphis, Sidney, Erivan",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "Abbasiler",
+      "object": "Şam",
+      "object_candidates": "Memphis, Bratislava, Columbia, Bern, Boston, Kiel, Helsinki, Siena, Edo, Şam",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Jalisco",
+      "object": "Guadalajara",
+      "object_candidates": "Mekke, Jackson, Yokohama, Worcester, Cenova, Cakarta, Moskova, Saraybosna, Ankara, Guadalajara",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "Bangladeş",
+      "object": "Dakka",
+      "object_candidates": "Caracas, Atina, Londra, Bismarck, Nagoya, Roma, Brest, Manila, Taipei, Dakka",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "Alabama",
+      "object": "Montgomery",
+      "object_candidates": "Waterford, Prag, Kirman, Darwin, Lima, Bakü, Babil, Bangkok, Şam, Montgomery",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Illinois",
+      "object": "Springfield",
+      "object_candidates": "Bismarck, Şam, İskenderiye, Lansing, Dublin, Budapeşte, Gap, Belgrad, Toulouse, Springfield",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "Lincolnshire",
+      "object": "Lincoln",
+      "object_candidates": "Boise, Victoria, Carlisle, Cezayir, Worcester, Bangalore, Harrisburg, Indianapolis, Paris, Lincoln",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "İspanyol İmparatorluğu",
+      "object": "Madrid",
+      "object_candidates": "Mekke, Trenton, İstanbul, Belfast, Seul, Aden, Gloucester, Bratislava, Lizbon, Madrid",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Nord-Pas-de-Calais",
+      "object": "Lille",
+      "object_candidates": "Belfast, Charleston, Cenova, Carlisle, Bordeaux, Bonn, Columbia, Perth, Gap, Lille",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "Wisconsin",
+      "object": "Madison",
+      "object_candidates": "Kazan, Toronto, Karaçi, Guadalajara, Nagoya, Ottawa, Gent, Brüksel, Bari, Madison",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Sicilya",
+      "object": "Palermo",
+      "object_candidates": "Montevideo, Edmonton, Bağdat, Nairobi, Basel, Oslo, Regina, Carlisle, Adelaide, Palermo",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "İrlanda Krallığı",
+      "object": "Dublin",
+      "object_candidates": "Ottawa, Brisbane, Caracas, Columbus, Ljubljana, Nagoya, Siena, Guangzhou, Providence, Dublin",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Filipinler",
+      "object": "Manila",
+      "object_candidates": "Lima, Madrid, Lansing, Havana, Halifax, Toledo, Milano, Trablus, Cardiff, Manila",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "Venedik Cumhuriyeti",
+      "object": "Venedik",
+      "object_candidates": "Galway, Austin, Nashville, İstanbul, Victoria, Nairobi, İskenderiye, Worcester, Adelaide, Venedik",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Halep",
+      "object": "Halep",
+      "object_candidates": "Mumbai, Venedik, Bergen, Caracas, Saga, Lima, Ottawa, Cezayir, Brisbane, Halep",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "Colorado",
+      "object": "Denver",
+      "object_candidates": "Strazburg, Şam, Trablus, Delhi, Bükreș, Miami, Dublin, Limerick, Kudüs, Denver",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "Yunanistan",
+      "object": "Atina",
+      "object_candidates": "Georgetown, Mekke, Trenton, Denver, Lizbon, Strazburg, Guangzhou, Halep, Oxford, Atina",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Hırvatistan Bağımsız Devleti",
+      "object": "Zagreb",
+      "object_candidates": "Austin, Bari, Perth, Halifax, Helsinki, Milano, Toulouse, Dublin, Strazburg, Zagreb",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Hollanda",
+      "object": "Amsterdam",
+      "object_candidates": "Aden, Siraküza, Londra, Gent, İskenderiye, Cenova, Toulouse, Hobart, Babil, Amsterdam",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Arizona",
+      "object": "Phoenix",
+      "object_candidates": "Cardiff, Aden, Kolombo, Gent, Montevideo, Lviv, Konstantinopolis, Memphis, Paris, Phoenix",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "İtalya",
+      "object": "Roma",
+      "object_candidates": "Jackson, Christchurch, Ottawa, Strazburg, Londra, Belfast, Adelaide, Delhi, Bükreș, Roma",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Yugoslavya Krallığı",
+      "object": "Belgrad",
+      "object_candidates": "Strazburg, Bangkok, Seul, Adelaide, Saga, Carlisle, Kingston, Chennai, Tokyo, Belgrad",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Birleşik Krallık",
+      "object": "Londra",
+      "object_candidates": "Georgetown, Preston, Carlisle, Kudüs, Bonn, Beyrut, Brest, Nairobi, Budapeşte, Londra",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "Arnavutluk Sosyalist Halk Cumhuriyeti",
+      "object": "Tiran",
+      "object_candidates": "Bonn, Bağdat, Toledo, Lviv, Bologna, Auckland, Sidney, Tokyo, Kopenhag, Tiran",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Sırbistan",
+      "object": "Belgrad",
+      "object_candidates": "Adelaide, Columbus, Bangalore, Columbia, Kudüs, Floransa, Kingston, Konstantinopolis, Miami, Belgrad",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Libya Krallığı",
+      "object": "Trablus",
+      "object_candidates": "Columbia, Toulouse, Viyana, Mainz, Kingston, Montgomery, Chennai, Carlisle, Galway, Trablus",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Kanada",
+      "object": "Ottawa",
+      "object_candidates": "Denver, Kudüs, Gap, Bristol, Augsburg, Yokohama, Springfield, Bern, Cheyenne, Ottawa",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "Kanagawa ili",
+      "object": "Yokohama",
+      "object_candidates": "Erivan, Bari, Oxford, Sevilla, Manchester, Viyana, Bangalore, Providence, Kingston, Yokohama",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "Orta Bohemia",
+      "object": "Prag",
+      "object_candidates": "Miami, Dunedin, Salem, Cakarta, Delhi, Charleston, Montevideo, Bağdat, Christchurch, Prag",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Fransa",
+      "object": "Paris",
+      "object_candidates": "Moskova, Manchester, Leicester, Perth, Lille, Varşova, Memphis, Sidney, Jackson, Paris",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Bulgaristan",
+      "object": "Sofya",
+      "object_candidates": "Waterford, Basel, Harrisburg, Saga, Prag, Dunedin, İskenderiye, Kopenhag, Atina, Sofya",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Devon",
+      "object": "Exeter",
+      "object_candidates": "Hiroşima, Indianapolis, Lucknow, Tallinn, Minsk, Miami, Augsburg, Lublin, Paris, Exeter",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "Orta Makedonya",
+      "object": "Selanik",
+      "object_candidates": "Mekke, Kiel, Aden, Pierre, Montevideo, Madrid, Saraybosna, Kingston, Delhi, Selanik",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "Sicilya Emirliği",
+      "object": "Palermo",
+      "object_candidates": "Winchester, Oxford, Concord, Varşova, Kiev, Caracas, Miami, Pekin, Edmonton, Palermo",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Guyana",
+      "object": "Georgetown",
+      "object_candidates": "İskenderiye, Basel, Brest, Guangzhou, Bağdat, Chennai, Hiroşima, Lille, Adelaide, Georgetown",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "Macaristan Krallığı",
+      "object": "Budapeşte",
+      "object_candidates": "Nankin, Westminster, Columbia, Boston, Basel, Lozan, Milano, Helsinki, Seattle, Budapeşte",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Saksonya",
+      "object": "Dresden",
+      "object_candidates": "Caracas, Providence, Haydarabad, Columbia, Boston, Budapeşte, Palermo, Bergen, Bismarck, Dresden",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "Ming Hanedanı",
+      "object": "Nankin",
+      "object_candidates": "Milano, Bari, Tahran, Leicester, Pierre, Bonn, Toulouse, Vilnius, Kopenhag, Nankin",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "Mekke Bölgesi",
+      "object": "Mekke",
+      "object_candidates": "Bağdat, Charleston, Edo, Nankin, Şam, Floransa, Beyrut, Bakü, Hamilton, Mekke",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "Mısır Eyaleti",
+      "object": "Kahire",
+      "object_candidates": "Saga, Bükreș, Trablus, Havana, Lima, Raleigh, Barselona, Karaçi, Kazan, Kahire",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Polonya Kongre Krallığı",
+      "object": "Varşova",
+      "object_candidates": "Kazan, Zagreb, Ottawa, Montevideo, Miami, Bordeaux, Palermo, Canberra, Yokohama, Varşova",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Kuzey İrlanda",
+      "object": "Belfast",
+      "object_candidates": "Dresden, Hiroşima, Austin, Tallinn, Cambridge, Nashville, Bratislava, Minsk, Madison, Belfast",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "İspanya",
+      "object": "Madrid",
+      "object_candidates": "Denver, Auckland, Montevideo, Atina, Springfield, Varşova, Zagreb, Carlisle, Riga, Madrid",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Metropolitan Fransa",
+      "object": "Paris",
+      "object_candidates": "Waterford, Lizbon, Medine, Floransa, Babil, Tiran, Belfast, Mumbai, Kiev, Paris",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Tataristan",
+      "object": "Kazan",
+      "object_candidates": "Miami, Saraybosna, Nice, Leicester, Lublin, Varşova, Roma, Amsterdam, Charleston, Kazan",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "Brest Voblastı",
+      "object": "Brest",
+      "object_candidates": "Exeter, Christchurch, Leicester, Cenova, Cheyenne, Dunedin, Santiago, Kâbil, Taipei, Brest",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "Birleşik Krallık Filistin Mandası",
+      "object": "Kudüs",
+      "object_candidates": "Taipei, Salzburg, Harrisburg, Bristol, Bratislava, Tahran, Bologna, Trenton, Lviv, Kudüs",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Palermo ili",
+      "object": "Palermo",
+      "object_candidates": "Delhi, Trenton, Sacramento, Hamilton, Şam, Ottawa, Montgomery, Guadalajara, Cakarta, Palermo",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Bavyera Krallığı",
+      "object": "Münih",
+      "object_candidates": "Canberra, Edo, Minsk, Kâbil, Brüksel, Cambridge, Madison, Lozan, Ankara, Münih",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Tamil Nadu",
+      "object": "Chennai",
+      "object_candidates": "Edmonton, Kyoto, Prag, Dublin, Charleston, Gap, Ljubljana, Regina, Palma de Mallorca, Chennai",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "Beyaz Rusya",
+      "object": "Minsk",
+      "object_candidates": "Harrisburg, Aden, Mekke, Tokyo, Atina, Bangalore, Lozan, Beyrut, Kyoto, Minsk",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Gloucestershire",
+      "object": "Gloucester",
+      "object_candidates": "Sevilla, Beyrut, Victoria, Palermo, Riga, Münih, Saga, Tokyo, Kahire, Gloucester",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "Vaud",
+      "object": "Lozan",
+      "object_candidates": "Ottawa, Augsburg, Brüksel, Varşova, Cezayir, Leicester, Dunedin, Lublin, Preston, Lozan",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "Avrupa Birliği",
+      "object": "Strazburg",
+      "object_candidates": "Chennai, Aden, Charleston, Mainz, Medine, Atina, Belfast, Madison, Lansing, Strazburg",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Uttar Pradeş",
+      "object": "Lucknow",
+      "object_candidates": "Austin, Charleston, Havana, Dakka, Brest, Amsterdam, Sevilla, Bratislava, Edinburgh, Lucknow",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "Sırp Cumhuriyeti",
+      "object": "Saraybosna",
+      "object_candidates": "Vilnius, Valensiya, Bangalore, Lozan, Mumbai, Cakarta, Chennai, Kalküta, Leicester, Saraybosna",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Saraybosna Kantonu",
+      "object": "Saraybosna",
+      "object_candidates": "Dunedin, Lincoln, Montgomery, Tallinn, Guangzhou, Budapeşte, Dakka, Bordeaux, Kirman, Saraybosna",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Macaristan Sovyet Cumhuriyeti",
+      "object": "Budapeşte",
+      "object_candidates": "Lucknow, Boise, Bağdat, Dresden, Hiroşima, Victoria, Delhi, Dunedin, Konstantinopolis, Budapeşte",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Afganistan Krallığı",
+      "object": "Kâbil",
+      "object_candidates": "Leicester, Kiel, Lucknow, Mumbai, Cheyenne, Bergen, Manchester, Toronto, Hobart, Kâbil",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Lublin Voyvodalığı",
+      "object": "Lublin",
+      "object_candidates": "Montevideo, Bristol, Concord, Saraybosna, Vilnius, Moskova, Saga, Kalküta, Boston, Lublin",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "Virjinya",
+      "object": "Richmond",
+      "object_candidates": "Miami, Saraybosna, Christchurch, Amsterdam, Kalküta, Brisbane, Saga, Havana, Londra, Richmond",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "İngiltere Krallığı",
+      "object": "Winchester",
+      "object_candidates": "Manila, Salem, Worcester, Cambridge, Concord, Siraküza, Memphis, Atina, Ljubljana, Winchester",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Medine Bölgesi",
+      "object": "Medine",
+      "object_candidates": "Kazan, Sacramento, Haydarabad, Belfast, Perth, Dakka, Bern, Regina, Budapeşte, Medine",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Stockholm belediyesi",
+      "object": "Stockholm",
+      "object_candidates": "Santiago, Denver, Galway, Haydarabad, Victoria, Bristol, Bangkok, Viyana, Havana, Stockholm",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Azerbaycan Sovyet Sosyalist Cumhuriyeti",
+      "object": "Bakü",
+      "object_candidates": "Strazburg, Brisbane, Columbia, Belgrad, Denver, Nankin, Montevideo, Lozan, Mumbai, Bakü",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Yunanistan Krallığı",
+      "object": "Atina",
+      "object_candidates": "Erivan, Hamilton, Selanik, Gloucester, Aden, Nagoya, Riverside, Bristol, Kopenhag, Atina",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Güney Kore",
+      "object": "Seul",
+      "object_candidates": "Gap, Kalküta, Westminster, Belgrad, Bakü, Vilnius, Hartford, Cakarta, Lizbon, Seul",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Malta'nın Egemen Askeri Düzeni",
+      "object": "Roma",
+      "object_candidates": "Kalküta, Mekke, Oxford, Halifax, Springfield, Dresden, Montgomery, Bristol, Dubai, Roma",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Cumbria",
+      "object": "Carlisle",
+      "object_candidates": "Guangzhou, Valensiya, Augsburg, Medine, Erivan, Berlin, Sofya, Montevideo, Saga, Carlisle",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "Aşağı Saksonya",
+      "object": "Hannover",
+      "object_candidates": "Hiroşima, Waterford, Preston, Trenton, Şam, Kiev, Bakü, Kingston, Ankara, Hannover",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "İngiltere Krallığı",
+      "object": "Westminster",
+      "object_candidates": "Lima, Waterford, Guangzhou, Kiel, Lille, Hamilton, Dublin, Odessa, Salem, Westminster",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "Torino ili",
+      "object": "Torino",
+      "object_candidates": "Tahran, Kopenhag, Barselona, Nice, Venedik, Auckland, Halep, Babil, Lucknow, Torino",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Kuzey Karolina",
+      "object": "Raleigh",
+      "object_candidates": "Lille, Austin, Siraküza, Saga, Christchurch, Prag, Kalküta, Boston, Guangzhou, Raleigh",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "Kuzey Toprakları",
+      "object": "Darwin",
+      "object_candidates": "Annapolis, Boston, Sofya, Springfield, Auckland, Valensiya, Ottawa, Hobart, Vilnius, Darwin",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "Hannover Krallığı",
+      "object": "Hannover",
+      "object_candidates": "Adelaide, Tahran, Jackson, Phoenix, Chennai, Babil, Madison, Tiran, Augsburg, Hannover",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "Hordaland",
+      "object": "Bergen",
+      "object_candidates": "Dubai, Seul, Konstantinopolis, Belfast, Dakka, Bağdat, Kolombo, Cezayir, Raleigh, Bergen",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "Güney Dakota",
+      "object": "Pierre",
+      "object_candidates": "Odessa, Siraküza, Bangalore, Phoenix, Venedik, Denver, Lincoln, Palma de Mallorca, Carlisle, Pierre",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "Alsas",
+      "object": "Strazburg",
+      "object_candidates": "Dubai, Perth, Salzburg, Atina, Minsk, Torino, Basel, Halifax, Winchester, Strazburg",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Ontario",
+      "object": "Toronto",
+      "object_candidates": "Dublin, Annapolis, Columbia, Hannover, Roma, Hereford, Taipei, Sofya, Lviv, Toronto",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "Massachusetts",
+      "object": "Boston",
+      "object_candidates": "Sidney, Ljubljana, Edo, Belgrad, Hamilton, Minsk, Worcester, Halep, Dresden, Boston",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "Bulgaristan Krallığı",
+      "object": "Sofya",
+      "object_candidates": "Columbia, Gap, Winchester, Vilnius, Kahire, Winnipeg, Charleston, Augsburg, Manchester, Sofya",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Napoli ili",
+      "object": "Napoli",
+      "object_candidates": "Bakü, Siena, Cork, Harrisburg, Christchurch, Sevilla, Trenton, Lublin, Darwin, Napoli",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Romanya",
+      "object": "Bükreș",
+      "object_candidates": "Worcester, Kâbil, Manchester, Mainz, Dunedin, Memphis, Viyana, Nankin, Bern, Bükreș",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "İsviçre",
+      "object": "Bern",
+      "object_candidates": "Cezayir, Miami, Boise, Indianapolis, Lizbon, Roma, Nankin, Cakarta, Gloucester, Bern",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "Avusturya",
+      "object": "Viyana",
+      "object_candidates": "Beyrut, Riga, Indianapolis, Nagoya, Edo, Caracas, Madrid, Bangalore, Bari, Viyana",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Slovakya",
+      "object": "Bratislava",
+      "object_candidates": "Budapeşte, Roma, Lima, Lizbon, Dakka, Cenova, Kiel, Basel, Kingston, Bratislava",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "İngiltere",
+      "object": "Londra",
+      "object_candidates": "Torino, Pierre, Havana, Bratislava, Concord, Napoli, Venedik, Galway, Oslo, Londra",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Mısır",
+      "object": "Kahire",
+      "object_candidates": "Ottawa, Victoria, Konstantinopolis, Guadalajara, Londra, Bakü, Barselona, Sevilla, Providence, Kahire",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Uusimaa",
+      "object": "Helsinki",
+      "object_candidates": "Montevideo, Tiran, Odessa, Atina, Lozan, Cheyenne, Kopenhag, Harrisburg, Winnipeg, Helsinki",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Lancashire",
+      "object": "Preston",
+      "object_candidates": "Aden, Memphis, Georgetown, Roma, Exeter, Providence, Riverside, Adelaide, Bangalore, Preston",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "Hiroşima",
+      "object": "Hiroşima",
+      "object_candidates": "Christchurch, Bangkok, Leicester, Boston, Dresden, Berlin, Bonn, Bükreș, Basel, Hiroşima",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "Kutsal Roma Cermen İmparatorluğu",
+      "object": "Viyana",
+      "object_candidates": "Brüksel, Belgrad, Dubai, Springfield, Budapeşte, Auckland, Paris, Victoria, Lucknow, Viyana",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Büyük Britanya ve İrlanda Birleşik Krallığı",
+      "object": "Londra",
+      "object_candidates": "Karaçi, Milano, Tahran, Stockholm, Winchester, Toronto, Adelaide, Pierre, Bristol, Londra",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "Nazi Almanyası",
+      "object": "Berlin",
+      "object_candidates": "Saraybosna, Amsterdam, Halifax, Mekke, Ottawa, Bismarck, Budapeşte, Seul, Londra, Berlin",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Siraküza ili",
+      "object": "Siraküza",
+      "object_candidates": "Charleston, Regina, Kingston, Waterford, Dresden, Ottawa, Westminster, Concord, Tokyo, Siraküza",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "Rusya Sovyet Federatif Sosyalist Cumhuriyeti",
+      "object": "Moskova",
+      "object_candidates": "Valensiya, Nice, Bonn, Manchester, Halep, Edinburgh, Oslo, Columbus, Christchurch, Moskova",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Wyoming",
+      "object": "Cheyenne",
+      "object_candidates": "Şam, Kingston, Helsinki, Brisbane, Toulouse, Richmond, Lozan, Waterford, Salem, Cheyenne",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "Ukrayna Sovyet Sosyalist Cumhuriyeti",
+      "object": "Kiev",
+      "object_candidates": "Pekin, Prag, Gent, Odessa, Lille, Columbus, Mekke, Halep, Beyrut, Kiev",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Doğu Roma İmparatorluğu",
+      "object": "Konstantinopolis",
+      "object_candidates": "Cambridge, Münih, Brest, Kirman, Kolombo, Nankin, Halep, Lima, Christchurch, Konstantinopolis",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Emevîler",
+      "object": "Şam",
+      "object_candidates": "Bari, Raleigh, Auckland, Bismarck, Ljubljana, Worcester, Seul, Concord, Mekke, Şam",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Tayland",
+      "object": "Bangkok",
+      "object_candidates": "Lille, Lozan, Pekin, Helsinki, Perth, Sidney, Lucknow, Napoli, Yokohama, Bangkok",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "Andhra Pradeş",
+      "object": "Haydarabad",
+      "object_candidates": "Siraküza, Preston, Boston, Halep, Montevideo, Erivan, Victoria, Brest, Hamilton, Haydarabad",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Norveç",
+      "object": "Oslo",
+      "object_candidates": "Edo, Raleigh, Varşova, Lille, Cambridge, Nankin, Edmonton, Manchester, Toronto, Oslo",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Renanya-Palatina",
+      "object": "Mainz",
+      "object_candidates": "Lansing, Lviv, Şam, Kâbil, Medine, Atina, Perth, Mekke, Palma de Mallorca, Mainz",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "Türkiye",
+      "object": "Ankara",
+      "object_candidates": "Charleston, Exeter, Toronto, Cheyenne, Edmonton, Memphis, Hamilton, Oslo, Cambridge, Ankara",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Rif Şam",
+      "object": "Şam",
+      "object_candidates": "Gap, Concord, Bağdat, Kirman, Bern, Cakarta, Guangzhou, Limerick, Lizbon, Şam",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Svabya",
+      "object": "Augsburg",
+      "object_candidates": "Lozan, Dublin, Manila, Şam, Pekin, Tahran, Edinburgh, Valensiya, Kazan, Augsburg",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "İşgal Japonyası",
+      "object": "Tokyo",
+      "object_candidates": "Strazburg, Darwin, Hartford, Moskova, Regina, Taipei, Gent, Ottawa, Tiran, Tokyo",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Rhode Island",
+      "object": "Providence",
+      "object_candidates": "Gloucester, Bergen, Georgetown, Chennai, Lansing, Kiel, Lima, Edo, Nice, Providence",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "Idaho",
+      "object": "Boise",
+      "object_candidates": "Memphis, Bakü, Exeter, Madison, Siraküza, Riga, Medine, Londra, Belgrad, Boise",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "Hırvatistan",
+      "object": "Zagreb",
+      "object_candidates": "Tiran, Kazan, Sevilla, Halifax, Toulouse, Edo, Trablus, Helsinki, Galway, Zagreb",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Cork Kontluğu",
+      "object": "Cork",
+      "object_candidates": "Bağdat, Raleigh, Sofya, Tallinn, Victoria, Riga, Strazburg, Westminster, Siraküza, Cork",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "Venezia ili",
+      "object": "Venedik",
+      "object_candidates": "Strazburg, Cambridge, Lucknow, Hiroşima, Şam, Toledo, Londra, Barselona, Yokohama, Venedik",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Wessex Krallığı",
+      "object": "Winchester",
+      "object_candidates": "Mainz, Boston, Trablus, Lansing, Salzburg, Roma, Venedik, Kahire, Beyrut, Winchester",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Roma İmparatorluğu",
+      "object": "Roma",
+      "object_candidates": "Edo, Kalküta, Memphis, Montgomery, Kingston, Milano, Kopenhag, Victoria, Providence, Roma",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Cezayir",
+      "object": "Cezayir",
+      "object_candidates": "Bağdat, Lucknow, Halep, Edinburgh, Dublin, Harrisburg, Venedik, Kâbil, Nankin, Cezayir",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Britanya Kolumbiyası",
+      "object": "Victoria",
+      "object_candidates": "Paris, Helsinki, Canberra, Cheyenne, Riga, Hamilton, Winchester, Brest, Odessa, Victoria",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "Batı Bengal",
+      "object": "Kalküta",
+      "object_candidates": "Strazburg, Prag, Sevilla, Odessa, Hiroşima, Lublin, Regina, Selanik, Palermo, Kalküta",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "Bohemya Krallığı",
+      "object": "Prag",
+      "object_candidates": "Tokyo, Bergen, Basel, Guangzhou, Dakka, Trablus, Bratislava, Augsburg, Kalküta, Prag",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Moskova Oblastı",
+      "object": "Moskova",
+      "object_candidates": "Guangzhou, Canberra, Brest, Bangalore, Ljubljana, Nice, Phoenix, Saraybosna, Hiroşima, Moskova",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Lübnan",
+      "object": "Beyrut",
+      "object_candidates": "Exeter, Chennai, Selanik, Brüksel, Amsterdam, Raleigh, Phoenix, Bükreș, Montevideo, Beyrut",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "Letonya",
+      "object": "Riga",
+      "object_candidates": "Memphis, Lviv, Boston, Nairobi, Adelaide, Amsterdam, Brisbane, Paris, Regina, Riga",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "Japon İmparatorluğu",
+      "object": "Tokyo",
+      "object_candidates": "Sacramento, Cambridge, Tiran, Haydarabad, Perth, Roma, Aden, Nice, Karaçi, Tokyo",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Galler",
+      "object": "Cardiff",
+      "object_candidates": "Harrisburg, Santiago, Halifax, Belfast, Boise, Siena, Mekke, Madrid, Lansing, Cardiff",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "Delhi Sultanlığı",
+      "object": "Delhi",
+      "object_candidates": "Galway, Kiev, Kudüs, Halifax, Bologna, Lincoln, Westminster, Tokyo, Preston, Delhi",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "Afganistan Demokratik Cumhuriyeti",
+      "object": "Kâbil",
+      "object_candidates": "Boston, Tiran, Sevilla, Adelaide, Darwin, Cork, Perth, Limerick, Winnipeg, Kâbil",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Polonya",
+      "object": "Varşova",
+      "object_candidates": "Bordeaux, Helsinki, Bükreș, Westminster, Brisbane, Tallinn, Riga, Auckland, Medine, Varşova",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Kaçar Hanedanı",
+      "object": "Tahran",
+      "object_candidates": "Bismarck, Cambridge, Carlisle, Saga, Ankara, Şam, Atina, İskenderiye, Basel, Tahran",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Abbasiler",
+      "object": "Bağdat",
+      "object_candidates": "Seul, Mekke, Worcester, Floransa, Madrid, Hobart, Bordeaux, Salzburg, Dresden, Bağdat",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Sind Eyaleti",
+      "object": "Karaçi",
+      "object_candidates": "Chennai, Trenton, Harrisburg, Hereford, Berlin, Santiago, Siena, Kopenhag, Providence, Karaçi",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "Akershus",
+      "object": "Oslo",
+      "object_candidates": "Pierre, Bismarck, Dunedin, Limerick, Siraküza, Pekin, Halep, Tallinn, Brisbane, Oslo",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Güney Yemen",
+      "object": "Aden",
+      "object_candidates": "Bağdat, Trablus, Bologna, Georgetown, Halep, Nankin, Kirman, Lansing, Selanik, Aden",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "Nouvelle-Aquitaine",
+      "object": "Bordeaux",
+      "object_candidates": "Brisbane, Berlin, Auckland, Saraybosna, Kahire, Belfast, Aden, Trablus, Montevideo, Bordeaux",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Kuzey-Batı İngiltere",
+      "object": "Manchester",
+      "object_candidates": "Yokohama, Guadalajara, Seul, Tours, Taipei, Memphis, Waterford, Santiago, Galway, Manchester",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Çin Halk Cumhuriyeti",
+      "object": "Pekin",
+      "object_candidates": "Basel, Prag, Boston, Canberra, Bakü, Kudüs, Darwin, Carlisle, Lille, Pekin",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Eski Krallık",
+      "object": "Memphis",
+      "object_candidates": "Honolulu, Nairobi, Providence, Guadalajara, Salzburg, Gap, Manila, Charleston, Kirman, Memphis",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "Bermuda",
+      "object": "Hamilton",
+      "object_candidates": "Salzburg, Atina, Harrisburg, Kazan, Bismarck, Bangkok, Jackson, Napoli, Nice, Hamilton",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "Haute-Garonne",
+      "object": "Toulouse",
+      "object_candidates": "Tiran, Kyoto, Waterford, Galway, Montevideo, Austin, Atina, Dunedin, Mainz, Toulouse",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "Birleşik Arap Cumhuriyeti",
+      "object": "Kahire",
+      "object_candidates": "Lviv, Ankara, Manchester, Milano, Venedik, Gap, Belgrad, Nankin, Dunedin, Kahire",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Herefordshire",
+      "object": "Hereford",
+      "object_candidates": "Lozan, Guadalajara, Nice, Manchester, Prag, Tiran, Tallinn, Hobart, Helsinki, Hereford",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "Gironde",
+      "object": "Bordeaux",
+      "object_candidates": "Mumbai, Cezayir, Mainz, Cork, Edmonton, Bangkok, Bangalore, Montevideo, Manchester, Bordeaux",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Milano ili",
+      "object": "Milano",
+      "object_candidates": "Hobart, Regina, Sidney, Bismarck, Viyana, Riverside, Dunedin, Erivan, Bern, Milano",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Finlandiya",
+      "object": "Helsinki",
+      "object_candidates": "Edmonton, Paris, Darwin, Halifax, Siena, Guadalajara, Hartford, Auckland, Konstantinopolis, Helsinki",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Suriye",
+      "object": "Şam",
+      "object_candidates": "Venedik, Hamilton, Lviv, Hiroşima, Edo, Madison, Seattle, Christchurch, Darwin, Şam",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Valensiya",
+      "object": "Valensiya",
+      "object_candidates": "Hannover, Bologna, Erivan, Mekke, Toronto, Bağdat, Preston, Siraküza, Gloucester, Valensiya",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "Beyaz Rusya Sovyet Sosyalist Cumhuriyeti",
+      "object": "Minsk",
+      "object_candidates": "Amsterdam, Helsinki, Memphis, Trablus, İskenderiye, Dublin, Milano, Darwin, Bari, Minsk",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Ceneviz Cumhuriyeti",
+      "object": "Cenova",
+      "object_candidates": "Paris, Haydarabad, Oslo, Bristol, Providence, Bratislava, Bağdat, Viyana, Kopenhag, Cenova",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Belçika",
+      "object": "Brüksel",
+      "object_candidates": "Floransa, Selanik, Amsterdam, Saga, Tiran, Dubai, Toulouse, Cork, Strazburg, Brüksel",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Tiran ilçesi",
+      "object": "Tiran",
+      "object_candidates": "Harrisburg, Darwin, Pierre, Dunedin, Dakka, Toronto, Riverside, Dresden, İskenderiye, Tiran",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Ligurya",
+      "object": "Cenova",
+      "object_candidates": "Miami, Adelaide, Helsinki, Napoli, Lozan, Prag, Manchester, Bismarck, Darwin, Cenova",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Akitanya",
+      "object": "Bordeaux",
+      "object_candidates": "Kalküta, Havana, Saraybosna, İskenderiye, Darwin, Napoli, Christchurch, Trenton, Pekin, Bordeaux",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Avusturya-Macaristan İmparatorluğu",
+      "object": "Viyana",
+      "object_candidates": "Charleston, Sofya, Adelaide, Hiroşima, Prag, Nairobi, Springfield, Cakarta, Madrid, Viyana",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Roma ili",
+      "object": "Roma",
+      "object_candidates": "Sacramento, Guadalajara, Cambridge, Augsburg, Bristol, Karaçi, Leicester, Nagoya, Mekke, Roma",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Stokholm ili",
+      "object": "Stockholm",
+      "object_candidates": "Lozan, Napoli, Waterford, Madison, Caracas, Pekin, Minsk, Riga, Milano, Stockholm",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Mısır Krallığı",
+      "object": "Kahire",
+      "object_candidates": "Halep, Christchurch, Lviv, Raleigh, Yokohama, Dresden, Winnipeg, Selanik, Hartford, Kahire",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Tennessee",
+      "object": "Nashville",
+      "object_candidates": "Belgrad, Nagoya, Harrisburg, Aden, Kâbil, Gloucester, Floransa, Belfast, Halifax, Nashville",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "Saga",
+      "object": "Saga",
+      "object_candidates": "Riverside, Edinburgh, Oslo, Sacramento, Tours, Toledo, Karaçi, Trablus, Annapolis, Saga",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "İsveç",
+      "object": "Stockholm",
+      "object_candidates": "Brest, Bordeaux, Prag, Roma, Mainz, Sevilla, Aden, Milano, Beyrut, Stockholm",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Fransız Cezayiri",
+      "object": "Cezayir",
+      "object_candidates": "Babil, Adelaide, Cakarta, Minsk, Kingston, Gent, Beyrut, Bükreș, Halifax, Cezayir",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Ohio",
+      "object": "Columbus",
+      "object_candidates": "Edo, Cezayir, Vilnius, Saga, Bari, Kiel, Gap, Kolombo, Hobart, Columbus",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "Güney Karolina",
+      "object": "Columbia",
+      "object_candidates": "Memphis, Caracas, Austin, Raleigh, Londra, Phoenix, Kazan, Toledo, Cardiff, Columbia",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "Jamaika",
+      "object": "Kingston",
+      "object_candidates": "Ankara, Dubai, Bükreș, Yokohama, Odessa, Bratislava, Riga, Bari, Oxford, Kingston",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "Kiev Knezliği",
+      "object": "Kiev",
+      "object_candidates": "Pierre, Lucknow, Waterford, Beyrut, Nashville, Kingston, Denver, Aden, Boise, Kiev",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Hautes-Alpes",
+      "object": "Gap",
+      "object_candidates": "Montgomery, Tours, Pekin, Bari, Floransa, Bologna, Auckland, Manchester, Halep, Gap",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "İngiltere Krallığı",
+      "object": "Londra",
+      "object_candidates": "Waterford, Bangalore, Sofya, Jackson, Varşova, Honolulu, Cork, Perth, Kyoto, Londra",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Katalonya",
+      "object": "Barselona",
+      "object_candidates": "Bristol, Venedik, Palma de Mallorca, Winnipeg, Halep, Harrisburg, Helsinki, Hartford, Seattle, Barselona",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "Paris Komünü",
+      "object": "Paris",
+      "object_candidates": "Guangzhou, Toronto, Boston, Atina, Adelaide, Nairobi, Christchurch, Bratislava, Lille, Paris",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Piyemonte",
+      "object": "Torino",
+      "object_candidates": "Selanik, Montgomery, Cakarta, Siraküza, Guangzhou, Denver, Kiel, Manila, Lozan, Torino",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Çek Cumhuriyeti",
+      "object": "Prag",
+      "object_candidates": "Bern, Babil, Jackson, Bordeaux, Münih, Nice, Palermo, Toledo, Kopenhag, Prag",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Yeni İskoçya",
+      "object": "Halifax",
+      "object_candidates": "Hannover, Lincoln, Belfast, Lansing, Lizbon, Auckland, Canberra, Atina, Kalküta, Halifax",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "Oxfordshire",
+      "object": "Oxford",
+      "object_candidates": "İstanbul, Dakka, Worcester, Bonn, Kingston, Christchurch, Canberra, Kiel, Lizbon, Oxford",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "Avrupa Birliği",
+      "object": "Brüksel",
+      "object_candidates": "Hereford, Toronto, Havana, Sidney, Lucknow, Roma, Christchurch, Nice, Dublin, Brüksel",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Yugoslavya Sosyalist Federal Cumhuriyeti",
+      "object": "Belgrad",
+      "object_candidates": "Tahran, Brüksel, Edmonton, Helsinki, Şam, Bismarck, Erivan, Springfield, Pekin, Belgrad",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Britanya Hindistanı",
+      "object": "Kalküta",
+      "object_candidates": "Zagreb, Santiago, Roma, Belfast, Limerick, Paris, Hiroşima, Tiran, Karaçi, Kalküta",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "Qing Hanedanı",
+      "object": "Pekin",
+      "object_candidates": "Bükreș, Kalküta, Kolombo, Seattle, Torino, Denver, Limerick, Salzburg, Augsburg, Pekin",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Litvanya Büyük Dükalığı",
+      "object": "Vilnius",
+      "object_candidates": "Palma de Mallorca, Winnipeg, Edmonton, Prag, Bristol, Yokohama, Bologna, Nashville, Tahran, Vilnius",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Sardinya Krallığı",
+      "object": "Torino",
+      "object_candidates": "Selanik, Sofya, Gap, Honolulu, Exeter, Nankin, Dunedin, Hereford, Strazburg, Torino",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Maryland",
+      "object": "Annapolis",
+      "object_candidates": "Selanik, Winnipeg, Stockholm, Manila, Seul, Bern, Torino, Guadalajara, Erivan, Annapolis",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "Weimar Cumhuriyeti",
+      "object": "Berlin",
+      "object_candidates": "Odessa, Münih, Seul, Bari, Kopenhag, Salzburg, Halep, Tours, Amsterdam, Berlin",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Amerika Konfedere Devletleri",
+      "object": "Richmond",
+      "object_candidates": "Seattle, Milano, Kiev, Roma, Ljubljana, Boston, Hobart, Moskova, Budapeşte, Richmond",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "Neustrasya",
+      "object": "Paris",
+      "object_candidates": "Leicester, Cambridge, Siena, Salzburg, Strazburg, Gent, Dubai, Medine, Guangzhou, Paris",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Bavyera",
+      "object": "Münih",
+      "object_candidates": "Charleston, Dublin, Budapeşte, Kiev, Oxford, Montgomery, Toronto, Memphis, Bratislava, Münih",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Hawaii",
+      "object": "Honolulu",
+      "object_candidates": "Toulouse, Trablus, Victoria, Kolombo, Trenton, Hamilton, Seul, Denver, Bonn, Honolulu",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Müttefik Tetkik Yönetimi",
+      "object": "Berlin",
+      "object_candidates": "Londra, Cheyenne, Westminster, Kingston, Belgrad, Bern, Nankin, Edo, Mainz, Berlin",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Queensland",
+      "object": "Brisbane",
+      "object_candidates": "Beyrut, Lincoln, Seattle, Bergen, Zagreb, Valensiya, Winnipeg, Prag, Bristol, Brisbane",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "Bohemya",
+      "object": "Prag",
+      "object_candidates": "Sidney, Tokyo, Winchester, Santiago, Bakü, Tours, Seul, Pekin, Palma de Mallorca, Prag",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Afganistan İslam Emirliği",
+      "object": "Kâbil",
+      "object_candidates": "Venedik, Dunedin, Cork, Springfield, Winchester, Westminster, Gloucester, Winnipeg, Dublin, Kâbil",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Humus",
+      "object": "Şam",
+      "object_candidates": "Roma, Aden, Brüksel, Harrisburg, Victoria, Riverside, Preston, Erivan, Tallinn, Şam",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Batı Virginia",
+      "object": "Charleston",
+      "object_candidates": "Indianapolis, Brüksel, Bologna, Westminster, Tokyo, Memphis, Toledo, İskenderiye, Vilnius, Charleston",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "Kenya",
+      "object": "Nairobi",
+      "object_candidates": "Bonn, Pekin, Tours, Caracas, Annapolis, Tahran, Cenova, Salzburg, Austin, Nairobi",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "Batı Almanya",
+      "object": "Bonn",
+      "object_candidates": "Kazan, Bükreș, Seattle, Sevilla, Nairobi, Bristol, Harrisburg, Kalküta, Palermo, Bonn",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "Slovenya",
+      "object": "Ljubljana",
+      "object_candidates": "Caracas, Kâbil, Hartford, Columbia, Taipei, Darwin, Bordeaux, Columbus, Christchurch, Ljubljana",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "Otago Bölgesi",
+      "object": "Dunedin",
+      "object_candidates": "Brisbane, Basel, Palma de Mallorca, Montevideo, Hartford, Denver, Madrid, Strazburg, Cardiff, Dunedin",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "Jiangsu",
+      "object": "Nankin",
+      "object_candidates": "Bükreș, Gloucester, Cork, Jackson, Havana, Auckland, Sofya, Kâbil, Dunedin, Nankin",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "New Jersey",
+      "object": "Trenton",
+      "object_candidates": "Concord, Medine, Seul, Tallinn, Lozan, Lublin, Bükreș, Napoli, Moskova, Trenton",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "Oregon",
+      "object": "Salem",
+      "object_candidates": "Bangkok, Salzburg, Minsk, Strazburg, Cakarta, Havana, Budapeşte, Bergen, Seul, Salem",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "İtalya Krallığı",
+      "object": "Roma",
+      "object_candidates": "Lansing, Preston, Dakka, Yokohama, Annapolis, Gap, Columbia, Denver, Boston, Roma",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Schleswig-Holstein",
+      "object": "Kiel",
+      "object_candidates": "Kazan, Leicester, Kyoto, Karaçi, Basel, Augsburg, Medine, Annapolis, Ankara, Kiel",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "Litvanya",
+      "object": "Vilnius",
+      "object_candidates": "Christchurch, Jackson, Helsinki, İskenderiye, Seul, Hereford, Cambridge, Miami, Providence, Vilnius",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Mississippi",
+      "object": "Jackson",
+      "object_candidates": "Springfield, Cezayir, Bükreș, Kalküta, Lansing, Toronto, Caracas, Kiev, Richmond, Jackson",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "Avusturya-Macaristan İmparatorluğu",
+      "object": "Budapeşte",
+      "object_candidates": "Bergen, Stockholm, Bismarck, Nankin, Yokohama, Manila, Kingston, Guangzhou, İskenderiye, Budapeşte",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Minsk Voblastı",
+      "object": "Minsk",
+      "object_candidates": "Beyrut, Cardiff, Columbus, Vilnius, Hereford, Nairobi, Strazburg, Galway, Manchester, Minsk",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Guangdong",
+      "object": "Guangzhou",
+      "object_candidates": "Pekin, Adelaide, Oslo, İskenderiye, Gap, Manila, Pierre, Tiran, Bristol, Guangzhou",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "Roma Cumhuriyeti",
+      "object": "Roma",
+      "object_candidates": "Tokyo, Havana, Hiroşima, Atina, Basel, Lille, Kingston, Haydarabad, Tallinn, Roma",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Prusya Krallığı",
+      "object": "Berlin",
+      "object_candidates": "Karaçi, Bakü, Providence, Halep, Floransa, Sevilla, Paris, Salzburg, Helsinki, Berlin",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Afganistan",
+      "object": "Kâbil",
+      "object_candidates": "Springfield, Georgetown, Perth, Kopenhag, Canberra, Waterford, İstanbul, Raleigh, Zagreb, Kâbil",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Şili",
+      "object": "Santiago",
+      "object_candidates": "Guangzhou, İskenderiye, Kalküta, Moskova, Tours, Darwin, Denver, Kâbil, Nashville, Santiago",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "Yugoslavya",
+      "object": "Belgrad",
+      "object_candidates": "Londra, Cezayir, Leicester, Bratislava, Taipei, Bükreș, Cambridge, Regina, Bordeaux, Belgrad",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Mayorka",
+      "object": "Palma de Mallorca",
+      "object_candidates": "Nankin, Bakü, Seul, Lviv, Lozan, Regina, Edinburgh, Atina, Winchester, Palma de Mallorca",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Norfolk",
+      "object": "Norwich",
+      "object_candidates": "Erivan, Madrid, Canberra, Bangalore, Carlisle, Riverside, Winnipeg, Nairobi, Basel, Norwich",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "Mazovya Voyvodalığı",
+      "object": "Varşova",
+      "object_candidates": "Odessa, Hannover, Concord, Moskova, Canberra, Bergen, Bismarck, Kazan, Victoria, Varşova",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Flandre",
+      "object": "Brüksel",
+      "object_candidates": "Tiran, Barselona, Varşova, Darwin, Moskova, Atina, Delhi, Floransa, Mumbai, Brüksel",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

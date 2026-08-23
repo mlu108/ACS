@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "¿En qué país tiene <subject> como término legal? La respuesta es: <mask>.",
+    "¿En qué jurisdicción es <subject> un término legal? La respuesta es: <mask>.",
+    "¿Dónde se aplica el término legal <subject>? La respuesta es: <mask>.",
+    "¿Qué entidad legal usa <subject>? La respuesta es: <mask>.",
+    "¿En qué región es <subject> un término legal reconocido? La respuesta es: <mask>.",
+    " La jurisdicción en la que se aplica <subject> es <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Presidente de la República Francesa",
+      "object": "Francia",
+      "object_candidates": "Somalia, Suiza, Rumania, Singapur, Noruega, Cuba, Lituania, República de China, Mónaco, Francia",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "primer ministro de Canadá",
+      "object": "Canadá",
+      "object_candidates": "Ucrania, México, Somalia, Mónaco, Turquía, Irlanda, Japón, Irak, Países Bajos, Canadá",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Partido Laborista Australiano",
+      "object": "Australia",
+      "object_candidates": "Portugal, Canadá, Austria, Libia, Noruega, Mónaco, Italia, Finlandia, Cuba, Australia",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "presidente de México",
+      "object": "México",
+      "object_candidates": "Jamaica, Cuba, Malasia, Suiza, Bulgaria, Italia, Dinamarca, Canadá, Francia, México",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "canciller de Alemania",
+      "object": "Alemania",
+      "object_candidates": "Bulgaria, Noruega, Libia, Croacia, Portugal, Irán, Dinamarca, Bielorrusia, Filipinas, Alemania",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Ley Fundamental para la República Federal de Alemania",
+      "object": "Alemania",
+      "object_candidates": "Suiza, Vietnam, Albania, Portugal, Rumania, Australia, Austria, Lituania, Irak, Alemania",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Parlamento de Canadá",
+      "object": "Canadá",
+      "object_candidates": "Bulgaria, Noruega, Italia, Japón, Cuba, Portugal, Haití, Vietnam, Bielorrusia, Canadá",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Lok Sabha",
+      "object": "India",
+      "object_candidates": "Francia, Austria, Japón, Singapur, Pakistán, Ucrania, Jamaica, Rusia, Argentina, India",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "Knéset",
+      "object": "Israel",
+      "object_candidates": "Vietnam, Albania, Libia, Filipinas, Alemania, Croacia, Suecia, Macao, Irak, Israel",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "primer ministro de Japón",
+      "object": "Japón",
+      "object_candidates": "Dinamarca, Turquía, México, Suecia, Croacia, Italia, Países Bajos, República de China, Macao, Japón",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "presidente de Irlanda",
+      "object": "Irlanda",
+      "object_candidates": "Canadá, Bielorrusia, Países Bajos, Lituania, México, Suecia, India, Pakistán, Libia, Irlanda",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "dólar australiano",
+      "object": "Australia",
+      "object_candidates": "Haití, República de China, Países Bajos, Macao, Rumania, Lituania, Malasia, Dinamarca, Jamaica, Australia",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Presidente de Pakistán",
+      "object": "Pakistán",
+      "object_candidates": "Vietnam, Suecia, Bolivia, Singapur, Turquía, Dinamarca, Portugal, Canadá, Irán, Pakistán",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "presidente de Rusia",
+      "object": "Rusia",
+      "object_candidates": "Vietnam, India, Cuba, Francia, Rumania, Finlandia, Canadá, Singapur, Pakistán, Rusia",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Canciller de Austria",
+      "object": "Austria",
+      "object_candidates": "España, Filipinas, Portugal, Bolivia, India, Bielorrusia, Rumania, Canadá, Japón, Austria",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Parlamento de Suecia",
+      "object": "Suecia",
+      "object_candidates": "Albania, Singapur, Ucrania, Vietnam, Países Bajos, Malasia, Francia, Mónaco, Finlandia, Suecia",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "bandera de España",
+      "object": "España",
+      "object_candidates": "Bolivia, México, Noruega, Irak, Finlandia, Argentina, Canadá, Países Bajos, Vietnam, España",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "bandera de Francia",
+      "object": "Francia",
+      "object_candidates": "Pakistán, Haití, Austria, Singapur, Rusia, Lituania, Bielorrusia, Vietnam, Alemania, Francia",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Presidente de Ucrania",
+      "object": "Ucrania",
+      "object_candidates": "Países Bajos, México, Israel, Bielorrusia, Turquía, España, Lituania, Australia, Noruega, Ucrania",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "primer ministro de Francia",
+      "object": "Francia",
+      "object_candidates": "Irak, Pakistán, Portugal, Turquía, Filipinas, Croacia, Países Bajos, Singapur, India, Francia",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "bandera de Dinamarca",
+      "object": "Dinamarca",
+      "object_candidates": "España, Japón, Irak, Noruega, Portugal, Israel, Singapur, Turquía, Canadá, Dinamarca",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Bundestag",
+      "object": "Alemania",
+      "object_candidates": "Somalia, Irlanda, México, Suecia, Japón, Libia, Canadá, India, Israel, Alemania",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Bandera de Irlanda",
+      "object": "Irlanda",
+      "object_candidates": "Lituania, Filipinas, Portugal, Cuba, Francia, Bolivia, Mónaco, Irán, Pakistán, Irlanda",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "presidente de Austria",
+      "object": "Austria",
+      "object_candidates": "Rusia, Australia, Vietnam, Lituania, Israel, Pakistán, Jamaica, Turquía, Finlandia, Austria",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Primer ministro de Pakistán",
+      "object": "Pakistán",
+      "object_candidates": "Malasia, Argentina, Australia, Noruega, Vietnam, Jamaica, Singapur, Israel, Irán, Pakistán",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "presidente de Alemania",
+      "object": "Alemania",
+      "object_candidates": "Bolivia, Lituania, Macao, Cuba, Noruega, Mónaco, Bielorrusia, Bulgaria, Rusia, Alemania",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "primer ministro de Suecia",
+      "object": "Suecia",
+      "object_candidates": "Singapur, Irlanda, Canadá, Alemania, Países Bajos, Suiza, Finlandia, España, Dinamarca, Suecia",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Asamblea Nacional de Francia",
+      "object": "Francia",
+      "object_candidates": "Turquía, Suiza, Cuba, México, Dinamarca, Malasia, Noruega, República de China, Austria, Francia",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "Bandera de Suiza",
+      "object": "Suiza",
+      "object_candidates": "Filipinas, Bolivia, Rusia, Jamaica, Austria, Portugal, Irlanda, Irán, Bielorrusia, Suiza",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Presidente del Gobierno de Rusia",
+      "object": "Rusia",
+      "object_candidates": "Haití, Ucrania, Malasia, Suiza, España, Portugal, Italia, Jamaica, Cuba, Rusia",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Bandera de Singapur",
+      "object": "Singapur",
+      "object_candidates": "Portugal, Bolivia, Alemania, Macao, Somalia, Vietnam, Austria, Dinamarca, Bulgaria, Singapur",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "Senado de Francia",
+      "object": "Francia",
+      "object_candidates": "Finlandia, Dinamarca, Portugal, Somalia, Pakistán, Malasia, Cuba, Irán, República de China, Francia",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "Primer ministro de Ucrania",
+      "object": "Ucrania",
+      "object_candidates": "Israel, Rusia, Cuba, Finlandia, Turquía, Francia, Somalia, Mónaco, Vietnam, Ucrania",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "bandera de Rusia",
+      "object": "Rusia",
+      "object_candidates": "Francia, Macao, Bielorrusia, Bulgaria, India, Australia, Irlanda, Suiza, Italia, Rusia",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Bandera de Canadá",
+      "object": "Canadá",
+      "object_candidates": "Bolivia, Macao, Finlandia, Libia, Haití, India, Bielorrusia, Australia, Irán, Canadá",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Presidente de Rumania",
+      "object": "Rumania",
+      "object_candidates": "Irán, Francia, México, Italia, República de China, Malasia, Cuba, Haití, Irlanda, Rumania",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Bandera de los Países Bajos",
+      "object": "Países Bajos",
+      "object_candidates": "Suecia, Somalia, Singapur, Austria, Bolivia, Portugal, Bielorrusia, Irak, Australia, Países Bajos",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Primer ministro de Malasia",
+      "object": "Malasia",
+      "object_candidates": "España, Vietnam, Irán, Israel, Lituania, Finlandia, Bulgaria, Portugal, Dinamarca, Malasia",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Bandera de Jamaica",
+      "object": "Jamaica",
+      "object_candidates": "Croacia, Malasia, Alemania, Italia, Suiza, Australia, Bulgaria, España, Mónaco, Jamaica",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "bandera de la Argentina",
+      "object": "Argentina",
+      "object_candidates": "Jamaica, Noruega, Países Bajos, Francia, Lituania, Israel, Australia, India, Bulgaria, Argentina",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Bandera de Noruega",
+      "object": "Noruega",
+      "object_candidates": "Lituania, Canadá, Mónaco, Irán, Alemania, Australia, Suecia, Austria, República de China, Noruega",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Congreso de los Diputados",
+      "object": "España",
+      "object_candidates": "Israel, Irak, Rusia, Lituania, Filipinas, Dinamarca, Pakistán, Bolivia, Ucrania, España",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Emperador de Japón",
+      "object": "Japón",
+      "object_candidates": "Suecia, Pakistán, Croacia, Lituania, Turquía, Filipinas, Irlanda, Rumania, Mónaco, Japón",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Bandera de Lituania",
+      "object": "Lituania",
+      "object_candidates": "Haití, Suiza, Rusia, Israel, Malasia, Bolivia, Países Bajos, España, Japón, Lituania",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Bandera de Bulgaría",
+      "object": "Bulgaria",
+      "object_candidates": "Mónaco, Bielorrusia, México, Albania, Suecia, Ucrania, Francia, Turquía, Países Bajos, Bulgaria",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Presidente de Irak",
+      "object": "Irak",
+      "object_candidates": "Irán, Turquía, Haití, Singapur, Croacia, Malasia, Finlandia, Filipinas, Vietnam, Irak",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Bandera de Turquía",
+      "object": "Turquía",
+      "object_candidates": "Canadá, Singapur, Macao, Japón, Irak, Malasia, Argentina, Suecia, Bolivia, Turquía",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Bandera de Malasia",
+      "object": "Malasia",
+      "object_candidates": "Macao, Bolivia, Suiza, Bielorrusia, Rumania, Rusia, Haití, Jamaica, Noruega, Malasia",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "bandera de Bielorrusia",
+      "object": "Bielorrusia",
+      "object_candidates": "Dinamarca, Alemania, Rusia, México, Suiza, India, Suecia, Bulgaria, Macao, Bielorrusia",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Bandera de Cuba",
+      "object": "Cuba",
+      "object_candidates": "Rumania, Irlanda, México, República de China, Austria, Malasia, Pakistán, Francia, Macao, Cuba",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Bandera de Vietnam",
+      "object": "Vietnam",
+      "object_candidates": "Finlandia, Pakistán, India, Singapur, Australia, Rumania, Bielorrusia, República de China, Mónaco, Vietnam",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Bandera de Bolivia",
+      "object": "Bolivia",
+      "object_candidates": "Suiza, India, Israel, Australia, República de China, Rumania, Rusia, Pakistán, Finlandia, Bolivia",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "bandera de la India",
+      "object": "India",
+      "object_candidates": "Mónaco, República de China, Países Bajos, Suecia, Libia, Croacia, Macao, Somalia, Lituania, India",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "pataca macaense",
+      "object": "Macao",
+      "object_candidates": "Haití, México, Australia, Países Bajos, Bulgaria, Noruega, Singapur, Albania, Austria, Macao",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "Bandera de Mónaco",
+      "object": "Mónaco",
+      "object_candidates": "Turquía, República de China, Irán, Finlandia, India, Dinamarca, Bielorrusia, Irak, Libia, Mónaco",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "Bandera de Somalia",
+      "object": "Somalia",
+      "object_candidates": "Croacia, España, Turquía, Malasia, Bulgaria, Países Bajos, Francia, Noruega, Libia, Somalia",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Presidente de Israel",
+      "object": "Israel",
+      "object_candidates": "Alemania, Portugal, Lituania, Bulgaria, Jamaica, Japón, Turquía, Rumania, República de China, Israel",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "bandera de Suecia",
+      "object": "Suecia",
+      "object_candidates": "Canadá, Noruega, Bielorrusia, Lituania, Vietnam, España, Rumania, Albania, República de China, Suecia",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Bandera de la República Taiwán",
+      "object": "República de China",
+      "object_candidates": "Suiza, Japón, Bielorrusia, Lituania, Vietnam, Macao, India, Haití, Irlanda, República de China",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Bandera de Australia",
+      "object": "Australia",
+      "object_candidates": "Filipinas, Irak, Argentina, India, Portugal, Canadá, Israel, Alemania, Mónaco, Australia",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Bandera de Ucrania",
+      "object": "Ucrania",
+      "object_candidates": "Finlandia, Turquía, Dinamarca, India, Alemania, Austria, Irlanda, Israel, Portugal, Ucrania",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Presidente de Bielorrusia",
+      "object": "Bielorrusia",
+      "object_candidates": "Somalia, Israel, India, Bulgaria, Suiza, Japón, Argentina, Dinamarca, Francia, Bielorrusia",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Bandera de Haití",
+      "object": "Haití",
+      "object_candidates": "Irlanda, Mónaco, Rumania, Austria, Argentina, Vietnam, Japón, Somalia, Bolivia, Haití",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Escudo Nacional de México",
+      "object": "México",
+      "object_candidates": "Lituania, Cuba, Israel, Libia, Noruega, Austria, Irán, Macao, Suecia, México",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Bandera de Finlandia",
+      "object": "Finlandia",
+      "object_candidates": "Francia, Canadá, Bulgaria, España, Filipinas, Alemania, Bielorrusia, Rusia, Somalia, Finlandia",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Bandera de Croacia",
+      "object": "Croacia",
+      "object_candidates": "Alemania, Portugal, Jamaica, Argentina, Malasia, Noruega, Canadá, Somalia, Haití, Croacia",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "presidente de Finlandia",
+      "object": "Finlandia",
+      "object_candidates": "Bulgaria, Irak, Singapur, Italia, República de China, Croacia, Canadá, Malasia, Lituania, Finlandia",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Bandera de Albania",
+      "object": "Albania",
+      "object_candidates": "Israel, Pakistán, Bielorrusia, Somalia, Haití, Turquía, Suecia, Suiza, Dinamarca, Albania",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Bandera de Italia",
+      "object": "Italia",
+      "object_candidates": "Israel, Irán, Japón, Vietnam, Suecia, República de China, Bolivia, Filipinas, Finlandia, Italia",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "bandera de Alemania",
+      "object": "Alemania",
+      "object_candidates": "Rusia, Suecia, Filipinas, Libia, España, Irlanda, India, Suiza, Singapur, Alemania",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "bandera de Libia",
+      "object": "Libia",
+      "object_candidates": "Australia, Bulgaria, Mónaco, Pakistán, Malasia, Haití, Israel, Singapur, Rumania, Libia",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Bandera de Filipinas",
+      "object": "Filipinas",
+      "object_candidates": "Países Bajos, Libia, Israel, Bielorrusia, Argentina, Cuba, República de China, Austria, Suecia, Filipinas",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "Alemania",
+      "object_candidates": "Canadá, Pakistán, Japón, Italia, Somalia, Haití, Ucrania, Finlandia, Francia, Alemania",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Presidente de Irán",
+      "object": "Irán",
+      "object_candidates": "Rusia, Italia, Suiza, Australia, Croacia, España, Albania, Singapur, India, Irán",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Bandera de Pakistán",
+      "object": "Pakistán",
+      "object_candidates": "España, Suecia, Singapur, Bolivia, Haití, Canadá, Portugal, República de China, Lituania, Pakistán",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "bandera de Portugal",
+      "object": "Portugal",
+      "object_candidates": "Alemania, Cuba, Australia, Irlanda, Albania, Singapur, Finlandia, Israel, Rusia, Portugal",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Bandera de Grecia",
+      "object": "Grecia",
+      "object_candidates": "Irak, Austria, Croacia, Israel, Canadá, México, India, Países Bajos, Bielorrusia, Grecia",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Bandera de México",
+      "object": "México",
+      "object_candidates": "Rusia, Singapur, España, República de China, Albania, Irak, Países Bajos, Irlanda, Italia, México",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "bandera de Japón",
+      "object": "Japón",
+      "object_candidates": "India, Turquía, Francia, Finlandia, Rusia, México, Bielorrusia, Rumania, Singapur, Japón",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

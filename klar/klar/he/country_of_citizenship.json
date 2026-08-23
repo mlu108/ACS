@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "איזה מדינה היא <subject> אזרח שלה? התשובה היא: <mask>",
+    "מהי הלאום של <subject>? התשובה היא: <mask>",
+    "באיזו מדינה מחזיק <subject> באזרחות? התשובה היא: <mask>",
+    "איפה <subject> אזרח? התשובה היא: <mask>",
+    "איזו אומה מעניקה אזרחות ל<subject>? התשובה היא: <mask>",
+    " האזרחות של <subject> היא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "בוריס ספאסקי",
+      "object": "צרפת",
+      "object_candidates": "אירלנד, אוסטרליה, קטר, לבנון, כורדיסטן, שווייץ, בולגריה, הודו, ארגנטינה, צרפת",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "עדה יונת",
+      "object": "ישראל",
+      "object_candidates": "ברזיל, אוסטרליה, קטר, לבנון, שוודיה, יפן, יוון, וייטנאם, נורווגיה, ישראל",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "ליונל מסי",
+      "object": "ארגנטינה",
+      "object_candidates": "יפן, אירלנד, דנמרק, גרמניה, שוודיה, לבנון, בולגריה, יוון, ישראל, ארגנטינה",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "קרלוס השני, מלך ספרד",
+      "object": "ספרד",
+      "object_candidates": "וייטנאם, קנדה, נורווגיה, שווייץ, ישראל, דנמרק, שוודיה, אוסטריה, ארגנטינה, ספרד",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "אדריאנו צ'לנטנו",
+      "object": "איטליה",
+      "object_candidates": "וייטנאם, אוסטריה, גרמניה, כורדיסטן, דנמרק, פרנקפורט, יוון, ישראל, נורווגיה, איטליה",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "גאורגי פרבאנוב",
+      "object": "בולגריה",
+      "object_candidates": "אוסטרליה, יוון, איטליה, ברזיל, קטר, ישראל, וייטנאם, גרמניה, ממלכת אנגליה, בולגריה",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "דילמה רוסף",
+      "object": "ברזיל",
+      "object_candidates": "אירלנד, פרנקפורט, כורדיסטן, קנדה, דנמרק, שווייץ, יפן, ספרד, אוסטרליה, ברזיל",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "רונאלדו",
+      "object": "ברזיל",
+      "object_candidates": "לבנון, שווייץ, איטליה, גרמניה, קנדה, דנמרק, ממלכת אנגליה, ארגנטינה, אוסטריה, ברזיל",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "טראיאנוס",
+      "object": "ספרד",
+      "object_candidates": "קטר, שווייץ, דנמרק, נורווגיה, ברזיל, כורדיסטן, וייטנאם, ממלכת אנגליה, ארגנטינה, ספרד",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "רונאלדיניו",
+      "object": "ברזיל",
+      "object_candidates": "שווייץ, יפן, ישראל, בולגריה, וייטנאם, שוודיה, קנדה, ספרד, לבנון, ברזיל",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "סקוט מוריסון",
+      "object": "אוסטרליה",
+      "object_candidates": "גרמניה, אירלנד, פרנקפורט, פולין, קנדה, אוסטריה, יפן, שוודיה, איטליה, אוסטרליה",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "הו צ'י מין",
+      "object": "וייטנאם",
+      "object_candidates": "הודו, יפן, ישראל, ארגנטינה, שוודיה, צרפת, קטר, יוון, פולין, וייטנאם",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "אלן רובר",
+      "object": "צרפת",
+      "object_candidates": "ארגנטינה, פרנקפורט, יוון, וייטנאם, ישראל, אירלנד, פולין, כורדיסטן, נורווגיה, צרפת",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "פרדינן דה סוסיר",
+      "object": "שווייץ",
+      "object_candidates": "הודו, ארגנטינה, כורדיסטן, ברזיל, קנדה, קטר, אוסטריה, יפן, פולין, שווייץ",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "אוגוסט רודן",
+      "object": "צרפת",
+      "object_candidates": "ספרד, פרנקפורט, איטליה, ישראל, הודו, ארגנטינה, בולגריה, ברזיל, אוסטריה, צרפת",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "פרידריך בסל",
+      "object": "גרמניה",
+      "object_candidates": "קטר, ממלכת אנגליה, יפן, לבנון, ארגנטינה, איטליה, בולגריה, אוסטריה, ברזיל, גרמניה",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "יוהאן וולפגנג פון גתה",
+      "object": "פרנקפורט",
+      "object_candidates": "שוודיה, אירלנד, ארגנטינה, לבנון, בולגריה, ישראל, איטליה, יוון, יפן, פרנקפורט",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "מאסימו ד'אלמה",
+      "object": "איטליה",
+      "object_candidates": "לבנון, הודו, שוודיה, צרפת, ספרד, אוסטרליה, פולין, דנמרק, וייטנאם, איטליה",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "רודולף הס",
+      "object": "גרמניה",
+      "object_candidates": "פולין, אוסטרליה, איטליה, צרפת, וייטנאם, ארגנטינה, כורדיסטן, ברזיל, דנמרק, גרמניה",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "הנרי החמישי, מלך אנגליה",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "בולגריה, גרמניה, ישראל, אירלנד, שוודיה, וייטנאם, ברזיל, קנדה, שווייץ, ממלכת אנגליה",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "מישל וולבק",
+      "object": "צרפת",
+      "object_candidates": "שווייץ, הודו, דנמרק, ספרד, יפן, נורווגיה, פולין, ברזיל, אוסטריה, צרפת",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "מזאצ'ו",
+      "object": "איטליה",
+      "object_candidates": "דנמרק, ממלכת אנגליה, פרנקפורט, ברזיל, בולגריה, צרפת, קנדה, אוסטרליה, יוון, איטליה",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "פראנס גל",
+      "object": "צרפת",
+      "object_candidates": "קנדה, ממלכת אנגליה, וייטנאם, אוסטריה, איטליה, ישראל, פרנקפורט, הודו, יוון, צרפת",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "אלברטי, רפאל",
+      "object": "ספרד",
+      "object_candidates": "אוסטריה, בולגריה, לבנון, נורווגיה, איטליה, וייטנאם, ישראל, פולין, אוסטרליה, ספרד",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "ברנרדו אלברטו הוסיי",
+      "object": "ארגנטינה",
+      "object_candidates": "קטר, גרמניה, ישראל, קנדה, ממלכת אנגליה, שווייץ, וייטנאם, כורדיסטן, בולגריה, ארגנטינה",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "קיאיצ'י מיזאווה",
+      "object": "יפן",
+      "object_candidates": "ברזיל, נורווגיה, צרפת, הודו, בולגריה, קטר, שוודיה, ישראל, ממלכת אנגליה, יפן",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "אוסקר הראשון, מלך שוודיה",
+      "object": "שוודיה",
+      "object_candidates": "צרפת, שווייץ, דנמרק, הודו, ספרד, גרמניה, פולין, קטר, ישראל, שוודיה",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "קארל בוש",
+      "object": "גרמניה",
+      "object_candidates": "כורדיסטן, ארגנטינה, ספרד, שוודיה, ישראל, צרפת, שווייץ, פרנקפורט, אירלנד, גרמניה",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ג'ידו קרישנמורטי",
+      "object": "הודו",
+      "object_candidates": "קטר, איטליה, נורווגיה, גרמניה, ממלכת אנגליה, יוון, אירלנד, כורדיסטן, לבנון, הודו",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "אליזבת הראשונה, מלכת אנגליה",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "צרפת, הודו, פולין, ספרד, קנדה, ארגנטינה, אוסטריה, דנמרק, שוודיה, ממלכת אנגליה",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "עמנואל סנייה",
+      "object": "צרפת",
+      "object_candidates": "קטר, פרנקפורט, לבנון, איטליה, הודו, כורדיסטן, בולגריה, פולין, אוסטרליה, צרפת",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "גז'גוז' לאטו",
+      "object": "פולין",
+      "object_candidates": "צרפת, איטליה, אוסטרליה, אירלנד, בולגריה, גרמניה, יפן, ספרד, יוון, פולין",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "קורט ולדהיים",
+      "object": "אוסטריה",
+      "object_candidates": "ישראל, וייטנאם, ספרד, שווייץ, כורדיסטן, ארגנטינה, אוסטרליה, פרנקפורט, אירלנד, אוסטריה",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "מרגרט אטווד",
+      "object": "קנדה",
+      "object_candidates": "ארגנטינה, נורווגיה, ברזיל, גרמניה, לבנון, אוסטרליה, דנמרק, בולגריה, כורדיסטן, קנדה",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "אנצו פרארי",
+      "object": "איטליה",
+      "object_candidates": "הודו, לבנון, ספרד, אוסטריה, ארגנטינה, אירלנד, קנדה, ישראל, ברזיל, איטליה",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "בורביל",
+      "object": "צרפת",
+      "object_candidates": "הודו, נורווגיה, ארגנטינה, אוסטרליה, יפן, פרנקפורט, ממלכת אנגליה, ישראל, ספרד, צרפת",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "וולפגנג פאולי",
+      "object": "אוסטריה",
+      "object_candidates": "קנדה, וייטנאם, דנמרק, אירלנד, שוודיה, יוון, פולין, יפן, כורדיסטן, אוסטריה",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "שארל השישי, מלך צרפת",
+      "object": "צרפת",
+      "object_candidates": "פולין, אוסטריה, גרמניה, דנמרק, בולגריה, הודו, קנדה, ספרד, אירלנד, צרפת",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "מישל עאון",
+      "object": "לבנון",
+      "object_candidates": "וייטנאם, דנמרק, ארגנטינה, אירלנד, יפן, פרנקפורט, ברזיל, פולין, איטליה, לבנון",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "מגנוס קרלסן",
+      "object": "נורווגיה",
+      "object_candidates": "פרנקפורט, ספרד, צרפת, כורדיסטן, אוסטרליה, הודו, ארגנטינה, לבנון, יוון, נורווגיה",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "הנריק סנקביץ'",
+      "object": "פולין",
+      "object_candidates": "לבנון, ברזיל, ישראל, ספרד, קטר, יפן, צרפת, דנמרק, קנדה, פולין",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "ארתור, נסיך ויילס",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "ארגנטינה, קטר, ספרד, אירלנד, נורווגיה, פולין, איטליה, שוודיה, כורדיסטן, ממלכת אנגליה",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ג'יימס השני, מלך אנגליה",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "נורווגיה, שווייץ, בולגריה, שוודיה, וייטנאם, הודו, יוון, ברזיל, ספרד, ממלכת אנגליה",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "חמד בן ח'ליפה אאל ת'אני",
+      "object": "קטר",
+      "object_candidates": "ספרד, בולגריה, איטליה, שוודיה, הודו, פולין, פרנקפורט, שווייץ, יפן, קטר",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "פרנסיסקו דה גויה",
+      "object": "ספרד",
+      "object_candidates": "איטליה, צרפת, פולין, קנדה, ישראל, אוסטרליה, לבנון, יוון, ברזיל, ספרד",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "ג'לאל טאלבאני",
+      "object": "כורדיסטן",
+      "object_candidates": "אירלנד, ממלכת אנגליה, איטליה, פולין, צרפת, פרנקפורט, קטר, יוון, בולגריה, כורדיסטן",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "פלוריאנו פיישוטו",
+      "object": "ברזיל",
+      "object_candidates": "פרנקפורט, פולין, שוודיה, איטליה, כורדיסטן, נורווגיה, אוסטריה, צרפת, שווייץ, ברזיל",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "אנטוניס סמאראס",
+      "object": "יוון",
+      "object_candidates": "ממלכת אנגליה, אוסטרליה, דנמרק, קטר, הודו, איטליה, צרפת, ארגנטינה, לבנון, יוון",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "בפה גרילו",
+      "object": "איטליה",
+      "object_candidates": "ממלכת אנגליה, הודו, ספרד, יוון, ישראל, אוסטרליה, פרנקפורט, צרפת, לבנון, איטליה",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "פרדריק התשיעי, מלך דנמרק",
+      "object": "דנמרק",
+      "object_candidates": "קטר, אוסטריה, קנדה, צרפת, נורווגיה, פרנקפורט, שוודיה, אוסטרליה, ברזיל, דנמרק",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "מייקל פסבנדר",
+      "object": "אירלנד",
+      "object_candidates": "קנדה, ספרד, קטר, ברזיל, אוסטריה, כורדיסטן, גרמניה, צרפת, בולגריה, אירלנד",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "אלכסנדרה, נסיכת דנמרק",
+      "object": "דנמרק",
+      "object_candidates": "אוסטריה, שוודיה, ארגנטינה, שווייץ, ישראל, אוסטרליה, ברזיל, פולין, ממלכת אנגליה, דנמרק",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "מיגל אידלגו וקוסטילה",
+      "object": "ספרד",
+      "object_candidates": "ישראל, שווייץ, פרנקפורט, נורווגיה, אירלנד, ממלכת אנגליה, איטליה, ארגנטינה, אוסטרליה, ספרד",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "אדמונד הוסרל",
+      "object": "גרמניה",
+      "object_candidates": "איטליה, לבנון, הודו, שוודיה, פולין, אוסטריה, צרפת, כורדיסטן, וייטנאם, גרמניה",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ליזה מייטנר",
+      "object": "שוודיה",
+      "object_candidates": "ספרד, קטר, שווייץ, אוסטריה, לבנון, קנדה, אוסטרליה, צרפת, פולין, שוודיה",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "אלברט השני, מלך הבלגים",
+      "object": "בלגיה",
+      "object_candidates": "פולין, שוודיה, איטליה, קטר, יוון, נורווגיה, וייטנאם, שווייץ, ספרד, בלגיה",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "מאהאווירה",
+      "object": "הודו",
+      "object_candidates": "ארגנטינה, גרמניה, וייטנאם, איטליה, פולין, אוסטרליה, קנדה, כורדיסטן, ברזיל, הודו",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "סוונטה ארהניוס",
+      "object": "שוודיה",
+      "object_candidates": "אוסטריה, גרמניה, ישראל, ברזיל, נורווגיה, קטר, אוסטרליה, יוון, צרפת, שוודיה",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "מריו מונטי",
+      "object": "איטליה",
+      "object_candidates": "ספרד, דנמרק, הודו, גרמניה, צרפת, אירלנד, בולגריה, קטר, ממלכת אנגליה, איטליה",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "פייר ז'נסן",
+      "object": "צרפת",
+      "object_candidates": "הודו, ישראל, ספרד, אירלנד, לבנון, פולין, שווייץ, דנמרק, שוודיה, צרפת",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

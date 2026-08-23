@@ -1,0 +1,422 @@
+{
+  "name": "headquarters_location",
+  "prompt_templates": [
+    "Waar is het hoofdkantoor van <subject>? Het antwoord is: <mask>",
+    "In welke stad is het hoofdkantoor van <subject> gevestigd? Het antwoord is: <mask>",
+    "Wat is de locatie van het hoofdkantoor van <subject>? Het antwoord is: <mask>",
+    "Waar kan het hoofdkantoor van <subject> worden gevonden? Het antwoord is: <mask>",
+    "Welke plaats herbergt het hoofdkantoor van <subject>? Het antwoord is: <mask>",
+    " Het hoofdkantoor van <subject> bevindt zich in <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Paris Saint-Germain",
+      "object": "Parijs",
+      "object_candidates": "Peking, Kabul, Nancy, Stockholm, Lyon, Berlijn, München, Florence, Leipzig, Parijs",
+      "index": 6101,
+      "subject_en": "Paris Saint-Germain F.C.",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Universiteit van Florence",
+      "object": "Florence",
+      "object_candidates": "Rome, Chicago, Seoel, Peking, Kioto, Toyota, Barcelona, Montreal, Berlijn, Florence",
+      "index": 6102,
+      "subject_en": "University of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Nationaalsocialistische Duitse Arbeiderspartij",
+      "object": "München",
+      "object_candidates": "Stamford, Taipei, Kiev, Kioto, Londen, Rome, Toyota, Montreal, Kabul, München",
+      "index": 6103,
+      "subject_en": "Nazi Party",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Unie voor het Middellandse Zeegebied",
+      "object": "Barcelona",
+      "object_candidates": "Genève, Peking, Sarajevo, Providence, Kiev, Athene, Stamford, Cambridge, Sheffield, Barcelona",
+      "index": 6104,
+      "subject_en": "Union for the Mediterranean",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "Interpol",
+      "object": "Lyon",
+      "object_candidates": "Georgetown, Sarajevo, Frankfurt am Main, Berlijn, Barcelona, Teheran, Moskou, Stamford, Kabul, Lyon",
+      "index": 6105,
+      "subject_en": "Interpol",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "Democratische Progressieve Partij",
+      "object": "Taipei",
+      "object_candidates": "Londen, Seattle, Sarajevo, Bonn, Stockholm, Kioto, Barcelona, Detroit, Lyon, Taipei",
+      "index": 6106,
+      "subject_en": "Democratic Progressive Party",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "EMI",
+      "object": "Londen",
+      "object_candidates": "Moskou, Parijs, Kabul, Leipzig, Lyon, Detroit, Toyota, Teheran, Sheffield, Londen",
+      "index": 6107,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "AS Nancy",
+      "object": "Nancy",
+      "object_candidates": "Athene, Keulen, Seoel, Londen, Berlijn, Sarajevo, Kiev, Rome, Providence, Nancy",
+      "index": 6108,
+      "subject_en": "A.S. Nancy-Lorraine",
+      "object_en": "Nancy"
+    },
+    {
+      "subject": "SoundCloud",
+      "object": "Berlijn",
+      "object_candidates": "Genève, Seattle, Cambridge, Florence, Keulen, Georgetown, Providence, Kabul, Parijs, Berlijn",
+      "index": 6109,
+      "subject_en": "SoundCloud",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Cadillac",
+      "object": "Detroit",
+      "object_candidates": "München, Chicago, Cambridge, Parijs, Kabul, Frankfurt am Main, Montreal, Moskou, Nancy, Detroit",
+      "index": 6110,
+      "subject_en": "Cadillac",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Polydor",
+      "object": "Londen",
+      "object_candidates": "Lyon, Moskou, Stockholm, Florence, Rome, Georgetown, Teheran, Leipzig, Detroit, Londen",
+      "index": 6111,
+      "subject_en": "Polydor Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "Nintendo",
+      "object": "Kioto",
+      "object_candidates": "Chicago, Cambridge, Frankfurt am Main, Genève, Stockholm, Keulen, Seattle, Taipei, Barcelona, Kioto",
+      "index": 6112,
+      "subject_en": "Nintendo",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "Universiteit van Cambridge",
+      "object": "Cambridge",
+      "object_candidates": "Bonn, Detroit, Nancy, Chicago, Lyon, Sarajevo, Stamford, Seoel, Georgetown, Cambridge",
+      "index": 6113,
+      "subject_en": "University of Cambridge",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "Germanwings",
+      "object": "Keulen",
+      "object_candidates": "Cambridge, Berlijn, Toyota, Lyon, Peking, Stamford, Montreal, Seattle, Nancy, Keulen",
+      "index": 6114,
+      "subject_en": "Germanwings",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "Universiteit van Washington",
+      "object": "Seattle",
+      "object_candidates": "Stamford, Providence, Kabul, Stockholm, Cambridge, Montreal, Sarajevo, Berlijn, Taipei, Seattle",
+      "index": 6115,
+      "subject_en": "University of Washington",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Ericsson",
+      "object": "Stockholm",
+      "object_candidates": "Toyota, Rome, Lyon, Florence, Kioto, Berlijn, Teheran, Kiev, Providence, Stockholm",
+      "index": 6116,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Brentford FC",
+      "object": "Londen",
+      "object_candidates": "Kioto, Providence, Georgetown, Parijs, Stockholm, Kiev, München, Seattle, Moskou, Londen",
+      "index": 6117,
+      "subject_en": "Brentford F.C.",
+      "object_en": "London"
+    },
+    {
+      "subject": "Democratische Volkspartij van Afghanistan",
+      "object": "Kabul",
+      "object_candidates": "München, Leipzig, Cambridge, Kioto, Sarajevo, Londen, Frankfurt am Main, Stockholm, Sheffield, Kabul",
+      "index": 6118,
+      "subject_en": "People's Democratic Party of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Samsung Group",
+      "object": "Seoel",
+      "object_candidates": "Florence, Bonn, Sheffield, Athene, Georgetown, Frankfurt am Main, Montreal, Moskou, Detroit, Seoel",
+      "index": 6119,
+      "subject_en": "Samsung",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Beijing Guoan",
+      "object": "Peking",
+      "object_candidates": "Barcelona, Londen, Seoel, Chicago, Leipzig, Detroit, Cambridge, Athene, Rome, Peking",
+      "index": 6120,
+      "subject_en": "Beijing Guoan F.C.",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Comintern",
+      "object": "Moskou",
+      "object_candidates": "Sheffield, Leipzig, Taipei, Kioto, Rome, Montreal, Teheran, Georgetown, Nancy, Moskou",
+      "index": 6121,
+      "subject_en": "Comintern",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Guinness Book of Records",
+      "object": "Londen",
+      "object_candidates": "Kiev, Seattle, Providence, Sheffield, Montreal, München, Cambridge, Berlijn, Florence, Londen",
+      "index": 6122,
+      "subject_en": "Guinness World Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "Fédération Internationale des Échecs",
+      "object": "Athene",
+      "object_candidates": "Georgetown, Barcelona, Nancy, Kiev, Teheran, Chicago, Kabul, Frankfurt am Main, Sarajevo, Athene",
+      "index": 6123,
+      "subject_en": "FIDE",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Rolex",
+      "object": "Genève",
+      "object_candidates": "Nancy, Lyon, Stamford, Montreal, Berlijn, Londen, Moskou, Taipei, Sheffield, Genève",
+      "index": 6124,
+      "subject_en": "Rolex",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "Assyrische Kerk van het Oosten",
+      "object": "Chicago",
+      "object_candidates": "Georgetown, Cambridge, Rome, Kioto, Nancy, Stockholm, Toyota, Berlijn, Keulen, Chicago",
+      "index": 6125,
+      "subject_en": "Assyrian Church of the East",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "Universiteit van Parijs",
+      "object": "Parijs",
+      "object_candidates": "Leipzig, Bonn, Sheffield, Lyon, Teheran, Peking, Seoel, Detroit, Nancy, Parijs",
+      "index": 6126,
+      "subject_en": "University of Paris",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "International Tennis Federation",
+      "object": "Londen",
+      "object_candidates": "Toyota, Sheffield, Georgetown, Providence, Montreal, Barcelona, Kiev, Sarajevo, Cambridge, Londen",
+      "index": 6127,
+      "subject_en": "International Tennis Federation",
+      "object_en": "London"
+    },
+    {
+      "subject": "Deutsche Welle",
+      "object": "Bonn",
+      "object_candidates": "Toyota, Sarajevo, Chicago, Sheffield, Seoel, Parijs, Teheran, Montreal, Kabul, Bonn",
+      "index": 6128,
+      "subject_en": "Deutsche Welle",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "Sheffield Wednesday FC",
+      "object": "Sheffield",
+      "object_candidates": "Providence, Keulen, Florence, Detroit, Stockholm, Cambridge, Londen, Kabul, Kiev, Sheffield",
+      "index": 6129,
+      "subject_en": "Sheffield Wednesday F.C.",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "Wereldhandelsorganisatie",
+      "object": "Genève",
+      "object_candidates": "Kabul, Florence, Leipzig, Berlijn, Seoel, Athene, Sheffield, Montreal, Teheran, Genève",
+      "index": 6130,
+      "subject_en": "World Trade Organization",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "RB Leipzig",
+      "object": "Leipzig",
+      "object_candidates": "Cambridge, Lyon, Providence, Athene, München, Stamford, Taipei, Moskou, Kioto, Leipzig",
+      "index": 6131,
+      "subject_en": "RB Leipzig",
+      "object_en": "Leipzig"
+    },
+    {
+      "subject": "United States Soccer Federation",
+      "object": "Chicago",
+      "object_candidates": "Peking, Toyota, Sarajevo, Moskou, Florence, Frankfurt am Main, Detroit, Providence, Seoel, Chicago",
+      "index": 6132,
+      "subject_en": "United States Soccer Federation",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BP",
+      "object": "Londen",
+      "object_candidates": "Athene, Keulen, Genève, Stockholm, Barcelona, Montreal, Detroit, Berlijn, Bonn, Londen",
+      "index": 6133,
+      "subject_en": "BP",
+      "object_en": "London"
+    },
+    {
+      "subject": "Lenovo",
+      "object": "Peking",
+      "object_candidates": "Cambridge, Stockholm, Teheran, Barcelona, Frankfurt am Main, Montreal, Moskou, Parijs, Rome, Peking",
+      "index": 6134,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Toyota",
+      "object": "Toyota",
+      "object_candidates": "Cambridge, Montreal, Londen, Rome, Athene, Leipzig, Chicago, Nancy, Teheran, Toyota",
+      "index": 6135,
+      "subject_en": "Toyota",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Académie des sciences",
+      "object": "Parijs",
+      "object_candidates": "München, Seoel, Keulen, Frankfurt am Main, Leipzig, Kioto, Genève, Detroit, Florence, Parijs",
+      "index": 6136,
+      "subject_en": "French Academy of Sciences",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Duitse voetbalbond",
+      "object": "Frankfurt am Main",
+      "object_candidates": "Lyon, Athene, Peking, Genève, Sarajevo, Seoel, München, Seattle, Stockholm, Frankfurt am Main",
+      "index": 6137,
+      "subject_en": "German Football Association",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Karolinska Instituut",
+      "object": "Stockholm",
+      "object_candidates": "Bonn, Nancy, Seoel, Parijs, Frankfurt am Main, München, Florence, Kioto, Detroit, Stockholm",
+      "index": 6138,
+      "subject_en": "Karolinska Institute",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Iraanse Revolutionaire Garde",
+      "object": "Teheran",
+      "object_candidates": "Providence, Athene, München, Cambridge, Seattle, Stamford, Frankfurt am Main, Detroit, Rome, Teheran",
+      "index": 6139,
+      "subject_en": "Army of the Guardians of the Islamic Revolution",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Sciences Po",
+      "object": "Parijs",
+      "object_candidates": "Kiev, Barcelona, Nancy, Peking, Florence, Georgetown, Stamford, Leipzig, Genève, Parijs",
+      "index": 6140,
+      "subject_en": "Sciences Po",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "FC Dynamo Kiev",
+      "object": "Kiev",
+      "object_candidates": "Genève, Athene, Seoel, Toyota, Nancy, Georgetown, Rome, Florence, Stamford, Kiev",
+      "index": 6141,
+      "subject_en": "FC Dynamo Kyiv",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "FK Sarajevo",
+      "object": "Sarajevo",
+      "object_candidates": "Peking, Kiev, Teheran, Cambridge, Barcelona, Montreal, Sheffield, Athene, Toyota, Sarajevo",
+      "index": 6142,
+      "subject_en": "F.K. Sarajevo",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Europese Ruimtevaartorganisatie",
+      "object": "Parijs",
+      "object_candidates": "Teheran, Rome, Genève, Moskou, Taipei, Berlijn, Chicago, Keulen, Leipzig, Parijs",
+      "index": 6143,
+      "subject_en": "European Space Agency",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Brown-universiteit",
+      "object": "Providence",
+      "object_candidates": "Keulen, Kabul, Londen, Florence, Leipzig, Barcelona, Sheffield, Teheran, Taipei, Providence",
+      "index": 6144,
+      "subject_en": "Brown University",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "Universiteit van Genève",
+      "object": "Genève",
+      "object_candidates": "Kioto, München, Nancy, Stockholm, Parijs, Berlijn, Montreal, Kiev, Peking, Genève",
+      "index": 6145,
+      "subject_en": "University of Geneva",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "Dominicanen",
+      "object": "Rome",
+      "object_candidates": "Lyon, Kioto, Genève, Taipei, München, Parijs, Leipzig, Sheffield, Moskou, Rome",
+      "index": 6146,
+      "subject_en": "Dominican Order",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "WWE",
+      "object": "Stamford",
+      "object_candidates": "Kioto, Athene, Seoel, Barcelona, Kiev, Peking, Nancy, Genève, Rome, Stamford",
+      "index": 6147,
+      "subject_en": "WWE",
+      "object_en": "Stamford"
+    },
+    {
+      "subject": "McGill-universiteit",
+      "object": "Montreal",
+      "object_candidates": "Londen, Leipzig, Seoel, Toyota, Genève, Frankfurt am Main, Providence, Rome, Cambridge, Montreal",
+      "index": 6148,
+      "subject_en": "McGill University",
+      "object_en": "Montreal"
+    },
+    {
+      "subject": "Caribische Gemeenschap",
+      "object": "Georgetown",
+      "object_candidates": "Frankfurt am Main, Londen, Peking, Stamford, Bonn, Berlijn, Seattle, Rome, Keulen, Georgetown",
+      "index": 6149,
+      "subject_en": "Caribbean Community Secretariat",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Nagoya",
+      "object_candidates": "Londen, Barcelona, Keulen, Berlijn, Moskou, Bonn, Taipei, München, Providence, Nagoya",
+      "index": 6150,
+      "subject_en": "Lexus",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "Sheffield United FC",
+      "object": "Sheffield",
+      "object_candidates": "Rome, Chicago, Stamford, Moskou, Detroit, Nancy, Stockholm, München, Teheran, Sheffield",
+      "index": 6151,
+      "subject_en": "Sheffield United F.C.",
+      "object_en": "Sheffield"
+    }
+  ],
+  "relation_id": "P159"
+}

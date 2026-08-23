@@ -1,0 +1,1710 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "Какая страна или штат для которого <subject> является столицей? Ответ: <mask>",
+    "Где <subject> является столицей? Ответ: <mask>",
+    "Какая страна или штат имеет <subject> в качестве своей столицы? Ответ: <mask>",
+    "Какое место имеет <subject> в качестве столицы? Ответ: <mask>",
+    "Где <subject> служит в качестве столицы? Ответ: <mask>",
+    " <subject> — это столица страны под названием <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Эдмонтон",
+      "object": "Альберта",
+      "object_candidates": "Чехословакия, Лаос, Гуджарат, Бавария, Саравак, Бангладеш, Техас, Катар, Прованс, Альберта",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "Анкара",
+      "object": "Турция",
+      "object_candidates": "Замбия, Германия, Сенегал, Польша, Филиппины, Латвия, Ливия, Арканзас, Гренландия, Турция",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Амстердам",
+      "object": "Нидерланды",
+      "object_candidates": "Латвия, Эн, Канзас, Бавария, Непал, Словения, Мали, Коннектикут, Родезия, Нидерланды",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Баку",
+      "object": "Азербайджан",
+      "object_candidates": "Нидерланды, Бельгия, Ботсвана, Махараштра, Дания, Нигер, Украина, Сомали, Йемен, Азербайджан",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "Каир",
+      "object": "Египет",
+      "object_candidates": "Оман, Боливия, Наварра, Казахстан, Мэриленд, Коннектикут, Англия, Мозамбик, Иудейское царство, Египет",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "Копенгаген",
+      "object": "Дания",
+      "object_candidates": "Массачусетс, Словакия, Венесуэла, Израиль, Ирак, Фландрия, Айдахо, Бангладеш, Гватемала, Дания",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Барселона",
+      "object": "Каталония",
+      "object_candidates": "Люксембург, Колорадо, Тоскана, Бахрейн, Белиз, Сычуань, Дубай, Иордания, Лаос, Каталония",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "Буэнос-Айрес",
+      "object": "Аргентина",
+      "object_candidates": "Катар, Арагон, Германия, Черногория, Юта, Россия, Боливия, Португалия, Саравак, Аргентина",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Мюнхен",
+      "object": "Бавария",
+      "object_candidates": "Квинсленд, Португалия, Индиана, Бруней, Польша, Коннектикут, Фландрия, Узбекистан, Иудейское царство, Бавария",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "Флоренция",
+      "object": "Тоскана",
+      "object_candidates": "Либерия, Черногория, Гуандун, Сербия, Ирландия, Луизиана, Белоруссия, Индия, Норвегия, Тоскана",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "Рим",
+      "object": "Италия",
+      "object_candidates": "Афганистан, Индонезия, Бразилия, Массачусетс, Мальта, Зимбабве, Германия, Венесуэла, Бутан, Италия",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Алжир",
+      "object": "Алжир",
+      "object_candidates": "Республика Гаити, Бельгия, Грузия, Малави, Гвинея, Пакистан, Зимбабве, Сенегал, Саравак, Алжир",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "Триполи",
+      "object": "Ливия",
+      "object_candidates": "Уругвай, Прованс, Катар, Таджикистан, Венгрия, Киргизия, Пакистан, Кения, Польша, Ливия",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Канберра",
+      "object": "Австралия",
+      "object_candidates": "Аляска, Миннесота, Гренландия, Харьяна, Квинсленд, Хорватия, Марокко, Болгария, Турция, Австралия",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Виндхук",
+      "object": "Намибия",
+      "object_candidates": "Бельгия, Кувейт, Сирия, Непал, Япония, Гвинея, Ирландия, Филиппины, Тоскана, Намибия",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "Ираклион",
+      "object": "Крит",
+      "object_candidates": "Португалия, Иордания, Эфиопия, Китайская Республика, Пенджаб, Аляска, Германия, Эн, Индиана, Крит",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "Багдад",
+      "object": "Ирак",
+      "object_candidates": "Родезия, Афганистан, Россия, Нидерланды, Бразилия, Кувейт, Белоруссия, Марокко, Болгария, Ирак",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Эдинбург",
+      "object": "Шотландия",
+      "object_candidates": "Телангана, Бихар, Луизиана, Никарагуа, Нидерланды, Арканзас, Бразилия, Юта, Оклахома, Шотландия",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Кабул",
+      "object": "Афганистан",
+      "object_candidates": "Уэльс, Узбекистан, Карнатака, Йемен, Сычуань, Аляска, Катар, Вайоминг, Пакистан, Афганистан",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "Бонн",
+      "object": "Германия",
+      "object_candidates": "Белоруссия, Техас, Непал, Филиппины, Арагон, Бавария, Мичиган, Арканзас, Либерия, Германия",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Берлин",
+      "object": "Германия",
+      "object_candidates": "Гренландия, Пьемонт, Оман, Венесуэла, Фиджи, Латвия, Китайская Республика, Норвегия, Румыния, Германия",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Порто-Ново",
+      "object": "Бенин",
+      "object_candidates": "Юта, Киргизия, Испания, Словения, Арагон, Техас, Уругвай, Боливия, Уганда, Бенин",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "Габороне",
+      "object": "Ботсвана",
+      "object_candidates": "Румыния, Калифорния, Сардиния, Таиланд, Эстония, Сербия, Уругвай, Манитоба, Харьяна, Ботсвана",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "Париж",
+      "object": "Франция",
+      "object_candidates": "Республика Гаити, Пакистан, Бихар, Бразилия, Кувейт, Намибия, Флорида, Керала, Казахстан, Франция",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "Мумбаи",
+      "object": "Махараштра",
+      "object_candidates": "Куба, Манитоба, Нор, Самоа, Мичиган, Сычуань, Нигер, Теннесси, Люксембург, Махараштра",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "Осло",
+      "object": "Норвегия",
+      "object_candidates": "Мадагаскар, Франция, Онтарио, Турция, Кувейт, Пьемонт, Болгария, Танзания, Коннектикут, Норвегия",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Иерусалим",
+      "object": "Иудейское царство",
+      "object_candidates": "Бургундия, Сирия, Швейцария, Гренландия, Бразилия, Малави, Египет, Таиланд, Вайоминг, Иудейское царство",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "Бишкек",
+      "object": "Киргизия",
+      "object_candidates": "Бихар, Сычуань, Армения, Пенджаб, Чад, Оман, Карнатака, Телангана, Тасмания, Киргизия",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "Бухарест",
+      "object": "Румыния",
+      "object_candidates": "Англия, Наварра, Зимбабве, Айдахо, Либерия, Таиланд, Алба, Латвия, Египет, Румыния",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Мельбурн",
+      "object": "Виктория",
+      "object_candidates": "Саравак, Эн, Алжир, Оксфордшир, Эквадор, Гессен, Колорадо, Альберта, Маврикий, Виктория",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "Пекин",
+      "object": "Китайская Республика",
+      "object_candidates": "Марокко, Бангладеш, Швеция, Ирландия, Юньнань, Аляска, Керала, Египет, Словакия, Китайская Республика",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Чунцин",
+      "object": "Китайская Республика",
+      "object_candidates": "Вайоминг, Гавайи, Латвия, Эн, Мальта, Таджикистан, Гренландия, Тасмания, Узбекистан, Китайская Республика",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Гавана",
+      "object": "Куба",
+      "object_candidates": "Малайзия, Прованс, Мальта, Луизиана, Юньнань, Каталония, Лестершир, Тунис, Гватемала, Куба",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Денвер",
+      "object": "Колорадо",
+      "object_candidates": "Арагон, Ангола, Сирия, Сомали, Ливия, Финляндия, Зальцбург, Онтарио, Прованс, Колорадо",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "Могадишо",
+      "object": "Сомали",
+      "object_candidates": "Нидерланды, Литва, Самоа, Франция, Уругвай, Китайская Республика, Гана, Иран, Юньнань, Сомали",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Кардифф",
+      "object": "Уэльс",
+      "object_candidates": "Катар, Мэриленд, Фландрия, Перу, Белоруссия, Норвегия, Уганда, Италия, Индия, Уэльс",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "Дублин",
+      "object": "Ирландия",
+      "object_candidates": "Маврикий, Вьетнам, Албания, Индонезия, Мексика, Миннесота, Гвинея, Франция, Азербайджан, Ирландия",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Тунис",
+      "object": "Тунис",
+      "object_candidates": "Арканзас, Австралия, Пенджаб, Бутан, Лаос, Калифорния, Бенин, Альберта, Таиланд, Тунис",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "Рио-де-Жанейро",
+      "object": "Бразилия",
+      "object_candidates": "Сычуань, Луизиана, Оклахома, Королевство Англия, Виктория, Юта, Кипр, Судан, Саравак, Бразилия",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Валлетта",
+      "object": "Мальта",
+      "object_candidates": "Габон, Гана, Фиджи, Швейцария, Марокко, Камбоджа, Мэриленд, Канзас, Греция, Мальта",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "Лондон",
+      "object": "Англия",
+      "object_candidates": "Филиппины, Нормандия, Казахстан, Сабах, Кипр, Швеция, Гуджарат, Альберта, Ангола, Англия",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "Рабат",
+      "object": "Марокко",
+      "object_candidates": "Венесуэла, Кипр, Канада, Киргизия, Таджикистан, Сербия, Боливия, Квинсленд, Мальта, Марокко",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "Рига",
+      "object": "Латвия",
+      "object_candidates": "Таиланд, Техас, Либерия, Маврикий, Мальта, Саравак, Бранденбург, Сычуань, Зальцбург, Латвия",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "Дамаск",
+      "object": "Сирия",
+      "object_candidates": "Сабах, Таиланд, Манитоба, Таджикистан, Йемен, Уганда, Ирак, Альберта, Массачусетс, Сирия",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "Дар-эс-Салам",
+      "object": "Танзания",
+      "object_candidates": "Пьемонт, Белоруссия, Бахрейн, Чили, Сычуань, Гватемала, Дания, Ботсвана, Киргизия, Танзания",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "Лондон",
+      "object": "Королевство Англия",
+      "object_candidates": "Гуандун, Россия, Словакия, Украина, Руанда, Катар, Эквадор, Индиана, Техас, Королевство Англия",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Стокгольм",
+      "object": "Швеция",
+      "object_candidates": "Боливия, Тоскана, Казахстан, Зимбабве, Египет, Зальцбург, Перу, Гавайи, Украина, Швеция",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Хельсинки",
+      "object": "Финляндия",
+      "object_candidates": "Непал, Алба, Либерия, Арканзас, Люксембург, Мэриленд, Марокко, Белиз, Родезия, Финляндия",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Прага",
+      "object": "Богемия",
+      "object_candidates": "Зальцбург, Куба, Белоруссия, Алжир, Албания, Гессен, Арагон, Теннесси, Азербайджан, Богемия",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "Индианаполис",
+      "object": "Индиана",
+      "object_candidates": "Таиланд, Флорида, Коннектикут, Индия, Панама, Ангола, Никарагуа, Болгария, Мексика, Индиана",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "Мадрид",
+      "object": "Испания",
+      "object_candidates": "Руанда, Флорида, Ливия, Польша, Калифорния, Франция, Эквадор, Раджастхан, Родезия, Испания",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Гватемала",
+      "object": "Гватемала",
+      "object_candidates": "Чад, Ирландия, Канада, Техас, Барбадос, Ангола, Бихар, Албания, Латвия, Гватемала",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "Варшава",
+      "object": "Польша",
+      "object_candidates": "Республика Гаити, Турция, Королевство Англия, Бавария, Мальта, Дубай, Италия, Гоа, Канзас, Польша",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Гуанчжоу",
+      "object": "Гуандун",
+      "object_candidates": "Замбия, Сирия, Бавария, Бруней, Бразилия, Сычуань, Украина, Саксония, Алба, Гуандун",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "Дрезден",
+      "object": "Саксония",
+      "object_candidates": "Арканзас, Таиланд, Гватемала, Прованс, Иордания, Зальцбург, Малайзия, Гавайи, Канада, Саксония",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "Порт-о-Пренс",
+      "object": "Республика Гаити",
+      "object_candidates": "Япония, Ангола, Чехословакия, Аргентина, Карнатака, Бахрейн, Гвинея, Франция, Махараштра, Республика Гаити",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Афины",
+      "object": "Греция",
+      "object_candidates": "Египет, Коннектикут, Мали, Венгрия, Оклахома, Гондурас, Армения, Ангола, Зальцбург, Греция",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Хобарт",
+      "object": "Тасмания",
+      "object_candidates": "Иордания, Сербия, Грузия, Бразилия, Люксембург, Айова, Пакистан, Оклахома, Бихар, Тасмания",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "Таллин",
+      "object": "Эстония",
+      "object_candidates": "Пенджаб, Наварра, Португалия, Пенсильвания, Филиппины, Бранденбург, Фиджи, Мозамбик, Хорватия, Эстония",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "Токио",
+      "object": "Япония",
+      "object_candidates": "Виктория, Уганда, Египет, Венгрия, Ливан, Руанда, Афганистан, Китайская Республика, Сардиния, Япония",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Вена",
+      "object": "Австрия",
+      "object_candidates": "Чехословакия, Гуджарат, Израиль, Турция, Англия, Казахстан, Юта, Ангола, Йемен, Австрия",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Любляна",
+      "object": "Словения",
+      "object_candidates": "Израиль, Сенегал, Черногория, Сицилия, Финляндия, Нигерия, Таджикистан, Афганистан, Гвинея, Словения",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "Иерусалим",
+      "object": "Израиль",
+      "object_candidates": "Сенегал, Венесуэла, Телангана, Азербайджан, Бруней, Венгрия, Махараштра, Оксфордшир, Техас, Израиль",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Джакарта",
+      "object": "Индонезия",
+      "object_candidates": "Мозамбик, Иордания, Калифорния, Чили, Гуандун, Оклахома, Бруней, Карнатака, Раджастхан, Индонезия",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "Турин",
+      "object": "Пьемонт",
+      "object_candidates": "Сенегал, Италия, Югославия, Квинсленд, Черногория, Гоа, Гвинея, Аляска, Онтарио, Пьемонт",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "Найроби",
+      "object": "Кения",
+      "object_candidates": "Белиз, Латвия, Либерия, Англия, Бутан, Пенджаб, Узбекистан, Китайская Республика, Коннектикут, Кения",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "Куала-Лумпур",
+      "object": "Малайзия",
+      "object_candidates": "Индиана, Родезия, Югославия, Канада, Китайская Республика, Швеция, Турция, Мичиган, Гуджарат, Малайзия",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Исламабад",
+      "object": "Пакистан",
+      "object_candidates": "Мальта, Гуджарат, Мадагаскар, Литва, Грузия, Ливия, Таиланд, Кения, Белиз, Пакистан",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Катманду",
+      "object": "Непал",
+      "object_candidates": "Родезия, Алба, Италия, Эстония, Узбекистан, Бранденбург, Прованс, Нигер, Алжир, Непал",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "Хартум",
+      "object": "Судан",
+      "object_candidates": "Украина, Аляска, Квебек, Прованс, Либерия, Виктория, Перу, Куба, Керала, Судан",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "Вильнюс",
+      "object": "Литва",
+      "object_candidates": "Наварра, Бенин, Алба, Колорадо, Нигер, Нигерия, Ботсвана, Харьяна, Гессен, Литва",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Бейрут",
+      "object": "Ливан",
+      "object_candidates": "Филиппины, Куба, Кения, Гуандун, Каталония, Бутан, Канада, Вьетнам, Массачусетс, Ливан",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Лиссабон",
+      "object": "Португалия",
+      "object_candidates": "Норвегия, Зимбабве, Мексика, Саксония, Сицилия, Уэльс, Латвия, Австралия, Либерия, Португалия",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Луанда",
+      "object": "Ангола",
+      "object_candidates": "Индия, Республика Гаити, Латвия, Япония, Хорватия, Пакистан, Югославия, Манитоба, Таиланд, Ангола",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "Москва",
+      "object": "Россия",
+      "object_candidates": "Таиланд, Мадагаскар, Кения, Айова, Квинсленд, Бахрейн, Афганистан, Руанда, Аляска, Россия",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Виннипег",
+      "object": "Манитоба",
+      "object_candidates": "Польша, Альберта, Замбия, Арагон, Республика Гаити, Филиппины, Алба, Китайская Республика, Венгрия, Манитоба",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "Лилонгве",
+      "object": "Малави",
+      "object_candidates": "Вайоминг, Афганистан, Квинсленд, Чад, Квебек, Танзания, Польша, Кения, Богемия, Малави",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "Мехико",
+      "object": "Мексика",
+      "object_candidates": "Онтарио, Либерия, Азербайджан, Флорида, Гуджарат, Испания, Армения, Сардиния, Бихар, Мексика",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Мапуту",
+      "object": "Мозамбик",
+      "object_candidates": "Пакистан, Гана, Бангладеш, Индонезия, Арканзас, Ангола, Канада, Нигер, Лаос, Мозамбик",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "Бостон",
+      "object": "Массачусетс",
+      "object_candidates": "Мичиган, Венгрия, Барбадос, Алба, Бутан, Албания, Испания, Каталония, Киргизия, Массачусетс",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "Оттава",
+      "object": "Канада",
+      "object_candidates": "Массачусетс, Саравак, Австрия, Тасмания, Калифорния, Аляска, Квинсленд, Грузия, Гвинея, Канада",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Монтевидео",
+      "object": "Уругвай",
+      "object_candidates": "Миннесота, Республика Гаити, Родезия, Гондурас, Арканзас, Флорида, Пенджаб, Румыния, Катар, Уругвай",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "Манама",
+      "object": "Бахрейн",
+      "object_candidates": "Португалия, Пьемонт, Аргентина, Техас, Коннектикут, Нигер, Лаос, Гана, Уганда, Бахрейн",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "Бангалор",
+      "object": "Карнатака",
+      "object_candidates": "Аргентина, Казахстан, Малави, Гренландия, Камбоджа, Узбекистан, Нидерланды, Самоа, Болгария, Карнатака",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "Будапешт",
+      "object": "Венгрия",
+      "object_candidates": "Алба, Прованс, Нормандия, Армения, Ирак, Пенджаб, Либерия, Манитоба, Нидерланды, Венгрия",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "Тегусигальпа",
+      "object": "Гондурас",
+      "object_candidates": "Тунис, Кувейт, Раджастхан, Бургундия, Оксфордшир, Алба, Арканзас, Тасмания, Нормандия, Гондурас",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "Гандинагар",
+      "object": "Гуджарат",
+      "object_candidates": "Юта, Хорватия, Каталония, Малави, Сардиния, Франция, Республика Гаити, Китайская Республика, Бургундия, Гуджарат",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "Подгорица",
+      "object": "Черногория",
+      "object_candidates": "Бенин, Виктория, Теннесси, Йемен, Румыния, Эквадор, Сычуань, Республика Гаити, Зальцбург, Черногория",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "Торонто",
+      "object": "Онтарио",
+      "object_candidates": "Самоа, Бахрейн, Богемия, Болгария, Раджастхан, Фиджи, Кувейт, Сицилия, Сербия, Онтарио",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "Панама",
+      "object": "Панама",
+      "object_candidates": "Пенсильвания, Аргентина, Виктория, Канада, Ливан, Саксония, Республика Косово, Кения, Испания, Панама",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "Дакар",
+      "object": "Сенегал",
+      "object_candidates": "Габон, Латвия, Мичиган, Ботсвана, Юта, Бельгия, Литва, Телангана, Вайоминг, Сенегал",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "Лагос",
+      "object": "Нигерия",
+      "object_candidates": "Квебек, Республика Косово, Оксфордшир, Египет, Юньнань, Шотландия, Украина, Бенин, Танзания, Нигерия",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "Бангкок",
+      "object": "Таиланд",
+      "object_candidates": "Португалия, Хорватия, Венгрия, Югославия, Иордания, Карнатака, Айова, Кипр, Либерия, Таиланд",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "Сантьяго",
+      "object": "Чили",
+      "object_candidates": "Норвегия, Уганда, Родезия, Кувейт, Калифорния, Марокко, Индиана, Португалия, Бангладеш, Чили",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "Нью-Дели",
+      "object": "Индия",
+      "object_candidates": "Коннектикут, Керала, Оман, Англия, Гессен, Раджастхан, Эквадор, Фиджи, Финляндия, Индия",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "Белград",
+      "object": "Сербия",
+      "object_candidates": "Флорида, Тунис, Англия, Махараштра, Хорватия, Бихар, Наварра, Алба, Гватемала, Сербия",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "Кальяри",
+      "object": "Сардиния",
+      "object_candidates": "Саксония, Пьемонт, Тасмания, Республика Гаити, Наварра, Словения, Кувейт, Квебек, Бельгия, Сардиния",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "Каракас",
+      "object": "Венесуэла",
+      "object_candidates": "Турция, Гуандун, Югославия, Непал, Нор, Украина, Белоруссия, Сирия, Сычуань, Венесуэла",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "Никосия",
+      "object": "Кипр",
+      "object_candidates": "Коннектикут, Греция, Югославия, Гавайи, Мексика, Мадагаскар, Раджастхан, Куба, Афганистан, Кипр",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "Киев",
+      "object": "Украина",
+      "object_candidates": "Алба, Индонезия, Сомали, Литва, Зальцбург, Гана, Эфиопия, Бразилия, Лаос, Украина",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Тайбэй",
+      "object": "Китайская Республика",
+      "object_candidates": "Тоскана, Швейцария, Алжир, Мексика, Саксония, Квинсленд, Сирия, Барбадос, Замбия, Китайская Республика",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Абуджа",
+      "object": "Нигерия",
+      "object_candidates": "Прованс, Чили, Украина, Барбадос, Албания, Габон, Сардиния, Гренландия, Республика Гаити, Нигерия",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "София",
+      "object": "Болгария",
+      "object_candidates": "Мальта, Оклахома, Барбадос, Техас, Тоскана, Либерия, Белоруссия, Крит, Габон, Болгария",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Солт-Лейк-Сити",
+      "object": "Юта",
+      "object_candidates": "Никарагуа, Турция, Катар, Чад, Юньнань, Дания, Манитоба, Виктория, Венесуэла, Юта",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "Палермо",
+      "object": "Сицилия",
+      "object_candidates": "Камбоджа, Бургундия, Бруней, Шотландия, Каталония, Прованс, Марокко, Бразилия, Гоа, Сицилия",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "Тегеран",
+      "object": "Иран",
+      "object_candidates": "Белоруссия, Арканзас, Родезия, Виктория, Югославия, Саксония, Танзания, Сербия, Малайзия, Иран",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Квебек",
+      "object": "Квебек",
+      "object_candidates": "Нигерия, Бельгия, Телангана, Ботсвана, Дубай, Азербайджан, Бразилия, Иран, Израиль, Квебек",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "Прага",
+      "object": "Чехословакия",
+      "object_candidates": "Белиз, Ирак, Тоскана, Китайская Республика, Эфиопия, Кувейт, Прованс, Судан, Алжир, Чехословакия",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "Дакка",
+      "object": "Бангладеш",
+      "object_candidates": "Алба, Киргизия, Вайоминг, Словения, Афганистан, Бавария, Канада, Руанда, Гана, Бангладеш",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "Брисбен",
+      "object": "Квинсленд",
+      "object_candidates": "Индонезия, Массачусетс, Зальцбург, Словакия, Сербия, Кувейт, Иран, Алба, Махараштра, Квинсленд",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "Хараре",
+      "object": "Зимбабве",
+      "object_candidates": "Марокко, Германия, Нигерия, Тасмания, Карнатака, Австралия, Гессен, Белоруссия, Богемия, Зимбабве",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "Экс-ан-Прованс",
+      "object": "Прованс",
+      "object_candidates": "Республика Гаити, Керала, Камбоджа, Уругвай, Панама, Турция, Чад, Тоскана, Айова, Прованс",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "Монровия",
+      "object": "Либерия",
+      "object_candidates": "Гуджарат, Англия, Танзания, Белиз, Азербайджан, Нор, Судан, Кипр, Франция, Либерия",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "Берн",
+      "object": "Швейцария",
+      "object_candidates": "Дания, Мексика, Франция, Бутан, Англия, Индонезия, Онтарио, Аляска, Швеция, Швейцария",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Аддис-Абеба",
+      "object": "Эфиопия",
+      "object_candidates": "Маврикий, Польша, Зальцбург, Непал, Венгрия, Сенегал, Бутан, Афганистан, Оман, Эфиопия",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "Загреб",
+      "object": "Хорватия",
+      "object_candidates": "Португалия, Непал, Бахрейн, Айова, Бихар, Белоруссия, Гуандун, Тасмания, Таиланд, Хорватия",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "Пномпень",
+      "object": "Камбоджа",
+      "object_candidates": "Боливия, Чехословакия, Япония, Республика Косово, Лестершир, Узбекистан, Аляска, Бруней, Бангладеш, Камбоджа",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "Душанбе",
+      "object": "Таджикистан",
+      "object_candidates": "Бангладеш, Телангана, Филиппины, Куба, Гессен, Бавария, Сабах, Арканзас, Тоскана, Таджикистан",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "Лансинг",
+      "object": "Мичиган",
+      "object_candidates": "Сицилия, Уэльс, Индия, Богемия, Уганда, Кипр, Бруней, Латвия, Филиппины, Мичиган",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "Кучинг",
+      "object": "Саравак",
+      "object_candidates": "Королевство Англия, Ливия, Боливия, Непал, Эн, Франция, Айдахо, Тасмания, Словакия, Саравак",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "Манила",
+      "object": "Филиппины",
+      "object_candidates": "Чили, Гана, Массачусетс, Мексика, Дубай, Шотландия, Венесуэла, Мэриленд, Украина, Филиппины",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "Вестминстер",
+      "object": "Королевство Англия",
+      "object_candidates": "Литва, Чили, Сицилия, Тасмания, Финляндия, Гватемала, Нигерия, Кения, Арагон, Королевство Англия",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Кито",
+      "object": "Эквадор",
+      "object_candidates": "Белиз, Таиланд, Сабах, Хорватия, Карнатака, Китайская Республика, Калифорния, Бразилия, Казахстан, Эквадор",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "Лестер",
+      "object": "Лестершир",
+      "object_candidates": "Квебек, Словения, Аргентина, Айова, Албания, Белоруссия, Чехословакия, Саравак, Финляндия, Лестершир",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "Куньмин",
+      "object": "Юньнань",
+      "object_candidates": "Бихар, Шотландия, Керала, Алба, Норвегия, Гондурас, Калифорния, Виктория, Миннесота, Юньнань",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "Манагуа",
+      "object": "Никарагуа",
+      "object_candidates": "Крит, Канада, Гавайи, Мексика, Гуандун, Венгрия, Арканзас, Фиджи, Замбия, Никарагуа",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "Сукре",
+      "object": "Боливия",
+      "object_candidates": "Пенсильвания, Сербия, Ливия, Алба, Зимбабве, Тунис, Египет, Уругвай, Таиланд, Боливия",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "Гонолулу",
+      "object": "Гавайи",
+      "object_candidates": "Белиз, Словения, Керала, Франция, Виктория, Альберта, Манитоба, Калифорния, Сенегал, Гавайи",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "Вьентьян",
+      "object": "Лаос",
+      "object_candidates": "Гвинея, Массачусетс, Грузия, Прованс, Сардиния, Чад, Ливия, Колорадо, Греция, Лаос",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "Чэнду",
+      "object": "Сычуань",
+      "object_candidates": "Иудейское царство, Алба, Бенин, Руанда, Уганда, Гоа, Польша, Мичиган, Канада, Сычуань",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "Сарагоса",
+      "object": "Арагон",
+      "object_candidates": "Телангана, Черногория, Турция, Юта, Канзас, Люксембург, Бутан, Мексика, Украина, Арагон",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "Оксфорд",
+      "object": "Оксфордшир",
+      "object_candidates": "Финляндия, Лестершир, Республика Гаити, Алба, Польша, Намибия, Израиль, Бангладеш, Аляска, Оксфордшир",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "Чандигарх",
+      "object": "Харьяна",
+      "object_candidates": "Иран, Бразилия, Манитоба, Пьемонт, Малави, Киргизия, Замбия, Армения, Камбоджа, Харьяна",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "Ниамей",
+      "object": "Нигер",
+      "object_candidates": "Арагон, Габон, Венесуэла, Пьемонт, Белиз, Иран, Гвинея, Казахстан, Россия, Нигер",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "Доха",
+      "object": "Катар",
+      "object_candidates": "Узбекистан, Мальта, Бутан, Индиана, Словакия, Крит, Япония, Пенджаб, Англия, Катар",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Хараре",
+      "object": "Родезия",
+      "object_candidates": "Румыния, Гуандун, Фиджи, Черногория, Малайзия, Канзас, Ирак, Марокко, Хорватия, Родезия",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "Апиа",
+      "object": "Самоа",
+      "object_candidates": "Королевство Англия, Бангладеш, Айдахо, Финляндия, Камбоджа, Марокко, Боливия, Гвинея, Белоруссия, Самоа",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "Братислава",
+      "object": "Словакия",
+      "object_candidates": "Наварра, Танзания, Айдахо, Чад, Мичиган, Ирландия, Индонезия, Алба, Япония, Словакия",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "Кота-Кинабалу",
+      "object": "Сабах",
+      "object_candidates": "Тасмания, Оклахома, Фландрия, Марокко, Нор, Габон, Азербайджан, Сенегал, Хорватия, Сабах",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "Ташкент",
+      "object": "Узбекистан",
+      "object_candidates": "Югославия, Франция, Республика Гаити, Мичиган, Норвегия, Афганистан, Пенсильвания, Альберта, Литва, Узбекистан",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "Додома",
+      "object": "Танзания",
+      "object_candidates": "Канзас, Бангладеш, Нор, Хорватия, Колорадо, Квебек, Руанда, Иордания, Азербайджан, Танзания",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "Тирана",
+      "object": "Албания",
+      "object_candidates": "Керала, Прованс, Нигерия, Ливия, Фландрия, Замбия, Сычуань, Белоруссия, Сербия, Албания",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Кампала",
+      "object": "Уганда",
+      "object_candidates": "Латвия, Сирия, Россия, Швейцария, Теннесси, Таиланд, Словакия, Харьяна, Ботсвана, Уганда",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "Ханой",
+      "object": "Вьетнам",
+      "object_candidates": "Австрия, Оман, Гватемала, Йемен, Бенин, Узбекистан, Дания, Нормандия, Каталония, Вьетнам",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Аден",
+      "object": "Йемен",
+      "object_candidates": "Перу, Лаос, Алба, Нормандия, Россия, Самоа, Израиль, Никарагуа, Богемия, Йемен",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "Лусака",
+      "object": "Замбия",
+      "object_candidates": "Люксембург, Тасмания, Азербайджан, Йемен, Эстония, Португалия, Кения, Гоа, Индонезия, Замбия",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "Ереван",
+      "object": "Армения",
+      "object_candidates": "Мальта, Оксфордшир, Колорадо, Ирак, Египет, Самоа, Тоскана, Сирия, Лестершир, Армения",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "Эль-Кувейт",
+      "object": "Кувейт",
+      "object_candidates": "Армения, Фландрия, Саксония, Бразилия, Йемен, Малайзия, Япония, Гватемала, Узбекистан, Кувейт",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "Порт-Луи",
+      "object": "Маврикий",
+      "object_candidates": "Тоскана, Теннесси, Гватемала, Иордания, Словакия, Харьяна, Саксония, Габон, Колорадо, Маврикий",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "Аккра",
+      "object": "Гана",
+      "object_candidates": "Вайоминг, Калифорния, Бенин, Нидерланды, Саравак, Иран, Канзас, Бангладеш, Швеция, Гана",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "Джайпур",
+      "object": "Раджастхан",
+      "object_candidates": "Англия, Непал, Кувейт, Лаос, Литва, Таиланд, Армения, Бенин, Россия, Раджастхан",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "Минск",
+      "object": "Белоруссия",
+      "object_candidates": "Финляндия, Латвия, Гренландия, Словения, Альберта, Бруней, Германия, Нормандия, Квебек, Белоруссия",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Де-Мойн",
+      "object": "Айова",
+      "object_candidates": "Пенджаб, Югославия, Мадагаскар, Сардиния, Лестершир, Эстония, Бахрейн, Малави, Албания, Айова",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "Патна",
+      "object": "Бихар",
+      "object_candidates": "Канада, Колорадо, Литва, Оман, Панама, Бразилия, Карнатака, Бранденбург, Афганистан, Бихар",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "Батон-Руж",
+      "object": "Луизиана",
+      "object_candidates": "Иудейское царство, Йемен, Дания, Хорватия, Латвия, Швейцария, Онтарио, Бранденбург, Боливия, Луизиана",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "Джокьякарта",
+      "object": "Индонезия",
+      "object_candidates": "Индиана, Гондурас, Бахрейн, Танзания, Богемия, Уругвай, Руанда, Квинсленд, Намибия, Индонезия",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "Нур-Султан",
+      "object": "Казахстан",
+      "object_candidates": "Сабах, Эфиопия, Панама, Миннесота, Швеция, Хорватия, Португалия, Армения, Габон, Казахстан",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "Висбаден",
+      "object": "Гессен",
+      "object_candidates": "Карнатака, Азербайджан, Малайзия, Лаос, Бургундия, Пенсильвания, Белоруссия, Пьемонт, Виктория, Гессен",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "Дижон",
+      "object": "Бургундия",
+      "object_candidates": "Прованс, Хорватия, Миннесота, Люксембург, Албания, Нигерия, Кения, Гавайи, Пьемонт, Бургундия",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "Руан",
+      "object": "Нормандия",
+      "object_candidates": "Швейцария, Латвия, Юньнань, Мичиган, Альберта, Куба, Тунис, Индонезия, Бельгия, Нормандия",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "Оклахома-Сити",
+      "object": "Оклахома",
+      "object_candidates": "Колорадо, Зимбабве, Казахстан, Массачусетс, Эстония, Канада, Мексика, Лестершир, Оксфордшир, Оклахома",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "Литл-Рок",
+      "object": "Арканзас",
+      "object_candidates": "Китайская Республика, Бавария, Вьетнам, Гавайи, Алжир, Боливия, Ангола, Литва, Аляска, Арканзас",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "Нджамена",
+      "object": "Чад",
+      "object_candidates": "Руанда, Сенегал, Сомали, Словакия, Онтарио, Финляндия, Намибия, Республика Гаити, Нормандия, Чад",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "Амман",
+      "object": "Иордания",
+      "object_candidates": "Австралия, Прованс, Дания, Гватемала, Гондурас, Намибия, Техас, Сирия, Богемия, Иордания",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "Тривандрам",
+      "object": "Керала",
+      "object_candidates": "Иордания, Манитоба, Сомали, Хорватия, Флорида, Шотландия, Чад, Массачусетс, Люксембург, Керала",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "Бриджтаун",
+      "object": "Барбадос",
+      "object_candidates": "Теннесси, Италия, Гана, Аляска, Королевство Англия, Сабах, Таджикистан, Канада, Оксфордшир, Барбадос",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "Дубай",
+      "object": "Дубай",
+      "object_candidates": "Люксембург, Уэльс, Тунис, Австралия, Пенджаб, Армения, Португалия, Мальта, Телангана, Дубай",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Потсдам",
+      "object": "Бранденбург",
+      "object_candidates": "Эквадор, Наварра, Куба, Коннектикут, Венесуэла, Фландрия, Дания, Юта, Арагон, Бранденбург",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "Антананариву",
+      "object": "Мадагаскар",
+      "object_candidates": "Флорида, Айова, Королевство Англия, Оман, Франция, Гана, Таиланд, Швейцария, Украина, Мадагаскар",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "Бамако",
+      "object": "Мали",
+      "object_candidates": "Арагон, Массачусетс, Бургундия, Фиджи, Эстония, Малави, Чили, Фландрия, Пьемонт, Мали",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "Аннаполис",
+      "object": "Мэриленд",
+      "object_candidates": "Словакия, Тунис, Словения, Техас, Намибия, Флорида, Норвегия, Индия, Эстония, Мэриленд",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "Хайдарабад",
+      "object": "Телангана",
+      "object_candidates": "Белоруссия, Алжир, Наварра, Англия, Лаос, Литва, Керала, Ливан, Харьяна, Телангана",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "Чандигарх",
+      "object": "Пенджаб",
+      "object_candidates": "Гуджарат, Самоа, Махараштра, Ирак, Португалия, Малави, Фландрия, Бавария, Индонезия, Пенджаб",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "Бурк-ан-Брес",
+      "object": "Эн",
+      "object_candidates": "Австрия, Мэриленд, Словакия, Бутан, Гоа, Вьетнам, Польша, Гондурас, Аляска, Эн",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "Сува",
+      "object": "Фиджи",
+      "object_candidates": "Айова, Виктория, Аргентина, Бавария, Гуандун, Индия, Тоскана, Прованс, Раджастхан, Фиджи",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "Гаррисберг",
+      "object": "Пенсильвания",
+      "object_candidates": "Канзас, Венесуэла, Италия, Бихар, Раджастхан, Лаос, Ливия, Словения, Манитоба, Пенсильвания",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "Сана",
+      "object": "Йемен",
+      "object_candidates": "Сицилия, Бихар, Норвегия, Альберта, Греция, Ливан, Фиджи, Бенин, Харьяна, Йемен",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "Панаджи",
+      "object": "Гоа",
+      "object_candidates": "Ливия, Руанда, Ирак, Оклахома, Перу, Гренландия, Греция, Киргизия, Румыния, Гоа",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "Бандар-Сери-Бегаван",
+      "object": "Бруней",
+      "object_candidates": "Самоа, Оксфордшир, Ливия, Мальта, Гессен, Хорватия, Нидерланды, Айдахо, Габон, Бруней",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "Шайенн",
+      "object": "Вайоминг",
+      "object_candidates": "Кипр, Самоа, Гвинея, Германия, Манитоба, Раджастхан, Венгрия, Ангола, Украина, Вайоминг",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "Памплона",
+      "object": "Наварра",
+      "object_candidates": "Иордания, Гондурас, Белоруссия, Гватемала, Бургундия, Чили, Крит, Керала, Гоа, Наварра",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "Либревиль",
+      "object": "Габон",
+      "object_candidates": "Боливия, Украина, Грузия, Телангана, Фландрия, Зальцбург, Англия, Канзас, Вьетнам, Габон",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "Приштина",
+      "object": "Республика Косово",
+      "object_candidates": "Нигер, Испания, Венгрия, Флорида, Белоруссия, Керала, Филиппины, Ботсвана, Сенегал, Республика Косово",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "Нуук",
+      "object": "Гренландия",
+      "object_candidates": "Юньнань, Ангола, Коннектикут, Дубай, Румыния, Квебек, Венесуэла, Чад, Германия, Гренландия",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "Уинчестер",
+      "object": "Королевство Англия",
+      "object_candidates": "Греция, Япония, Пакистан, Индия, Гана, Чехословакия, Калифорния, Уэльс, Каталония, Королевство Англия",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Белград",
+      "object": "Югославия",
+      "object_candidates": "Бутан, Италия, Республика Косово, Бавария, Наварра, Крит, Замбия, Австралия, Литва, Югославия",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "Хартфорд",
+      "object": "Коннектикут",
+      "object_candidates": "Украина, Сабах, Китайская Республика, Нидерланды, Колорадо, Норвегия, Малави, Манитоба, Кувейт, Коннектикут",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "Лима",
+      "object": "Перу",
+      "object_candidates": "Венесуэла, Узбекистан, Вайоминг, Сабах, Швейцария, Маврикий, Каталония, Йемен, Массачусетс, Перу",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "Конакри",
+      "object": "Гвинея",
+      "object_candidates": "Оман, Франция, Республика Гаити, Канада, Намибия, Руанда, Габон, Айова, Бразилия, Гвинея",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "Джуно",
+      "object": "Аляска",
+      "object_candidates": "Шотландия, Нор, Оксфордшир, Австралия, Бихар, Танзания, Индия, Пенджаб, Гессен, Аляска",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "Бельмопан",
+      "object": "Белиз",
+      "object_candidates": "Индия, Китайская Республика, Англия, Эквадор, Нормандия, Польша, Мичиган, Гвинея, Мадагаскар, Белиз",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "Сакраменто",
+      "object": "Калифорния",
+      "object_candidates": "Бруней, Мозамбик, Словакия, Квебек, Австралия, Израиль, Пенджаб, Чили, Швеция, Калифорния",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "Лондонский Сити",
+      "object": "Королевство Англия",
+      "object_candidates": "Таиланд, Белиз, Айова, Катар, Флорида, Венгрия, Гана, Сардиния, Иудейское царство, Королевство Англия",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Кигали",
+      "object": "Руанда",
+      "object_candidates": "Пенсильвания, Аргентина, Канзас, Габон, Бихар, Наварра, Бутан, Нормандия, Тасмания, Руанда",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "Брюссель",
+      "object": "Бельгия",
+      "object_candidates": "Лаос, Оклахома, Китайская Республика, Непал, Италия, Наварра, Франция, Гватемала, Гоа, Бельгия",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Тхимпху",
+      "object": "Бутан",
+      "object_candidates": "Индия, Дания, Вьетнам, Венгрия, Гессен, Малави, Чехословакия, Тасмания, Люксембург, Бутан",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "Нафплион",
+      "object": "Греция",
+      "object_candidates": "Турция, Телангана, Либерия, Англия, Тасмания, Гана, Бразилия, Нигерия, Испания, Греция",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Алба-Юлия",
+      "object": "Алба",
+      "object_candidates": "Сомали, Гессен, Швеция, Индонезия, Оман, Украина, Тасмания, Греция, Польша, Алба",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "Бойсе",
+      "object": "Айдахо",
+      "object_candidates": "Руанда, Люксембург, Родезия, Оксфордшир, Белоруссия, Украина, Ирак, Панама, Флорида, Айдахо",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "Нашвилл",
+      "object": "Теннесси",
+      "object_candidates": "Нигерия, Бавария, Квебек, Бангладеш, Нидерланды, Королевство Англия, Пенджаб, Эфиопия, Ливан, Теннесси",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "Арлон",
+      "object": "Люксембург",
+      "object_candidates": "Греция, Ботсвана, Оклахома, Нормандия, Каталония, Иудейское царство, Барбадос, Карнатака, Пакистан, Люксембург",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "Зальцбург",
+      "object": "Зальцбург",
+      "object_candidates": "Каталония, Калифорния, Гана, Танзания, Нигерия, Уэльс, Нор, Телангана, Гуджарат, Зальцбург",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "Остин",
+      "object": "Техас",
+      "object_candidates": "Зимбабве, Афганистан, Бихар, Таджикистан, Аргентина, Квебек, Луизиана, Украина, Индиана, Техас",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "Сент-Пол",
+      "object": "Миннесота",
+      "object_candidates": "Саксония, Гессен, Панама, Юта, Либерия, Югославия, Словакия, Дания, Чехословакия, Миннесота",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "Маскат",
+      "object": "Оман",
+      "object_candidates": "Болгария, Норвегия, Танзания, Калифорния, Англия, Бахрейн, Уганда, Бруней, Наварра, Оман",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "Таллахасси",
+      "object": "Флорида",
+      "object_candidates": "Ирак, Сабах, Венгрия, Азербайджан, Канада, Латвия, Бахрейн, Керала, Сербия, Флорида",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "Тбилиси",
+      "object": "Грузия",
+      "object_candidates": "Кения, Индия, Таиланд, Чехословакия, Индиана, Бахрейн, Сирия, Альберта, Фиджи, Грузия",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "Брюссель",
+      "object": "Фландрия",
+      "object_candidates": "Керала, Ангола, Хорватия, Юньнань, Алжир, Канада, Квебек, Перу, Массачусетс, Фландрия",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "Хеврон",
+      "object": "Иудейское царство",
+      "object_candidates": "Сардиния, Чили, Гватемала, Бавария, Тоскана, Саксония, Боливия, Гавайи, Онтарио, Иудейское царство",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "Лилль",
+      "object": "Нор",
+      "object_candidates": "Харьяна, Эстония, Австрия, Колорадо, Барбадос, Зимбабве, Маврикий, Саксония, Белиз, Нор",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "Топика",
+      "object": "Канзас",
+      "object_candidates": "Армения, Югославия, Испания, Австрия, Куба, Ангола, Габон, Камбоджа, Афганистан, Канзас",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "Сантьяго-де-Компостела",
+      "object": "Галисия",
+      "object_candidates": "Ливия, Зальцбург, Норвегия, Тунис, Телангана, Аляска, Раджастхан, Белиз, Тоскана, Галисия",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

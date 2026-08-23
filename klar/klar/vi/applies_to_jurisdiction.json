@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "Quốc gia nào đặt <subject> là thuật ngữ pháp lý? Câu trả lời là: <mask>.",
+    "Thuật ngữ pháp lý <subject> áp dụng ở đâu? Câu trả lời là: <mask>.",
+    "Thuật ngữ pháp lý <subject> được áp dụng ở đâu? Câu trả lời là: <mask>.",
+    "Thực thể pháp lý nào sử dụng <subject>? Câu trả lời là: <mask>.",
+    "Thuật ngữ pháp lý <subject> được công nhận ở khu vực nào? Câu trả lời là: <mask>.",
+    " Khu vực pháp lý áp dụng <subject> là <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Tổng thống Pháp",
+      "object": "Pháp",
+      "object_candidates": "Somalia, Thụy Sĩ, Romania, Tân Gia Ba, Na Uy, Cuba, Litva, Đài Loan, Monaco, Pháp",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "Thủ tướng Canada",
+      "object": "Canada",
+      "object_candidates": "Ukraina, México, Somalia, Monaco, Thổ Nhĩ Kỳ, Cộng hòa Ireland, Nhật Bản, Iraq, Hà Lan, Canada",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Đảng Lao động Úc",
+      "object": "Úc",
+      "object_candidates": "Bồ Đào Nha, Canada, Áo, Libya, Na Uy, Monaco, Ý, Phần Lan, Cuba, Úc",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Tổng thống Mexico",
+      "object": "México",
+      "object_candidates": "Jamaica, Cuba, Malaysia, Thụy Sĩ, Bulgaria, Ý, Đan Mạch, Canada, Pháp, México",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Thủ tướng Đức",
+      "object": "Đức",
+      "object_candidates": "Bulgaria, Na Uy, Libya, Croatia, Bồ Đào Nha, Iran, Đan Mạch, Belarus, Philippines, Đức",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Luật cơ bản của Cộng hòa Liên bang Đức",
+      "object": "Đức",
+      "object_candidates": "Thụy Sĩ, Việt Nam, Albania, Bồ Đào Nha, Romania, Úc, Áo, Litva, Iraq, Đức",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Quốc hội Canada",
+      "object": "Canada",
+      "object_candidates": "Bulgaria, Na Uy, Ý, Nhật Bản, Cuba, Bồ Đào Nha, Haiti, Việt Nam, Belarus, Canada",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Lok Sabha",
+      "object": "Ấn Độ",
+      "object_candidates": "Pháp, Áo, Nhật Bản, Tân Gia Ba, Pakistan, Ukraina, Jamaica, Nga, Argentina, Ấn Độ",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "Knesset",
+      "object": "Israel",
+      "object_candidates": "Việt Nam, Albania, Libya, Philippines, Đức, Croatia, Thụy Điển, Ma Cao, Iraq, Israel",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Thủ tướng Nhật Bản",
+      "object": "Nhật Bản",
+      "object_candidates": "Đan Mạch, Thổ Nhĩ Kỳ, México, Thụy Điển, Croatia, Ý, Hà Lan, Đài Loan, Ma Cao, Nhật Bản",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Tổng thống Ireland",
+      "object": "Cộng hòa Ireland",
+      "object_candidates": "Canada, Belarus, Hà Lan, Litva, México, Thụy Điển, Ấn Độ, Pakistan, Libya, Cộng hòa Ireland",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Đô la Úc",
+      "object": "Úc",
+      "object_candidates": "Haiti, Đài Loan, Hà Lan, Ma Cao, Romania, Litva, Malaysia, Đan Mạch, Jamaica, Úc",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Tổng thống Pakistan",
+      "object": "Pakistan",
+      "object_candidates": "Việt Nam, Thụy Điển, Bolivia, Tân Gia Ba, Thổ Nhĩ Kỳ, Đan Mạch, Bồ Đào Nha, Canada, Iran, Pakistan",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Tổng thống Nga",
+      "object": "Nga",
+      "object_candidates": "Việt Nam, Ấn Độ, Cuba, Pháp, Romania, Phần Lan, Canada, Tân Gia Ba, Pakistan, Nga",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Thủ tướng Áo",
+      "object": "Áo",
+      "object_candidates": "Tây Ban Nha, Philippines, Bồ Đào Nha, Bolivia, Ấn Độ, Belarus, Romania, Canada, Nhật Bản, Áo",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Riksdag",
+      "object": "Thụy Điển",
+      "object_candidates": "Albania, Tân Gia Ba, Ukraina, Việt Nam, Hà Lan, Malaysia, Pháp, Monaco, Phần Lan, Thụy Điển",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Quốc kỳ Tây Ban Nha",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Bolivia, México, Na Uy, Iraq, Phần Lan, Argentina, Canada, Hà Lan, Việt Nam, Tây Ban Nha",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Quốc kỳ Pháp",
+      "object": "Pháp",
+      "object_candidates": "Pakistan, Haiti, Áo, Tân Gia Ba, Nga, Litva, Belarus, Việt Nam, Đức, Pháp",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Tổng thống Ukraina",
+      "object": "Ukraina",
+      "object_candidates": "Hà Lan, México, Israel, Belarus, Thổ Nhĩ Kỳ, Tây Ban Nha, Litva, Úc, Na Uy, Ukraina",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Thủ tướng Pháp",
+      "object": "Pháp",
+      "object_candidates": "Iraq, Pakistan, Bồ Đào Nha, Thổ Nhĩ Kỳ, Philippines, Croatia, Hà Lan, Tân Gia Ba, Ấn Độ, Pháp",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Quốc kỳ Đan Mạch",
+      "object": "Đan Mạch",
+      "object_candidates": "Tây Ban Nha, Nhật Bản, Iraq, Na Uy, Bồ Đào Nha, Israel, Tân Gia Ba, Thổ Nhĩ Kỳ, Canada, Đan Mạch",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Quốc hội Liên bang Đức",
+      "object": "Đức",
+      "object_candidates": "Somalia, Cộng hòa Ireland, México, Thụy Điển, Nhật Bản, Libya, Canada, Ấn Độ, Israel, Đức",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Quốc kỳ Cộng hòa Ireland",
+      "object": "Cộng hòa Ireland",
+      "object_candidates": "Litva, Philippines, Bồ Đào Nha, Cuba, Pháp, Bolivia, Monaco, Iran, Pakistan, Cộng hòa Ireland",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Tổng thống Áo",
+      "object": "Áo",
+      "object_candidates": "Nga, Úc, Việt Nam, Litva, Israel, Pakistan, Jamaica, Thổ Nhĩ Kỳ, Phần Lan, Áo",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Thủ tướng Pakistan",
+      "object": "Pakistan",
+      "object_candidates": "Malaysia, Argentina, Úc, Na Uy, Việt Nam, Jamaica, Tân Gia Ba, Israel, Iran, Pakistan",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Tổng thống Đức",
+      "object": "Đức",
+      "object_candidates": "Bolivia, Litva, Ma Cao, Cuba, Na Uy, Monaco, Belarus, Bulgaria, Nga, Đức",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Thủ tướng Thụy Điển",
+      "object": "Thụy Điển",
+      "object_candidates": "Tân Gia Ba, Cộng hòa Ireland, Canada, Đức, Hà Lan, Thụy Sĩ, Phần Lan, Tây Ban Nha, Đan Mạch, Thụy Điển",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Hạ viện Pháp",
+      "object": "Pháp",
+      "object_candidates": "Thổ Nhĩ Kỳ, Thụy Sĩ, Cuba, México, Đan Mạch, Malaysia, Na Uy, Đài Loan, Áo, Pháp",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "Quốc kỳ Thụy Sĩ",
+      "object": "Thụy Sĩ",
+      "object_candidates": "Philippines, Bolivia, Nga, Jamaica, Áo, Bồ Đào Nha, Cộng hòa Ireland, Iran, Belarus, Thụy Sĩ",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Thủ tướng Nga",
+      "object": "Nga",
+      "object_candidates": "Haiti, Ukraina, Malaysia, Thụy Sĩ, Tây Ban Nha, Bồ Đào Nha, Ý, Jamaica, Cuba, Nga",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Quốc kỳ Singapore",
+      "object": "Tân Gia Ba",
+      "object_candidates": "Bồ Đào Nha, Bolivia, Đức, Ma Cao, Somalia, Việt Nam, Áo, Đan Mạch, Bulgaria, Tân Gia Ba",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "Thượng viện Pháp",
+      "object": "Pháp",
+      "object_candidates": "Phần Lan, Đan Mạch, Bồ Đào Nha, Somalia, Pakistan, Malaysia, Cuba, Iran, Đài Loan, Pháp",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "Thủ tướng Ukraina",
+      "object": "Ukraina",
+      "object_candidates": "Israel, Nga, Cuba, Phần Lan, Thổ Nhĩ Kỳ, Pháp, Somalia, Monaco, Việt Nam, Ukraina",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Quốc kỳ Nga",
+      "object": "Nga",
+      "object_candidates": "Pháp, Ma Cao, Belarus, Bulgaria, Ấn Độ, Úc, Cộng hòa Ireland, Thụy Sĩ, Ý, Nga",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Quốc kỳ Canada",
+      "object": "Canada",
+      "object_candidates": "Bolivia, Ma Cao, Phần Lan, Libya, Haiti, Ấn Độ, Belarus, Úc, Iran, Canada",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Tổng thống România",
+      "object": "Romania",
+      "object_candidates": "Iran, Pháp, México, Ý, Đài Loan, Malaysia, Cuba, Haiti, Cộng hòa Ireland, Romania",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Quốc kỳ Hà Lan",
+      "object": "Hà Lan",
+      "object_candidates": "Thụy Điển, Somalia, Tân Gia Ba, Áo, Bolivia, Bồ Đào Nha, Belarus, Iraq, Úc, Hà Lan",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Thủ tướng Malaysia",
+      "object": "Malaysia",
+      "object_candidates": "Tây Ban Nha, Việt Nam, Iran, Israel, Litva, Phần Lan, Bulgaria, Bồ Đào Nha, Đan Mạch, Malaysia",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Quốc kỳ Jamaica",
+      "object": "Jamaica",
+      "object_candidates": "Croatia, Malaysia, Đức, Ý, Thụy Sĩ, Úc, Bulgaria, Tây Ban Nha, Monaco, Jamaica",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Quốc kỳ Argentina",
+      "object": "Argentina",
+      "object_candidates": "Jamaica, Na Uy, Hà Lan, Pháp, Litva, Israel, Úc, Ấn Độ, Bulgaria, Argentina",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Quốc kỳ Na Uy",
+      "object": "Na Uy",
+      "object_candidates": "Litva, Canada, Monaco, Iran, Đức, Úc, Thụy Điển, Áo, Đài Loan, Na Uy",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Đại hội Đại biểu Tây Ban Nha",
+      "object": "Tây Ban Nha",
+      "object_candidates": "Israel, Iraq, Nga, Litva, Philippines, Đan Mạch, Pakistan, Bolivia, Ukraina, Tây Ban Nha",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Thiên hoàng",
+      "object": "Nhật Bản",
+      "object_candidates": "Thụy Điển, Pakistan, Croatia, Litva, Thổ Nhĩ Kỳ, Philippines, Cộng hòa Ireland, Romania, Monaco, Nhật Bản",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Quốc kỳ Litva",
+      "object": "Litva",
+      "object_candidates": "Haiti, Thụy Sĩ, Nga, Israel, Malaysia, Bolivia, Hà Lan, Tây Ban Nha, Nhật Bản, Litva",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Quốc kỳ Bulgaria",
+      "object": "Bulgaria",
+      "object_candidates": "Monaco, Belarus, México, Albania, Thụy Điển, Ukraina, Pháp, Thổ Nhĩ Kỳ, Hà Lan, Bulgaria",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Tổng thống Iraq",
+      "object": "Iraq",
+      "object_candidates": "Iran, Thổ Nhĩ Kỳ, Haiti, Tân Gia Ba, Croatia, Malaysia, Phần Lan, Philippines, Việt Nam, Iraq",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Quốc kỳ Thổ Nhĩ Kỳ",
+      "object": "Thổ Nhĩ Kỳ",
+      "object_candidates": "Canada, Tân Gia Ba, Ma Cao, Nhật Bản, Iraq, Malaysia, Argentina, Thụy Điển, Bolivia, Thổ Nhĩ Kỳ",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Quốc kỳ Malaysia",
+      "object": "Malaysia",
+      "object_candidates": "Ma Cao, Bolivia, Thụy Sĩ, Belarus, Romania, Nga, Haiti, Jamaica, Na Uy, Malaysia",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Quốc kỳ Belarus",
+      "object": "Belarus",
+      "object_candidates": "Đan Mạch, Đức, Nga, México, Thụy Sĩ, Ấn Độ, Thụy Điển, Bulgaria, Ma Cao, Belarus",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Danh sách hiệu kỳ tại Cuba",
+      "object": "Cuba",
+      "object_candidates": "Romania, Cộng hòa Ireland, México, Đài Loan, Áo, Malaysia, Pakistan, Pháp, Ma Cao, Cuba",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Quốc kỳ Việt Nam",
+      "object": "Việt Nam",
+      "object_candidates": "Phần Lan, Pakistan, Ấn Độ, Tân Gia Ba, Úc, Romania, Belarus, Đài Loan, Monaco, Việt Nam",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Quốc kỳ Bolivia",
+      "object": "Bolivia",
+      "object_candidates": "Thụy Sĩ, Ấn Độ, Israel, Úc, Đài Loan, Romania, Nga, Pakistan, Phần Lan, Bolivia",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "Quốc kỳ Ấn Độ",
+      "object": "Ấn Độ",
+      "object_candidates": "Monaco, Đài Loan, Hà Lan, Thụy Điển, Libya, Croatia, Ma Cao, Somalia, Litva, Ấn Độ",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "Pataca Macau",
+      "object": "Ma Cao",
+      "object_candidates": "Haiti, México, Úc, Hà Lan, Bulgaria, Na Uy, Tân Gia Ba, Albania, Áo, Ma Cao",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "Quốc kỳ Monaco",
+      "object": "Monaco",
+      "object_candidates": "Thổ Nhĩ Kỳ, Đài Loan, Iran, Phần Lan, Ấn Độ, Đan Mạch, Belarus, Iraq, Libya, Monaco",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "Quốc kỳ Somalia",
+      "object": "Somalia",
+      "object_candidates": "Croatia, Tây Ban Nha, Thổ Nhĩ Kỳ, Malaysia, Bulgaria, Hà Lan, Pháp, Na Uy, Libya, Somalia",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Tổng thống Israel",
+      "object": "Israel",
+      "object_candidates": "Đức, Bồ Đào Nha, Litva, Bulgaria, Jamaica, Nhật Bản, Thổ Nhĩ Kỳ, Romania, Đài Loan, Israel",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Quốc kỳ Thụy Điển",
+      "object": "Thụy Điển",
+      "object_candidates": "Canada, Na Uy, Belarus, Litva, Việt Nam, Tây Ban Nha, Romania, Albania, Đài Loan, Thụy Điển",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Quốc kỳ Trung Hoa Dân Quốc",
+      "object": "Đài Loan",
+      "object_candidates": "Thụy Sĩ, Nhật Bản, Belarus, Litva, Việt Nam, Ma Cao, Ấn Độ, Haiti, Cộng hòa Ireland, Đài Loan",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Quốc kỳ Úc",
+      "object": "Úc",
+      "object_candidates": "Philippines, Iraq, Argentina, Ấn Độ, Bồ Đào Nha, Canada, Israel, Đức, Monaco, Úc",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Quốc kỳ Ukraina",
+      "object": "Ukraina",
+      "object_candidates": "Phần Lan, Thổ Nhĩ Kỳ, Đan Mạch, Ấn Độ, Đức, Áo, Cộng hòa Ireland, Israel, Bồ Đào Nha, Ukraina",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Tổng thống Belarus",
+      "object": "Belarus",
+      "object_candidates": "Somalia, Israel, Ấn Độ, Bulgaria, Thụy Sĩ, Nhật Bản, Argentina, Đan Mạch, Pháp, Belarus",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Quốc kỳ Haiti",
+      "object": "Haiti",
+      "object_candidates": "Cộng hòa Ireland, Monaco, Romania, Áo, Argentina, Việt Nam, Nhật Bản, Somalia, Bolivia, Haiti",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Quốc huy México",
+      "object": "México",
+      "object_candidates": "Litva, Cuba, Israel, Libya, Na Uy, Áo, Iran, Ma Cao, Thụy Điển, México",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Quốc kỳ Phần Lan",
+      "object": "Phần Lan",
+      "object_candidates": "Pháp, Canada, Bulgaria, Tây Ban Nha, Philippines, Đức, Belarus, Nga, Somalia, Phần Lan",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Quốc kỳ Croatia",
+      "object": "Croatia",
+      "object_candidates": "Đức, Bồ Đào Nha, Jamaica, Argentina, Malaysia, Na Uy, Canada, Somalia, Haiti, Croatia",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "Tổng thống Phần Lan",
+      "object": "Phần Lan",
+      "object_candidates": "Bulgaria, Iraq, Tân Gia Ba, Ý, Đài Loan, Croatia, Canada, Malaysia, Litva, Phần Lan",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Quốc kỳ Albania",
+      "object": "Albania",
+      "object_candidates": "Israel, Pakistan, Belarus, Somalia, Haiti, Thổ Nhĩ Kỳ, Thụy Điển, Thụy Sĩ, Đan Mạch, Albania",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Quốc kỳ Ý",
+      "object": "Ý",
+      "object_candidates": "Israel, Iran, Nhật Bản, Việt Nam, Thụy Điển, Đài Loan, Bolivia, Philippines, Phần Lan, Ý",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Quốc kỳ Đức",
+      "object": "Đức",
+      "object_candidates": "Nga, Thụy Điển, Philippines, Libya, Tây Ban Nha, Cộng hòa Ireland, Ấn Độ, Thụy Sĩ, Tân Gia Ba, Đức",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Quốc kỳ Libya",
+      "object": "Libya",
+      "object_candidates": "Úc, Bulgaria, Monaco, Pakistan, Malaysia, Haiti, Israel, Tân Gia Ba, Romania, Libya",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Quốc kỳ Philippines",
+      "object": "Philippines",
+      "object_candidates": "Hà Lan, Libya, Israel, Belarus, Argentina, Cuba, Đài Loan, Áo, Thụy Điển, Philippines",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "Đức",
+      "object_candidates": "Canada, Pakistan, Nhật Bản, Ý, Somalia, Haiti, Ukraina, Phần Lan, Pháp, Đức",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Tổng thống Iran",
+      "object": "Iran",
+      "object_candidates": "Nga, Ý, Thụy Sĩ, Úc, Croatia, Tây Ban Nha, Albania, Tân Gia Ba, Ấn Độ, Iran",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Quốc kỳ Pakistan",
+      "object": "Pakistan",
+      "object_candidates": "Tây Ban Nha, Thụy Điển, Tân Gia Ba, Bolivia, Haiti, Canada, Bồ Đào Nha, Đài Loan, Litva, Pakistan",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Quốc kỳ Bồ Đào Nha",
+      "object": "Bồ Đào Nha",
+      "object_candidates": "Đức, Cuba, Úc, Cộng hòa Ireland, Albania, Tân Gia Ba, Phần Lan, Israel, Nga, Bồ Đào Nha",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Quốc kỳ Hy Lạp",
+      "object": "Hy Lạp",
+      "object_candidates": "Iraq, Áo, Croatia, Israel, Canada, México, Ấn Độ, Hà Lan, Belarus, Hy Lạp",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Quốc kỳ México",
+      "object": "México",
+      "object_candidates": "Nga, Tân Gia Ba, Tây Ban Nha, Đài Loan, Albania, Iraq, Hà Lan, Cộng hòa Ireland, Ý, México",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Quốc kỳ Nhật Bản",
+      "object": "Nhật Bản",
+      "object_candidates": "Ấn Độ, Thổ Nhĩ Kỳ, Pháp, Phần Lan, Nga, México, Belarus, Romania, Tân Gia Ba, Nhật Bản",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

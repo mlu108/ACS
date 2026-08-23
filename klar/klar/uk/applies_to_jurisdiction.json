@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "Яка країна має <subject> як юридичний термін? Відповідь: <mask>.",
+    "В якій юрисдикції <subject> є юридичним терміном? Відповідь: <mask>.",
+    "Де застосовується юридичний термін <subject>? Відповідь: <mask>.",
+    "Яка юридична особа використовує <subject>? Відповідь: <mask>.",
+    "В якому регіоні <subject> є визнаним юридичним терміном? Відповідь: <mask>.",
+    " Юрисдикція"
+  ],
+  "samples": [
+    {
+      "subject": "Президент Франції",
+      "object": "Франція",
+      "object_candidates": "Сомалі, Швейцарія, Румунія, Сінгапур, Норвегія, Куба, Литва, Республіка Китай, Монако, Франція",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "Прем'єр-міністр Канади",
+      "object": "Канада",
+      "object_candidates": "Україна, Мексика, Сомалі, Монако, Туреччина, Ірландія, Японія, Ірак, Нідерланди, Канада",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Лейбористська партія",
+      "object": "Австралія",
+      "object_candidates": "Португалія, Канада, Австрія, Лівія, Норвегія, Монако, Італія, Фінляндія, Куба, Австралія",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "президент Мексики",
+      "object": "Мексика",
+      "object_candidates": "Ямайка, Куба, Малайзія, Швейцарія, Болгарія, Італія, Данія, Канада, Франція, Мексика",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "канцлер Німеччини",
+      "object": "Німеччина",
+      "object_candidates": "Болгарія, Норвегія, Лівія, Хорватія, Португалія, Іран, Данія, Білорусь, Філіппіни, Німеччина",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Основний закон Німеччини",
+      "object": "Німеччина",
+      "object_candidates": "Швейцарія, В'єтнам, Албанія, Португалія, Румунія, Австралія, Австрія, Литва, Ірак, Німеччина",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Парламент Канади",
+      "object": "Канада",
+      "object_candidates": "Болгарія, Норвегія, Італія, Японія, Куба, Португалія, Гаїті, В'єтнам, Білорусь, Канада",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Лок Сабха",
+      "object": "Індія",
+      "object_candidates": "Франція, Австрія, Японія, Сінгапур, Пакистан, Україна, Ямайка, Росія, Аргентина, Індія",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "Кнесет",
+      "object": "Ізраїль",
+      "object_candidates": "В'єтнам, Албанія, Лівія, Філіппіни, Німеччина, Хорватія, Швеція, Аоминь, Ірак, Ізраїль",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "прем'єр-міністр Японії",
+      "object": "Японія",
+      "object_candidates": "Данія, Туреччина, Мексика, Швеція, Хорватія, Італія, Нідерланди, Республіка Китай, Аоминь, Японія",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "президент Ірландії",
+      "object": "Ірландія",
+      "object_candidates": "Канада, Білорусь, Нідерланди, Литва, Мексика, Швеція, Індія, Пакистан, Лівія, Ірландія",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "австралійський долар",
+      "object": "Австралія",
+      "object_candidates": "Гаїті, Республіка Китай, Нідерланди, Аоминь, Румунія, Литва, Малайзія, Данія, Ямайка, Австралія",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Президент Пакистану",
+      "object": "Пакистан",
+      "object_candidates": "В'єтнам, Швеція, Болівія, Сінгапур, Туреччина, Данія, Португалія, Канада, Іран, Пакистан",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "президент Російської Федерації",
+      "object": "Росія",
+      "object_candidates": "В'єтнам, Індія, Куба, Франція, Румунія, Фінляндія, Канада, Сінгапур, Пакистан, Росія",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "федеральний канцлер Австрії",
+      "object": "Австрія",
+      "object_candidates": "Іспанія, Філіппіни, Португалія, Болівія, Індія, Білорусь, Румунія, Канада, Японія, Австрія",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Риксдаг",
+      "object": "Швеція",
+      "object_candidates": "Албанія, Сінгапур, Україна, В'єтнам, Нідерланди, Малайзія, Франція, Монако, Фінляндія, Швеція",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Прапор Іспанії",
+      "object": "Іспанія",
+      "object_candidates": "Болівія, Мексика, Норвегія, Ірак, Фінляндія, Аргентина, Канада, Нідерланди, В'єтнам, Іспанія",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Прапор Франції",
+      "object": "Франція",
+      "object_candidates": "Пакистан, Гаїті, Австрія, Сінгапур, Росія, Литва, Білорусь, В'єтнам, Німеччина, Франція",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Президент України",
+      "object": "Україна",
+      "object_candidates": "Нідерланди, Мексика, Ізраїль, Білорусь, Туреччина, Іспанія, Литва, Австралія, Норвегія, Україна",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Прем'єр-міністр Франції",
+      "object": "Франція",
+      "object_candidates": "Ірак, Пакистан, Португалія, Туреччина, Філіппіни, Хорватія, Нідерланди, Сінгапур, Індія, Франція",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Прапор Дании фото",
+      "object": "Данія",
+      "object_candidates": "Іспанія, Японія, Ірак, Норвегія, Португалія, Ізраїль, Сінгапур, Туреччина, Канада, Данія",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "бундестаг",
+      "object": "Німеччина",
+      "object_candidates": "Сомалі, Ірландія, Мексика, Швеція, Японія, Лівія, Канада, Індія, Ізраїль, Німеччина",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Прапор Ірландії",
+      "object": "Ірландія",
+      "object_candidates": "Литва, Філіппіни, Португалія, Куба, Франція, Болівія, Монако, Іран, Пакистан, Ірландія",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "президент Австрії",
+      "object": "Австрія",
+      "object_candidates": "Росія, Австралія, В'єтнам, Литва, Ізраїль, Пакистан, Ямайка, Туреччина, Фінляндія, Австрія",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Прем'єр-міністр Пакистану",
+      "object": "Пакистан",
+      "object_candidates": "Малайзія, Аргентина, Австралія, Норвегія, В'єтнам, Ямайка, Сінгапур, Ізраїль, Іран, Пакистан",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Федеральний президент Німеччини",
+      "object": "Німеччина",
+      "object_candidates": "Болівія, Литва, Аоминь, Куба, Норвегія, Монако, Білорусь, Болгарія, Росія, Німеччина",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "прем'єр-міністр Швеції",
+      "object": "Швеція",
+      "object_candidates": "Сінгапур, Ірландія, Канада, Німеччина, Нідерланди, Швейцарія, Фінляндія, Іспанія, Данія, Швеція",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Національна асамблея Франції",
+      "object": "Франція",
+      "object_candidates": "Туреччина, Швейцарія, Куба, Мексика, Данія, Малайзія, Норвегія, Республіка Китай, Австрія, Франція",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "Прапор Швейцарії",
+      "object": "Швейцарія",
+      "object_candidates": "Філіппіни, Болівія, Росія, Ямайка, Австрія, Португалія, Ірландія, Іран, Білорусь, Швейцарія",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "голова Уряду Російської Федерації",
+      "object": "Росія",
+      "object_candidates": "Гаїті, Україна, Малайзія, Швейцарія, Іспанія, Португалія, Італія, Ямайка, Куба, Росія",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Прапор Сінгапуру",
+      "object": "Сінгапур",
+      "object_candidates": "Португалія, Болівія, Німеччина, Аоминь, Сомалі, В'єтнам, Австрія, Данія, Болгарія, Сінгапур",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "Сенат Франції",
+      "object": "Франція",
+      "object_candidates": "Фінляндія, Данія, Португалія, Сомалі, Пакистан, Малайзія, Куба, Іран, Республіка Китай, Франція",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "Прем'єр-міністр України",
+      "object": "Україна",
+      "object_candidates": "Ізраїль, Росія, Куба, Фінляндія, Туреччина, Франція, Сомалі, Монако, В'єтнам, Україна",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Прапор Росії",
+      "object": "Росія",
+      "object_candidates": "Франція, Аоминь, Білорусь, Болгарія, Індія, Австралія, Ірландія, Швейцарія, Італія, Росія",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Прапор Канади",
+      "object": "Канада",
+      "object_candidates": "Болівія, Аоминь, Фінляндія, Лівія, Гаїті, Індія, Білорусь, Австралія, Іран, Канада",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Список президентів Румунії",
+      "object": "Румунія",
+      "object_candidates": "Іран, Франція, Мексика, Італія, Республіка Китай, Малайзія, Куба, Гаїті, Ірландія, Румунія",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Прапор Нідерландів",
+      "object": "Нідерланди",
+      "object_candidates": "Швеція, Сомалі, Сінгапур, Австрія, Болівія, Португалія, Білорусь, Ірак, Австралія, Нідерланди",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Прем'єр-міністр Малайзії",
+      "object": "Малайзія",
+      "object_candidates": "Іспанія, В'єтнам, Іран, Ізраїль, Литва, Фінляндія, Болгарія, Португалія, Данія, Малайзія",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Прапор Ямайки",
+      "object": "Ямайка",
+      "object_candidates": "Хорватія, Малайзія, Німеччина, Італія, Швейцарія, Австралія, Болгарія, Іспанія, Монако, Ямайка",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Прапор Аргентини",
+      "object": "Аргентина",
+      "object_candidates": "Ямайка, Норвегія, Нідерланди, Франція, Литва, Ізраїль, Австралія, Індія, Болгарія, Аргентина",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Прапор Норвегії",
+      "object": "Норвегія",
+      "object_candidates": "Литва, Канада, Монако, Іран, Німеччина, Австралія, Швеція, Австрія, Республіка Китай, Норвегія",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Конгрес депутатів (Іспанія)",
+      "object": "Іспанія",
+      "object_candidates": "Ізраїль, Ірак, Росія, Литва, Філіппіни, Данія, Пакистан, Болівія, Україна, Іспанія",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Імператор Японії",
+      "object": "Японія",
+      "object_candidates": "Швеція, Пакистан, Хорватія, Литва, Туреччина, Філіппіни, Ірландія, Румунія, Монако, Японія",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Прапор Литви",
+      "object": "Литва",
+      "object_candidates": "Гаїті, Швейцарія, Росія, Ізраїль, Малайзія, Болівія, Нідерланди, Іспанія, Японія, Литва",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Прапор Болгарії",
+      "object": "Болгарія",
+      "object_candidates": "Монако, Білорусь, Мексика, Албанія, Швеція, Україна, Франція, Туреччина, Нідерланди, Болгарія",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "президент Іраку",
+      "object": "Ірак",
+      "object_candidates": "Іран, Туреччина, Гаїті, Сінгапур, Хорватія, Малайзія, Фінляндія, Філіппіни, В'єтнам, Ірак",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Прапор Туреччини",
+      "object": "Туреччина",
+      "object_candidates": "Канада, Сінгапур, Аоминь, Японія, Ірак, Малайзія, Аргентина, Швеція, Болівія, Туреччина",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Прапор Малайзії",
+      "object": "Малайзія",
+      "object_candidates": "Аоминь, Болівія, Швейцарія, Білорусь, Румунія, Росія, Гаїті, Ямайка, Норвегія, Малайзія",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Прапор Білорусі",
+      "object": "Білорусь",
+      "object_candidates": "Данія, Німеччина, Росія, Мексика, Швейцарія, Індія, Швеція, Болгарія, Аоминь, Білорусь",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Прапор Куби",
+      "object": "Куба",
+      "object_candidates": "Румунія, Ірландія, Мексика, Республіка Китай, Австрія, Малайзія, Пакистан, Франція, Аоминь, Куба",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Прапор В'єтнаму",
+      "object": "В'єтнам",
+      "object_candidates": "Фінляндія, Пакистан, Індія, Сінгапур, Австралія, Румунія, Білорусь, Республіка Китай, Монако, В'єтнам",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Прапор Болівії",
+      "object": "Болівія",
+      "object_candidates": "Швейцарія, Індія, Ізраїль, Австралія, Республіка Китай, Румунія, Росія, Пакистан, Фінляндія, Болівія",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "Прапор Індії",
+      "object": "Індія",
+      "object_candidates": "Монако, Республіка Китай, Нідерланди, Швеція, Лівія, Хорватія, Аоминь, Сомалі, Литва, Індія",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "Аоминська патака",
+      "object": "Аоминь",
+      "object_candidates": "Гаїті, Мексика, Австралія, Нідерланди, Болгарія, Норвегія, Сінгапур, Албанія, Австрія, Аоминь",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "Прапор Монако",
+      "object": "Монако",
+      "object_candidates": "Туреччина, Республіка Китай, Іран, Фінляндія, Індія, Данія, Білорусь, Ірак, Лівія, Монако",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "Прапор Сомалі",
+      "object": "Сомалі",
+      "object_candidates": "Хорватія, Іспанія, Туреччина, Малайзія, Болгарія, Нідерланди, Франція, Норвегія, Лівія, Сомалі",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Президент Ізраїлю",
+      "object": "Ізраїль",
+      "object_candidates": "Німеччина, Португалія, Литва, Болгарія, Ямайка, Японія, Туреччина, Румунія, Республіка Китай, Ізраїль",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Прапор Швеції",
+      "object": "Швеція",
+      "object_candidates": "Канада, Норвегія, Білорусь, Литва, В'єтнам, Іспанія, Румунія, Албанія, Республіка Китай, Швеція",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Прапор Республіки Китай",
+      "object": "Республіка Китай",
+      "object_candidates": "Швейцарія, Японія, Білорусь, Литва, В'єтнам, Аоминь, Індія, Гаїті, Ірландія, Республіка Китай",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Прапор Австралії",
+      "object": "Австралія",
+      "object_candidates": "Філіппіни, Ірак, Аргентина, Індія, Португалія, Канада, Ізраїль, Німеччина, Монако, Австралія",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Прапор України",
+      "object": "Україна",
+      "object_candidates": "Фінляндія, Туреччина, Данія, Індія, Німеччина, Австрія, Ірландія, Ізраїль, Португалія, Україна",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "президент Республіки Білорусь",
+      "object": "Білорусь",
+      "object_candidates": "Сомалі, Ізраїль, Індія, Болгарія, Швейцарія, Японія, Аргентина, Данія, Франція, Білорусь",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Прапор Гаїті",
+      "object": "Гаїті",
+      "object_candidates": "Ірландія, Монако, Румунія, Австрія, Аргентина, В'єтнам, Японія, Сомалі, Болівія, Гаїті",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "герб Мексики",
+      "object": "Мексика",
+      "object_candidates": "Литва, Куба, Ізраїль, Лівія, Норвегія, Австрія, Іран, Аоминь, Швеція, Мексика",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Прапор Фінляндії",
+      "object": "Фінляндія",
+      "object_candidates": "Франція, Канада, Болгарія, Іспанія, Філіппіни, Німеччина, Білорусь, Росія, Сомалі, Фінляндія",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Прапор Хорватії",
+      "object": "Хорватія",
+      "object_candidates": "Німеччина, Португалія, Ямайка, Аргентина, Малайзія, Норвегія, Канада, Сомалі, Гаїті, Хорватія",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "президент Фінляндії",
+      "object": "Фінляндія",
+      "object_candidates": "Болгарія, Ірак, Сінгапур, Італія, Республіка Китай, Хорватія, Канада, Малайзія, Литва, Фінляндія",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Прапор Албанії",
+      "object": "Албанія",
+      "object_candidates": "Ізраїль, Пакистан, Білорусь, Сомалі, Гаїті, Туреччина, Швеція, Швейцарія, Данія, Албанія",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Прапор Італії",
+      "object": "Італія",
+      "object_candidates": "Ізраїль, Іран, Японія, В'єтнам, Швеція, Республіка Китай, Болівія, Філіппіни, Фінляндія, Італія",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Прапор Німеччини",
+      "object": "Німеччина",
+      "object_candidates": "Росія, Швеція, Філіппіни, Лівія, Іспанія, Ірландія, Індія, Швейцарія, Сінгапур, Німеччина",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Прапор Лівії",
+      "object": "Лівія",
+      "object_candidates": "Австралія, Болгарія, Монако, Пакистан, Малайзія, Гаїті, Ізраїль, Сінгапур, Румунія, Лівія",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Прапор Філіппін",
+      "object": "Філіппіни",
+      "object_candidates": "Нідерланди, Лівія, Ізраїль, Білорусь, Аргентина, Куба, Республіка Китай, Австрія, Швеція, Філіппіни",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "Німеччина",
+      "object_candidates": "Канада, Пакистан, Японія, Італія, Сомалі, Гаїті, Україна, Фінляндія, Франція, Німеччина",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "президент Ірану",
+      "object": "Іран",
+      "object_candidates": "Росія, Італія, Швейцарія, Австралія, Хорватія, Іспанія, Албанія, Сінгапур, Індія, Іран",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Прапор Пакистану",
+      "object": "Пакистан",
+      "object_candidates": "Іспанія, Швеція, Сінгапур, Болівія, Гаїті, Канада, Португалія, Республіка Китай, Литва, Пакистан",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Прапор Португалії",
+      "object": "Португалія",
+      "object_candidates": "Німеччина, Куба, Австралія, Ірландія, Албанія, Сінгапур, Фінляндія, Ізраїль, Росія, Португалія",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Прапор Греції",
+      "object": "Греція",
+      "object_candidates": "Ірак, Австрія, Хорватія, Ізраїль, Канада, Мексика, Індія, Нідерланди, Білорусь, Греція",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Прапор Мексики",
+      "object": "Мексика",
+      "object_candidates": "Росія, Сінгапур, Іспанія, Республіка Китай, Албанія, Ірак, Нідерланди, Ірландія, Італія, Мексика",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Прапор Японії",
+      "object": "Японія",
+      "object_candidates": "Індія, Туреччина, Франція, Фінляндія, Росія, Мексика, Білорусь, Румунія, Сінгапур, Японія",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

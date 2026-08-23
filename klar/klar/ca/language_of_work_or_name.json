@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "Quina és la llengua original de <subject>? La resposta és: <mask>.",
+    "En quina llengua va ser escrit originalment <subject>? La resposta és: <mask>.",
+    "En quina llengua és originalment <subject>? La resposta és: <mask>.",
+    "Quina llengua es va utilitzar per a l'obra original de <subject>? La resposta és: <mask>.",
+    "En quina llengua es va produir originalment <subject>? La resposta és: <mask>.",
+    " La llengua original de <subject> és <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Nostra Senyora de París",
+      "object": "francès",
+      "object_candidates": "neerlandès, grec, italià, alemany, rus, finès, anglès, francès",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Lion King",
+      "object": "anglès",
+      "object_candidates": "rus, francès, neerlandès, grec, alemany, italià, finès, anglès",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "Intocable",
+      "object": "francès",
+      "object_candidates": "grec, finès, alemany, anglès, neerlandès, rus, italià, francès",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "Adventure Time",
+      "object": "anglès",
+      "object_candidates": "finès, francès, neerlandès, italià, alemany, grec, rus, anglès",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Cremat pel sol",
+      "object": "rus",
+      "object_candidates": "finès, grec, italià, alemany, anglès, francès, neerlandès, rus",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "El pianista",
+      "object": "anglès",
+      "object_candidates": "italià, grec, neerlandès, rus, alemany, finès, francès, anglès",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "El comte de Montecristo",
+      "object": "francès",
+      "object_candidates": "rus, finès, alemany, neerlandès, grec, anglès, italià, francès",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Slumdog Millionaire",
+      "object": "anglès",
+      "object_candidates": "finès, neerlandès, italià, grec, rus, alemany, francès, anglès",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "anglès",
+      "object_candidates": "finès, grec, francès, italià, rus, neerlandès, alemany, anglès",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "El Padrí",
+      "object": "anglès",
+      "object_candidates": "francès, grec, alemany, rus, finès, neerlandès, italià, anglès",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ghostbusters",
+      "object": "anglès",
+      "object_candidates": "neerlandès, francès, grec, alemany, finès, italià, rus, anglès",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "Els tres mosqueters",
+      "object": "francès",
+      "object_candidates": "neerlandès, grec, anglès, alemany, finès, italià, rus, francès",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "Viquipèdia en neerlandès",
+      "object": "neerlandès",
+      "object_candidates": "anglès, rus, grec, francès, italià, alemany, finès, neerlandès",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "francès",
+      "object_candidates": "italià, rus, finès, anglès, grec, neerlandès, alemany, francès",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "anglès",
+      "object_candidates": "italià, neerlandès, rus, alemany, francès, grec, finès, anglès",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "El bo, el lleig i el dolent",
+      "object": "italià",
+      "object_candidates": "rus, anglès, alemany, francès, neerlandès, grec, finès, italià",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "The Fast and the Furious",
+      "object": "anglès",
+      "object_candidates": "rus, francès, alemany, italià, neerlandès, grec, finès, anglès",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "La flauta màgica",
+      "object": "alemany",
+      "object_candidates": "italià, neerlandès, finès, anglès, francès, grec, rus, alemany",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "iCarly",
+      "object": "anglès",
+      "object_candidates": "grec, neerlandès, alemany, francès, rus, finès, italià, anglès",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "Gran Enciclopèdia Soviètica",
+      "object": "rus",
+      "object_candidates": "italià, alemany, francès, neerlandès, finès, grec, anglès, rus",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "El gat amb botes",
+      "object": "italià",
+      "object_candidates": "grec, alemany, anglès, francès, finès, neerlandès, rus, italià",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Viquipèdia en finès",
+      "object": "finès",
+      "object_candidates": "grec, francès, alemany, italià, anglès, rus, neerlandès, finès",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Tom i Jerry",
+      "object": "anglès",
+      "object_candidates": "rus, alemany, finès, grec, neerlandès, francès, italià, anglès",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "El llibre de la selva",
+      "object": "anglès",
+      "object_candidates": "italià, finès, rus, francès, grec, alemany, neerlandès, anglès",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en grec",
+      "object": "grec",
+      "object_candidates": "finès, rus, neerlandès, francès, alemany, anglès, italià, grec",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "anglès",
+      "object_candidates": "castellà, italià, turc, danès, bengalí, alemany, francès, coreà, búlgar, anglès",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git",
+      "object": "anglès",
+      "object_candidates": "polonès, turc, llatí, bengalí, txec, rus, castellà, italià, suec, anglès",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "Eneida",
+      "object": "llatí",
+      "object_candidates": "vietnamita, polonès, italià, anglès, català, txec, hongarès, rus, bengalí, llatí",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Viquipèdia en rus",
+      "object": "rus",
+      "object_candidates": "coreà, suec, búlgar, hongarès, alemany, anglès, polonès, bengalí, castellà, rus",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Star Trek Into Darkness",
+      "object": "anglès",
+      "object_candidates": "bengalí, ucraïnès, alemany, suec, polonès, vietnamita, búlgar, llatí, castellà, anglès",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "francès",
+      "object_candidates": "alemany, estonià, castellà, turc, hongarès, italià, búlgar, rus, anglès, francès",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Washington Post",
+      "object": "anglès",
+      "object_candidates": "danès, estonià, castellà, alemany, rus, neerlandès, coreà, suec, croat, anglès",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "Playboy",
+      "object": "anglès",
+      "object_candidates": "danès, català, estonià, hongarès, castellà, suec, alemany, francès, búlgar, anglès",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "New Horizons",
+      "object": "anglès",
+      "object_candidates": "italià, català, ucraïnès, hongarès, bengalí, finès, suec, polonès, neerlandès, anglès",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aïda",
+      "object": "italià",
+      "object_candidates": "turc, neerlandès, hongarès, polonès, llatí, ucraïnès, suec, català, búlgar, italià",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Science",
+      "object": "anglès",
+      "object_candidates": "bengalí, hongarès, vietnamita, alemany, ucraïnès, búlgar, croat, finès, llatí, anglès",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "Silver Linings Playbook",
+      "object": "anglès",
+      "object_candidates": "neerlandès, vietnamita, bengalí, alemany, llatí, danès, hongarès, búlgar, rus, anglès",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "Newsweek",
+      "object": "anglès",
+      "object_candidates": "búlgar, català, llatí, txec, danès, bengalí, italià, croat, hongarès, anglès",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "Acorralat",
+      "object": "anglès",
+      "object_candidates": "alemany, estonià, italià, polonès, castellà, francès, croat, búlgar, danès, anglès",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "El Petit Príncep",
+      "object": "francès",
+      "object_candidates": "estonià, rus, ucraïnès, llatí, italià, castellà, txec, anglès, búlgar, francès",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "anglès",
+      "object_candidates": "ucraïnès, finès, croat, italià, búlgar, alemany, suec, castellà, francès, anglès",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en danès",
+      "object": "danès",
+      "object_candidates": "finès, croat, hongarès, rus, llatí, ucraïnès, búlgar, anglès, suec, danès",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Le Monde",
+      "object": "francès",
+      "object_candidates": "ucraïnès, estonià, danès, coreà, suec, croat, rus, alemany, finès, francès",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "Le Figaro",
+      "object": "francès",
+      "object_candidates": "polonès, bengalí, vietnamita, llatí, finès, rus, neerlandès, suec, estonià, francès",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "Viquipèdia en txec",
+      "object": "txec",
+      "object_candidates": "francès, bengalí, suec, croat, vietnamita, ucraïnès, estonià, coreà, italià, txec",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "The Guardian",
+      "object": "anglès",
+      "object_candidates": "castellà, italià, búlgar, hongarès, neerlandès, rus, bengalí, danès, alemany, anglès",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en croat",
+      "object": "croat",
+      "object_candidates": "hongarès, vietnamita, danès, francès, castellà, bengalí, neerlandès, rus, polonès, croat",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Tractat d'Utrecht",
+      "object": "anglès",
+      "object_candidates": "croat, ucraïnès, vietnamita, txec, hongarès, català, suec, búlgar, castellà, anglès",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "anglès",
+      "object_candidates": "búlgar, vietnamita, txec, ucraïnès, finès, alemany, castellà, danès, català, anglès",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Het Wilhelmus",
+      "object": "neerlandès",
+      "object_candidates": "turc, txec, coreà, anglès, francès, castellà, hongarès, alemany, ucraïnès, neerlandès",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Viquipèdia en suec",
+      "object": "suec",
+      "object_candidates": "búlgar, estonià, turc, italià, croat, rus, castellà, llatí, hongarès, suec",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Viquipèdia en polonès",
+      "object": "polonès",
+      "object_candidates": "estonià, francès, finès, danès, txec, castellà, català, neerlandès, italià, polonès",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Viquipèdia en estonià",
+      "object": "estonià",
+      "object_candidates": "hongarès, alemany, francès, vietnamita, turc, coreà, castellà, llatí, ucraïnès, estonià",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "anglès",
+      "object_candidates": "italià, estonià, rus, castellà, danès, francès, alemany, català, txec, anglès",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en català",
+      "object": "català",
+      "object_candidates": "rus, estonià, suec, turc, italià, polonès, anglès, vietnamita, coreà, català",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Viquipèdia en vietnamès",
+      "object": "vietnamita",
+      "object_candidates": "polonès, alemany, txec, turc, neerlandès, ucraïnès, castellà, croat, francès, vietnamita",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "La flauta màgica",
+      "object": "alemany",
+      "object_candidates": "finès, croat, bengalí, castellà, rus, català, anglès, francès, neerlandès, alemany",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "Viquipèdia en coreà",
+      "object": "coreà",
+      "object_candidates": "vietnamita, castellà, finès, alemany, bengalí, búlgar, estonià, neerlandès, polonès, coreà",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "francès",
+      "object_candidates": "danès, búlgar, finès, català, llatí, hongarès, txec, alemany, castellà, francès",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "Oliver Twist",
+      "object": "anglès",
+      "object_candidates": "català, coreà, francès, croat, danès, estonià, suec, polonès, rus, anglès",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alícia en terra de meravelles",
+      "object": "anglès",
+      "object_candidates": "català, llatí, ucraïnès, búlgar, italià, finès, danès, vietnamita, turc, anglès",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Orgull i prejudici",
+      "object": "anglès",
+      "object_candidates": "danès, coreà, finès, italià, hongarès, francès, bengalí, castellà, búlgar, anglès",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Time",
+      "object": "anglès",
+      "object_candidates": "búlgar, alemany, polonès, català, txec, estonià, castellà, rus, ucraïnès, anglès",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "El gran Gatsby",
+      "object": "anglès",
+      "object_candidates": "búlgar, coreà, turc, català, suec, castellà, italià, francès, rus, anglès",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "anglès",
+      "object_candidates": "txec, croat, danès, turc, bengalí, finès, polonès, coreà, francès, anglès",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "castellà",
+      "object_candidates": "estonià, alemany, rus, suec, vietnamita, ucraïnès, neerlandès, llatí, búlgar, castellà",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Amar Shonar Bangla",
+      "object": "bengalí",
+      "object_candidates": "castellà, llatí, hongarès, polonès, rus, italià, estonià, suec, anglès, bengalí",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "finès",
+      "object_candidates": "turc, coreà, neerlandès, italià, rus, búlgar, català, croat, ucraïnès, finès",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Viquipèdia en alemany",
+      "object": "alemany",
+      "object_candidates": "hongarès, búlgar, neerlandès, castellà, ucraïnès, bengalí, turc, coreà, croat, alemany",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "Tractat de Versalles",
+      "object": "francès",
+      "object_candidates": "estonià, castellà, polonès, alemany, coreà, ucraïnès, bengalí, rus, anglès, francès",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Eugeni Oneguin",
+      "object": "rus",
+      "object_candidates": "coreà, vietnamita, suec, polonès, finès, català, ucraïnès, búlgar, italià, rus",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Viquipèdia en ucraïnès",
+      "object": "ucraïnès",
+      "object_candidates": "rus, txec, italià, búlgar, català, neerlandès, castellà, estonià, finès, ucraïnès",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "1984",
+      "object": "anglès",
+      "object_candidates": "ucraïnès, estonià, català, italià, croat, francès, castellà, búlgar, llatí, anglès",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "Les aventures de Tom Sawyer",
+      "object": "anglès",
+      "object_candidates": "italià, llatí, txec, coreà, castellà, català, francès, bengalí, neerlandès, anglès",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "Terminator: Genisys",
+      "object": "anglès",
+      "object_candidates": "neerlandès, francès, bengalí, estonià, alemany, búlgar, italià, hongarès, llatí, anglès",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "anglès",
+      "object_candidates": "txec, búlgar, rus, danès, català, finès, alemany, turc, neerlandès, anglès",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Decameró",
+      "object": "italià",
+      "object_candidates": "suec, bengalí, finès, txec, català, búlgar, coreà, ucraïnès, francès, italià",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "finès",
+      "object_candidates": "txec, francès, alemany, neerlandès, vietnamita, búlgar, llatí, bengalí, hongarès, finès",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "The Economist",
+      "object": "anglès",
+      "object_candidates": "polonès, neerlandès, croat, castellà, alemany, txec, suec, finès, llatí, anglès",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Du gamla, du fria",
+      "object": "suec",
+      "object_candidates": "alemany, italià, francès, castellà, búlgar, estonià, anglès, vietnamita, llatí, suec",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Les aventures de Pinotxo",
+      "object": "italià",
+      "object_candidates": "vietnamita, txec, croat, anglès, hongarès, coreà, danès, neerlandès, turc, italià",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Moby Dick",
+      "object": "anglès",
+      "object_candidates": "suec, danès, croat, rus, vietnamita, alemany, coreà, castellà, francès, anglès",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "italià",
+      "object_candidates": "estonià, croat, turc, finès, llatí, alemany, ucraïnès, danès, neerlandès, italià",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Les noces de Fígaro",
+      "object": "italià",
+      "object_candidates": "anglès, suec, ucraïnès, neerlandès, turc, llatí, català, rus, castellà, italià",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Tractat de Maastricht",
+      "object": "francès",
+      "object_candidates": "llatí, ucraïnès, suec, turc, hongarès, coreà, estonià, neerlandès, txec, francès",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "anglès",
+      "object_candidates": "llatí, neerlandès, hongarès, turc, coreà, suec, rus, català, alemany, anglès",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en búlgar",
+      "object": "búlgar",
+      "object_candidates": "croat, neerlandès, català, llatí, danès, estonià, hongarès, polonès, finès, búlgar",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "The Pirate Bay",
+      "object": "castellà",
+      "object_candidates": "alemany, suec, llatí, hongarès, búlgar, vietnamita, francès, coreà, finès, castellà",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "viquipèdia en turc",
+      "object": "turc",
+      "object_candidates": "suec, finès, rus, vietnamita, bengalí, txec, castellà, coreà, català, turc",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Viquipèdia en hongarès",
+      "object": "hongarès",
+      "object_candidates": "finès, croat, castellà, búlgar, suec, italià, coreà, bengalí, danès, hongarès",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Anna Karènina",
+      "object": "rus",
+      "object_candidates": "hongarès, italià, finès, anglès, ucraïnès, estonià, polonès, castellà, turc, rus",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Viquipèdia en serbi",
+      "object": "serbi",
+      "object_candidates": "vietnamita, llatí, finès, alemany, anglès, neerlandès, búlgar, turc, rus, serbi",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Viquipèdia en italià",
+      "object": "italià",
+      "object_candidates": "turc, finès, alemany, txec, danès, català, coreà, suec, ucraïnès, italià",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Viquipèdia en espanyol",
+      "object": "castellà",
+      "object_candidates": "català, danès, llatí, italià, hongarès, estonià, finès, bengalí, croat, castellà",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Viquipèdia en finès",
+      "object": "finès",
+      "object_candidates": "italià, alemany, castellà, català, hongarès, coreà, bengalí, danès, ucraïnès, finès",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Viquipèdia en anglès bàsic",
+      "object": "anglès",
+      "object_candidates": "alemany, català, bengalí, rus, vietnamita, txec, francès, búlgar, turc, anglès",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Maleïts malparits",
+      "object": "anglès",
+      "object_candidates": "estonià, català, francès, turc, castellà, hongarès, llatí, polonès, finès, anglès",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "anglès",
+      "object_candidates": "alemany, castellà, francès, hongarès, txec, català, bengalí, vietnamita, ucraïnès, anglès",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alexander",
+      "object": "anglès",
+      "object_candidates": "llatí, croat, danès, italià, alemany, coreà, finès, ucraïnès, català, anglès",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "The Imitation Game",
+      "object": "anglès",
+      "object_candidates": "català, alemany, danès, francès, txec, finès, castellà, croat, italià, anglès",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "Don Giovanni",
+      "object": "italià",
+      "object_candidates": "danès, hongarès, castellà, finès, neerlandès, coreà, txec, estonià, francès, italià",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "anglès",
+      "object_candidates": "txec, polonès, alemany, vietnamita, búlgar, llatí, ucraïnès, italià, hongarès, anglès",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "Internet Archive",
+      "object": "anglès",
+      "object_candidates": "estonià, italià, hongarès, llatí, búlgar, danès, alemany, txec, neerlandès, anglès",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bohemian Rhapsody",
+      "object": "anglès",
+      "object_candidates": "rus, croat, búlgar, danès, finès, suec, neerlandès, francès, alemany, anglès",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "Viquipèdia en francès",
+      "object": "francès",
+      "object_candidates": "ucraïnès, castellà, polonès, búlgar, suec, bengalí, danès, finès, txec, francès",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Los Angeles Times",
+      "object": "anglès",
+      "object_candidates": "turc, llatí, hongarès, estonià, coreà, danès, castellà, suec, txec, anglès",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "Servidor HTTP Apache",
+      "object": "anglès",
+      "object_candidates": "ucraïnès, danès, txec, polonès, suec, francès, llatí, castellà, estonià, anglès",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "RIA Novosti",
+      "object": "rus",
+      "object_candidates": "anglès, búlgar, castellà, hongarès, ucraïnès, danès, finès, vietnamita, croat, rus",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

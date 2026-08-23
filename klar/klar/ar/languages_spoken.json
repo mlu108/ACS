@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "بأي لغة استخدم <subject> للتواصل؟ الجواب: <mask>",
+    "بأي لغة تحدث <subject>؟ الجواب: <mask>",
+    "بأي لغة تحدث <subject>؟ الجواب: <mask>",
+    "أي لغة تم استخدامها بواسطة <subject> للتواصل؟ الجواب: <mask>",
+    "ما هي اللغات التي تحدثها <subject>؟ الجواب: <mask>",
+    " اللغة التي يتحدث بها <subject> هي <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "تشارلز برونسون",
+      "object": "الإنجليزية",
+      "object_candidates": "المجرية, العبرية, الروسية, الألمانية, السويدية, الإيطالية, لغة مصرية, النرويجية, البولندية, الإنجليزية",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "ويليام جيمس",
+      "object": "الإنجليزية",
+      "object_candidates": "المجرية, الإندونيسية, النرويجية, لغة مصرية, الفرنسية, الفارسية, السويدية, الرومانية, الإيطالية, الإنجليزية",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "إرنا سولبرغ",
+      "object": "النرويجية",
+      "object_candidates": "اللاتينية, لغة مصرية, الإندونيسية, الفارسية, الأذرية, الألمانية, الإنجليزية, الكورية, الفرنسية, النرويجية",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "إفرايم كاتسير",
+      "object": "العبرية",
+      "object_candidates": "الكورية, الإسبانية, السويدية, الإيطالية, الرومانية, الإنجليزية, البولندية, اللاتينية, الصينية, العبرية",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "بارك تشان ووك",
+      "object": "الكورية",
+      "object_candidates": "الفرنسية, الصينية, الألمانية, الإسبانية, لغة مصرية, الرومانية, اللاتينية, الفارسية, الأذرية, الكورية",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "ناثانيال هاوثورن",
+      "object": "الإنجليزية",
+      "object_candidates": "الصينية, الهولندية, الفرنسية, المجرية, الإندونيسية, لغة مصرية, اللاتينية, السويدية, الروسية, الإنجليزية",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "جيمس إيرل جونز",
+      "object": "الإنجليزية",
+      "object_candidates": "النرويجية, العبرية, الإندونيسية, الإسبانية, المجرية, الهولندية, اللاتينية, الفرنسية, الفنلندية, الإنجليزية",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "ثور هايردال",
+      "object": "النرويجية",
+      "object_candidates": "اللاتينية, الهولندية, الفرنسية, السويدية, الكورية, لغة مصرية, الإنجليزية, الروسية, الإندونيسية, النرويجية",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "جيسون ستاثام",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, الإيطالية, الصينية, النرويجية, الكورية, الهولندية, الرومانية, العبرية, اللاتينية, الإنجليزية",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "ماري وولستونكرافت",
+      "object": "الفرنسية",
+      "object_candidates": "المجرية, الإيطالية, الفنلندية, الإنجليزية, الإندونيسية, الهولندية, لغة مصرية, الروسية, النرويجية, الفرنسية",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "فريدا كاهلو",
+      "object": "الإسبانية",
+      "object_candidates": "البولندية, لغة مصرية, المجرية, الصينية, النرويجية, الإيطالية, الفارسية, الروسية, العبرية, الإسبانية",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "جين مورو",
+      "object": "الفرنسية",
+      "object_candidates": "النرويجية, الرومانية, الروسية, العبرية, السويدية, الهولندية, الكورية, اللاتينية, الألمانية, الفرنسية",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "ناديه بوولنجر",
+      "object": "الفرنسية",
+      "object_candidates": "الرومانية, الروسية, اللاتينية, الإندونيسية, الصينية, العبرية, الهولندية, الفنلندية, البولندية, الفرنسية",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "فيكتوريا سيلفشتيدت",
+      "object": "الفرنسية",
+      "object_candidates": "الصينية, الإسبانية, الألمانية, العبرية, الإنجليزية, المجرية, النرويجية, الإيطالية, اللاتينية, الفرنسية",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "ألفرد راسل والاس",
+      "object": "الإنجليزية",
+      "object_candidates": "الإيطالية, الألمانية, النرويجية, لغة مصرية, الرومانية, الصينية, الإندونيسية, الأذرية, اللاتينية, الإنجليزية",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "رمسيس الثاني",
+      "object": "لغة مصرية",
+      "object_candidates": "الألمانية, الإنجليزية, السويدية, البولندية, الكورية, العبرية, الروسية, الفارسية, الفنلندية, لغة مصرية",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "كريستوف فيليبالد غلوك",
+      "object": "الألمانية",
+      "object_candidates": "الفرنسية, الفنلندية, اللاتينية, لغة مصرية, الصينية, الإنجليزية, الإيطالية, النرويجية, الروسية, الألمانية",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "أبراهام دي موافر",
+      "object": "الإنجليزية",
+      "object_candidates": "الإسبانية, الهولندية, المجرية, الإندونيسية, العبرية, الإيطالية, الألمانية, الرومانية, السويدية, الإنجليزية",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "إيهود باراك",
+      "object": "الإنجليزية",
+      "object_candidates": "الكورية, الرومانية, المجرية, الفنلندية, الفرنسية, اللاتينية, الفارسية, الإسبانية, الإندونيسية, الإنجليزية",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "ياكوف سفيردلوف",
+      "object": "الروسية",
+      "object_candidates": "الصينية, البولندية, الفنلندية, الإنجليزية, الفرنسية, الرومانية, الإسبانية, السويدية, لغة مصرية, الروسية",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ماركوس ليسينيوس كراسوس",
+      "object": "اللاتينية",
+      "object_candidates": "الفرنسية, الرومانية, الأذرية, البولندية, الفنلندية, النرويجية, الصينية, الإسبانية, السويدية, اللاتينية",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "جان جاك أنو",
+      "object": "الفرنسية",
+      "object_candidates": "اللاتينية, الرومانية, البولندية, الإنجليزية, الإندونيسية, الأذرية, الإيطالية, السويدية, الألمانية, الفرنسية",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "فيرجيل",
+      "object": "اللاتينية",
+      "object_candidates": "الألمانية, الإندونيسية, البولندية, الفارسية, الكورية, لغة مصرية, الأذرية, الإسبانية, الفرنسية, اللاتينية",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "الأم تريزا",
+      "object": "الإنجليزية",
+      "object_candidates": "لغة مصرية, الكورية, الإندونيسية, الصينية, النرويجية, الفنلندية, الفارسية, الإسبانية, البولندية, الإنجليزية",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "ستيف بيكو",
+      "object": "الإنجليزية",
+      "object_candidates": "الهولندية, الفنلندية, الروسية, النرويجية, الأذرية, الفارسية, البولندية, اللاتينية, السويدية, الإنجليزية",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "كريستيان هوغنس",
+      "object": "اللاتينية",
+      "object_candidates": "السويدية, الصينية, الإسبانية, الإندونيسية, الفرنسية, لغة مصرية, البولندية, الإنجليزية, الألمانية, اللاتينية",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "هنري دو سان سيمون",
+      "object": "الفرنسية",
+      "object_candidates": "الكورية, الفنلندية, اللاتينية, العبرية, الفارسية, النرويجية, الصينية, الرومانية, الإيطالية, الفرنسية",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "جورج مايكل",
+      "object": "الإنجليزية",
+      "object_candidates": "لغة مصرية, الألمانية, البولندية, الإيطالية, الإندونيسية, العبرية, الكورية, الفارسية, الفنلندية, الإنجليزية",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "جوزيبه بيانو",
+      "object": "الإيطالية",
+      "object_candidates": "الفنلندية, العبرية, السويدية, الرومانية, الفرنسية, اللاتينية, النرويجية, الهولندية, الكورية, الإيطالية",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "فيليم ألكساندر ملك هولندا",
+      "object": "الهولندية",
+      "object_candidates": "الروسية, الإنجليزية, السويدية, الإسبانية, الفرنسية, الإندونيسية, الإيطالية, العبرية, الفنلندية, الهولندية",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "تريستان تزارا",
+      "object": "الفرنسية",
+      "object_candidates": "الإسبانية, النرويجية, العبرية, اللاتينية, السويدية, الهولندية, الإندونيسية, الكورية, الصينية, الفرنسية",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "ريتشارد آركرايت",
+      "object": "الإنجليزية",
+      "object_candidates": "اللاتينية, النرويجية, الإيطالية, الإندونيسية, الفنلندية, الهولندية, الفرنسية, الروسية, السويدية, الإنجليزية",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "بيب غوارديولا",
+      "object": "الإسبانية",
+      "object_candidates": "الصينية, الإندونيسية, الهولندية, الأذرية, لغة مصرية, الروسية, الفرنسية, اللاتينية, الإيطالية, الإسبانية",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "إيمري ناج",
+      "object": "المجرية",
+      "object_candidates": "الإنجليزية, الإيطالية, الألمانية, العبرية, الفنلندية, الرومانية, الهولندية, السويدية, الفرنسية, المجرية",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "الهولندية",
+      "object_candidates": "الألمانية, الإيطالية, الإنجليزية, المجرية, الروسية, الإندونيسية, الفارسية, الكورية, البولندية, الهولندية",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "مارغريت الثانية ملكة الدنمارك",
+      "object": "السويدية",
+      "object_candidates": "العبرية, البولندية, الرومانية, الأذرية, الإيطالية, لغة مصرية, الفرنسية, الصينية, الإسبانية, السويدية",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "ساتيندرا ناث بوز",
+      "object": "الإنجليزية",
+      "object_candidates": "الرومانية, اللاتينية, العبرية, الإسبانية, الأذرية, الإندونيسية, الإيطالية, لغة مصرية, الفنلندية, الإنجليزية",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "إرنست شاكلتون",
+      "object": "الإنجليزية",
+      "object_candidates": "اللاتينية, الإندونيسية, المجرية, الإسبانية, الإيطالية, الفرنسية, العبرية, الألمانية, الفارسية, الإنجليزية",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "سلفادور أليندي",
+      "object": "الإسبانية",
+      "object_candidates": "الإندونيسية, الهولندية, الإيطالية, الرومانية, الأذرية, اللاتينية, المجرية, السويدية, النرويجية, الإسبانية",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "نيكولاي ليسكوف",
+      "object": "الروسية",
+      "object_candidates": "الصينية, الألمانية, الرومانية, النرويجية, الإنجليزية, الإيطالية, العبرية, الإندونيسية, الإسبانية, الروسية",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "فيتوريو إمانويلي الثاني",
+      "object": "الإيطالية",
+      "object_candidates": "البولندية, لغة مصرية, الهولندية, العبرية, الألمانية, الإنجليزية, الكورية, الفنلندية, الرومانية, الإيطالية",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "جورج اينيسكو",
+      "object": "الرومانية",
+      "object_candidates": "الهولندية, الفرنسية, الإيطالية, الأذرية, لغة مصرية, النرويجية, الإندونيسية, الروسية, الكورية, الرومانية",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "جلوريا إستيفان",
+      "object": "الإسبانية",
+      "object_candidates": "الروسية, السويدية, الإندونيسية, الفارسية, الفرنسية, الفنلندية, البولندية, النرويجية, الكورية, الإسبانية",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "مايكل مور",
+      "object": "الإنجليزية",
+      "object_candidates": "الصينية, العبرية, الأذرية, اللاتينية, المجرية, الإندونيسية, الإسبانية, الفنلندية, الكورية, الإنجليزية",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "بيير أوجستن كارون دي بومارشيه",
+      "object": "الفرنسية",
+      "object_candidates": "الرومانية, الصينية, الإيطالية, الأذرية, العبرية, الكورية, البولندية, الألمانية, الإسبانية, الفرنسية",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "بينيدتو كروتشه",
+      "object": "الإيطالية",
+      "object_candidates": "الروسية, المجرية, النرويجية, الفارسية, الإسبانية, اللاتينية, السويدية, الكورية, لغة مصرية, الإيطالية",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "رافي شانكار",
+      "object": "الإنجليزية",
+      "object_candidates": "لغة مصرية, النرويجية, الإندونيسية, المجرية, الألمانية, الكورية, العبرية, البولندية, اللاتينية, الإنجليزية",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "سام ميندز",
+      "object": "الإنجليزية",
+      "object_candidates": "الفرنسية, الفنلندية, السويدية, الإندونيسية, العبرية, الرومانية, البولندية, الفارسية, الكورية, الإنجليزية",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "إيفان بونين",
+      "object": "الروسية",
+      "object_candidates": "الألمانية, اللاتينية, الرومانية, الهولندية, الفارسية, البولندية, الإنجليزية, الفرنسية, الإسبانية, الروسية",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "أبو الحسن بني صدر",
+      "object": "الفارسية",
+      "object_candidates": "الألمانية, البولندية, لغة مصرية, النرويجية, المجرية, الروسية, الأذرية, الرومانية, الإنجليزية, الفارسية",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "آنگون",
+      "object": "الإندونيسية",
+      "object_candidates": "الروسية, الكورية, البولندية, اللاتينية, الأذرية, النرويجية, الألمانية, الهولندية, الفنلندية, الإندونيسية",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "كلارك غيبل",
+      "object": "الإنجليزية",
+      "object_candidates": "السويدية, الأذرية, الفنلندية, لغة مصرية, الإندونيسية, الكورية, الروسية, المجرية, النرويجية, الإنجليزية",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "جاك لاكان",
+      "object": "الفرنسية",
+      "object_candidates": "الأذرية, الفنلندية, الإسبانية, الرومانية, الفارسية, المجرية, الإندونيسية, الإنجليزية, الصينية, الفرنسية",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "جيمس غارنر",
+      "object": "الإنجليزية",
+      "object_candidates": "الرومانية, البولندية, الكورية, الفرنسية, النرويجية, الإسبانية, الألمانية, الفنلندية, لغة مصرية, الإنجليزية",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "مانويل فالس",
+      "object": "الإسبانية",
+      "object_candidates": "الهولندية, الفارسية, الإندونيسية, الكورية, المجرية, الإيطالية, لغة مصرية, الفرنسية, السويدية, الإسبانية",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "عباس كيارستمي",
+      "object": "الفارسية",
+      "object_candidates": "المجرية, العبرية, الأذرية, اللاتينية, الهولندية, الإسبانية, البولندية, الفرنسية, الكورية, الفارسية",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "أوليفر كرومويل",
+      "object": "الإنجليزية",
+      "object_candidates": "الإندونيسية, النرويجية, السويدية, الهولندية, الفرنسية, الصينية, الألمانية, العبرية, المجرية, الإنجليزية",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "أوغستو بينوشيه",
+      "object": "الإسبانية",
+      "object_candidates": "الكورية, اللاتينية, الروسية, الألمانية, الفرنسية, الإندونيسية, البولندية, المجرية, الفارسية, الإسبانية",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "فرانسيس بولنك",
+      "object": "الفرنسية",
+      "object_candidates": "العبرية, الإنجليزية, الإسبانية, الروسية, البولندية, الإندونيسية, السويدية, الصينية, الكورية, الفرنسية",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "جول ماسينيه",
+      "object": "الفرنسية",
+      "object_candidates": "الإيطالية, العبرية, الهولندية, المجرية, النرويجية, الفنلندية, الأذرية, البولندية, الصينية, الفرنسية",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "كارلوس مارتشينا",
+      "object": "الإسبانية",
+      "object_candidates": "الفارسية, الإندونيسية, الصينية, البولندية, الفرنسية, السويدية, الأذرية, اللاتينية, الألمانية, الإسبانية",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "لودفيك زامنهوف",
+      "object": "الإنجليزية",
+      "object_candidates": "الكورية, لغة مصرية, اللاتينية, الروسية, العبرية, المجرية, الرومانية, البولندية, الألمانية, الإنجليزية",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "محمد علي",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, لغة مصرية, الكورية, الإسبانية, الصينية, اللاتينية, المجرية, الإندونيسية, الفرنسية, الإنجليزية",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "آنا ماغناني",
+      "object": "الإيطالية",
+      "object_candidates": "الإنجليزية, الإندونيسية, السويدية, الهولندية, الألمانية, لغة مصرية, الإسبانية, البولندية, الفارسية, الإيطالية",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "آبا",
+      "object": "السويدية",
+      "object_candidates": "العبرية, الصينية, النرويجية, الروسية, البولندية, اللاتينية, الرومانية, الإنجليزية, الإيطالية, السويدية",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "يسوع",
+      "object": "العبرية",
+      "object_candidates": "الفارسية, الروسية, النرويجية, الألمانية, البولندية, الإسبانية, الأذرية, الفرنسية, الفنلندية, العبرية",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "جيوزبي تورنتوري",
+      "object": "الإيطالية",
+      "object_candidates": "الفنلندية, المجرية, الكورية, الإسبانية, الرومانية, العبرية, السويدية, الألمانية, الصينية, الإيطالية",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "غوين ستيفاني",
+      "object": "الإنجليزية",
+      "object_candidates": "لغة مصرية, النرويجية, الفرنسية, الأذرية, الصينية, الألمانية, الإيطالية, اللاتينية, الرومانية, الإنجليزية",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "تاسيتس",
+      "object": "اللاتينية",
+      "object_candidates": "الرومانية, البولندية, الإسبانية, النرويجية, الفنلندية, الهولندية, الإيطالية, الكورية, المجرية, اللاتينية",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ألانيس موريسيت",
+      "object": "الإنجليزية",
+      "object_candidates": "الفنلندية, الإندونيسية, السويدية, الأذرية, الهولندية, الروسية, اللاتينية, الفارسية, البولندية, الإنجليزية",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "فويتشخ ياروزلسكي",
+      "object": "البولندية",
+      "object_candidates": "الفنلندية, الإيطالية, الفرنسية, الفارسية, الألمانية, الهولندية, الكورية, الصينية, الإندونيسية, البولندية",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "كايلي مينوغ",
+      "object": "الإنجليزية",
+      "object_candidates": "العبرية, الفارسية, المجرية, الألمانية, الفرنسية, الأذرية, الروسية, لغة مصرية, الإندونيسية, الإنجليزية",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "كارلوس فوينتس",
+      "object": "الإسبانية",
+      "object_candidates": "الأذرية, الكورية, الصينية, اللاتينية, السويدية, الإيطالية, الفارسية, المجرية, لغة مصرية, الإسبانية",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "دوايت أيزنهاور",
+      "object": "الإنجليزية",
+      "object_candidates": "النرويجية, البولندية, الفارسية, السويدية, اللاتينية, المجرية, العبرية, الفرنسية, الفنلندية, الإنجليزية",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "طوما بيكيتي",
+      "object": "الفرنسية",
+      "object_candidates": "الأذرية, الفارسية, اللاتينية, السويدية, النرويجية, الرومانية, الإنجليزية, الهولندية, الروسية, الفرنسية",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "ألكسي بروسيلوف",
+      "object": "الروسية",
+      "object_candidates": "الألمانية, العبرية, الإندونيسية, البولندية, الإيطالية, الإنجليزية, اللاتينية, الرومانية, لغة مصرية, الروسية",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ليف كامينيف",
+      "object": "الروسية",
+      "object_candidates": "الفرنسية, الإسبانية, الرومانية, الصينية, المجرية, الهولندية, الأذرية, اللاتينية, النرويجية, الروسية",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "جون أبدايك",
+      "object": "الإنجليزية",
+      "object_candidates": "الروسية, الكورية, الإيطالية, المجرية, الفرنسية, الإندونيسية, الصينية, الهولندية, العبرية, الإنجليزية",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "آن باريلود",
+      "object": "الفرنسية",
+      "object_candidates": "المجرية, الأذرية, الإنجليزية, الإسبانية, العبرية, الصينية, الفنلندية, الروسية, لغة مصرية, الفرنسية",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "فيليب الخامس ملك إسبانيا",
+      "object": "الإسبانية",
+      "object_candidates": "العبرية, الرومانية, الفنلندية, الإندونيسية, الإنجليزية, الهولندية, الفرنسية, المجرية, النرويجية, الإسبانية",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "إيمانويل سينيه",
+      "object": "الفرنسية",
+      "object_candidates": "الألمانية, الأذرية, الإسبانية, المجرية, الصينية, البولندية, النرويجية, لغة مصرية, الإيطالية, الفرنسية",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "إرنست رذرفورد",
+      "object": "الإنجليزية",
+      "object_candidates": "الكورية, الألمانية, الفارسية, الرومانية, الإيطالية, الإسبانية, الصينية, لغة مصرية, العبرية, الإنجليزية",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "أوجين أونيل",
+      "object": "الإنجليزية",
+      "object_candidates": "الفنلندية, الفارسية, السويدية, الصينية, الروسية, الإندونيسية, الفرنسية, البولندية, المجرية, الإنجليزية",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "لورد كلفن",
+      "object": "الإنجليزية",
+      "object_candidates": "العبرية, لغة مصرية, النرويجية, الفرنسية, الألمانية, الإسبانية, اللاتينية, الإندونيسية, الأذرية, الإنجليزية",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "جنيفر هدسون",
+      "object": "الإنجليزية",
+      "object_candidates": "العبرية, الهولندية, الفارسية, الرومانية, اللاتينية, السويدية, الإندونيسية, البولندية, الكورية, الإنجليزية",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "هنري كسنجر",
+      "object": "الإنجليزية",
+      "object_candidates": "العبرية, الإندونيسية, الألمانية, اللاتينية, السويدية, الأذرية, البولندية, الرومانية, المجرية, الإنجليزية",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "بيوس العاشر",
+      "object": "اللاتينية",
+      "object_candidates": "البولندية, المجرية, الفرنسية, الصينية, الرومانية, الإنجليزية, الكورية, النرويجية, السويدية, اللاتينية",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "عزير حاجبايوف",
+      "object": "الأذرية",
+      "object_candidates": "الإيطالية, المجرية, الرومانية, النرويجية, الألمانية, الإنجليزية, الإسبانية, البولندية, الفارسية, الأذرية",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "توماس هوبز",
+      "object": "اللاتينية",
+      "object_candidates": "الألمانية, لغة مصرية, العبرية, السويدية, الإنجليزية, الرومانية, الفنلندية, الإيطالية, الروسية, اللاتينية",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "تشو شي",
+      "object": "الصينية",
+      "object_candidates": "الفارسية, الإندونيسية, الفنلندية, اللاتينية, لغة مصرية, الهولندية, الإسبانية, السويدية, الكورية, الصينية",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "جاد المالح",
+      "object": "الفرنسية",
+      "object_candidates": "الروسية, الصينية, لغة مصرية, الإسبانية, الإندونيسية, اللاتينية, الإنجليزية, الإيطالية, العبرية, الفرنسية",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "ألبيرت رييرا",
+      "object": "الإسبانية",
+      "object_candidates": "العبرية, الهولندية, لغة مصرية, البولندية, الصينية, النرويجية, الإنجليزية, المجرية, اللاتينية, الإسبانية",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "أوغست ستريندبرغ",
+      "object": "السويدية",
+      "object_candidates": "لغة مصرية, الهولندية, اللاتينية, الفارسية, الإندونيسية, العبرية, الإنجليزية, الصينية, البولندية, السويدية",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "كريستين سكوت توماس",
+      "object": "الفرنسية",
+      "object_candidates": "السويدية, المجرية, الرومانية, الألمانية, الهولندية, لغة مصرية, الإيطالية, الفنلندية, الأذرية, الفرنسية",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "توماس هاردي",
+      "object": "الإنجليزية",
+      "object_candidates": "اللاتينية, الصينية, المجرية, الروسية, الإيطالية, الكورية, الأذرية, الألمانية, الفارسية, الإنجليزية",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "والتر كرونكايت",
+      "object": "الإنجليزية",
+      "object_candidates": "البولندية, المجرية, الرومانية, الفارسية, الروسية, الألمانية, العبرية, الكورية, الأذرية, الإنجليزية",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "موسى بن ميمون",
+      "object": "العبرية",
+      "object_candidates": "الإنجليزية, الفنلندية, الأذرية, الألمانية, الإيطالية, الفرنسية, النرويجية, اللاتينية, الصينية, العبرية",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "يوهان كرويف",
+      "object": "الهولندية",
+      "object_candidates": "الفنلندية, الصينية, الفارسية, اللاتينية, الفرنسية, النرويجية, الرومانية, الإسبانية, الألمانية, الهولندية",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "جاو كسينجيان",
+      "object": "الصينية",
+      "object_candidates": "الرومانية, الكورية, السويدية, النرويجية, الروسية, الفرنسية, الأذرية, الإسبانية, المجرية, الصينية",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "ميخائيل خودوركوفسكي",
+      "object": "الروسية",
+      "object_candidates": "الإنجليزية, الصينية, الفنلندية, البولندية, لغة مصرية, المجرية, السويدية, الفارسية, الإندونيسية, الروسية",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "جان سيبيليوس",
+      "object": "الفنلندية",
+      "object_candidates": "الأذرية, الصينية, البولندية, لغة مصرية, الإنجليزية, النرويجية, المجرية, الهولندية, الروسية, الفنلندية",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "لودفيك زامنهوف",
+      "object": "الروسية",
+      "object_candidates": "لغة مصرية, الأذرية, اللاتينية, الفنلندية, البولندية, الرومانية, المجرية, الإندونيسية, النرويجية, الروسية",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "فريمان دايسون",
+      "object": "الإنجليزية",
+      "object_candidates": "الألمانية, الفرنسية, السويدية, الإندونيسية, الرومانية, الصينية, الفارسية, اللاتينية, الإيطالية, الإنجليزية",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "ألبير كامو",
+      "object": "الفرنسية",
+      "object_candidates": "الروسية, الفارسية, البولندية, المجرية, العبرية, الإيطالية, لغة مصرية, الإنجليزية, الإسبانية, الفرنسية",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

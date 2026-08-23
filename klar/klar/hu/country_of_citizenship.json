@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "Melyik ország állampolgára <subject>? A válasz: <mask>",
+    "Mi <subject> állampolgársága? A válasz: <mask>",
+    "Melyik országban van <subject> állampolgársága? A válasz: <mask>",
+    "Hol van <subject> állampolgársága? A válasz: <mask>",
+    "Melyik nemzet ad állampolgárságot <subject>-nak? A válasz: <mask>",
+    " <subject> állampolgársága <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Borisz Vasziljevics Szpasszkij",
+      "object": "Franciaország",
+      "object_candidates": "Írország, Ausztrália, Katar, Libanon, Kurdisztán, Svájc, Bulgária, India, Argentína, Franciaország",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ada Jonat",
+      "object": "Izrael",
+      "object_candidates": "Brazília, Ausztrália, Katar, Libanon, Svédország, Japán, Görögország, Vietnám, Norvégia, Izrael",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Lionel Messi",
+      "object": "Argentína",
+      "object_candidates": "Japán, Írország, Dánia, Németország, Svédország, Libanon, Bulgária, Görögország, Izrael, Argentína",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "II. Károly spanyol király",
+      "object": "Spanyolország",
+      "object_candidates": "Vietnám, Kanada, Norvégia, Svájc, Izrael, Dánia, Svédország, Ausztria, Argentína, Spanyolország",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Adriano Celentano",
+      "object": "Olaszország",
+      "object_candidates": "Vietnám, Ausztria, Németország, Kurdisztán, Dánia, Frankfurt am Main, Görögország, Izrael, Norvégia, Olaszország",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Georgi Parvanov",
+      "object": "Bulgária",
+      "object_candidates": "Ausztrália, Görögország, Olaszország, Brazília, Katar, Izrael, Vietnám, Németország, Angol Királyság, Bulgária",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Dilma Rousseff",
+      "object": "Brazília",
+      "object_candidates": "Írország, Frankfurt am Main, Kurdisztán, Kanada, Dánia, Svájc, Japán, Spanyolország, Ausztrália, Brazília",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Ronaldo",
+      "object": "Brazília",
+      "object_candidates": "Libanon, Svájc, Olaszország, Németország, Kanada, Dánia, Angol Királyság, Argentína, Ausztria, Brazília",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Traianus római császár",
+      "object": "Spanyolország",
+      "object_candidates": "Katar, Svájc, Dánia, Norvégia, Brazília, Kurdisztán, Vietnám, Angol Királyság, Argentína, Spanyolország",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Ronaldinho",
+      "object": "Brazília",
+      "object_candidates": "Svájc, Japán, Izrael, Bulgária, Vietnám, Svédország, Kanada, Spanyolország, Libanon, Brazília",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Scott Morrison",
+      "object": "Ausztrália",
+      "object_candidates": "Németország, Írország, Frankfurt am Main, Lengyelország, Kanada, Ausztria, Japán, Svédország, Olaszország, Ausztrália",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Ho Si Minh",
+      "object": "Vietnám",
+      "object_candidates": "India, Japán, Izrael, Argentína, Svédország, Franciaország, Katar, Görögország, Lengyelország, Vietnám",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Alain Robert",
+      "object": "Franciaország",
+      "object_candidates": "Argentína, Frankfurt am Main, Görögország, Vietnám, Izrael, Írország, Lengyelország, Kurdisztán, Norvégia, Franciaország",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ferdinand de Saussure",
+      "object": "Svájc",
+      "object_candidates": "India, Argentína, Kurdisztán, Brazília, Kanada, Katar, Ausztria, Japán, Lengyelország, Svájc",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Auguste Rodin",
+      "object": "Franciaország",
+      "object_candidates": "Spanyolország, Frankfurt am Main, Olaszország, Izrael, India, Argentína, Bulgária, Brazília, Ausztria, Franciaország",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "Németország",
+      "object_candidates": "Katar, Angol Királyság, Japán, Libanon, Argentína, Olaszország, Bulgária, Ausztria, Brazília, Németország",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "Frankfurt am Main",
+      "object_candidates": "Svédország, Írország, Argentína, Libanon, Bulgária, Izrael, Olaszország, Görögország, Japán, Frankfurt am Main",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Massimo D'Alema",
+      "object": "Olaszország",
+      "object_candidates": "Libanon, India, Svédország, Franciaország, Spanyolország, Ausztrália, Lengyelország, Dánia, Vietnám, Olaszország",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Rudolf Heß",
+      "object": "Németország",
+      "object_candidates": "Lengyelország, Ausztrália, Olaszország, Franciaország, Vietnám, Argentína, Kurdisztán, Brazília, Dánia, Németország",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "V. Henrik angol király",
+      "object": "Angol Királyság",
+      "object_candidates": "Bulgária, Németország, Izrael, Írország, Svédország, Vietnám, Brazília, Kanada, Svájc, Angol Királyság",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Michel Houellebecq",
+      "object": "Franciaország",
+      "object_candidates": "Svájc, India, Dánia, Spanyolország, Japán, Norvégia, Lengyelország, Brazília, Ausztria, Franciaország",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Masaccio",
+      "object": "Olaszország",
+      "object_candidates": "Dánia, Angol Királyság, Frankfurt am Main, Brazília, Bulgária, Franciaország, Kanada, Ausztrália, Görögország, Olaszország",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "France Gall",
+      "object": "Franciaország",
+      "object_candidates": "Kanada, Angol Királyság, Vietnám, Ausztria, Olaszország, Izrael, Frankfurt am Main, India, Görögország, Franciaország",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Rafael Alberti",
+      "object": "Spanyolország",
+      "object_candidates": "Ausztria, Bulgária, Libanon, Norvégia, Olaszország, Vietnám, Izrael, Lengyelország, Ausztrália, Spanyolország",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Bernardo Houssay",
+      "object": "Argentína",
+      "object_candidates": "Katar, Németország, Izrael, Kanada, Angol Királyság, Svájc, Vietnám, Kurdisztán, Bulgária, Argentína",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Kiichi Miyazawa",
+      "object": "Japán",
+      "object_candidates": "Brazília, Norvégia, Franciaország, India, Bulgária, Katar, Svédország, Izrael, Angol Királyság, Japán",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "I. Oszkár svéd király",
+      "object": "Svédország",
+      "object_candidates": "Franciaország, Svájc, Dánia, India, Spanyolország, Németország, Lengyelország, Katar, Izrael, Svédország",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Carl Bosch",
+      "object": "Németország",
+      "object_candidates": "Kurdisztán, Argentína, Spanyolország, Svédország, Izrael, Franciaország, Svájc, Frankfurt am Main, Írország, Németország",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Jiddu Krishnamurti",
+      "object": "India",
+      "object_candidates": "Katar, Olaszország, Norvégia, Németország, Angol Királyság, Görögország, Írország, Kurdisztán, Libanon, India",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "I. Erzsébet",
+      "object": "Angol Királyság",
+      "object_candidates": "Franciaország, India, Lengyelország, Spanyolország, Kanada, Argentína, Ausztria, Dánia, Svédország, Angol Királyság",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "Franciaország",
+      "object_candidates": "Katar, Frankfurt am Main, Libanon, Olaszország, India, Kurdisztán, Bulgária, Lengyelország, Ausztrália, Franciaország",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Grzegorz Lato",
+      "object": "Lengyelország",
+      "object_candidates": "Franciaország, Olaszország, Ausztrália, Írország, Bulgária, Németország, Japán, Spanyolország, Görögország, Lengyelország",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Kurt Waldheim",
+      "object": "Ausztria",
+      "object_candidates": "Izrael, Vietnám, Spanyolország, Svájc, Kurdisztán, Argentína, Ausztrália, Frankfurt am Main, Írország, Ausztria",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Margaret Atwood",
+      "object": "Kanada",
+      "object_candidates": "Argentína, Norvégia, Brazília, Németország, Libanon, Ausztrália, Dánia, Bulgária, Kurdisztán, Kanada",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Enzo Ferrari",
+      "object": "Olaszország",
+      "object_candidates": "India, Libanon, Spanyolország, Ausztria, Argentína, Írország, Kanada, Izrael, Brazília, Olaszország",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Bourvil",
+      "object": "Franciaország",
+      "object_candidates": "India, Norvégia, Argentína, Ausztrália, Japán, Frankfurt am Main, Angol Királyság, Izrael, Spanyolország, Franciaország",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Wolfgang Pauli",
+      "object": "Ausztria",
+      "object_candidates": "Kanada, Vietnám, Dánia, Írország, Svédország, Görögország, Lengyelország, Japán, Kurdisztán, Ausztria",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "VI. Károly francia király",
+      "object": "Franciaország",
+      "object_candidates": "Lengyelország, Ausztria, Németország, Dánia, Bulgária, India, Kanada, Spanyolország, Írország, Franciaország",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Michel Aoun",
+      "object": "Libanon",
+      "object_candidates": "Vietnám, Dánia, Argentína, Írország, Japán, Frankfurt am Main, Brazília, Lengyelország, Olaszország, Libanon",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Magnus Carlsen",
+      "object": "Norvégia",
+      "object_candidates": "Frankfurt am Main, Spanyolország, Franciaország, Kurdisztán, Ausztrália, India, Argentína, Libanon, Görögország, Norvégia",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Henryk Sienkiewicz",
+      "object": "Lengyelország",
+      "object_candidates": "Libanon, Brazília, Izrael, Spanyolország, Katar, Japán, Franciaország, Dánia, Kanada, Lengyelország",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Artúr walesi herceg",
+      "object": "Angol Királyság",
+      "object_candidates": "Argentína, Katar, Spanyolország, Írország, Norvégia, Lengyelország, Olaszország, Svédország, Kurdisztán, Angol Királyság",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "II. Jakab angol király",
+      "object": "Angol Királyság",
+      "object_candidates": "Norvégia, Svájc, Bulgária, Svédország, Vietnám, India, Görögország, Brazília, Spanyolország, Angol Királyság",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Hamad ibn Halífa Ál Táni",
+      "object": "Katar",
+      "object_candidates": "Spanyolország, Bulgária, Olaszország, Svédország, India, Lengyelország, Frankfurt am Main, Svájc, Japán, Katar",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Francisco José de Goya y Lucientes",
+      "object": "Spanyolország",
+      "object_candidates": "Olaszország, Franciaország, Lengyelország, Kanada, Izrael, Ausztrália, Libanon, Görögország, Brazília, Spanyolország",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Dzsalál Talabáni",
+      "object": "Kurdisztán",
+      "object_candidates": "Írország, Angol Királyság, Olaszország, Lengyelország, Franciaország, Frankfurt am Main, Katar, Görögország, Bulgária, Kurdisztán",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Floriano Peixoto",
+      "object": "Brazília",
+      "object_candidates": "Frankfurt am Main, Lengyelország, Svédország, Olaszország, Kurdisztán, Norvégia, Ausztria, Franciaország, Svájc, Brazília",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Antonis Samarás",
+      "object": "Görögország",
+      "object_candidates": "Angol Királyság, Ausztrália, Dánia, Katar, India, Olaszország, Franciaország, Argentína, Libanon, Görögország",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Beppe Grillo",
+      "object": "Olaszország",
+      "object_candidates": "Angol Királyság, India, Spanyolország, Görögország, Izrael, Ausztrália, Frankfurt am Main, Franciaország, Libanon, Olaszország",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "IX. Frigyes dán király",
+      "object": "Dánia",
+      "object_candidates": "Katar, Ausztria, Kanada, Franciaország, Norvégia, Frankfurt am Main, Svédország, Ausztrália, Brazília, Dánia",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Michael Fassbender",
+      "object": "Írország",
+      "object_candidates": "Kanada, Spanyolország, Katar, Brazília, Ausztria, Kurdisztán, Németország, Franciaország, Bulgária, Írország",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Dániai Alexandra brit királyné",
+      "object": "Dánia",
+      "object_candidates": "Ausztria, Svédország, Argentína, Svájc, Izrael, Ausztrália, Brazília, Lengyelország, Angol Királyság, Dánia",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Miguel Hidalgo y Costilla",
+      "object": "Spanyolország",
+      "object_candidates": "Izrael, Svájc, Frankfurt am Main, Norvégia, Írország, Angol Királyság, Olaszország, Argentína, Ausztrália, Spanyolország",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Edmund Husserl",
+      "object": "Németország",
+      "object_candidates": "Olaszország, Libanon, India, Svédország, Lengyelország, Ausztria, Franciaország, Kurdisztán, Vietnám, Németország",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lise Meitner",
+      "object": "Svédország",
+      "object_candidates": "Spanyolország, Katar, Svájc, Ausztria, Libanon, Kanada, Ausztrália, Franciaország, Lengyelország, Svédország",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "II. Albert belga király",
+      "object": "Belgium",
+      "object_candidates": "Lengyelország, Svédország, Olaszország, Katar, Görögország, Norvégia, Vietnám, Svájc, Spanyolország, Belgium",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Vardhamána",
+      "object": "India",
+      "object_candidates": "Argentína, Németország, Vietnám, Olaszország, Lengyelország, Ausztrália, Kanada, Kurdisztán, Brazília, India",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Svante August Arrhenius",
+      "object": "Svédország",
+      "object_candidates": "Ausztria, Németország, Izrael, Brazília, Norvégia, Katar, Ausztrália, Görögország, Franciaország, Svédország",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Mario Monti",
+      "object": "Olaszország",
+      "object_candidates": "Spanyolország, Dánia, India, Németország, Franciaország, Írország, Bulgária, Katar, Angol Királyság, Olaszország",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Jules Janssen",
+      "object": "Franciaország",
+      "object_candidates": "India, Izrael, Spanyolország, Írország, Libanon, Lengyelország, Svájc, Dánia, Svédország, Franciaország",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

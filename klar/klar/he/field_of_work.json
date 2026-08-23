@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "באיזה תחום עובד <subject>? התשובה היא: <mask>",
+    "באיזה תחום ידוע ש<subject> עבד? התשובה היא: <mask>",
+    "באיזה תחום לימוד <subject> קשור? התשובה היא: <mask>",
+    "באיזו דיסציפלינה <subject> מפורסם בעבודתו? התשובה היא: <mask>",
+    "מהו תחום המומחיות העיקרי של <subject>? התשובה היא: <mask>",
+    " התחום שבו <subject> עוסק הוא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "אלן טיורינג",
+      "object": "לוגיקה",
+      "object_candidates": "פיזיולוגיה, פסיכולוגיה, אפרטהייד, מחבר רומנים, עופות, מועדון לילה, רפואה, מוזיקאי, בודהיזם, לוגיקה",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "אנכסגורס",
+      "object": "פילוסופיה",
+      "object_candidates": "גאומטריה, אסטרונומיה, ביולוגיה, בלשנות, פסיכולוגיה, אופרה, לוגיקה, טרור, גנטיקה, פילוסופיה",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "רוברט בונזן",
+      "object": "כימיה",
+      "object_candidates": "בודהיזם, פיזיקה, מחזאי, אסטרונום, בלשנות, אנטומיה, אופרה, מחבר רומנים, ביולוגיה, כימיה",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ז'אן קלווין",
+      "object": "תאולוגיה",
+      "object_candidates": "היסטוריה, אנטומיה, לוגיקה, פיזיקה, פסיכולוגיה, גאוגרפיה, מתמטיקה, גאולוגיה, גאומטריה, תאולוגיה",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "מערכת פיזיקלית",
+      "object": "פיזיקה",
+      "object_candidates": "טרור, פסיכולוגיה, היסטוריה, טופולוגיה, מוזיקאי, אסטרונום, אופרה, גאוגרפיה, כלכלה, פיזיקה",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "קארל רוג'רס",
+      "object": "פסיכולוגיה",
+      "object_candidates": "בלשנות, לוגיקה, אפרטהייד, טופולוגיה, גנטיקה, פיזיולוגיה, בודהיזם, מדע, אסטרונום, פסיכולוגיה",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "דויד הילברט",
+      "object": "גאומטריה",
+      "object_candidates": "כלכלן, גאוגרפיה, טופולוגיה, מתמטיקה, סוציולוגיה, אתר אינטרנט, מחזאי, אקולוגיה, אפרטהייד, גאומטריה",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ריכרד וגנר",
+      "object": "אופרה",
+      "object_candidates": "אתר אינטרנט, מתמטיקאי, עופות, מתמטיקה, פילוסופיה, כלכלה, בודהיזם, מועדון לילה, פיזיקה, אופרה",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "אוקלידס",
+      "object": "גאומטריה",
+      "object_candidates": "אתר אינטרנט, גנטיקה, טרור, בלשנות, מועדון לילה, כלכלה, אסטרונום, גאולוגיה, לוגיקה, גאומטריה",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "מקס ובר",
+      "object": "סוציולוגיה",
+      "object_candidates": "כלכלה, כימיה, מוזיקאי, גאולוגיה, טרור, מתמטיקה, אסטרונומיה, טופולוגיה, מדע, סוציולוגיה",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "הנס אייזנק",
+      "object": "פסיכולוגיה",
+      "object_candidates": "כימיה, פיזיולוגיה, מוזיקאי, אתר אינטרנט, כלכלן, מחבר רומנים, אנטומיה, פיזיקה, אסטרונום, פסיכולוגיה",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "יוג'ין ויגנר",
+      "object": "פיזיקה",
+      "object_candidates": "מחזאי, כלכלן, גאוגרפיה, אפרטהייד, בלשנות, רפואה, כימיה, גאומטריה, טרור, פיזיקה",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "פרד הויל",
+      "object": "אסטרונומיה",
+      "object_candidates": "טופולוגיה, אפרטהייד, טרור, ביולוגיה, פילוסופיה, רפואה, כלכלה, אנטומיה, מתמטיקאי, אסטרונומיה",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "קלאודיוס גלנוס",
+      "object": "אנטומיה",
+      "object_candidates": "אופרה, מתמטיקה, כלכלן, פסיכולוגיה, פיזיולוגיה, פיזיקה, אתר אינטרנט, רפואה, אסטרונום, אנטומיה",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "ויליאם הארווי",
+      "object": "פיזיולוגיה",
+      "object_candidates": "ביולוגיה, רפואה, גנטיקה, מוזיקאי, בלשנות, אנטומיה, לוגיקה, כימיה, כלכלן, פיזיולוגיה",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "הווארד קרטר",
+      "object": "ארכאולוגיה",
+      "object_candidates": "בלשנות, גאומטריה, תאולוגיה, גאוגרפיה, פיזיולוגיה, טרור, מתמטיקאי, מתמטיקה, כלכלה, ארכאולוגיה",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "היינריך שלימן",
+      "object": "ארכאולוגיה",
+      "object_candidates": "מוזיקאי, כלכלה, לוגיקה, מחזאי, ביולוגיה, ג'אז, אופרה, פיזיקה, אסטרונומיה, ארכאולוגיה",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "קלוד ברנאר",
+      "object": "פיזיולוגיה",
+      "object_candidates": "רפואה, ביולוגיה, היסטוריה, כלכלן, כימיה, כלכלה, אפרטהייד, טופולוגיה, גאומטריה, פיזיולוגיה",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "אייזק ניוטון",
+      "object": "מתמטיקה",
+      "object_candidates": "אופרה, גאולוגיה, פיזיולוגיה, גאומטריה, פיזיקה, עופות, פסיכולוגיה, ארכאולוגיה, היסטוריה, מתמטיקה",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "יוסטוס פון ליביג",
+      "object": "כימיה",
+      "object_candidates": "אופרה, מחזאי, עופות, פילוסופיה, מועדון לילה, גנטיקה, אקולוגיה, ארכאולוגיה, אתר אינטרנט, כימיה",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "פרדריק בנטינג",
+      "object": "פיזיולוגיה",
+      "object_candidates": "מתמטיקאי, מוזיקאי, גאומטריה, מתמטיקה, מחבר רומנים, טרור, לוגיקה, אופרה, בודהיזם, פיזיולוגיה",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "קרל מרקס",
+      "object": "סוציולוגיה",
+      "object_candidates": "אקולוגיה, טרור, טופולוגיה, מתמטיקאי, רפואה, אסטרונום, תאולוגיה, לוגיקה, ג'אז, סוציולוגיה",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "הנס בתה",
+      "object": "פיזיקה",
+      "object_candidates": "אפרטהייד, בודהיזם, מדע, אנטומיה, אתר אינטרנט, גאולוגיה, ביולוגיה, אסטרונומיה, בלשנות, פיזיקה",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'ק רובי",
+      "object": "מועדון לילה",
+      "object_candidates": "גאולוגיה, כימיה, אסטרונומיה, מתמטיקה, ג'אז, פיזיולוגיה, פיזיקה, פסיכולוגיה, סוציולוגיה, מועדון לילה",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "פרסי ברידג'מן",
+      "object": "פיזיקה",
+      "object_candidates": "גאולוגיה, עופות, רפואה, גאוגרפיה, מחבר רומנים, פילוסופיה, פיזיולוגיה, מועדון לילה, מתמטיקאי, פיזיקה",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'ירולמו קרדאנו",
+      "object": "מתמטיקה",
+      "object_candidates": "מדע, סוציולוגיה, כלכלן, עופות, אתר אינטרנט, אסטרונומיה, מחבר רומנים, טופולוגיה, אנטומיה, מתמטיקה",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "מקס ובר",
+      "object": "כלכלה",
+      "object_candidates": "רפואה, מוזיקאי, פיזיקה, טופולוגיה, כלכלן, אסטרונום, בודהיזם, גאומטריה, טרור, כלכלה",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "מייקל פאראדיי",
+      "object": "כימיה",
+      "object_candidates": "מוזיקאי, טופולוגיה, טרור, פיזיקה, גנטיקה, אופרה, גאולוגיה, גאוגרפיה, ביולוגיה, כימיה",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "אורניתולוגיה",
+      "object": "עופות",
+      "object_candidates": "מחזאי, היסטוריה, בודהיזם, תאולוגיה, טופולוגיה, פילוסופיה, מחבר רומנים, פיזיולוגיה, מתמטיקאי, עופות",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "בונאוונטורה קאוואליירי",
+      "object": "מתמטיקה",
+      "object_candidates": "מתמטיקאי, סוציולוגיה, כלכלן, גאוגרפיה, מועדון לילה, אקולוגיה, מוזיקאי, אופרה, ביולוגיה, מתמטיקה",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "גלילאו גליליי",
+      "object": "מתמטיקה",
+      "object_candidates": "מחבר רומנים, תאולוגיה, כלכלן, מחזאי, גנטיקה, סוציולוגיה, פסיכולוגיה, ארכאולוגיה, מועדון לילה, מתמטיקה",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "היפאטיה",
+      "object": "מתמטיקה",
+      "object_candidates": "פיזיקה, בלשנות, מחבר רומנים, רפואה, מתמטיקאי, גאומטריה, פיזיולוגיה, כלכלן, אסטרונומיה, מתמטיקה",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "מיכאל סרווטוס",
+      "object": "תאולוגיה",
+      "object_candidates": "אקולוגיה, כלכלן, גאומטריה, בלשנות, פסיכולוגיה, ג'אז, פיזיקה, אנטומיה, כלכלה, תאולוגיה",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "אדווין האבל",
+      "object": "אסטרונומיה",
+      "object_candidates": "טופולוגיה, פילוסופיה, סוציולוגיה, מתמטיקאי, אתר אינטרנט, מתמטיקה, אפרטהייד, בודהיזם, אנטומיה, אסטרונומיה",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "אייזק ניוטון",
+      "object": "פיזיקה",
+      "object_candidates": "פסיכולוגיה, רפואה, תאולוגיה, מתמטיקאי, אסטרונומיה, אנטומיה, מחזאי, אופרה, אקולוגיה, פיזיקה",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "איליה פריגוז'ין",
+      "object": "פיזיקה",
+      "object_candidates": "רפואה, מוזיקאי, אופרה, טופולוגיה, פילוסופיה, מתמטיקאי, פסיכולוגיה, טרור, היסטוריה, פיזיקה",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "היפותזת ספיר-וורף",
+      "object": "בלשנות",
+      "object_candidates": "מדע, אקולוגיה, מתמטיקאי, כלכלן, אנטומיה, אפרטהייד, גנטיקה, פיזיולוגיה, טרור, בלשנות",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "השיטה המדעית",
+      "object": "מדע",
+      "object_candidates": "אנטומיה, פילוסופיה, מחזאי, היסטוריה, אתר אינטרנט, מחבר רומנים, אקולוגיה, כלכלה, גאולוגיה, מדע",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "ויליאם קרוקס",
+      "object": "כימיה",
+      "object_candidates": "גאולוגיה, מוזיקאי, תאולוגיה, כלכלן, גאוגרפיה, אנטומיה, טופולוגיה, אופרה, אקולוגיה, כימיה",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "סטיב ביקו",
+      "object": "אפרטהייד",
+      "object_candidates": "בלשנות, מתמטיקה, פסיכולוגיה, מתמטיקאי, אתר אינטרנט, מוזיקאי, גאוגרפיה, תאולוגיה, היסטוריה, אפרטהייד",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "צ'ארלס דרווין",
+      "object": "ביולוגיה",
+      "object_candidates": "מועדון לילה, סוציולוגיה, אופרה, טרור, בודהיזם, פיזיקה, גאוגרפיה, מדע, תאולוגיה, ביולוגיה",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "טיכו ברהה",
+      "object": "אסטרונומיה",
+      "object_candidates": "בודהיזם, מועדון לילה, פיזיקה, ביולוגיה, רפואה, מתמטיקאי, פסיכולוגיה, פילוסופיה, מוזיקאי, אסטרונומיה",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "ג'ון סטיוארט מיל",
+      "object": "פילוסופיה",
+      "object_candidates": "אסטרונום, אסטרונומיה, עופות, סוציולוגיה, אקולוגיה, ג'אז, גנטיקה, לוגיקה, גאולוגיה, פילוסופיה",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "אלן טיורינג",
+      "object": "מתמטיקה",
+      "object_candidates": "אתר אינטרנט, תאולוגיה, אסטרונום, גנטיקה, אנטומיה, פיזיקה, מוזיקאי, עופות, מתמטיקאי, מתמטיקה",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "וילפרדו פארטו",
+      "object": "סוציולוגיה",
+      "object_candidates": "פסיכולוגיה, אופרה, בלשנות, מתמטיקה, ביולוגיה, ג'אז, אסטרונום, טופולוגיה, אנטומיה, סוציולוגיה",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "סומרסט מוהם",
+      "object": "מחזאי",
+      "object_candidates": "גאולוגיה, גנטיקה, אסטרונום, אסטרונומיה, סוציולוגיה, אקולוגיה, ארכאולוגיה, טרור, פיזיולוגיה, מחזאי",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "סומרסט מוהם",
+      "object": "מחבר רומנים",
+      "object_candidates": "כלכלה, פיזיולוגיה, לוגיקה, ארכאולוגיה, גאומטריה, כלכלן, מדע, אופרה, כימיה, מחבר רומנים",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "אנריקו פרמי",
+      "object": "פיזיקה",
+      "object_candidates": "פסיכולוגיה, טרור, עופות, כימיה, פיזיולוגיה, מוזיקאי, אתר אינטרנט, פילוסופיה, רפואה, פיזיקה",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'ובאני דומניקו קאסיני",
+      "object": "אסטרונומיה",
+      "object_candidates": "אנטומיה, בודהיזם, גאומטריה, מחבר רומנים, פילוסופיה, לוגיקה, גאולוגיה, מתמטיקאי, אסטרונום, אסטרונומיה",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "יוהאן וולפגנג פון גתה",
+      "object": "אנטומיה",
+      "object_candidates": "פסיכולוגיה, מתמטיקה, פילוסופיה, מוזיקאי, טרור, כלכלן, אתר אינטרנט, בודהיזם, עופות, אנטומיה",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "פאראצלסוס",
+      "object": "רפואה",
+      "object_candidates": "מתמטיקאי, בודהיזם, אופרה, מדע, כלכלן, טרור, אסטרונום, מחזאי, כלכלה, רפואה",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "ג'ון קולטריין",
+      "object": "ג'אז",
+      "object_candidates": "מחבר רומנים, אנטומיה, אסטרונומיה, גאוגרפיה, פיזיולוגיה, בלשנות, אופרה, פסיכולוגיה, ביולוגיה, ג'אז",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "הרמן פון הלמהולץ",
+      "object": "פיזיקה",
+      "object_candidates": "היסטוריה, גאוגרפיה, רפואה, אתר אינטרנט, מדע, אפרטהייד, כלכלן, עופות, גאומטריה, פיזיקה",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "קלאודיוס גלנוס",
+      "object": "רפואה",
+      "object_candidates": "לוגיקה, ביולוגיה, מתמטיקאי, בלשנות, גנטיקה, אסטרונום, סוציולוגיה, אפרטהייד, טרור, רפואה",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "אברהם מאסלו",
+      "object": "פסיכולוגיה",
+      "object_candidates": "מחבר רומנים, אנטומיה, גאולוגיה, אסטרונום, כימיה, מתמטיקאי, מועדון לילה, מוזיקאי, אקולוגיה, פסיכולוגיה",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "לואי פסטר",
+      "object": "כימיה",
+      "object_candidates": "מדע, בודהיזם, פיזיולוגיה, סוציולוגיה, פילוסופיה, ארכאולוגיה, אפרטהייד, עופות, טופולוגיה, כימיה",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "הנרי קוונדיש",
+      "object": "פיזיקה",
+      "object_candidates": "עופות, ארכאולוגיה, אתר אינטרנט, היסטוריה, מתמטיקה, גנטיקה, מוזיקאי, גאולוגיה, אנטומיה, פיזיקה",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "קרל מרקס",
+      "object": "כלכלה",
+      "object_candidates": "ארכאולוגיה, בודהיזם, אסטרונום, טופולוגיה, אפרטהייד, תאולוגיה, אנטומיה, פיזיולוגיה, רפואה, כלכלה",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "אולף פון יולר",
+      "object": "פיזיולוגיה",
+      "object_candidates": "טופולוגיה, רפואה, סוציולוגיה, מחזאי, תאולוגיה, פיזיקה, מתמטיקה, אופרה, גאומטריה, פיזיולוגיה",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "גלילאו גליליי",
+      "object": "אסטרונומיה",
+      "object_candidates": "כימיה, מועדון לילה, מדע, לוגיקה, בודהיזם, אופרה, גאומטריה, רפואה, ביולוגיה, אסטרונומיה",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "ניקולאי לובצ'בסקי",
+      "object": "גאומטריה",
+      "object_candidates": "תאולוגיה, בודהיזם, לוגיקה, מחבר רומנים, סוציולוגיה, גאוגרפיה, אפרטהייד, פסיכולוגיה, גאולוגיה, גאומטריה",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "כריסטיאן הויגנס",
+      "object": "מתמטיקה",
+      "object_candidates": "ג'אז, היסטוריה, כלכלן, טרור, כימיה, לוגיקה, פיזיקה, אסטרונומיה, עופות, מתמטיקה",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "יישום רשת",
+      "object": "אתר אינטרנט",
+      "object_candidates": "היסטוריה, גאומטריה, ביולוגיה, גאולוגיה, בודהיזם, אופרה, פסיכולוגיה, פיזיולוגיה, כימיה, אתר אינטרנט",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "נגרג'ונה",
+      "object": "בודהיזם",
+      "object_candidates": "לוגיקה, מתמטיקאי, פיזיקה, עופות, אקולוגיה, ג'אז, אנטומיה, מחבר רומנים, אתר אינטרנט, בודהיזם",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "ויליאם רואן המילטון",
+      "object": "מתמטיקה",
+      "object_candidates": "מדע, כלכלן, גאומטריה, ארכאולוגיה, אסטרונום, גאוגרפיה, אתר אינטרנט, בלשנות, כימיה, מתמטיקה",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ארנסט רתרפורד",
+      "object": "פיזיקה",
+      "object_candidates": "טרור, היסטוריה, כלכלן, בלשנות, ארכאולוגיה, טופולוגיה, אנטומיה, אקולוגיה, מתמטיקאי, פיזיקה",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ויליאם הרשל",
+      "object": "אסטרונומיה",
+      "object_candidates": "מדע, גאולוגיה, תאולוגיה, אופרה, פילוסופיה, היסטוריה, ביולוגיה, ארכאולוגיה, בודהיזם, אסטרונומיה",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "איוואן פבלוב",
+      "object": "פיזיולוגיה",
+      "object_candidates": "אפרטהייד, פסיכולוגיה, אסטרונום, מועדון לילה, ביולוגיה, כלכלן, פיזיקה, גאוגרפיה, סוציולוגיה, פיזיולוגיה",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "הרמן מינקובסקי",
+      "object": "גאומטריה",
+      "object_candidates": "טרור, אתר אינטרנט, תאולוגיה, רפואה, פיזיקה, טופולוגיה, מועדון לילה, גנטיקה, מתמטיקה, גאומטריה",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "גלילאו גליליי",
+      "object": "פיזיקה",
+      "object_candidates": "גאומטריה, מועדון לילה, אקולוגיה, טופולוגיה, עופות, לוגיקה, טרור, מוזיקאי, מחזאי, פיזיקה",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'וליאן שווינגר",
+      "object": "פיזיקה",
+      "object_candidates": "בלשנות, פיזיולוגיה, טופולוגיה, אנטומיה, מדע, סוציולוגיה, גאוגרפיה, כימיה, תאולוגיה, פיזיקה",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "פיגוע התאבדות",
+      "object": "טרור",
+      "object_candidates": "טופולוגיה, פסיכולוגיה, פילוסופיה, גאוגרפיה, ארכאולוגיה, בלשנות, תאולוגיה, גאומטריה, עופות, טרור",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "לב ויגוצקי",
+      "object": "פסיכולוגיה",
+      "object_candidates": "רפואה, ג'אז, לוגיקה, גאוגרפיה, גנטיקה, מתמטיקה, מועדון לילה, כלכלן, מחזאי, פסיכולוגיה",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "קרל מרקס",
+      "object": "פילוסופיה",
+      "object_candidates": "פסיכולוגיה, טרור, פיזיקה, מועדון לילה, אקולוגיה, גאולוגיה, מדע, אסטרונום, מוזיקאי, פילוסופיה",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "פרידריך בסל",
+      "object": "מתמטיקה",
+      "object_candidates": "מועדון לילה, בלשנות, תאולוגיה, טופולוגיה, פיזיולוגיה, ביולוגיה, אופרה, גאולוגיה, לוגיקה, מתמטיקה",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "יוזף שומפטר",
+      "object": "כלכלה",
+      "object_candidates": "ארכאולוגיה, מועדון לילה, רפואה, סוציולוגיה, פילוסופיה, ג'אז, מתמטיקאי, לוגיקה, תאולוגיה, כלכלה",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "מקס ובר",
+      "object": "היסטוריה",
+      "object_candidates": "עופות, גאוגרפיה, אנטומיה, מדע, אסטרונום, ביולוגיה, גנטיקה, מועדון לילה, אקולוגיה, היסטוריה",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "אדוארד גיבון",
+      "object": "היסטוריה",
+      "object_candidates": "בלשנות, טרור, גאוגרפיה, פילוסופיה, תאולוגיה, סוציולוגיה, אפרטהייד, מחזאי, פיזיולוגיה, היסטוריה",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "ג'ון וילר",
+      "object": "פיזיקה",
+      "object_candidates": "סוציולוגיה, טרור, מועדון לילה, ביולוגיה, אתר אינטרנט, אפרטהייד, גאוגרפיה, פסיכולוגיה, אנטומיה, פיזיקה",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "לאונרד אוילר",
+      "object": "פיזיקה",
+      "object_candidates": "בודהיזם, גאוגרפיה, מתמטיקה, פסיכולוגיה, מתמטיקאי, ג'אז, גאולוגיה, אפרטהייד, בלשנות, פיזיקה",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אוגוסט קרוג",
+      "object": "פיזיולוגיה",
+      "object_candidates": "ביולוגיה, ארכאולוגיה, לוגיקה, מועדון לילה, בודהיזם, גאולוגיה, אנטומיה, אתר אינטרנט, כלכלה, פיזיולוגיה",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "פליקס בלוך",
+      "object": "פיזיקה",
+      "object_candidates": "אפרטהייד, מדע, מתמטיקאי, פסיכולוגיה, מתמטיקה, גאוגרפיה, מחבר רומנים, אופרה, פיזיולוגיה, פיזיקה",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אנדרס צלזיוס",
+      "object": "אסטרונומיה",
+      "object_candidates": "כלכלן, כימיה, ביולוגיה, אסטרונום, פיזיולוגיה, אנטומיה, עופות, אתר אינטרנט, גאומטריה, אסטרונומיה",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "וילם איינטהובן",
+      "object": "פיזיולוגיה",
+      "object_candidates": "אפרטהייד, תאולוגיה, מועדון לילה, אסטרונומיה, גאוגרפיה, בודהיזם, בלשנות, לוגיקה, אקולוגיה, פיזיולוגיה",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "יוזף פראונהופר",
+      "object": "פיזיקה",
+      "object_candidates": "רפואה, מוזיקאי, מדע, אקולוגיה, מתמטיקה, ג'אז, כימיה, מתמטיקאי, ארכאולוגיה, פיזיקה",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "שינאיצ'ירו טומונאגה",
+      "object": "פיזיקה",
+      "object_candidates": "לוגיקה, גאולוגיה, פילוסופיה, תאולוגיה, אסטרונום, כלכלן, בודהיזם, מדע, פסיכולוגיה, פיזיקה",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "הרמן שוורץ",
+      "object": "מתמטיקה",
+      "object_candidates": "אסטרונום, פסיכולוגיה, מחזאי, פיזיקה, מועדון לילה, מוזיקאי, גאומטריה, אסטרונומיה, פיזיולוגיה, מתמטיקה",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ז'אן לה רון ד'אלמבר",
+      "object": "מתמטיקה",
+      "object_candidates": "כימיה, מחבר רומנים, פיזיולוגיה, גנטיקה, פילוסופיה, ביולוגיה, רפואה, ארכאולוגיה, מוזיקאי, מתמטיקה",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "לוקה פאצ'ולי",
+      "object": "מתמטיקה",
+      "object_candidates": "רפואה, אסטרונום, בלשנות, פסיכולוגיה, אסטרונומיה, עופות, פילוסופיה, בודהיזם, ביולוגיה, מתמטיקה",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ויטאלי גינזבורג",
+      "object": "פיזיקה",
+      "object_candidates": "גאוגרפיה, ג'אז, ארכאולוגיה, מחזאי, טופולוגיה, אסטרונומיה, עופות, פילוסופיה, כימיה, פיזיקה",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "סה-מה צ'יאן",
+      "object": "היסטוריה",
+      "object_candidates": "רפואה, גאולוגיה, מועדון לילה, עופות, אנטומיה, אתר אינטרנט, אקולוגיה, מחזאי, טרור, היסטוריה",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "תלמי",
+      "object": "מתמטיקאי",
+      "object_candidates": "מחזאי, עופות, טרור, טופולוגיה, רפואה, אסטרונום, גאומטריה, מדע, מוזיקאי, מתמטיקאי",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "ז'אן פיאז'ה",
+      "object": "פסיכולוגיה",
+      "object_candidates": "אופרה, לוגיקה, סוציולוגיה, בודהיזם, תאולוגיה, כימיה, אתר אינטרנט, אנטומיה, ארכאולוגיה, פסיכולוגיה",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "סטפן בנך",
+      "object": "מתמטיקה",
+      "object_candidates": "לוגיקה, אסטרונומיה, ביולוגיה, ארכאולוגיה, פיזיולוגיה, מדע, סוציולוגיה, טרור, טופולוגיה, מתמטיקה",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ג'וזף פריסטלי",
+      "object": "פילוסופיה",
+      "object_candidates": "פיזיקה, פסיכולוגיה, כלכלה, אנטומיה, רפואה, טרור, מחזאי, גאומטריה, מתמטיקה, פילוסופיה",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "קורט לוין",
+      "object": "פסיכולוגיה",
+      "object_candidates": "כימיה, מחזאי, אנטומיה, כלכלה, אסטרונומיה, כלכלן, לוגיקה, אופרה, בודהיזם, פסיכולוגיה",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "ג'יימס קלרק מקסוול",
+      "object": "פיזיקה",
+      "object_candidates": "רפואה, גאוגרפיה, פסיכולוגיה, כלכלה, אופרה, אסטרונומיה, טרור, בודהיזם, ביולוגיה, פיזיקה",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אלפרד מרשל",
+      "object": "כלכלה",
+      "object_candidates": "פיזיקה, גאוגרפיה, ביולוגיה, בודהיזם, מדע, גאומטריה, אסטרונומיה, מתמטיקאי, לוגיקה, כלכלה",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "ניקולאוס קופרניקוס",
+      "object": "אסטרונומיה",
+      "object_candidates": "לוגיקה, טופולוגיה, ארכאולוגיה, מדע, עופות, גאוגרפיה, טרור, מועדון לילה, ביולוגיה, אסטרונומיה",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "אריק מסקין",
+      "object": "כלכלן",
+      "object_candidates": "בודהיזם, מחבר רומנים, אסטרונומיה, מדע, אקולוגיה, סוציולוגיה, אנטומיה, אסטרונום, רפואה, כלכלן",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "ג'ארד דיימונד",
+      "object": "אקולוגיה",
+      "object_candidates": "כימיה, ארכאולוגיה, גאולוגיה, לוגיקה, פיזיקה, אתר אינטרנט, מדע, אסטרונום, אפרטהייד, אקולוגיה",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "אנדריי קולמוגורוב",
+      "object": "גאומטריה",
+      "object_candidates": "ביולוגיה, פיזיקה, בלשנות, מחזאי, מתמטיקה, אתר אינטרנט, סוציולוגיה, מחבר רומנים, ג'אז, גאומטריה",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "לואי ז'וזף גה-ליסאק",
+      "object": "כימיה",
+      "object_candidates": "אסטרונומיה, עופות, היסטוריה, גאוגרפיה, מוזיקאי, לוגיקה, מחזאי, כלכלה, מחבר רומנים, כימיה",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "אוקטאן",
+      "object": "כימיה",
+      "object_candidates": "בלשנות, טופולוגיה, אתר אינטרנט, לוגיקה, אפרטהייד, אופרה, מדע, היסטוריה, מחבר רומנים, כימיה",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "דניאל ברנולי",
+      "object": "פיזיקה",
+      "object_candidates": "רפואה, ארכאולוגיה, עופות, תאולוגיה, מחזאי, פסיכולוגיה, אופרה, אסטרונום, פילוסופיה, פיזיקה",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "מייקל פאראדיי",
+      "object": "פיזיקה",
+      "object_candidates": "עופות, ביולוגיה, אופרה, בודהיזם, כלכלה, טופולוגיה, היסטוריה, רפואה, פסיכולוגיה, פיזיקה",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "האמפרי דייווי",
+      "object": "כימיה",
+      "object_candidates": "מחזאי, כלכלן, פסיכולוגיה, סוציולוגיה, פילוסופיה, לוגיקה, ג'אז, מחבר רומנים, גאוגרפיה, כימיה",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "אנרי מואסאן",
+      "object": "כימיה",
+      "object_candidates": "אתר אינטרנט, לוגיקה, מחבר רומנים, מתמטיקה, טופולוגיה, כלכלה, אסטרונום, טרור, מועדון לילה, כימיה",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "פייר קירי",
+      "object": "פיזיקה",
+      "object_candidates": "כלכלה, תאולוגיה, מחזאי, גאומטריה, ארכאולוגיה, פילוסופיה, מחבר רומנים, פסיכולוגיה, ג'אז, פיזיקה",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "גוסטב קירכהוף",
+      "object": "פיזיקה",
+      "object_candidates": "טופולוגיה, מתמטיקאי, תאולוגיה, מדע, פילוסופיה, מתמטיקה, בלשנות, אפרטהייד, רפואה, פיזיקה",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "נורברט וינר",
+      "object": "מתמטיקה",
+      "object_candidates": "לוגיקה, בודהיזם, אופרה, כימיה, אקולוגיה, סוציולוגיה, תאולוגיה, פילוסופיה, גאוגרפיה, מתמטיקה",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "אורבן לה-ורייה",
+      "object": "אסטרונומיה",
+      "object_candidates": "תאולוגיה, פיזיולוגיה, מועדון לילה, בודהיזם, גאוגרפיה, אנטומיה, ביולוגיה, אתר אינטרנט, גאולוגיה, אסטרונומיה",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "יוהאן הויזינחה",
+      "object": "היסטוריה",
+      "object_candidates": "מתמטיקאי, ג'אז, פיזיקה, מחבר רומנים, בלשנות, מתמטיקה, גאוגרפיה, רפואה, עופות, היסטוריה",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "Science",
+      "object": "מדע",
+      "object_candidates": "מוזיקאי, גאומטריה, תאולוגיה, עופות, לוגיקה, פסיכולוגיה, ג'אז, אקולוגיה, אסטרונום, מדע",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "אדוארד טלר",
+      "object": "פיזיקה",
+      "object_candidates": "גנטיקה, בודהיזם, מתמטיקה, כלכלה, לוגיקה, אסטרונום, אנטומיה, סוציולוגיה, ג'אז, פיזיקה",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "לד זפלין",
+      "object": "מוזיקאי",
+      "object_candidates": "ארכאולוגיה, כלכלה, ביולוגיה, לוגיקה, בלשנות, פסיכולוגיה, גאולוגיה, אנטומיה, גנטיקה, מוזיקאי",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "ארנסט לורנס",
+      "object": "פיזיקה",
+      "object_candidates": "מדע, עופות, אנטומיה, היסטוריה, אסטרונומיה, טופולוגיה, לוגיקה, רפואה, מועדון לילה, פיזיקה",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "מארי קירי",
+      "object": "כימיה",
+      "object_candidates": "כלכלה, אסטרונום, מדע, בודהיזם, אקולוגיה, אתר אינטרנט, ג'אז, מתמטיקאי, מתמטיקה, כימיה",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ג'ון נפייר",
+      "object": "מתמטיקה",
+      "object_candidates": "בלשנות, תאולוגיה, אסטרונום, אופרה, מוזיקאי, מתמטיקאי, רפואה, מחבר רומנים, גנטיקה, מתמטיקה",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "אייזק ניוטון",
+      "object": "אסטרונומיה",
+      "object_candidates": "תאולוגיה, אקולוגיה, כלכלה, אפרטהייד, גנטיקה, גאוגרפיה, אנטומיה, מתמטיקאי, אופרה, אסטרונומיה",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "לארי סנגר",
+      "object": "פילוסופיה",
+      "object_candidates": "מדע, פיזיקה, פיזיולוגיה, ארכאולוגיה, אקולוגיה, אסטרונומיה, רפואה, כימיה, אסטרונום, פילוסופיה",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "פיליפ לנארד",
+      "object": "פיזיקה",
+      "object_candidates": "טרור, גאולוגיה, כלכלן, לוגיקה, מחבר רומנים, עופות, מחזאי, אופרה, סוציולוגיה, פיזיקה",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "הרמן פון הלמהולץ",
+      "object": "פיזיולוגיה",
+      "object_candidates": "כלכלה, עופות, מתמטיקה, גנטיקה, פיזיקה, אתר אינטרנט, אקולוגיה, מתמטיקאי, מחזאי, פיזיולוגיה",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "פרידריך בסל",
+      "object": "אסטרונומיה",
+      "object_candidates": "אפרטהייד, פסיכולוגיה, אתר אינטרנט, לוגיקה, גאומטריה, פילוסופיה, מוזיקאי, גנטיקה, אופרה, אסטרונומיה",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "אלפרד קינסי",
+      "object": "ביולוגיה",
+      "object_candidates": "מחזאי, כימיה, סוציולוגיה, בודהיזם, אקולוגיה, גאולוגיה, גנטיקה, היסטוריה, אופרה, ביולוגיה",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "מסרוב משדוץ",
+      "object": "בלשנות",
+      "object_candidates": "גאולוגיה, גנטיקה, מועדון לילה, כימיה, רפואה, מדע, אפרטהייד, פיזיקה, טופולוגיה, בלשנות",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "ג'יימס פרנק",
+      "object": "פיזיקה",
+      "object_candidates": "אסטרונומיה, אתר אינטרנט, סוציולוגיה, אקולוגיה, כלכלה, מדע, עופות, מועדון לילה, אפרטהייד, פיזיקה",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אלינור אוסטרום",
+      "object": "כלכלה",
+      "object_candidates": "אסטרונום, פיזיולוגיה, מתמטיקאי, אפרטהייד, עופות, לוגיקה, מחבר רומנים, רפואה, פסיכולוגיה, כלכלה",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "אדוארד אפלטון",
+      "object": "פיזיקה",
+      "object_candidates": "מתמטיקה, פסיכולוגיה, אסטרונום, עופות, אפרטהייד, ג'אז, אסטרונומיה, אקולוגיה, תאולוגיה, פיזיקה",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'ון דלטון",
+      "object": "כימיה",
+      "object_candidates": "בלשנות, מתמטיקאי, מחזאי, היסטוריה, כלכלה, ביולוגיה, בודהיזם, גאוגרפיה, פילוסופיה, כימיה",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ג'ון דלטון",
+      "object": "פיזיקה",
+      "object_candidates": "מתמטיקאי, טרור, גאומטריה, טופולוגיה, אסטרונום, כימיה, פיזיולוגיה, גאוגרפיה, אנטומיה, פיזיקה",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "דמיטרי מנדלייב",
+      "object": "כימיה",
+      "object_candidates": "פיזיקה, אסטרונום, אתר אינטרנט, ארכאולוגיה, אופרה, ביולוגיה, מועדון לילה, היסטוריה, אקולוגיה, כימיה",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "דמיטרי מנדלייב",
+      "object": "פיזיקה",
+      "object_candidates": "מחזאי, אופרה, סוציולוגיה, גאוגרפיה, רפואה, מתמטיקאי, ג'אז, מתמטיקה, טרור, פיזיקה",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "פול מקרטני",
+      "object": "מוזיקאי",
+      "object_candidates": "גאומטריה, אסטרונומיה, תאולוגיה, בודהיזם, מחזאי, טרור, אקולוגיה, אנטומיה, מחבר רומנים, מוזיקאי",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "צ'ארלס בבג'",
+      "object": "מתמטיקה",
+      "object_candidates": "אסטרונומיה, מועדון לילה, אנטומיה, בודהיזם, פסיכולוגיה, ביולוגיה, פילוסופיה, מחזאי, אתר אינטרנט, מתמטיקה",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ניקולאוס קופרניקוס",
+      "object": "מתמטיקה",
+      "object_candidates": "אנטומיה, אתר אינטרנט, עופות, פיזיולוגיה, אסטרונומיה, אסטרונום, ביולוגיה, פיזיקה, גאוגרפיה, מתמטיקה",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "אריאבהטה",
+      "object": "אסטרונומיה",
+      "object_candidates": "סוציולוגיה, לוגיקה, כלכלן, כלכלה, ביולוגיה, מתמטיקאי, היסטוריה, אפרטהייד, גאוגרפיה, אסטרונומיה",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "קלייד טומבו",
+      "object": "אסטרונום",
+      "object_candidates": "טרור, מחבר רומנים, לוגיקה, גאוגרפיה, תאולוגיה, בודהיזם, בלשנות, מועדון לילה, כימיה, אסטרונום",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "ויליס לם",
+      "object": "פיזיקה",
+      "object_candidates": "כלכלה, אנטומיה, ארכאולוגיה, עופות, רפואה, גאומטריה, בלשנות, אסטרונומיה, לוגיקה, פיזיקה",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ארכימדס",
+      "object": "גאומטריה",
+      "object_candidates": "פיזיולוגיה, ג'אז, טופולוגיה, גאוגרפיה, אתר אינטרנט, גאולוגיה, פילוסופיה, אקולוגיה, ביולוגיה, גאומטריה",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "אנכסגורס",
+      "object": "אסטרונומיה",
+      "object_candidates": "אפרטהייד, היסטוריה, טופולוגיה, אסטרונום, גנטיקה, אנטומיה, פילוסופיה, לוגיקה, סוציולוגיה, אסטרונומיה",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "כריסטיאן הויגנס",
+      "object": "פיזיקה",
+      "object_candidates": "טרור, אופרה, כלכלה, מועדון לילה, לוגיקה, מוזיקאי, מתמטיקה, גאומטריה, אנטומיה, פיזיקה",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "מייקל ג'קסון",
+      "object": "מוזיקאי",
+      "object_candidates": "פיזיקה, כלכלן, גאולוגיה, ארכאולוגיה, אסטרונום, מתמטיקה, עופות, כלכלה, בודהיזם, מוזיקאי",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "אדם סמית",
+      "object": "כלכלה",
+      "object_candidates": "לוגיקה, טופולוגיה, גנטיקה, ג'אז, מתמטיקה, ביולוגיה, גאולוגיה, עופות, גאוגרפיה, כלכלה",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "רוברט מיליקן",
+      "object": "פיזיקה",
+      "object_candidates": "אקולוגיה, גאולוגיה, רפואה, מחזאי, מועדון לילה, ג'אז, גאוגרפיה, כימיה, אפרטהייד, פיזיקה",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "גרארדוס מרקטור",
+      "object": "גאוגרפיה",
+      "object_candidates": "אנטומיה, אקולוגיה, מחזאי, מוזיקאי, אסטרונום, מדע, לוגיקה, אופרה, כלכלן, גאוגרפיה",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "קארולוס ליניאוס",
+      "object": "רפואה",
+      "object_candidates": "לוגיקה, פילוסופיה, מועדון לילה, תאולוגיה, מתמטיקה, מחזאי, כלכלה, גאולוגיה, גאומטריה, רפואה",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "צ'ארלס דרווין",
+      "object": "גאולוגיה",
+      "object_candidates": "פסיכולוגיה, לוגיקה, מדע, ארכאולוגיה, אסטרונום, מועדון לילה, אופרה, תאולוגיה, גאוגרפיה, גאולוגיה",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "פרנק וילצ'ק",
+      "object": "פיזיקה",
+      "object_candidates": "פילוסופיה, גאומטריה, מדע, פסיכולוגיה, אנטומיה, אקולוגיה, גנטיקה, אסטרונומיה, עופות, פיזיקה",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אנדריי קולמוגורוב",
+      "object": "טופולוגיה",
+      "object_candidates": "ארכאולוגיה, מדע, גאומטריה, גנטיקה, מתמטיקאי, לוגיקה, מתמטיקה, עופות, מחבר רומנים, טופולוגיה",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "יוהאן היינריך למברט",
+      "object": "פיזיקה",
+      "object_candidates": "אסטרונומיה, מוזיקאי, ג'אז, ביולוגיה, רפואה, מחזאי, ארכאולוגיה, מחבר רומנים, בלשנות, פיזיקה",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "בראהמגופטה",
+      "object": "מתמטיקה",
+      "object_candidates": "כלכלה, אנטומיה, מוזיקאי, אתר אינטרנט, מועדון לילה, מחבר רומנים, עופות, ג'אז, גאוגרפיה, מתמטיקה",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "וילהלם וין",
+      "object": "פיזיקה",
+      "object_candidates": "פיזיולוגיה, אתר אינטרנט, גנטיקה, עופות, רפואה, כלכלה, לוגיקה, בודהיזם, סוציולוגיה, פיזיקה",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "הרמן פון הלמהולץ",
+      "object": "פסיכולוגיה",
+      "object_candidates": "אסטרונומיה, מתמטיקה, ביולוגיה, ג'אז, אסטרונום, אופרה, רפואה, טרור, פילוסופיה, פסיכולוגיה",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "לאונרד אוילר",
+      "object": "אסטרונומיה",
+      "object_candidates": "בודהיזם, סוציולוגיה, אפרטהייד, פיזיקה, מחזאי, מתמטיקאי, גאומטריה, ארכאולוגיה, מוזיקאי, אסטרונומיה",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "גלילאו גליליי",
+      "object": "פילוסופיה",
+      "object_candidates": "פסיכולוגיה, פיזיקה, מתמטיקאי, ארכאולוגיה, אתר אינטרנט, ביולוגיה, אסטרונומיה, ג'אז, לוגיקה, פילוסופיה",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "גרגור מנדל",
+      "object": "גנטיקה",
+      "object_candidates": "אנטומיה, בלשנות, טרור, אסטרונומיה, טופולוגיה, כלכלה, פסיכולוגיה, גאוגרפיה, תאולוגיה, גנטיקה",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "ברוס ספרינגסטין",
+      "object": "מוזיקאי",
+      "object_candidates": "גאולוגיה, כלכלן, ג'אז, פיזיולוגיה, בלשנות, אסטרונום, מדע, גאוגרפיה, טרור, מוזיקאי",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "סופיה קובלבסקיה",
+      "object": "מתמטיקה",
+      "object_candidates": "ביולוגיה, כימיה, מתמטיקאי, ג'אז, גנטיקה, מחזאי, סוציולוגיה, גאולוגיה, בלשנות, מתמטיקה",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ג'ורדנו ברונו",
+      "object": "פילוסופיה",
+      "object_candidates": "מחבר רומנים, מתמטיקאי, ג'אז, בודהיזם, עופות, גאולוגיה, גאומטריה, כלכלה, ביולוגיה, פילוסופיה",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "אנרי בקרל",
+      "object": "פיזיקה",
+      "object_candidates": "טרור, לוגיקה, עופות, אסטרונומיה, גאוגרפיה, תאולוגיה, בלשנות, אסטרונום, גאולוגיה, פיזיקה",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "קיפ תורן",
+      "object": "פיזיקה",
+      "object_candidates": "פיזיולוגיה, ג'אז, טרור, אפרטהייד, גאומטריה, ביולוגיה, מחבר רומנים, אתר אינטרנט, טופולוגיה, פיזיקה",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "אוגוסט וייסמן",
+      "object": "ביולוגיה",
+      "object_candidates": "גאולוגיה, אקולוגיה, פיזיולוגיה, טופולוגיה, גנטיקה, טרור, לוגיקה, אנטומיה, רפואה, ביולוגיה",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "פול לנז'בן",
+      "object": "פיזיקה",
+      "object_candidates": "אסטרונום, פסיכולוגיה, טופולוגיה, פיזיולוגיה, פילוסופיה, גאומטריה, מחזאי, ביולוגיה, אסטרונומיה, פיזיקה",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ג'ון קוקרופט",
+      "object": "פיזיקה",
+      "object_candidates": "עופות, גאומטריה, גאולוגיה, מתמטיקאי, מדע, לוגיקה, ג'אז, כלכלן, סוציולוגיה, פיזיקה",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "סוונטה ארהניוס",
+      "object": "כימיה",
+      "object_candidates": "ג'אז, אנטומיה, סוציולוגיה, מוזיקאי, עופות, טופולוגיה, פסיכולוגיה, כלכלן, אתר אינטרנט, כימיה",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "רוקוקו",
+      "object": "אדריכלות",
+      "object_candidates": "כימיה, גאוגרפיה, אסטרונום, לוגיקה, פיזיולוגיה, טופולוגיה, רפואה, טרור, מתמטיקאי, אדריכלות",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

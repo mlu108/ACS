@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "<subject>을/를 소유한 사람은 누구입니까? 답변: <mask>",
+    "<subject>을/를 소유한 회사 또는 사람은 누구입니까? 답변: <mask>",
+    "<subject>의 현재 소유주는 누구입니까? 답변: <mask>",
+    "<subject>가 소유한 사람은 누구입니까? 답변: <mask>",
+    "<subject>의 소유권을 가진 기관은 누구입니까? 답변: <mask>",
+    " <subject>의 소유자는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "두카티",
+      "object": "아우디",
+      "object_candidates": "야후!, 베를린, 파리, 토요타 자동차, 소니, 밀라노, 프랑스, BBC, 폴란드, 아우디",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "람보르기니",
+      "object": "아우디",
+      "object_candidates": "파리, 야후!, 제노바, 밀라노, 아마존닷컴, 폴란드, 마이크로소프트, 토요타 자동차, 프랑스, 아우디",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "에펠 탑",
+      "object": "파리",
+      "object_candidates": "리비우, 카타르, 야후!, 밀라노, 프랑스, 마이크로소프트, 소니, 폴란드, 토리노, 파리",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "독일철도주식회사",
+      "object": "독일",
+      "object_candidates": "토리노, 소니, 파리, 베를린, 제노바, 폴란드, 카타르, 토요타 자동차, 시카고, 독일",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "구글 검색",
+      "object": "구글",
+      "object_candidates": "토리노, 소니, 독일, 제노바, 폴란드, 카타르, 야후!, 시카고, 밀라노, 구글",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "렉서스",
+      "object": "토요타 자동차",
+      "object_candidates": "리비우, 구글, 프랑스, 시카고, BBC, 팔레르모, 폴란드, 제노바, 독일, 토요타 자동차",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "유튜브",
+      "object": "구글",
+      "object_candidates": "시카고, 밀라노, 리비우, 파리, 나폴리, 프랑스, 독일, 토리노, BBC, 구글",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "콤팩트 디스크",
+      "object": "소니",
+      "object_candidates": "토요타 자동차, 리비우, BBC, 밀라노, 구글, 야후!, 나폴리, 제노바, 파리, 소니",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "오헤어 국제공항",
+      "object": "시카고",
+      "object_candidates": "BBC, 제노바, 프랑스, 카타르, 아우디, 토요타 자동차, 암스테르담, 아마존닷컴, 리비우, 시카고",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "프랑스, 리비우, 제노바, 아우디, 야후!, 나폴리, 팔레르모, 파리, 암스테르담, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "소니 컴퓨터 엔터테인먼트",
+      "object": "소니",
+      "object_candidates": "토리노, 구글, 야후!, 아마존닷컴, 리비우, 마이크로소프트, 아우디, 토요타 자동차, 독일, 소니",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "소니 픽처스 엔터테인먼트",
+      "object": "소니",
+      "object_candidates": "독일, 시카고, 마이크로소프트, 나폴리, 리비우, 아마존닷컴, 아우디, BBC, 카타르, 소니",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "G메일",
+      "object": "구글",
+      "object_candidates": "아우디, 나폴리, 파리, 소니, 리비우, 토요타 자동차, 팔레르모, 카타르, 야후!, 구글",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 지도",
+      "object": "구글",
+      "object_candidates": "소니, 팔레르모, 프랑스, 토리노, 나폴리, 밀라노, 토요타 자동차, 베를린, 리비우, 구글",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "소니",
+      "object_candidates": "카타르, 제노바, 구글, 토리노, 파리, 밀라노, BBC, 토요타 자동차, 마이크로소프트, 소니",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "파르크 데 프랭스",
+      "object": "파리",
+      "object_candidates": "리비우, 폴란드, 토요타 자동차, 독일, 베를린, 야후!, BBC, 마이크로소프트, 구글, 파리",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "구글 스트리트 뷰",
+      "object": "구글",
+      "object_candidates": "아우디, 마이크로소프트, 암스테르담, 나폴리, 베를린, 소니, 팔레르모, 리비우, 폴란드, 구글",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "윈도 미디어 플레이어",
+      "object": "마이크로소프트",
+      "object_candidates": "베를린, 시카고, 밀라노, 야후!, 파리, 토요타 자동차, 구글, 소니, 토리노, 마이크로소프트",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "스타디오 주세페 메아차",
+      "object": "밀라노",
+      "object_candidates": "제노바, 소니, 독일, 아마존닷컴, 카타르, 폴란드, 파리, 아우디, 시카고, 밀라노",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "인터넷 영화 데이터베이스",
+      "object": "아마존닷컴",
+      "object_candidates": "프랑스, 시카고, 아우디, 폴란드, 파리, 구글, 소니, 카타르, 팔레르모, 아마존닷컴",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "애드센스",
+      "object": "구글",
+      "object_candidates": "나폴리, 폴란드, 팔레르모, 아우디, 마이크로소프트, 리비우, 암스테르담, 카타르, 제노바, 구글",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "아마존 킨들",
+      "object": "아마존닷컴",
+      "object_candidates": "밀라노, 나폴리, 프랑스, 독일, 암스테르담, 리비우, 마이크로소프트, 제노바, 팔레르모, 아마존닷컴",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "스타디오 렌초 바르베라",
+      "object": "팔레르모",
+      "object_candidates": "소니, 카타르, 독일, 암스테르담, 프랑스, 아우디, 구글, 베를린, BBC, 팔레르모",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "플리커",
+      "object": "야후!",
+      "object_candidates": "시카고, 독일, BBC, 마이크로소프트, 카타르, 프랑스, 토리노, 폴란드, 토요타 자동차, 야후!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "구글플렉스",
+      "object": "구글",
+      "object_candidates": "폴란드, 밀라노, 마이크로소프트, 팔레르모, 프랑스, 암스테르담, 제노바, 리비우, BBC, 구글",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 어스",
+      "object": "구글",
+      "object_candidates": "암스테르담, 마이크로소프트, 야후!, 아마존닷컴, 토요타 자동차, 아우디, 시카고, 리비우, 제노바, 구글",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "다이하쓰",
+      "object": "토요타 자동차",
+      "object_candidates": "파리, 베를린, 마이크로소프트, 독일, 소니, BBC, 나폴리, 프랑스, 제노바, 토요타 자동차",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "에투알 개선문",
+      "object": "프랑스",
+      "object_candidates": "나폴리, 아우디, 암스테르담, 베를린, 카타르, 구글, 파리, 독일, 마이크로소프트, 프랑스",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "퐁텐블로궁",
+      "object": "프랑스",
+      "object_candidates": "토요타 자동차, 소니, 암스테르담, 아마존닷컴, 폴란드, 밀라노, 팔레르모, 아우디, 제노바, 프랑스",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "구글",
+      "object_candidates": "제노바, 아우디, 아마존닷컴, 소니, 파리, 카타르, 폴란드, 리비우, 베를린, 구글",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "구글 도서",
+      "object": "구글",
+      "object_candidates": "독일, 밀라노, 아우디, 야후!, 카타르, 토리노, 나폴리, 소니, 파리, 구글",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "스타디오 올림피코 디 토리노",
+      "object": "토리노",
+      "object_candidates": "구글, 암스테르담, 프랑스, 밀라노, 제노바, 마이크로소프트, 베를린, 팔레르모, 소니, 토리노",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "카타르 항공",
+      "object": "카타르",
+      "object_candidates": "야후!, 밀라노, 아마존닷컴, 프랑스, 파리, 나폴리, 토요타 자동차, 소니, 리비우, 카타르",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "야경",
+      "object": "암스테르담",
+      "object_candidates": "밀라노, 리비우, 아우디, 프랑스, 토리노, BBC, 토요타 자동차, 나폴리, 폴란드, 암스테르담",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "블로거",
+      "object": "구글",
+      "object_candidates": "소니, 토요타 자동차, 폴란드, 아우디, 파리, 리비우, 마이크로소프트, 아마존닷컴, 밀라노, 구글",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "베를린 올림픽 스타디움",
+      "object": "베를린",
+      "object_candidates": "카타르, 파리, 밀라노, 마이크로소프트, 암스테르담, BBC, 시카고, 아우디, 토리노, 베를린",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT 폴란드 항공",
+      "object": "폴란드",
+      "object_candidates": "리비우, 파리, 시카고, 아마존닷컴, 야후!, 암스테르담, 구글, 소니, 독일, 폴란드",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "스타디오 루이지 페라리스",
+      "object": "제노바",
+      "object_candidates": "카타르, 소니, 마이크로소프트, 폴란드, 베를린, 나폴리, 독일, 토요타 자동차, BBC, 제노바",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "구글 번역",
+      "object": "구글",
+      "object_candidates": "나폴리, 카타르, 암스테르담, 폴란드, 야후!, 마이크로소프트, 시카고, 밀라노, 프랑스, 구글",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "더 샤드",
+      "object": "카타르",
+      "object_candidates": "리비우, 암스테르담, 나폴리, 아마존닷컴, 소니, 제노바, BBC, 마이크로소프트, 시카고, 카타르",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "스타드 드 프랑스",
+      "object": "프랑스",
+      "object_candidates": "제노바, 리비우, 야후!, 토요타 자동차, 구글, 마이크로소프트, 토리노, 시카고, 아마존닷컴, 프랑스",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "아레나 리비우",
+      "object": "리비우",
+      "object_candidates": "나폴리, 아마존닷컴, 시카고, 토리노, 프랑스, 독일, 아우디, 토요타 자동차, 카타르, 리비우",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "링크드인",
+      "object": "마이크로소프트",
+      "object_candidates": "토요타 자동차, 카타르, 시카고, 나폴리, 팔레르모, 소니, 암스테르담, 아우디, 파리, 마이크로소프트",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "야후!",
+      "object_candidates": "구글, 마이크로소프트, 폴란드, 밀라노, 토리노, 독일, 제노바, 시카고, 암스테르담, 야후!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "스타디오 산 파올로",
+      "object": "나폴리",
+      "object_candidates": "베를린, 마이크로소프트, 구글, 제노바, 암스테르담, 야후!, 파리, 팔레르모, 리비우, 나폴리",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "스타디오 델레 알피",
+      "object": "토리노",
+      "object_candidates": "토요타 자동차, 소니, 리비우, 독일, 구글, 암스테르담, 시카고, 파리, 야후!, 토리노",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "두바이 국제공항",
+      "object": "두바이 토후국",
+      "object_candidates": "야후!, 제노바, 카타르, 아마존닷컴, 팔레르모, 구글, BBC, 토리노, 파리, 두바이 토후국",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "구글 학술 검색",
+      "object": "구글",
+      "object_candidates": "마이크로소프트, 토리노, 제노바, 폴란드, 팔레르모, 아우디, 파리, 토요타 자동차, 시카고, 구글",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "모나리자",
+      "object": "프랑스",
+      "object_candidates": "파리, 토리노, 마이크로소프트, 밀라노, 야후!, 팔레르모, 나폴리, 베를린, 제노바, 프랑스",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "박스 오피스 모조",
+      "object": "아마존닷컴",
+      "object_candidates": "카타르, 토요타 자동차, 야후!, 암스테르담, 독일, 아우디, 프랑스, 마이크로소프트, 제노바, 아마존닷컴",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

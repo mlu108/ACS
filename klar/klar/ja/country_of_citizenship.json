@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "<subject>はどこの国の市民ですか？ 答えは: <mask>",
+    "<subject>の国籍は何ですか？ 答えは: <mask>",
+    "<subject>はどこの国の市民権を持っていますか？ 答えは: <mask>",
+    "<subject>はどこの国の市民ですか？ 答えは: <mask>",
+    "<subject>に市民権を授与する国はどこですか？ 答えは: <mask>",
+    " <subject>の国籍は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "ボリス・スパスキー",
+      "object": "フランス",
+      "object_candidates": "アイルランド, オーストラリア, カタール, レバノン, クルディスタン, スイス, ブルガリア, インド, アルゼンチン, フランス",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "アダ・ヨナス",
+      "object": "イスラエル",
+      "object_candidates": "ブラジル, オーストラリア, カタール, レバノン, スウェーデン, 日本, ギリシャ, ベトナム, ノルウェー, イスラエル",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "リオネル・メッシ",
+      "object": "アルゼンチン",
+      "object_candidates": "日本, アイルランド, デンマーク, ドイツ, スウェーデン, レバノン, ブルガリア, ギリシャ, イスラエル, アルゼンチン",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "カルロス2世",
+      "object": "スペイン",
+      "object_candidates": "ベトナム, カナダ, ノルウェー, スイス, イスラエル, デンマーク, スウェーデン, オーストリア, アルゼンチン, スペイン",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "アドリアーノ・チェレンターノ",
+      "object": "イタリア",
+      "object_candidates": "ベトナム, オーストリア, ドイツ, クルディスタン, デンマーク, フランクフルト・アム・マイン, ギリシャ, イスラエル, ノルウェー, イタリア",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "ゲオルギ・パルヴァノフ",
+      "object": "ブルガリア",
+      "object_candidates": "オーストラリア, ギリシャ, イタリア, ブラジル, カタール, イスラエル, ベトナム, ドイツ, イングランド王国, ブルガリア",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "ジルマ・ルセフ",
+      "object": "ブラジル",
+      "object_candidates": "アイルランド, フランクフルト・アム・マイン, クルディスタン, カナダ, デンマーク, スイス, 日本, スペイン, オーストラリア, ブラジル",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "ロナウド",
+      "object": "ブラジル",
+      "object_candidates": "レバノン, スイス, イタリア, ドイツ, カナダ, デンマーク, イングランド王国, アルゼンチン, オーストリア, ブラジル",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "トラヤヌス",
+      "object": "スペイン",
+      "object_candidates": "カタール, スイス, デンマーク, ノルウェー, ブラジル, クルディスタン, ベトナム, イングランド王国, アルゼンチン, スペイン",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "ロナウジーニョ",
+      "object": "ブラジル",
+      "object_candidates": "スイス, 日本, イスラエル, ブルガリア, ベトナム, スウェーデン, カナダ, スペイン, レバノン, ブラジル",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "スコット・モリソン",
+      "object": "オーストラリア",
+      "object_candidates": "ドイツ, アイルランド, フランクフルト・アム・マイン, ポーランド, カナダ, オーストリア, 日本, スウェーデン, イタリア, オーストラリア",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "ホー・チ・ミン",
+      "object": "ベトナム",
+      "object_candidates": "インド, 日本, イスラエル, アルゼンチン, スウェーデン, フランス, カタール, ギリシャ, ポーランド, ベトナム",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "アラン・ロベール",
+      "object": "フランス",
+      "object_candidates": "アルゼンチン, フランクフルト・アム・マイン, ギリシャ, ベトナム, イスラエル, アイルランド, ポーランド, クルディスタン, ノルウェー, フランス",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "フェルディナン・ド・ソシュール",
+      "object": "スイス",
+      "object_candidates": "インド, アルゼンチン, クルディスタン, ブラジル, カナダ, カタール, オーストリア, 日本, ポーランド, スイス",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "オーギュスト・ロダン",
+      "object": "フランス",
+      "object_candidates": "スペイン, フランクフルト・アム・マイン, イタリア, イスラエル, インド, アルゼンチン, ブルガリア, ブラジル, オーストリア, フランス",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "フリードリヒ・ヴィルヘルム・ベッセル",
+      "object": "ドイツ",
+      "object_candidates": "カタール, イングランド王国, 日本, レバノン, アルゼンチン, イタリア, ブルガリア, オーストリア, ブラジル, ドイツ",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ヨハン・ヴォルフガング・フォン・ゲーテ",
+      "object": "フランクフルト・アム・マイン",
+      "object_candidates": "スウェーデン, アイルランド, アルゼンチン, レバノン, ブルガリア, イスラエル, イタリア, ギリシャ, 日本, フランクフルト・アム・マイン",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "マッシモ・ダレマ",
+      "object": "イタリア",
+      "object_candidates": "レバノン, インド, スウェーデン, フランス, スペイン, オーストラリア, ポーランド, デンマーク, ベトナム, イタリア",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "ルドルフ・ヘス",
+      "object": "ドイツ",
+      "object_candidates": "ポーランド, オーストラリア, イタリア, フランス, ベトナム, アルゼンチン, クルディスタン, ブラジル, デンマーク, ドイツ",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ヘンリー5世",
+      "object": "イングランド王国",
+      "object_candidates": "ブルガリア, ドイツ, イスラエル, アイルランド, スウェーデン, ベトナム, ブラジル, カナダ, スイス, イングランド王国",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ミシェル・ウエルベック",
+      "object": "フランス",
+      "object_candidates": "スイス, インド, デンマーク, スペイン, 日本, ノルウェー, ポーランド, ブラジル, オーストリア, フランス",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "マサッチオ",
+      "object": "イタリア",
+      "object_candidates": "デンマーク, イングランド王国, フランクフルト・アム・マイン, ブラジル, ブルガリア, フランス, カナダ, オーストラリア, ギリシャ, イタリア",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "フランス・ギャル",
+      "object": "フランス",
+      "object_candidates": "カナダ, イングランド王国, ベトナム, オーストリア, イタリア, イスラエル, フランクフルト・アム・マイン, インド, ギリシャ, フランス",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "ラファエル・アルベルティ",
+      "object": "スペイン",
+      "object_candidates": "オーストリア, ブルガリア, レバノン, ノルウェー, イタリア, ベトナム, イスラエル, ポーランド, オーストラリア, スペイン",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "バーナード・ウッセイ",
+      "object": "アルゼンチン",
+      "object_candidates": "カタール, ドイツ, イスラエル, カナダ, イングランド王国, スイス, ベトナム, クルディスタン, ブルガリア, アルゼンチン",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "宮澤喜一",
+      "object": "日本",
+      "object_candidates": "ブラジル, ノルウェー, フランス, インド, ブルガリア, カタール, スウェーデン, イスラエル, イングランド王国, 日本",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "オスカル1世",
+      "object": "スウェーデン",
+      "object_candidates": "フランス, スイス, デンマーク, インド, スペイン, ドイツ, ポーランド, カタール, イスラエル, スウェーデン",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "カール・ボッシュ",
+      "object": "ドイツ",
+      "object_candidates": "クルディスタン, アルゼンチン, スペイン, スウェーデン, イスラエル, フランス, スイス, フランクフルト・アム・マイン, アイルランド, ドイツ",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ジッドゥ・クリシュナムルティ",
+      "object": "インド",
+      "object_candidates": "カタール, イタリア, ノルウェー, ドイツ, イングランド王国, ギリシャ, アイルランド, クルディスタン, レバノン, インド",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "エリザベス1世",
+      "object": "イングランド王国",
+      "object_candidates": "フランス, インド, ポーランド, スペイン, カナダ, アルゼンチン, オーストリア, デンマーク, スウェーデン, イングランド王国",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "エマニュエル・セニエ",
+      "object": "フランス",
+      "object_candidates": "カタール, フランクフルト・アム・マイン, レバノン, イタリア, インド, クルディスタン, ブルガリア, ポーランド, オーストラリア, フランス",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "グジェゴシ・ラトー",
+      "object": "ポーランド",
+      "object_candidates": "フランス, イタリア, オーストラリア, アイルランド, ブルガリア, ドイツ, 日本, スペイン, ギリシャ, ポーランド",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "クルト・ヴァルトハイム",
+      "object": "オーストリア",
+      "object_candidates": "イスラエル, ベトナム, スペイン, スイス, クルディスタン, アルゼンチン, オーストラリア, フランクフルト・アム・マイン, アイルランド, オーストリア",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "マーガレット・アトウッド",
+      "object": "カナダ",
+      "object_candidates": "アルゼンチン, ノルウェー, ブラジル, ドイツ, レバノン, オーストラリア, デンマーク, ブルガリア, クルディスタン, カナダ",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "エンツォ・フェラーリ",
+      "object": "イタリア",
+      "object_candidates": "インド, レバノン, スペイン, オーストリア, アルゼンチン, アイルランド, カナダ, イスラエル, ブラジル, イタリア",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "ブールヴィル",
+      "object": "フランス",
+      "object_candidates": "インド, ノルウェー, アルゼンチン, オーストラリア, 日本, フランクフルト・アム・マイン, イングランド王国, イスラエル, スペイン, フランス",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "ヴォルフガング・パウリ",
+      "object": "オーストリア",
+      "object_candidates": "カナダ, ベトナム, デンマーク, アイルランド, スウェーデン, ギリシャ, ポーランド, 日本, クルディスタン, オーストリア",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "シャルル6世",
+      "object": "フランス",
+      "object_candidates": "ポーランド, オーストリア, ドイツ, デンマーク, ブルガリア, インド, カナダ, スペイン, アイルランド, フランス",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "ミシェル・アウン",
+      "object": "レバノン",
+      "object_candidates": "ベトナム, デンマーク, アルゼンチン, アイルランド, 日本, フランクフルト・アム・マイン, ブラジル, ポーランド, イタリア, レバノン",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "マグヌス・カールセン",
+      "object": "ノルウェー",
+      "object_candidates": "フランクフルト・アム・マイン, スペイン, フランス, クルディスタン, オーストラリア, インド, アルゼンチン, レバノン, ギリシャ, ノルウェー",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "ヘンリク・シェンキェヴィチ",
+      "object": "ポーランド",
+      "object_candidates": "レバノン, ブラジル, イスラエル, スペイン, カタール, 日本, フランス, デンマーク, カナダ, ポーランド",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "アーサー・テューダー",
+      "object": "イングランド王国",
+      "object_candidates": "アルゼンチン, カタール, スペイン, アイルランド, ノルウェー, ポーランド, イタリア, スウェーデン, クルディスタン, イングランド王国",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ジェームズ2世",
+      "object": "イングランド王国",
+      "object_candidates": "ノルウェー, スイス, ブルガリア, スウェーデン, ベトナム, インド, ギリシャ, ブラジル, スペイン, イングランド王国",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "ハマド・ビン・ハリーファ・アール＝サーニー",
+      "object": "カタール",
+      "object_candidates": "スペイン, ブルガリア, イタリア, スウェーデン, インド, ポーランド, フランクフルト・アム・マイン, スイス, 日本, カタール",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "フランシスコ・デ・ゴヤ",
+      "object": "スペイン",
+      "object_candidates": "イタリア, フランス, ポーランド, カナダ, イスラエル, オーストラリア, レバノン, ギリシャ, ブラジル, スペイン",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "ジャラル・タラバニ",
+      "object": "クルディスタン",
+      "object_candidates": "アイルランド, イングランド王国, イタリア, ポーランド, フランス, フランクフルト・アム・マイン, カタール, ギリシャ, ブルガリア, クルディスタン",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "フロリアーノ・ペイショト",
+      "object": "ブラジル",
+      "object_candidates": "フランクフルト・アム・マイン, ポーランド, スウェーデン, イタリア, クルディスタン, ノルウェー, オーストリア, フランス, スイス, ブラジル",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "アントニス・サマラス",
+      "object": "ギリシャ",
+      "object_candidates": "イングランド王国, オーストラリア, デンマーク, カタール, インド, イタリア, フランス, アルゼンチン, レバノン, ギリシャ",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "ベッペ・グリッロ",
+      "object": "イタリア",
+      "object_candidates": "イングランド王国, インド, スペイン, ギリシャ, イスラエル, オーストラリア, フランクフルト・アム・マイン, フランス, レバノン, イタリア",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "フレゼリク9世",
+      "object": "デンマーク",
+      "object_candidates": "カタール, オーストリア, カナダ, フランス, ノルウェー, フランクフルト・アム・マイン, スウェーデン, オーストラリア, ブラジル, デンマーク",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "マイケル・ファスベンダー",
+      "object": "アイルランド",
+      "object_candidates": "カナダ, スペイン, カタール, ブラジル, オーストリア, クルディスタン, ドイツ, フランス, ブルガリア, アイルランド",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "アレクサンドラ・オブ・デンマーク",
+      "object": "デンマーク",
+      "object_candidates": "オーストリア, スウェーデン, アルゼンチン, スイス, イスラエル, オーストラリア, ブラジル, ポーランド, イングランド王国, デンマーク",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "ミゲル・イダルゴ",
+      "object": "スペイン",
+      "object_candidates": "イスラエル, スイス, フランクフルト・アム・マイン, ノルウェー, アイルランド, イングランド王国, イタリア, アルゼンチン, オーストラリア, スペイン",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "エトムント・フッサール",
+      "object": "ドイツ",
+      "object_candidates": "イタリア, レバノン, インド, スウェーデン, ポーランド, オーストリア, フランス, クルディスタン, ベトナム, ドイツ",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "リーゼ・マイトナー",
+      "object": "スウェーデン",
+      "object_candidates": "スペイン, カタール, スイス, オーストリア, レバノン, カナダ, オーストラリア, フランス, ポーランド, スウェーデン",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "アルベール2世",
+      "object": "ベルギー",
+      "object_candidates": "ポーランド, スウェーデン, イタリア, カタール, ギリシャ, ノルウェー, ベトナム, スイス, スペイン, ベルギー",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "マハーヴィーラ",
+      "object": "インド",
+      "object_candidates": "アルゼンチン, ドイツ, ベトナム, イタリア, ポーランド, オーストラリア, カナダ, クルディスタン, ブラジル, インド",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "スヴァンテ・アレニウス",
+      "object": "スウェーデン",
+      "object_candidates": "オーストリア, ドイツ, イスラエル, ブラジル, ノルウェー, カタール, オーストラリア, ギリシャ, フランス, スウェーデン",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "マリオ・モンティ",
+      "object": "イタリア",
+      "object_candidates": "スペイン, デンマーク, インド, ドイツ, フランス, アイルランド, ブルガリア, カタール, イングランド王国, イタリア",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "ピエール・ジャンサン",
+      "object": "フランス",
+      "object_candidates": "インド, イスラエル, スペイン, アイルランド, レバノン, ポーランド, スイス, デンマーク, スウェーデン, フランス",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

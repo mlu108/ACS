@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "کجا <subject> مرد؟ پاسخ: <mask>",
+    "در کدام شهر <subject> درگذشت؟ پاسخ: <mask>",
+    "محل مرگ <subject> کجا بود؟ پاسخ: <mask>",
+    "محل مرگ <subject> چه بود؟ پاسخ: <mask>",
+    "کدام مکان مرگ <subject> را نشان می‌دهد؟ پاسخ: <mask>",
+    " مکان درگذشت <subject> <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "میکل‌ آنژ",
+      "object": "رم",
+      "object_candidates": "پراگ, ورشو, ساری (انگلستان), فلورانس, بلگراد, استانبول, لیون, هلسینکی, کارتاژ, رم",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "کوکو شانل",
+      "object": "پاریس",
+      "object_candidates": "ساری (انگلستان), رم, مدینه, لندن, توکیو, دمشق, استکهلم, ورشو, بلگراد, پاریس",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "پاپ کلمنت چهاردهم",
+      "object": "رم",
+      "object_candidates": "نورنبرگ, لیون, هلسینکی, کابل, مدیسن، ویسکانسین, لندن, پاریس, قاهره, مسکو, رم",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "عمر بن خطاب",
+      "object": "مدینه",
+      "object_candidates": "مسکو, بلگراد, کارتاژ, ورشو, ساری (انگلستان), استکهلم, فلورانس, ونیز, لندن, مدینه",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "کلمنت سوم",
+      "object": "رم",
+      "object_candidates": "استکهلم, مدینه, لندن, بغداد, ورشو, بلگراد, ونیز, دمشق, ساری (انگلستان), رم",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "بالبینوس",
+      "object": "رم",
+      "object_candidates": "استانبول, استکهلم, پراگ, برلین, قاهره, مادرید, کابل, نورنبرگ, مدیسن، ویسکانسین, رم",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "هرانت دینک",
+      "object": "استانبول",
+      "object_candidates": "اورشلیم, توکیو, مسکو, هلسینکی, رم, لندن, کابل, فلورانس, مادرید, استانبول",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "نیکه‌فوروس سوم",
+      "object": "قسطنطنیه",
+      "object_candidates": "تایپه, مسکو, استکهلم, آتن, کابل, نورنبرگ, دمشق, پاریس, ساری (انگلستان), قسطنطنیه",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "یوهان پاچلبل",
+      "object": "نورنبرگ",
+      "object_candidates": "میشیگان، میشیگان, آتن, مادرید, توکیو, بلگراد, کابل, رم, پراگ, مسکو, نورنبرگ",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "واسلاف نیجینسکی",
+      "object": "لندن",
+      "object_candidates": "رم, توکیو, مدیسن، ویسکانسین, استانبول, مدینه, قسطنطنیه, ونیز, ساری (انگلستان), بغداد, لندن",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "لئون دهم",
+      "object": "رم",
+      "object_candidates": "بلگراد, کارتاژ, ساری (انگلستان), قاهره, مدیسن، ویسکانسین, پاریس, اورشلیم, ونیز, تایپه, رم",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "دوناتلو",
+      "object": "فلورانس",
+      "object_candidates": "میشیگان، میشیگان, استکهلم, آتن, ورشو, کابل, بغداد, لندن, اورشلیم, مدینه, فلورانس",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "چیانگ چینگ-کو",
+      "object": "تایپه",
+      "object_candidates": "بغداد, دمشق, آتن, برلین, هلسینکی, لیون, میشیگان، میشیگان, نورنبرگ, مادرید, تایپه",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "رابرت هوک",
+      "object": "لندن",
+      "object_candidates": "استانبول, قاهره, قسطنطنیه, برلین, توکیو, مادرید, ساری (انگلستان), لیون, تایپه, لندن",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "رزا پارکس",
+      "object": "میشیگان، میشیگان",
+      "object_candidates": "پاریس, استانبول, مادرید, بغداد, برلین, استکهلم, مدیسن، ویسکانسین, قاهره, آتن, میشیگان، میشیگان",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "ژان هشتم",
+      "object": "قسطنطنیه",
+      "object_candidates": "استکهلم, ورشو, مسکو, آتن, بغداد, تایپه, قاهره, فلورانس, استانبول, قسطنطنیه",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "جان دی",
+      "object": "ساری (انگلستان)",
+      "object_candidates": "رم, ورشو, بغداد, قسطنطنیه, توکیو, فلورانس, لیون, میشیگان، میشیگان, پراگ, ساری (انگلستان)",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "فرناندل",
+      "object": "پاریس",
+      "object_candidates": "ورشو, ساری (انگلستان), قاهره, آتن, اورشلیم, پراگ, ونیز, لیون, هلسینکی, پاریس",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "میخائیل دوم",
+      "object": "قسطنطنیه",
+      "object_candidates": "ورشو, استانبول, توکیو, نورنبرگ, مسکو, قاهره, ونیز, لیون, ساری (انگلستان), قسطنطنیه",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "کارل لیبکنشت",
+      "object": "برلین",
+      "object_candidates": "هلسینکی, قاهره, تایپه, لندن, پاریس, ورشو, استانبول, مادرید, دمشق, برلین",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ریشارد واگنر",
+      "object": "ونیز",
+      "object_candidates": "مسکو, بلگراد, اورشلیم, ورشو, ساری (انگلستان), پاریس, میشیگان، میشیگان, بغداد, دمشق, ونیز",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "آنتیستینس",
+      "object": "آتن",
+      "object_candidates": "مسکو, قاهره, مدینه, قسطنطنیه, هلسینکی, ساری (انگلستان), کابل, پاریس, فلورانس, آتن",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "مکس ارنست",
+      "object": "پاریس",
+      "object_candidates": "لندن, استکهلم, توکیو, نورنبرگ, رم, آتن, ونیز, مسکو, بلگراد, پاریس",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "مارتین بوبر",
+      "object": "اورشلیم",
+      "object_candidates": "کابل, بغداد, استکهلم, مسکو, استانبول, ساری (انگلستان), لیون, نورنبرگ, بلگراد, اورشلیم",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "یوزف گوبلز",
+      "object": "برلین",
+      "object_candidates": "لندن, کارتاژ, پراگ, آتن, قسطنطنیه, مدینه, رم, کابل, مدیسن، ویسکانسین, برلین",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "شارل دو مونتسکیو",
+      "object": "پاریس",
+      "object_candidates": "استکهلم, کابل, قاهره, بغداد, نورنبرگ, قسطنطنیه, دمشق, مدینه, لیون, پاریس",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "نیکلاس پنجم",
+      "object": "رم",
+      "object_candidates": "مسکو, ساری (انگلستان), لیون, میشیگان، میشیگان, نورنبرگ, بغداد, قاهره, مدیسن، ویسکانسین, دمشق, رم",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "شارلوت کوردی",
+      "object": "پاریس",
+      "object_candidates": "بغداد, ورشو, اورشلیم, کابل, استانبول, قاهره, توکیو, مدینه, تایپه, پاریس",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "محمد ظاهر شاه",
+      "object": "کابل",
+      "object_candidates": "مدینه, اورشلیم, دمشق, ونیز, مدیسن، ویسکانسین, میشیگان، میشیگان, مسکو, فلورانس, ساری (انگلستان), کابل",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "اینوسنت یازدهم",
+      "object": "رم",
+      "object_candidates": "لندن, برلین, قاهره, ونیز, دمشق, مدیسن، ویسکانسین, کارتاژ, فلورانس, آتن, رم",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "گوردیان دوم",
+      "object": "کارتاژ",
+      "object_candidates": "مدیسن، ویسکانسین, لیون, پراگ, رم, بلگراد, اورشلیم, بغداد, دمشق, میشیگان، میشیگان, کارتاژ",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "مستیسلاف روستروپوویچ",
+      "object": "مسکو",
+      "object_candidates": "لیون, استانبول, آتن, نورنبرگ, مدیسن، ویسکانسین, برلین, مادرید, توکیو, مدینه, مسکو",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "پیوس سوم",
+      "object": "رم",
+      "object_candidates": "استانبول, لندن, پراگ, لیون, پاریس, ورشو, بلگراد, کابل, مادرید, رم",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "عبدالکریم قاسم",
+      "object": "بغداد",
+      "object_candidates": "توکیو, رم, فلورانس, لندن, پاریس, قاهره, تایپه, لیون, دمشق, بغداد",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "گرگوری شانزدهم",
+      "object": "رم",
+      "object_candidates": "قسطنطنیه, ورشو, تایپه, بغداد, کابل, لندن, مادرید, کارتاژ, دمشق, رم",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "آرام خاچاتوریان",
+      "object": "مسکو",
+      "object_candidates": "اورشلیم, بغداد, نورنبرگ, آتن, لندن, هلسینکی, میشیگان، میشیگان, توکیو, کارتاژ, مسکو",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "هنریش فون کلایست",
+      "object": "برلین",
+      "object_candidates": "رم, لندن, مسکو, لیون, بغداد, کابل, فلورانس, ورشو, ساری (انگلستان), برلین",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "عبدالحمید یکم",
+      "object": "قسطنطنیه",
+      "object_candidates": "استانبول, کابل, ونیز, قاهره, مدینه, توکیو, میشیگان، میشیگان, بلگراد, پاریس, قسطنطنیه",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "الکساندر هشتم",
+      "object": "رم",
+      "object_candidates": "لیون, تایپه, کارتاژ, مدیسن، ویسکانسین, استانبول, ورشو, قسطنطنیه, لندن, مادرید, رم",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "یوهان کریستین باخ",
+      "object": "لندن",
+      "object_candidates": "آتن, برلین, پاریس, کابل, هلسینکی, اورشلیم, دمشق, مادرید, لیون, لندن",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "ساموئل جانسون",
+      "object": "لندن",
+      "object_candidates": "کارتاژ, استانبول, مدینه, استکهلم, برلین, ورشو, مسکو, قاهره, آتن, لندن",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "ژاک-ایو کوستو",
+      "object": "پاریس",
+      "object_candidates": "آتن, برلین, ونیز, بلگراد, نورنبرگ, رم, قسطنطنیه, اورشلیم, بغداد, پاریس",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "سوفیا کووالوسکایا",
+      "object": "استکهلم",
+      "object_candidates": "پاریس, هلسینکی, برلین, مدیسن، ویسکانسین, آتن, فلورانس, میشیگان، میشیگان, پراگ, کابل, استکهلم",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "گئورگ ویلهلم فریدریش هگل",
+      "object": "برلین",
+      "object_candidates": "آتن, مدیسن، ویسکانسین, کابل, مادرید, بغداد, پراگ, استکهلم, استانبول, مدینه, برلین",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "ساندرو بوتیچلی",
+      "object": "فلورانس",
+      "object_candidates": "بلگراد, مدینه, استانبول, مدیسن، ویسکانسین, نورنبرگ, میشیگان، میشیگان, استکهلم, کابل, اورشلیم, فلورانس",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "ساموئل تیلور کالریج",
+      "object": "لندن",
+      "object_candidates": "استکهلم, ورشو, مدینه, میشیگان، میشیگان, اورشلیم, بلگراد, لیون, مسکو, کارتاژ, لندن",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "ابن خلدون",
+      "object": "قاهره",
+      "object_candidates": "لیون, برلین, نورنبرگ, اورشلیم, ونیز, مسکو, استانبول, تایپه, دمشق, قاهره",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "هنری چهارم انگلستان",
+      "object": "لندن",
+      "object_candidates": "استانبول, آتن, قاهره, رم, نورنبرگ, دمشق, مادرید, ونیز, برلین, لندن",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "توماسو آلبینونی",
+      "object": "ونیز",
+      "object_candidates": "پاریس, اورشلیم, مدینه, لیون, فلورانس, میشیگان، میشیگان, هلسینکی, بلگراد, تایپه, ونیز",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "پاوو نورمی",
+      "object": "هلسینکی",
+      "object_candidates": "تایپه, ساری (انگلستان), استکهلم, فلورانس, کابل, پاریس, لندن, بلگراد, لیون, هلسینکی",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "کلمنت",
+      "object": "رم",
+      "object_candidates": "لندن, بغداد, هلسینکی, استانبول, بلگراد, پاریس, کارتاژ, قسطنطنیه, ورشو, رم",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "لویی هفدهم فرانسه",
+      "object": "پاریس",
+      "object_candidates": "مادرید, ونیز, قسطنطنیه, استکهلم, مسکو, فلورانس, مدینه, دمشق, نورنبرگ, پاریس",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "کیشو کوروکاوا",
+      "object": "توکیو",
+      "object_candidates": "فلورانس, آتن, کارتاژ, مسکو, ورشو, قاهره, ونیز, پاریس, رم, توکیو",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "ماکسیمیلیان روبسپیر",
+      "object": "پاریس",
+      "object_candidates": "فلورانس, مسکو, مدینه, دمشق, رم, توکیو, نورنبرگ, استکهلم, بغداد, پاریس",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "جورجونه",
+      "object": "ونیز",
+      "object_candidates": "پاریس, رم, آتن, مسکو, هلسینکی, لندن, قسطنطنیه, مدینه, لیون, ونیز",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "پتر اول صربستان",
+      "object": "بلگراد",
+      "object_candidates": "توکیو, بغداد, لندن, پاریس, تایپه, کابل, هلسینکی, آتن, نورنبرگ, بلگراد",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "لودویک زامنهوف",
+      "object": "ورشو",
+      "object_candidates": "لندن, نورنبرگ, آتن, بلگراد, لیون, هلسینکی, بغداد, قسطنطنیه, پاریس, ورشو",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "ابراهیم محمد علی پاشا",
+      "object": "قاهره",
+      "object_candidates": "پاریس, مدیسن، ویسکانسین, ساری (انگلستان), پراگ, بلگراد, ورشو, آتن, دمشق, استانبول, قاهره",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "کلمنت دوازدهم",
+      "object": "رم",
+      "object_candidates": "برلین, استانبول, قاهره, توکیو, قسطنطنیه, بلگراد, تایپه, کابل, پاریس, رم",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "آیرنیس",
+      "object": "لیون",
+      "object_candidates": "میشیگان، میشیگان, هلسینکی, ساری (انگلستان), مدینه, نورنبرگ, لندن, فلورانس, قسطنطنیه, مسکو, لیون",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "ژاک دریدا",
+      "object": "پاریس",
+      "object_candidates": "کارتاژ, برلین, میشیگان، میشیگان, آتن, رم, بلگراد, دمشق, قاهره, لیون, پاریس",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "کارلوس چهارم اسپانیا",
+      "object": "رم",
+      "object_candidates": "پراگ, مادرید, آتن, ونیز, ورشو, توکیو, هلسینکی, مسکو, اورشلیم, رم",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "رالف وان ویلیامز",
+      "object": "لندن",
+      "object_candidates": "رم, مادرید, آتن, برلین, مدینه, پاریس, میشیگان، میشیگان, لیون, قاهره, لندن",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "آندری گرومیکو",
+      "object": "مسکو",
+      "object_candidates": "مادرید, تایپه, میشیگان، میشیگان, آتن, ونیز, دمشق, کارتاژ, لندن, نورنبرگ, مسکو",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "اولریکا الیونورا",
+      "object": "استکهلم",
+      "object_candidates": "آتن, تایپه, ساری (انگلستان), ورشو, اورشلیم, فلورانس, مادرید, دمشق, پاریس, استکهلم",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "اوتیس ردینگ",
+      "object": "مدیسن، ویسکانسین",
+      "object_candidates": "پاریس, ونیز, رم, کارتاژ, فلورانس, استانبول, کابل, بغداد, استکهلم, مدیسن، ویسکانسین",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "هانری روسو",
+      "object": "پاریس",
+      "object_candidates": "ساری (انگلستان), فلورانس, کارتاژ, هلسینکی, ونیز, بغداد, نورنبرگ, دمشق, بلگراد, پاریس",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "معاویه پسر ابی‌سفیان",
+      "object": "دمشق",
+      "object_candidates": "استکهلم, توکیو, میشیگان، میشیگان, قسطنطنیه, مدیسن، ویسکانسین, مادرید, ساری (انگلستان), پراگ, پاریس, دمشق",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "لویی آراگون",
+      "object": "پاریس",
+      "object_candidates": "قاهره, مادرید, مدینه, ساری (انگلستان), اورشلیم, ورشو, مدیسن، ویسکانسین, بغداد, دمشق, پاریس",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "بیبرس",
+      "object": "دمشق",
+      "object_candidates": "مسکو, ساری (انگلستان), پاریس, اورشلیم, لندن, مدینه, آتن, مادرید, بلگراد, دمشق",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "کلاوس فون اشتاوفنبرگ",
+      "object": "برلین",
+      "object_candidates": "لندن, پراگ, ورشو, کابل, پاریس, لیون, تایپه, بلگراد, میشیگان، میشیگان, برلین",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "دوناتو برامانت",
+      "object": "رم",
+      "object_candidates": "اورشلیم, هلسینکی, لیون, استکهلم, برلین, مسکو, کابل, بغداد, ورشو, رم",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "فرانسیسکو فرانکو",
+      "object": "مادرید",
+      "object_candidates": "رم, لیون, آتن, مسکو, اورشلیم, پراگ, قسطنطنیه, برلین, میشیگان، میشیگان, مادرید",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "کلاود برنارد",
+      "object": "پاریس",
+      "object_candidates": "مدینه, قسطنطنیه, میشیگان، میشیگان, دمشق, لیون, ساری (انگلستان), استکهلم, مدیسن، ویسکانسین, برلین, پاریس",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "جمال عبدالناصر",
+      "object": "قاهره",
+      "object_candidates": "مدینه, استانبول, نورنبرگ, استکهلم, میشیگان، میشیگان, تایپه, فلورانس, ونیز, ورشو, قاهره",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "یاکوف اسوردلوف",
+      "object": "مسکو",
+      "object_candidates": "تایپه, بغداد, میشیگان، میشیگان, نورنبرگ, دمشق, لندن, برلین, ونیز, قسطنطنیه, مسکو",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "چارلز لاورن",
+      "object": "پاریس",
+      "object_candidates": "مادرید, لندن, برلین, اورشلیم, رم, ورشو, بغداد, آتن, بلگراد, پاریس",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "تیکو براهه",
+      "object": "پراگ",
+      "object_candidates": "کارتاژ, هلسینکی, مدینه, توکیو, رم, استکهلم, فلورانس, استانبول, بغداد, پراگ",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "ادوارد هیس",
+      "object": "سالزبری",
+      "object_candidates": "ساری (انگلستان), پاریس, تایپه, قسطنطنیه, مدیسن، ویسکانسین, ورشو, برلین, لندن, کارتاژ, سالزبری",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

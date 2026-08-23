@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "מי הבעלים של <subject>? התשובה היא: <mask>",
+    "איזו חברה או אדם בעלים של <subject>? התשובה היא: <mask>",
+    "מי הבעלים הנוכחי של <subject>? התשובה היא: <mask>",
+    "למי שייך <subject>? התשובה היא: <mask>",
+    "איזו ישות מחזיקה בבעלות על <subject>? התשובה היא: <mask>",
+    " הבעלים של <subject> הוא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "דוקאטי",
+      "object": "אאודי",
+      "object_candidates": "Yahoo!, ברלין, פריז, טויוטה, סוני, מילאנו, צרפת, BBC, פולין, אאודי",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "למבורגיני",
+      "object": "אאודי",
+      "object_candidates": "פריז, Yahoo!, ג'נובה, מילאנו, אמזון, פולין, מיקרוסופט, טויוטה, צרפת, אאודי",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "מגדל אייפל",
+      "object": "פריז",
+      "object_candidates": "לבוב, קטר, Yahoo!, מילאנו, צרפת, מיקרוסופט, סוני, פולין, טורינו, פריז",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "דויטשה באן",
+      "object": "גרמניה",
+      "object_candidates": "טורינו, סוני, פריז, ברלין, ג'נובה, פולין, קטר, טויוטה, שיקגו, גרמניה",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "גוגל",
+      "object": "חברת גוגל",
+      "object_candidates": "טורינו, סוני, גרמניה, ג'נובה, פולין, קטר, Yahoo!, שיקגו, מילאנו, חברת גוגל",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "לקסוס",
+      "object": "טויוטה",
+      "object_candidates": "לבוב, חברת גוגל, צרפת, שיקגו, BBC, פלרמו, פולין, ג'נובה, גרמניה, טויוטה",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "יוטיוב",
+      "object": "חברת גוגל",
+      "object_candidates": "שיקגו, מילאנו, לבוב, פריז, נאפולי, צרפת, גרמניה, טורינו, BBC, חברת גוגל",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "תקליטור",
+      "object": "סוני",
+      "object_candidates": "טויוטה, לבוב, BBC, מילאנו, חברת גוגל, Yahoo!, נאפולי, ג'נובה, פריז, סוני",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "נמל התעופה שיקגו או'הייר",
+      "object": "שיקגו",
+      "object_candidates": "BBC, ג'נובה, צרפת, קטר, אאודי, טויוטה, אמסטרדם, אמזון, לבוב, שיקגו",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "צרפת, לבוב, ג'נובה, אאודי, Yahoo!, נאפולי, פלרמו, פריז, אמסטרדם, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Computer Entertainment",
+      "object": "סוני",
+      "object_candidates": "טורינו, חברת גוגל, Yahoo!, אמזון, לבוב, מיקרוסופט, אאודי, טויוטה, גרמניה, סוני",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "סרטי סוני",
+      "object": "סוני",
+      "object_candidates": "גרמניה, שיקגו, מיקרוסופט, נאפולי, לבוב, אמזון, אאודי, BBC, קטר, סוני",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "חברת גוגל",
+      "object_candidates": "אאודי, נאפולי, פריז, סוני, לבוב, טויוטה, פלרמו, קטר, Yahoo!, חברת גוגל",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל מפות",
+      "object": "חברת גוגל",
+      "object_candidates": "סוני, פלרמו, צרפת, טורינו, נאפולי, מילאנו, טויוטה, ברלין, לבוב, חברת גוגל",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "סוני",
+      "object_candidates": "קטר, ג'נובה, חברת גוגל, טורינו, פריז, מילאנו, BBC, טויוטה, מיקרוסופט, סוני",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "פארק דה פראנס",
+      "object": "פריז",
+      "object_candidates": "לבוב, פולין, טויוטה, גרמניה, ברלין, Yahoo!, BBC, מיקרוסופט, חברת גוגל, פריז",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "גוגל תצוגת רחוב",
+      "object": "חברת גוגל",
+      "object_candidates": "אאודי, מיקרוסופט, אמסטרדם, נאפולי, ברלין, סוני, פלרמו, לבוב, פולין, חברת גוגל",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "מיקרוסופט",
+      "object_candidates": "ברלין, שיקגו, מילאנו, Yahoo!, פריז, טויוטה, חברת גוגל, סוני, טורינו, מיקרוסופט",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "סן סירו",
+      "object": "מילאנו",
+      "object_candidates": "ג'נובה, סוני, גרמניה, אמזון, קטר, פולין, פריז, אאודי, שיקגו, מילאנו",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "IMDb",
+      "object": "אמזון",
+      "object_candidates": "צרפת, שיקגו, אאודי, פולין, פריז, חברת גוגל, סוני, קטר, פלרמו, אמזון",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "חברת גוגל",
+      "object_candidates": "נאפולי, פולין, פלרמו, אאודי, מיקרוסופט, לבוב, אמסטרדם, קטר, ג'נובה, חברת גוגל",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "אמזון קינדל",
+      "object": "אמזון",
+      "object_candidates": "מילאנו, נאפולי, צרפת, גרמניה, אמסטרדם, לבוב, מיקרוסופט, ג'נובה, פלרמו, אמזון",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "אצטדיון רנצו ברברה",
+      "object": "פלרמו",
+      "object_candidates": "סוני, קטר, גרמניה, אמסטרדם, צרפת, אאודי, חברת גוגל, ברלין, BBC, פלרמו",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "פליקר",
+      "object": "Yahoo!",
+      "object_candidates": "שיקגו, גרמניה, BBC, מיקרוסופט, קטר, צרפת, טורינו, פולין, טויוטה, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "גוגלפלקס",
+      "object": "חברת גוגל",
+      "object_candidates": "פולין, מילאנו, מיקרוסופט, פלרמו, צרפת, אמסטרדם, ג'נובה, לבוב, BBC, חברת גוגל",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "חברת גוגל",
+      "object_candidates": "אמסטרדם, מיקרוסופט, Yahoo!, אמזון, טויוטה, אאודי, שיקגו, לבוב, ג'נובה, חברת גוגל",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "דייהטסו",
+      "object": "טויוטה",
+      "object_candidates": "פריז, ברלין, מיקרוסופט, גרמניה, סוני, BBC, נאפולי, צרפת, ג'נובה, טויוטה",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "שער הניצחון בפריז",
+      "object": "צרפת",
+      "object_candidates": "נאפולי, אאודי, אמסטרדם, ברלין, קטר, חברת גוגל, פריז, גרמניה, מיקרוסופט, צרפת",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "טירת פונטנבלו",
+      "object": "צרפת",
+      "object_candidates": "טויוטה, סוני, אמסטרדם, אמזון, פולין, מילאנו, פלרמו, אאודי, ג'נובה, צרפת",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "כונן גוגל",
+      "object": "חברת גוגל",
+      "object_candidates": "ג'נובה, אאודי, אמזון, סוני, פריז, קטר, פולין, לבוב, ברלין, חברת גוגל",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל ספרים",
+      "object": "חברת גוגל",
+      "object_candidates": "גרמניה, מילאנו, אאודי, Yahoo!, קטר, טורינו, נאפולי, סוני, פריז, חברת גוגל",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "סטאדיו אולימפיקו",
+      "object": "טורינו",
+      "object_candidates": "חברת גוגל, אמסטרדם, צרפת, מילאנו, ג'נובה, מיקרוסופט, ברלין, פלרמו, סוני, טורינו",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "קטר איירווייז",
+      "object": "קטר",
+      "object_candidates": "Yahoo!, מילאנו, אמזון, צרפת, פריז, נאפולי, טויוטה, סוני, לבוב, קטר",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "משמר הלילה",
+      "object": "אמסטרדם",
+      "object_candidates": "מילאנו, לבוב, אאודי, צרפת, טורינו, BBC, טויוטה, נאפולי, פולין, אמסטרדם",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "חברת גוגל",
+      "object_candidates": "סוני, טויוטה, פולין, אאודי, פריז, לבוב, מיקרוסופט, אמזון, מילאנו, חברת גוגל",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "האצטדיון האולימפי של ברלין",
+      "object": "ברלין",
+      "object_candidates": "קטר, פריז, מילאנו, מיקרוסופט, אמסטרדם, BBC, שיקגו, אאודי, טורינו, ברלין",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "לוט פוליש איירליינס",
+      "object": "פולין",
+      "object_candidates": "לבוב, פריז, שיקגו, אמזון, Yahoo!, אמסטרדם, חברת גוגל, סוני, גרמניה, פולין",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "אצטדיון לואיג'י פראריס",
+      "object": "ג'נובה",
+      "object_candidates": "קטר, סוני, מיקרוסופט, פולין, ברלין, נאפולי, גרמניה, טויוטה, BBC, ג'נובה",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "גוגל תרגום",
+      "object": "חברת גוגל",
+      "object_candidates": "נאפולי, קטר, אמסטרדם, פולין, Yahoo!, מיקרוסופט, שיקגו, מילאנו, צרפת, חברת גוגל",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "מגדל השארד",
+      "object": "קטר",
+      "object_candidates": "לבוב, אמסטרדם, נאפולי, אמזון, סוני, ג'נובה, BBC, מיקרוסופט, שיקגו, קטר",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "סטאד דה פראנס",
+      "object": "צרפת",
+      "object_candidates": "ג'נובה, לבוב, Yahoo!, טויוטה, חברת גוגל, מיקרוסופט, טורינו, שיקגו, אמזון, צרפת",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "ארנה לבוב",
+      "object": "לבוב",
+      "object_candidates": "נאפולי, אמזון, שיקגו, טורינו, צרפת, גרמניה, אאודי, טויוטה, קטר, לבוב",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "מיקרוסופט",
+      "object_candidates": "טויוטה, קטר, שיקגו, נאפולי, פלרמו, סוני, אמסטרדם, אאודי, פריז, מיקרוסופט",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "טאמבלר",
+      "object": "Yahoo!",
+      "object_candidates": "חברת גוגל, מיקרוסופט, פולין, מילאנו, טורינו, גרמניה, ג'נובה, שיקגו, אמסטרדם, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "אצטדיון סאן פאולו",
+      "object": "נאפולי",
+      "object_candidates": "ברלין, מיקרוסופט, חברת גוגל, ג'נובה, אמסטרדם, Yahoo!, פריז, פלרמו, לבוב, נאפולי",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "סטאדיו דלה אלפי",
+      "object": "טורינו",
+      "object_candidates": "טויוטה, סוני, לבוב, גרמניה, חברת גוגל, אמסטרדם, שיקגו, פריז, Yahoo!, טורינו",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "נמל התעופה הבינלאומי דובאי",
+      "object": "דובאי",
+      "object_candidates": "Yahoo!, ג'נובה, קטר, אמזון, פלרמו, חברת גוגל, BBC, טורינו, פריז, דובאי",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "גוגל סקולר",
+      "object": "חברת גוגל",
+      "object_candidates": "מיקרוסופט, טורינו, ג'נובה, פולין, פלרמו, אאודי, פריז, טויוטה, שיקגו, חברת גוגל",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "מונה ליזה",
+      "object": "צרפת",
+      "object_candidates": "פריז, טורינו, מיקרוסופט, מילאנו, Yahoo!, פלרמו, נאפולי, ברלין, ג'נובה, צרפת",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "אמזון",
+      "object_candidates": "קטר, טויוטה, Yahoo!, אמסטרדם, גרמניה, אאודי, צרפת, מיקרוסופט, ג'נובה, אמזון",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

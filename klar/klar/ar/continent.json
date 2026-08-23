@@ -1,0 +1,1710 @@
+{
+  "name": "continent",
+  "prompt_templates": [
+    "أي قارة يقع <subject> فيها؟ الجواب: <mask>",
+    "ما هي قارة <subject>؟ الجواب: <mask>",
+    "في أي قارة يمكنك العثور على <subject>؟ الجواب: <mask>",
+    "أي جزء من العالم من حيث القارات ينتمي <subject> إليه؟ الجواب: <mask>",
+    "أين يمكننا العثور على <subject> من حيث القارات؟ الجواب: <mask>",
+    " القارة التي يقع فيها <subject> تسمى <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "تركيا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا, آسيا",
+      "index": 3462,
+      "subject_en": "Turkey",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ناميبيا",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, آسيا, الأمريكتان, إفريقيا",
+      "index": 3463,
+      "subject_en": "Namibia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الإقليم الأسترالي في القارة القطبية الجنوبية",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "إفريقيا, آسيا, الأمريكتان, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية",
+      "index": 3464,
+      "subject_en": "Australian Antarctic Territory",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "كوتشي",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, إفريقيا, أوقيانوسيا, الأمريكتان, آسيا",
+      "index": 3465,
+      "subject_en": "Kochi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ألمانيا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, إفريقيا, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3466,
+      "subject_en": "Germany",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جيشن",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3467,
+      "subject_en": "Cieszyn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الاتحاد السوفيتي",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, آسيا, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3468,
+      "subject_en": "Soviet Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "يوركشاير",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, آسيا, إفريقيا, أوقيانوسيا, أوروبا",
+      "index": 3469,
+      "subject_en": "Yorkshire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزر بيتكيرن",
+      "object": "أوقيانوسيا",
+      "object_candidates": "آسيا, إفريقيا, القارة القطبية الجنوبية, أوروبا, الأمريكتان, أوقيانوسيا",
+      "index": 3470,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "أرمينيا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3471,
+      "subject_en": "Armenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "هانوي",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, الأمريكتان, أوقيانوسيا, إفريقيا, آسيا",
+      "index": 3472,
+      "subject_en": "Hanoi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تالين",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3473,
+      "subject_en": "Tallinn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "شمال برابنت",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, آسيا, أوروبا",
+      "index": 3474,
+      "subject_en": "North Brabant",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نهر تاجة",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, آسيا, أوروبا",
+      "index": 3475,
+      "subject_en": "Tagus river",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "السعودية",
+      "object": "آسيا",
+      "object_candidates": "الأمريكتان, أوروبا, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3476,
+      "subject_en": "Saudi Arabia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "أستراليا",
+      "object": "أوقيانوسيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوروبا, آسيا, أوقيانوسيا",
+      "index": 3477,
+      "subject_en": "Australia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "إريتريا",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, أوقيانوسيا, الأمريكتان, أوروبا, إفريقيا",
+      "index": 3478,
+      "subject_en": "Eritrea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تولوز",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3479,
+      "subject_en": "Toulouse",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "كوريا الجنوبية",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, إفريقيا, أوقيانوسيا, الأمريكتان, آسيا",
+      "index": 3480,
+      "subject_en": "South Korea",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لاهاي",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, آسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3481,
+      "subject_en": "The Hague",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الدنمارك",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3482,
+      "subject_en": "Denmark",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "المملكة المتحدة",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, القارة القطبية الجنوبية, إفريقيا, آسيا, أوقيانوسيا, أوروبا",
+      "index": 3483,
+      "subject_en": "United Kingdom",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الإمبراطورية البريطانية",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, الأمريكتان, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3484,
+      "subject_en": "British Empire",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "جنوب آسيا",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوروبا, آسيا",
+      "index": 3485,
+      "subject_en": "South Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بلغاريا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, آسيا, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3486,
+      "subject_en": "Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نهر بيشورا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3487,
+      "subject_en": "Pechora River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "كيريباتي",
+      "object": "أوقيانوسيا",
+      "object_candidates": "إفريقيا, الأمريكتان, آسيا, القارة القطبية الجنوبية, أوروبا, أوقيانوسيا",
+      "index": 3488,
+      "subject_en": "Kiribati",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "إيغير",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3489,
+      "subject_en": "Eiger",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تشيكوسلوفاكيا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا, آسيا, الأمريكتان, أوروبا",
+      "index": 3490,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "النمسا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا",
+      "index": 3491,
+      "subject_en": "Austria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اليونان",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3492,
+      "subject_en": "Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ويلز",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, آسيا, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3493,
+      "subject_en": "Wales",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "إندونيسيا",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, أوروبا, الأمريكتان, أوقيانوسيا, آسيا",
+      "index": 3494,
+      "subject_en": "Indonesia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "فيتنام",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا, آسيا",
+      "index": 3495,
+      "subject_en": "Vietnam",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "الاتحاد الأوروبي",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, الأمريكتان, آسيا, أوقيانوسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3496,
+      "subject_en": "European Union",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "يوغوسلافيا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3497,
+      "subject_en": "Yugoslavia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "واليس وفوتونا",
+      "object": "أوقيانوسيا",
+      "object_candidates": "آسيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوقيانوسيا",
+      "index": 3498,
+      "subject_en": "Wallis and Futuna",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "مرسيا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3499,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سلسلة الجبال العابرة للقارة القطبية الجنوبية",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "آسيا, الأمريكتان, أوقيانوسيا, أوروبا, إفريقيا, القارة القطبية الجنوبية",
+      "index": 3500,
+      "subject_en": "Transantarctic Mountains",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "تبليسي",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3501,
+      "subject_en": "Tbilisi",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "برن",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3502,
+      "subject_en": "Bern",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "باريس",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3503,
+      "subject_en": "Paris",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "خاباروفسك",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, الأمريكتان, آسيا",
+      "index": 3504,
+      "subject_en": "Khabarovsk",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نيودلهي",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, أوروبا, القارة القطبية الجنوبية, إفريقيا, آسيا",
+      "index": 3505,
+      "subject_en": "New Delhi",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "أذربيجان",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوقيانوسيا, أوروبا, آسيا",
+      "index": 3506,
+      "subject_en": "Azerbaijan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "التيبر",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, الأمريكتان, آسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3507,
+      "subject_en": "Tiber",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سلوفينيا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3508,
+      "subject_en": "Slovenia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "إيرتيش",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3509,
+      "subject_en": "Irtysh river",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "شانديغار",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3510,
+      "subject_en": "Chandigarh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "إمارة إبيروس البيزنطية",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, آسيا, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3511,
+      "subject_en": "Despotate of Epirus",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "إنجلترا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوقيانوسيا, آسيا, أوروبا",
+      "index": 3512,
+      "subject_en": "England",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "فرنسا متروبوليتان",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, الأمريكتان, آسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3513,
+      "subject_en": "Metropolitan France",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزر القمر",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, أوقيانوسيا, الأمريكتان, آسيا, إفريقيا",
+      "index": 3514,
+      "subject_en": "Comoros",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مملكة الفرنجة الشرقيين",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا, آسيا, أوروبا",
+      "index": 3515,
+      "subject_en": "East Francia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مملكة هولندا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, آسيا, أوقيانوسيا, أوروبا",
+      "index": 3516,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزر مارشال",
+      "object": "أوقيانوسيا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, إفريقيا, الأمريكتان, أوروبا, أوقيانوسيا",
+      "index": 3517,
+      "subject_en": "Marshall Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "دمن وديو",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, أوروبا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, آسيا",
+      "index": 3518,
+      "subject_en": "Daman and Diu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ليسوتو",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, القارة القطبية الجنوبية, آسيا, أوروبا, أوقيانوسيا, إفريقيا",
+      "index": 3519,
+      "subject_en": "Lesotho",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "لوار",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, إفريقيا, أوروبا",
+      "index": 3520,
+      "subject_en": "Loire",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مايوت",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, أوروبا, آسيا, أوقيانوسيا, إفريقيا",
+      "index": 3521,
+      "subject_en": "Mayotte",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ولايات ميكرونيسيا المتحدة",
+      "object": "أوقيانوسيا",
+      "object_candidates": "الأمريكتان, القارة القطبية الجنوبية, آسيا, إفريقيا, أوروبا, أوقيانوسيا",
+      "index": 3522,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "شمال-هولندا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, إفريقيا, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3523,
+      "subject_en": "North Holland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مقدونيا الشمالية",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, إفريقيا, أوروبا",
+      "index": 3524,
+      "subject_en": "North Macedonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "ليبيريا",
+      "object": "إفريقيا",
+      "object_candidates": "أوقيانوسيا, آسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا, إفريقيا",
+      "index": 3525,
+      "subject_en": "Liberia",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "إلبه",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3526,
+      "subject_en": "Elbe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "فانواتو",
+      "object": "أوقيانوسيا",
+      "object_candidates": "إفريقيا, آسيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا",
+      "index": 3527,
+      "subject_en": "Vanuatu",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "كرايوفا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا, الأمريكتان, أوروبا",
+      "index": 3528,
+      "subject_en": "Craiova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "هيماجل برديش",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, الأمريكتان, أوروبا, القارة القطبية الجنوبية, آسيا",
+      "index": 3529,
+      "subject_en": "Himachal Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جزر كوك",
+      "object": "أوقيانوسيا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوروبا, آسيا, أوقيانوسيا",
+      "index": 3530,
+      "subject_en": "Cook Islands",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "الصفيحة القطبية الجنوبية",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "آسيا, إفريقيا, أوقيانوسيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية",
+      "index": 3531,
+      "subject_en": "Antarctic Plate",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "هونغ كونغ",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, آسيا",
+      "index": 3532,
+      "subject_en": "Hong Kong",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سانت بطرسبرغ",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3533,
+      "subject_en": "Saint Petersburg",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "طاجيكستان",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, إفريقيا, آسيا",
+      "index": 3534,
+      "subject_en": "Tajikistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "صحراء كالاهاري",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوقيانوسيا, الأمريكتان, أوروبا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3535,
+      "subject_en": "Kalahari Desert",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تركمانستان",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, أوروبا, آسيا",
+      "index": 3536,
+      "subject_en": "Turkmenistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "اليونان القديمة",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, آسيا, إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3537,
+      "subject_en": "Ancient Greece",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "موسكو",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا, أوروبا",
+      "index": 3538,
+      "subject_en": "Moscow",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "غوا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, آسيا",
+      "index": 3539,
+      "subject_en": "Goa",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تايلاند",
+      "object": "آسيا",
+      "object_candidates": "الأمريكتان, أوروبا, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3540,
+      "subject_en": "Thailand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "الفرات",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, آسيا",
+      "index": 3541,
+      "subject_en": "Euphrates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سخيلده",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3542,
+      "subject_en": "Scheldt",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "اسكتلندا",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, آسيا, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3543,
+      "subject_en": "Scotland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مملكة برغونة",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوروبا",
+      "index": 3544,
+      "subject_en": "Kingdom of Burgundy",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "كانغشينجونغا",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3545,
+      "subject_en": "Kanchenjunga",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سلوفاكيا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, آسيا, الأمريكتان, أوروبا",
+      "index": 3546,
+      "subject_en": "Slovakia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الكاميرون",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, إفريقيا",
+      "index": 3547,
+      "subject_en": "Cameroon",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "روبيكوني",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3548,
+      "subject_en": "Rubicon",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الإمبراطورية النمساوية المجرية",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا",
+      "index": 3549,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "المملكة المتحدة لبريطانيا العظمى وأيرلندا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3550,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "بحيرة فوستوك",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "آسيا, الأمريكتان, أوروبا, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية",
+      "index": 3551,
+      "subject_en": "Lake Vostok",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "غينيا الاستوائية",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, إفريقيا",
+      "index": 3552,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "إسبانيا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, آسيا, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3553,
+      "subject_en": "Spain",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نيجيريا",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, إفريقيا",
+      "index": 3554,
+      "subject_en": "Nigeria",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "إسواتيني",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, الأمريكتان, أوقيانوسيا, آسيا, إفريقيا",
+      "index": 3555,
+      "subject_en": "Eswatini",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فينسون ماسيف",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "أوقيانوسيا, إفريقيا, أوروبا, الأمريكتان, آسيا, القارة القطبية الجنوبية",
+      "index": 3556,
+      "subject_en": "Vinson Massif",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "سيشل",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, الأمريكتان, إفريقيا",
+      "index": 3557,
+      "subject_en": "Seychelles",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "النيجر",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوروبا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, إفريقيا",
+      "index": 3558,
+      "subject_en": "Niger",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "البرتغال",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3559,
+      "subject_en": "Portugal",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نييوي",
+      "object": "أوقيانوسيا",
+      "object_candidates": "آسيا, الأمريكتان, أوروبا, إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا",
+      "index": 3560,
+      "subject_en": "Niue",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "الدولة الأيرلندية الحرة",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوروبا",
+      "index": 3561,
+      "subject_en": "Irish Free State",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تيسا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوروبا",
+      "index": 3562,
+      "subject_en": "Tisza",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "البوسنة والهرسك",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, آسيا, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3563,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الشرق الأوسط",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا, إفريقيا",
+      "index": 3564,
+      "subject_en": "Middle East",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الدولة العباسية",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا",
+      "index": 3565,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "بالاو",
+      "object": "أوقيانوسيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, إفريقيا, آسيا, أوروبا, أوقيانوسيا",
+      "index": 3566,
+      "subject_en": "Palau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "مليلية",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, القارة القطبية الجنوبية, أوروبا, آسيا, أوقيانوسيا, إفريقيا",
+      "index": 3567,
+      "subject_en": "Melilla",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الجبل الأسود",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا, أوروبا",
+      "index": 3568,
+      "subject_en": "Montenegro",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مانيبور",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3569,
+      "subject_en": "Manipur",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ويلينغتون",
+      "object": "أوقيانوسيا",
+      "object_candidates": "آسيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا",
+      "index": 3570,
+      "subject_en": "Wellington",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "جيبوتي",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, الأمريكتان, آسيا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3571,
+      "subject_en": "Djibouti",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "بنين",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, الأمريكتان, القارة القطبية الجنوبية, آسيا, أوقيانوسيا, إفريقيا",
+      "index": 3572,
+      "subject_en": "Benin",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "إيران",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوروبا, الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3573,
+      "subject_en": "Iran",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "غروسغلوكنر",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3574,
+      "subject_en": "Grossglockner",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جبل طارق",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3575,
+      "subject_en": "Gibraltar",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مون بلون",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا, أوروبا",
+      "index": 3576,
+      "subject_en": "Mont Blanc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جمهورية أيرلندا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, آسيا, أوروبا",
+      "index": 3577,
+      "subject_en": "Ireland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الكويت",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, الأمريكتان, إفريقيا, آسيا",
+      "index": 3578,
+      "subject_en": "Kuwait",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "تيمفو",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3579,
+      "subject_en": "Thimphu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "يانغتسي",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا, آسيا",
+      "index": 3580,
+      "subject_en": "Yangtze",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "كازاخستان",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا, الأمريكتان, آسيا, أوروبا",
+      "index": 3581,
+      "subject_en": "Kazakhstan",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مملكة ساكسونيا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوروبا",
+      "index": 3582,
+      "subject_en": "Kingdom of Saxony",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نهر إيراوادي",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا, آسيا",
+      "index": 3583,
+      "subject_en": "Irrawaddy River",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لاوس",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا, آسيا",
+      "index": 3584,
+      "subject_en": "Laos",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "سويسرا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, آسيا, إفريقيا, الأمريكتان, أوروبا",
+      "index": 3585,
+      "subject_en": "Switzerland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "غدينيا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3586,
+      "subject_en": "Gdynia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دنيستر",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, إفريقيا, آسيا, أوقيانوسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3587,
+      "subject_en": "Dniester",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "بونه",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, الأمريكتان, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3588,
+      "subject_en": "Pune",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "راجكوت",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3589,
+      "subject_en": "Rajkot",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "كريفي ريه",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا, آسيا, أوروبا",
+      "index": 3590,
+      "subject_en": "Kryvyi Rih",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "إين",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, آسيا, إفريقيا, الأمريكتان, أوروبا",
+      "index": 3591,
+      "subject_en": "Inn",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "طشقند",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, أوروبا, آسيا",
+      "index": 3592,
+      "subject_en": "Tashkent",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نهر دفينا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, آسيا, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3593,
+      "subject_en": "Daugava River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جامو وكشمير",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, إفريقيا, الأمريكتان, آسيا",
+      "index": 3594,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "ماليزيا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, الأمريكتان, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3595,
+      "subject_en": "Malaysia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "أتر برديش",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, آسيا",
+      "index": 3596,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نهر فارتا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, آسيا, أوقيانوسيا, أوروبا",
+      "index": 3597,
+      "subject_en": "Warta",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "تاميل نادو",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3598,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "لبنان",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا, أوروبا, الأمريكتان, آسيا",
+      "index": 3599,
+      "subject_en": "Lebanon",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بوروندي",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, الأمريكتان, آسيا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3600,
+      "subject_en": "Burundi",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ثيروفانانثابورام",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, إفريقيا, أوروبا, أوقيانوسيا, آسيا",
+      "index": 3601,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جمهورية هولندا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3602,
+      "subject_en": "Dutch Republic",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "قطر",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, أوروبا, القارة القطبية الجنوبية, إفريقيا, آسيا",
+      "index": 3603,
+      "subject_en": "Qatar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "أفغانستان",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا, آسيا",
+      "index": 3604,
+      "subject_en": "Afghanistan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بحر المانش",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3605,
+      "subject_en": "English Channel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "بريمورسكي كراي",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, آسيا",
+      "index": 3606,
+      "subject_en": "Primorsky Krai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "الإمارات العربية المتحدة",
+      "object": "آسيا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, إفريقيا, آسيا",
+      "index": 3607,
+      "subject_en": "United Arab Emirates",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "بحيرة بايكال",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, أوروبا, آسيا",
+      "index": 3608,
+      "subject_en": "Lake Baikal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "أكونكاغوا",
+      "object": "الأمريكتان",
+      "object_candidates": "آسيا, إفريقيا, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان",
+      "index": 3609,
+      "subject_en": "Aconcagua",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "بازل",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3610,
+      "subject_en": "Basel",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزيرة ألكسندر",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "الأمريكتان, آسيا, إفريقيا, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية",
+      "index": 3611,
+      "subject_en": "Alexander Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "أوخوس ديل سالادو",
+      "object": "الأمريكتان",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, أوروبا, أوقيانوسيا, إفريقيا, الأمريكتان",
+      "index": 3612,
+      "subject_en": "Ojos del Salado",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "مولدوفا",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3613,
+      "subject_en": "Moldova",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جزيرة ماكواري",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "إفريقيا, أوقيانوسيا, أوروبا, آسيا, الأمريكتان, القارة القطبية الجنوبية",
+      "index": 3614,
+      "subject_en": "Macquarie Island",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "مومباي",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, أوقيانوسيا, الأمريكتان, إفريقيا, آسيا",
+      "index": 3615,
+      "subject_en": "Mumbai",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "كتالونيا",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, إفريقيا, آسيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3616,
+      "subject_en": "Catalonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مدغشقر",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, أوروبا, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا",
+      "index": 3617,
+      "subject_en": "Madagascar",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "نهر نيفا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, أوروبا",
+      "index": 3618,
+      "subject_en": "Neva",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جمهورية أفريقيا الوسطى",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, الأمريكتان, القارة القطبية الجنوبية, آسيا, أوقيانوسيا, إفريقيا",
+      "index": 3619,
+      "subject_en": "Central African Republic",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "مصر",
+      "object": "إفريقيا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, أوروبا, آسيا, الأمريكتان, إفريقيا",
+      "index": 3620,
+      "subject_en": "Egypt",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الألزاس واللورين",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, القارة القطبية الجنوبية, الأمريكتان, آسيا, أوقيانوسيا, أوروبا",
+      "index": 3621,
+      "subject_en": "Alsace-Lorraine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "أنغولا",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, أوقيانوسيا, الأمريكتان, أوروبا, إفريقيا",
+      "index": 3622,
+      "subject_en": "Angola",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الشرق الأوسط",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, الأمريكتان, أوقيانوسيا, آسيا, أوروبا",
+      "index": 3623,
+      "subject_en": "Middle East",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الإمبراطورية البريطانية",
+      "object": "الأمريكتان",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, أوقيانوسيا, أوروبا, إفريقيا, الأمريكتان",
+      "index": 3624,
+      "subject_en": "British Empire",
+      "object_en": "Americas"
+    },
+    {
+      "subject": "أثينا",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, أوقيانوسيا, آسيا, الأمريكتان, إفريقيا, أوروبا",
+      "index": 3625,
+      "subject_en": "Athens",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دجلة",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, أوروبا, الأمريكتان, أوقيانوسيا, آسيا",
+      "index": 3626,
+      "subject_en": "Tigris",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "كمبوديا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, الأمريكتان, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, آسيا",
+      "index": 3627,
+      "subject_en": "Cambodia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "فولغا بلغاريا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا",
+      "index": 3628,
+      "subject_en": "Volga Bulgaria",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "مالي",
+      "object": "إفريقيا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, القارة القطبية الجنوبية, آسيا, أوروبا, إفريقيا",
+      "index": 3629,
+      "subject_en": "Mali",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فانتا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, أوقيانوسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3630,
+      "subject_en": "Vantaa",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "أوكروغ تشوكوتكا الذاتية",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, أوروبا, الأمريكتان, إفريقيا, أوقيانوسيا, آسيا",
+      "index": 3631,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "غينيا بيساو",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, أوروبا, إفريقيا",
+      "index": 3632,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فنلندا",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, آسيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا",
+      "index": 3633,
+      "subject_en": "Finland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "والونيا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3634,
+      "subject_en": "Wallonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "المغرب",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوروبا, الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3635,
+      "subject_en": "Morocco",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "ماهاراشترا",
+      "object": "آسيا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3636,
+      "subject_en": "Maharashtra",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "نهر النيل",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, آسيا, القارة القطبية الجنوبية, أوروبا, أوقيانوسيا, إفريقيا",
+      "index": 3637,
+      "subject_en": "Nile",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "تاريخ أوروبا",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, إفريقيا, أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا",
+      "index": 3638,
+      "subject_en": "history of Europe",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جبل دمافند",
+      "object": "آسيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, أوروبا, إفريقيا, آسيا",
+      "index": 3639,
+      "subject_en": "Damavand",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "الدولة الأموية",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا, آسيا, أوروبا",
+      "index": 3640,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "كاتوفيتسه",
+      "object": "أوروبا",
+      "object_candidates": "آسيا, القارة القطبية الجنوبية, الأمريكتان, أوقيانوسيا, إفريقيا, أوروبا",
+      "index": 3641,
+      "subject_en": "Katowice",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "راين",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, أوقيانوسيا, آسيا, القارة القطبية الجنوبية, الأمريكتان, أوروبا",
+      "index": 3642,
+      "subject_en": "Rhine",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "خيلدرلند",
+      "object": "أوروبا",
+      "object_candidates": "الأمريكتان, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3643,
+      "subject_en": "Gelderland",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "موريشيوس",
+      "object": "إفريقيا",
+      "object_candidates": "الأمريكتان, أوروبا, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا",
+      "index": 3644,
+      "subject_en": "Mauritius",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الكتلة الشرقية",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, آسيا, أوروبا",
+      "index": 3645,
+      "subject_en": "Eastern Bloc",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "أوكلاند",
+      "object": "أوقيانوسيا",
+      "object_candidates": "الأمريكتان, آسيا, أوروبا, القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا",
+      "index": 3646,
+      "subject_en": "Auckland",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "عصر الفايكنج",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, آسيا, أوروبا",
+      "index": 3647,
+      "subject_en": "Viking Age",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نهر النيجر",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوقيانوسيا, أوروبا, الأمريكتان, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3648,
+      "subject_en": "Niger River",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "غرب آسيا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, إفريقيا, آسيا",
+      "index": 3649,
+      "subject_en": "Western Asia",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "توكيلاو",
+      "object": "أوقيانوسيا",
+      "object_candidates": "إفريقيا, الأمريكتان, أوروبا, آسيا, القارة القطبية الجنوبية, أوقيانوسيا",
+      "index": 3650,
+      "subject_en": "Tokelau",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "بهار",
+      "object": "آسيا",
+      "object_candidates": "الأمريكتان, إفريقيا, أوروبا, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3651,
+      "subject_en": "Bihar",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "إستونيا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, إفريقيا, آسيا, الأمريكتان, أوروبا",
+      "index": 3652,
+      "subject_en": "Estonia",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "أراض فرنسية جنوبية وأنتارتيكية",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "أوروبا, الأمريكتان, أوقيانوسيا, إفريقيا, آسيا, القارة القطبية الجنوبية",
+      "index": 3653,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "السودان",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, الأمريكتان, أوروبا, آسيا, أوقيانوسيا, إفريقيا",
+      "index": 3654,
+      "subject_en": "Sudan",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "سيلاند",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, آسيا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3655,
+      "subject_en": "Principality of Sealand",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "نظام معاهدة القارة القطبية الجنوبية",
+      "object": "القارة القطبية الجنوبية",
+      "object_candidates": "الأمريكتان, آسيا, إفريقيا, أوروبا, أوقيانوسيا, القارة القطبية الجنوبية",
+      "index": 3656,
+      "subject_en": "Antarctic Treaty System",
+      "object_en": "Antarctica"
+    },
+    {
+      "subject": "نيبال",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, إفريقيا, الأمريكتان, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3657,
+      "subject_en": "Nepal",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "جزيرة جوان دي نوفا",
+      "object": "إفريقيا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, أوروبا, آسيا, الأمريكتان, إفريقيا",
+      "index": 3658,
+      "subject_en": "Juan de Nova Island",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "الولايات المتحدة",
+      "object": "أوقيانوسيا",
+      "object_candidates": "أوروبا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا, آسيا, أوقيانوسيا",
+      "index": 3659,
+      "subject_en": "United States of America",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "اليابان",
+      "object": "آسيا",
+      "object_candidates": "أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, إفريقيا, الأمريكتان, آسيا",
+      "index": 3660,
+      "subject_en": "Japan",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "موزمبيق",
+      "object": "إفريقيا",
+      "object_candidates": "آسيا, أوقيانوسيا, أوروبا, القارة القطبية الجنوبية, الأمريكتان, إفريقيا",
+      "index": 3661,
+      "subject_en": "Mozambique",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "شيملا",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, إفريقيا, آسيا",
+      "index": 3662,
+      "subject_en": "Shimla",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "هلسنكي",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, إفريقيا, أوقيانوسيا, آسيا, الأمريكتان, أوروبا",
+      "index": 3663,
+      "subject_en": "Helsinki",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "سان مارينو",
+      "object": "أوروبا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, إفريقيا, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3664,
+      "subject_en": "San Marino",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "شينزين",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, أوقيانوسيا, إفريقيا, القارة القطبية الجنوبية, الأمريكتان, آسيا",
+      "index": 3665,
+      "subject_en": "Shenzhen",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "دولة الكونغو الحرة",
+      "object": "إفريقيا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, آسيا, أوروبا, القارة القطبية الجنوبية, إفريقيا",
+      "index": 3666,
+      "subject_en": "Congo Free State",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "جامعة الدول العربية",
+      "object": "آسيا",
+      "object_candidates": "أوروبا, الأمريكتان, إفريقيا, القارة القطبية الجنوبية, أوقيانوسيا, آسيا",
+      "index": 3667,
+      "subject_en": "Arab League",
+      "object_en": "Asia"
+    },
+    {
+      "subject": "فيستولا",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, القارة القطبية الجنوبية, الأمريكتان, آسيا, إفريقيا, أوروبا",
+      "index": 3668,
+      "subject_en": "Vistula",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "دورو",
+      "object": "أوروبا",
+      "object_candidates": "إفريقيا, آسيا, القارة القطبية الجنوبية, أوقيانوسيا, الأمريكتان, أوروبا",
+      "index": 3669,
+      "subject_en": "Douro River",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "جنوب أفريقيا",
+      "object": "إفريقيا",
+      "object_candidates": "القارة القطبية الجنوبية, آسيا, الأمريكتان, أوروبا, أوقيانوسيا, إفريقيا",
+      "index": 3670,
+      "subject_en": "South Africa",
+      "object_en": "Africa"
+    },
+    {
+      "subject": "فيجي",
+      "object": "أوقيانوسيا",
+      "object_candidates": "أوروبا, إفريقيا, القارة القطبية الجنوبية, آسيا, الأمريكتان, أوقيانوسيا",
+      "index": 3671,
+      "subject_en": "Fiji",
+      "object_en": "Oceania"
+    },
+    {
+      "subject": "الوادي الكبير",
+      "object": "أوروبا",
+      "object_candidates": "أوقيانوسيا, الأمريكتان, آسيا, إفريقيا, القارة القطبية الجنوبية, أوروبا",
+      "index": 3672,
+      "subject_en": "Guadalquivir",
+      "object_en": "Europe"
+    },
+    {
+      "subject": "الصومال",
+      "object": "إفريقيا",
+      "object_candidates": "أوروبا, القارة القطبية الجنوبية, أوقيانوسيا, آسيا, الأمريكتان, إفريقيا",
+      "index": 3673,
+      "subject_en": "Somalia",
+      "object_en": "Africa"
+    }
+  ],
+  "relation_id": "P30"
+}

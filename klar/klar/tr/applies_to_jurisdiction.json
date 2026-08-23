@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "<subject> hangi ülkede yasal bir terimdir? Cevap: <mask>.",
+    "<subject> hangi yargı alanında yasal bir terimdir? Cevap: <mask>.",
+    "Yasal terim <subject> nerede uygulanır? Cevap: <mask>.",
+    "<subject> hangi yasal kuruluşu kullanır? Cevap: <mask>.",
+    "<subject> hangi bölgede tanınmış yasal bir terimdir? Cevap: <mask>.",
+    " <subject>’in uygulandığı yargı alanı <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Fransa Cumhurbaşkanı",
+      "object": "Fransa",
+      "object_candidates": "Somali, İsviçre, Romanya, Singapur, Norveç, Küba, Litvanya, Çin Cumhuriyeti, Monako, Fransa",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "Kanada başbakanı",
+      "object": "Kanada",
+      "object_candidates": "Ukrayna, Meksika, Somali, Monako, Türkiye, İrlanda, Japonya, Irak, Hollanda, Kanada",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Avustralya İşçi Partisi",
+      "object": "Avustralya",
+      "object_candidates": "Portekiz, Kanada, Avusturya, Libya, Norveç, Monako, İtalya, Finlandiya, Küba, Avustralya",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Meksika Başkanı",
+      "object": "Meksika",
+      "object_candidates": "Jamaika, Küba, Malezya, İsviçre, Bulgaristan, İtalya, Danimarka, Kanada, Fransa, Meksika",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Almanya Şansölyesi",
+      "object": "Almanya",
+      "object_candidates": "Bulgaristan, Norveç, Libya, Hırvatistan, Portekiz, İran, Danimarka, Beyaz Rusya, Filipinler, Almanya",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Grundgesetz",
+      "object": "Almanya",
+      "object_candidates": "İsviçre, Vietnam, Arnavutluk, Portekiz, Romanya, Avustralya, Avusturya, Litvanya, Irak, Almanya",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Kanada Parlamentosu",
+      "object": "Kanada",
+      "object_candidates": "Bulgaristan, Norveç, İtalya, Japonya, Küba, Portekiz, Haiti, Vietnam, Beyaz Rusya, Kanada",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Lok Sabha",
+      "object": "Hindistan",
+      "object_candidates": "Fransa, Avusturya, Japonya, Singapur, Pakistan, Ukrayna, Jamaika, Rusya, Arjantin, Hindistan",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "Knesset",
+      "object": "İsrail",
+      "object_candidates": "Vietnam, Arnavutluk, Libya, Filipinler, Almanya, Hırvatistan, İsveç, Makao, Irak, İsrail",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Japonya Başbakanı",
+      "object": "Japonya",
+      "object_candidates": "Danimarka, Türkiye, Meksika, İsveç, Hırvatistan, İtalya, Hollanda, Çin Cumhuriyeti, Makao, Japonya",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "İrlanda Devlet Başkanı",
+      "object": "İrlanda",
+      "object_candidates": "Kanada, Beyaz Rusya, Hollanda, Litvanya, Meksika, İsveç, Hindistan, Pakistan, Libya, İrlanda",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Avustralya doları",
+      "object": "Avustralya",
+      "object_candidates": "Haiti, Çin Cumhuriyeti, Hollanda, Makao, Romanya, Litvanya, Malezya, Danimarka, Jamaika, Avustralya",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Pakistan cumhurbaşkanı",
+      "object": "Pakistan",
+      "object_candidates": "Vietnam, İsveç, Bolivya, Singapur, Türkiye, Danimarka, Portekiz, Kanada, İran, Pakistan",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Rusya Federasyonu Devlet Başkanı",
+      "object": "Rusya",
+      "object_candidates": "Vietnam, Hindistan, Küba, Fransa, Romanya, Finlandiya, Kanada, Singapur, Pakistan, Rusya",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Avusturya Başbakanı",
+      "object": "Avusturya",
+      "object_candidates": "İspanya, Filipinler, Portekiz, Bolivya, Hindistan, Beyaz Rusya, Romanya, Kanada, Japonya, Avusturya",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Riksdag",
+      "object": "İsveç",
+      "object_candidates": "Arnavutluk, Singapur, Ukrayna, Vietnam, Hollanda, Malezya, Fransa, Monako, Finlandiya, İsveç",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "İspanya bayrağı",
+      "object": "İspanya",
+      "object_candidates": "Bolivya, Meksika, Norveç, Irak, Finlandiya, Arjantin, Kanada, Hollanda, Vietnam, İspanya",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Fransa bayrağı",
+      "object": "Fransa",
+      "object_candidates": "Pakistan, Haiti, Avusturya, Singapur, Rusya, Litvanya, Beyaz Rusya, Vietnam, Almanya, Fransa",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ukrayna Cumhurbaşkanı",
+      "object": "Ukrayna",
+      "object_candidates": "Hollanda, Meksika, İsrail, Beyaz Rusya, Türkiye, İspanya, Litvanya, Avustralya, Norveç, Ukrayna",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Fransa Başbakanı",
+      "object": "Fransa",
+      "object_candidates": "Irak, Pakistan, Portekiz, Türkiye, Filipinler, Hırvatistan, Hollanda, Singapur, Hindistan, Fransa",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Danimarka bayrağı",
+      "object": "Danimarka",
+      "object_candidates": "İspanya, Japonya, Irak, Norveç, Portekiz, İsrail, Singapur, Türkiye, Kanada, Danimarka",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Almanya Federal Meclisi",
+      "object": "Almanya",
+      "object_candidates": "Somali, İrlanda, Meksika, İsveç, Japonya, Libya, Kanada, Hindistan, İsrail, Almanya",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "İrlanda bayrağı",
+      "object": "İrlanda",
+      "object_candidates": "Litvanya, Filipinler, Portekiz, Küba, Fransa, Bolivya, Monako, İran, Pakistan, İrlanda",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Avusturya Devlet Başkanı",
+      "object": "Avusturya",
+      "object_candidates": "Rusya, Avustralya, Vietnam, Litvanya, İsrail, Pakistan, Jamaika, Türkiye, Finlandiya, Avusturya",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Pakistan başbakanı",
+      "object": "Pakistan",
+      "object_candidates": "Malezya, Arjantin, Avustralya, Norveç, Vietnam, Jamaika, Singapur, İsrail, İran, Pakistan",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Almanya Cumhurbaşkanları listesi",
+      "object": "Almanya",
+      "object_candidates": "Bolivya, Litvanya, Makao, Küba, Norveç, Monako, Beyaz Rusya, Bulgaristan, Rusya, Almanya",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "İsveç başbakanı",
+      "object": "İsveç",
+      "object_candidates": "Singapur, İrlanda, Kanada, Almanya, Hollanda, İsviçre, Finlandiya, İspanya, Danimarka, İsveç",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Fransa Ulusal Meclisi",
+      "object": "Fransa",
+      "object_candidates": "Türkiye, İsviçre, Küba, Meksika, Danimarka, Malezya, Norveç, Çin Cumhuriyeti, Avusturya, Fransa",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "İsviçre bayrağı",
+      "object": "İsviçre",
+      "object_candidates": "Filipinler, Bolivya, Rusya, Jamaika, Avusturya, Portekiz, İrlanda, İran, Beyaz Rusya, İsviçre",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Rusya hükümet başkanları listesi",
+      "object": "Rusya",
+      "object_candidates": "Haiti, Ukrayna, Malezya, İsviçre, İspanya, Portekiz, İtalya, Jamaika, Küba, Rusya",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Singapur bayrağı",
+      "object": "Singapur",
+      "object_candidates": "Portekiz, Bolivya, Almanya, Makao, Somali, Vietnam, Avusturya, Danimarka, Bulgaristan, Singapur",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "Fransa Senatosu",
+      "object": "Fransa",
+      "object_candidates": "Finlandiya, Danimarka, Portekiz, Somali, Pakistan, Malezya, Küba, İran, Çin Cumhuriyeti, Fransa",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ukrayna Başbakanı",
+      "object": "Ukrayna",
+      "object_candidates": "İsrail, Rusya, Küba, Finlandiya, Türkiye, Fransa, Somali, Monako, Vietnam, Ukrayna",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Rusya bayrağı",
+      "object": "Rusya",
+      "object_candidates": "Fransa, Makao, Beyaz Rusya, Bulgaristan, Hindistan, Avustralya, İrlanda, İsviçre, İtalya, Rusya",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Kanada bayrağı",
+      "object": "Kanada",
+      "object_candidates": "Bolivya, Makao, Finlandiya, Libya, Haiti, Hindistan, Beyaz Rusya, Avustralya, İran, Kanada",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Romanya Devlet Başkanı",
+      "object": "Romanya",
+      "object_candidates": "İran, Fransa, Meksika, İtalya, Çin Cumhuriyeti, Malezya, Küba, Haiti, İrlanda, Romanya",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Hollanda bayrağı",
+      "object": "Hollanda",
+      "object_candidates": "İsveç, Somali, Singapur, Avusturya, Bolivya, Portekiz, Beyaz Rusya, Irak, Avustralya, Hollanda",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Malezya Başbakanı",
+      "object": "Malezya",
+      "object_candidates": "İspanya, Vietnam, İran, İsrail, Litvanya, Finlandiya, Bulgaristan, Portekiz, Danimarka, Malezya",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Jamaika bayrağı",
+      "object": "Jamaika",
+      "object_candidates": "Hırvatistan, Malezya, Almanya, İtalya, İsviçre, Avustralya, Bulgaristan, İspanya, Monako, Jamaika",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Arjantin bayrağı",
+      "object": "Arjantin",
+      "object_candidates": "Jamaika, Norveç, Hollanda, Fransa, Litvanya, İsrail, Avustralya, Hindistan, Bulgaristan, Arjantin",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Norveç bayrağı",
+      "object": "Norveç",
+      "object_candidates": "Litvanya, Kanada, Monako, İran, Almanya, Avustralya, İsveç, Avusturya, Çin Cumhuriyeti, Norveç",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Temsilciler Kongresi",
+      "object": "İspanya",
+      "object_candidates": "İsrail, Irak, Rusya, Litvanya, Filipinler, Danimarka, Pakistan, Bolivya, Ukrayna, İspanya",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Japonya İmparatoru",
+      "object": "Japonya",
+      "object_candidates": "İsveç, Pakistan, Hırvatistan, Litvanya, Türkiye, Filipinler, İrlanda, Romanya, Monako, Japonya",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Litvanya bayrağı",
+      "object": "Litvanya",
+      "object_candidates": "Haiti, İsviçre, Rusya, İsrail, Malezya, Bolivya, Hollanda, İspanya, Japonya, Litvanya",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Bulgaristan bayrağı",
+      "object": "Bulgaristan",
+      "object_candidates": "Monako, Beyaz Rusya, Meksika, Arnavutluk, İsveç, Ukrayna, Fransa, Türkiye, Hollanda, Bulgaristan",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Irak Cumhurbaşkanı",
+      "object": "Irak",
+      "object_candidates": "İran, Türkiye, Haiti, Singapur, Hırvatistan, Malezya, Finlandiya, Filipinler, Vietnam, Irak",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Türk bayrağı",
+      "object": "Türkiye",
+      "object_candidates": "Kanada, Singapur, Makao, Japonya, Irak, Malezya, Arjantin, İsveç, Bolivya, Türkiye",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Malezya bayrağı",
+      "object": "Malezya",
+      "object_candidates": "Makao, Bolivya, İsviçre, Beyaz Rusya, Romanya, Rusya, Haiti, Jamaika, Norveç, Malezya",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "Beyaz Rusya bayrağı",
+      "object": "Beyaz Rusya",
+      "object_candidates": "Danimarka, Almanya, Rusya, Meksika, İsviçre, Hindistan, İsveç, Bulgaristan, Makao, Beyaz Rusya",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Küba bayrağı",
+      "object": "Küba",
+      "object_candidates": "Romanya, İrlanda, Meksika, Çin Cumhuriyeti, Avusturya, Malezya, Pakistan, Fransa, Makao, Küba",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Vietnam bayrağı",
+      "object": "Vietnam",
+      "object_candidates": "Finlandiya, Pakistan, Hindistan, Singapur, Avustralya, Romanya, Beyaz Rusya, Çin Cumhuriyeti, Monako, Vietnam",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Bolivya bayrağı",
+      "object": "Bolivya",
+      "object_candidates": "İsviçre, Hindistan, İsrail, Avustralya, Çin Cumhuriyeti, Romanya, Rusya, Pakistan, Finlandiya, Bolivya",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "Hindistan bayrağı",
+      "object": "Hindistan",
+      "object_candidates": "Monako, Çin Cumhuriyeti, Hollanda, İsveç, Libya, Hırvatistan, Makao, Somali, Litvanya, Hindistan",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "Pataka",
+      "object": "Makao",
+      "object_candidates": "Haiti, Meksika, Avustralya, Hollanda, Bulgaristan, Norveç, Singapur, Arnavutluk, Avusturya, Makao",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "Monako bayrağı",
+      "object": "Monako",
+      "object_candidates": "Türkiye, Çin Cumhuriyeti, İran, Finlandiya, Hindistan, Danimarka, Beyaz Rusya, Irak, Libya, Monako",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "Somali bayrağı",
+      "object": "Somali",
+      "object_candidates": "Hırvatistan, İspanya, Türkiye, Malezya, Bulgaristan, Hollanda, Fransa, Norveç, Libya, Somali",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "İsrail cumhurbaşkanları listesi",
+      "object": "İsrail",
+      "object_candidates": "Almanya, Portekiz, Litvanya, Bulgaristan, Jamaika, Japonya, Türkiye, Romanya, Çin Cumhuriyeti, İsrail",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "İsveç bayrağı",
+      "object": "İsveç",
+      "object_candidates": "Kanada, Norveç, Beyaz Rusya, Litvanya, Vietnam, İspanya, Romanya, Arnavutluk, Çin Cumhuriyeti, İsveç",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Tayvan bayrağı",
+      "object": "Çin Cumhuriyeti",
+      "object_candidates": "İsviçre, Japonya, Beyaz Rusya, Litvanya, Vietnam, Makao, Hindistan, Haiti, İrlanda, Çin Cumhuriyeti",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Avustralya bayrağı",
+      "object": "Avustralya",
+      "object_candidates": "Filipinler, Irak, Arjantin, Hindistan, Portekiz, Kanada, İsrail, Almanya, Monako, Avustralya",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Ukrayna bayrağı",
+      "object": "Ukrayna",
+      "object_candidates": "Finlandiya, Türkiye, Danimarka, Hindistan, Almanya, Avusturya, İrlanda, İsrail, Portekiz, Ukrayna",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Beyaz Rusya devlet başkanı",
+      "object": "Beyaz Rusya",
+      "object_candidates": "Somali, İsrail, Hindistan, Bulgaristan, İsviçre, Japonya, Arjantin, Danimarka, Fransa, Beyaz Rusya",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Haiti bayrağı",
+      "object": "Haiti",
+      "object_candidates": "İrlanda, Monako, Romanya, Avusturya, Arjantin, Vietnam, Japonya, Somali, Bolivya, Haiti",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Meksika arması",
+      "object": "Meksika",
+      "object_candidates": "Litvanya, Küba, İsrail, Libya, Norveç, Avusturya, İran, Makao, İsveç, Meksika",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Finlandiya bayrağı",
+      "object": "Finlandiya",
+      "object_candidates": "Fransa, Kanada, Bulgaristan, İspanya, Filipinler, Almanya, Beyaz Rusya, Rusya, Somali, Finlandiya",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Hırvatistan bayrağı",
+      "object": "Hırvatistan",
+      "object_candidates": "Almanya, Portekiz, Jamaika, Arjantin, Malezya, Norveç, Kanada, Somali, Haiti, Hırvatistan",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "Finlandiya Devlet Başkanı",
+      "object": "Finlandiya",
+      "object_candidates": "Bulgaristan, Irak, Singapur, İtalya, Çin Cumhuriyeti, Hırvatistan, Kanada, Malezya, Litvanya, Finlandiya",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Arnavutluk bayrağı",
+      "object": "Arnavutluk",
+      "object_candidates": "İsrail, Pakistan, Beyaz Rusya, Somali, Haiti, Türkiye, İsveç, İsviçre, Danimarka, Arnavutluk",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "İtalya bayrağı",
+      "object": "İtalya",
+      "object_candidates": "İsrail, İran, Japonya, Vietnam, İsveç, Çin Cumhuriyeti, Bolivya, Filipinler, Finlandiya, İtalya",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Almanya bayrağı",
+      "object": "Almanya",
+      "object_candidates": "Rusya, İsveç, Filipinler, Libya, İspanya, İrlanda, Hindistan, İsviçre, Singapur, Almanya",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Libya bayrağı",
+      "object": "Libya",
+      "object_candidates": "Avustralya, Bulgaristan, Monako, Pakistan, Malezya, Haiti, İsrail, Singapur, Romanya, Libya",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Filipinler bayrağı",
+      "object": "Filipinler",
+      "object_candidates": "Hollanda, Libya, İsrail, Beyaz Rusya, Arjantin, Küba, Çin Cumhuriyeti, Avusturya, İsveç, Filipinler",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "Almanya",
+      "object_candidates": "Kanada, Pakistan, Japonya, İtalya, Somali, Haiti, Ukrayna, Finlandiya, Fransa, Almanya",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "İran Cumhurbaşkanı",
+      "object": "İran",
+      "object_candidates": "Rusya, İtalya, İsviçre, Avustralya, Hırvatistan, İspanya, Arnavutluk, Singapur, Hindistan, İran",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Pakistan bayrağı",
+      "object": "Pakistan",
+      "object_candidates": "İspanya, İsveç, Singapur, Bolivya, Haiti, Kanada, Portekiz, Çin Cumhuriyeti, Litvanya, Pakistan",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Portekiz bayrağı",
+      "object": "Portekiz",
+      "object_candidates": "Almanya, Küba, Avustralya, İrlanda, Arnavutluk, Singapur, Finlandiya, İsrail, Rusya, Portekiz",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Yunanistan bayrağı",
+      "object": "Yunanistan",
+      "object_candidates": "Irak, Avusturya, Hırvatistan, İsrail, Kanada, Meksika, Hindistan, Hollanda, Beyaz Rusya, Yunanistan",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Meksika bayrağı",
+      "object": "Meksika",
+      "object_candidates": "Rusya, Singapur, İspanya, Çin Cumhuriyeti, Arnavutluk, Irak, Hollanda, İrlanda, İtalya, Meksika",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Japonya bayrağı",
+      "object": "Japonya",
+      "object_candidates": "Hindistan, Türkiye, Fransa, Finlandiya, Rusya, Meksika, Beyaz Rusya, Romanya, Singapur, Japonya",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

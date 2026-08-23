@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "Πού βρίσκεται η πρωτεύουσα του <subject>; Η απάντηση είναι: <mask>",
+    "Ποια είναι η πρωτεύουσα του <subject>; Η απάντηση είναι: <mask>",
+    "Ποια πόλη λειτουργεί ως πρωτεύουσα του <subject>; Η απάντηση είναι: <mask>",
+    "Αναφέρετε την πρωτεύουσα πόλη του <subject>. Η απάντηση είναι: <mask>",
+    "Πού έχει η <subject> την πρωτεύουσά της; Η απάντηση είναι: <mask>",
+    " Η πρωτεύουσα του <subject> ονομάζεται <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Αζερμπαϊτζάν",
+      "object": "Μπακού",
+      "object_candidates": "Ντάκα, Μοντγκόμερι, Τορόντο, Δρέσδη, Ρίγα, Ντένβερ, Λίνκολν, Μπέργκεν, Λίμα, Μπακού",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Νεμπράσκα",
+      "object": "Λίνκολν",
+      "object_candidates": "Τίρανα, Καράτσι, Γουίντσεστερ, Ζάγκρεμπ, Χόμπαρτ, Χέρφορντ, Τζώρτζταουν, Έξετερ, Θεσσαλονίκη, Λίνκολν",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "Χάμπσιρ",
+      "object": "Γουίντσεστερ",
+      "object_candidates": "Μπρίσμπεϊν, Λβιβ, Γούστερ, Χάρρισμπεργκ, Τάλιν, Βασιλεία, Ιερουσαλήμ, Σάγκα, Τουλούζη, Γουίντσεστερ",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Κυβερνείο Αλεξάνδρειας",
+      "object": "Αλεξάνδρεια",
+      "object_candidates": "Τόκιο, Μαϊάμι, Καζάν, Πιερ, Καράκας, Χάλιφαξ, Αννόβερο, Μάιντς, Βαγδάτη, Αλεξάνδρεια",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "Βασίλειο της Ιταλίας",
+      "object": "Φλωρεντία",
+      "object_candidates": "Μπρίσμπεϊν, Γκαπ, Τορίνο, Ζάγκρεμπ, Γουίντσεστερ, Λίνκολν, Βουκουρέστι, Ράλεϊ, Σιένα, Φλωρεντία",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Μεγάλο Δουκάτο της Φινλανδίας",
+      "object": "Ελσίνκι",
+      "object_candidates": "Έντο, Λιλ, Μπρεστ, Στρασβούργο, Τρίπολη, Κράισττσερτς, Άουγκσμπουργκ, Τζακάρτα, Μπρατισλάβα, Ελσίνκι",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Τελανγκάνα",
+      "object": "Χαϊντεραμπάντ",
+      "object_candidates": "Γούστερ, Πρέστον, Αδελαΐδα, Βελιγράδι, Μπανγκαλόρ, Περθ, Γιοκοχάμα, Ελσίνκι, Τάλιν, Χαϊντεραμπάντ",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Νότια Αυστραλία",
+      "object": "Αδελαΐδα",
+      "object_candidates": "Κάρλαϊλ, Ναϊρόμπι, Λάκναου, Δελχί, Χάμιλτον, Βαλένθια, Γένοβα, Έντο, Νάπολη, Αδελαΐδα",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "Βασίλειο της Σκωτίας",
+      "object": "Εδιμβούργο",
+      "object_candidates": "Καμπούλ, Μπόισι, Γένοβα, Τουρ, Μπάρι, Βασιλεία, Μπανγκόκ, Γερεβάν, Φοίνιξ, Εδιμβούργο",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "Δεύτερη Πολωνική Δημοκρατία",
+      "object": "Βαρσοβία",
+      "object_candidates": "Άγκυρα, Βοστώνη, Μπακού, Βουδαπέστη, Βρυξέλλες, Μπέργκεν, Γκαπ, Κέρμαν, Αννάπολις, Βαρσοβία",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Καντέρμπερι",
+      "object": "Κράισττσερτς",
+      "object_candidates": "Χόμπαρτ, Ταϊπέι, Καμπέρα, Σεβίλλη, Ρεγγίνα, Μέμφις, Νάσβιλ, Άουγκσμπουργκ, Βαλένθια, Κράισττσερτς",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "Βασίλειο της Γαλλίας",
+      "object": "Παρίσι",
+      "object_candidates": "Πάλμα ντε Μαγιόρκα, Ράλεϊ, Ρεγγίνα, Γιοκοχάμα, Ναντσίνγκ, Χαϊντεραμπάντ, Τσεννάι, Μινσκ, Μέμφις, Παρίσι",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Αλμπέρτα",
+      "object": "Έντμοντον",
+      "object_candidates": "Αλγέρι, Οξφόρδη, Κορκ, Μόναχο, Τόκιο, Ράλεϊ, Καράτσι, Περθ, Αδελαΐδα, Έντμοντον",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "Γερμανία",
+      "object": "Βερολίνο",
+      "object_candidates": "Μπρίσμπεϊν, Ντουνεντίν, Χάρρισμπεργκ, Νάπολη, Ναγκόγια, Μάιντς, Μπρατισλάβα, Κωνσταντινούπολη, Μπρεστ, Βερολίνο",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Ιντιάνα",
+      "object": "Ιντιανάπολις",
+      "object_candidates": "Βηρυτός, Μινσκ, Κίνγκστον, Οδησσός, Πράγα, Τολέδο, Μπίσμαρκ, Ντουμπάι, Κέιμπριτζ, Ιντιανάπολις",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "Δεύτερη Γαλλική Αυτοκρατορία",
+      "object": "Παρίσι",
+      "object_candidates": "Κοπεγχάγη, Λάνσινγκ, Αβάνα, Αδελαΐδα, Ώκλαντ, Πιερ, Γιοκοχάμα, Χαλέπι, Ναγκόγια, Παρίσι",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Κέιμπριτζσιρ",
+      "object": "Κέιμπριτζ",
+      "object_candidates": "Καράτσι, Λίνκολν, Τζάκσον, Βουκουρέστι, Χάλιφαξ, Σαράγιεβο, Τουλούζη, Μέκκα, Χέρφορντ, Κέιμπριτζ",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "Βασίλειο της Σικελίας",
+      "object": "Νάπολη",
+      "object_candidates": "Σεούλ, Βαγδάτη, Τορόντο, Καμπέρα, Ώκλαντ, Μόσχα, Ντουμπάι, Μπρεστ, Μοντεβιδέο, Νάπολη",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Αντρ-ε-Λουάρ",
+      "object": "Τουρ",
+      "object_candidates": "Δρέσδη, Βερολίνο, Κωνσταντινούπολη, Βαβυλώνα, Άντεν, Ιερουσαλήμ, Ρεγγίνα, Τζακάρτα, Χάλιφαξ, Τουρ",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "Απουλία",
+      "object": "Μπάρι",
+      "object_candidates": "Κίεβο, Νόριτς, Βαλένθια, Ναγκόγια, Βιέννη, Λάνσινγκ, Καμπούλ, Κέρμαν, Ρώμη, Μπάρι",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "Ανατολική Φλάνδρα",
+      "object": "Γάνδη",
+      "object_candidates": "Άουγκσμπουργκ, Κουανγκτσόου, Σαϊέν, Σαράγιεβο, Μπανγκαλόρ, Τίρανα, Τουρ, Παλέρμο, Σάλτσμπουργκ, Γάνδη",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "Δανία",
+      "object": "Κοπεγχάγη",
+      "object_candidates": "Ιερουσαλήμ, Φλωρεντία, Βρυξέλλες, Έντο, Μάντισον, Χαλέπι, Σιένα, Νάπολη, Χάμιλτον, Κοπεγχάγη",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "Μίσιγκαν",
+      "object": "Λάνσινγκ",
+      "object_candidates": "Τρέντον, Καράτσι, Φλωρεντία, Μοντεβιδέο, Σάλτσμπουργκ, Πάλμα ντε Μαγιόρκα, Κέιμπριτζ, Έντμοντον, Κολόμπους, Λάνσινγκ",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "Αγιουβίδες",
+      "object": "Κάιρο",
+      "object_candidates": "Καμπέρα, Λωζάνη, Γκόλγουεϊ, Τρίπολη, Ταϊπέι, Μπέλφαστ, Κίεβο, Μέκκα, Μεδίνα, Κάιρο",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Χαλιφάτο των Ρασιντούν",
+      "object": "Μεδίνα",
+      "object_candidates": "Μουμπάι, Τορίνο, Πρέστον, Ρεγγίνα, Τσεννάι, Περθ, Παρίσι, Σάλτσμπουργκ, Τουρ, Μεδίνα",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Σογκουνάτο Τοκουγκάβα",
+      "object": "Έντο",
+      "object_candidates": "Μπολόνια, Ρώμη, Ελσίνκι, Τεχεράνη, Τορίνο, Περθ, Σιάτλ, Λίμα, Κόνκορντ, Έντο",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "Ένωση Σοβιετικών Σοσιαλιστικών Δημοκρατιών",
+      "object": "Μόσχα",
+      "object_candidates": "Χάλιφαξ, Στρασβούργο, Λίμα, Ρίγα, Ράλεϊ, Μπακού, Μάντσεστερ, Σάγκα, Χάρτφορντ, Μόσχα",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Βασίλειο της Ρουμανίας",
+      "object": "Βουκουρέστι",
+      "object_candidates": "Μπορντώ, Οξφόρδη, Μαϊάμι, Ώκλαντ, Νόριτς, Γκαπ, Χάλιφαξ, Ναγκόγια, Πράγα, Βουκουρέστι",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "Τασμανία",
+      "object": "Χόμπαρτ",
+      "object_candidates": "Κέιμπριτζ, Τζακάρτα, Πιερ, Μπρατισλάβα, Έντμοντον, Κάρντιφ, Νάπολη, Μανίλα, Λίνκολν, Χόμπαρτ",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "Κομητεία Λίμερικ",
+      "object": "Λίμερικ",
+      "object_candidates": "Τζώρτζταουν, Κίνγκστον, Σιάτλ, Αθήνα, Φλωρεντία, Κολούμπια, Τορίνο, Γουίνιπεγκ, Βουδαπέστη, Λίμερικ",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "Χαλιφάτο των Φατιμιδών",
+      "object": "Κάιρο",
+      "object_candidates": "Τρίπολη, Μπέργκεν, Γιοκοχάμα, Τζώρτζταουν, Καράκας, Παρίσι, Βερολίνο, Σαράγιεβο, Συρακούσες, Κάιρο",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Περιοχή του Ώκλαντ",
+      "object": "Ώκλαντ",
+      "object_candidates": "Κοπεγχάγη, Σιάτλ, Έξετερ, Μπρίσμπεϊν, Λάκναου, Συρακούσες, Βικτωρία Βρετανικής Κολομβίας, Βαρκελώνη, Αννάπολις, Ώκλαντ",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "Νιου Χάμσαϊρ",
+      "object": "Κόνκορντ",
+      "object_candidates": "Ναϊρόμπι, Βαγδάτη, Κιότο, Καράκας, Τσάρλεστον, Βοστώνη, Ρίτσμοντ, Μάντσεστερ, Εδιμβούργο, Κόνκορντ",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "Όμπλαστ της Οδησσού",
+      "object": "Οδησσός",
+      "object_candidates": "Λβιβ, Στοκχόλμη, Τουρ, Ντένβερ, Χέρφορντ, Μπέλφαστ, Λίμα, Φοίνιξ, Λωζάνη, Οδησσός",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "Αυστραλία",
+      "object": "Καμπέρα",
+      "object_candidates": "Ουέστμινστερ, Θεσσαλονίκη, Ζάγκρεμπ, Βαλένθια, Πεκίνο, Συρακούσες, Γιοκοχάμα, Κουανγκτσόου, Κίελο, Καμπέρα",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Οθωμανική Αυτοκρατορία",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Πράγα, Ταϊπέι, Αβάνα, Ρίγα, Φοίνιξ, Φλωρεντία, Τουλούζη, Χάλιφαξ, Δαμασκός, Κωνσταντινούπολη",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Νοτιοδυτική Αγγλία",
+      "object": "Μπρίστολ",
+      "object_candidates": "Μπακού, Βασιλεία, Μανίλα, Ρίγα, Τζακάρτα, Βέρνη, Μπάρι, Βαγδάτη, Πρόβιντενς, Μπρίστολ",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "Τέξας",
+      "object": "Ώστιν",
+      "object_candidates": "Γουότερφορντ, Κέρμαν, Δελχί, Ντουνεντίν, Μπρατισλάβα, Χάμιλτον, Γκόλγουεϊ, Μοντγκόμερι, Βίλνιους, Ώστιν",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "Λατινική Αυτοκρατορία",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Τορόντο, Παρίσι, Κολούμπια, Κίεβο, Βαβυλώνα, Βενετία, Τολέδο, Καμπούλ, Μανίλα, Κωνσταντινούπολη",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Ουγγαρία",
+      "object": "Βουδαπέστη",
+      "object_candidates": "Λωζάνη, Νάσβιλ, Λέστερ, Αννόβερο, Αννάπολις, Σακραμέντο, Ιντιανάπολις, Τζάκσον, Τίρανα, Βουδαπέστη",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Ρωσία",
+      "object": "Μόσχα",
+      "object_candidates": "Ναγκόγια, Μπανγκόκ, Συρακούσες, Ναϊρόμπι, Βιέννη, Ώστιν, Κολόμπο, Κολόμπους, Θεσσαλονίκη, Μόσχα",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Βένετο",
+      "object": "Βενετία",
+      "object_candidates": "Μπέλφαστ, Συρακούσες, Έντο, Βόννη, Γουαδαλαχάρα, Πιερ, Λβιβ, Τζακάρτα, Βηρυτός, Βενετία",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Γούστερσιρ",
+      "object": "Γούστερ",
+      "object_candidates": "Βαβυλώνα, Τζάκσον, Κίνγκστον, Μιλάνο, Έντο, Κοπεγχάγη, Νάσβιλ, Σίδνεϊ, Στρασβούργο, Γούστερ",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "Βασίλειο της Σικελίας",
+      "object": "Παλέρμο",
+      "object_candidates": "Δαμασκός, Κίνγκστον, Ντουμπάι, Δρέσδη, Άμστερνταμ, Ράλεϊ, Σαντιάγο, Σόφια, Καράτσι, Παλέρμο",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Πενσιλβανία",
+      "object": "Χάρρισμπεργκ",
+      "object_candidates": "Ουέστμινστερ, Μουμπάι, Βασιλεία, Τζάκσον, Χάρτφορντ, Δελχί, Συρακούσες, Ντουμπάι, Μόναχο, Χάρρισμπεργκ",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "Παπικά Κράτη",
+      "object": "Ρώμη",
+      "object_candidates": "Φλωρεντία, Ναϊρόμπι, Μάιντς, Αλεξάνδρεια, Μανίλα, Ντάκα, Δουβλίνο, Λάνσινγκ, Ταϊπέι, Ρώμη",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Κομητεία Γκόλγουεϊ",
+      "object": "Γκόλγουεϊ",
+      "object_candidates": "Λίμα, Ντάργουιν, Σάλεμ, Βουδαπέστη, Οττάβα, Λιλ, Κωνσταντινούπολη, Ντάκα, Ρώμη, Γκόλγουεϊ",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "Αυστριακή Αυτοκρατορία",
+      "object": "Βιέννη",
+      "object_candidates": "Ρώμη, Έξετερ, Τουλούζη, Λίνκολν, Ώστιν, Χέρφορντ, Γένοβα, Δουβλίνο, Σάγκα, Βιέννη",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Ολλανδικές Ανατολικές Ινδίες",
+      "object": "Τζακάρτα",
+      "object_candidates": "Ρίγα, Ναγκόγια, Τρέντον, Βρυξέλλες, Ιερουσαλήμ, Τσάρλεστον, Γερεβάν, Σακραμέντο, Βελιγράδι, Τζακάρτα",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "Ισραήλ",
+      "object": "Ιερουσαλήμ",
+      "object_candidates": "Έντο, Αλγέρι, Μπανγκαλόρ, Σάλτσμπουργκ, Βέρνη, Μπρατισλάβα, Ώστιν, Κέρμαν, Σεβίλλη, Ιερουσαλήμ",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Άιτσι",
+      "object": "Ναγκόγια",
+      "object_candidates": "Τσεννάι, Γκαπ, Αλγέρι, Βελιγράδι, Άουγκσμπουργκ, Οδησσός, Άγκυρα, Πεκίνο, Καράτσι, Ναγκόγια",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "Λέστερσιρ",
+      "object": "Λέστερ",
+      "object_candidates": "Άουγκσμπουργκ, Νόριτς, Μανίλα, Κράισττσερτς, Θεσσαλονίκη, Ιερουσαλήμ, Βαλένθια, Σακραμέντο, Πρόβιντενς, Λέστερ",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "Κομητεία Κινγκ",
+      "object": "Σιάτλ",
+      "object_candidates": "Τεχεράνη, Λιλ, Θεσσαλονίκη, Μινσκ, Γουίνιπεγκ, Σαράγιεβο, Μόσχα, Δελχί, Ράλεϊ, Σιάτλ",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Δουκάτο των Αθηνών",
+      "object": "Αθήνα",
+      "object_candidates": "Νάσβιλ, Γένοβα, Κολόμπους, Λάκναου, Γουότερφορντ, Μόναχο, Τάλιν, Μαδρίτη, Λονδίνο, Αθήνα",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Βασίλειο των Κάτω Χωρών",
+      "object": "Άμστερνταμ",
+      "object_candidates": "Βερολίνο, Ρίτσμοντ, Λονδίνο, Αλεξάνδρεια, Τουλούζη, Ρίγα, Ναγκόγια, Γουίντσεστερ, Τζώρτζταουν, Άμστερνταμ",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Αλβανία",
+      "object": "Τίρανα",
+      "object_candidates": "Μπέργκεν, Βαγδάτη, Βαρσοβία, Τουλούζη, Στοκχόλμη, Λισαβόνα, Ουέστμινστερ, Περθ, Τρέντον, Τίρανα",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Γένοβα",
+      "object": "Γένοβα",
+      "object_candidates": "Καράτσι, Κίεβο, Ρεγγίνα, Μπόισι, Τουλούζη, Ρώμη, Πεκίνο, Ντάργουιν, Γούστερ, Γένοβα",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Δημοκρατία της Κίνας",
+      "object": "Ταϊπέι",
+      "object_candidates": "Βηρυτός, Κάιρο, Αθήνα, Ώστιν, Γάνδη, Βαρκελώνη, Ντουνεντίν, Σαράγιεβο, Βασιλεία, Ταϊπέι",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Τσεχοσλοβακία",
+      "object": "Πράγα",
+      "object_candidates": "Κορκ, Κίεβο, Ντάκα, Βαβυλώνα, Βηρυτός, Έντο, Τζώρτζταουν, Κέρμαν, Στοκχόλμη, Πράγα",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Εμιράτο του Ντουμπάι",
+      "object": "Ντουμπάι",
+      "object_candidates": "Άουγκσμπουργκ, Μαδρίτη, Πάλμα ντε Μαγιόρκα, Καλκούτα, Γκαπ, Εδιμβούργο, Πρέστον, Βιέννη, Μπέλφαστ, Ντουμπάι",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "Βόρεια Ντακότα",
+      "object": "Μπίσμαρκ",
+      "object_candidates": "Μπέλφαστ, Γουίντσεστερ, Μέκκα, Χάρτφορντ, Στρασβούργο, Λιλ, Χαϊντεραμπάντ, Πιερ, Σακραμέντο, Μπίσμαρκ",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "Ανδαλουσία",
+      "object": "Σεβίλλη",
+      "object_candidates": "Συρακούσες, Κάιρο, Δρέσδη, Γερεβάν, Βίλνιους, Σάλεμ, Μαϊάμι, Βαρσοβία, Ελσίνκι, Σεβίλλη",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "Μαχαράστρα",
+      "object": "Μουμπάι",
+      "object_candidates": "Βαρσοβία, Γάνδη, Τίρανα, Τσεννάι, Τορίνο, Έντμοντον, Κουανγκτσόου, Λάνσινγκ, Κίεβο, Μουμπάι",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "Καρνάτακα",
+      "object": "Μπανγκαλόρ",
+      "object_candidates": "Ναντσίνγκ, Σεβίλλη, Στοκχόλμη, Λάνσινγκ, Έντο, Πρέστον, Καμπέρα, Δρέσδη, Δελχί, Μπανγκαλόρ",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "Ινδονησία",
+      "object": "Τζακάρτα",
+      "object_candidates": "Νίκαια, Μέκκα, Ιντιανάπολις, Καλκούτα, Μιλάνο, Γουίντσεστερ, Μοντγκόμερι, Βοστώνη, Γιοκοχάμα, Τζακάρτα",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "Ιταλική Κοινωνική Δημοκρατία",
+      "object": "Ρώμη",
+      "object_candidates": "Οττάβα, Μάιντς, Φοίνιξ, Μπρίσμπεϊν, Αλεξάνδρεια, Παλέρμο, Στοκχόλμη, Κορκ, Ώκλαντ, Ρώμη",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Δυναστεία των Αψβούργων",
+      "object": "Βιέννη",
+      "object_candidates": "Οξφόρδη, Λάκναου, Σεβίλλη, Ζάγκρεμπ, Κολόμπο, Καράτσι, Κολούμπια, Μοντγκόμερι, Αδελαΐδα, Βιέννη",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Πορτογαλία",
+      "object": "Λισαβόνα",
+      "object_candidates": "Γουαδαλαχάρα, Βελιγράδι, Θεσσαλονίκη, Μιλάνο, Έντμοντον, Τάλιν, Τουλούζη, Πρόβιντενς, Τολέδο, Λισαβόνα",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "Βαλεαρίδες Νήσοι",
+      "object": "Πάλμα ντε Μαγιόρκα",
+      "object_candidates": "Κάρλαϊλ, Γούστερ, Αδελαΐδα, Λίμα, Ρίγα, Μόσχα, Λάνσινγκ, Μιλάνο, Κράισττσερτς, Πάλμα ντε Μαγιόρκα",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Μπολόνια",
+      "object": "Μπολόνια",
+      "object_candidates": "Τορίνο, Δελχί, Μπανγκαλόρ, Γουίντσεστερ, Βαρσοβία, Χάλιφαξ, Περθ, Πιερ, Αβάνα, Μπολόνια",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "Κούβα",
+      "object": "Αβάνα",
+      "object_candidates": "Βαβυλώνα, Μόσχα, Σεβίλλη, Βίλνιους, Μπέργκεν, Μπανγκόκ, Βοστώνη, Τσάρλεστον, Ντουνεντίν, Αβάνα",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "Τολέδο",
+      "object": "Τολέδο",
+      "object_candidates": "Άντεν, Μπάρι, Κίελο, Ώστιν, Βιέννη, Μάιντς, Κίνγκστον, Νίκαια, Βαρσοβία, Τολέδο",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "Σιένα",
+      "object": "Σιένα",
+      "object_candidates": "Δρέσδη, Μέμφις, Χάρρισμπεργκ, Μπρίστολ, Τσεννάι, Λέστερ, Γένοβα, Γούστερ, Κέιμπριτζ, Σιένα",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "Κομητεία Χονολουλού",
+      "object": "Χονολουλού",
+      "object_candidates": "Πεκίνο, Βερολίνο, Σαϊέν, Χιροσίμα, Βιέννη, Δρέσδη, Πρόβιντενς, Τίρανα, Ρίτσμοντ, Χονολουλού",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Ρωμαϊκή Αυτοκρατορία",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Βαβυλώνα, Κιότο, Γάνδη, Χονολουλού, Όσλο, Μπόισι, Μπάρι, Τεχεράνη, Βερολίνο, Κωνσταντινούπολη",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Κονέκτικατ",
+      "object": "Χάρτφορντ",
+      "object_candidates": "Ιντιανάπολις, Τζώρτζταουν, Γουαδαλαχάρα, Αθήνα, Μανίλα, Χάρρισμπεργκ, Θεσσαλονίκη, Τζακάρτα, Χαϊντεραμπάντ, Χάρτφορντ",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "Σκωτία",
+      "object": "Εδιμβούργο",
+      "object_candidates": "Ντάργουιν, Βικτωρία Βρετανικής Κολομβίας, Τζακάρτα, Ελσίνκι, Τρέντον, Σεούλ, Παλέρμο, Κίελο, Καράκας, Εδιμβούργο",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "Επαρχία Άγκυρας",
+      "object": "Άγκυρα",
+      "object_candidates": "Πράγα, Σεούλ, Συρακούσες, Τίρανα, Τσεννάι, Ντένβερ, Μπρατισλάβα, Μεδίνα, Βέρνη, Άγκυρα",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Λάτιο",
+      "object": "Ρώμη",
+      "object_candidates": "Κωνσταντινούπολη, Μόναχο, Ρεγγίνα, Αλγέρι, Βουκουρέστι, Σάγκα, Νόριτς, Αλεξάνδρεια, Μεδίνα, Ρώμη",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Λαϊκή Δημοκρατία της Πολωνίας",
+      "object": "Βαρσοβία",
+      "object_candidates": "Βαγδάτη, Ριβερσάιντ, Ντάκα, Άουγκσμπουργκ, Τζάκσον, Καλκούτα, Λιουμπλιάνα, Κίεβο, Τορίνο, Βαρσοβία",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Καντόνι της Μπάζελ-Στατ",
+      "object": "Βασιλεία",
+      "object_candidates": "Χάρρισμπεργκ, Πρόβιντενς, Μόσχα, Καμπέρα, Μινσκ, Δαμασκός, Παλέρμο, Οδησσός, Μουμπάι, Βασιλεία",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "Καλιφόρνια",
+      "object": "Σακραμέντο",
+      "object_candidates": "Γένοβα, Χάλιφαξ, Κωνσταντινούπολη, Γκλόστερ, Μάντισον, Νάσβιλ, Βενετία, Κίεβο, Μπέργκεν, Σακραμέντο",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "Σάλτσμπουργκ",
+      "object": "Σάλτσμπουργκ",
+      "object_candidates": "Τάλιν, Βαλένθια, Λωζάνη, Οδησσός, Ριβερσάιντ, Λάνσινγκ, Τζώρτζταουν, Στρασβούργο, Οξφόρδη, Σάλτσμπουργκ",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "Νομός Κιότο",
+      "object": "Κιότο",
+      "object_candidates": "Σάγκα, Σαϊέν, Ταϊπέι, Βαλένθια, Δρέσδη, Μουμπάι, Βικτωρία Βρετανικής Κολομβίας, Άουγκσμπουργκ, Λάνσινγκ, Κιότο",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "Φλωρεντία",
+      "object": "Φλωρεντία",
+      "object_candidates": "Μπρίσμπεϊν, Σιένα, Χαλέπι, Ντουμπάι, Τζακάρτα, Ντάργουιν, Γουίνιπεγκ, Έντο, Μάντισον, Φλωρεντία",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Ιράκ",
+      "object": "Βαγδάτη",
+      "object_candidates": "Μαϊάμι, Σπρίνγκφιλντ, Μόσχα, Ώστιν, Κολόμπους, Αλγέρι, Οττάβα, Μάιντς, Μπέλφαστ, Βαγδάτη",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Καμπανία Ιταλίας",
+      "object": "Νάπολη",
+      "object_candidates": "Μαϊάμι, Σάγκα, Λούμπλιν, Βαβυλώνα, Άντεν, Νάσβιλ, Βρυξέλλες, Τόκιο, Λιλ, Νάπολη",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Ιαπωνία",
+      "object": "Τόκιο",
+      "object_candidates": "Μπολόνια, Κάιρο, Γκόλγουεϊ, Σάλτσμπουργκ, Χαϊντεραμπάντ, Παρίσι, Χέρφορντ, Αλγέρι, Βαρκελώνη, Τόκιο",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Κομητεία Μαϊάμι-Ντέιντ",
+      "object": "Μαϊάμι",
+      "object_candidates": "Μόναχο, Πρόβιντενς, Κάρντιφ, Μπάρι, Χέρφορντ, Τσεννάι, Βόννη, Χαλέπι, Μπέλφαστ, Μαϊάμι",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "Κέρμαν",
+      "object": "Κέρμαν",
+      "object_candidates": "Μιλάνο, Σπρίνγκφιλντ, Μινσκ, Μαϊάμι, Νίκαια, Αννόβερο, Βίλνιους, Γένοβα, Αβάνα, Κέρμαν",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "Αλπ-Μαριτίμ",
+      "object": "Νίκαια",
+      "object_candidates": "Χονολουλού, Σίδνεϊ, Πρέστον, Τσάρλεστον, Μαϊάμι, Μέμφις, Κέιμπριτζ, Αννάπολις, Τολέδο, Νίκαια",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "Εσθονία",
+      "object": "Τάλιν",
+      "object_candidates": "Φοίνιξ, Μιλάνο, Γουαδαλαχάρα, Ρίτσμοντ, Αβάνα, Σάλεμ, Κίνγκστον, Τζακάρτα, Βηρυτός, Τάλιν",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "Δυτική Αυστραλία",
+      "object": "Περθ",
+      "object_candidates": "Βέρνη, Λάνσινγκ, Ντουνεντίν, Λίμερικ, Λούμπλιν, Μανίλα, Δουβλίνο, Θεσσαλονίκη, Ώκλαντ, Περθ",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "Όμπλαστ του Λβιβ",
+      "object": "Λβιβ",
+      "object_candidates": "Νίκαια, Αδελαΐδα, Τόκιο, Χάρρισμπεργκ, Μπανγκόκ, Γάνδη, Καράτσι, Ναγκόγια, Μοντεβιδέο, Λβιβ",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "Νέα Νότια Ουαλία",
+      "object": "Σίδνεϊ",
+      "object_candidates": "Πρέστον, Σακραμέντο, Πάλμα ντε Μαγιόρκα, Καλκούτα, Πράγα, Χιροσίμα, Βοστώνη, Έξετερ, Χάρτφορντ, Σίδνεϊ",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "κομητεία Ρίβερσαϊτ",
+      "object": "Ριβερσάιντ",
+      "object_candidates": "Μπακού, Ουέστμινστερ, Μπίσμαρκ, Γιοκοχάμα, Άουγκσμπουργκ, Χάρρισμπεργκ, Μάντισον, Σάλτσμπουργκ, Τρέντον, Ριβερσάιντ",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "Βενεζουέλα",
+      "object": "Καράκας",
+      "object_candidates": "Τεχεράνη, Ναϊρόμπι, Αθήνα, Έξετερ, Χόμπαρτ, Αλγέρι, Βρυξέλλες, Λάνσινγκ, Στρασβούργο, Καράκας",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "Μανιτόμπα",
+      "object": "Γουίνιπεγκ",
+      "object_candidates": "Βικτωρία Βρετανικής Κολομβίας, Μπολόνια, Καμπέρα, Τολέδο, Χάρτφορντ, Αννάπολις, Κολόμπο, Τόκιο, Ντάκα, Γουίνιπεγκ",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "Βασίλειο της Ιταλίας",
+      "object": "Τορίνο",
+      "object_candidates": "Σπρίνγκφιλντ, Άγκυρα, Μπρατισλάβα, Κολούμπια, Κορκ, Μπορντώ, Μάιντς, Ρίγα, Μάντσεστερ, Τορίνο",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Λομβαρδία",
+      "object": "Μιλάνο",
+      "object_candidates": "Βαρσοβία, Φλωρεντία, Βελιγράδι, Έντο, Σάλεμ, Μεδίνα, Χαϊντεραμπάντ, Νόριτς, Αδελαΐδα, Μιλάνο",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Ιράν",
+      "object": "Τεχεράνη",
+      "object_candidates": "Στρασβούργο, Βοστώνη, Έντμοντον, Οξφόρδη, Λωζάνη, Μεδίνα, Κωνσταντινούπολη, Χέρφορντ, Έξετερ, Τεχεράνη",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Βασίλειο της Μεγάλης Βρετανίας",
+      "object": "Λονδίνο",
+      "object_candidates": "Τσεννάι, Δουβλίνο, Μιλάνο, Κιότο, Φοίνιξ, Βαλένθια, Μπάρι, Σεούλ, Λίμερικ, Λονδίνο",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "Λιβύη",
+      "object": "Τρίπολη",
+      "object_candidates": "Σόφια, Χιροσίμα, Αλεξάνδρεια, Μπρίσμπεϊν, Σεβίλλη, Ντένβερ, Ιερουσαλήμ, Μεδίνα, Αδελαΐδα, Τρίπολη",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Μοσχοβία",
+      "object": "Μόσχα",
+      "object_candidates": "Ναντσίνγκ, Μπέλφαστ, Μπολόνια, Ρώμη, Βαρκελώνη, Βοστώνη, Στοκχόλμη, Μπορντώ, Μάντσεστερ, Μόσχα",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Επικράτεια Αυστραλιανής Πρωτεύουσας",
+      "object": "Καμπέρα",
+      "object_candidates": "Καζάν, Λβιβ, Τσάρλεστον, Βαγδάτη, Όσλο, Λούμπλιν, Ντουνεντίν, Βερολίνο, Μπανγκαλόρ, Καμπέρα",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Γαλλία του Βισύ",
+      "object": "Παρίσι",
+      "object_candidates": "Ρίτσμοντ, Βικτωρία Βρετανικής Κολομβίας, Βόννη, Σεβίλλη, Κράισττσερτς, Τορίνο, Βαρκελώνη, Πιερ, Ώστιν, Παρίσι",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Κάτω Ρήνος",
+      "object": "Στρασβούργο",
+      "object_candidates": "Μπολόνια, Κίνγκστον, Δουβλίνο, Ντένβερ, Μπανγκαλόρ, Αννόβερο, Κολούμπια, Λισαβόνα, Κίεβο, Στρασβούργο",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Επαρχία Βίλνιους",
+      "object": "Βίλνιους",
+      "object_candidates": "Γερεβάν, Ιντιανάπολις, Μπανγκόκ, Βηρυτός, Έντο, Βαγδάτη, Χάμιλτον, Λέστερ, Μιλάνο, Βίλνιους",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Περιοχή των Βρυξελλών",
+      "object": "Βρυξέλλες",
+      "object_candidates": "Μανίλα, Γένοβα, Κίνγκστον, Σάγκα, Τίρανα, Πρόβιντενς, Εδιμβούργο, Χόμπαρτ, Νάσβιλ, Βρυξέλλες",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Σασκάτσουαν",
+      "object": "Ρεγγίνα",
+      "object_candidates": "Βοστώνη, Πιερ, Γερεβάν, Λονδίνο, Όσλο, Μπολόνια, Νόριτς, Γούστερ, Μαδρίτη, Ρεγγίνα",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "Τεχράν",
+      "object": "Τεχεράνη",
+      "object_candidates": "Μέμφις, Παρίσι, Πράγα, Λωζάνη, Κωνσταντινούπολη, Σάλτσμπουργκ, Μινσκ, Νάσβιλ, Σαράγιεβο, Τεχεράνη",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Εμίλια-Ρομάνια",
+      "object": "Μπολόνια",
+      "object_candidates": "Χονολουλού, Μοντγκόμερι, Μαδρίτη, Ώστιν, Αθήνα, Ώκλαντ, Χαλέπι, Ρίτσμοντ, Βενετία, Μπολόνια",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "Δημοκρατία της Ιρλανδίας",
+      "object": "Δουβλίνο",
+      "object_candidates": "Τουλούζη, Τίρανα, Γάνδη, Σάγκα, Τσάρλεστον, Βρυξέλλες, Κουανγκτσόου, Δρέσδη, Κίελο, Δουβλίνο",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Ουρουγουάη",
+      "object": "Μοντεβιδέο",
+      "object_candidates": "Μπρατισλάβα, Οξφόρδη, Μαϊάμι, Μαδρίτη, Καράτσι, Ρίγα, Φοίνιξ, Παλέρμο, Αννόβερο, Μοντεβιδέο",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "Αχαιμενική Αυτοκρατορία",
+      "object": "Βαβυλώνα",
+      "object_candidates": "Βικτωρία Βρετανικής Κολομβίας, Τορόντο, Κάρλαϊλ, Λισαβόνα, Σπρίνγκφιλντ, Βαρσοβία, Σεβίλλη, Σαράγιεβο, Χαϊντεραμπάντ, Βαβυλώνα",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "Περού",
+      "object": "Λίμα",
+      "object_candidates": "Κολούμπια, Σιάτλ, Νάσβιλ, Ντάργουιν, Λωζάνη, Πιερ, Αννόβερο, Έντο, Ταϊπέι, Λίμα",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "Σρι Λάνκα",
+      "object": "Κολόμπο",
+      "object_candidates": "Κίεβο, Θεσσαλονίκη, Τουλούζη, Δρέσδη, Τορίνο, Νίκαια, Πάλμα ντε Μαγιόρκα, Μινσκ, Σιένα, Κολόμπο",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "Βασίλειο του Ιράκ",
+      "object": "Βαγδάτη",
+      "object_candidates": "Εδιμβούργο, Μπάρι, Χέρφορντ, Πιερ, Σιένα, Ελσίνκι, Φοίνιξ, Χιροσίμα, Κολόμπους, Βαγδάτη",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Συνομόσπονδες Πολιτείες της Αμερικής",
+      "object": "Μοντγκόμερι",
+      "object_candidates": "Μεδίνα, Μουμπάι, Σίδνεϊ, Ντουνεντίν, Ντάργουιν, Σάγκα, Τορίνο, Στοκχόλμη, Μάντσεστερ, Μοντγκόμερι",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Βασίλειο της Σερβίας",
+      "object": "Βελιγράδι",
+      "object_candidates": "Τρίπολη, Σαράγιεβο, Κολόμπο, Κιότο, Γκόλγουεϊ, Βρυξέλλες, Λιουμπλιάνα, Οττάβα, Φλωρεντία, Βελιγράδι",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Κομητεία Ουότερφορντ",
+      "object": "Γουότερφορντ",
+      "object_candidates": "Σάλτσμπουργκ, Κολούμπια, Μοντεβιδέο, Ρώμη, Γκόλγουεϊ, Νάσβιλ, Βερολίνο, Ώκλαντ, Πάλμα ντε Μαγιόρκα, Γουότερφορντ",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "Σερβία και Μαυροβούνιο",
+      "object": "Βελιγράδι",
+      "object_candidates": "Σακραμέντο, Χάλιφαξ, Κάρντιφ, Μπακού, Σεούλ, Μπίσμαρκ, Νάσβιλ, Κέρμαν, Βουδαπέστη, Βελιγράδι",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Ουκρανία",
+      "object": "Κίεβο",
+      "object_candidates": "Λέστερ, Μαϊάμι, Λίμερικ, Νάσβιλ, Ρεγγίνα, Ρίτσμοντ, Ράλεϊ, Τορίνο, Ταϊπέι, Κίεβο",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Βοσνία και Ερζεγοβίνη",
+      "object": "Σαράγιεβο",
+      "object_candidates": "Ουέστμινστερ, Βασιλεία, Μέμφις, Γουαδαλαχάρα, Άντεν, Μάντσεστερ, Ιντιανάπολις, Ριβερσάιντ, Καλκούτα, Σαράγιεβο",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Αρμενία",
+      "object": "Γερεβάν",
+      "object_candidates": "Μπανγκαλόρ, Λίμερικ, Καμπέρα, Τεχεράνη, Λιουμπλιάνα, Οδησσός, Βαλένθια, Χάμιλτον, Ριβερσάιντ, Γερεβάν",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "Χαλιφάτο των Αββασιδών",
+      "object": "Δαμασκός",
+      "object_candidates": "Χάμιλτον, Πρέστον, Κίνγκστον, Μπρατισλάβα, Βέρνη, Τζάκσον, Ελσίνκι, Χονολουλού, Έντο, Δαμασκός",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Χαλίσκο",
+      "object": "Γουαδαλαχάρα",
+      "object_candidates": "Μπέλφαστ, Κουανγκτσόου, Σόφια, Παλέρμο, Ταϊπέι, Ιερουσαλήμ, Μόσχα, Γερεβάν, Βασιλεία, Γουαδαλαχάρα",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "Μπανγκλαντές",
+      "object": "Ντάκα",
+      "object_candidates": "Γουίνιπεγκ, Άμστερνταμ, Τρίπολη, Σεβίλλη, Λέστερ, Γκόλγουεϊ, Μόναχο, Χαλέπι, Πράγα, Ντάκα",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "Αλαμπάμα",
+      "object": "Μοντγκόμερι",
+      "object_candidates": "Κίεβο, Ντουμπάι, Νίκαια, Μπέργκεν, Κολόμπο, Μπακού, Λίμα, Όσλο, Γουαδαλαχάρα, Μοντγκόμερι",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Ιλινόι",
+      "object": "Σπρίνγκφιλντ",
+      "object_candidates": "Σεβίλλη, Γουαδαλαχάρα, Αλεξάνδρεια, Λάνσινγκ, Μοντεβιδέο, Βενετία, Βαρκελώνη, Γουότερφορντ, Χέρφορντ, Σπρίνγκφιλντ",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "Λίνκολνσιρ",
+      "object": "Λίνκολν",
+      "object_candidates": "Κορκ, Καλκούτα, Αννόβερο, Βικτωρία Βρετανικής Κολομβίας, Παλέρμο, Λισαβόνα, Ρώμη, Ιντιανάπολις, Παρίσι, Λίνκολν",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "Ισπανική Αποικιακή Αυτοκρατορία",
+      "object": "Μαδρίτη",
+      "object_candidates": "Μπέλφαστ, Σάλεμ, Κωνσταντινούπολη, Καζάν, Κάρλαϊλ, Μπορντώ, Λωζάνη, Πρέστον, Πάλμα ντε Μαγιόρκα, Μαδρίτη",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Νορ-Πα-ντε-Καλαί",
+      "object": "Λιλ",
+      "object_candidates": "Καζάν, Ναϊρόμπι, Ταϊπέι, Αννόβερο, Μάντσεστερ, Λιουμπλιάνα, Κίνγκστον, Λβιβ, Βαρκελώνη, Λιλ",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "Ουισκόνσιν",
+      "object": "Μάντισον",
+      "object_candidates": "Μπρεστ, Βοστώνη, Άντεν, Ντάκα, Λέστερ, Γιοκοχάμα, Γάνδη, Ρεγγίνα, Μπάρι, Μάντισον",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Σικελία",
+      "object": "Παλέρμο",
+      "object_candidates": "Βαβυλώνα, Έντμοντον, Τόκιο, Βόννη, Σακραμέντο, Μάιντς, Δουβλίνο, Αννόβερο, Αδελαΐδα, Παλέρμο",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Βασίλειο της Ιρλανδίας",
+      "object": "Δουβλίνο",
+      "object_candidates": "Γιοκοχάμα, Τσάρλεστον, Γουίνιπεγκ, Κολούμπια, Ντουνεντίν, Λέστερ, Χονολουλού, Σαντιάγο, Μπόισι, Δουβλίνο",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Φιλιππίνες",
+      "object": "Μανίλα",
+      "object_candidates": "Κολόμπο, Λιλ, Λάνσινγκ, Τολέδο, Οξφόρδη, Σιένα, Τεχεράνη, Στρασβούργο, Δελχί, Μανίλα",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "Βενετική Δημοκρατία",
+      "object": "Βενετία",
+      "object_candidates": "Βιέννη, Ώστιν, Σάγκα, Κωνσταντινούπολη, Καλκούτα, Βόννη, Αλεξάνδρεια, Παλέρμο, Αδελαΐδα, Βενετία",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Κυβερνείο του Χαλεπιού",
+      "object": "Χαλέπι",
+      "object_candidates": "Μπανγκαλόρ, Γούστερ, Πιερ, Γουίνιπεγκ, Κολόμπους, Κολόμπο, Γιοκοχάμα, Βικτωρία Βρετανικής Κολομβίας, Τσάρλεστον, Χαλέπι",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "Κολοράντο",
+      "object": "Ντένβερ",
+      "object_candidates": "Βίλνιους, Γουαδαλαχάρα, Στρασβούργο, Καράτσι, Βουκουρέστι, Κέρμαν, Μοντεβιδέο, Λίμερικ, Ναγκόγια, Ντένβερ",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "Ελλάδα",
+      "object": "Αθήνα",
+      "object_candidates": "Δρέσδη, Μπέλφαστ, Σάλεμ, Ζάγκρεμπ, Πάλμα ντε Μαγιόρκα, Βίλνιους, Σαντιάγο, Ντένβερ, Αννάπολις, Αθήνα",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Ανεξάρτητο Κράτος της Κροατίας",
+      "object": "Ζάγκρεμπ",
+      "object_candidates": "Ώστιν, Μπάρι, Λβιβ, Οξφόρδη, Ελσίνκι, Τεχεράνη, Χέρφορντ, Μοντεβιδέο, Βίλνιους, Ζάγκρεμπ",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Ολλανδία",
+      "object": "Άμστερνταμ",
+      "object_candidates": "Μπορντώ, Σαϊέν, Τρίπολη, Γάνδη, Αλεξάνδρεια, Ταϊπέι, Χέρφορντ, Χόμπαρτ, Λίμα, Άμστερνταμ",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Αριζόνα",
+      "object": "Φοίνιξ",
+      "object_candidates": "Δελχί, Μπορντώ, Μοντγκόμερι, Γάνδη, Βαβυλώνα, Σίδνεϊ, Βουδαπέστη, Χάμιλτον, Παρίσι, Φοίνιξ",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "Ιταλία",
+      "object": "Ρώμη",
+      "object_candidates": "Κουανγκτσόου, Κράισττσερτς, Γιοκοχάμα, Βίλνιους, Τρίπολη, Καζάν, Αδελαΐδα, Καράτσι, Βουκουρέστι, Ρώμη",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Βασίλειο της Γιουγκοσλαβίας",
+      "object": "Βελιγράδι",
+      "object_candidates": "Βίλνιους, Όσλο, Κάρλαϊλ, Αδελαΐδα, Κολόμπους, Αννόβερο, Γκαπ, Μινσκ, Μαϊάμι, Βελιγράδι",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Ηνωμένο Βασίλειο",
+      "object": "Λονδίνο",
+      "object_candidates": "Δρέσδη, Χιροσίμα, Αννόβερο, Ναγκόγια, Λιουμπλιάνα, Ρίγα, Μόναχο, Βόννη, Βενετία, Λονδίνο",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "Λαϊκή Σοσιαλιστική Δημοκρατία της Αλβανίας",
+      "object": "Τίρανα",
+      "object_candidates": "Λιουμπλιάνα, Τόκιο, Σιένα, Σίδνεϊ, Αβάνα, Ώκλαντ, Ριβερσάιντ, Μαϊάμι, Κοπεγχάγη, Τίρανα",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Σερβία",
+      "object": "Βελιγράδι",
+      "object_candidates": "Αδελαΐδα, Κολούμπια, Λισαβόνα, Κίνγκστον, Ναγκόγια, Φλωρεντία, Γκαπ, Βουδαπέστη, Κέρμαν, Βελιγράδι",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Βασίλειο της Λιβύης",
+      "object": "Τρίπολη",
+      "object_candidates": "Κίνγκστον, Χέρφορντ, Τζακάρτα, Άουγκσμπουργκ, Γκαπ, Βελιγράδι, Μινσκ, Αννόβερο, Βιέννη, Τρίπολη",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Καναδάς",
+      "object": "Οττάβα",
+      "object_candidates": "Ζάγκρεμπ, Ναγκόγια, Βαρκελώνη, Μπρίστολ, Πρόβιντενς, Σόφια, Μαδρίτη, Μπρατισλάβα, Μπανγκόκ, Οττάβα",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "Καναγκάβα",
+      "object": "Γιοκοχάμα",
+      "object_candidates": "Δαμασκός, Μπάρι, Αννάπολις, Μουμπάι, Πεκίνο, Τζακάρτα, Λισαβόνα, Μπόισι, Γκαπ, Γιοκοχάμα",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "Περιφέρεια Κεντρικής Βοημίας",
+      "object": "Πράγα",
+      "object_candidates": "Κέρμαν, Τρέντον, Κίελο, Ιερουσαλήμ, Καράτσι, Ναϊρόμπι, Βαβυλώνα, Τόκιο, Κράισττσερτς, Πράγα",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Γαλλία",
+      "object": "Παρίσι",
+      "object_candidates": "Μόσχα, Πεκίνο, Σιάτλ, Λβιβ, Μάντισον, Βαρσοβία, Χάμιλτον, Ριβερσάιντ, Κουανγκτσόου, Παρίσι",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Βουλγαρία",
+      "object": "Σόφια",
+      "object_candidates": "Κίεβο, Σακραμέντο, Ρώμη, Κολόμπους, Ντουμπάι, Τρέντον, Αλεξάνδρεια, Κοπεγχάγη, Άμστερνταμ, Σόφια",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Ντέβον",
+      "object": "Έξετερ",
+      "object_candidates": "Συρακούσες, Ιντιανάπολις, Καμπούλ, Περθ, Γκλόστερ, Κέρμαν, Πρόβιντενς, Ρίτσμοντ, Παρίσι, Έξετερ",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "Περιφέρεια Κεντρικής Μακεδονίας",
+      "object": "Θεσσαλονίκη",
+      "object_candidates": "Μπέλφαστ, Τζάκσον, Μπορντώ, Τορόντο, Βαβυλώνα, Λιλ, Γερεβάν, Γκαπ, Καράτσι, Θεσσαλονίκη",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "Εμιράτο της Σικελίας",
+      "object": "Παλέρμο",
+      "object_candidates": "Γουίντσεστερ, Αννάπολις, Κόνκορντ, Βαρσοβία, Σαράγιεβο, Γουίνιπεγκ, Κέρμαν, Μέμφις, Έντμοντον, Παλέρμο",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Γουιάνα",
+      "object": "Τζώρτζταουν",
+      "object_candidates": "Αλεξάνδρεια, Σακραμέντο, Μόναχο, Σαντιάγο, Τόκιο, Μινσκ, Συρακούσες, Μάντισον, Αδελαΐδα, Τζώρτζταουν",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "Βασίλειο της Ουγγαρίας",
+      "object": "Βουδαπέστη",
+      "object_candidates": "Μέκκα, Ράλεϊ, Κίνγκστον, Βέρνη, Σακραμέντο, Λάκναου, Τεχεράνη, Ελσίνκι, Αθήνα, Βουδαπέστη",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Σαξονία",
+      "object": "Δρέσδη",
+      "object_candidates": "Γουίνιπεγκ, Μπόισι, Χαϊντεραμπάντ, Κίνγκστον, Βέρνη, Βενετία, Χάρρισμπεργκ, Πιερ, Σεβίλλη, Δρέσδη",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "Δυναστεία Μινγκ",
+      "object": "Ναντσίνγκ",
+      "object_candidates": "Τεχεράνη, Μπάρι, Λονδίνο, Σιάτλ, Τορόντο, Λιουμπλιάνα, Χέρφορντ, Βρυξέλλες, Κοπεγχάγη, Ναντσίνγκ",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "Επαρχία της Μέκκας",
+      "object": "Μέκκα",
+      "object_candidates": "Τόκιο, Ναϊρόμπι, Έντο, Μπέλφαστ, Γουαδαλαχάρα, Φλωρεντία, Ρίγα, Μπακού, Τουλούζη, Μέκκα",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "Εγιαλέτ της Αιγύπτου",
+      "object": "Κάιρο",
+      "object_candidates": "Κολόμπους, Βουκουρέστι, Στρασβούργο, Τολέδο, Κολόμπο, Ντάργουιν, Χάλιφαξ, Άντεν, Μπρεστ, Κάιρο",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Βασίλειο της Πολωνίας (1815-1915)",
+      "object": "Βαρσοβία",
+      "object_candidates": "Μπρεστ, Φοίνιξ, Γιοκοχάμα, Βαβυλώνα, Κέρμαν, Μάντσεστερ, Χάρρισμπεργκ, Καμπέρα, Σόφια, Βαρσοβία",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Βόρεια Ιρλανδία",
+      "object": "Μπέλφαστ",
+      "object_candidates": "Ναντσίνγκ, Συρακούσες, Ώστιν, Περθ, Κέιμπριτζ, Σάγκα, Πρέστον, Γκλόστερ, Μανίλα, Μπέλφαστ",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "Ισπανία",
+      "object": "Μαδρίτη",
+      "object_candidates": "Ζάγκρεμπ, Ώκλαντ, Βαβυλώνα, Άμστερνταμ, Λιλ, Βαρσοβία, Φοίνιξ, Αννόβερο, Κάρντιφ, Μαδρίτη",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Μητροπολιτική Γαλλία",
+      "object": "Παρίσι",
+      "object_candidates": "Κίεβο, Πάλμα ντε Μαγιόρκα, Μεδίνα, Φλωρεντία, Λίμα, Γένοβα, Καζάν, Μπανγκαλόρ, Σαράγιεβο, Παρίσι",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Δημοκρατία του Ταταρστάν",
+      "object": "Καζάν",
+      "object_candidates": "Κέρμαν, Γερεβάν, Τάλιν, Σιάτλ, Ρίτσμοντ, Βαρσοβία, Γκόλγουεϊ, Τίρανα, Ναϊρόμπι, Καζάν",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "Βόμπλαστ του Μπρεστ",
+      "object": "Μπρεστ",
+      "object_candidates": "Θεσσαλονίκη, Κράισττσερτς, Σιάτλ, Ταϊπέι, Μπανγκόκ, Τρέντον, Νόριτς, Λούμπλιν, Πράγα, Μπρεστ",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "Παλαιστίνη υπό Βρετανική Εντολή",
+      "object": "Ιερουσαλήμ",
+      "object_candidates": "Πράγα, Κιότο, Ρώμη, Μπρίστολ, Πρέστον, Λονδίνο, Αβάνα, Σάλεμ, Σίδνεϊ, Ιερουσαλήμ",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Παλέρμο",
+      "object": "Παλέρμο",
+      "object_candidates": "Καράτσι, Σάλεμ, Σάλτσμπουργκ, Τουλούζη, Γουαδαλαχάρα, Γιοκοχάμα, Βελιγράδι, Ντάκα, Ιερουσαλήμ, Παλέρμο",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Βασίλειο της Βαυαρίας",
+      "object": "Μόναχο",
+      "object_candidates": "Καμπέρα, Έντο, Γκλόστερ, Λούμπλιν, Ρεγγίνα, Κέιμπριτζ, Μανίλα, Λάκναου, Βασιλεία, Μόναχο",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Ταμίλ Ναντού",
+      "object": "Τσεννάι",
+      "object_candidates": "Έντμοντον, Βαγδάτη, Ντουμπάι, Μοντεβιδέο, Ναϊρόμπι, Βαρκελώνη, Ντουνεντίν, Δουβλίνο, Μπολόνια, Τσεννάι",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "Λευκορωσία",
+      "object": "Μινσκ",
+      "object_candidates": "Ρώμη, Μπορντώ, Μπέλφαστ, Μαϊάμι, Άμστερνταμ, Λισαβόνα, Λάκναου, Ρίγα, Βαγδάτη, Μινσκ",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Γκλόστερσιρ",
+      "object": "Γκλόστερ",
+      "object_candidates": "Μουμπάι, Ρίγα, Καλκούτα, Χάρρισμπεργκ, Κάρντιφ, Τσεννάι, Κολόμπους, Μαϊάμι, Κάιρο, Γκλόστερ",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "Καντόνι του Βω",
+      "object": "Λωζάνη",
+      "object_candidates": "Γιοκοχάμα, Πρόβιντενς, Ρεγγίνα, Βαρσοβία, Βικτωρία Βρετανικής Κολομβίας, Σιάτλ, Τρέντον, Ρίτσμοντ, Χιροσίμα, Λωζάνη",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "Ευρωπαϊκή Ένωση",
+      "object": "Στρασβούργο",
+      "object_candidates": "Μινσκ, Μπορντώ, Ναϊρόμπι, Άουγκσμπουργκ, Μεδίνα, Άμστερνταμ, Καζάν, Μανίλα, Λάνσινγκ, Στρασβούργο",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Ούταρ Πραντές",
+      "object": "Λάκναου",
+      "object_candidates": "Ώστιν, Ναϊρόμπι, Τολέδο, Σπρίνγκφιλντ, Μόναχο, Τίρανα, Μουμπάι, Πρέστον, Εδιμβούργο, Λάκναου",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "Σερβική Δημοκρατία της Βοσνίας",
+      "object": "Σαράγιεβο",
+      "object_candidates": "Βρυξέλλες, Νάσβιλ, Λισαβόνα, Λάκναου, Μπανγκαλόρ, Ιερουσαλήμ, Μινσκ, Βηρυτός, Σιάτλ, Σαράγιεβο",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Καντόνιο του Σαράγιεβο",
+      "object": "Σαράγιεβο",
+      "object_candidates": "Τρέντον, Λίνκολν, Βελιγράδι, Περθ, Σαντιάγο, Βενετία, Σπρίνγκφιλντ, Μάντσεστερ, Νίκαια, Σαράγιεβο",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Ουγγρική Σοβιετική Δημοκρατία",
+      "object": "Βουδαπέστη",
+      "object_candidates": "Καμπούλ, Κορκ, Τόκιο, Ναντσίνγκ, Συρακούσες, Καλκούτα, Καράτσι, Τρέντον, Βενετία, Βουδαπέστη",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Βασίλειο του Αφγανιστάν",
+      "object": "Καμπούλ",
+      "object_candidates": "Σιάτλ, Τζάκσον, Λούμπλιν, Μπανγκαλόρ, Μπανγκόκ, Πιερ, Πεκίνο, Βοστώνη, Χόμπαρτ, Καμπούλ",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Βοεβοδάτο του Λούμπλιν",
+      "object": "Λούμπλιν",
+      "object_candidates": "Βαβυλώνα, Μπρίστολ, Κόνκορντ, Γερεβάν, Βρυξέλλες, Μόσχα, Κολόμπους, Βηρυτός, Βέρνη, Λούμπλιν",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "Βιρτζίνια",
+      "object": "Ρίτσμοντ",
+      "object_candidates": "Κέρμαν, Γερεβάν, Κράισττσερτς, Τίρανα, Βηρυτός, Τσάρλεστον, Κολόμπους, Τολέδο, Τρίπολη, Ρίτσμοντ",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "Βασίλειο της Αγγλίας",
+      "object": "Γουίντσεστερ",
+      "object_candidates": "Χαλέπι, Κίελο, Παλέρμο, Κέιμπριτζ, Κόνκορντ, Σαϊέν, Χάμιλτον, Άμστερνταμ, Ντουνεντίν, Γουίντσεστερ",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Επαρχία Μαδίνα",
+      "object": "Μεδίνα",
+      "object_candidates": "Μπρεστ, Σάλτσμπουργκ, Χαϊντεραμπάντ, Καζάν, Λβιβ, Σπρίνγκφιλντ, Μπρατισλάβα, Δουβλίνο, Βενετία, Μεδίνα",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Δήμος της Στοκχόλμης",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Νόριτς, Ζάγκρεμπ, Βιέννη, Χαϊντεραμπάντ, Καλκούτα, Μπρίστολ, Όσλο, Τζακάρτα, Τολέδο, Στοκχόλμη",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Σοβιετική Σοσιαλιστική Δημοκρατία του Αζερμπαϊτζάν",
+      "object": "Μπακού",
+      "object_candidates": "Βίλνιους, Τσάρλεστον, Κίνγκστον, Γουότερφορντ, Ζάγκρεμπ, Μέκκα, Βαβυλώνα, Λάκναου, Μπανγκαλόρ, Μπακού",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Βασίλειο της Ελλάδας",
+      "object": "Αθήνα",
+      "object_candidates": "Δαμασκός, Τουλούζη, Τζώρτζταουν, Λωζάνη, Μπορντώ, Λέστερ, Καράκας, Μπρίστολ, Κοπεγχάγη, Αθήνα",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Νότια Κορέα",
+      "object": "Σεούλ",
+      "object_candidates": "Βαρκελώνη, Βηρυτός, Ράλεϊ, Γουότερφορντ, Μπακού, Βρυξέλλες, Άγκυρα, Ιερουσαλήμ, Πάλμα ντε Μαγιόρκα, Σεούλ",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Κυρίαρχο Στρατιωτικό Τάγμα της Μάλτας",
+      "object": "Ρώμη",
+      "object_candidates": "Βηρυτός, Μπέλφαστ, Αννάπολις, Οξφόρδη, Μαδρίτη, Ναντσίνγκ, Βελιγράδι, Μπρίστολ, Μπίσμαρκ, Ρώμη",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Κάμπρια",
+      "object": "Κάρλαϊλ",
+      "object_candidates": "Σαντιάγο, Νάσβιλ, Πρόβιντενς, Μεδίνα, Δαμασκός, Βερολίνο, Έξετερ, Βαβυλώνα, Κολόμπους, Κάρλαϊλ",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "Κάτω Σαξονία",
+      "object": "Αννόβερο",
+      "object_candidates": "Συρακούσες, Κίεβο, Χιροσίμα, Σάλεμ, Γουαδαλαχάρα, Σαράγιεβο, Μπακού, Γκαπ, Βασιλεία, Αννόβερο",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "Βασίλειο της Αγγλίας",
+      "object": "Ουέστμινστερ",
+      "object_candidates": "Κολόμπο, Κίεβο, Σαντιάγο, Τζάκσον, Μάντισον, Τουλούζη, Μοντεβιδέο, Οδησσός, Κίελο, Ουέστμινστερ",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "Τορίνο",
+      "object": "Τορίνο",
+      "object_candidates": "Λονδίνο, Κοπεγχάγη, Χάλιφαξ, Τάλιν, Γούστερ, Ώκλαντ, Ντένβερ, Λίμα, Καμπούλ, Τορίνο",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Βόρεια Καρολίνα",
+      "object": "Ράλεϊ",
+      "object_candidates": "Μάντισον, Ώστιν, Σαϊέν, Κολόμπους, Κράισττσερτς, Ντουμπάι, Βηρυτός, Βέρνη, Σαντιάγο, Ράλεϊ",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "Βόρεια Επικράτεια",
+      "object": "Ντάργουιν",
+      "object_candidates": "Μπρίσμπεϊν, Βέρνη, Έξετερ, Μαδρίτη, Ώκλαντ, Νάσβιλ, Γιοκοχάμα, Χόμπαρτ, Βρυξέλλες, Ντάργουιν",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "Βασίλειο του Αννόβερου",
+      "object": "Αννόβερο",
+      "object_candidates": "Αδελαΐδα, Λονδίνο, Κουανγκτσόου, Οττάβα, Μινσκ, Λίμα, Μανίλα, Γένοβα, Πρόβιντενς, Αννόβερο",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "Χόρνταλαντ",
+      "object": "Μπέργκεν",
+      "object_candidates": "Μπίσμαρκ, Κάρλαϊλ, Βουδαπέστη, Καζάν, Σπρίνγκφιλντ, Τόκιο, Μοντγκόμερι, Βικτωρία Βρετανικής Κολομβίας, Ντάργουιν, Μπέργκεν",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "Νότια Ντακότα",
+      "object": "Πιερ",
+      "object_candidates": "Οδησσός, Σαϊέν, Λισαβόνα, Οττάβα, Γούστερ, Ζάγκρεμπ, Λίνκολν, Μπολόνια, Αννόβερο, Πιερ",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "Αλσατία",
+      "object": "Στρασβούργο",
+      "object_candidates": "Μπίσμαρκ, Λβιβ, Κιότο, Άμστερνταμ, Γκλόστερ, Μιλάνο, Σακραμέντο, Οξφόρδη, Γουίντσεστερ, Στρασβούργο",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Οντάριο",
+      "object": "Τορόντο",
+      "object_candidates": "Μοντεβιδέο, Μπρίσμπεϊν, Κίνγκστον, Ουέστμινστερ, Γκόλγουεϊ, Βαλένθια, Πράγα, Έξετερ, Σίδνεϊ, Τορόντο",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "Μασαχουσέτη",
+      "object": "Βοστώνη",
+      "object_candidates": "Ριβερσάιντ, Ντουνεντίν, Έντο, Γουότερφορντ, Τουλούζη, Γκλόστερ, Παλέρμο, Ντένβερ, Ναντσίνγκ, Βοστώνη",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "Βασίλειο της Βουλγαρίας",
+      "object": "Σόφια",
+      "object_candidates": "Κίνγκστον, Βαρκελώνη, Γουίντσεστερ, Βρυξέλλες, Κάιρο, Τορίνο, Ναϊρόμπι, Πρόβιντενς, Πεκίνο, Σόφια",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Νάπολη",
+      "object": "Νάπολη",
+      "object_candidates": "Μπακού, Χονολουλού, Αλγέρι, Ρώμη, Κράισττσερτς, Μουμπάι, Σάλεμ, Ρίτσμοντ, Μπέργκεν, Νάπολη",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Ρουμανία",
+      "object": "Βουκουρέστι",
+      "object_candidates": "Παλέρμο, Λούμπλιν, Πεκίνο, Άουγκσμπουργκ, Τρέντον, Χάμιλτον, Τζακάρτα, Μέκκα, Μπρατισλάβα, Βουκουρέστι",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "Ελβετία",
+      "object": "Βέρνη",
+      "object_candidates": "Βικτωρία Βρετανικής Κολομβίας, Κέρμαν, Κορκ, Ιντιανάπολις, Πάλμα ντε Μαγιόρκα, Γκόλγουεϊ, Μέκκα, Ιερουσαλήμ, Λωζάνη, Βέρνη",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "Αυστρία",
+      "object": "Βιέννη",
+      "object_candidates": "Ρίγα, Κάρντιφ, Ιντιανάπολις, Λέστερ, Έντο, Γουίνιπεγκ, Λιλ, Λισαβόνα, Μπάρι, Βιέννη",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Σλοβακία",
+      "object": "Μπρατισλάβα",
+      "object_candidates": "Βενετία, Γκόλγουεϊ, Κολόμπο, Πάλμα ντε Μαγιόρκα, Σπρίνγκφιλντ, Ταϊπέι, Τζάκσον, Σακραμέντο, Γκαπ, Μπρατισλάβα",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "Αγγλία",
+      "object": "Λονδίνο",
+      "object_candidates": "Μιλάνο, Τορόντο, Τολέδο, Πρέστον, Κόνκορντ, Νάπολη, Γούστερ, Βιέννη, Μάιντς, Λονδίνο",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Αίγυπτος",
+      "object": "Κάιρο",
+      "object_candidates": "Γιοκοχάμα, Καλκούτα, Βουδαπέστη, Ντάκα, Τρίπολη, Μπακού, Χάλιφαξ, Μουμπάι, Μπόισι, Κάιρο",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Ουούσιμαα",
+      "object": "Ελσίνκι",
+      "object_candidates": "Βαβυλώνα, Γένοβα, Οδησσός, Άμστερνταμ, Λάκναου, Μπανγκόκ, Κοπεγχάγη, Ρώμη, Τορίνο, Ελσίνκι",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Λανκασάιρ",
+      "object": "Πρέστον",
+      "object_candidates": "Μπορντώ, Χάμιλτον, Δρέσδη, Γκόλγουεϊ, Θεσσαλονίκη, Μπόισι, Καράκας, Αδελαΐδα, Λισαβόνα, Πρέστον",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "Χιροσίμα (νομός)",
+      "object": "Χιροσίμα",
+      "object_candidates": "Κράισττσερτς, Όσλο, Σιάτλ, Βέρνη, Ναντσίνγκ, Βερολίνο, Λιουμπλιάνα, Βουκουρέστι, Σακραμέντο, Χιροσίμα",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "Αγία Ρωμαϊκή Αυτοκρατορία",
+      "object": "Βιέννη",
+      "object_candidates": "Ρεγγίνα, Γουότερφορντ, Μπίσμαρκ, Μαδρίτη, Βενετία, Ώκλαντ, Παρίσι, Καλκούτα, Καμπούλ, Βιέννη",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Ηνωμένο Βασίλειο της Μεγάλης Βρετανίας και Ιρλανδίας",
+      "object": "Λονδίνο",
+      "object_candidates": "Άντεν, Τεχεράνη, Τρίπολη, Σεούλ, Γουίντσεστερ, Βοστώνη, Αδελαΐδα, Τορόντο, Μπρίστολ, Λονδίνο",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ναζιστική Γερμανία",
+      "object": "Βερολίνο",
+      "object_candidates": "Γερεβάν, Τίρανα, Οξφόρδη, Μπέλφαστ, Γιοκοχάμα, Σεβίλλη, Βενετία, Κάρλαϊλ, Τρίπολη, Βερολίνο",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Συρακούσες",
+      "object": "Συρακούσες",
+      "object_candidates": "Ναϊρόμπι, Δουβλίνο, Γκαπ, Κίεβο, Ναντσίνγκ, Γιοκοχάμα, Ράλεϊ, Κόνκορντ, Μαϊάμι, Συρακούσες",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "Ρωσική Σοβιετική Ομοσπονδιακή Σοσιαλιστική Δημοκρατία",
+      "object": "Μόσχα",
+      "object_candidates": "Νάσβιλ, Τάλιν, Λιουμπλιάνα, Πεκίνο, Ντένβερ, Εδιμβούργο, Μάιντς, Κολούμπια, Κράισττσερτς, Μόσχα",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Ουαϊόμινγκ",
+      "object": "Σαϊέν",
+      "object_candidates": "Γουαδαλαχάρα, Γκαπ, Ελσίνκι, Τσάρλεστον, Χέρφορντ, Στοκχόλμη, Λάκναου, Κίεβο, Κίελο, Σαϊέν",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "Σοβιετική Σοσιαλιστική Δημοκρατία της Ουκρανίας",
+      "object": "Κίεβο",
+      "object_candidates": "Μέμφις, Ντουμπάι, Γάνδη, Οδησσός, Μάντισον, Κολούμπια, Μπέλφαστ, Ντένβερ, Ρίγα, Κίεβο",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Βυζαντινή Αυτοκρατορία",
+      "object": "Κωνσταντινούπολη",
+      "object_candidates": "Κέιμπριτζ, Τσεννάι, Μόναχο, Νίκαια, Μοντγκόμερι, Μέκκα, Ντένβερ, Κολόμπο, Κράισττσερτς, Κωνσταντινούπολη",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Χαλιφάτο των Ομεϋαδών",
+      "object": "Δαμασκός",
+      "object_candidates": "Μπάρι, Ντάργουιν, Ώκλαντ, Σεβίλλη, Ντουνεντίν, Παλέρμο, Κάρλαϊλ, Κόνκορντ, Μπέλφαστ, Δαμασκός",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Ταϊλάνδη",
+      "object": "Μπανγκόκ",
+      "object_candidates": "Μάντισον, Λάκναου, Μέμφις, Ελσίνκι, Λβιβ, Ριβερσάιντ, Καμπούλ, Νάπολη, Σόφια, Μπανγκόκ",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "Άντρα Πραντές",
+      "object": "Χαϊντεραμπάντ",
+      "object_candidates": "Σαϊέν, Χιροσίμα, Βέρνη, Ντένβερ, Βαβυλώνα, Δαμασκός, Καλκούτα, Μόναχο, Τουλούζη, Χαϊντεραμπάντ",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Νορβηγία",
+      "object": "Όσλο",
+      "object_candidates": "Έντο, Ντάργουιν, Βαρσοβία, Μάντισον, Κέιμπριτζ, Μέκκα, Έντμοντον, Πεκίνο, Βοστώνη, Όσλο",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Ρηνανία-Παλατινάτο",
+      "object": "Μάιντς",
+      "object_candidates": "Λάνσινγκ, Σίδνεϊ, Γουαδαλαχάρα, Λούμπλιν, Μεδίνα, Άμστερνταμ, Λβιβ, Μπέλφαστ, Μπολόνια, Μάιντς",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "Τουρκία",
+      "object": "Άγκυρα",
+      "object_candidates": "Ναϊρόμπι, Θεσσαλονίκη, Βοστώνη, Μπανγκόκ, Έντμοντον, Χάμιλτον, Τουλούζη, Μάιντς, Κέιμπριτζ, Άγκυρα",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Ριφ Ντιμάσκ",
+      "object": "Δαμασκός",
+      "object_candidates": "Βαρκελώνη, Κόνκορντ, Τόκιο, Νίκαια, Μπρατισλάβα, Ιερουσαλήμ, Σαντιάγο, Λίμερικ, Πάλμα ντε Μαγιόρκα, Δαμασκός",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Σουαβία (διοικητική περιφέρεια)",
+      "object": "Άουγκσμπουργκ",
+      "object_candidates": "Λάκναου, Μοντεβιδέο, Χαλέπι, Γουαδαλαχάρα, Μέμφις, Λονδίνο, Εδιμβούργο, Νάσβιλ, Μπρεστ, Άουγκσμπουργκ",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "Κατοχή της Ιαπωνίας",
+      "object": "Τόκιο",
+      "object_candidates": "Βίλνιους, Μπέργκεν, Άγκυρα, Μόσχα, Δουβλίνο, Πράγα, Γάνδη, Γιοκοχάμα, Γένοβα, Τόκιο",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Ρόουντ Άιλαντ",
+      "object": "Πρόβιντενς",
+      "object_candidates": "Λωζάνη, Πιερ, Δρέσδη, Μινσκ, Λάνσινγκ, Τζάκσον, Κολόμπο, Έντο, Τάλιν, Πρόβιντενς",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "Άινταχο",
+      "object": "Μπόισι",
+      "object_candidates": "Χάμιλτον, Μπακού, Θεσσαλονίκη, Μανίλα, Σαϊέν, Κάρντιφ, Μεδίνα, Τρίπολη, Γουότερφορντ, Μπόισι",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "Κροατία",
+      "object": "Ζάγκρεμπ",
+      "object_candidates": "Γένοβα, Μπρεστ, Μουμπάι, Οξφόρδη, Χέρφορντ, Έντο, Στρασβούργο, Ελσίνκι, Βιέννη, Ζάγκρεμπ",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Κομητεία Κορκ",
+      "object": "Κορκ",
+      "object_candidates": "Τόκιο, Ντάργουιν, Έξετερ, Περθ, Καλκούτα, Κάρντιφ, Βίλνιους, Ράλεϊ, Σαϊέν, Κορκ",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "Βενετία",
+      "object": "Βενετία",
+      "object_candidates": "Βίλνιους, Κέιμπριτζ, Καμπούλ, Συρακούσες, Γουαδαλαχάρα, Σιένα, Τρίπολη, Χάλιφαξ, Σόφια, Βενετία",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Ουέσσεξ",
+      "object": "Γουίντσεστερ",
+      "object_candidates": "Άουγκσμπουργκ, Βέρνη, Στρασβούργο, Λάνσινγκ, Κιότο, Γκόλγουεϊ, Γούστερ, Κάιρο, Ρίγα, Γουίντσεστερ",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Ρωμαϊκή Αυτοκρατορία",
+      "object": "Ρώμη",
+      "object_candidates": "Έντο, Βηρυτός, Χάμιλτον, Βελιγράδι, Γκαπ, Τεχεράνη, Κοπεγχάγη, Καλκούτα, Μπόισι, Ρώμη",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Αλγερία",
+      "object": "Αλγέρι",
+      "object_candidates": "Τόκιο, Καμπούλ, Ντένβερ, Εδιμβούργο, Μοντεβιδέο, Ρώμη, Γούστερ, Λούμπλιν, Μέκκα, Αλγέρι",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Βρετανική Κολομβία",
+      "object": "Βικτωρία Βρετανικής Κολομβίας",
+      "object_candidates": "Παρίσι, Ελσίνκι, Καμπέρα, Μπανγκόκ, Κάρντιφ, Τουλούζη, Γουίντσεστερ, Μόναχο, Οδησσός, Βικτωρία Βρετανικής Κολομβίας",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "Δυτική Βεγγάλη",
+      "object": "Καλκούτα",
+      "object_candidates": "Βίλνιους, Ντουμπάι, Μουμπάι, Οδησσός, Συρακούσες, Ρίτσμοντ, Δουβλίνο, Τζώρτζταουν, Χάρρισμπεργκ, Καλκούτα",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "Βασίλειο της Βοημίας",
+      "object": "Πράγα",
+      "object_candidates": "Μαϊάμι, Πιερ, Σακραμέντο, Σαντιάγο, Σπρίνγκφιλντ, Στρασβούργο, Πρέστον, Πρόβιντενς, Βηρυτός, Πράγα",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Όμπλαστ της Μόσχας",
+      "object": "Μόσχα",
+      "object_candidates": "Σαντιάγο, Καμπέρα, Μόναχο, Λισαβόνα, Ντουνεντίν, Τάλιν, Οττάβα, Γερεβάν, Συρακούσες, Μόσχα",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Λίβανος",
+      "object": "Βηρυτός",
+      "object_candidates": "Θεσσαλονίκη, Μινσκ, Τζώρτζταουν, Ρεγγίνα, Τίρανα, Ντάργουιν, Οττάβα, Βουκουρέστι, Βαβυλώνα, Βηρυτός",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "Λετονία",
+      "object": "Ρίγα",
+      "object_candidates": "Χάμιλτον, Σίδνεϊ, Βέρνη, Βόννη, Αδελαΐδα, Τίρανα, Τσάρλεστον, Παρίσι, Δουβλίνο, Ρίγα",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "Ιαπωνική Αυτοκρατορία",
+      "object": "Τόκιο",
+      "object_candidates": "Σάλτσμπουργκ, Κέιμπριτζ, Γένοβα, Χαϊντεραμπάντ, Λβιβ, Γκόλγουεϊ, Μπορντώ, Τάλιν, Άντεν, Τόκιο",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Ουαλία",
+      "object": "Κάρντιφ",
+      "object_candidates": "Ρώμη, Νόριτς, Οξφόρδη, Καζάν, Κορκ, Χονολουλού, Μπέλφαστ, Λιλ, Λάνσινγκ, Κάρντιφ",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "Σουλτανάτο του Δελχί",
+      "object": "Δελχί",
+      "object_candidates": "Βιέννη, Σαράγιεβο, Ναγκόγια, Οξφόρδη, Αβάνα, Λίνκολν, Ράλεϊ, Μαϊάμι, Χιροσίμα, Δελχί",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "Λαϊκή Δημοκρατία του Αφγανιστάν",
+      "object": "Καμπούλ",
+      "object_candidates": "Βέρνη, Γένοβα, Μουμπάι, Αδελαΐδα, Μπέργκεν, Αλγέρι, Λβιβ, Λίμερικ, Τορίνο, Καμπούλ",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Πολωνία",
+      "object": "Βαρσοβία",
+      "object_candidates": "Μάντσεστερ, Ελσίνκι, Βουκουρέστι, Ράλεϊ, Τσάρλεστον, Περθ, Κάρντιφ, Ώκλαντ, Μεδίνα, Βαρσοβία",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Δυναστεία των Κατζάρων",
+      "object": "Τεχεράνη",
+      "object_candidates": "Σεβίλλη, Κέιμπριτζ, Αννόβερο, Κολόμπους, Βασιλεία, Γουαδαλαχάρα, Άμστερνταμ, Αλεξάνδρεια, Σακραμέντο, Τεχεράνη",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Χαλιφάτο των Αββασιδών",
+      "object": "Βαγδάτη",
+      "object_candidates": "Κάρλαϊλ, Μπέλφαστ, Παλέρμο, Φλωρεντία, Λιλ, Χόμπαρτ, Μάντσεστερ, Κιότο, Ναντσίνγκ, Βαγδάτη",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Σιντ",
+      "object": "Καράτσι",
+      "object_candidates": "Μινσκ, Σάλεμ, Ρώμη, Βαλένθια, Βερολίνο, Νόριτς, Χονολουλού, Κοπεγχάγη, Μπόισι, Καράτσι",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "Ακέρσους",
+      "object": "Όσλο",
+      "object_candidates": "Τορόντο, Σεβίλλη, Τρέντον, Λίμερικ, Σαϊέν, Μέμφις, Ντένβερ, Περθ, Τσάρλεστον, Όσλο",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Λαοκρατική Δημοκρατία της Υεμένης",
+      "object": "Άντεν",
+      "object_candidates": "Τόκιο, Στρασβούργο, Αβάνα, Δρέσδη, Ντένβερ, Μέκκα, Νίκαια, Λάνσινγκ, Τζώρτζταουν, Άντεν",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "Νέα Ακουιτανία",
+      "object": "Μπορντώ",
+      "object_candidates": "Τσάρλεστον, Βερολίνο, Ώκλαντ, Γερεβάν, Κάιρο, Καζάν, Μάντσεστερ, Στρασβούργο, Βαβυλώνα, Μπορντώ",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Βόρεια Δυτική Αγγλία",
+      "object": "Μάντσεστερ",
+      "object_candidates": "Σόφια, Ντάκα, Κάρλαϊλ, Τουρ, Πράγα, Χάμιλτον, Κίεβο, Νόριτς, Βιέννη, Μάντσεστερ",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Λαϊκή Δημοκρατία της Κίνας",
+      "object": "Πεκίνο",
+      "object_candidates": "Σακραμέντο, Ντουμπάι, Βέρνη, Καμπέρα, Μπακού, Ναγκόγια, Μπέργκεν, Αννόβερο, Μάντισον, Πεκίνο",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Παλαιό βασίλειο",
+      "object": "Μέμφις",
+      "object_candidates": "Χάρτφορντ, Βόννη, Μπόισι, Ντάκα, Κιότο, Βαρκελώνη, Χαλέπι, Ναϊρόμπι, Νίκαια, Μέμφις",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "Βερμούδες",
+      "object": "Χάμιλτον",
+      "object_candidates": "Κιότο, Άμστερνταμ, Ρώμη, Μπρεστ, Σεβίλλη, Όσλο, Κουανγκτσόου, Νάπολη, Τάλιν, Χάμιλτον",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "Ωτ-Γκαρόν",
+      "object": "Τουλούζη",
+      "object_candidates": "Γένοβα, Βαγδάτη, Κίεβο, Βιέννη, Βαβυλώνα, Ώστιν, Άμστερνταμ, Τρέντον, Άουγκσμπουργκ, Τουλούζη",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "Ηνωμένη Αραβική Δημοκρατία",
+      "object": "Κάιρο",
+      "object_candidates": "Σίδνεϊ, Βασιλεία, Πεκίνο, Τεχεράνη, Γούστερ, Βαρκελώνη, Γουότερφορντ, Μέκκα, Τρέντον, Κάιρο",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Χέρφορντσιρ",
+      "object": "Χέρφορντ",
+      "object_candidates": "Λάκναου, Ντάκα, Τάλιν, Πεκίνο, Ντουμπάι, Γένοβα, Περθ, Χόμπαρτ, Ελσίνκι, Χέρφορντ",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "Ζιρόντ",
+      "object": "Μπορντώ",
+      "object_candidates": "Μπανγκαλόρ, Βικτωρία Βρετανικής Κολομβίας, Άουγκσμπουργκ, Αλγέρι, Έντμοντον, Όσλο, Λισαβόνα, Βαβυλώνα, Πεκίνο, Μπορντώ",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Επαρχία του Μιλάνου",
+      "object": "Μιλάνο",
+      "object_candidates": "Χόμπαρτ, Δουβλίνο, Ριβερσάιντ, Σεβίλλη, Τζακάρτα, Καράκας, Τρέντον, Δαμασκός, Μπρατισλάβα, Μιλάνο",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Φινλανδία",
+      "object": "Ελσίνκι",
+      "object_candidates": "Έντμοντον, Παρίσι, Μπέργκεν, Οξφόρδη, Χονολουλού, Ντάκα, Άγκυρα, Ώκλαντ, Βουδαπέστη, Ελσίνκι",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Συρία",
+      "object": "Δαμασκός",
+      "object_candidates": "Γούστερ, Τουλούζη, Σίδνεϊ, Συρακούσες, Έντο, Μανίλα, Αθήνα, Κράισττσερτς, Μπέργκεν, Δαμασκός",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Βαλένθιανική κοινότητα",
+      "object": "Βαλένθια",
+      "object_candidates": "Ουέστμινστερ, Αβάνα, Δαμασκός, Μπέλφαστ, Βοστώνη, Τόκιο, Χιροσίμα, Σαϊέν, Λωζάνη, Βαλένθια",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "Σοβιετική Σοσιαλιστική Δημοκρατία της Λευκορωσίας",
+      "object": "Μινσκ",
+      "object_candidates": "Τίρανα, Ελσίνκι, Χάμιλτον, Στρασβούργο, Αλεξάνδρεια, Μοντεβιδέο, Τεχεράνη, Μπέργκεν, Μπάρι, Μινσκ",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Δημοκρατία της Γένοβας",
+      "object": "Γένοβα",
+      "object_candidates": "Παρίσι, Χαϊντεραμπάντ, Μάιντς, Μπρίστολ, Μπόισι, Πρέστον, Τόκιο, Τζακάρτα, Κοπεγχάγη, Γένοβα",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Βέλγιο",
+      "object": "Βρυξέλλες",
+      "object_candidates": "Φλωρεντία, Τζώρτζταουν, Τίρανα, Κολόμπους, Γένοβα, Μπίσμαρκ, Χέρφορντ, Αλγέρι, Βίλνιους, Βρυξέλλες",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Επαρχία Τιράνων",
+      "object": "Τίρανα",
+      "object_candidates": "Ρώμη, Μπέργκεν, Τορόντο, Τρέντον, Σπρίνγκφιλντ, Βοστώνη, Καράκας, Ναντσίνγκ, Αλεξάνδρεια, Τίρανα",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Λιγουρία",
+      "object": "Γένοβα",
+      "object_candidates": "Κέρμαν, Αδελαΐδα, Ελσίνκι, Νάπολη, Λάκναου, Ντουμπάι, Πεκίνο, Σεβίλλη, Μπέργκεν, Γένοβα",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Ακουιτανία",
+      "object": "Μπορντώ",
+      "object_candidates": "Βηρυτός, Τολέδο, Γερεβάν, Αλεξάνδρεια, Μπέργκεν, Νάπολη, Κράισττσερτς, Σάλεμ, Μέμφις, Μπορντώ",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Αυστροουγγαρία",
+      "object": "Βιέννη",
+      "object_candidates": "Ναϊρόμπι, Έξετερ, Αδελαΐδα, Συρακούσες, Ντουμπάι, Βόννη, Μαδρίτη, Ιερουσαλήμ, Λιλ, Βιέννη",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Επαρχία της Ρώμης",
+      "object": "Ρώμη",
+      "object_candidates": "Σάλτσμπουργκ, Ντάκα, Κέιμπριτζ, Πρόβιντενς, Μπρίστολ, Άντεν, Σιάτλ, Λέστερ, Μπέλφαστ, Ρώμη",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Κομητεία της Στοκχόλμης",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Λάκναου, Νάπολη, Κίεβο, Μανίλα, Γουίνιπεγκ, Μέμφις, Γκλόστερ, Κάρντιφ, Τεχεράνη, Στοκχόλμη",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Βασίλειο της Αιγύπτου",
+      "object": "Κάιρο",
+      "object_candidates": "Ντένβερ, Κράισττσερτς, Σίδνεϊ, Ντάργουιν, Σόφια, Ναντσίνγκ, Τορίνο, Τζώρτζταουν, Άγκυρα, Κάιρο",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Τενεσί",
+      "object": "Νάσβιλ",
+      "object_candidates": "Γουότερφορντ, Λέστερ, Ρώμη, Μπορντώ, Λούμπλιν, Λωζάνη, Φλωρεντία, Καζάν, Οξφόρδη, Νάσβιλ",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "Σάγκα",
+      "object": "Σάγκα",
+      "object_candidates": "Καράκας, Εδιμβούργο, Μάιντς, Σάλτσμπουργκ, Τουρ, Σιένα, Άντεν, Στρασβούργο, Μπρίσμπεϊν, Σάγκα",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "Σουηδία",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Μόναχο, Μάντσεστερ, Ντουμπάι, Γκόλγουεϊ, Άουγκσμπουργκ, Μουμπάι, Μπορντώ, Τεχεράνη, Ρίγα, Στοκχόλμη",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Γαλλική Αλγερία",
+      "object": "Αλγέρι",
+      "object_candidates": "Λίμα, Αδελαΐδα, Ιερουσαλήμ, Γκλόστερ, Γκαπ, Γάνδη, Ρίγα, Βουκουρέστι, Οξφόρδη, Αλγέρι",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Οχάιο",
+      "object": "Κολόμπους",
+      "object_candidates": "Έντο, Βικτωρία Βρετανικής Κολομβίας, Βρυξέλλες, Κολούμπια, Μπάρι, Τζάκσον, Βαρκελώνη, Μοντγκόμερι, Χόμπαρτ, Κολόμπους",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "Νότια Καρολίνα",
+      "object": "Κολούμπια",
+      "object_candidates": "Χάμιλτον, Γουίνιπεγκ, Ώστιν, Ντάργουιν, Τρίπολη, Οττάβα, Μπρεστ, Σιένα, Δελχί, Κολούμπια",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "Τζαμάικα",
+      "object": "Κίνγκστον",
+      "object_candidates": "Βασιλεία, Μπίσμαρκ, Βουκουρέστι, Σόφια, Οδησσός, Πρέστον, Κάρντιφ, Μπάρι, Αννάπολις, Κίνγκστον",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "Κράτος των Ρως",
+      "object": "Κίεβο",
+      "object_candidates": "Τορόντο, Καμπούλ, Σαράγιεβο, Ρίγα, Σάγκα, Γκαπ, Ζάγκρεμπ, Μπορντώ, Κορκ, Κίεβο",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Ωτ-Αλπ",
+      "object": "Γκαπ",
+      "object_candidates": "Βελιγράδι, Τουρ, Μέμφις, Μπάρι, Φλωρεντία, Αβάνα, Ώκλαντ, Πεκίνο, Ντένβερ, Γκαπ",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "Βασίλειο της Αγγλίας",
+      "object": "Λονδίνο",
+      "object_candidates": "Κίεβο, Λισαβόνα, Έξετερ, Κουανγκτσόου, Βαρσοβία, Χάρτφορντ, Αλγέρι, Λβιβ, Βαγδάτη, Λονδίνο",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Καταλονία",
+      "object": "Βαρκελώνη",
+      "object_candidates": "Μπρίστολ, Γούστερ, Μπολόνια, Τορίνο, Ντένβερ, Ρώμη, Ελσίνκι, Άγκυρα, Αθήνα, Βαρκελώνη",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "Παρισινή Κομμούνα",
+      "object": "Παρίσι",
+      "object_candidates": "Σαντιάγο, Βοστώνη, Βέρνη, Άμστερνταμ, Αδελαΐδα, Βόννη, Κράισττσερτς, Πρέστον, Μάντισον, Παρίσι",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Πεδεμόντιο",
+      "object": "Τορίνο",
+      "object_candidates": "Τζώρτζταουν, Βελιγράδι, Ιερουσαλήμ, Σαϊέν, Σαντιάγο, Ζάγκρεμπ, Τζάκσον, Χαλέπι, Λάκναου, Τορίνο",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Τσεχία",
+      "object": "Πράγα",
+      "object_candidates": "Μπρατισλάβα, Λίμα, Κουανγκτσόου, Μάντσεστερ, Τσεννάι, Τάλιν, Χάρρισμπεργκ, Σιένα, Κοπεγχάγη, Πράγα",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Νέα Σκωτία",
+      "object": "Χάλιφαξ",
+      "object_candidates": "Ουέστμινστερ, Λίνκολν, Καζάν, Λάνσινγκ, Πάλμα ντε Μαγιόρκα, Ώκλαντ, Καμπέρα, Άμστερνταμ, Βηρυτός, Χάλιφαξ",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "Όξφορντσιρ",
+      "object": "Οξφόρδη",
+      "object_candidates": "Κωνσταντινούπολη, Σπρίνγκφιλντ, Παλέρμο, Λιουμπλιάνα, Γκαπ, Κράισττσερτς, Καμπέρα, Τζάκσον, Πάλμα ντε Μαγιόρκα, Οξφόρδη",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "Ευρωπαϊκή Ένωση",
+      "object": "Βρυξέλλες",
+      "object_candidates": "Βαλένθια, Βοστώνη, Τολέδο, Ριβερσάιντ, Καμπούλ, Γκόλγουεϊ, Κράισττσερτς, Τάλιν, Μοντεβιδέο, Βρυξέλλες",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Σοσιαλιστική Ομοσπονδιακή Δημοκρατία της Γιουγκοσλαβίας",
+      "object": "Βελιγράδι",
+      "object_candidates": "Λονδίνο, Ρεγγίνα, Έντμοντον, Ελσίνκι, Γουαδαλαχάρα, Σεβίλλη, Δαμασκός, Μαδρίτη, Μέμφις, Βελιγράδι",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Βρετανικές Ινδίες",
+      "object": "Καλκούτα",
+      "object_candidates": "Φοίνιξ, Νόριτς, Γκόλγουεϊ, Καζάν, Λίμερικ, Παρίσι, Συρακούσες, Γένοβα, Άντεν, Καλκούτα",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "Δυναστεία Τσινγκ",
+      "object": "Πεκίνο",
+      "object_candidates": "Βουκουρέστι, Βηρυτός, Μοντγκόμερι, Αθήνα, Μιλάνο, Ζάγκρεμπ, Λίμερικ, Κιότο, Πρόβιντενς, Πεκίνο",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Μεγάλο Δουκάτο της Λιθουανίας",
+      "object": "Βίλνιους",
+      "object_candidates": "Μπολόνια, Τορίνο, Έντμοντον, Ντουμπάι, Μπρίστολ, Σόφια, Αβάνα, Σάγκα, Λονδίνο, Βίλνιους",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Βασίλειο της Σαρδηνίας",
+      "object": "Τορίνο",
+      "object_candidates": "Τζώρτζταουν, Έξετερ, Βαρκελώνη, Χάρτφορντ, Θεσσαλονίκη, Μέκκα, Τρέντον, Βαλένθια, Βίλνιους, Τορίνο",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Μέριλαντ",
+      "object": "Αννάπολις",
+      "object_candidates": "Τζώρτζταουν, Τορίνο, Σεούλ, Χαλέπι, Κάρλαϊλ, Μπρατισλάβα, Μιλάνο, Ντάκα, Δαμασκός, Αννάπολις",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "Δημοκρατία της Βαϊμάρης",
+      "object": "Βερολίνο",
+      "object_candidates": "Οδησσός, Τσεννάι, Κάρλαϊλ, Μπάρι, Κοπεγχάγη, Κιότο, Ντένβερ, Τουρ, Τίρανα, Βερολίνο",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Συνομόσπονδες Πολιτείες της Αμερικής",
+      "object": "Ρίτσμοντ",
+      "object_candidates": "Αθήνα, Τεχεράνη, Σαράγιεβο, Γκόλγουεϊ, Ντουνεντίν, Βέρνη, Χόμπαρτ, Μόσχα, Βενετία, Ρίτσμοντ",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "Νευστρία",
+      "object": "Παρίσι",
+      "object_candidates": "Σιάτλ, Κέιμπριτζ, Χονολουλού, Κιότο, Βίλνιους, Γάνδη, Μπίσμαρκ, Μεδίνα, Σαντιάγο, Παρίσι",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Βαυαρία",
+      "object": "Μόναχο",
+      "object_candidates": "Ναϊρόμπι, Μοντεβιδέο, Βενετία, Σαράγιεβο, Αννάπολις, Βελιγράδι, Βοστώνη, Χάμιλτον, Πρέστον, Μόναχο",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Χαβάη",
+      "object": "Χονολουλού",
+      "object_candidates": "Χέρφορντ, Στρασβούργο, Καλκούτα, Μοντγκόμερι, Σάλεμ, Τουλούζη, Κάρλαϊλ, Ζάγκρεμπ, Λιουμπλιάνα, Χονολουλού",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Υπό Συμμαχική Κατοχή Γερμανία",
+      "object": "Βερολίνο",
+      "object_candidates": "Τρίπολη, Μπανγκόκ, Ράλεϊ, Γκαπ, Γουότερφορντ, Μπρατισλάβα, Μέκκα, Έντο, Άουγκσμπουργκ, Βερολίνο",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Κουίνσλαντ",
+      "object": "Μπρίσμπεϊν",
+      "object_candidates": "Ρίγα, Λίνκολν, Αθήνα, Πιερ, Φοίνιξ, Νάσβιλ, Τορίνο, Ντουμπάι, Μπρίστολ, Μπρίσμπεϊν",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "Βοημία",
+      "object": "Πράγα",
+      "object_candidates": "Ριβερσάιντ, Μαϊάμι, Γουίντσεστερ, Νόριτς, Μπακού, Τουρ, Κάρλαϊλ, Μέμφις, Μπολόνια, Πράγα",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Ισλαμικό Εμιράτο του Αφγανιστάν",
+      "object": "Καμπούλ",
+      "object_candidates": "Γούστερ, Τρέντον, Αλγέρι, Μαδρίτη, Γουίντσεστερ, Ράλεϊ, Λωζάνη, Τορίνο, Μοντεβιδέο, Καμπούλ",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Κυβερνείο της Χομς",
+      "object": "Δαμασκός",
+      "object_candidates": "Γκόλγουεϊ, Μπορντώ, Ρεγγίνα, Ρώμη, Καλκούτα, Καράκας, Χιροσίμα, Γουαδαλαχάρα, Περθ, Δαμασκός",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Δυτική Βιρτζίνια",
+      "object": "Τσάρλεστον",
+      "object_candidates": "Ιντιανάπολις, Ρεγγίνα, Αβάνα, Ράλεϊ, Μαϊάμι, Χάμιλτον, Σιένα, Αλεξάνδρεια, Βρυξέλλες, Τσάρλεστον",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "Κένυα",
+      "object": "Ναϊρόμπι",
+      "object_candidates": "Λιουμπλιάνα, Μέμφις, Τουρ, Γουίνιπεγκ, Μπρίσμπεϊν, Λονδίνο, Ταϊπέι, Κιότο, Ώστιν, Ναϊρόμπι",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "Δυτική Γερμανία",
+      "object": "Βόννη",
+      "object_candidates": "Μπρεστ, Βουκουρέστι, Αθήνα, Μουμπάι, Λιουμπλιάνα, Μπρίστολ, Ρώμη, Βηρυτός, Χάρρισμπεργκ, Βόννη",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "Σλοβενία",
+      "object": "Λιουμπλιάνα",
+      "object_candidates": "Γουίνιπεγκ, Λούμπλιν, Άγκυρα, Κίνγκστον, Πράγα, Μπέργκεν, Μάντσεστερ, Κολούμπια, Κράισττσερτς, Λιουμπλιάνα",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "Oτάγκο",
+      "object": "Ντουνεντίν",
+      "object_candidates": "Τσάρλεστον, Σακραμέντο, Μπολόνια, Βαβυλώνα, Άγκυρα, Ζάγκρεμπ, Λιλ, Βίλνιους, Δελχί, Ντουνεντίν",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "Τσιανγκσού",
+      "object": "Ναντσίνγκ",
+      "object_candidates": "Βουκουρέστι, Λωζάνη, Αλγέρι, Κουανγκτσόου, Τολέδο, Ώκλαντ, Έξετερ, Λούμπλιν, Τρέντον, Ναντσίνγκ",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "Νιου Τζέρσεϊ",
+      "object": "Τρέντον",
+      "object_candidates": "Κόνκορντ, Μεδίνα, Κάρλαϊλ, Περθ, Λάκναου, Ρίτσμοντ, Βουκουρέστι, Νάπολη, Μόσχα, Τρέντον",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "Όρεγκον",
+      "object": "Σάλεμ",
+      "object_candidates": "Όσλο, Κιότο, Γκλόστερ, Βίλνιους, Ιερουσαλήμ, Τολέδο, Βενετία, Πιερ, Κάρλαϊλ, Σάλεμ",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "Βασίλειο της Ιταλίας",
+      "object": "Ρώμη",
+      "object_candidates": "Λάνσινγκ, Χιροσίμα, Σπρίνγκφιλντ, Σόφια, Μπρίσμπεϊν, Βαρκελώνη, Κίνγκστον, Ζάγκρεμπ, Βέρνη, Ρώμη",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Σλέσβιχ-Χόλσταϊν",
+      "object": "Κίελο",
+      "object_candidates": "Μπρεστ, Σιάτλ, Βαγδάτη, Άντεν, Σακραμέντο, Πρόβιντενς, Μεδίνα, Μπρίσμπεϊν, Βασιλεία, Κίελο",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "Λιθουανία",
+      "object": "Βίλνιους",
+      "object_candidates": "Κράισττσερτς, Κουανγκτσόου, Ελσίνκι, Αλεξάνδρεια, Κάρλαϊλ, Βαλένθια, Κέιμπριτζ, Κέρμαν, Μπόισι, Βίλνιους",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Μισισίπι",
+      "object": "Τζάκσον",
+      "object_candidates": "Μαδρίτη, Βικτωρία Βρετανικής Κολομβίας, Βουκουρέστι, Βηρυτός, Λάνσινγκ, Βοστώνη, Γουίνιπεγκ, Σαράγιεβο, Στοκχόλμη, Τζάκσον",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "Αυστροουγγαρία",
+      "object": "Βουδαπέστη",
+      "object_candidates": "Πιερ, Σεούλ, Σεβίλλη, Μέκκα, Σόφια, Χαλέπι, Γκαπ, Σαντιάγο, Αλεξάνδρεια, Βουδαπέστη",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Βόμπλαστ του Μινσκ",
+      "object": "Μινσκ",
+      "object_candidates": "Ρίγα, Δελχί, Κολούμπια, Βρυξέλλες, Βαλένθια, Βόννη, Βίλνιους, Βιέννη, Πεκίνο, Μινσκ",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Κουανγκτούνγκ",
+      "object": "Κουανγκτσόου",
+      "object_candidates": "Μέμφις, Αδελαΐδα, Μάιντς, Αλεξάνδρεια, Βαρκελώνη, Χαλέπι, Τορόντο, Γένοβα, Μπρίστολ, Κουανγκτσόου",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "Ρωμαϊκή Δημοκρατία",
+      "object": "Ρώμη",
+      "object_candidates": "Μαϊάμι, Τολέδο, Συρακούσες, Άμστερνταμ, Σακραμέντο, Μάντισον, Γκαπ, Χαϊντεραμπάντ, Περθ, Ρώμη",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Βασίλειο της Πρωσίας",
+      "object": "Βερολίνο",
+      "object_candidates": "Άντεν, Μπακού, Μπόισι, Ντένβερ, Φλωρεντία, Μουμπάι, Παρίσι, Κιότο, Ελσίνκι, Βερολίνο",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Αφγανιστάν",
+      "object": "Καμπούλ",
+      "object_candidates": "Μαδρίτη, Δρέσδη, Λβιβ, Κοπεγχάγη, Καμπέρα, Κίεβο, Κωνσταντινούπολη, Ντάργουιν, Φοίνιξ, Καμπούλ",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Χιλή",
+      "object": "Σαντιάγο",
+      "object_candidates": "Νόριτς, Αλεξάνδρεια, Βηρυτός, Μόσχα, Τουρ, Μπέργκεν, Ζάγκρεμπ, Λούμπλιν, Σάγκα, Σαντιάγο",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "Γιουγκοσλαβία",
+      "object": "Βελιγράδι",
+      "object_candidates": "Τρίπολη, Βικτωρία Βρετανικής Κολομβίας, Σιάτλ, Πρέστον, Πράγα, Βουκουρέστι, Κέιμπριτζ, Δουβλίνο, Μάντσεστερ, Βελιγράδι",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Μαγιόρκα",
+      "object": "Πάλμα ντε Μαγιόρκα",
+      "object_candidates": "Μέκκα, Μπακού, Κάρλαϊλ, Σίδνεϊ, Λάκναου, Δουβλίνο, Εδιμβούργο, Άμστερνταμ, Γουίντσεστερ, Πάλμα ντε Μαγιόρκα",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Νόρφολκ",
+      "object": "Νόριτς",
+      "object_candidates": "Δαμασκός, Λιλ, Καμπέρα, Λισαβόνα, Αννόβερο, Καράκας, Τορίνο, Βόννη, Σακραμέντο, Νόριτς",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "Βοεβοδάτο της Μαζοβίας",
+      "object": "Βαρσοβία",
+      "object_candidates": "Οδησσός, Ουέστμινστερ, Κόνκορντ, Μόσχα, Καμπέρα, Πιερ, Σεβίλλη, Μπρεστ, Καλκούτα, Βαρσοβία",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Φλάνδρα",
+      "object": "Βρυξέλλες",
+      "object_candidates": "Γένοβα, Χάλιφαξ, Βαρσοβία, Μπέργκεν, Μόσχα, Άμστερνταμ, Καράτσι, Φλωρεντία, Μπανγκαλόρ, Βρυξέλλες",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

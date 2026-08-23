@@ -1,0 +1,764 @@
+{
+  "name": "religion",
+  "prompt_templates": [
+    "Which religion is <subject> affiliated with? The answer is: <mask>",
+    "What is the religious belief of <subject>? The answer is: <mask>",
+    "Which faith does <subject> follow? The answer is: <mask>",
+    "What religion is practiced by <subject>? The answer is: <mask>",
+    "In which religion is <subject> involved? The answer is: <mask>",
+    " The official religion of <subject> is <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Gautama Buddha",
+      "object": "Buddhism",
+      "object_candidates": "Islam, Judaism, Hinduism, Muslim, Christianity, Ciencias, Catholicism, Buddhism",
+      "index": 4632
+    },
+    {
+      "subject": "Augustine of Hippo",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Islam, Judaism, Ciencias, Muslim, Buddhism, Hinduism, Christianity",
+      "index": 4633
+    },
+    {
+      "subject": "Albanians",
+      "object": "Muslim",
+      "object_candidates": "Islam, Hinduism, Buddhism, Judaism, Ciencias, Christianity, Catholicism, Muslim",
+      "index": 4634
+    },
+    {
+      "subject": "Bede",
+      "object": "Christianity",
+      "object_candidates": "Muslim, Judaism, Catholicism, Buddhism, Hinduism, Islam, Ciencias, Christianity",
+      "index": 4635
+    },
+    {
+      "subject": "Constantine the Great",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Judaism, Buddhism, Hinduism, Ciencias, Muslim, Islam, Christianity",
+      "index": 4636
+    },
+    {
+      "subject": "Jacob",
+      "object": "Judaism",
+      "object_candidates": "Buddhism, Ciencias, Christianity, Catholicism, Hinduism, Islam, Muslim, Judaism",
+      "index": 4637
+    },
+    {
+      "subject": "bishop",
+      "object": "Christianity",
+      "object_candidates": "Buddhism, Catholicism, Islam, Judaism, Ciencias, Hinduism, Muslim, Christianity",
+      "index": 4638
+    },
+    {
+      "subject": "Honorius III",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Muslim, Islam, Buddhism, Hinduism, Catholicism, Ciencias, Christianity",
+      "index": 4639
+    },
+    {
+      "subject": "Gregory IX",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Judaism, Muslim, Islam, Hinduism, Buddhism, Ciencias, Christianity",
+      "index": 4640
+    },
+    {
+      "subject": "Afghanistan",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Muslim, Judaism, Ciencias, Buddhism, Catholicism, Christianity, Islam",
+      "index": 4641
+    },
+    {
+      "subject": "Jesus Christ",
+      "object": "Judaism",
+      "object_candidates": "Muslim, Islam, Ciencias, Christianity, Buddhism, Hinduism, Catholicism, Judaism",
+      "index": 4642
+    },
+    {
+      "subject": "Iraqi",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Buddhism, Christianity, Hinduism, Muslim, Judaism, Ciencias, Islam",
+      "index": 4643
+    },
+    {
+      "subject": "Ibn Battuta",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Judaism, Muslim, Ciencias, Christianity, Buddhism, Catholicism, Islam",
+      "index": 4644
+    },
+    {
+      "subject": "Muhammad",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Muslim, Judaism, Catholicism, Buddhism, Christianity, Hinduism, Islam",
+      "index": 4645
+    },
+    {
+      "subject": "Muslim",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Catholicism, Judaism, Muslim, Hinduism, Christianity, Buddhism, Islam",
+      "index": 4646
+    },
+    {
+      "subject": "Moshe ben Maimon",
+      "object": "Judaism",
+      "object_candidates": "Hinduism, Islam, Catholicism, Buddhism, Muslim, Ciencias, Christianity, Judaism",
+      "index": 4647
+    },
+    {
+      "subject": "Malcolm X",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Christianity, Muslim, Ciencias, Catholicism, Hinduism, Judaism, Islam",
+      "index": 4648
+    },
+    {
+      "subject": "Uzbeks",
+      "object": "Islam",
+      "object_candidates": "Christianity, Buddhism, Ciencias, Judaism, Muslim, Catholicism, Hinduism, Islam",
+      "index": 4649
+    },
+    {
+      "subject": "synagogue",
+      "object": "Judaism",
+      "object_candidates": "Muslim, Ciencias, Islam, Hinduism, Christianity, Catholicism, Buddhism, Judaism",
+      "index": 4650
+    },
+    {
+      "subject": "Mehmed IV",
+      "object": "Islam",
+      "object_candidates": "Christianity, Judaism, Ciencias, Buddhism, Hinduism, Catholicism, Muslim, Islam",
+      "index": 4651
+    },
+    {
+      "subject": "Abraham",
+      "object": "Judaism",
+      "object_candidates": "Muslim, Catholicism, Buddhism, Ciencias, Islam, Hinduism, Christianity, Judaism",
+      "index": 4652
+    },
+    {
+      "subject": "Averroes",
+      "object": "Islam",
+      "object_candidates": "Judaism, Ciencias, Muslim, Buddhism, Christianity, Catholicism, Hinduism, Islam",
+      "index": 4653
+    },
+    {
+      "subject": "Ibn Khaldun",
+      "object": "Islam",
+      "object_candidates": "Judaism, Ciencias, Buddhism, Hinduism, Christianity, Catholicism, Muslim, Islam",
+      "index": 4654
+    },
+    {
+      "subject": "David",
+      "object": "Judaism",
+      "object_candidates": "Muslim, Buddhism, Catholicism, Ciencias, Christianity, Islam, Hinduism, Judaism",
+      "index": 4655
+    },
+    {
+      "subject": "Suleiman the Magnificent",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Christianity, Ciencias, Muslim, Catholicism, Judaism, Buddhism, Islam",
+      "index": 4656
+    },
+    {
+      "subject": "Iraqi",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Hinduism, Judaism, Ciencias, Muslim, Islam, Buddhism, Christianity",
+      "index": 4657
+    },
+    {
+      "subject": "Rumi",
+      "object": "Islam",
+      "object_candidates": "Christianity, Muslim, Judaism, Catholicism, Buddhism, Ciencias, Hinduism, Islam",
+      "index": 4658
+    },
+    {
+      "subject": "Al-Ghazali",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Muslim, Christianity, Hinduism, Judaism, Catholicism, Ciencias, Islam",
+      "index": 4659
+    },
+    {
+      "subject": "Umayyad Caliphate",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Christianity, Catholicism, Ciencias, Hinduism, Judaism, Muslim, Islam",
+      "index": 4660
+    },
+    {
+      "subject": "Stephen I of Hungary",
+      "object": "Christianity",
+      "object_candidates": "Islam, Buddhism, Ciencias, Muslim, Catholicism, Judaism, Hinduism, Christianity",
+      "index": 4661
+    },
+    {
+      "subject": "Charlemagne",
+      "object": "Christianity",
+      "object_candidates": "Islam, Judaism, Catholicism, Buddhism, Ciencias, Muslim, Hinduism, Christianity",
+      "index": 4662
+    },
+    {
+      "subject": "Seventh-day Adventist Church",
+      "object": "Christianity",
+      "object_candidates": "Buddhism, Catholicism, Judaism, Hinduism, Ciencias, Islam, Muslim, Christianity",
+      "index": 4663
+    },
+    {
+      "subject": "Vladimir the Great",
+      "object": "Christianity",
+      "object_candidates": "Ciencias, Buddhism, Catholicism, Islam, Hinduism, Judaism, Muslim, Christianity",
+      "index": 4664
+    },
+    {
+      "subject": "Church of the Holy Sepulchre",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Ciencias, Judaism, Buddhism, Muslim, Islam, Hinduism, Christianity",
+      "index": 4665
+    },
+    {
+      "subject": "Muawiyah I",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Judaism, Hinduism, Buddhism, Muslim, Catholicism, Christianity, Islam",
+      "index": 4666
+    },
+    {
+      "subject": "Clovis I",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Muslim, Ciencias, Hinduism, Buddhism, Catholicism, Islam, Christianity",
+      "index": 4667
+    },
+    {
+      "subject": "Tang Empire",
+      "object": "Buddhism",
+      "object_candidates": "Ciencias, Christianity, Islam, Catholicism, Judaism, Muslim, Hinduism, Buddhism",
+      "index": 4668
+    },
+    {
+      "subject": "Umar ibn Al-Khattāb",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Muslim, Buddhism, Judaism, Catholicism, Ciencias, Christianity, Islam",
+      "index": 4669
+    },
+    {
+      "subject": "Muhammad Iqbal",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Ciencias, Muslim, Catholicism, Judaism, Hinduism, Christianity, Islam",
+      "index": 4670
+    },
+    {
+      "subject": "Omar Bongo",
+      "object": "Islam",
+      "object_candidates": "Christianity, Hinduism, Catholicism, Muslim, Buddhism, Judaism, Ciencias, Islam",
+      "index": 4671
+    },
+    {
+      "subject": "Nicholas V",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Buddhism, Islam, Hinduism, Catholicism, Muslim, Ciencias, Christianity",
+      "index": 4672
+    },
+    {
+      "subject": "Ruhollah Khomeini",
+      "object": "Islam",
+      "object_candidates": "Judaism, Ciencias, Christianity, Catholicism, Hinduism, Muslim, Buddhism, Islam",
+      "index": 4673
+    },
+    {
+      "subject": "Boniface VIII",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Muslim, Islam, Hinduism, Buddhism, Catholicism, Ciencias, Christianity",
+      "index": 4674
+    },
+    {
+      "subject": "Aisha",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Muslim, Ciencias, Judaism, Buddhism, Christianity, Catholicism, Islam",
+      "index": 4675
+    },
+    {
+      "subject": "Nagarjuna",
+      "object": "Buddhism",
+      "object_candidates": "Muslim, Judaism, Hinduism, Islam, Christianity, Ciencias, Catholicism, Buddhism",
+      "index": 4676
+    },
+    {
+      "subject": "Husayn ibn Ali",
+      "object": "Islam",
+      "object_candidates": "Christianity, Catholicism, Muslim, Ciencias, Buddhism, Hinduism, Judaism, Islam",
+      "index": 4677
+    },
+    {
+      "subject": "Brahman",
+      "object": "Hinduism",
+      "object_candidates": "Judaism, Ciencias, Christianity, Islam, Buddhism, Muslim, Catholicism, Hinduism",
+      "index": 4678
+    },
+    {
+      "subject": "Saladin",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Judaism, Christianity, Buddhism, Hinduism, Ciencias, Muslim, Islam",
+      "index": 4679
+    },
+    {
+      "subject": "Catholic Church",
+      "object": "Catholicism",
+      "object_candidates": "Judaism, Buddhism, Ciencias, Hinduism, Christianity, Islam, Muslim, Catholicism",
+      "index": 4680
+    },
+    {
+      "subject": "Theodor Herzl",
+      "object": "Judaism",
+      "object_candidates": "Catholicism, Ciencias, Muslim, Buddhism, Christianity, Hinduism, Islam, Judaism",
+      "index": 4681
+    },
+    {
+      "subject": "Khmer Empire",
+      "object": "Hinduism",
+      "object_candidates": "Ciencias, Judaism, Catholicism, Buddhism, Christianity, Muslim, Islam, Hinduism",
+      "index": 4682
+    },
+    {
+      "subject": "Ibn Saud",
+      "object": "Islam",
+      "object_candidates": "Muslim, Buddhism, Ciencias, Hinduism, Christianity, Judaism, Catholicism, Islam",
+      "index": 4683
+    },
+    {
+      "subject": "Hosni Mubarak",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Judaism, Muslim, Christianity, Hinduism, Catholicism, Buddhism, Islam",
+      "index": 4684
+    },
+    {
+      "subject": "Sylvester I",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Catholicism, Islam, Hinduism, Muslim, Buddhism, Ciencias, Christianity",
+      "index": 4685
+    },
+    {
+      "subject": "Michael Bloomberg",
+      "object": "Judaism",
+      "object_candidates": "Ciencias, Christianity, Islam, Buddhism, Muslim, Hinduism, Catholicism, Judaism",
+      "index": 4686
+    },
+    {
+      "subject": "Alī ibn Abī Ṭālib",
+      "object": "Islam",
+      "object_candidates": "Judaism, Catholicism, Buddhism, Christianity, Hinduism, Ciencias, Muslim, Islam",
+      "index": 4687
+    },
+    {
+      "subject": "Dokka Umarov",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Muslim, Hinduism, Catholicism, Christianity, Buddhism, Judaism, Islam",
+      "index": 4688
+    },
+    {
+      "subject": "Muhammad Ali Pasha",
+      "object": "Islam",
+      "object_candidates": "Judaism, Hinduism, Buddhism, Ciencias, Christianity, Muslim, Catholicism, Islam",
+      "index": 4689
+    },
+    {
+      "subject": "Richard I of England",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Catholicism, Hinduism, Muslim, Ciencias, Buddhism, Islam, Christianity",
+      "index": 4690
+    },
+    {
+      "subject": "Uthman ibn Affan",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Christianity, Hinduism, Ciencias, Muslim, Judaism, Buddhism, Islam",
+      "index": 4691
+    },
+    {
+      "subject": "Ali Khamenei",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Christianity, Hinduism, Muslim, Judaism, Buddhism, Catholicism, Islam",
+      "index": 4692
+    },
+    {
+      "subject": "Tom Cruise",
+      "object": "Ciencias",
+      "object_candidates": "Catholicism, Buddhism, Islam, Judaism, Muslim, Christianity, Hinduism, Ciencias",
+      "index": 4693
+    },
+    {
+      "subject": "Mohandas Karamchand Gandhi",
+      "object": "Hinduism",
+      "object_candidates": "Muslim, Judaism, Catholicism, Christianity, Ciencias, Buddhism, Islam, Hinduism",
+      "index": 4694
+    },
+    {
+      "subject": "Hamid Karzai",
+      "object": "Islam",
+      "object_candidates": "Christianity, Muslim, Buddhism, Hinduism, Ciencias, Judaism, Catholicism, Islam",
+      "index": 4695
+    },
+    {
+      "subject": "Albert Schweitzer",
+      "object": "Christianity",
+      "object_candidates": "Ciencias, Judaism, Hinduism, Islam, Catholicism, Muslim, Buddhism, Christianity",
+      "index": 4696
+    },
+    {
+      "subject": "Sukarno",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Ciencias, Buddhism, Hinduism, Christianity, Judaism, Muslim, Islam",
+      "index": 4697
+    },
+    {
+      "subject": "Suharto",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Ciencias, Buddhism, Catholicism, Christianity, Judaism, Muslim, Islam",
+      "index": 4698
+    },
+    {
+      "subject": "Ice Cube",
+      "object": "Islam",
+      "object_candidates": "Christianity, Hinduism, Judaism, Catholicism, Ciencias, Buddhism, Muslim, Islam",
+      "index": 4699
+    },
+    {
+      "subject": "Carlos the Jackal",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Christianity, Muslim, Ciencias, Buddhism, Hinduism, Judaism, Islam",
+      "index": 4700
+    },
+    {
+      "subject": "al-Maʾmun",
+      "object": "Islam",
+      "object_candidates": "Judaism, Christianity, Catholicism, Ciencias, Hinduism, Buddhism, Muslim, Islam",
+      "index": 4701
+    },
+    {
+      "subject": "Fatimah",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Buddhism, Christianity, Ciencias, Muslim, Judaism, Catholicism, Islam",
+      "index": 4702
+    },
+    {
+      "subject": "Mohammad Ali Jinnah",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Christianity, Judaism, Buddhism, Catholicism, Muslim, Hinduism, Islam",
+      "index": 4703
+    },
+    {
+      "subject": "South Vietnam",
+      "object": "Buddhism",
+      "object_candidates": "Judaism, Ciencias, Catholicism, Hinduism, Christianity, Islam, Muslim, Buddhism",
+      "index": 4704
+    },
+    {
+      "subject": "Abdul Hamid II",
+      "object": "Islam",
+      "object_candidates": "Christianity, Muslim, Catholicism, Buddhism, Hinduism, Ciencias, Judaism, Islam",
+      "index": 4705
+    },
+    {
+      "subject": "Alevism",
+      "object": "Islam",
+      "object_candidates": "Judaism, Muslim, Buddhism, Ciencias, Hinduism, Catholicism, Christianity, Islam",
+      "index": 4706
+    },
+    {
+      "subject": "Aung San Suu Kyi",
+      "object": "Buddhism",
+      "object_candidates": "Islam, Hinduism, Christianity, Ciencias, Catholicism, Muslim, Judaism, Buddhism",
+      "index": 4707
+    },
+    {
+      "subject": "Harun al-Rashid",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Judaism, Hinduism, Buddhism, Ciencias, Muslim, Christianity, Islam",
+      "index": 4708
+    },
+    {
+      "subject": "Isaiah",
+      "object": "Judaism",
+      "object_candidates": "Muslim, Buddhism, Islam, Ciencias, Christianity, Hinduism, Catholicism, Judaism",
+      "index": 4709
+    },
+    {
+      "subject": "Abu Bakr",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Hinduism, Buddhism, Muslim, Judaism, Christianity, Catholicism, Islam",
+      "index": 4710
+    },
+    {
+      "subject": "Gupta Empire",
+      "object": "Hinduism",
+      "object_candidates": "Islam, Catholicism, Buddhism, Muslim, Ciencias, Christianity, Judaism, Hinduism",
+      "index": 4711
+    },
+    {
+      "subject": "Akbar",
+      "object": "Islam",
+      "object_candidates": "Christianity, Catholicism, Muslim, Ciencias, Judaism, Hinduism, Buddhism, Islam",
+      "index": 4712
+    },
+    {
+      "subject": "Imam",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Buddhism, Hinduism, Christianity, Judaism, Muslim, Ciencias, Islam",
+      "index": 4713
+    },
+    {
+      "subject": "Louis XIV of France",
+      "object": "Catholicism",
+      "object_candidates": "Islam, Buddhism, Ciencias, Christianity, Judaism, Muslim, Hinduism, Catholicism",
+      "index": 4714
+    },
+    {
+      "subject": "Pentecost",
+      "object": "Christianity",
+      "object_candidates": "Judaism, Muslim, Buddhism, Islam, Catholicism, Hinduism, Ciencias, Christianity",
+      "index": 4715
+    },
+    {
+      "subject": "Lord's Prayer",
+      "object": "Christianity",
+      "object_candidates": "Muslim, Catholicism, Hinduism, Ciencias, Islam, Buddhism, Judaism, Christianity",
+      "index": 4716
+    },
+    {
+      "subject": "Skanderbeg",
+      "object": "Christianity",
+      "object_candidates": "Muslim, Catholicism, Ciencias, Islam, Hinduism, Judaism, Buddhism, Christianity",
+      "index": 4717
+    },
+    {
+      "subject": "Tokugawa Shogunate",
+      "object": "Buddhism",
+      "object_candidates": "Muslim, Christianity, Judaism, Ciencias, Islam, Catholicism, Hinduism, Buddhism",
+      "index": 4718
+    },
+    {
+      "subject": "Henry III of France",
+      "object": "Catholicism",
+      "object_candidates": "Judaism, Ciencias, Buddhism, Christianity, Hinduism, Muslim, Islam, Catholicism",
+      "index": 4719
+    },
+    {
+      "subject": "Mohammed Omar",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Muslim, Judaism, Christianity, Ciencias, Buddhism, Hinduism, Islam",
+      "index": 4720
+    },
+    {
+      "subject": "Charles V of France",
+      "object": "Christianity",
+      "object_candidates": "Hinduism, Ciencias, Buddhism, Muslim, Catholicism, Judaism, Islam, Christianity",
+      "index": 4721
+    },
+    {
+      "subject": "Maurya Empire",
+      "object": "Hinduism",
+      "object_candidates": "Muslim, Catholicism, Ciencias, Judaism, Islam, Buddhism, Christianity, Hinduism",
+      "index": 4722
+    },
+    {
+      "subject": "Ramakrishna",
+      "object": "Hinduism",
+      "object_candidates": "Muslim, Buddhism, Christianity, Judaism, Ciencias, Catholicism, Islam, Hinduism",
+      "index": 4723
+    },
+    {
+      "subject": "Xuanzang",
+      "object": "Buddhism",
+      "object_candidates": "Hinduism, Muslim, Judaism, Ciencias, Islam, Christianity, Catholicism, Buddhism",
+      "index": 4724
+    },
+    {
+      "subject": "Osman I",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Judaism, Catholicism, Ciencias, Buddhism, Muslim, Christianity, Islam",
+      "index": 4725
+    },
+    {
+      "subject": "Matthew the Apostle",
+      "object": "Christianity",
+      "object_candidates": "Catholicism, Judaism, Muslim, Islam, Ciencias, Hinduism, Buddhism, Christianity",
+      "index": 4726
+    },
+    {
+      "subject": "Mehmed the Conqueror",
+      "object": "Islam",
+      "object_candidates": "Muslim, Christianity, Buddhism, Judaism, Ciencias, Hinduism, Catholicism, Islam",
+      "index": 4727
+    },
+    {
+      "subject": "Hannah Arendt",
+      "object": "Judaism",
+      "object_candidates": "Christianity, Muslim, Ciencias, Islam, Hinduism, Catholicism, Buddhism, Judaism",
+      "index": 4728
+    },
+    {
+      "subject": "John Travolta",
+      "object": "Ciencias",
+      "object_candidates": "Hinduism, Christianity, Buddhism, Islam, Catholicism, Muslim, Judaism, Ciencias",
+      "index": 4729
+    },
+    {
+      "subject": "Romulus Augustus",
+      "object": "Christianity",
+      "object_candidates": "Hinduism, Catholicism, Ciencias, Muslim, Islam, Buddhism, Judaism, Christianity",
+      "index": 4730
+    },
+    {
+      "subject": "Joseph Priestley",
+      "object": "Christianity",
+      "object_candidates": "Islam, Buddhism, Ciencias, Catholicism, Judaism, Muslim, Hinduism, Christianity",
+      "index": 4731
+    },
+    {
+      "subject": "Skanderbeg",
+      "object": "Islam",
+      "object_candidates": "Judaism, Christianity, Ciencias, Buddhism, Hinduism, Muslim, Catholicism, Islam",
+      "index": 4732
+    },
+    {
+      "subject": "Hafez",
+      "object": "Islam",
+      "object_candidates": "Judaism, Ciencias, Christianity, Muslim, Catholicism, Hinduism, Buddhism, Islam",
+      "index": 4733
+    },
+    {
+      "subject": "Jean-Jacques Rousseau",
+      "object": "Christianity",
+      "object_candidates": "Hinduism, Catholicism, Judaism, Islam, Muslim, Buddhism, Ciencias, Christianity",
+      "index": 4734
+    },
+    {
+      "subject": "Alfred the Great",
+      "object": "Christianity",
+      "object_candidates": "Muslim, Buddhism, Judaism, Hinduism, Ciencias, Catholicism, Islam, Christianity",
+      "index": 4735
+    },
+    {
+      "subject": "Zheng He",
+      "object": "Islam",
+      "object_candidates": "Muslim, Ciencias, Buddhism, Judaism, Hinduism, Catholicism, Christianity, Islam",
+      "index": 4736
+    },
+    {
+      "subject": "Eid al-Fitr",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Muslim, Catholicism, Ciencias, Judaism, Christianity, Hinduism, Islam",
+      "index": 4737
+    },
+    {
+      "subject": "Jawaharlal Nehru",
+      "object": "Hinduism",
+      "object_candidates": "Catholicism, Christianity, Buddhism, Ciencias, Muslim, Judaism, Islam, Hinduism",
+      "index": 4738
+    },
+    {
+      "subject": "Shah Jahan",
+      "object": "Islam",
+      "object_candidates": "Muslim, Judaism, Catholicism, Hinduism, Ciencias, Buddhism, Christianity, Islam",
+      "index": 4739
+    },
+    {
+      "subject": "Almoravid dynasty",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Muslim, Judaism, Catholicism, Christianity, Buddhism, Hinduism, Islam",
+      "index": 4740
+    },
+    {
+      "subject": "Mongolian People's Republic",
+      "object": "Buddhism",
+      "object_candidates": "Hinduism, Christianity, Catholicism, Muslim, Islam, Ciencias, Judaism, Buddhism",
+      "index": 4741
+    },
+    {
+      "subject": "Sweyn I of Denmark",
+      "object": "Christianity",
+      "object_candidates": "Islam, Catholicism, Muslim, Judaism, Ciencias, Hinduism, Buddhism, Christianity",
+      "index": 4742
+    },
+    {
+      "subject": "Sarvepalli Radhakrishnan",
+      "object": "Hinduism",
+      "object_candidates": "Islam, Catholicism, Muslim, Ciencias, Christianity, Judaism, Buddhism, Hinduism",
+      "index": 4743
+    },
+    {
+      "subject": "Taj Mahal",
+      "object": "Islam",
+      "object_candidates": "Judaism, Christianity, Buddhism, Ciencias, Muslim, Hinduism, Catholicism, Islam",
+      "index": 4744
+    },
+    {
+      "subject": "Mohamed Morsi",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Buddhism, Judaism, Ciencias, Muslim, Hinduism, Christianity, Islam",
+      "index": 4745
+    },
+    {
+      "subject": "Ahmed I",
+      "object": "Islam",
+      "object_candidates": "Christianity, Buddhism, Judaism, Ciencias, Catholicism, Muslim, Hinduism, Islam",
+      "index": 4746
+    },
+    {
+      "subject": "Franz Kafka",
+      "object": "Judaism",
+      "object_candidates": "Islam, Muslim, Catholicism, Hinduism, Christianity, Ciencias, Buddhism, Judaism",
+      "index": 4747
+    },
+    {
+      "subject": "Khalifa bin Zayed Al Nahyan",
+      "object": "Islam",
+      "object_candidates": "Ciencias, Buddhism, Christianity, Catholicism, Judaism, Muslim, Hinduism, Islam",
+      "index": 4748
+    },
+    {
+      "subject": "Edward I of England",
+      "object": "Christianity",
+      "object_candidates": "Islam, Catholicism, Judaism, Buddhism, Ciencias, Hinduism, Muslim, Christianity",
+      "index": 4749
+    },
+    {
+      "subject": "Marilyn Monroe",
+      "object": "Judaism",
+      "object_candidates": "Catholicism, Hinduism, Islam, Ciencias, Christianity, Buddhism, Muslim, Judaism",
+      "index": 4750
+    },
+    {
+      "subject": "Babur",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Buddhism, Muslim, Ciencias, Hinduism, Judaism, Christianity, Islam",
+      "index": 4751
+    },
+    {
+      "subject": "Selim I",
+      "object": "Islam",
+      "object_candidates": "Catholicism, Hinduism, Christianity, Muslim, Judaism, Buddhism, Ciencias, Islam",
+      "index": 4752
+    },
+    {
+      "subject": "Fahd bin Abdulaziz Al Saud",
+      "object": "Islam",
+      "object_candidates": "Buddhism, Muslim, Catholicism, Ciencias, Judaism, Christianity, Hinduism, Islam",
+      "index": 4753
+    },
+    {
+      "subject": "Pervez Musharraf",
+      "object": "Islam",
+      "object_candidates": "Hinduism, Muslim, Buddhism, Ciencias, Judaism, Catholicism, Christianity, Islam",
+      "index": 4754
+    },
+    {
+      "subject": "Anwar Sadat",
+      "object": "Islam",
+      "object_candidates": "Muslim, Buddhism, Judaism, Ciencias, Hinduism, Christianity, Catholicism, Islam",
+      "index": 4755
+    },
+    {
+      "subject": "Leo IX",
+      "object": "Christianity",
+      "object_candidates": "Hinduism, Catholicism, Judaism, Ciencias, Islam, Muslim, Buddhism, Christianity",
+      "index": 4756
+    }
+  ],
+  "relation_id": "P140"
+}

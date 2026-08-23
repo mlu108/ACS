@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "Thuật ngữ ban đầu của <subject> là gì? Câu trả lời là: <mask>.",
+    "Trong ngôn ngữ nào <subject> được sáng tác ban đầu? Câu trả lời là: <mask>.",
+    "<subject> ban đầu được viết bằng ngôn ngữ nào? Câu trả lời là: <mask>.",
+    "Ngôn ngữ nào được sử dụng cho công việc ban đầu của <subject>? Câu trả lời là: <mask>.",
+    "<subject> được sản xuất ban đầu bằng ngôn ngữ nào? Câu trả lời là: <mask>.",
+    " Ngôn ngữ ban đầu của <subject> là <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Nhà thờ Đức Bà Paris",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hà Lan, tiếng Hy Lạp, tiếng Ý, tiếng Đức, tiếng Nga, tiếng Phần Lan, tiếng Anh, tiếng Pháp",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "Vua sư tử",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Nga, tiếng Pháp, tiếng Hà Lan, tiếng Hy Lạp, tiếng Đức, tiếng Ý, tiếng Phần Lan, tiếng Anh",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "The Intouchables",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hy Lạp, tiếng Phần Lan, tiếng Đức, tiếng Anh, tiếng Hà Lan, tiếng Nga, tiếng Ý, tiếng Pháp",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "Adventure Time",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Phần Lan, tiếng Pháp, tiếng Hà Lan, tiếng Ý, tiếng Đức, tiếng Hy Lạp, tiếng Nga, tiếng Anh",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Cháy bỏng dưới ánh mặt trời",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Phần Lan, tiếng Hy Lạp, tiếng Ý, tiếng Đức, tiếng Anh, tiếng Pháp, tiếng Hà Lan, tiếng Nga",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Nghệ sĩ dương cầm",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Hy Lạp, tiếng Hà Lan, tiếng Nga, tiếng Đức, tiếng Phần Lan, tiếng Pháp, tiếng Anh",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bá tước Monte Cristo",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Nga, tiếng Phần Lan, tiếng Đức, tiếng Hà Lan, tiếng Hy Lạp, tiếng Anh, tiếng Ý, tiếng Pháp",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Triệu phú ổ chuột",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Phần Lan, tiếng Hà Lan, tiếng Ý, tiếng Hy Lạp, tiếng Nga, tiếng Đức, tiếng Pháp, tiếng Anh",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Phần Lan, tiếng Hy Lạp, tiếng Pháp, tiếng Ý, tiếng Nga, tiếng Hà Lan, tiếng Đức, tiếng Anh",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bố già",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Pháp, tiếng Hy Lạp, tiếng Đức, tiếng Nga, tiếng Phần Lan, tiếng Hà Lan, tiếng Ý, tiếng Anh",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ghostbusters",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hà Lan, tiếng Pháp, tiếng Hy Lạp, tiếng Đức, tiếng Phần Lan, tiếng Ý, tiếng Nga, tiếng Anh",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ba chàng lính ngự lâm",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Hà Lan, tiếng Hy Lạp, tiếng Anh, tiếng Đức, tiếng Phần Lan, tiếng Ý, tiếng Nga, tiếng Pháp",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "Wikipedia tiếng Hà Lan",
+      "object": "tiếng Hà Lan",
+      "object_candidates": "tiếng Anh, tiếng Nga, tiếng Hy Lạp, tiếng Pháp, tiếng Ý, tiếng Đức, tiếng Phần Lan, tiếng Hà Lan",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Ý, tiếng Nga, tiếng Phần Lan, tiếng Anh, tiếng Hy Lạp, tiếng Hà Lan, tiếng Đức, tiếng Pháp",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Hà Lan, tiếng Nga, tiếng Đức, tiếng Pháp, tiếng Hy Lạp, tiếng Phần Lan, tiếng Anh",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Il buono, il brutto, il cattivo",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Nga, tiếng Anh, tiếng Đức, tiếng Pháp, tiếng Hà Lan, tiếng Hy Lạp, tiếng Phần Lan, tiếng Ý",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Nhanh và nguy hiểm",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Nga, tiếng Pháp, tiếng Đức, tiếng Ý, tiếng Hà Lan, tiếng Hy Lạp, tiếng Phần Lan, tiếng Anh",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "Die Zauberflöte",
+      "object": "tiếng Đức",
+      "object_candidates": "tiếng Ý, tiếng Hà Lan, tiếng Phần Lan, tiếng Anh, tiếng Pháp, tiếng Hy Lạp, tiếng Nga, tiếng Đức",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "ICarly",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hy Lạp, tiếng Hà Lan, tiếng Đức, tiếng Pháp, tiếng Nga, tiếng Phần Lan, tiếng Ý, tiếng Anh",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "Đại bách khoa toàn thư Xô Viết",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Ý, tiếng Đức, tiếng Pháp, tiếng Hà Lan, tiếng Phần Lan, tiếng Hy Lạp, tiếng Anh, tiếng Nga",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Mèo đi hia",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Hy Lạp, tiếng Đức, tiếng Anh, tiếng Pháp, tiếng Phần Lan, tiếng Hà Lan, tiếng Nga, tiếng Ý",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Wikipedia tiếng Phần Lan",
+      "object": "tiếng Phần Lan",
+      "object_candidates": "tiếng Hy Lạp, tiếng Pháp, tiếng Đức, tiếng Ý, tiếng Anh, tiếng Nga, tiếng Hà Lan, tiếng Phần Lan",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Tom và Jerry",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Nga, tiếng Đức, tiếng Phần Lan, tiếng Hy Lạp, tiếng Hà Lan, tiếng Pháp, tiếng Ý, tiếng Anh",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sách Rừng xanh",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Phần Lan, tiếng Nga, tiếng Pháp, tiếng Hy Lạp, tiếng Đức, tiếng Hà Lan, tiếng Anh",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Hy Lạp",
+      "object": "tiếng Hy Lạp",
+      "object_candidates": "tiếng Phần Lan, tiếng Nga, tiếng Hà Lan, tiếng Pháp, tiếng Đức, tiếng Anh, tiếng Ý, tiếng Hy Lạp",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Tây Ban Nha, tiếng Ý, tiếng Thổ Nhĩ Kỳ, tiếng Đan Mạch, tiếng Bengal, tiếng Đức, tiếng Pháp, tiếng Triều Tiên, tiếng Bulgaria, tiếng Anh",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ba Lan, tiếng Thổ Nhĩ Kỳ, tiếng Latinh, tiếng Bengal, tiếng Séc, tiếng Nga, tiếng Tây Ban Nha, tiếng Ý, tiếng Thụy Điển, tiếng Anh",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aeneis",
+      "object": "tiếng Latinh",
+      "object_candidates": "tiếng Việt, tiếng Ba Lan, tiếng Ý, tiếng Anh, tiếng Catalan, tiếng Séc, tiếng Hungary, tiếng Nga, tiếng Bengal, tiếng Latinh",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Wikipedia tiếng Nga",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Triều Tiên, tiếng Thụy Điển, tiếng Bulgaria, tiếng Hungary, tiếng Đức, tiếng Anh, tiếng Ba Lan, tiếng Bengal, tiếng Tây Ban Nha, tiếng Nga",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Star Trek Into Darkness",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bengal, tiếng Ukraina, tiếng Đức, tiếng Thụy Điển, tiếng Ba Lan, tiếng Việt, tiếng Bulgaria, tiếng Latinh, tiếng Tây Ban Nha, tiếng Anh",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Đức, tiếng Estonia, tiếng Tây Ban Nha, tiếng Thổ Nhĩ Kỳ, tiếng Hungary, tiếng Ý, tiếng Bulgaria, tiếng Nga, tiếng Anh, tiếng Pháp",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Washington Post",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đan Mạch, tiếng Estonia, tiếng Tây Ban Nha, tiếng Đức, tiếng Nga, tiếng Hà Lan, tiếng Triều Tiên, tiếng Thụy Điển, tiếng Croatia, tiếng Anh",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "Playboy",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đan Mạch, tiếng Catalan, tiếng Estonia, tiếng Hungary, tiếng Tây Ban Nha, tiếng Thụy Điển, tiếng Đức, tiếng Pháp, tiếng Bulgaria, tiếng Anh",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "New Horizons",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Catalan, tiếng Ukraina, tiếng Hungary, tiếng Bengal, tiếng Phần Lan, tiếng Thụy Điển, tiếng Ba Lan, tiếng Hà Lan, tiếng Anh",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aida",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Thổ Nhĩ Kỳ, tiếng Hà Lan, tiếng Hungary, tiếng Ba Lan, tiếng Latinh, tiếng Ukraina, tiếng Thụy Điển, tiếng Catalan, tiếng Bulgaria, tiếng Ý",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Science",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bengal, tiếng Hungary, tiếng Việt, tiếng Đức, tiếng Ukraina, tiếng Bulgaria, tiếng Croatia, tiếng Phần Lan, tiếng Latinh, tiếng Anh",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tình yêu tìm lại",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hà Lan, tiếng Việt, tiếng Bengal, tiếng Đức, tiếng Latinh, tiếng Đan Mạch, tiếng Hungary, tiếng Bulgaria, tiếng Nga, tiếng Anh",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tạp chí Newsweek",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bulgaria, tiếng Catalan, tiếng Latinh, tiếng Séc, tiếng Đan Mạch, tiếng Bengal, tiếng Ý, tiếng Croatia, tiếng Hungary, tiếng Anh",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "First Blood",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, tiếng Estonia, tiếng Ý, tiếng Ba Lan, tiếng Tây Ban Nha, tiếng Pháp, tiếng Croatia, tiếng Bulgaria, tiếng Đan Mạch, tiếng Anh",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hoàng Tử Bé",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Estonia, tiếng Nga, tiếng Ukraina, tiếng Latinh, tiếng Ý, tiếng Tây Ban Nha, tiếng Séc, tiếng Anh, tiếng Bulgaria, tiếng Pháp",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ukraina, tiếng Phần Lan, tiếng Croatia, tiếng Ý, tiếng Bulgaria, tiếng Đức, tiếng Thụy Điển, tiếng Tây Ban Nha, tiếng Pháp, tiếng Anh",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Đan Mạch",
+      "object": "tiếng Đan Mạch",
+      "object_candidates": "tiếng Phần Lan, tiếng Croatia, tiếng Hungary, tiếng Nga, tiếng Latinh, tiếng Ukraina, tiếng Bulgaria, tiếng Anh, tiếng Thụy Điển, tiếng Đan Mạch",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Le Monde",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Ukraina, tiếng Estonia, tiếng Đan Mạch, tiếng Triều Tiên, tiếng Thụy Điển, tiếng Croatia, tiếng Nga, tiếng Đức, tiếng Phần Lan, tiếng Pháp",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "Le Figaro",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Ba Lan, tiếng Bengal, tiếng Việt, tiếng Latinh, tiếng Phần Lan, tiếng Nga, tiếng Hà Lan, tiếng Thụy Điển, tiếng Estonia, tiếng Pháp",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "Wikipedia tiếng Séc",
+      "object": "tiếng Séc",
+      "object_candidates": "tiếng Pháp, tiếng Bengal, tiếng Thụy Điển, tiếng Croatia, tiếng Việt, tiếng Ukraina, tiếng Estonia, tiếng Triều Tiên, tiếng Ý, tiếng Séc",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "The Guardian",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Tây Ban Nha, tiếng Ý, tiếng Bulgaria, tiếng Hungary, tiếng Hà Lan, tiếng Nga, tiếng Bengal, tiếng Đan Mạch, tiếng Đức, tiếng Anh",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Croatia",
+      "object": "tiếng Croatia",
+      "object_candidates": "tiếng Hungary, tiếng Việt, tiếng Đan Mạch, tiếng Pháp, tiếng Tây Ban Nha, tiếng Bengal, tiếng Hà Lan, tiếng Nga, tiếng Ba Lan, tiếng Croatia",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Hiệp ước Utrecht",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Croatia, tiếng Ukraina, tiếng Việt, tiếng Séc, tiếng Hungary, tiếng Catalan, tiếng Thụy Điển, tiếng Bulgaria, tiếng Tây Ban Nha, tiếng Anh",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bulgaria, tiếng Việt, tiếng Séc, tiếng Ukraina, tiếng Phần Lan, tiếng Đức, tiếng Tây Ban Nha, tiếng Đan Mạch, tiếng Catalan, tiếng Anh",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wilhelmus van Nassouwe",
+      "object": "tiếng Hà Lan",
+      "object_candidates": "tiếng Thổ Nhĩ Kỳ, tiếng Séc, tiếng Triều Tiên, tiếng Anh, tiếng Pháp, tiếng Tây Ban Nha, tiếng Hungary, tiếng Đức, tiếng Ukraina, tiếng Hà Lan",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Wikipedia tiếng Thụy Điển",
+      "object": "tiếng Thụy Điển",
+      "object_candidates": "tiếng Bulgaria, tiếng Estonia, tiếng Thổ Nhĩ Kỳ, tiếng Ý, tiếng Croatia, tiếng Nga, tiếng Tây Ban Nha, tiếng Latinh, tiếng Hungary, tiếng Thụy Điển",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Wikipedia tiếng Ba Lan",
+      "object": "tiếng Ba Lan",
+      "object_candidates": "tiếng Estonia, tiếng Pháp, tiếng Phần Lan, tiếng Đan Mạch, tiếng Séc, tiếng Tây Ban Nha, tiếng Catalan, tiếng Hà Lan, tiếng Ý, tiếng Ba Lan",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Wikipedia tiếng Estonia",
+      "object": "tiếng Estonia",
+      "object_candidates": "tiếng Hungary, tiếng Đức, tiếng Pháp, tiếng Việt, tiếng Thổ Nhĩ Kỳ, tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Latinh, tiếng Ukraina, tiếng Estonia",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Estonia, tiếng Nga, tiếng Tây Ban Nha, tiếng Đan Mạch, tiếng Pháp, tiếng Đức, tiếng Catalan, tiếng Séc, tiếng Anh",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Catalan",
+      "object": "tiếng Catalan",
+      "object_candidates": "tiếng Nga, tiếng Estonia, tiếng Thụy Điển, tiếng Thổ Nhĩ Kỳ, tiếng Ý, tiếng Ba Lan, tiếng Anh, tiếng Việt, tiếng Triều Tiên, tiếng Catalan",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Wikipedia tiếng Việt",
+      "object": "tiếng Việt",
+      "object_candidates": "tiếng Ba Lan, tiếng Đức, tiếng Séc, tiếng Thổ Nhĩ Kỳ, tiếng Hà Lan, tiếng Ukraina, tiếng Tây Ban Nha, tiếng Croatia, tiếng Pháp, tiếng Việt",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "Die Zauberflöte",
+      "object": "tiếng Đức",
+      "object_candidates": "tiếng Phần Lan, tiếng Croatia, tiếng Bengal, tiếng Tây Ban Nha, tiếng Nga, tiếng Catalan, tiếng Anh, tiếng Pháp, tiếng Hà Lan, tiếng Đức",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "Wikipedia tiếng Triều Tiên",
+      "object": "tiếng Triều Tiên",
+      "object_candidates": "tiếng Việt, tiếng Tây Ban Nha, tiếng Phần Lan, tiếng Đức, tiếng Bengal, tiếng Bulgaria, tiếng Estonia, tiếng Hà Lan, tiếng Ba Lan, tiếng Triều Tiên",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Đan Mạch, tiếng Bulgaria, tiếng Phần Lan, tiếng Catalan, tiếng Latinh, tiếng Hungary, tiếng Séc, tiếng Đức, tiếng Tây Ban Nha, tiếng Pháp",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "Oliver Twist",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Catalan, tiếng Triều Tiên, tiếng Pháp, tiếng Croatia, tiếng Đan Mạch, tiếng Estonia, tiếng Thụy Điển, tiếng Ba Lan, tiếng Nga, tiếng Anh",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Cuộc phiêu lưu của Alice vào Xứ sở thần tiên",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Catalan, tiếng Latinh, tiếng Ukraina, tiếng Bulgaria, tiếng Ý, tiếng Phần Lan, tiếng Đan Mạch, tiếng Việt, tiếng Thổ Nhĩ Kỳ, tiếng Anh",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kiêu hãnh và định kiến",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đan Mạch, tiếng Triều Tiên, tiếng Phần Lan, tiếng Ý, tiếng Hungary, tiếng Pháp, tiếng Bengal, tiếng Tây Ban Nha, tiếng Bulgaria, tiếng Anh",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Time",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bulgaria, tiếng Đức, tiếng Ba Lan, tiếng Catalan, tiếng Séc, tiếng Estonia, tiếng Tây Ban Nha, tiếng Nga, tiếng Ukraina, tiếng Anh",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Đại gia Gatsby",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Bulgaria, tiếng Triều Tiên, tiếng Thổ Nhĩ Kỳ, tiếng Catalan, tiếng Thụy Điển, tiếng Tây Ban Nha, tiếng Ý, tiếng Pháp, tiếng Nga, tiếng Anh",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Séc, tiếng Croatia, tiếng Đan Mạch, tiếng Thổ Nhĩ Kỳ, tiếng Bengal, tiếng Phần Lan, tiếng Ba Lan, tiếng Triều Tiên, tiếng Pháp, tiếng Anh",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Estonia, tiếng Đức, tiếng Nga, tiếng Thụy Điển, tiếng Việt, tiếng Ukraina, tiếng Hà Lan, tiếng Latinh, tiếng Bulgaria, tiếng Tây Ban Nha",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Amar Sonar Bangla",
+      "object": "tiếng Bengal",
+      "object_candidates": "tiếng Tây Ban Nha, tiếng Latinh, tiếng Hungary, tiếng Ba Lan, tiếng Nga, tiếng Ý, tiếng Estonia, tiếng Thụy Điển, tiếng Anh, tiếng Bengal",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "tiếng Phần Lan",
+      "object_candidates": "tiếng Thổ Nhĩ Kỳ, tiếng Triều Tiên, tiếng Hà Lan, tiếng Ý, tiếng Nga, tiếng Bulgaria, tiếng Catalan, tiếng Croatia, tiếng Ukraina, tiếng Phần Lan",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Wikipedia tiếng Đức",
+      "object": "tiếng Đức",
+      "object_candidates": "tiếng Hungary, tiếng Bulgaria, tiếng Hà Lan, tiếng Tây Ban Nha, tiếng Ukraina, tiếng Bengal, tiếng Thổ Nhĩ Kỳ, tiếng Triều Tiên, tiếng Croatia, tiếng Đức",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "Hòa ước Versailles",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Estonia, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Đức, tiếng Triều Tiên, tiếng Ukraina, tiếng Bengal, tiếng Nga, tiếng Anh, tiếng Pháp",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Yevgeny Onegin",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Triều Tiên, tiếng Việt, tiếng Thụy Điển, tiếng Ba Lan, tiếng Phần Lan, tiếng Catalan, tiếng Ukraina, tiếng Bulgaria, tiếng Ý, tiếng Nga",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Wikipedia tiếng Ukraina",
+      "object": "tiếng Ukraina",
+      "object_candidates": "tiếng Nga, tiếng Séc, tiếng Ý, tiếng Bulgaria, tiếng Catalan, tiếng Hà Lan, tiếng Tây Ban Nha, tiếng Estonia, tiếng Phần Lan, tiếng Ukraina",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Một chín tám tư",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ukraina, tiếng Estonia, tiếng Catalan, tiếng Ý, tiếng Croatia, tiếng Pháp, tiếng Tây Ban Nha, tiếng Bulgaria, tiếng Latinh, tiếng Anh",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "Những cuộc phiêu lưu của Tom Sawyer",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ý, tiếng Latinh, tiếng Séc, tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Catalan, tiếng Pháp, tiếng Bengal, tiếng Hà Lan, tiếng Anh",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "Terminator: Genesis",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Hà Lan, tiếng Pháp, tiếng Bengal, tiếng Estonia, tiếng Đức, tiếng Bulgaria, tiếng Ý, tiếng Hungary, tiếng Latinh, tiếng Anh",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Séc, tiếng Bulgaria, tiếng Nga, tiếng Đan Mạch, tiếng Catalan, tiếng Phần Lan, tiếng Đức, tiếng Thổ Nhĩ Kỳ, tiếng Hà Lan, tiếng Anh",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mười ngày",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Thụy Điển, tiếng Bengal, tiếng Phần Lan, tiếng Séc, tiếng Catalan, tiếng Bulgaria, tiếng Triều Tiên, tiếng Ukraina, tiếng Pháp, tiếng Ý",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "tiếng Phần Lan",
+      "object_candidates": "tiếng Séc, tiếng Pháp, tiếng Đức, tiếng Hà Lan, tiếng Việt, tiếng Bulgaria, tiếng Latinh, tiếng Bengal, tiếng Hungary, tiếng Phần Lan",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "The Economist",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ba Lan, tiếng Hà Lan, tiếng Croatia, tiếng Tây Ban Nha, tiếng Đức, tiếng Séc, tiếng Thụy Điển, tiếng Phần Lan, tiếng Latinh, tiếng Anh",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Du gamla, Du fria",
+      "object": "tiếng Thụy Điển",
+      "object_candidates": "tiếng Đức, tiếng Ý, tiếng Pháp, tiếng Tây Ban Nha, tiếng Bulgaria, tiếng Estonia, tiếng Anh, tiếng Việt, tiếng Latinh, tiếng Thụy Điển",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Những cuộc phiêu lưu của Pinocchio",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Việt, tiếng Séc, tiếng Croatia, tiếng Anh, tiếng Hungary, tiếng Triều Tiên, tiếng Đan Mạch, tiếng Hà Lan, tiếng Thổ Nhĩ Kỳ, tiếng Ý",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Moby Dick",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Thụy Điển, tiếng Đan Mạch, tiếng Croatia, tiếng Nga, tiếng Việt, tiếng Đức, tiếng Triều Tiên, tiếng Tây Ban Nha, tiếng Pháp, tiếng Anh",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Estonia, tiếng Croatia, tiếng Thổ Nhĩ Kỳ, tiếng Phần Lan, tiếng Latinh, tiếng Đức, tiếng Ukraina, tiếng Đan Mạch, tiếng Hà Lan, tiếng Ý",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Le nozze di Figaro",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Anh, tiếng Thụy Điển, tiếng Ukraina, tiếng Hà Lan, tiếng Thổ Nhĩ Kỳ, tiếng Latinh, tiếng Catalan, tiếng Nga, tiếng Tây Ban Nha, tiếng Ý",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Hiệp ước Maastricht",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Latinh, tiếng Ukraina, tiếng Thụy Điển, tiếng Thổ Nhĩ Kỳ, tiếng Hungary, tiếng Triều Tiên, tiếng Estonia, tiếng Hà Lan, tiếng Séc, tiếng Pháp",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Latinh, tiếng Hà Lan, tiếng Hungary, tiếng Thổ Nhĩ Kỳ, tiếng Triều Tiên, tiếng Thụy Điển, tiếng Nga, tiếng Catalan, tiếng Đức, tiếng Anh",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Bulgaria",
+      "object": "tiếng Bulgaria",
+      "object_candidates": "tiếng Croatia, tiếng Hà Lan, tiếng Catalan, tiếng Latinh, tiếng Đan Mạch, tiếng Estonia, tiếng Hungary, tiếng Ba Lan, tiếng Phần Lan, tiếng Bulgaria",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "The Pirate Bay",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Đức, tiếng Thụy Điển, tiếng Latinh, tiếng Hungary, tiếng Bulgaria, tiếng Việt, tiếng Pháp, tiếng Triều Tiên, tiếng Phần Lan, tiếng Tây Ban Nha",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Wikipedia tiếng Thổ Nhĩ Kỳ",
+      "object": "tiếng Thổ Nhĩ Kỳ",
+      "object_candidates": "tiếng Thụy Điển, tiếng Phần Lan, tiếng Nga, tiếng Việt, tiếng Bengal, tiếng Séc, tiếng Tây Ban Nha, tiếng Triều Tiên, tiếng Catalan, tiếng Thổ Nhĩ Kỳ",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Wikipedia tiếng Hungary",
+      "object": "tiếng Hungary",
+      "object_candidates": "tiếng Phần Lan, tiếng Croatia, tiếng Tây Ban Nha, tiếng Bulgaria, tiếng Thụy Điển, tiếng Ý, tiếng Triều Tiên, tiếng Bengal, tiếng Đan Mạch, tiếng Hungary",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Anna Karenina",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Hungary, tiếng Ý, tiếng Phần Lan, tiếng Anh, tiếng Ukraina, tiếng Estonia, tiếng Ba Lan, tiếng Tây Ban Nha, tiếng Thổ Nhĩ Kỳ, tiếng Nga",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Wikipedia tiếng Serbia",
+      "object": "tiếng Serbia",
+      "object_candidates": "tiếng Việt, tiếng Latinh, tiếng Phần Lan, tiếng Đức, tiếng Anh, tiếng Hà Lan, tiếng Bulgaria, tiếng Thổ Nhĩ Kỳ, tiếng Nga, tiếng Serbia",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Wikipedia tiếng Ý",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Thổ Nhĩ Kỳ, tiếng Phần Lan, tiếng Đức, tiếng Séc, tiếng Đan Mạch, tiếng Catalan, tiếng Triều Tiên, tiếng Thụy Điển, tiếng Ukraina, tiếng Ý",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Wikipedia tiếng Tây Ban Nha",
+      "object": "tiếng Tây Ban Nha",
+      "object_candidates": "tiếng Catalan, tiếng Đan Mạch, tiếng Latinh, tiếng Ý, tiếng Hungary, tiếng Estonia, tiếng Phần Lan, tiếng Bengal, tiếng Croatia, tiếng Tây Ban Nha",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Wikipedia tiếng Phần Lan",
+      "object": "tiếng Phần Lan",
+      "object_candidates": "tiếng Ý, tiếng Đức, tiếng Tây Ban Nha, tiếng Catalan, tiếng Hungary, tiếng Triều Tiên, tiếng Bengal, tiếng Đan Mạch, tiếng Ukraina, tiếng Phần Lan",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Wikipedia tiếng Anh đơn giản",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, tiếng Catalan, tiếng Bengal, tiếng Nga, tiếng Việt, tiếng Séc, tiếng Pháp, tiếng Bulgaria, tiếng Thổ Nhĩ Kỳ, tiếng Anh",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Inglourious Basterds",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Estonia, tiếng Catalan, tiếng Pháp, tiếng Thổ Nhĩ Kỳ, tiếng Tây Ban Nha, tiếng Hungary, tiếng Latinh, tiếng Ba Lan, tiếng Phần Lan, tiếng Anh",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Đức, tiếng Tây Ban Nha, tiếng Pháp, tiếng Hungary, tiếng Séc, tiếng Catalan, tiếng Bengal, tiếng Việt, tiếng Ukraina, tiếng Anh",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alexander",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Latinh, tiếng Croatia, tiếng Đan Mạch, tiếng Ý, tiếng Đức, tiếng Triều Tiên, tiếng Phần Lan, tiếng Ukraina, tiếng Catalan, tiếng Anh",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "The Imitation Game",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Catalan, tiếng Đức, tiếng Đan Mạch, tiếng Pháp, tiếng Séc, tiếng Phần Lan, tiếng Tây Ban Nha, tiếng Croatia, tiếng Ý, tiếng Anh",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "Don Giovanni",
+      "object": "tiếng Ý",
+      "object_candidates": "tiếng Đan Mạch, tiếng Hungary, tiếng Tây Ban Nha, tiếng Phần Lan, tiếng Hà Lan, tiếng Triều Tiên, tiếng Séc, tiếng Estonia, tiếng Pháp, tiếng Ý",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Séc, tiếng Ba Lan, tiếng Đức, tiếng Việt, tiếng Bulgaria, tiếng Latinh, tiếng Ukraina, tiếng Ý, tiếng Hungary, tiếng Anh",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "Internet Archive",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Estonia, tiếng Ý, tiếng Hungary, tiếng Latinh, tiếng Bulgaria, tiếng Đan Mạch, tiếng Đức, tiếng Séc, tiếng Hà Lan, tiếng Anh",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bohemian Rhapsody",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Nga, tiếng Croatia, tiếng Bulgaria, tiếng Đan Mạch, tiếng Phần Lan, tiếng Thụy Điển, tiếng Hà Lan, tiếng Pháp, tiếng Đức, tiếng Anh",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wikipedia tiếng Pháp",
+      "object": "tiếng Pháp",
+      "object_candidates": "tiếng Ukraina, tiếng Tây Ban Nha, tiếng Ba Lan, tiếng Bulgaria, tiếng Thụy Điển, tiếng Bengal, tiếng Đan Mạch, tiếng Phần Lan, tiếng Séc, tiếng Pháp",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Los Angeles Times",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Thổ Nhĩ Kỳ, tiếng Latinh, tiếng Hungary, tiếng Estonia, tiếng Triều Tiên, tiếng Đan Mạch, tiếng Tây Ban Nha, tiếng Thụy Điển, tiếng Séc, tiếng Anh",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "Apache",
+      "object": "tiếng Anh",
+      "object_candidates": "tiếng Ukraina, tiếng Đan Mạch, tiếng Séc, tiếng Ba Lan, tiếng Thụy Điển, tiếng Pháp, tiếng Latinh, tiếng Tây Ban Nha, tiếng Estonia, tiếng Anh",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "RIA Novosti",
+      "object": "tiếng Nga",
+      "object_candidates": "tiếng Anh, tiếng Bulgaria, tiếng Tây Ban Nha, tiếng Hungary, tiếng Ukraina, tiếng Đan Mạch, tiếng Phần Lan, tiếng Việt, tiếng Croatia, tiếng Nga",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

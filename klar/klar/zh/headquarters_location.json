@@ -1,0 +1,422 @@
+{
+  "name": "headquarters_location",
+  "prompt_templates": [
+    "<subject> 的总部在哪里？答案是：<mask>",
+    "<subject> 的总部位于哪个城市？答案是：<mask>",
+    "<subject> 的总部位置是哪里？答案是：<mask>",
+    "可以在哪里找到 <subject> 的总部？答案是：<mask>",
+    "哪个地方是 <subject> 的总部所在地？答案是：<mask>",
+    "<subject>的总部位于<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "巴黎圣日耳曼足球俱乐部",
+      "object": "巴黎",
+      "object_candidates": "北京市, 喀布尔, 南锡, 斯德哥尔摩, 里昂, 柏林, 慕尼黑, 佛罗伦萨, 莱比锡, 巴黎",
+      "index": 6101,
+      "subject_en": "Paris Saint-Germain F.C.",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "佛罗伦萨大学",
+      "object": "佛罗伦萨",
+      "object_candidates": "罗马, 芝加哥, 首尔, 北京市, 京都市, 丰田市, 巴塞罗那, 蒙特利尔, 柏林, 佛罗伦萨",
+      "index": 6102,
+      "subject_en": "University of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "纳粹党",
+      "object": "慕尼黑",
+      "object_candidates": "斯坦福, 台北市, 基辅, 京都市, 伦敦, 罗马, 丰田市, 蒙特利尔, 喀布尔, 慕尼黑",
+      "index": 6103,
+      "subject_en": "Nazi Party",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "地中海联盟",
+      "object": "巴塞罗那",
+      "object_candidates": "日内瓦, 北京市, 塞拉耶佛, 普罗维登斯, 基辅, 雅典, 斯坦福, 剑桥, 谢菲尔德, 巴塞罗那",
+      "index": 6104,
+      "subject_en": "Union for the Mediterranean",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "国际刑警组织",
+      "object": "里昂",
+      "object_candidates": "乔治敦, 塞拉耶佛, 美茵河畔法兰克福, 柏林, 巴塞罗那, 德黑兰, 莫斯科, 斯坦福, 喀布尔, 里昂",
+      "index": 6105,
+      "subject_en": "Interpol",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "民主进步党",
+      "object": "台北市",
+      "object_candidates": "伦敦, 西雅图, 塞拉耶佛, 波恩, 斯德哥尔摩, 京都市, 巴塞罗那, 底特律, 里昂, 台北市",
+      "index": 6106,
+      "subject_en": "Democratic Progressive Party",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "EMI",
+      "object": "伦敦",
+      "object_candidates": "莫斯科, 巴黎, 喀布尔, 莱比锡, 里昂, 底特律, 丰田市, 德黑兰, 谢菲尔德, 伦敦",
+      "index": 6107,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "南锡足球俱乐部",
+      "object": "南锡",
+      "object_candidates": "雅典, 科隆, 首尔, 伦敦, 柏林, 塞拉耶佛, 基辅, 罗马, 普罗维登斯, 南锡",
+      "index": 6108,
+      "subject_en": "A.S. Nancy-Lorraine",
+      "object_en": "Nancy"
+    },
+    {
+      "subject": "SoundCloud",
+      "object": "柏林",
+      "object_candidates": "日内瓦, 西雅图, 剑桥, 佛罗伦萨, 科隆, 乔治敦, 普罗维登斯, 喀布尔, 巴黎, 柏林",
+      "index": 6109,
+      "subject_en": "SoundCloud",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "凯迪拉克",
+      "object": "底特律",
+      "object_candidates": "慕尼黑, 芝加哥, 剑桥, 巴黎, 喀布尔, 美茵河畔法兰克福, 蒙特利尔, 莫斯科, 南锡, 底特律",
+      "index": 6110,
+      "subject_en": "Cadillac",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "宝丽多唱片",
+      "object": "伦敦",
+      "object_candidates": "里昂, 莫斯科, 斯德哥尔摩, 佛罗伦萨, 罗马, 乔治敦, 德黑兰, 莱比锡, 底特律, 伦敦",
+      "index": 6111,
+      "subject_en": "Polydor Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "任天堂",
+      "object": "京都市",
+      "object_candidates": "芝加哥, 剑桥, 美茵河畔法兰克福, 日内瓦, 斯德哥尔摩, 科隆, 西雅图, 台北市, 巴塞罗那, 京都市",
+      "index": 6112,
+      "subject_en": "Nintendo",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "剑桥大学",
+      "object": "剑桥",
+      "object_candidates": "波恩, 底特律, 南锡, 芝加哥, 里昂, 塞拉耶佛, 斯坦福, 首尔, 乔治敦, 剑桥",
+      "index": 6113,
+      "subject_en": "University of Cambridge",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "德国之翼",
+      "object": "科隆",
+      "object_candidates": "剑桥, 柏林, 丰田市, 里昂, 北京市, 斯坦福, 蒙特利尔, 西雅图, 南锡, 科隆",
+      "index": 6114,
+      "subject_en": "Germanwings",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "华盛顿大学",
+      "object": "西雅图",
+      "object_candidates": "斯坦福, 普罗维登斯, 喀布尔, 斯德哥尔摩, 剑桥, 蒙特利尔, 塞拉耶佛, 柏林, 台北市, 西雅图",
+      "index": 6115,
+      "subject_en": "University of Washington",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "爱立信",
+      "object": "斯德哥尔摩",
+      "object_candidates": "丰田市, 罗马, 里昂, 佛罗伦萨, 京都市, 柏林, 德黑兰, 基辅, 普罗维登斯, 斯德哥尔摩",
+      "index": 6116,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "布伦特福德足球俱乐部",
+      "object": "伦敦",
+      "object_candidates": "京都市, 普罗维登斯, 乔治敦, 巴黎, 斯德哥尔摩, 基辅, 慕尼黑, 西雅图, 莫斯科, 伦敦",
+      "index": 6117,
+      "subject_en": "Brentford F.C.",
+      "object_en": "London"
+    },
+    {
+      "subject": "阿富汗人民民主党",
+      "object": "喀布尔",
+      "object_candidates": "慕尼黑, 莱比锡, 剑桥, 京都市, 塞拉耶佛, 伦敦, 美茵河畔法兰克福, 斯德哥尔摩, 谢菲尔德, 喀布尔",
+      "index": 6118,
+      "subject_en": "People's Democratic Party of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "三星集团",
+      "object": "首尔",
+      "object_candidates": "佛罗伦萨, 波恩, 谢菲尔德, 雅典, 乔治敦, 美茵河畔法兰克福, 蒙特利尔, 莫斯科, 底特律, 首尔",
+      "index": 6119,
+      "subject_en": "Samsung",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "北京国安足球俱乐部",
+      "object": "北京市",
+      "object_candidates": "巴塞罗那, 伦敦, 首尔, 芝加哥, 莱比锡, 底特律, 剑桥, 雅典, 罗马, 北京市",
+      "index": 6120,
+      "subject_en": "Beijing Guoan F.C.",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "第三国际",
+      "object": "莫斯科",
+      "object_candidates": "谢菲尔德, 莱比锡, 台北市, 京都市, 罗马, 蒙特利尔, 德黑兰, 乔治敦, 南锡, 莫斯科",
+      "index": 6121,
+      "subject_en": "Comintern",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "吉尼斯世界纪录大全",
+      "object": "伦敦",
+      "object_candidates": "基辅, 西雅图, 普罗维登斯, 谢菲尔德, 蒙特利尔, 慕尼黑, 剑桥, 柏林, 佛罗伦萨, 伦敦",
+      "index": 6122,
+      "subject_en": "Guinness World Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "世界国际象棋联合会",
+      "object": "雅典",
+      "object_candidates": "乔治敦, 巴塞罗那, 南锡, 基辅, 德黑兰, 芝加哥, 喀布尔, 美茵河畔法兰克福, 塞拉耶佛, 雅典",
+      "index": 6123,
+      "subject_en": "FIDE",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "劳力士",
+      "object": "日内瓦",
+      "object_candidates": "南锡, 里昂, 斯坦福, 蒙特利尔, 柏林, 伦敦, 莫斯科, 台北市, 谢菲尔德, 日内瓦",
+      "index": 6124,
+      "subject_en": "Rolex",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "东方亚述教会",
+      "object": "芝加哥",
+      "object_candidates": "乔治敦, 剑桥, 罗马, 京都市, 南锡, 斯德哥尔摩, 丰田市, 柏林, 科隆, 芝加哥",
+      "index": 6125,
+      "subject_en": "Assyrian Church of the East",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "巴黎大学",
+      "object": "巴黎",
+      "object_candidates": "莱比锡, 波恩, 谢菲尔德, 里昂, 德黑兰, 北京市, 首尔, 底特律, 南锡, 巴黎",
+      "index": 6126,
+      "subject_en": "University of Paris",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "国际网球总会",
+      "object": "伦敦",
+      "object_candidates": "丰田市, 谢菲尔德, 乔治敦, 普罗维登斯, 蒙特利尔, 巴塞罗那, 基辅, 塞拉耶佛, 剑桥, 伦敦",
+      "index": 6127,
+      "subject_en": "International Tennis Federation",
+      "object_en": "London"
+    },
+    {
+      "subject": "德国之声",
+      "object": "波恩",
+      "object_candidates": "丰田市, 塞拉耶佛, 芝加哥, 谢菲尔德, 首尔, 巴黎, 德黑兰, 蒙特利尔, 喀布尔, 波恩",
+      "index": 6128,
+      "subject_en": "Deutsche Welle",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "谢周三足球俱乐部",
+      "object": "谢菲尔德",
+      "object_candidates": "普罗维登斯, 科隆, 佛罗伦萨, 底特律, 斯德哥尔摩, 剑桥, 伦敦, 喀布尔, 基辅, 谢菲尔德",
+      "index": 6129,
+      "subject_en": "Sheffield Wednesday F.C.",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "世界贸易组织",
+      "object": "日内瓦",
+      "object_candidates": "喀布尔, 佛罗伦萨, 莱比锡, 柏林, 首尔, 雅典, 谢菲尔德, 蒙特利尔, 德黑兰, 日内瓦",
+      "index": 6130,
+      "subject_en": "World Trade Organization",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "莱比锡RB",
+      "object": "莱比锡",
+      "object_candidates": "剑桥, 里昂, 普罗维登斯, 雅典, 慕尼黑, 斯坦福, 台北市, 莫斯科, 京都市, 莱比锡",
+      "index": 6131,
+      "subject_en": "RB Leipzig",
+      "object_en": "Leipzig"
+    },
+    {
+      "subject": "美国足球协会",
+      "object": "芝加哥",
+      "object_candidates": "北京市, 丰田市, 塞拉耶佛, 莫斯科, 佛罗伦萨, 美茵河畔法兰克福, 底特律, 普罗维登斯, 首尔, 芝加哥",
+      "index": 6132,
+      "subject_en": "United States Soccer Federation",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BP",
+      "object": "伦敦",
+      "object_candidates": "雅典, 科隆, 日内瓦, 斯德哥尔摩, 巴塞罗那, 蒙特利尔, 底特律, 柏林, 波恩, 伦敦",
+      "index": 6133,
+      "subject_en": "BP",
+      "object_en": "London"
+    },
+    {
+      "subject": "联想集团",
+      "object": "北京市",
+      "object_candidates": "剑桥, 斯德哥尔摩, 德黑兰, 巴塞罗那, 美茵河畔法兰克福, 蒙特利尔, 莫斯科, 巴黎, 罗马, 北京市",
+      "index": 6134,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "丰田汽车",
+      "object": "丰田市",
+      "object_candidates": "剑桥, 蒙特利尔, 伦敦, 罗马, 雅典, 莱比锡, 芝加哥, 南锡, 德黑兰, 丰田市",
+      "index": 6135,
+      "subject_en": "Toyota",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "法国科学院",
+      "object": "巴黎",
+      "object_candidates": "慕尼黑, 首尔, 科隆, 美茵河畔法兰克福, 莱比锡, 京都市, 日内瓦, 底特律, 佛罗伦萨, 巴黎",
+      "index": 6136,
+      "subject_en": "French Academy of Sciences",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "德国足球总会",
+      "object": "美茵河畔法兰克福",
+      "object_candidates": "里昂, 雅典, 北京市, 日内瓦, 塞拉耶佛, 首尔, 慕尼黑, 西雅图, 斯德哥尔摩, 美茵河畔法兰克福",
+      "index": 6137,
+      "subject_en": "German Football Association",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "卡罗琳学院",
+      "object": "斯德哥尔摩",
+      "object_candidates": "波恩, 南锡, 首尔, 巴黎, 美茵河畔法兰克福, 慕尼黑, 佛罗伦萨, 京都市, 底特律, 斯德哥尔摩",
+      "index": 6138,
+      "subject_en": "Karolinska Institute",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "伊朗伊斯兰革命卫队",
+      "object": "德黑兰",
+      "object_candidates": "普罗维登斯, 雅典, 慕尼黑, 剑桥, 西雅图, 斯坦福, 美茵河畔法兰克福, 底特律, 罗马, 德黑兰",
+      "index": 6139,
+      "subject_en": "Army of the Guardians of the Islamic Revolution",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "巴黎政治大学",
+      "object": "巴黎",
+      "object_candidates": "基辅, 巴塞罗那, 南锡, 北京市, 佛罗伦萨, 乔治敦, 斯坦福, 莱比锡, 日内瓦, 巴黎",
+      "index": 6140,
+      "subject_en": "Sciences Po",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "基辅迪纳摩足球俱乐部",
+      "object": "基辅",
+      "object_candidates": "日内瓦, 雅典, 首尔, 丰田市, 南锡, 乔治敦, 罗马, 佛罗伦萨, 斯坦福, 基辅",
+      "index": 6141,
+      "subject_en": "FC Dynamo Kyiv",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "萨拉热窝足球俱乐部",
+      "object": "塞拉耶佛",
+      "object_candidates": "北京市, 基辅, 德黑兰, 剑桥, 巴塞罗那, 蒙特利尔, 谢菲尔德, 雅典, 丰田市, 塞拉耶佛",
+      "index": 6142,
+      "subject_en": "F.K. Sarajevo",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "欧洲空间局",
+      "object": "巴黎",
+      "object_candidates": "德黑兰, 罗马, 日内瓦, 莫斯科, 台北市, 柏林, 芝加哥, 科隆, 莱比锡, 巴黎",
+      "index": 6143,
+      "subject_en": "European Space Agency",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "布朗大学",
+      "object": "普罗维登斯",
+      "object_candidates": "科隆, 喀布尔, 伦敦, 佛罗伦萨, 莱比锡, 巴塞罗那, 谢菲尔德, 德黑兰, 台北市, 普罗维登斯",
+      "index": 6144,
+      "subject_en": "Brown University",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "日内瓦大学",
+      "object": "日内瓦",
+      "object_candidates": "京都市, 慕尼黑, 南锡, 斯德哥尔摩, 巴黎, 柏林, 蒙特利尔, 基辅, 北京市, 日内瓦",
+      "index": 6145,
+      "subject_en": "University of Geneva",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "道明会",
+      "object": "罗马",
+      "object_candidates": "里昂, 京都市, 日内瓦, 台北市, 慕尼黑, 巴黎, 莱比锡, 谢菲尔德, 莫斯科, 罗马",
+      "index": 6146,
+      "subject_en": "Dominican Order",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "世界摔角娱乐",
+      "object": "斯坦福",
+      "object_candidates": "京都市, 雅典, 首尔, 巴塞罗那, 基辅, 北京市, 南锡, 日内瓦, 罗马, 斯坦福",
+      "index": 6147,
+      "subject_en": "WWE",
+      "object_en": "Stamford"
+    },
+    {
+      "subject": "麦吉尔大学",
+      "object": "蒙特利尔",
+      "object_candidates": "伦敦, 莱比锡, 首尔, 丰田市, 日内瓦, 美茵河畔法兰克福, 普罗维登斯, 罗马, 剑桥, 蒙特利尔",
+      "index": 6148,
+      "subject_en": "McGill University",
+      "object_en": "Montreal"
+    },
+    {
+      "subject": "加勒比共同体",
+      "object": "乔治敦",
+      "object_candidates": "美茵河畔法兰克福, 伦敦, 北京市, 斯坦福, 波恩, 柏林, 西雅图, 罗马, 科隆, 乔治敦",
+      "index": 6149,
+      "subject_en": "Caribbean Community Secretariat",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "凌志",
+      "object": "名古屋市",
+      "object_candidates": "伦敦, 巴塞罗那, 科隆, 柏林, 莫斯科, 波恩, 台北市, 慕尼黑, 普罗维登斯, 名古屋市",
+      "index": 6150,
+      "subject_en": "Lexus",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "谢菲尔德联足球俱乐部",
+      "object": "谢菲尔德",
+      "object_candidates": "罗马, 芝加哥, 斯坦福, 莫斯科, 底特律, 南锡, 斯德哥尔摩, 慕尼黑, 德黑兰, 谢菲尔德",
+      "index": 6151,
+      "subject_en": "Sheffield United F.C.",
+      "object_en": "Sheffield"
+    }
+  ],
+  "relation_id": "P159"
+}

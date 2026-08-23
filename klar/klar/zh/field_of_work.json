@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "<subject> 在什么领域工作？答案是：<mask>",
+    "<subject> 曾在哪个领域工作过？答案是：<mask>",
+    "<subject> 与哪个研究领域相关？答案是：<mask>",
+    "<subject> 因在哪个学科工作而闻名？答案是：<mask>",
+    "<subject> 的主要专业是什么？答案是：<mask>",
+    "<subject>的工作领域是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "艾伦·图灵",
+      "object": "逻辑学",
+      "object_candidates": "生理学, 心理学, 南非种族隔离, 小说家, 鸟纲, 夜总会, 医学, 音乐家, 佛教, 逻辑学",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "阿那克萨哥拉",
+      "object": "哲学",
+      "object_candidates": "几何学, 天文学, 生物学, 语言学, 心理学, 歌剧, 逻辑学, 恐怖主义, 遗传学, 哲学",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "罗伯特·威廉·本生",
+      "object": "化学",
+      "object_candidates": "佛教, 物理学, 剧作家, 天文学家, 语言学, 解剖学, 歌剧, 小说家, 生物学, 化学",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "约翰·加尔文",
+      "object": "神学",
+      "object_candidates": "历史, 解剖学, 逻辑学, 物理学, 心理学, 地理学, 数学, 地质学, 几何学, 神学",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "物质系统",
+      "object": "物理学",
+      "object_candidates": "恐怖主义, 心理学, 历史, 拓扑学, 音乐家, 天文学家, 歌剧, 地理学, 经济学, 物理学",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "卡尔·罗哲斯",
+      "object": "心理学",
+      "object_candidates": "语言学, 逻辑学, 南非种族隔离, 拓扑学, 遗传学, 生理学, 佛教, 科学, 天文学家, 心理学",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "大卫·希尔伯特",
+      "object": "几何学",
+      "object_candidates": "经济学家, 地理学, 拓扑学, 数学, 社会学, 网站, 剧作家, 生态学, 南非种族隔离, 几何学",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "理查德·瓦格纳",
+      "object": "歌剧",
+      "object_candidates": "网站, 数学家, 鸟纲, 数学, 哲学, 经济学, 佛教, 夜总会, 物理学, 歌剧",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "欧几里得",
+      "object": "几何学",
+      "object_candidates": "网站, 遗传学, 恐怖主义, 语言学, 夜总会, 经济学, 天文学家, 地质学, 逻辑学, 几何学",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "马克斯·韦伯",
+      "object": "社会学",
+      "object_candidates": "经济学, 化学, 音乐家, 地质学, 恐怖主义, 数学, 天文学, 拓扑学, 科学, 社会学",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "汉斯·艾森克",
+      "object": "心理学",
+      "object_candidates": "化学, 生理学, 音乐家, 网站, 经济学家, 小说家, 解剖学, 物理学, 天文学家, 心理学",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "尤金·维格纳",
+      "object": "物理学",
+      "object_candidates": "剧作家, 经济学家, 地理学, 南非种族隔离, 语言学, 医学, 化学, 几何学, 恐怖主义, 物理学",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "弗雷德·霍伊尔",
+      "object": "天文学",
+      "object_candidates": "拓扑学, 南非种族隔离, 恐怖主义, 生物学, 哲学, 医学, 经济学, 解剖学, 数学家, 天文学",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "盖伦",
+      "object": "解剖学",
+      "object_candidates": "歌剧, 数学, 经济学家, 心理学, 生理学, 物理学, 网站, 医学, 天文学家, 解剖学",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "威廉·哈维",
+      "object": "生理学",
+      "object_candidates": "生物学, 医学, 遗传学, 音乐家, 语言学, 解剖学, 逻辑学, 化学, 经济学家, 生理学",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "霍华德·卡特",
+      "object": "考古学",
+      "object_candidates": "语言学, 几何学, 神学, 地理学, 生理学, 恐怖主义, 数学家, 数学, 经济学, 考古学",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "海因里希·施利曼",
+      "object": "考古学",
+      "object_candidates": "音乐家, 经济学, 逻辑学, 剧作家, 生物学, 爵士乐, 歌剧, 物理学, 天文学, 考古学",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "克洛德·贝尔纳",
+      "object": "生理学",
+      "object_candidates": "医学, 生物学, 历史, 经济学家, 化学, 经济学, 南非种族隔离, 拓扑学, 几何学, 生理学",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "艾萨克·牛顿",
+      "object": "数学",
+      "object_candidates": "歌剧, 地质学, 生理学, 几何学, 物理学, 鸟纲, 心理学, 考古学, 历史, 数学",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "尤斯图斯·冯·李比希",
+      "object": "化学",
+      "object_candidates": "歌剧, 剧作家, 鸟纲, 哲学, 夜总会, 遗传学, 生态学, 考古学, 网站, 化学",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "弗雷德里克·格兰特·班廷",
+      "object": "生理学",
+      "object_candidates": "数学家, 音乐家, 几何学, 数学, 小说家, 恐怖主义, 逻辑学, 歌剧, 佛教, 生理学",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "卡尔·马克思",
+      "object": "社会学",
+      "object_candidates": "生态学, 恐怖主义, 拓扑学, 数学家, 医学, 天文学家, 神学, 逻辑学, 爵士乐, 社会学",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "汉斯·贝特",
+      "object": "物理学",
+      "object_candidates": "南非种族隔离, 佛教, 科学, 解剖学, 网站, 地质学, 生物学, 天文学, 语言学, 物理学",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "杰克·鲁比",
+      "object": "夜总会",
+      "object_candidates": "地质学, 化学, 天文学, 数学, 爵士乐, 生理学, 物理学, 心理学, 社会学, 夜总会",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "珀西·布里奇曼",
+      "object": "物理学",
+      "object_candidates": "地质学, 鸟纲, 医学, 地理学, 小说家, 哲学, 生理学, 夜总会, 数学家, 物理学",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "吉罗拉莫·卡尔达诺",
+      "object": "数学",
+      "object_candidates": "科学, 社会学, 经济学家, 鸟纲, 网站, 天文学, 小说家, 拓扑学, 解剖学, 数学",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "马克斯·韦伯",
+      "object": "经济学",
+      "object_candidates": "医学, 音乐家, 物理学, 拓扑学, 经济学家, 天文学家, 佛教, 几何学, 恐怖主义, 经济学",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "麦可·法拉第",
+      "object": "化学",
+      "object_candidates": "音乐家, 拓扑学, 恐怖主义, 物理学, 遗传学, 歌剧, 地质学, 地理学, 生物学, 化学",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "鸟类学",
+      "object": "鸟纲",
+      "object_candidates": "剧作家, 历史, 佛教, 神学, 拓扑学, 哲学, 小说家, 生理学, 数学家, 鸟纲",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "博纳文图拉·卡瓦列里",
+      "object": "数学",
+      "object_candidates": "数学家, 社会学, 经济学家, 地理学, 夜总会, 生态学, 音乐家, 歌剧, 生物学, 数学",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "伽利略·伽利莱",
+      "object": "数学",
+      "object_candidates": "小说家, 神学, 经济学家, 剧作家, 遗传学, 社会学, 心理学, 考古学, 夜总会, 数学",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "希帕提娅",
+      "object": "数学",
+      "object_candidates": "物理学, 语言学, 小说家, 医学, 数学家, 几何学, 生理学, 经济学家, 天文学, 数学",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "米格尔·塞尔韦特",
+      "object": "神学",
+      "object_candidates": "生态学, 经济学家, 几何学, 语言学, 心理学, 爵士乐, 物理学, 解剖学, 经济学, 神学",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "爱德文·哈勃",
+      "object": "天文学",
+      "object_candidates": "拓扑学, 哲学, 社会学, 数学家, 网站, 数学, 南非种族隔离, 佛教, 解剖学, 天文学",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "艾萨克·牛顿",
+      "object": "物理学",
+      "object_candidates": "心理学, 医学, 神学, 数学家, 天文学, 解剖学, 剧作家, 歌剧, 生态学, 物理学",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "伊利亚·普里高津",
+      "object": "物理学",
+      "object_candidates": "医学, 音乐家, 歌剧, 拓扑学, 哲学, 数学家, 心理学, 恐怖主义, 历史, 物理学",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "萨丕尔-沃夫假说",
+      "object": "语言学",
+      "object_candidates": "科学, 生态学, 数学家, 经济学家, 解剖学, 南非种族隔离, 遗传学, 生理学, 恐怖主义, 语言学",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "科学方法",
+      "object": "科学",
+      "object_candidates": "解剖学, 哲学, 剧作家, 历史, 网站, 小说家, 生态学, 经济学, 地质学, 科学",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "威廉·克鲁克斯",
+      "object": "化学",
+      "object_candidates": "地质学, 音乐家, 神学, 经济学家, 地理学, 解剖学, 拓扑学, 歌剧, 生态学, 化学",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "史蒂夫·比科",
+      "object": "南非种族隔离",
+      "object_candidates": "语言学, 数学, 心理学, 数学家, 网站, 音乐家, 地理学, 神学, 历史, 南非种族隔离",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "查尔斯·罗伯特·达尔文",
+      "object": "生物学",
+      "object_candidates": "夜总会, 社会学, 歌剧, 恐怖主义, 佛教, 物理学, 地理学, 科学, 神学, 生物学",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "第谷·布拉赫",
+      "object": "天文学",
+      "object_candidates": "佛教, 夜总会, 物理学, 生物学, 医学, 数学家, 心理学, 哲学, 音乐家, 天文学",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "约翰·斯图尔特·密尔",
+      "object": "哲学",
+      "object_candidates": "天文学家, 天文学, 鸟纲, 社会学, 生态学, 爵士乐, 遗传学, 逻辑学, 地质学, 哲学",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "艾伦·图灵",
+      "object": "数学",
+      "object_candidates": "网站, 神学, 天文学家, 遗传学, 解剖学, 物理学, 音乐家, 鸟纲, 数学家, 数学",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "维弗雷多·帕累托",
+      "object": "社会学",
+      "object_candidates": "心理学, 歌剧, 语言学, 数学, 生物学, 爵士乐, 天文学家, 拓扑学, 解剖学, 社会学",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "威廉·萨默塞特·毛姆",
+      "object": "剧作家",
+      "object_candidates": "地质学, 遗传学, 天文学家, 天文学, 社会学, 生态学, 考古学, 恐怖主义, 生理学, 剧作家",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "威廉·萨默塞特·毛姆",
+      "object": "小说家",
+      "object_candidates": "经济学, 生理学, 逻辑学, 考古学, 几何学, 经济学家, 科学, 歌剧, 化学, 小说家",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "恩里科·费米",
+      "object": "物理学",
+      "object_candidates": "心理学, 恐怖主义, 鸟纲, 化学, 生理学, 音乐家, 网站, 哲学, 医学, 物理学",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "乔凡尼·多美尼科·卡西尼",
+      "object": "天文学",
+      "object_candidates": "解剖学, 佛教, 几何学, 小说家, 哲学, 逻辑学, 地质学, 数学家, 天文学家, 天文学",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "约翰·沃尔夫冈·冯·歌德",
+      "object": "解剖学",
+      "object_candidates": "心理学, 数学, 哲学, 音乐家, 恐怖主义, 经济学家, 网站, 佛教, 鸟纲, 解剖学",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "帕拉塞尔苏斯",
+      "object": "医学",
+      "object_candidates": "数学家, 佛教, 歌剧, 科学, 经济学家, 恐怖主义, 天文学家, 剧作家, 经济学, 医学",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "约翰·柯川",
+      "object": "爵士乐",
+      "object_candidates": "小说家, 解剖学, 天文学, 地理学, 生理学, 语言学, 歌剧, 心理学, 生物学, 爵士乐",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "赫尔曼·冯·亥姆霍兹",
+      "object": "物理学",
+      "object_candidates": "历史, 地理学, 医学, 网站, 科学, 南非种族隔离, 经济学家, 鸟纲, 几何学, 物理学",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "盖伦",
+      "object": "医学",
+      "object_candidates": "逻辑学, 生物学, 数学家, 语言学, 遗传学, 天文学家, 社会学, 南非种族隔离, 恐怖主义, 医学",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "亚伯拉罕·马斯洛",
+      "object": "心理学",
+      "object_candidates": "小说家, 解剖学, 地质学, 天文学家, 化学, 数学家, 夜总会, 音乐家, 生态学, 心理学",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "路易·巴斯德",
+      "object": "化学",
+      "object_candidates": "科学, 佛教, 生理学, 社会学, 哲学, 考古学, 南非种族隔离, 鸟纲, 拓扑学, 化学",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "亨利·卡文迪什",
+      "object": "物理学",
+      "object_candidates": "鸟纲, 考古学, 网站, 历史, 数学, 遗传学, 音乐家, 地质学, 解剖学, 物理学",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "卡尔·马克思",
+      "object": "经济学",
+      "object_candidates": "考古学, 佛教, 天文学家, 拓扑学, 南非种族隔离, 神学, 解剖学, 生理学, 医学, 经济学",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "乌尔夫·冯·奥伊勒",
+      "object": "生理学",
+      "object_candidates": "拓扑学, 医学, 社会学, 剧作家, 神学, 物理学, 数学, 歌剧, 几何学, 生理学",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "伽利略·伽利莱",
+      "object": "天文学",
+      "object_candidates": "化学, 夜总会, 科学, 逻辑学, 佛教, 歌剧, 几何学, 医学, 生物学, 天文学",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "罗巴切夫斯基",
+      "object": "几何学",
+      "object_candidates": "神学, 佛教, 逻辑学, 小说家, 社会学, 地理学, 南非种族隔离, 心理学, 地质学, 几何学",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "克里斯蒂安·惠更斯",
+      "object": "数学",
+      "object_candidates": "爵士乐, 历史, 经济学家, 恐怖主义, 化学, 逻辑学, 物理学, 天文学, 鸟纲, 数学",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "网络应用程序",
+      "object": "网站",
+      "object_candidates": "历史, 几何学, 生物学, 地质学, 佛教, 歌剧, 心理学, 生理学, 化学, 网站",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "龙树菩萨",
+      "object": "佛教",
+      "object_candidates": "逻辑学, 数学家, 物理学, 鸟纲, 生态学, 爵士乐, 解剖学, 小说家, 网站, 佛教",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "威廉·哈密顿",
+      "object": "数学",
+      "object_candidates": "科学, 经济学家, 几何学, 考古学, 天文学家, 地理学, 网站, 语言学, 化学, 数学",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "欧内斯特·卢瑟福",
+      "object": "物理学",
+      "object_candidates": "恐怖主义, 历史, 经济学家, 语言学, 考古学, 拓扑学, 解剖学, 生态学, 数学家, 物理学",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "威廉·赫歇尔",
+      "object": "天文学",
+      "object_candidates": "科学, 地质学, 神学, 歌剧, 哲学, 历史, 生物学, 考古学, 佛教, 天文学",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "巴甫洛夫",
+      "object": "生理学",
+      "object_candidates": "南非种族隔离, 心理学, 天文学家, 夜总会, 生物学, 经济学家, 物理学, 地理学, 社会学, 生理学",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "赫尔曼·闵可夫斯基",
+      "object": "几何学",
+      "object_candidates": "恐怖主义, 网站, 神学, 医学, 物理学, 拓扑学, 夜总会, 遗传学, 数学, 几何学",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "伽利略·伽利莱",
+      "object": "物理学",
+      "object_candidates": "几何学, 夜总会, 生态学, 拓扑学, 鸟纲, 逻辑学, 恐怖主义, 音乐家, 剧作家, 物理学",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "朱利安·施温格",
+      "object": "物理学",
+      "object_candidates": "语言学, 生理学, 拓扑学, 解剖学, 科学, 社会学, 地理学, 化学, 神学, 物理学",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "自杀攻击",
+      "object": "恐怖主义",
+      "object_candidates": "拓扑学, 心理学, 哲学, 地理学, 考古学, 语言学, 神学, 几何学, 鸟纲, 恐怖主义",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "利维·维谷斯基",
+      "object": "心理学",
+      "object_candidates": "医学, 爵士乐, 逻辑学, 地理学, 遗传学, 数学, 夜总会, 经济学家, 剧作家, 心理学",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "卡尔·马克思",
+      "object": "哲学",
+      "object_candidates": "心理学, 恐怖主义, 物理学, 夜总会, 生态学, 地质学, 科学, 天文学家, 音乐家, 哲学",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "弗里德里希·威廉·贝塞尔",
+      "object": "数学",
+      "object_candidates": "夜总会, 语言学, 神学, 拓扑学, 生理学, 生物学, 歌剧, 地质学, 逻辑学, 数学",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "约瑟夫·熊彼特",
+      "object": "经济学",
+      "object_candidates": "考古学, 夜总会, 医学, 社会学, 哲学, 爵士乐, 数学家, 逻辑学, 神学, 经济学",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "马克斯·韦伯",
+      "object": "历史",
+      "object_candidates": "鸟纲, 地理学, 解剖学, 科学, 天文学家, 生物学, 遗传学, 夜总会, 生态学, 历史",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "爱德华·吉本",
+      "object": "历史",
+      "object_candidates": "语言学, 恐怖主义, 地理学, 哲学, 神学, 社会学, 南非种族隔离, 剧作家, 生理学, 历史",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "约翰·惠勒",
+      "object": "物理学",
+      "object_candidates": "社会学, 恐怖主义, 夜总会, 生物学, 网站, 南非种族隔离, 地理学, 心理学, 解剖学, 物理学",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "莱昂哈德·欧拉",
+      "object": "物理学",
+      "object_candidates": "佛教, 地理学, 数学, 心理学, 数学家, 爵士乐, 地质学, 南非种族隔离, 语言学, 物理学",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "奥古斯特·克罗",
+      "object": "生理学",
+      "object_candidates": "生物学, 考古学, 逻辑学, 夜总会, 佛教, 地质学, 解剖学, 网站, 经济学, 生理学",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "费利克斯·布洛赫",
+      "object": "物理学",
+      "object_candidates": "南非种族隔离, 科学, 数学家, 心理学, 数学, 地理学, 小说家, 歌剧, 生理学, 物理学",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "安德斯·摄尔修斯",
+      "object": "天文学",
+      "object_candidates": "经济学家, 化学, 生物学, 天文学家, 生理学, 解剖学, 鸟纲, 网站, 几何学, 天文学",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "威廉·埃因托芬",
+      "object": "生理学",
+      "object_candidates": "南非种族隔离, 神学, 夜总会, 天文学, 地理学, 佛教, 语言学, 逻辑学, 生态学, 生理学",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "约瑟夫·夫琅和费",
+      "object": "物理学",
+      "object_candidates": "医学, 音乐家, 科学, 生态学, 数学, 爵士乐, 化学, 数学家, 考古学, 物理学",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "朝永振一郎",
+      "object": "物理学",
+      "object_candidates": "逻辑学, 地质学, 哲学, 神学, 天文学家, 经济学家, 佛教, 科学, 心理学, 物理学",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "赫尔曼·阿曼杜斯·施瓦茨",
+      "object": "数学",
+      "object_candidates": "天文学家, 心理学, 剧作家, 物理学, 夜总会, 音乐家, 几何学, 天文学, 生理学, 数学",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "让·勒朗·达朗贝尔",
+      "object": "数学",
+      "object_candidates": "化学, 小说家, 生理学, 遗传学, 哲学, 生物学, 医学, 考古学, 音乐家, 数学",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "卢卡·帕西奥利",
+      "object": "数学",
+      "object_candidates": "医学, 天文学家, 语言学, 心理学, 天文学, 鸟纲, 哲学, 佛教, 生物学, 数学",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "维塔利·拉扎列维奇·金兹堡",
+      "object": "物理学",
+      "object_candidates": "地理学, 爵士乐, 考古学, 剧作家, 拓扑学, 天文学, 鸟纲, 哲学, 化学, 物理学",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "司马迁",
+      "object": "历史",
+      "object_candidates": "医学, 地质学, 夜总会, 鸟纲, 解剖学, 网站, 生态学, 剧作家, 恐怖主义, 历史",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "克劳狄乌斯·托勒密",
+      "object": "数学家",
+      "object_candidates": "剧作家, 鸟纲, 恐怖主义, 拓扑学, 医学, 天文学家, 几何学, 科学, 音乐家, 数学家",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "让·皮亚杰",
+      "object": "心理学",
+      "object_candidates": "歌剧, 逻辑学, 社会学, 佛教, 神学, 化学, 网站, 解剖学, 考古学, 心理学",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "斯特凡·巴拿赫",
+      "object": "数学",
+      "object_candidates": "逻辑学, 天文学, 生物学, 考古学, 生理学, 科学, 社会学, 恐怖主义, 拓扑学, 数学",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "约瑟夫·普利斯特里",
+      "object": "哲学",
+      "object_candidates": "物理学, 心理学, 经济学, 解剖学, 医学, 恐怖主义, 剧作家, 几何学, 数学, 哲学",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "库尔特·勒温",
+      "object": "心理学",
+      "object_candidates": "化学, 剧作家, 解剖学, 经济学, 天文学, 经济学家, 逻辑学, 歌剧, 佛教, 心理学",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "詹姆斯·克拉克·麦克斯韦",
+      "object": "物理学",
+      "object_candidates": "医学, 地理学, 心理学, 经济学, 歌剧, 天文学, 恐怖主义, 佛教, 生物学, 物理学",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "阿尔弗雷德·马歇尔",
+      "object": "经济学",
+      "object_candidates": "物理学, 地理学, 生物学, 佛教, 科学, 几何学, 天文学, 数学家, 逻辑学, 经济学",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "尼古拉·哥白尼",
+      "object": "天文学",
+      "object_candidates": "逻辑学, 拓扑学, 考古学, 科学, 鸟纲, 地理学, 恐怖主义, 夜总会, 生物学, 天文学",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "埃里克·马斯金",
+      "object": "经济学家",
+      "object_candidates": "佛教, 小说家, 天文学, 科学, 生态学, 社会学, 解剖学, 天文学家, 医学, 经济学家",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "贾德·戴蒙",
+      "object": "生态学",
+      "object_candidates": "化学, 考古学, 地质学, 逻辑学, 物理学, 网站, 科学, 天文学家, 南非种族隔离, 生态学",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "安德雷·柯尔莫哥洛夫",
+      "object": "几何学",
+      "object_candidates": "生物学, 物理学, 语言学, 剧作家, 数学, 网站, 社会学, 小说家, 爵士乐, 几何学",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "约瑟夫·路易·盖-吕萨克",
+      "object": "化学",
+      "object_candidates": "天文学, 鸟纲, 历史, 地理学, 音乐家, 逻辑学, 剧作家, 经济学, 小说家, 化学",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "辛烷",
+      "object": "化学",
+      "object_candidates": "语言学, 拓扑学, 网站, 逻辑学, 南非种族隔离, 歌剧, 科学, 历史, 小说家, 化学",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "丹尼尔·伯努利",
+      "object": "物理学",
+      "object_candidates": "医学, 考古学, 鸟纲, 神学, 剧作家, 心理学, 歌剧, 天文学家, 哲学, 物理学",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "麦可·法拉第",
+      "object": "物理学",
+      "object_candidates": "鸟纲, 生物学, 歌剧, 佛教, 经济学, 拓扑学, 历史, 医学, 心理学, 物理学",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "汉弗里·戴维",
+      "object": "化学",
+      "object_candidates": "剧作家, 经济学家, 心理学, 社会学, 哲学, 逻辑学, 爵士乐, 小说家, 地理学, 化学",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "亨利·莫瓦桑",
+      "object": "化学",
+      "object_candidates": "网站, 逻辑学, 小说家, 数学, 拓扑学, 经济学, 天文学家, 恐怖主义, 夜总会, 化学",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "皮埃尔·居里",
+      "object": "物理学",
+      "object_candidates": "经济学, 神学, 剧作家, 几何学, 考古学, 哲学, 小说家, 心理学, 爵士乐, 物理学",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "古斯塔夫·基尔霍夫",
+      "object": "物理学",
+      "object_candidates": "拓扑学, 数学家, 神学, 科学, 哲学, 数学, 语言学, 南非种族隔离, 医学, 物理学",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "诺伯特·维纳",
+      "object": "数学",
+      "object_candidates": "逻辑学, 佛教, 歌剧, 化学, 生态学, 社会学, 神学, 哲学, 地理学, 数学",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "奥本·勒维耶",
+      "object": "天文学",
+      "object_candidates": "神学, 生理学, 夜总会, 佛教, 地理学, 解剖学, 生物学, 网站, 地质学, 天文学",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "约翰·赫伊津哈",
+      "object": "历史",
+      "object_candidates": "数学家, 爵士乐, 物理学, 小说家, 语言学, 数学, 地理学, 医学, 鸟纲, 历史",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "科学",
+      "object": "科学",
+      "object_candidates": "音乐家, 几何学, 神学, 鸟纲, 逻辑学, 心理学, 爵士乐, 生态学, 天文学家, 科学",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "爱德华·泰勒",
+      "object": "物理学",
+      "object_candidates": "遗传学, 佛教, 数学, 经济学, 逻辑学, 天文学家, 解剖学, 社会学, 爵士乐, 物理学",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "齐柏林飞船",
+      "object": "音乐家",
+      "object_candidates": "考古学, 经济学, 生物学, 逻辑学, 语言学, 心理学, 地质学, 解剖学, 遗传学, 音乐家",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "欧内斯特·劳伦斯",
+      "object": "物理学",
+      "object_candidates": "科学, 鸟纲, 解剖学, 历史, 天文学, 拓扑学, 逻辑学, 医学, 夜总会, 物理学",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "玛丽·居里",
+      "object": "化学",
+      "object_candidates": "经济学, 天文学家, 科学, 佛教, 生态学, 网站, 爵士乐, 数学家, 数学, 化学",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "约翰·纳皮尔",
+      "object": "数学",
+      "object_candidates": "语言学, 神学, 天文学家, 歌剧, 音乐家, 数学家, 医学, 小说家, 遗传学, 数学",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "艾萨克·牛顿",
+      "object": "天文学",
+      "object_candidates": "神学, 生态学, 经济学, 南非种族隔离, 遗传学, 地理学, 解剖学, 数学家, 歌剧, 天文学",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "拉里·桑格",
+      "object": "哲学",
+      "object_candidates": "科学, 物理学, 生理学, 考古学, 生态学, 天文学, 医学, 化学, 天文学家, 哲学",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "菲利普·莱纳德",
+      "object": "物理学",
+      "object_candidates": "恐怖主义, 地质学, 经济学家, 逻辑学, 小说家, 鸟纲, 剧作家, 歌剧, 社会学, 物理学",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "赫尔曼·冯·亥姆霍兹",
+      "object": "生理学",
+      "object_candidates": "经济学, 鸟纲, 数学, 遗传学, 物理学, 网站, 生态学, 数学家, 剧作家, 生理学",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "弗里德里希·威廉·贝塞尔",
+      "object": "天文学",
+      "object_candidates": "南非种族隔离, 心理学, 网站, 逻辑学, 几何学, 哲学, 音乐家, 遗传学, 歌剧, 天文学",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "阿尔弗雷德·金赛",
+      "object": "生物学",
+      "object_candidates": "剧作家, 化学, 社会学, 佛教, 生态学, 地质学, 遗传学, 历史, 歌剧, 生物学",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "圣梅斯罗布",
+      "object": "语言学",
+      "object_candidates": "地质学, 遗传学, 夜总会, 化学, 医学, 科学, 南非种族隔离, 物理学, 拓扑学, 语言学",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "詹姆斯·弗兰克",
+      "object": "物理学",
+      "object_candidates": "天文学, 网站, 社会学, 生态学, 经济学, 科学, 鸟纲, 夜总会, 南非种族隔离, 物理学",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "埃莉诺·奥斯特罗姆",
+      "object": "经济学",
+      "object_candidates": "天文学家, 生理学, 数学家, 南非种族隔离, 鸟纲, 逻辑学, 小说家, 医学, 心理学, 经济学",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "爱德华·阿普尔顿",
+      "object": "物理学",
+      "object_candidates": "数学, 心理学, 天文学家, 鸟纲, 南非种族隔离, 爵士乐, 天文学, 生态学, 神学, 物理学",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "约翰·道尔顿",
+      "object": "化学",
+      "object_candidates": "语言学, 数学家, 剧作家, 历史, 经济学, 生物学, 佛教, 地理学, 哲学, 化学",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "约翰·道尔顿",
+      "object": "物理学",
+      "object_candidates": "数学家, 恐怖主义, 几何学, 拓扑学, 天文学家, 化学, 生理学, 地理学, 解剖学, 物理学",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "德米特里·伊万诺维奇·门捷列夫",
+      "object": "化学",
+      "object_candidates": "物理学, 天文学家, 网站, 考古学, 歌剧, 生物学, 夜总会, 历史, 生态学, 化学",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "德米特里·伊万诺维奇·门捷列夫",
+      "object": "物理学",
+      "object_candidates": "剧作家, 歌剧, 社会学, 地理学, 医学, 数学家, 爵士乐, 数学, 恐怖主义, 物理学",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "保罗·麦卡特尼",
+      "object": "音乐家",
+      "object_candidates": "几何学, 天文学, 神学, 佛教, 剧作家, 恐怖主义, 生态学, 解剖学, 小说家, 音乐家",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "查尔斯·巴贝奇",
+      "object": "数学",
+      "object_candidates": "天文学, 夜总会, 解剖学, 佛教, 心理学, 生物学, 哲学, 剧作家, 网站, 数学",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "尼古拉·哥白尼",
+      "object": "数学",
+      "object_candidates": "解剖学, 网站, 鸟纲, 生理学, 天文学, 天文学家, 生物学, 物理学, 地理学, 数学",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "阿耶波多",
+      "object": "天文学",
+      "object_candidates": "社会学, 逻辑学, 经济学家, 经济学, 生物学, 数学家, 历史, 南非种族隔离, 地理学, 天文学",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "克莱德·汤博",
+      "object": "天文学家",
+      "object_candidates": "恐怖主义, 小说家, 逻辑学, 地理学, 神学, 佛教, 语言学, 夜总会, 化学, 天文学家",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "威利斯·兰姆",
+      "object": "物理学",
+      "object_candidates": "经济学, 解剖学, 考古学, 鸟纲, 医学, 几何学, 语言学, 天文学, 逻辑学, 物理学",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "阿基米德",
+      "object": "几何学",
+      "object_candidates": "生理学, 爵士乐, 拓扑学, 地理学, 网站, 地质学, 哲学, 生态学, 生物学, 几何学",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "阿那克萨哥拉",
+      "object": "天文学",
+      "object_candidates": "南非种族隔离, 历史, 拓扑学, 天文学家, 遗传学, 解剖学, 哲学, 逻辑学, 社会学, 天文学",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "克里斯蒂安·惠更斯",
+      "object": "物理学",
+      "object_candidates": "恐怖主义, 歌剧, 经济学, 夜总会, 逻辑学, 音乐家, 数学, 几何学, 解剖学, 物理学",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "迈克尔·杰克逊",
+      "object": "音乐家",
+      "object_candidates": "物理学, 经济学家, 地质学, 考古学, 天文学家, 数学, 鸟纲, 经济学, 佛教, 音乐家",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "亚当·斯密",
+      "object": "经济学",
+      "object_candidates": "逻辑学, 拓扑学, 遗传学, 爵士乐, 数学, 生物学, 地质学, 鸟纲, 地理学, 经济学",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "罗伯特·密立根",
+      "object": "物理学",
+      "object_candidates": "生态学, 地质学, 医学, 剧作家, 夜总会, 爵士乐, 地理学, 化学, 南非种族隔离, 物理学",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "杰拉杜斯·麦卡托",
+      "object": "地理学",
+      "object_candidates": "解剖学, 生态学, 剧作家, 音乐家, 天文学家, 科学, 逻辑学, 歌剧, 经济学家, 地理学",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "卡尔·林奈",
+      "object": "医学",
+      "object_candidates": "逻辑学, 哲学, 夜总会, 神学, 数学, 剧作家, 经济学, 地质学, 几何学, 医学",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "查尔斯·罗伯特·达尔文",
+      "object": "地质学",
+      "object_candidates": "心理学, 逻辑学, 科学, 考古学, 天文学家, 夜总会, 歌剧, 神学, 地理学, 地质学",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "弗朗克·韦尔切克",
+      "object": "物理学",
+      "object_candidates": "哲学, 几何学, 科学, 心理学, 解剖学, 生态学, 遗传学, 天文学, 鸟纲, 物理学",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "安德雷·柯尔莫哥洛夫",
+      "object": "拓扑学",
+      "object_candidates": "考古学, 科学, 几何学, 遗传学, 数学家, 逻辑学, 数学, 鸟纲, 小说家, 拓扑学",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "约翰·海因里希·兰伯特",
+      "object": "物理学",
+      "object_candidates": "天文学, 音乐家, 爵士乐, 生物学, 医学, 剧作家, 考古学, 小说家, 语言学, 物理学",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "婆罗摩笈多",
+      "object": "数学",
+      "object_candidates": "经济学, 解剖学, 音乐家, 网站, 夜总会, 小说家, 鸟纲, 爵士乐, 地理学, 数学",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "威廉·维恩",
+      "object": "物理学",
+      "object_candidates": "生理学, 网站, 遗传学, 鸟纲, 医学, 经济学, 逻辑学, 佛教, 社会学, 物理学",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "赫尔曼·冯·亥姆霍兹",
+      "object": "心理学",
+      "object_candidates": "天文学, 数学, 生物学, 爵士乐, 天文学家, 歌剧, 医学, 恐怖主义, 哲学, 心理学",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "莱昂哈德·欧拉",
+      "object": "天文学",
+      "object_candidates": "佛教, 社会学, 南非种族隔离, 物理学, 剧作家, 数学家, 几何学, 考古学, 音乐家, 天文学",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "伽利略·伽利莱",
+      "object": "哲学",
+      "object_candidates": "心理学, 物理学, 数学家, 考古学, 网站, 生物学, 天文学, 爵士乐, 逻辑学, 哲学",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "孟德尔",
+      "object": "遗传学",
+      "object_candidates": "解剖学, 语言学, 恐怖主义, 天文学, 拓扑学, 经济学, 心理学, 地理学, 神学, 遗传学",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "布鲁斯·斯普林斯廷",
+      "object": "音乐家",
+      "object_candidates": "地质学, 经济学家, 爵士乐, 生理学, 语言学, 天文学家, 科学, 地理学, 恐怖主义, 音乐家",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "索菲娅·瓦西里耶夫娜·柯瓦列夫斯卡娅",
+      "object": "数学",
+      "object_candidates": "生物学, 化学, 数学家, 爵士乐, 遗传学, 剧作家, 社会学, 地质学, 语言学, 数学",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "焦尔达诺·布鲁诺",
+      "object": "哲学",
+      "object_candidates": "小说家, 数学家, 爵士乐, 佛教, 鸟纲, 地质学, 几何学, 经济学, 生物学, 哲学",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "亨利·贝可勒尔",
+      "object": "物理学",
+      "object_candidates": "恐怖主义, 逻辑学, 鸟纲, 天文学, 地理学, 神学, 语言学, 天文学家, 地质学, 物理学",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "基普·索恩",
+      "object": "物理学",
+      "object_candidates": "生理学, 爵士乐, 恐怖主义, 南非种族隔离, 几何学, 生物学, 小说家, 网站, 拓扑学, 物理学",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "奥古斯特·魏斯曼",
+      "object": "生物学",
+      "object_candidates": "地质学, 生态学, 生理学, 拓扑学, 遗传学, 恐怖主义, 逻辑学, 解剖学, 医学, 生物学",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "保罗·朗之万",
+      "object": "物理学",
+      "object_candidates": "天文学家, 心理学, 拓扑学, 生理学, 哲学, 几何学, 剧作家, 生物学, 天文学, 物理学",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "约翰·考克饶夫",
+      "object": "物理学",
+      "object_candidates": "鸟纲, 几何学, 地质学, 数学家, 科学, 逻辑学, 爵士乐, 经济学家, 社会学, 物理学",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "斯凡特·奥古斯特·阿伦尼乌斯",
+      "object": "化学",
+      "object_candidates": "爵士乐, 解剖学, 社会学, 音乐家, 鸟纲, 拓扑学, 心理学, 经济学家, 网站, 化学",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "洛可可",
+      "object": "建筑",
+      "object_candidates": "化学, 地理学, 天文学家, 逻辑学, 生理学, 拓扑学, 医学, 恐怖主义, 数学家, 建筑",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

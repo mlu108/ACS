@@ -1,0 +1,542 @@
+{
+  "name": "location_of_formation",
+  "prompt_templates": [
+    "Hol lett létrehozva <subject>? A válasz: <mask>",
+    "Melyik helyen képződött <subject>? A válasz: <mask>",
+    "Hol történt <subject> képződése? A válasz: <mask>",
+    "Melyik országban vagy helyen keletkezett <subject>? A válasz: <mask>",
+    "Hol nyomozhatja <subject> képződését? A válasz: <mask>",
+    " <subject> alapításának helye <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Elemi ösztön",
+      "object": "Franciaország",
+      "object_candidates": "Törökország, Skócia, Mexikó, Németország, Jamaica, Japán, Anglia, Olaszország, Írország, Franciaország",
+      "index": 6071,
+      "subject_en": "Basic Instinct",
+      "object_en": "France"
+    },
+    {
+      "subject": "Nagyítás",
+      "object": "Olaszország",
+      "object_candidates": "Törökország, Japán, Jamaica, Belgium, Anglia, Skócia, Mexikó, Franciaország, Ausztrália, Olaszország",
+      "index": 6072,
+      "subject_en": "Blowup",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "tenisz",
+      "object": "Anglia",
+      "object_candidates": "Japán, Belgium, Mexikó, Franciaország, Törökország, Írország, Olaszország, Ausztrália, Németország, Anglia",
+      "index": 6073,
+      "subject_en": "tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "reggae",
+      "object": "Jamaica",
+      "object_candidates": "Franciaország, Írország, Japán, Skócia, Ausztrália, Belgium, Németország, Olaszország, Anglia, Jamaica",
+      "index": 6074,
+      "subject_en": "reggae",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Frankfurter Allgemeine Zeitung",
+      "object": "Németország",
+      "object_candidates": "Törökország, Belgium, Olaszország, Anglia, Ausztrália, Mexikó, Jamaica, Írország, Japán, Németország",
+      "index": 6075,
+      "subject_en": "Frankfurter Allgemeine Zeitung",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "magasugrás",
+      "object": "Skócia",
+      "object_candidates": "Ausztrália, Mexikó, Írország, Franciaország, Jamaica, Japán, Törökország, Olaszország, Németország, Skócia",
+      "index": 6076,
+      "subject_en": "high jump",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Olasz fasizmus",
+      "object": "Olaszország",
+      "object_candidates": "Skócia, Ausztrália, Írország, Japán, Mexikó, Jamaica, Törökország, Anglia, Belgium, Olaszország",
+      "index": 6077,
+      "subject_en": "Italian Fascism",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Tatami",
+      "object": "Japán",
+      "object_candidates": "Mexikó, Skócia, Franciaország, Belgium, Olaszország, Anglia, Jamaica, Németország, Írország, Japán",
+      "index": 6078,
+      "subject_en": "tatami",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Guinness Rekordok Könyve",
+      "object": "Írország",
+      "object_candidates": "Japán, Belgium, Törökország, Skócia, Jamaica, Franciaország, Anglia, Németország, Ausztrália, Írország",
+      "index": 6079,
+      "subject_en": "Guinness World Records",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Godot-ra várva",
+      "object": "Franciaország",
+      "object_candidates": "Belgium, Németország, Japán, Olaszország, Írország, Ausztrália, Skócia, Törökország, Jamaica, Franciaország",
+      "index": 6080,
+      "subject_en": "Waiting for Godot",
+      "object_en": "France"
+    },
+    {
+      "subject": "Az élet szép",
+      "object": "Olaszország",
+      "object_candidates": "Törökország, Anglia, Franciaország, Ausztrália, Japán, Írország, Mexikó, Skócia, Jamaica, Olaszország",
+      "index": 6081,
+      "subject_en": "Life is Beautiful",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Corriere della Sera",
+      "object": "Olaszország",
+      "object_candidates": "Franciaország, Németország, Mexikó, Törökország, Írország, Jamaica, Anglia, Ausztrália, Belgium, Olaszország",
+      "index": 6082,
+      "subject_en": "Corriere della Sera",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Török kávé",
+      "object": "Törökország",
+      "object_candidates": "Skócia, Jamaica, Németország, Franciaország, Ausztrália, Anglia, Olaszország, Belgium, Japán, Törökország",
+      "index": 6083,
+      "subject_en": "Turkish coffee",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Camembert",
+      "object": "Franciaország",
+      "object_candidates": "Jamaica, Mexikó, Anglia, Olaszország, Skócia, Belgium, Törökország, Ausztrália, Japán, Franciaország",
+      "index": 6084,
+      "subject_en": "Camembert",
+      "object_en": "France"
+    },
+    {
+      "subject": "A halállista",
+      "object": "Japán",
+      "object_candidates": "Belgium, Skócia, Ausztrália, Törökország, Írország, Anglia, Olaszország, Jamaica, Németország, Japán",
+      "index": 6085,
+      "subject_en": "Death Note",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Tofu",
+      "object": "Japán",
+      "object_candidates": "Olaszország, Skócia, Írország, Ausztrália, Belgium, Mexikó, Jamaica, Németország, Franciaország, Japán",
+      "index": 6086,
+      "subject_en": "tofu",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "pesto",
+      "object": "Olaszország",
+      "object_candidates": "Írország, Jamaica, Anglia, Japán, Németország, Mexikó, Franciaország, Ausztrália, Törökország, Olaszország",
+      "index": 6087,
+      "subject_en": "pesto",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Kraftwerk",
+      "object": "Németország",
+      "object_candidates": "Belgium, Anglia, Törökország, Olaszország, Skócia, Jamaica, Japán, Írország, Franciaország, Németország",
+      "index": 6088,
+      "subject_en": "Kraftwerk",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Dobermann",
+      "object": "Németország",
+      "object_candidates": "Franciaország, Törökország, Skócia, Olaszország, Mexikó, Ausztrália, Jamaica, Anglia, Belgium, Németország",
+      "index": 6089,
+      "subject_en": "Dobermann",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Gendzsi szerelmei",
+      "object": "Japán",
+      "object_candidates": "Olaszország, Mexikó, Németország, Ausztrália, Törökország, Belgium, Skócia, Franciaország, Írország, Japán",
+      "index": 6090,
+      "subject_en": "The Tale of Genji",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Guacamole",
+      "object": "Mexikó",
+      "object_candidates": "Jamaica, Anglia, Skócia, Belgium, Írország, Törökország, Japán, Olaszország, Franciaország, Mexikó",
+      "index": 6091,
+      "subject_en": "guacamole",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "asztalitenisz",
+      "object": "Anglia",
+      "object_candidates": "Belgium, Franciaország, Ausztrália, Skócia, Jamaica, Olaszország, Japán, Németország, Mexikó, Anglia",
+      "index": 6092,
+      "subject_en": "table tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "J-pop",
+      "object": "Japán",
+      "object_candidates": "Jamaica, Mexikó, Németország, Törökország, Franciaország, Írország, Anglia, Olaszország, Belgium, Japán",
+      "index": 6093,
+      "subject_en": "J-pop",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "gofri",
+      "object": "Belgium",
+      "object_candidates": "Törökország, Japán, Olaszország, Anglia, Franciaország, Írország, Skócia, Mexikó, Németország, Belgium",
+      "index": 6094,
+      "subject_en": "waffle",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "labdarúgás",
+      "object": "Anglia",
+      "object_candidates": "Belgium, Írország, Törökország, Franciaország, Németország, Olaszország, Mexikó, Ausztrália, Japán, Anglia",
+      "index": 6095,
+      "subject_en": "association football",
+      "object_en": "England"
+    },
+    {
+      "subject": "Dannii Minogue",
+      "object": "Ausztrália",
+      "object_candidates": "Olaszország, Anglia, Franciaország, Németország, Japán, Belgium, Írország, Jamaica, Mexikó, Ausztrália",
+      "index": 6096,
+      "subject_en": "Dannii Minogue",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Dekameron",
+      "object": "Olaszország",
+      "object_candidates": "Belgium, Japán, Mexikó, Skócia, Jamaica, Írország, Németország, Törökország, Franciaország, Olaszország",
+      "index": 6097,
+      "subject_en": "The Decameron",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "U2",
+      "object": "Írország",
+      "object_candidates": "Skócia, Anglia, Németország, Japán, Olaszország, Franciaország, Mexikó, Törökország, Jamaica, Írország",
+      "index": 6098,
+      "subject_en": "U2",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "golf",
+      "object": "Skócia",
+      "object_candidates": "Mexikó, Japán, Ausztrália, Jamaica, Anglia, Franciaország, Belgium, Törökország, Olaszország, Skócia",
+      "index": 6099,
+      "subject_en": "golf",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Perec",
+      "object": "Németország",
+      "object_candidates": "Anglia, Skócia, Japán, Írország, Franciaország, Belgium, Olaszország, Törökország, Mexikó, Németország",
+      "index": 6100,
+      "subject_en": "pretzel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lenovo",
+      "object": "Peking",
+      "object_candidates": "Chicago, Lublin, Birmingham, Frankfurt am Main, Detroit, Miami, Stockholm, Szöul, London, Peking",
+      "index": 6488,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "The Coca-Cola Company",
+      "object": "Atlanta",
+      "object_candidates": "Stockholm, Lublin, Peking, Amszterdam, Rotterdam, Birmingham, London, Limerick, Anglia, Atlanta",
+      "index": 6489,
+      "subject_en": "The Coca-Cola Company",
+      "object_en": "Atlanta"
+    },
+    {
+      "subject": "Ericsson",
+      "object": "Stockholm",
+      "object_candidates": "London, Birmingham, Limerick, Amszterdam, Frankfurt am Main, Lublin, Miami, Atlanta, Chicago, Stockholm",
+      "index": 6490,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Stevie Wonder",
+      "object": "Detroit",
+      "object_candidates": "Sheffield, Miami, Lublin, Tokió, Anglia, Chicago, Berlin, Atlanta, Birmingham, Detroit",
+      "index": 6491,
+      "subject_en": "Stevie Wonder",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Samsung Electronics",
+      "object": "Szöul",
+      "object_candidates": "Lublin, Tokió, Amszterdam, Frankfurt am Main, Anglia, Berlin, Manchester, Peking, Limerick, Szöul",
+      "index": 6492,
+      "subject_en": "Samsung Electronics",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Kanye West",
+      "object": "Chicago",
+      "object_candidates": "Manchester, Detroit, Sheffield, London, Rotterdam, Miami, Szöul, Amszterdam, Lublin, Chicago",
+      "index": 6493,
+      "subject_en": "Kanye West",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "The Cranberries",
+      "object": "Limerick",
+      "object_candidates": "Anglia, London, Detroit, Helsinki, Stockholm, Amszterdam, Birmingham, Frankfurt am Main, Párizs, Limerick",
+      "index": 6494,
+      "subject_en": "The Cranberries",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "Coldplay",
+      "object": "London",
+      "object_candidates": "Tokió, Anglia, Stockholm, Limerick, Párizs, Amszterdam, Berlin, Birmingham, Rotterdam, London",
+      "index": 6495,
+      "subject_en": "Coldplay",
+      "object_en": "London"
+    },
+    {
+      "subject": "Siemens AG",
+      "object": "Berlin",
+      "object_candidates": "Tokió, Chicago, Vancouver, Detroit, Lublin, Stockholm, Birmingham, Miami, Peking, Berlin",
+      "index": 6496,
+      "subject_en": "Siemens",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Greenpeace",
+      "object": "Vancouver",
+      "object_candidates": "Frankfurt am Main, Birmingham, Peking, Seattle, Anglia, Detroit, Tokió, Stockholm, Chicago, Vancouver",
+      "index": 6497,
+      "subject_en": "Greenpeace",
+      "object_en": "Vancouver"
+    },
+    {
+      "subject": "Xiaomi",
+      "object": "Peking",
+      "object_candidates": "Szöul, Berlin, Manchester, Amszterdam, Birmingham, Tokió, Limerick, Helsinki, Frankfurt am Main, Peking",
+      "index": 6498,
+      "subject_en": "Xiaomi",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Nemzetközi Labdarúgó-szövetség",
+      "object": "Párizs",
+      "object_candidates": "Miami, Vancouver, Birmingham, Seattle, Lublin, Limerick, Amszterdam, Helsinki, Tokió, Párizs",
+      "index": 6499,
+      "subject_en": "FIFA",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Lublini unió",
+      "object": "Lublin",
+      "object_candidates": "Detroit, Szöul, Párizs, Chicago, Manchester, Miami, Anglia, Seattle, Berlin, Lublin",
+      "index": 6500,
+      "subject_en": "Union of Lublin",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "Frankfurti iskola",
+      "object": "Frankfurt am Main",
+      "object_candidates": "Chicago, London, Helsinki, Miami, Peking, Limerick, Amszterdam, Vancouver, Tokió, Frankfurt am Main",
+      "index": 6501,
+      "subject_en": "Frankfurt School",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "cserkészet",
+      "object": "Anglia",
+      "object_candidates": "London, Helsinki, Rotterdam, Miami, Párizs, Stockholm, Sheffield, Lublin, Peking, Anglia",
+      "index": 6502,
+      "subject_en": "scouting",
+      "object_en": "England"
+    },
+    {
+      "subject": "Bee Gees",
+      "object": "Manchester",
+      "object_candidates": "Szöul, Stockholm, Helsinki, Vancouver, Chicago, Sheffield, Párizs, Birmingham, Anglia, Manchester",
+      "index": 6503,
+      "subject_en": "Bee Gees",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Boeing",
+      "object": "Seattle",
+      "object_candidates": "Rotterdam, Miami, Stockholm, Párizs, Szöul, Detroit, Birmingham, London, Manchester, Seattle",
+      "index": 6504,
+      "subject_en": "Boeing",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Lordi",
+      "object": "Helsinki",
+      "object_candidates": "Berlin, Frankfurt am Main, Párizs, Lublin, Szöul, Peking, Sheffield, Manchester, Detroit, Helsinki",
+      "index": 6505,
+      "subject_en": "Lordi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Burger King",
+      "object": "Miami",
+      "object_candidates": "Frankfurt am Main, Peking, Vancouver, Párizs, Chicago, Atlanta, Amszterdam, Limerick, Lublin, Miami",
+      "index": 6506,
+      "subject_en": "Burger King",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "Rammstein",
+      "object": "Berlin",
+      "object_candidates": "Birmingham, Peking, Limerick, Párizs, Rotterdam, Helsinki, Frankfurt am Main, Vancouver, Atlanta, Berlin",
+      "index": 6507,
+      "subject_en": "Rammstein",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Foo Fighters",
+      "object": "Seattle",
+      "object_candidates": "Amszterdam, Limerick, Anglia, Manchester, Frankfurt am Main, Szöul, Rotterdam, Berlin, Birmingham, Seattle",
+      "index": 6508,
+      "subject_en": "Foo Fighters",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "The Who",
+      "object": "London",
+      "object_candidates": "Anglia, Seattle, Frankfurt am Main, Detroit, Birmingham, Berlin, Atlanta, Sheffield, Peking, London",
+      "index": 6509,
+      "subject_en": "The Who",
+      "object_en": "London"
+    },
+    {
+      "subject": "Feyenoord",
+      "object": "Rotterdam",
+      "object_candidates": "Tokió, Detroit, Seattle, Berlin, Birmingham, Anglia, Miami, Manchester, Helsinki, Rotterdam",
+      "index": 6510,
+      "subject_en": "Feyenoord",
+      "object_en": "Rotterdam"
+    },
+    {
+      "subject": "AFC Ajax",
+      "object": "Amszterdam",
+      "object_candidates": "Tokió, Szöul, Limerick, Birmingham, Rotterdam, Seattle, Párizs, Stockholm, Frankfurt am Main, Amszterdam",
+      "index": 6511,
+      "subject_en": "AFC Ajax",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Berlin",
+      "object_candidates": "Limerick, Vancouver, Detroit, Tokió, Szöul, Atlanta, Rotterdam, Miami, Frankfurt am Main, Berlin",
+      "index": 6512,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Sega",
+      "object": "Tokió",
+      "object_candidates": "Párizs, Amszterdam, Szöul, Birmingham, Rotterdam, Vancouver, Chicago, Frankfurt am Main, Lublin, Tokió",
+      "index": 6513,
+      "subject_en": "Sega",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Aston Martin",
+      "object": "London",
+      "object_candidates": "Rotterdam, Stockholm, Tokió, Birmingham, Amszterdam, Peking, Seattle, Párizs, Manchester, London",
+      "index": 6514,
+      "subject_en": "Aston Martin Lagonda",
+      "object_en": "London"
+    },
+    {
+      "subject": "Arctic Monkeys",
+      "object": "Sheffield",
+      "object_candidates": "Rotterdam, Helsinki, Frankfurt am Main, Miami, Peking, Anglia, Párizs, Limerick, London, Sheffield",
+      "index": 6515,
+      "subject_en": "Arctic Monkeys",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "Gloria Estefan",
+      "object": "Miami",
+      "object_candidates": "Tokió, Amszterdam, Birmingham, Párizs, Sheffield, Rotterdam, Stockholm, Seattle, Peking, Miami",
+      "index": 6516,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "EMI",
+      "object": "London",
+      "object_candidates": "Chicago, Rotterdam, Seattle, Helsinki, Frankfurt am Main, Peking, Miami, Birmingham, Szöul, London",
+      "index": 6517,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "Duran Duran",
+      "object": "Birmingham",
+      "object_candidates": "Atlanta, Párizs, Peking, Anglia, Szöul, Limerick, Chicago, Berlin, Seattle, Birmingham",
+      "index": 6518,
+      "subject_en": "Duran Duran",
+      "object_en": "Birmingham"
+    },
+    {
+      "subject": "Londoni Értéktőzsde",
+      "object": "London",
+      "object_candidates": "Seattle, Amszterdam, Birmingham, Lublin, Manchester, Peking, Tokió, Atlanta, Chicago, London",
+      "index": 6519,
+      "subject_en": "London Stock Exchange",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ducati",
+      "object": "Bologna",
+      "object_candidates": "Párizs, Tokió, Amszterdam, Frankfurt am Main, Atlanta, Stockholm, Szöul, Rotterdam, Berlin, Bologna",
+      "index": 6520,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "The Rasmus",
+      "object": "Helsinki",
+      "object_candidates": "Manchester, Szöul, Vancouver, Miami, Limerick, Detroit, Peking, Birmingham, Seattle, Helsinki",
+      "index": 6521,
+      "subject_en": "The Rasmus",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Def Leppard",
+      "object": "Sheffield",
+      "object_candidates": "Rotterdam, Tokió, Helsinki, Birmingham, Párizs, Berlin, Frankfurt am Main, Lublin, Szöul, Sheffield",
+      "index": 6522,
+      "subject_en": "Def Leppard",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "Nikon",
+      "object": "Tokió",
+      "object_candidates": "Helsinki, Birmingham, Limerick, Peking, Rotterdam, Szöul, Berlin, Vancouver, Lublin, Tokió",
+      "index": 6523,
+      "subject_en": "Nikon",
+      "object_en": "Tokyo"
+    }
+  ],
+  "relation_id": "P740"
+}

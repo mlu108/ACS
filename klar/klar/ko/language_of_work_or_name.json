@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "<subject>의 원래 언어는 무엇입니까? 대답은: <mask>입니다.",
+    "<subject>가 원래 어떤 언어로 쓰여졌습니까? 대답은: <mask>입니다.",
+    "<subject>의 원래 언어는 무엇입니까? 대답은: <mask>입니다.",
+    "<subject>의 원래 작품에 사용된 언어는 무엇입니까? 대답은: <mask>입니다.",
+    "<subject>가 처음 생산된 언어는 무엇입니까? 대답은: <mask>입니다.",
+    " <subject>의 원어는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "노트르담의 꼽추",
+      "object": "프랑스어",
+      "object_candidates": "네덜란드어, 그리스어, 이탈리아어, 독일어, 러시아어, 핀란드어, 영어, 프랑스어",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "라이온 킹",
+      "object": "영어",
+      "object_candidates": "러시아어, 프랑스어, 네덜란드어, 그리스어, 독일어, 이탈리아어, 핀란드어, 영어",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "언터처블: 1%의 우정",
+      "object": "프랑스어",
+      "object_candidates": "그리스어, 핀란드어, 독일어, 영어, 네덜란드어, 러시아어, 이탈리아어, 프랑스어",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "어드벤처 타임",
+      "object": "영어",
+      "object_candidates": "핀란드어, 프랑스어, 네덜란드어, 이탈리아어, 독일어, 그리스어, 러시아어, 영어",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "위선의 태양",
+      "object": "러시아어",
+      "object_candidates": "핀란드어, 그리스어, 이탈리아어, 독일어, 영어, 프랑스어, 네덜란드어, 러시아어",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "피아니스트",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 그리스어, 네덜란드어, 러시아어, 독일어, 핀란드어, 프랑스어, 영어",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "몬테크리스토 백작",
+      "object": "프랑스어",
+      "object_candidates": "러시아어, 핀란드어, 독일어, 네덜란드어, 그리스어, 영어, 이탈리아어, 프랑스어",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "슬럼독 밀리어네어",
+      "object": "영어",
+      "object_candidates": "핀란드어, 네덜란드어, 이탈리아어, 그리스어, 러시아어, 독일어, 프랑스어, 영어",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "네이처",
+      "object": "영어",
+      "object_candidates": "핀란드어, 그리스어, 프랑스어, 이탈리아어, 러시아어, 네덜란드어, 독일어, 영어",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "대부",
+      "object": "영어",
+      "object_candidates": "프랑스어, 그리스어, 독일어, 러시아어, 핀란드어, 네덜란드어, 이탈리아어, 영어",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "고스트버스터즈",
+      "object": "영어",
+      "object_candidates": "네덜란드어, 프랑스어, 그리스어, 독일어, 핀란드어, 이탈리아어, 러시아어, 영어",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "삼총사",
+      "object": "프랑스어",
+      "object_candidates": "네덜란드어, 그리스어, 영어, 독일어, 핀란드어, 이탈리아어, 러시아어, 프랑스어",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "네덜란드어 위키백과",
+      "object": "네덜란드어",
+      "object_candidates": "영어, 러시아어, 그리스어, 프랑스어, 이탈리아어, 독일어, 핀란드어, 네덜란드어",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "샤를리 엡도",
+      "object": "프랑스어",
+      "object_candidates": "이탈리아어, 러시아어, 핀란드어, 영어, 그리스어, 네덜란드어, 독일어, 프랑스어",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "펄프 픽션",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 네덜란드어, 러시아어, 독일어, 프랑스어, 그리스어, 핀란드어, 영어",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "석양의 무법자",
+      "object": "이탈리아어",
+      "object_candidates": "러시아어, 영어, 독일어, 프랑스어, 네덜란드어, 그리스어, 핀란드어, 이탈리아어",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "분노의 질주",
+      "object": "영어",
+      "object_candidates": "러시아어, 프랑스어, 독일어, 이탈리아어, 네덜란드어, 그리스어, 핀란드어, 영어",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "마술피리",
+      "object": "독일어",
+      "object_candidates": "이탈리아어, 네덜란드어, 핀란드어, 영어, 프랑스어, 그리스어, 러시아어, 독일어",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "아이칼리",
+      "object": "영어",
+      "object_candidates": "그리스어, 네덜란드어, 독일어, 프랑스어, 러시아어, 핀란드어, 이탈리아어, 영어",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "소비에트 대백과사전",
+      "object": "러시아어",
+      "object_candidates": "이탈리아어, 독일어, 프랑스어, 네덜란드어, 핀란드어, 그리스어, 영어, 러시아어",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "장화 신은 고양이",
+      "object": "이탈리아어",
+      "object_candidates": "그리스어, 독일어, 영어, 프랑스어, 핀란드어, 네덜란드어, 러시아어, 이탈리아어",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "핀란드어 위키백과",
+      "object": "핀란드어",
+      "object_candidates": "그리스어, 프랑스어, 독일어, 이탈리아어, 영어, 러시아어, 네덜란드어, 핀란드어",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "톰과 제리",
+      "object": "영어",
+      "object_candidates": "러시아어, 독일어, 핀란드어, 그리스어, 네덜란드어, 프랑스어, 이탈리아어, 영어",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "정글 북",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 핀란드어, 러시아어, 프랑스어, 그리스어, 독일어, 네덜란드어, 영어",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "그리스어 위키백과",
+      "object": "그리스어",
+      "object_candidates": "핀란드어, 러시아어, 네덜란드어, 프랑스어, 독일어, 영어, 이탈리아어, 그리스어",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "영어",
+      "object_candidates": "스페인어, 이탈리아어, 터키어, 덴마크어, 벵골어, 독일어, 프랑스어, 한국어, 불가리아어, 영어",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "깃",
+      "object": "영어",
+      "object_candidates": "폴란드어, 터키어, 라틴어, 벵골어, 체코어, 러시아어, 스페인어, 이탈리아어, 스웨덴어, 영어",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "아이네이스",
+      "object": "라틴어",
+      "object_candidates": "베트남어, 폴란드어, 이탈리아어, 영어, 카탈루냐어, 체코어, 헝가리어, 러시아어, 벵골어, 라틴어",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "러시아어 위키백과",
+      "object": "러시아어",
+      "object_candidates": "한국어, 스웨덴어, 불가리아어, 헝가리어, 독일어, 영어, 폴란드어, 벵골어, 스페인어, 러시아어",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "스타트렉 다크니스",
+      "object": "영어",
+      "object_candidates": "벵골어, 우크라이나어, 독일어, 스웨덴어, 폴란드어, 베트남어, 불가리아어, 라틴어, 스페인어, 영어",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "샤를리 엡도",
+      "object": "프랑스어",
+      "object_candidates": "독일어, 에스토니아어, 스페인어, 터키어, 헝가리어, 이탈리아어, 불가리아어, 러시아어, 영어, 프랑스어",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "워싱턴 포스트",
+      "object": "영어",
+      "object_candidates": "덴마크어, 에스토니아어, 스페인어, 독일어, 러시아어, 네덜란드어, 한국어, 스웨덴어, 크로아티아어, 영어",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "플레이보이",
+      "object": "영어",
+      "object_candidates": "덴마크어, 카탈루냐어, 에스토니아어, 헝가리어, 스페인어, 스웨덴어, 독일어, 프랑스어, 불가리아어, 영어",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "뉴 허라이즌스",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 카탈루냐어, 우크라이나어, 헝가리어, 벵골어, 핀란드어, 스웨덴어, 폴란드어, 네덜란드어, 영어",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "아이다",
+      "object": "이탈리아어",
+      "object_candidates": "터키어, 네덜란드어, 헝가리어, 폴란드어, 라틴어, 우크라이나어, 스웨덴어, 카탈루냐어, 불가리아어, 이탈리아어",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "사이언스",
+      "object": "영어",
+      "object_candidates": "벵골어, 헝가리어, 베트남어, 독일어, 우크라이나어, 불가리아어, 크로아티아어, 핀란드어, 라틴어, 영어",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "실버 라이닝스 플레이북",
+      "object": "영어",
+      "object_candidates": "네덜란드어, 베트남어, 벵골어, 독일어, 라틴어, 덴마크어, 헝가리어, 불가리아어, 러시아어, 영어",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "뉴스위크",
+      "object": "영어",
+      "object_candidates": "불가리아어, 카탈루냐어, 라틴어, 체코어, 덴마크어, 벵골어, 이탈리아어, 크로아티아어, 헝가리어, 영어",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "람보",
+      "object": "영어",
+      "object_candidates": "독일어, 에스토니아어, 이탈리아어, 폴란드어, 스페인어, 프랑스어, 크로아티아어, 불가리아어, 덴마크어, 영어",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "어린 왕자",
+      "object": "프랑스어",
+      "object_candidates": "에스토니아어, 러시아어, 우크라이나어, 라틴어, 이탈리아어, 스페인어, 체코어, 영어, 불가리아어, 프랑스어",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "시리",
+      "object": "영어",
+      "object_candidates": "우크라이나어, 핀란드어, 크로아티아어, 이탈리아어, 불가리아어, 독일어, 스웨덴어, 스페인어, 프랑스어, 영어",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "덴마크어 위키백과",
+      "object": "덴마크어",
+      "object_candidates": "핀란드어, 크로아티아어, 헝가리어, 러시아어, 라틴어, 우크라이나어, 불가리아어, 영어, 스웨덴어, 덴마크어",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "르 몽드",
+      "object": "프랑스어",
+      "object_candidates": "우크라이나어, 에스토니아어, 덴마크어, 한국어, 스웨덴어, 크로아티아어, 러시아어, 독일어, 핀란드어, 프랑스어",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "르 피가로",
+      "object": "프랑스어",
+      "object_candidates": "폴란드어, 벵골어, 베트남어, 라틴어, 핀란드어, 러시아어, 네덜란드어, 스웨덴어, 에스토니아어, 프랑스어",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "체코어 위키백과",
+      "object": "체코어",
+      "object_candidates": "프랑스어, 벵골어, 스웨덴어, 크로아티아어, 베트남어, 우크라이나어, 에스토니아어, 한국어, 이탈리아어, 체코어",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "가디언",
+      "object": "영어",
+      "object_candidates": "스페인어, 이탈리아어, 불가리아어, 헝가리어, 네덜란드어, 러시아어, 벵골어, 덴마크어, 독일어, 영어",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "크로아티아어 위키백과",
+      "object": "크로아티아어",
+      "object_candidates": "헝가리어, 베트남어, 덴마크어, 프랑스어, 스페인어, 벵골어, 네덜란드어, 러시아어, 폴란드어, 크로아티아어",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "위트레흐트 조약",
+      "object": "영어",
+      "object_candidates": "크로아티아어, 우크라이나어, 베트남어, 체코어, 헝가리어, 카탈루냐어, 스웨덴어, 불가리아어, 스페인어, 영어",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "펄프 픽션",
+      "object": "영어",
+      "object_candidates": "불가리아어, 베트남어, 체코어, 우크라이나어, 핀란드어, 독일어, 스페인어, 덴마크어, 카탈루냐어, 영어",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "네덜란드의 국가",
+      "object": "네덜란드어",
+      "object_candidates": "터키어, 체코어, 한국어, 영어, 프랑스어, 스페인어, 헝가리어, 독일어, 우크라이나어, 네덜란드어",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "스웨덴어 위키백과",
+      "object": "스웨덴어",
+      "object_candidates": "불가리아어, 에스토니아어, 터키어, 이탈리아어, 크로아티아어, 러시아어, 스페인어, 라틴어, 헝가리어, 스웨덴어",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "폴란드어 위키백과",
+      "object": "폴란드어",
+      "object_candidates": "에스토니아어, 프랑스어, 핀란드어, 덴마크어, 체코어, 스페인어, 카탈루냐어, 네덜란드어, 이탈리아어, 폴란드어",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "에스토니아어 위키백과",
+      "object": "에스토니아어",
+      "object_candidates": "헝가리어, 독일어, 프랑스어, 베트남어, 터키어, 한국어, 스페인어, 라틴어, 우크라이나어, 에스토니아어",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 에스토니아어, 러시아어, 스페인어, 덴마크어, 프랑스어, 독일어, 카탈루냐어, 체코어, 영어",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "카탈루냐어 위키백과",
+      "object": "카탈루냐어",
+      "object_candidates": "러시아어, 에스토니아어, 스웨덴어, 터키어, 이탈리아어, 폴란드어, 영어, 베트남어, 한국어, 카탈루냐어",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "베트남어 위키백과",
+      "object": "베트남어",
+      "object_candidates": "폴란드어, 독일어, 체코어, 터키어, 네덜란드어, 우크라이나어, 스페인어, 크로아티아어, 프랑스어, 베트남어",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "마술피리",
+      "object": "독일어",
+      "object_candidates": "핀란드어, 크로아티아어, 벵골어, 스페인어, 러시아어, 카탈루냐어, 영어, 프랑스어, 네덜란드어, 독일어",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "한국어 위키백과",
+      "object": "한국어",
+      "object_candidates": "베트남어, 스페인어, 핀란드어, 독일어, 벵골어, 불가리아어, 에스토니아어, 네덜란드어, 폴란드어, 한국어",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "핀터레스트",
+      "object": "프랑스어",
+      "object_candidates": "덴마크어, 불가리아어, 핀란드어, 카탈루냐어, 라틴어, 헝가리어, 체코어, 독일어, 스페인어, 프랑스어",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "올리버 트위스트",
+      "object": "영어",
+      "object_candidates": "카탈루냐어, 한국어, 프랑스어, 크로아티아어, 덴마크어, 에스토니아어, 스웨덴어, 폴란드어, 러시아어, 영어",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "이상한 나라의 앨리스",
+      "object": "영어",
+      "object_candidates": "카탈루냐어, 라틴어, 우크라이나어, 불가리아어, 이탈리아어, 핀란드어, 덴마크어, 베트남어, 터키어, 영어",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "오만과 편견",
+      "object": "영어",
+      "object_candidates": "덴마크어, 한국어, 핀란드어, 이탈리아어, 헝가리어, 프랑스어, 벵골어, 스페인어, 불가리아어, 영어",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "타임",
+      "object": "영어",
+      "object_candidates": "불가리아어, 독일어, 폴란드어, 카탈루냐어, 체코어, 에스토니아어, 스페인어, 러시아어, 우크라이나어, 영어",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "위대한 개츠비",
+      "object": "영어",
+      "object_candidates": "불가리아어, 한국어, 터키어, 카탈루냐어, 스웨덴어, 스페인어, 이탈리아어, 프랑스어, 러시아어, 영어",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "리브레오피스",
+      "object": "영어",
+      "object_candidates": "체코어, 크로아티아어, 덴마크어, 터키어, 벵골어, 핀란드어, 폴란드어, 한국어, 프랑스어, 영어",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "핀터레스트",
+      "object": "스페인어",
+      "object_candidates": "에스토니아어, 독일어, 러시아어, 스웨덴어, 베트남어, 우크라이나어, 네덜란드어, 라틴어, 불가리아어, 스페인어",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "방글라데시의 국가",
+      "object": "벵골어",
+      "object_candidates": "스페인어, 라틴어, 헝가리어, 폴란드어, 러시아어, 이탈리아어, 에스토니아어, 스웨덴어, 영어, 벵골어",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "리브레오피스",
+      "object": "핀란드어",
+      "object_candidates": "터키어, 한국어, 네덜란드어, 이탈리아어, 러시아어, 불가리아어, 카탈루냐어, 크로아티아어, 우크라이나어, 핀란드어",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "독일어 위키백과",
+      "object": "독일어",
+      "object_candidates": "헝가리어, 불가리아어, 네덜란드어, 스페인어, 우크라이나어, 벵골어, 터키어, 한국어, 크로아티아어, 독일어",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "베르사유 조약",
+      "object": "프랑스어",
+      "object_candidates": "에스토니아어, 스페인어, 폴란드어, 독일어, 한국어, 우크라이나어, 벵골어, 러시아어, 영어, 프랑스어",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "예브게니 오네긴",
+      "object": "러시아어",
+      "object_candidates": "한국어, 베트남어, 스웨덴어, 폴란드어, 핀란드어, 카탈루냐어, 우크라이나어, 불가리아어, 이탈리아어, 러시아어",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "우크라이나어 위키백과",
+      "object": "우크라이나어",
+      "object_candidates": "러시아어, 체코어, 이탈리아어, 불가리아어, 카탈루냐어, 네덜란드어, 스페인어, 에스토니아어, 핀란드어, 우크라이나어",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "1984년",
+      "object": "영어",
+      "object_candidates": "우크라이나어, 에스토니아어, 카탈루냐어, 이탈리아어, 크로아티아어, 프랑스어, 스페인어, 불가리아어, 라틴어, 영어",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "톰 소여의 모험",
+      "object": "영어",
+      "object_candidates": "이탈리아어, 라틴어, 체코어, 한국어, 스페인어, 카탈루냐어, 프랑스어, 벵골어, 네덜란드어, 영어",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "터미네이터: 제네시스",
+      "object": "영어",
+      "object_candidates": "네덜란드어, 프랑스어, 벵골어, 에스토니아어, 독일어, 불가리아어, 이탈리아어, 헝가리어, 라틴어, 영어",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "네이처",
+      "object": "영어",
+      "object_candidates": "체코어, 불가리아어, 러시아어, 덴마크어, 카탈루냐어, 핀란드어, 독일어, 터키어, 네덜란드어, 영어",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "데카메론",
+      "object": "이탈리아어",
+      "object_candidates": "스웨덴어, 벵골어, 핀란드어, 체코어, 카탈루냐어, 불가리아어, 한국어, 우크라이나어, 프랑스어, 이탈리아어",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "핀터레스트",
+      "object": "핀란드어",
+      "object_candidates": "체코어, 프랑스어, 독일어, 네덜란드어, 베트남어, 불가리아어, 라틴어, 벵골어, 헝가리어, 핀란드어",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "이코노미스트",
+      "object": "영어",
+      "object_candidates": "폴란드어, 네덜란드어, 크로아티아어, 스페인어, 독일어, 체코어, 스웨덴어, 핀란드어, 라틴어, 영어",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "스웨덴의 국가",
+      "object": "스웨덴어",
+      "object_candidates": "독일어, 이탈리아어, 프랑스어, 스페인어, 불가리아어, 에스토니아어, 영어, 베트남어, 라틴어, 스웨덴어",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "The Adventures of Pinocchio",
+      "object": "이탈리아어",
+      "object_candidates": "베트남어, 체코어, 크로아티아어, 영어, 헝가리어, 한국어, 덴마크어, 네덜란드어, 터키어, 이탈리아어",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "모비딕",
+      "object": "영어",
+      "object_candidates": "스웨덴어, 덴마크어, 크로아티아어, 러시아어, 베트남어, 독일어, 한국어, 스페인어, 프랑스어, 영어",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "핀터레스트",
+      "object": "이탈리아어",
+      "object_candidates": "에스토니아어, 크로아티아어, 터키어, 핀란드어, 라틴어, 독일어, 우크라이나어, 덴마크어, 네덜란드어, 이탈리아어",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "피가로의 결혼",
+      "object": "이탈리아어",
+      "object_candidates": "영어, 스웨덴어, 우크라이나어, 네덜란드어, 터키어, 라틴어, 카탈루냐어, 러시아어, 스페인어, 이탈리아어",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "마스트리흐트 조약",
+      "object": "프랑스어",
+      "object_candidates": "라틴어, 우크라이나어, 스웨덴어, 터키어, 헝가리어, 한국어, 에스토니아어, 네덜란드어, 체코어, 프랑스어",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "영어",
+      "object_candidates": "라틴어, 네덜란드어, 헝가리어, 터키어, 한국어, 스웨덴어, 러시아어, 카탈루냐어, 독일어, 영어",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "불가리아어 위키백과",
+      "object": "불가리아어",
+      "object_candidates": "크로아티아어, 네덜란드어, 카탈루냐어, 라틴어, 덴마크어, 에스토니아어, 헝가리어, 폴란드어, 핀란드어, 불가리아어",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "파이러트베이",
+      "object": "스페인어",
+      "object_candidates": "독일어, 스웨덴어, 라틴어, 헝가리어, 불가리아어, 베트남어, 프랑스어, 한국어, 핀란드어, 스페인어",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "터키어 위키백과",
+      "object": "터키어",
+      "object_candidates": "스웨덴어, 핀란드어, 러시아어, 베트남어, 벵골어, 체코어, 스페인어, 한국어, 카탈루냐어, 터키어",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "헝가리어 위키백과",
+      "object": "헝가리어",
+      "object_candidates": "핀란드어, 크로아티아어, 스페인어, 불가리아어, 스웨덴어, 이탈리아어, 한국어, 벵골어, 덴마크어, 헝가리어",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "안나 카레니나",
+      "object": "러시아어",
+      "object_candidates": "헝가리어, 이탈리아어, 핀란드어, 영어, 우크라이나어, 에스토니아어, 폴란드어, 스페인어, 터키어, 러시아어",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "세르비아어 위키백과",
+      "object": "세르비아어",
+      "object_candidates": "베트남어, 라틴어, 핀란드어, 독일어, 영어, 네덜란드어, 불가리아어, 터키어, 러시아어, 세르비아어",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "이탈리아어 위키백과",
+      "object": "이탈리아어",
+      "object_candidates": "터키어, 핀란드어, 독일어, 체코어, 덴마크어, 카탈루냐어, 한국어, 스웨덴어, 우크라이나어, 이탈리아어",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "스페인어 위키백과",
+      "object": "스페인어",
+      "object_candidates": "카탈루냐어, 덴마크어, 라틴어, 이탈리아어, 헝가리어, 에스토니아어, 핀란드어, 벵골어, 크로아티아어, 스페인어",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "핀란드어 위키백과",
+      "object": "핀란드어",
+      "object_candidates": "이탈리아어, 독일어, 스페인어, 카탈루냐어, 헝가리어, 한국어, 벵골어, 덴마크어, 우크라이나어, 핀란드어",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "쉬운 영어 위키백과",
+      "object": "영어",
+      "object_candidates": "독일어, 카탈루냐어, 벵골어, 러시아어, 베트남어, 체코어, 프랑스어, 불가리아어, 터키어, 영어",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "바스터즈: 거친 녀석들",
+      "object": "영어",
+      "object_candidates": "에스토니아어, 카탈루냐어, 프랑스어, 터키어, 스페인어, 헝가리어, 라틴어, 폴란드어, 핀란드어, 영어",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "핀터레스트",
+      "object": "영어",
+      "object_candidates": "독일어, 스페인어, 프랑스어, 헝가리어, 체코어, 카탈루냐어, 벵골어, 베트남어, 우크라이나어, 영어",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "알렉산드로스",
+      "object": "영어",
+      "object_candidates": "라틴어, 크로아티아어, 덴마크어, 이탈리아어, 독일어, 한국어, 핀란드어, 우크라이나어, 카탈루냐어, 영어",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "이미테이션 게임",
+      "object": "영어",
+      "object_candidates": "카탈루냐어, 독일어, 덴마크어, 프랑스어, 체코어, 핀란드어, 스페인어, 크로아티아어, 이탈리아어, 영어",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "돈 조반니",
+      "object": "이탈리아어",
+      "object_candidates": "덴마크어, 헝가리어, 스페인어, 핀란드어, 네덜란드어, 한국어, 체코어, 에스토니아어, 프랑스어, 이탈리아어",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "영어",
+      "object_candidates": "체코어, 폴란드어, 독일어, 베트남어, 불가리아어, 라틴어, 우크라이나어, 이탈리아어, 헝가리어, 영어",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "인터넷 아카이브",
+      "object": "영어",
+      "object_candidates": "에스토니아어, 이탈리아어, 헝가리어, 라틴어, 불가리아어, 덴마크어, 독일어, 체코어, 네덜란드어, 영어",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "보헤미안 랩소디",
+      "object": "영어",
+      "object_candidates": "러시아어, 크로아티아어, 불가리아어, 덴마크어, 핀란드어, 스웨덴어, 네덜란드어, 프랑스어, 독일어, 영어",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "프랑스어 위키백과",
+      "object": "프랑스어",
+      "object_candidates": "우크라이나어, 스페인어, 폴란드어, 불가리아어, 스웨덴어, 벵골어, 덴마크어, 핀란드어, 체코어, 프랑스어",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "로스앤젤레스 타임스",
+      "object": "영어",
+      "object_candidates": "터키어, 라틴어, 헝가리어, 에스토니아어, 한국어, 덴마크어, 스페인어, 스웨덴어, 체코어, 영어",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "아파치 HTTP 서버",
+      "object": "영어",
+      "object_candidates": "우크라이나어, 덴마크어, 체코어, 폴란드어, 스웨덴어, 프랑스어, 라틴어, 스페인어, 에스토니아어, 영어",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "리아 노보스티",
+      "object": "러시아어",
+      "object_candidates": "영어, 불가리아어, 스페인어, 헝가리어, 우크라이나어, 덴마크어, 핀란드어, 베트남어, 크로아티아어, 러시아어",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

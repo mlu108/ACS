@@ -1,0 +1,542 @@
+{
+  "name": "location_of_formation",
+  "prompt_templates": [
+    "Πού δημιουργήθηκε ο/η <subject>? Η απάντηση είναι: <mask>",
+    "Σε ποια τοποθεσία δημιουργήθηκε ο/η <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια τοποθεσία έλαβε χώρα η δημιουργία του/της <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια χώρα ή τοποθεσία δημιουργήθηκε ο/η <subject>; Η απάντηση είναι: <mask>",
+    "Από πού μπορεί να ανιχνεύσει ο/η <subject> τη δημιουργία του/της; Η απάντηση είναι: <mask>",
+    " Η χώρα ίδρυσης του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Βασικό Ένστικτο",
+      "object": "Γαλλία",
+      "object_candidates": "Τουρκία, Σκωτία, Μεξικό, Γερμανία, Τζαμάικα, Ιαπωνία, Αγγλία, Ιταλία, Δημοκρατία της Ιρλανδίας, Γαλλία",
+      "index": 6071,
+      "subject_en": "Basic Instinct",
+      "object_en": "France"
+    },
+    {
+      "subject": "Blow-Up",
+      "object": "Ιταλία",
+      "object_candidates": "Τουρκία, Ιαπωνία, Τζαμάικα, Βέλγιο, Αγγλία, Σκωτία, Μεξικό, Γαλλία, Αυστραλία, Ιταλία",
+      "index": 6072,
+      "subject_en": "Blowup",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "αντισφαίριση",
+      "object": "Αγγλία",
+      "object_candidates": "Ιαπωνία, Βέλγιο, Μεξικό, Γαλλία, Τουρκία, Δημοκρατία της Ιρλανδίας, Ιταλία, Αυστραλία, Γερμανία, Αγγλία",
+      "index": 6073,
+      "subject_en": "tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "Ρέγκε",
+      "object": "Τζαμάικα",
+      "object_candidates": "Γαλλία, Δημοκρατία της Ιρλανδίας, Ιαπωνία, Σκωτία, Αυστραλία, Βέλγιο, Γερμανία, Ιταλία, Αγγλία, Τζαμάικα",
+      "index": 6074,
+      "subject_en": "reggae",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "Frankfurter Allgemeine Zeitung",
+      "object": "Γερμανία",
+      "object_candidates": "Τουρκία, Βέλγιο, Ιταλία, Αγγλία, Αυστραλία, Μεξικό, Τζαμάικα, Δημοκρατία της Ιρλανδίας, Ιαπωνία, Γερμανία",
+      "index": 6075,
+      "subject_en": "Frankfurter Allgemeine Zeitung",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Άλμα εις ύψος",
+      "object": "Σκωτία",
+      "object_candidates": "Αυστραλία, Μεξικό, Δημοκρατία της Ιρλανδίας, Γαλλία, Τζαμάικα, Ιαπωνία, Τουρκία, Ιταλία, Γερμανία, Σκωτία",
+      "index": 6076,
+      "subject_en": "high jump",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Φασιστική Ιταλία",
+      "object": "Ιταλία",
+      "object_candidates": "Σκωτία, Αυστραλία, Δημοκρατία της Ιρλανδίας, Ιαπωνία, Μεξικό, Τζαμάικα, Τουρκία, Αγγλία, Βέλγιο, Ιταλία",
+      "index": 6077,
+      "subject_en": "Italian Fascism",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "τατάμι",
+      "object": "Ιαπωνία",
+      "object_candidates": "Μεξικό, Σκωτία, Γαλλία, Βέλγιο, Ιταλία, Αγγλία, Τζαμάικα, Γερμανία, Δημοκρατία της Ιρλανδίας, Ιαπωνία",
+      "index": 6078,
+      "subject_en": "tatami",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Βιβλίο Γκίνες",
+      "object": "Δημοκρατία της Ιρλανδίας",
+      "object_candidates": "Ιαπωνία, Βέλγιο, Τουρκία, Σκωτία, Τζαμάικα, Γαλλία, Αγγλία, Γερμανία, Αυστραλία, Δημοκρατία της Ιρλανδίας",
+      "index": 6079,
+      "subject_en": "Guinness World Records",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Περιμένοντας τον Γκοντό",
+      "object": "Γαλλία",
+      "object_candidates": "Βέλγιο, Γερμανία, Ιαπωνία, Ιταλία, Δημοκρατία της Ιρλανδίας, Αυστραλία, Σκωτία, Τουρκία, Τζαμάικα, Γαλλία",
+      "index": 6080,
+      "subject_en": "Waiting for Godot",
+      "object_en": "France"
+    },
+    {
+      "subject": "Η Ζωή Είναι Ωραία",
+      "object": "Ιταλία",
+      "object_candidates": "Τουρκία, Αγγλία, Γαλλία, Αυστραλία, Ιαπωνία, Δημοκρατία της Ιρλανδίας, Μεξικό, Σκωτία, Τζαμάικα, Ιταλία",
+      "index": 6081,
+      "subject_en": "Life is Beautiful",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Corriere della Sera",
+      "object": "Ιταλία",
+      "object_candidates": "Γαλλία, Γερμανία, Μεξικό, Τουρκία, Δημοκρατία της Ιρλανδίας, Τζαμάικα, Αγγλία, Αυστραλία, Βέλγιο, Ιταλία",
+      "index": 6082,
+      "subject_en": "Corriere della Sera",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "τούρκικος καφές",
+      "object": "Τουρκία",
+      "object_candidates": "Σκωτία, Τζαμάικα, Γερμανία, Γαλλία, Αυστραλία, Αγγλία, Ιταλία, Βέλγιο, Ιαπωνία, Τουρκία",
+      "index": 6083,
+      "subject_en": "Turkish coffee",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Καμαμπέρ",
+      "object": "Γαλλία",
+      "object_candidates": "Τζαμάικα, Μεξικό, Αγγλία, Ιταλία, Σκωτία, Βέλγιο, Τουρκία, Αυστραλία, Ιαπωνία, Γαλλία",
+      "index": 6084,
+      "subject_en": "Camembert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Death Note",
+      "object": "Ιαπωνία",
+      "object_candidates": "Βέλγιο, Σκωτία, Αυστραλία, Τουρκία, Δημοκρατία της Ιρλανδίας, Αγγλία, Ιταλία, Τζαμάικα, Γερμανία, Ιαπωνία",
+      "index": 6085,
+      "subject_en": "Death Note",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Τόφου",
+      "object": "Ιαπωνία",
+      "object_candidates": "Ιταλία, Σκωτία, Δημοκρατία της Ιρλανδίας, Αυστραλία, Βέλγιο, Μεξικό, Τζαμάικα, Γερμανία, Γαλλία, Ιαπωνία",
+      "index": 6086,
+      "subject_en": "tofu",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Πέστο",
+      "object": "Ιταλία",
+      "object_candidates": "Δημοκρατία της Ιρλανδίας, Τζαμάικα, Αγγλία, Ιαπωνία, Γερμανία, Μεξικό, Γαλλία, Αυστραλία, Τουρκία, Ιταλία",
+      "index": 6087,
+      "subject_en": "pesto",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Kraftwerk",
+      "object": "Γερμανία",
+      "object_candidates": "Βέλγιο, Αγγλία, Τουρκία, Ιταλία, Σκωτία, Τζαμάικα, Ιαπωνία, Δημοκρατία της Ιρλανδίας, Γαλλία, Γερμανία",
+      "index": 6088,
+      "subject_en": "Kraftwerk",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Ντόμπερμαν",
+      "object": "Γερμανία",
+      "object_candidates": "Γαλλία, Τουρκία, Σκωτία, Ιταλία, Μεξικό, Αυστραλία, Τζαμάικα, Αγγλία, Βέλγιο, Γερμανία",
+      "index": 6089,
+      "subject_en": "Dobermann",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Η ιστορία του Γκέντζι",
+      "object": "Ιαπωνία",
+      "object_candidates": "Ιταλία, Μεξικό, Γερμανία, Αυστραλία, Τουρκία, Βέλγιο, Σκωτία, Γαλλία, Δημοκρατία της Ιρλανδίας, Ιαπωνία",
+      "index": 6090,
+      "subject_en": "The Tale of Genji",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Γουακαμόλε",
+      "object": "Μεξικό",
+      "object_candidates": "Τζαμάικα, Αγγλία, Σκωτία, Βέλγιο, Δημοκρατία της Ιρλανδίας, Τουρκία, Ιαπωνία, Ιταλία, Γαλλία, Μεξικό",
+      "index": 6091,
+      "subject_en": "guacamole",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "επιτραπέζια αντισφαίριση",
+      "object": "Αγγλία",
+      "object_candidates": "Βέλγιο, Γαλλία, Αυστραλία, Σκωτία, Τζαμάικα, Ιταλία, Ιαπωνία, Γερμανία, Μεξικό, Αγγλία",
+      "index": 6092,
+      "subject_en": "table tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "J-pop",
+      "object": "Ιαπωνία",
+      "object_candidates": "Τζαμάικα, Μεξικό, Γερμανία, Τουρκία, Γαλλία, Δημοκρατία της Ιρλανδίας, Αγγλία, Ιταλία, Βέλγιο, Ιαπωνία",
+      "index": 6093,
+      "subject_en": "J-pop",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Βάφλα",
+      "object": "Βέλγιο",
+      "object_candidates": "Τουρκία, Ιαπωνία, Ιταλία, Αγγλία, Γαλλία, Δημοκρατία της Ιρλανδίας, Σκωτία, Μεξικό, Γερμανία, Βέλγιο",
+      "index": 6094,
+      "subject_en": "waffle",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "ποδόσφαιρο",
+      "object": "Αγγλία",
+      "object_candidates": "Βέλγιο, Δημοκρατία της Ιρλανδίας, Τουρκία, Γαλλία, Γερμανία, Ιταλία, Μεξικό, Αυστραλία, Ιαπωνία, Αγγλία",
+      "index": 6095,
+      "subject_en": "association football",
+      "object_en": "England"
+    },
+    {
+      "subject": "Ντάνι Μινόγκ",
+      "object": "Αυστραλία",
+      "object_candidates": "Ιταλία, Αγγλία, Γαλλία, Γερμανία, Ιαπωνία, Βέλγιο, Δημοκρατία της Ιρλανδίας, Τζαμάικα, Μεξικό, Αυστραλία",
+      "index": 6096,
+      "subject_en": "Dannii Minogue",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Το Δεκαήμερο",
+      "object": "Ιταλία",
+      "object_candidates": "Βέλγιο, Ιαπωνία, Μεξικό, Σκωτία, Τζαμάικα, Δημοκρατία της Ιρλανδίας, Γερμανία, Τουρκία, Γαλλία, Ιταλία",
+      "index": 6097,
+      "subject_en": "The Decameron",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "U2",
+      "object": "Δημοκρατία της Ιρλανδίας",
+      "object_candidates": "Σκωτία, Αγγλία, Γερμανία, Ιαπωνία, Ιταλία, Γαλλία, Μεξικό, Τουρκία, Τζαμάικα, Δημοκρατία της Ιρλανδίας",
+      "index": 6098,
+      "subject_en": "U2",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Γκολφ",
+      "object": "Σκωτία",
+      "object_candidates": "Μεξικό, Ιαπωνία, Αυστραλία, Τζαμάικα, Αγγλία, Γαλλία, Βέλγιο, Τουρκία, Ιταλία, Σκωτία",
+      "index": 6099,
+      "subject_en": "golf",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Μπρέτσελ",
+      "object": "Γερμανία",
+      "object_candidates": "Αγγλία, Σκωτία, Ιαπωνία, Δημοκρατία της Ιρλανδίας, Γαλλία, Βέλγιο, Ιταλία, Τουρκία, Μεξικό, Γερμανία",
+      "index": 6100,
+      "subject_en": "pretzel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lenovo",
+      "object": "Πεκίνο",
+      "object_candidates": "Σικάγο, Λούμπλιν, Μπέρμιγχαμ, Φραγκφούρτη, Ντιτρόιτ, Μαϊάμι, Στοκχόλμη, Σεούλ, Λονδίνο, Πεκίνο",
+      "index": 6488,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "The Coca-Cola Company",
+      "object": "Ατλάντα",
+      "object_candidates": "Στοκχόλμη, Λούμπλιν, Πεκίνο, Άμστερνταμ, Ρότερνταμ, Μπέρμιγχαμ, Λονδίνο, Λίμερικ, Αγγλία, Ατλάντα",
+      "index": 6489,
+      "subject_en": "The Coca-Cola Company",
+      "object_en": "Atlanta"
+    },
+    {
+      "subject": "Ericsson",
+      "object": "Στοκχόλμη",
+      "object_candidates": "Λονδίνο, Μπέρμιγχαμ, Λίμερικ, Άμστερνταμ, Φραγκφούρτη, Λούμπλιν, Μαϊάμι, Ατλάντα, Σικάγο, Στοκχόλμη",
+      "index": 6490,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Στίβι Γουόντερ",
+      "object": "Ντιτρόιτ",
+      "object_candidates": "Σέφιλντ, Μαϊάμι, Λούμπλιν, Τόκιο, Αγγλία, Σικάγο, Βερολίνο, Ατλάντα, Μπέρμιγχαμ, Ντιτρόιτ",
+      "index": 6491,
+      "subject_en": "Stevie Wonder",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Samsung Electronics",
+      "object": "Σεούλ",
+      "object_candidates": "Λούμπλιν, Τόκιο, Άμστερνταμ, Φραγκφούρτη, Αγγλία, Βερολίνο, Μάντσεστερ, Πεκίνο, Λίμερικ, Σεούλ",
+      "index": 6492,
+      "subject_en": "Samsung Electronics",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Kanye West",
+      "object": "Σικάγο",
+      "object_candidates": "Μάντσεστερ, Ντιτρόιτ, Σέφιλντ, Λονδίνο, Ρότερνταμ, Μαϊάμι, Σεούλ, Άμστερνταμ, Λούμπλιν, Σικάγο",
+      "index": 6493,
+      "subject_en": "Kanye West",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "The Cranberries",
+      "object": "Λίμερικ",
+      "object_candidates": "Αγγλία, Λονδίνο, Ντιτρόιτ, Ελσίνκι, Στοκχόλμη, Άμστερνταμ, Μπέρμιγχαμ, Φραγκφούρτη, Παρίσι, Λίμερικ",
+      "index": 6494,
+      "subject_en": "The Cranberries",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "Coldplay",
+      "object": "Λονδίνο",
+      "object_candidates": "Τόκιο, Αγγλία, Στοκχόλμη, Λίμερικ, Παρίσι, Άμστερνταμ, Βερολίνο, Μπέρμιγχαμ, Ρότερνταμ, Λονδίνο",
+      "index": 6495,
+      "subject_en": "Coldplay",
+      "object_en": "London"
+    },
+    {
+      "subject": "Siemens",
+      "object": "Βερολίνο",
+      "object_candidates": "Τόκιο, Σικάγο, Βανκούβερ, Ντιτρόιτ, Λούμπλιν, Στοκχόλμη, Μπέρμιγχαμ, Μαϊάμι, Πεκίνο, Βερολίνο",
+      "index": 6496,
+      "subject_en": "Siemens",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Greenpeace",
+      "object": "Βανκούβερ",
+      "object_candidates": "Φραγκφούρτη, Μπέρμιγχαμ, Πεκίνο, Σιάτλ, Αγγλία, Ντιτρόιτ, Τόκιο, Στοκχόλμη, Σικάγο, Βανκούβερ",
+      "index": 6497,
+      "subject_en": "Greenpeace",
+      "object_en": "Vancouver"
+    },
+    {
+      "subject": "Xiaomi",
+      "object": "Πεκίνο",
+      "object_candidates": "Σεούλ, Βερολίνο, Μάντσεστερ, Άμστερνταμ, Μπέρμιγχαμ, Τόκιο, Λίμερικ, Ελσίνκι, Φραγκφούρτη, Πεκίνο",
+      "index": 6498,
+      "subject_en": "Xiaomi",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "FIFA",
+      "object": "Παρίσι",
+      "object_candidates": "Μαϊάμι, Βανκούβερ, Μπέρμιγχαμ, Σιάτλ, Λούμπλιν, Λίμερικ, Άμστερνταμ, Ελσίνκι, Τόκιο, Παρίσι",
+      "index": 6499,
+      "subject_en": "FIFA",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Ένωση του Λούμπλιν",
+      "object": "Λούμπλιν",
+      "object_candidates": "Ντιτρόιτ, Σεούλ, Παρίσι, Σικάγο, Μάντσεστερ, Μαϊάμι, Αγγλία, Σιάτλ, Βερολίνο, Λούμπλιν",
+      "index": 6500,
+      "subject_en": "Union of Lublin",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "Σχολή της Φρανκφούρτης",
+      "object": "Φραγκφούρτη",
+      "object_candidates": "Σικάγο, Λονδίνο, Ελσίνκι, Μαϊάμι, Πεκίνο, Λίμερικ, Άμστερνταμ, Βανκούβερ, Τόκιο, Φραγκφούρτη",
+      "index": 6501,
+      "subject_en": "Frankfurt School",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Προσκοπισμός",
+      "object": "Αγγλία",
+      "object_candidates": "Λονδίνο, Ελσίνκι, Ρότερνταμ, Μαϊάμι, Παρίσι, Στοκχόλμη, Σέφιλντ, Λούμπλιν, Πεκίνο, Αγγλία",
+      "index": 6502,
+      "subject_en": "scouting",
+      "object_en": "England"
+    },
+    {
+      "subject": "Bee Gees",
+      "object": "Μάντσεστερ",
+      "object_candidates": "Σεούλ, Στοκχόλμη, Ελσίνκι, Βανκούβερ, Σικάγο, Σέφιλντ, Παρίσι, Μπέρμιγχαμ, Αγγλία, Μάντσεστερ",
+      "index": 6503,
+      "subject_en": "Bee Gees",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Boeing",
+      "object": "Σιάτλ",
+      "object_candidates": "Ρότερνταμ, Μαϊάμι, Στοκχόλμη, Παρίσι, Σεούλ, Ντιτρόιτ, Μπέρμιγχαμ, Λονδίνο, Μάντσεστερ, Σιάτλ",
+      "index": 6504,
+      "subject_en": "Boeing",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Lordi",
+      "object": "Ελσίνκι",
+      "object_candidates": "Βερολίνο, Φραγκφούρτη, Παρίσι, Λούμπλιν, Σεούλ, Πεκίνο, Σέφιλντ, Μάντσεστερ, Ντιτρόιτ, Ελσίνκι",
+      "index": 6505,
+      "subject_en": "Lordi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Burger King",
+      "object": "Μαϊάμι",
+      "object_candidates": "Φραγκφούρτη, Πεκίνο, Βανκούβερ, Παρίσι, Σικάγο, Ατλάντα, Άμστερνταμ, Λίμερικ, Λούμπλιν, Μαϊάμι",
+      "index": 6506,
+      "subject_en": "Burger King",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "Rammstein",
+      "object": "Βερολίνο",
+      "object_candidates": "Μπέρμιγχαμ, Πεκίνο, Λίμερικ, Παρίσι, Ρότερνταμ, Ελσίνκι, Φραγκφούρτη, Βανκούβερ, Ατλάντα, Βερολίνο",
+      "index": 6507,
+      "subject_en": "Rammstein",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Foo Fighters",
+      "object": "Σιάτλ",
+      "object_candidates": "Άμστερνταμ, Λίμερικ, Αγγλία, Μάντσεστερ, Φραγκφούρτη, Σεούλ, Ρότερνταμ, Βερολίνο, Μπέρμιγχαμ, Σιάτλ",
+      "index": 6508,
+      "subject_en": "Foo Fighters",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "The Who",
+      "object": "Λονδίνο",
+      "object_candidates": "Αγγλία, Σιάτλ, Φραγκφούρτη, Ντιτρόιτ, Μπέρμιγχαμ, Βερολίνο, Ατλάντα, Σέφιλντ, Πεκίνο, Λονδίνο",
+      "index": 6509,
+      "subject_en": "The Who",
+      "object_en": "London"
+    },
+    {
+      "subject": "Φέγενορντ",
+      "object": "Ρότερνταμ",
+      "object_candidates": "Τόκιο, Ντιτρόιτ, Σιάτλ, Βερολίνο, Μπέρμιγχαμ, Αγγλία, Μαϊάμι, Μάντσεστερ, Ελσίνκι, Ρότερνταμ",
+      "index": 6510,
+      "subject_en": "Feyenoord",
+      "object_en": "Rotterdam"
+    },
+    {
+      "subject": "ΑΦΚ Άγιαξ",
+      "object": "Άμστερνταμ",
+      "object_candidates": "Τόκιο, Σεούλ, Λίμερικ, Μπέρμιγχαμ, Ρότερνταμ, Σιάτλ, Παρίσι, Στοκχόλμη, Φραγκφούρτη, Άμστερνταμ",
+      "index": 6511,
+      "subject_en": "AFC Ajax",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Γερμανικοί Σιδηρόδρομοι",
+      "object": "Βερολίνο",
+      "object_candidates": "Λίμερικ, Βανκούβερ, Ντιτρόιτ, Τόκιο, Σεούλ, Ατλάντα, Ρότερνταμ, Μαϊάμι, Φραγκφούρτη, Βερολίνο",
+      "index": 6512,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Sega",
+      "object": "Τόκιο",
+      "object_candidates": "Παρίσι, Άμστερνταμ, Σεούλ, Μπέρμιγχαμ, Ρότερνταμ, Βανκούβερ, Σικάγο, Φραγκφούρτη, Λούμπλιν, Τόκιο",
+      "index": 6513,
+      "subject_en": "Sega",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Aston Martin",
+      "object": "Λονδίνο",
+      "object_candidates": "Ρότερνταμ, Στοκχόλμη, Τόκιο, Μπέρμιγχαμ, Άμστερνταμ, Πεκίνο, Σιάτλ, Παρίσι, Μάντσεστερ, Λονδίνο",
+      "index": 6514,
+      "subject_en": "Aston Martin Lagonda",
+      "object_en": "London"
+    },
+    {
+      "subject": "Arctic Monkeys",
+      "object": "Σέφιλντ",
+      "object_candidates": "Ρότερνταμ, Ελσίνκι, Φραγκφούρτη, Μαϊάμι, Πεκίνο, Αγγλία, Παρίσι, Λίμερικ, Λονδίνο, Σέφιλντ",
+      "index": 6515,
+      "subject_en": "Arctic Monkeys",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "Γκλόρια Εστέφαν",
+      "object": "Μαϊάμι",
+      "object_candidates": "Τόκιο, Άμστερνταμ, Μπέρμιγχαμ, Παρίσι, Σέφιλντ, Ρότερνταμ, Στοκχόλμη, Σιάτλ, Πεκίνο, Μαϊάμι",
+      "index": 6516,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "EMI",
+      "object": "Λονδίνο",
+      "object_candidates": "Σικάγο, Ρότερνταμ, Σιάτλ, Ελσίνκι, Φραγκφούρτη, Πεκίνο, Μαϊάμι, Μπέρμιγχαμ, Σεούλ, Λονδίνο",
+      "index": 6517,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "Duran Duran",
+      "object": "Μπέρμιγχαμ",
+      "object_candidates": "Ατλάντα, Παρίσι, Πεκίνο, Αγγλία, Σεούλ, Λίμερικ, Σικάγο, Βερολίνο, Σιάτλ, Μπέρμιγχαμ",
+      "index": 6518,
+      "subject_en": "Duran Duran",
+      "object_en": "Birmingham"
+    },
+    {
+      "subject": "LSE",
+      "object": "Λονδίνο",
+      "object_candidates": "Σιάτλ, Άμστερνταμ, Μπέρμιγχαμ, Λούμπλιν, Μάντσεστερ, Πεκίνο, Τόκιο, Ατλάντα, Σικάγο, Λονδίνο",
+      "index": 6519,
+      "subject_en": "London Stock Exchange",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ducati",
+      "object": "Μπολόνια",
+      "object_candidates": "Παρίσι, Τόκιο, Άμστερνταμ, Φραγκφούρτη, Ατλάντα, Στοκχόλμη, Σεούλ, Ρότερνταμ, Βερολίνο, Μπολόνια",
+      "index": 6520,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "The Rasmus",
+      "object": "Ελσίνκι",
+      "object_candidates": "Μάντσεστερ, Σεούλ, Βανκούβερ, Μαϊάμι, Λίμερικ, Ντιτρόιτ, Πεκίνο, Μπέρμιγχαμ, Σιάτλ, Ελσίνκι",
+      "index": 6521,
+      "subject_en": "The Rasmus",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Def Leppard",
+      "object": "Σέφιλντ",
+      "object_candidates": "Ρότερνταμ, Τόκιο, Ελσίνκι, Μπέρμιγχαμ, Παρίσι, Βερολίνο, Φραγκφούρτη, Λούμπλιν, Σεούλ, Σέφιλντ",
+      "index": 6522,
+      "subject_en": "Def Leppard",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "nikon",
+      "object": "Τόκιο",
+      "object_candidates": "Ελσίνκι, Μπέρμιγχαμ, Λίμερικ, Πεκίνο, Ρότερνταμ, Σεούλ, Βερολίνο, Βανκούβερ, Λούμπλιν, Τόκιο",
+      "index": 6523,
+      "subject_en": "Nikon",
+      "object_en": "Tokyo"
+    }
+  ],
+  "relation_id": "P740"
+}

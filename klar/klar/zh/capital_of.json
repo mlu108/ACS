@@ -1,0 +1,1710 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "<subject> 是哪个国家或州的首都？答案是：<mask>",
+    "哪个国家或州的首都是 <subject>？答案是：<mask>",
+    "哪个地方把 <subject> 作为首都？答案是：<mask>",
+    "<subject> 是哪个地方的首都？答案是：<mask>",
+    "哪里把 <subject> 作为首都？答案是：<mask>",
+    "<subject>是一座首都，它所属的国家名叫<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "埃德蒙顿",
+      "object": "艾伯塔省",
+      "object_candidates": "捷克斯洛伐克, 老挝, 古吉拉特邦, 巴伐利亚, 砂拉越, 孟加拉国, 得克萨斯州, 卡塔尔, 普罗旺斯, 艾伯塔省",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "安卡拉",
+      "object": "土耳其",
+      "object_candidates": "赞比亚, 德国, 塞内加尔, 波兰, 菲律宾, 拉脱维亚, 利比亚, 阿肯色州, 格陵兰, 土耳其",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "阿姆斯特丹",
+      "object": "荷兰",
+      "object_candidates": "拉脱维亚, 安省, 堪萨斯州, 巴伐利亚, 尼泊尔, 斯洛文尼亚, 马里共和国, 康乃狄克州, 罗德西亚, 荷兰",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "巴库",
+      "object": "阿塞拜疆",
+      "object_candidates": "荷兰, 比利时, 波札那, 马哈拉施特拉邦, 丹麦, 尼日尔, 乌克兰, 索马里, 也门, 阿塞拜疆",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "开罗",
+      "object": "埃及",
+      "object_candidates": "阿曼, 玻利维亚, 纳瓦拉, 哈萨克斯坦, 马里兰州, 康乃狄克州, 英格兰, 莫桑比克, 犹大王国, 埃及",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "哥本哈根",
+      "object": "丹麦",
+      "object_candidates": "麻萨诸塞州, 斯洛伐克, 委内瑞拉, 以色列, 伊拉克, 法兰德斯, 爱达荷州, 孟加拉国, 危地马拉, 丹麦",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "巴塞罗那",
+      "object": "加泰罗尼亚",
+      "object_candidates": "卢森堡省, 科罗拉多州, 托斯卡纳, 巴林, 伯利兹, 四川省, 迪拜酋长国, 约旦, 老挝, 加泰罗尼亚",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "布宜诺斯艾利斯",
+      "object": "阿根廷",
+      "object_candidates": "卡塔尔, 阿拉贡, 德国, 蒙特内哥罗, 犹他州, 俄罗斯, 玻利维亚, 葡萄牙, 砂拉越, 阿根廷",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "慕尼黑",
+      "object": "巴伐利亚",
+      "object_candidates": "昆士兰州, 葡萄牙, 印第安纳州, 汶莱, 波兰, 康乃狄克州, 法兰德斯, 乌兹别克斯坦, 犹大王国, 巴伐利亚",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "佛罗伦萨",
+      "object": "托斯卡纳",
+      "object_candidates": "利比里亚, 蒙特内哥罗, 广东省, 塞尔维亚, 爱尔兰共和国, 路易斯安那州, 白俄罗斯, 印度, 挪威, 托斯卡纳",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "罗马",
+      "object": "意大利",
+      "object_candidates": "阿富汗, 印度尼西亚, 巴西, 麻萨诸塞州, 马耳他, 辛巴威, 德国, 委内瑞拉, 不丹, 意大利",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "阿尔及尔",
+      "object": "阿尔及利亚",
+      "object_candidates": "海地, 比利时, 格鲁吉亚, 马拉维, 几内亚, 巴基斯坦, 辛巴威, 塞内加尔, 砂拉越, 阿尔及利亚",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "的黎波里",
+      "object": "利比亚",
+      "object_candidates": "乌拉圭, 普罗旺斯, 卡塔尔, 塔吉克斯坦, 匈牙利, 吉尔吉斯斯坦, 巴基斯坦, 肯尼亚, 波兰, 利比亚",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "堪培拉",
+      "object": "澳大利亚",
+      "object_candidates": "阿拉斯加州, 明尼苏达州, 格陵兰, 哈里亚纳邦, 昆士兰州, 克罗地亚, 摩洛哥, 保加利亚, 土耳其, 澳大利亚",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "温得和克",
+      "object": "纳米比亚",
+      "object_candidates": "比利时, 科威特, 叙利亚, 尼泊尔, 日本, 几内亚, 爱尔兰共和国, 菲律宾, 托斯卡纳, 纳米比亚",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "伊拉克利翁",
+      "object": "克里特",
+      "object_candidates": "葡萄牙, 约旦, 埃塞俄比亚, 中华民国, 旁遮普邦, 阿拉斯加州, 德国, 安省, 印第安纳州, 克里特",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "巴格达",
+      "object": "伊拉克",
+      "object_candidates": "罗德西亚, 阿富汗, 俄罗斯, 荷兰, 巴西, 科威特, 白俄罗斯, 摩洛哥, 保加利亚, 伊拉克",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "爱丁堡",
+      "object": "苏格兰",
+      "object_candidates": "特伦甘纳邦, 比哈尔邦, 路易斯安那州, 尼加拉瓜, 荷兰, 阿肯色州, 巴西, 犹他州, 奥克拉荷马州, 苏格兰",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "喀布尔",
+      "object": "阿富汗",
+      "object_candidates": "威尔斯, 乌兹别克斯坦, 卡纳塔克邦, 也门, 四川省, 阿拉斯加州, 卡塔尔, 怀俄明州, 巴基斯坦, 阿富汗",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "波恩",
+      "object": "德国",
+      "object_candidates": "白俄罗斯, 得克萨斯州, 尼泊尔, 菲律宾, 阿拉贡, 巴伐利亚, 密歇根州, 阿肯色州, 利比里亚, 德国",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "柏林",
+      "object": "德国",
+      "object_candidates": "格陵兰, 皮埃蒙特, 阿曼, 委内瑞拉, 斐济, 拉脱维亚, 中华民国, 挪威, 罗马尼亚, 德国",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "波多诺伏",
+      "object": "贝宁",
+      "object_candidates": "犹他州, 吉尔吉斯斯坦, 西班牙, 斯洛文尼亚, 阿拉贡, 得克萨斯州, 乌拉圭, 玻利维亚, 乌干达, 贝宁",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "嘉柏隆里",
+      "object": "波札那",
+      "object_candidates": "罗马尼亚, 加利福尼亚州, 撒丁岛, 泰国, 爱沙尼亚, 塞尔维亚, 乌拉圭, 曼尼托巴, 哈里亚纳邦, 波札那",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "巴黎",
+      "object": "法国",
+      "object_candidates": "海地, 巴基斯坦, 比哈尔邦, 巴西, 科威特, 纳米比亚, 佛罗里达州, 喀拉拉邦, 哈萨克斯坦, 法国",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "孟买",
+      "object": "马哈拉施特拉邦",
+      "object_candidates": "古巴, 曼尼托巴, 诺尔省, 萨摩亚, 密歇根州, 四川省, 尼日尔, 田纳西州, 卢森堡省, 马哈拉施特拉邦",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "奥斯陆",
+      "object": "挪威",
+      "object_candidates": "马达加斯加, 法国, 安大略省, 土耳其, 科威特, 皮埃蒙特, 保加利亚, 坦桑尼亚, 康乃狄克州, 挪威",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "耶路撒冷",
+      "object": "犹大王国",
+      "object_candidates": "勃艮第, 叙利亚, 瑞士, 格陵兰, 巴西, 马拉维, 埃及, 泰国, 怀俄明州, 犹大王国",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "比什凯克",
+      "object": "吉尔吉斯斯坦",
+      "object_candidates": "比哈尔邦, 四川省, 亚美尼亚, 旁遮普邦, 乍得, 阿曼, 卡纳塔克邦, 特伦甘纳邦, 塔斯马尼亚州, 吉尔吉斯斯坦",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "布加勒斯特",
+      "object": "罗马尼亚",
+      "object_candidates": "英格兰, 纳瓦拉, 辛巴威, 爱达荷州, 利比里亚, 泰国, 阿尔巴县, 拉脱维亚, 埃及, 罗马尼亚",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "墨尔本",
+      "object": "维多利亚州",
+      "object_candidates": "砂拉越, 安省, 阿尔及利亚, 牛津郡, 厄瓜多尔, 黑森, 科罗拉多州, 艾伯塔省, 毛里求斯, 维多利亚州",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "北京市",
+      "object": "中华民国",
+      "object_candidates": "摩洛哥, 孟加拉国, 瑞典, 爱尔兰共和国, 云南省, 阿拉斯加州, 喀拉拉邦, 埃及, 斯洛伐克, 中华民国",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "重庆市",
+      "object": "中华民国",
+      "object_candidates": "怀俄明州, 夏威夷州, 拉脱维亚, 安省, 马耳他, 塔吉克斯坦, 格陵兰, 塔斯马尼亚州, 乌兹别克斯坦, 中华民国",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "哈瓦那",
+      "object": "古巴",
+      "object_candidates": "马来西亚, 普罗旺斯, 马耳他, 路易斯安那州, 云南省, 加泰罗尼亚, 莱斯特郡, 突尼西亚, 危地马拉, 古巴",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "丹佛",
+      "object": "科罗拉多州",
+      "object_candidates": "阿拉贡, 安哥拉, 叙利亚, 索马里, 利比亚, 芬兰, 萨尔茨堡州, 安大略省, 普罗旺斯, 科罗拉多州",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "摩加迪休",
+      "object": "索马里",
+      "object_candidates": "荷兰, 立陶宛, 萨摩亚, 法国, 乌拉圭, 中华民国, 迦纳, 伊朗, 云南省, 索马里",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "加迪夫",
+      "object": "威尔斯",
+      "object_candidates": "卡塔尔, 马里兰州, 法兰德斯, 秘鲁, 白俄罗斯, 挪威, 乌干达, 意大利, 印度, 威尔斯",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "都柏林",
+      "object": "爱尔兰共和国",
+      "object_candidates": "毛里求斯, 越南, 阿尔巴尼亚, 印度尼西亚, 墨西哥, 明尼苏达州, 几内亚, 法国, 阿塞拜疆, 爱尔兰共和国",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "突尼斯市",
+      "object": "突尼西亚",
+      "object_candidates": "阿肯色州, 澳大利亚, 旁遮普邦, 不丹, 老挝, 加利福尼亚州, 贝宁, 艾伯塔省, 泰国, 突尼西亚",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "里约热内卢",
+      "object": "巴西",
+      "object_candidates": "四川省, 路易斯安那州, 奥克拉荷马州, 英格兰王国, 维多利亚州, 犹他州, 赛普勒斯, 苏丹, 砂拉越, 巴西",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "瓦莱塔",
+      "object": "马耳他",
+      "object_candidates": "加蓬, 迦纳, 斐济, 瑞士, 摩洛哥, 柬埔寨, 马里兰州, 堪萨斯州, 希腊, 马耳他",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "伦敦",
+      "object": "英格兰",
+      "object_candidates": "菲律宾, 诺曼底, 哈萨克斯坦, 沙巴, 赛普勒斯, 瑞典, 古吉拉特邦, 艾伯塔省, 安哥拉, 英格兰",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "拉巴特",
+      "object": "摩洛哥",
+      "object_candidates": "委内瑞拉, 赛普勒斯, 加拿大, 吉尔吉斯斯坦, 塔吉克斯坦, 塞尔维亚, 玻利维亚, 昆士兰州, 马耳他, 摩洛哥",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "里加",
+      "object": "拉脱维亚",
+      "object_candidates": "泰国, 得克萨斯州, 利比里亚, 毛里求斯, 马耳他, 砂拉越, 勃兰登堡, 四川省, 萨尔茨堡州, 拉脱维亚",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "大马士革",
+      "object": "叙利亚",
+      "object_candidates": "沙巴, 泰国, 曼尼托巴, 塔吉克斯坦, 也门, 乌干达, 伊拉克, 艾伯塔省, 麻萨诸塞州, 叙利亚",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "三兰港",
+      "object": "坦桑尼亚",
+      "object_candidates": "皮埃蒙特, 白俄罗斯, 巴林, 智利, 四川省, 危地马拉, 丹麦, 波札那, 吉尔吉斯斯坦, 坦桑尼亚",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "伦敦",
+      "object": "英格兰王国",
+      "object_candidates": "广东省, 俄罗斯, 斯洛伐克, 乌克兰, 卢旺达, 卡塔尔, 厄瓜多尔, 印第安纳州, 得克萨斯州, 英格兰王国",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "斯德哥尔摩",
+      "object": "瑞典",
+      "object_candidates": "玻利维亚, 托斯卡纳, 哈萨克斯坦, 辛巴威, 埃及, 萨尔茨堡州, 秘鲁, 夏威夷州, 乌克兰, 瑞典",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "赫尔辛基",
+      "object": "芬兰",
+      "object_candidates": "尼泊尔, 阿尔巴县, 利比里亚, 阿肯色州, 卢森堡省, 马里兰州, 摩洛哥, 伯利兹, 罗德西亚, 芬兰",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "布拉格",
+      "object": "波希米亚",
+      "object_candidates": "萨尔茨堡州, 古巴, 白俄罗斯, 阿尔及利亚, 阿尔巴尼亚, 黑森, 阿拉贡, 田纳西州, 阿塞拜疆, 波希米亚",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "印第安纳波利斯",
+      "object": "印第安纳州",
+      "object_candidates": "泰国, 佛罗里达州, 康乃狄克州, 印度, 巴拿马, 安哥拉, 尼加拉瓜, 保加利亚, 墨西哥, 印第安纳州",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "马德里",
+      "object": "西班牙",
+      "object_candidates": "卢旺达, 佛罗里达州, 利比亚, 波兰, 加利福尼亚州, 法国, 厄瓜多尔, 拉贾斯坦邦, 罗德西亚, 西班牙",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "瓜地马拉市",
+      "object": "危地马拉",
+      "object_candidates": "乍得, 爱尔兰共和国, 加拿大, 得克萨斯州, 巴巴多斯, 安哥拉, 比哈尔邦, 阿尔巴尼亚, 拉脱维亚, 危地马拉",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "华沙",
+      "object": "波兰",
+      "object_candidates": "海地, 土耳其, 英格兰王国, 巴伐利亚, 马耳他, 迪拜酋长国, 意大利, 果阿邦, 堪萨斯州, 波兰",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "广州市",
+      "object": "广东省",
+      "object_candidates": "赞比亚, 叙利亚, 巴伐利亚, 汶莱, 巴西, 四川省, 乌克兰, 萨克森自由州, 阿尔巴县, 广东省",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "德累斯顿",
+      "object": "萨克森自由州",
+      "object_candidates": "阿肯色州, 泰国, 危地马拉, 普罗旺斯, 约旦, 萨尔茨堡州, 马来西亚, 夏威夷州, 加拿大, 萨克森自由州",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "太子港",
+      "object": "海地",
+      "object_candidates": "日本, 安哥拉, 捷克斯洛伐克, 阿根廷, 卡纳塔克邦, 巴林, 几内亚, 法国, 马哈拉施特拉邦, 海地",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "雅典",
+      "object": "希腊",
+      "object_candidates": "埃及, 康乃狄克州, 马里共和国, 匈牙利, 奥克拉荷马州, 洪都拉斯, 亚美尼亚, 安哥拉, 萨尔茨堡州, 希腊",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "荷巴特",
+      "object": "塔斯马尼亚州",
+      "object_candidates": "约旦, 塞尔维亚, 格鲁吉亚, 巴西, 卢森堡省, 艾奥瓦州, 巴基斯坦, 奥克拉荷马州, 比哈尔邦, 塔斯马尼亚州",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "塔林",
+      "object": "爱沙尼亚",
+      "object_candidates": "旁遮普邦, 纳瓦拉, 葡萄牙, 宾夕法尼亚州, 菲律宾, 勃兰登堡, 斐济, 莫桑比克, 克罗地亚, 爱沙尼亚",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "东京都",
+      "object": "日本",
+      "object_candidates": "维多利亚州, 乌干达, 埃及, 匈牙利, 黎巴嫩, 卢旺达, 阿富汗, 中华民国, 撒丁岛, 日本",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "维也纳",
+      "object": "奥地利",
+      "object_candidates": "捷克斯洛伐克, 古吉拉特邦, 以色列, 土耳其, 英格兰, 哈萨克斯坦, 犹他州, 安哥拉, 也门, 奥地利",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "卢布尔雅那",
+      "object": "斯洛文尼亚",
+      "object_candidates": "以色列, 塞内加尔, 蒙特内哥罗, 西西里岛, 芬兰, 奈及利亚, 塔吉克斯坦, 阿富汗, 几内亚, 斯洛文尼亚",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "耶路撒冷",
+      "object": "以色列",
+      "object_candidates": "塞内加尔, 委内瑞拉, 特伦甘纳邦, 阿塞拜疆, 汶莱, 匈牙利, 马哈拉施特拉邦, 牛津郡, 得克萨斯州, 以色列",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "雅加达",
+      "object": "印度尼西亚",
+      "object_candidates": "莫桑比克, 约旦, 加利福尼亚州, 智利, 广东省, 奥克拉荷马州, 汶莱, 卡纳塔克邦, 拉贾斯坦邦, 印度尼西亚",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "都灵",
+      "object": "皮埃蒙特",
+      "object_candidates": "塞内加尔, 意大利, 南斯拉夫, 昆士兰州, 蒙特内哥罗, 果阿邦, 几内亚, 阿拉斯加州, 安大略省, 皮埃蒙特",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "奈洛比",
+      "object": "肯尼亚",
+      "object_candidates": "伯利兹, 拉脱维亚, 利比里亚, 英格兰, 不丹, 旁遮普邦, 乌兹别克斯坦, 中华民国, 康乃狄克州, 肯尼亚",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "吉隆坡",
+      "object": "马来西亚",
+      "object_candidates": "印第安纳州, 罗德西亚, 南斯拉夫, 加拿大, 中华民国, 瑞典, 土耳其, 密歇根州, 古吉拉特邦, 马来西亚",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "伊斯兰堡",
+      "object": "巴基斯坦",
+      "object_candidates": "马耳他, 古吉拉特邦, 马达加斯加, 立陶宛, 格鲁吉亚, 利比亚, 泰国, 肯尼亚, 伯利兹, 巴基斯坦",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "加德满都",
+      "object": "尼泊尔",
+      "object_candidates": "罗德西亚, 阿尔巴县, 意大利, 爱沙尼亚, 乌兹别克斯坦, 勃兰登堡, 普罗旺斯, 尼日尔, 阿尔及利亚, 尼泊尔",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "喀土穆",
+      "object": "苏丹",
+      "object_candidates": "乌克兰, 阿拉斯加州, 魁北克, 普罗旺斯, 利比里亚, 维多利亚州, 秘鲁, 古巴, 喀拉拉邦, 苏丹",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "维尔纽斯",
+      "object": "立陶宛",
+      "object_candidates": "纳瓦拉, 贝宁, 阿尔巴县, 科罗拉多州, 尼日尔, 奈及利亚, 波札那, 哈里亚纳邦, 黑森, 立陶宛",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "贝鲁特",
+      "object": "黎巴嫩",
+      "object_candidates": "菲律宾, 古巴, 肯尼亚, 广东省, 加泰罗尼亚, 不丹, 加拿大, 越南, 麻萨诸塞州, 黎巴嫩",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "里斯本",
+      "object": "葡萄牙",
+      "object_candidates": "挪威, 辛巴威, 墨西哥, 萨克森自由州, 西西里岛, 威尔斯, 拉脱维亚, 澳大利亚, 利比里亚, 葡萄牙",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "罗安达",
+      "object": "安哥拉",
+      "object_candidates": "印度, 海地, 拉脱维亚, 日本, 克罗地亚, 巴基斯坦, 南斯拉夫, 曼尼托巴, 泰国, 安哥拉",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "莫斯科",
+      "object": "俄罗斯",
+      "object_candidates": "泰国, 马达加斯加, 肯尼亚, 艾奥瓦州, 昆士兰州, 巴林, 阿富汗, 卢旺达, 阿拉斯加州, 俄罗斯",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "温尼伯",
+      "object": "曼尼托巴",
+      "object_candidates": "波兰, 艾伯塔省, 赞比亚, 阿拉贡, 海地, 菲律宾, 阿尔巴县, 中华民国, 匈牙利, 曼尼托巴",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "利隆圭",
+      "object": "马拉维",
+      "object_candidates": "怀俄明州, 阿富汗, 昆士兰州, 乍得, 魁北克, 坦桑尼亚, 波兰, 肯尼亚, 波希米亚, 马拉维",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "墨西哥城",
+      "object": "墨西哥",
+      "object_candidates": "安大略省, 利比里亚, 阿塞拜疆, 佛罗里达州, 古吉拉特邦, 西班牙, 亚美尼亚, 撒丁岛, 比哈尔邦, 墨西哥",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "马普托",
+      "object": "莫桑比克",
+      "object_candidates": "巴基斯坦, 迦纳, 孟加拉国, 印度尼西亚, 阿肯色州, 安哥拉, 加拿大, 尼日尔, 老挝, 莫桑比克",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "波士顿",
+      "object": "麻萨诸塞州",
+      "object_candidates": "密歇根州, 匈牙利, 巴巴多斯, 阿尔巴县, 不丹, 阿尔巴尼亚, 西班牙, 加泰罗尼亚, 吉尔吉斯斯坦, 麻萨诸塞州",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "渥太华",
+      "object": "加拿大",
+      "object_candidates": "麻萨诸塞州, 砂拉越, 奥地利, 塔斯马尼亚州, 加利福尼亚州, 阿拉斯加州, 昆士兰州, 格鲁吉亚, 几内亚, 加拿大",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "蒙得维的亚",
+      "object": "乌拉圭",
+      "object_candidates": "明尼苏达州, 海地, 罗德西亚, 洪都拉斯, 阿肯色州, 佛罗里达州, 旁遮普邦, 罗马尼亚, 卡塔尔, 乌拉圭",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "麦纳麦",
+      "object": "巴林",
+      "object_candidates": "葡萄牙, 皮埃蒙特, 阿根廷, 得克萨斯州, 康乃狄克州, 尼日尔, 老挝, 迦纳, 乌干达, 巴林",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "班加罗尔",
+      "object": "卡纳塔克邦",
+      "object_candidates": "阿根廷, 哈萨克斯坦, 马拉维, 格陵兰, 柬埔寨, 乌兹别克斯坦, 荷兰, 萨摩亚, 保加利亚, 卡纳塔克邦",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "布达佩斯",
+      "object": "匈牙利",
+      "object_candidates": "阿尔巴县, 普罗旺斯, 诺曼底, 亚美尼亚, 伊拉克, 旁遮普邦, 利比里亚, 曼尼托巴, 荷兰, 匈牙利",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "特古西加尔巴",
+      "object": "洪都拉斯",
+      "object_candidates": "突尼西亚, 科威特, 拉贾斯坦邦, 勃艮第, 牛津郡, 阿尔巴县, 阿肯色州, 塔斯马尼亚州, 诺曼底, 洪都拉斯",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "甘地讷格尔",
+      "object": "古吉拉特邦",
+      "object_candidates": "犹他州, 克罗地亚, 加泰罗尼亚, 马拉维, 撒丁岛, 法国, 海地, 中华民国, 勃艮第, 古吉拉特邦",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "波德戈里察",
+      "object": "蒙特内哥罗",
+      "object_candidates": "贝宁, 维多利亚州, 田纳西州, 也门, 罗马尼亚, 厄瓜多尔, 四川省, 海地, 萨尔茨堡州, 蒙特内哥罗",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "多伦多",
+      "object": "安大略省",
+      "object_candidates": "萨摩亚, 巴林, 波希米亚, 保加利亚, 拉贾斯坦邦, 斐济, 科威特, 西西里岛, 塞尔维亚, 安大略省",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "巴拿马城",
+      "object": "巴拿马",
+      "object_candidates": "宾夕法尼亚州, 阿根廷, 维多利亚州, 加拿大, 黎巴嫩, 萨克森自由州, 科索沃, 肯尼亚, 西班牙, 巴拿马",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "达喀尔",
+      "object": "塞内加尔",
+      "object_candidates": "加蓬, 拉脱维亚, 密歇根州, 波札那, 犹他州, 比利时, 立陶宛, 特伦甘纳邦, 怀俄明州, 塞内加尔",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "拉哥斯",
+      "object": "奈及利亚",
+      "object_candidates": "魁北克, 科索沃, 牛津郡, 埃及, 云南省, 苏格兰, 乌克兰, 贝宁, 坦桑尼亚, 奈及利亚",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "曼谷",
+      "object": "泰国",
+      "object_candidates": "葡萄牙, 克罗地亚, 匈牙利, 南斯拉夫, 约旦, 卡纳塔克邦, 艾奥瓦州, 赛普勒斯, 利比里亚, 泰国",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "圣地亚哥",
+      "object": "智利",
+      "object_candidates": "挪威, 乌干达, 罗德西亚, 科威特, 加利福尼亚州, 摩洛哥, 印第安纳州, 葡萄牙, 孟加拉国, 智利",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "新德里",
+      "object": "印度",
+      "object_candidates": "康乃狄克州, 喀拉拉邦, 阿曼, 英格兰, 黑森, 拉贾斯坦邦, 厄瓜多尔, 斐济, 芬兰, 印度",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "贝尔格莱德",
+      "object": "塞尔维亚",
+      "object_candidates": "佛罗里达州, 突尼西亚, 英格兰, 马哈拉施特拉邦, 克罗地亚, 比哈尔邦, 纳瓦拉, 阿尔巴县, 危地马拉, 塞尔维亚",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "卡利亚里",
+      "object": "撒丁岛",
+      "object_candidates": "萨克森自由州, 皮埃蒙特, 塔斯马尼亚州, 海地, 纳瓦拉, 斯洛文尼亚, 科威特, 魁北克, 比利时, 撒丁岛",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "加拉加斯",
+      "object": "委内瑞拉",
+      "object_candidates": "土耳其, 广东省, 南斯拉夫, 尼泊尔, 诺尔省, 乌克兰, 白俄罗斯, 叙利亚, 四川省, 委内瑞拉",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "尼科西亚",
+      "object": "赛普勒斯",
+      "object_candidates": "康乃狄克州, 希腊, 南斯拉夫, 夏威夷州, 墨西哥, 马达加斯加, 拉贾斯坦邦, 古巴, 阿富汗, 赛普勒斯",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "基辅",
+      "object": "乌克兰",
+      "object_candidates": "阿尔巴县, 印度尼西亚, 索马里, 立陶宛, 萨尔茨堡州, 迦纳, 埃塞俄比亚, 巴西, 老挝, 乌克兰",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "台北市",
+      "object": "中华民国",
+      "object_candidates": "托斯卡纳, 瑞士, 阿尔及利亚, 墨西哥, 萨克森自由州, 昆士兰州, 叙利亚, 巴巴多斯, 赞比亚, 中华民国",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "阿布贾",
+      "object": "奈及利亚",
+      "object_candidates": "普罗旺斯, 智利, 乌克兰, 巴巴多斯, 阿尔巴尼亚, 加蓬, 撒丁岛, 格陵兰, 海地, 奈及利亚",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "索菲亚",
+      "object": "保加利亚",
+      "object_candidates": "马耳他, 奥克拉荷马州, 巴巴多斯, 得克萨斯州, 托斯卡纳, 利比里亚, 白俄罗斯, 克里特, 加蓬, 保加利亚",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "盐湖城",
+      "object": "犹他州",
+      "object_candidates": "尼加拉瓜, 土耳其, 卡塔尔, 乍得, 云南省, 丹麦, 曼尼托巴, 维多利亚州, 委内瑞拉, 犹他州",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "巴勒莫",
+      "object": "西西里岛",
+      "object_candidates": "柬埔寨, 勃艮第, 汶莱, 苏格兰, 加泰罗尼亚, 普罗旺斯, 摩洛哥, 巴西, 果阿邦, 西西里岛",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "德黑兰",
+      "object": "伊朗",
+      "object_candidates": "白俄罗斯, 阿肯色州, 罗德西亚, 维多利亚州, 南斯拉夫, 萨克森自由州, 坦桑尼亚, 塞尔维亚, 马来西亚, 伊朗",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "魁北克市",
+      "object": "魁北克",
+      "object_candidates": "奈及利亚, 比利时, 特伦甘纳邦, 波札那, 迪拜酋长国, 阿塞拜疆, 巴西, 伊朗, 以色列, 魁北克",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "布拉格",
+      "object": "捷克斯洛伐克",
+      "object_candidates": "伯利兹, 伊拉克, 托斯卡纳, 中华民国, 埃塞俄比亚, 科威特, 普罗旺斯, 苏丹, 阿尔及利亚, 捷克斯洛伐克",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "达卡市",
+      "object": "孟加拉国",
+      "object_candidates": "阿尔巴县, 吉尔吉斯斯坦, 怀俄明州, 斯洛文尼亚, 阿富汗, 巴伐利亚, 加拿大, 卢旺达, 迦纳, 孟加拉国",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "布里斯班",
+      "object": "昆士兰州",
+      "object_candidates": "印度尼西亚, 麻萨诸塞州, 萨尔茨堡州, 斯洛伐克, 塞尔维亚, 科威特, 伊朗, 阿尔巴县, 马哈拉施特拉邦, 昆士兰州",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "哈拉雷",
+      "object": "辛巴威",
+      "object_candidates": "摩洛哥, 德国, 奈及利亚, 塔斯马尼亚州, 卡纳塔克邦, 澳大利亚, 黑森, 白俄罗斯, 波希米亚, 辛巴威",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "普罗旺斯地区艾克斯",
+      "object": "普罗旺斯",
+      "object_candidates": "海地, 喀拉拉邦, 柬埔寨, 乌拉圭, 巴拿马, 土耳其, 乍得, 托斯卡纳, 艾奥瓦州, 普罗旺斯",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "蒙罗维亚",
+      "object": "利比里亚",
+      "object_candidates": "古吉拉特邦, 英格兰, 坦桑尼亚, 伯利兹, 阿塞拜疆, 诺尔省, 苏丹, 赛普勒斯, 法国, 利比里亚",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "伯尔尼",
+      "object": "瑞士",
+      "object_candidates": "丹麦, 墨西哥, 法国, 不丹, 英格兰, 印度尼西亚, 安大略省, 阿拉斯加州, 瑞典, 瑞士",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "亚的斯亚贝巴",
+      "object": "埃塞俄比亚",
+      "object_candidates": "毛里求斯, 波兰, 萨尔茨堡州, 尼泊尔, 匈牙利, 塞内加尔, 不丹, 阿富汗, 阿曼, 埃塞俄比亚",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "萨格勒布",
+      "object": "克罗地亚",
+      "object_candidates": "葡萄牙, 尼泊尔, 巴林, 艾奥瓦州, 比哈尔邦, 白俄罗斯, 广东省, 塔斯马尼亚州, 泰国, 克罗地亚",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "金边",
+      "object": "柬埔寨",
+      "object_candidates": "玻利维亚, 捷克斯洛伐克, 日本, 科索沃, 莱斯特郡, 乌兹别克斯坦, 阿拉斯加州, 汶莱, 孟加拉国, 柬埔寨",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "杜尚别",
+      "object": "塔吉克斯坦",
+      "object_candidates": "孟加拉国, 特伦甘纳邦, 菲律宾, 古巴, 黑森, 巴伐利亚, 沙巴, 阿肯色州, 托斯卡纳, 塔吉克斯坦",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "兰辛",
+      "object": "密歇根州",
+      "object_candidates": "西西里岛, 威尔斯, 印度, 波希米亚, 乌干达, 赛普勒斯, 汶莱, 拉脱维亚, 菲律宾, 密歇根州",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "古晋",
+      "object": "砂拉越",
+      "object_candidates": "英格兰王国, 利比亚, 玻利维亚, 尼泊尔, 安省, 法国, 爱达荷州, 塔斯马尼亚州, 斯洛伐克, 砂拉越",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "马尼拉市",
+      "object": "菲律宾",
+      "object_candidates": "智利, 迦纳, 麻萨诸塞州, 墨西哥, 迪拜酋长国, 苏格兰, 委内瑞拉, 马里兰州, 乌克兰, 菲律宾",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "西敏",
+      "object": "英格兰王国",
+      "object_candidates": "立陶宛, 智利, 西西里岛, 塔斯马尼亚州, 芬兰, 危地马拉, 奈及利亚, 肯尼亚, 阿拉贡, 英格兰王国",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "基多",
+      "object": "厄瓜多尔",
+      "object_candidates": "伯利兹, 泰国, 沙巴, 克罗地亚, 卡纳塔克邦, 中华民国, 加利福尼亚州, 巴西, 哈萨克斯坦, 厄瓜多尔",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "莱斯特",
+      "object": "莱斯特郡",
+      "object_candidates": "魁北克, 斯洛文尼亚, 阿根廷, 艾奥瓦州, 阿尔巴尼亚, 白俄罗斯, 捷克斯洛伐克, 砂拉越, 芬兰, 莱斯特郡",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "昆明市",
+      "object": "云南省",
+      "object_candidates": "比哈尔邦, 苏格兰, 喀拉拉邦, 阿尔巴县, 挪威, 洪都拉斯, 加利福尼亚州, 维多利亚州, 明尼苏达州, 云南省",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "马纳瓜",
+      "object": "尼加拉瓜",
+      "object_candidates": "克里特, 加拿大, 夏威夷州, 墨西哥, 广东省, 匈牙利, 阿肯色州, 斐济, 赞比亚, 尼加拉瓜",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "苏克雷",
+      "object": "玻利维亚",
+      "object_candidates": "宾夕法尼亚州, 塞尔维亚, 利比亚, 阿尔巴县, 辛巴威, 突尼西亚, 埃及, 乌拉圭, 泰国, 玻利维亚",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "檀香山",
+      "object": "夏威夷州",
+      "object_candidates": "伯利兹, 斯洛文尼亚, 喀拉拉邦, 法国, 维多利亚州, 艾伯塔省, 曼尼托巴, 加利福尼亚州, 塞内加尔, 夏威夷州",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "永珍",
+      "object": "老挝",
+      "object_candidates": "几内亚, 麻萨诸塞州, 格鲁吉亚, 普罗旺斯, 撒丁岛, 乍得, 利比亚, 科罗拉多州, 希腊, 老挝",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "成都市",
+      "object": "四川省",
+      "object_candidates": "犹大王国, 阿尔巴县, 贝宁, 卢旺达, 乌干达, 果阿邦, 波兰, 密歇根州, 加拿大, 四川省",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "萨拉戈萨",
+      "object": "阿拉贡",
+      "object_candidates": "特伦甘纳邦, 蒙特内哥罗, 土耳其, 犹他州, 堪萨斯州, 卢森堡省, 不丹, 墨西哥, 乌克兰, 阿拉贡",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "牛津",
+      "object": "牛津郡",
+      "object_candidates": "芬兰, 莱斯特郡, 海地, 阿尔巴县, 波兰, 纳米比亚, 以色列, 孟加拉国, 阿拉斯加州, 牛津郡",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "昌迪加尔",
+      "object": "哈里亚纳邦",
+      "object_candidates": "伊朗, 巴西, 曼尼托巴, 皮埃蒙特, 马拉维, 吉尔吉斯斯坦, 赞比亚, 亚美尼亚, 柬埔寨, 哈里亚纳邦",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "尼亚美",
+      "object": "尼日尔",
+      "object_candidates": "阿拉贡, 加蓬, 委内瑞拉, 皮埃蒙特, 伯利兹, 伊朗, 几内亚, 哈萨克斯坦, 俄罗斯, 尼日尔",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "多哈",
+      "object": "卡塔尔",
+      "object_candidates": "乌兹别克斯坦, 马耳他, 不丹, 印第安纳州, 斯洛伐克, 克里特, 日本, 旁遮普邦, 英格兰, 卡塔尔",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "哈拉雷",
+      "object": "罗德西亚",
+      "object_candidates": "罗马尼亚, 广东省, 斐济, 蒙特内哥罗, 马来西亚, 堪萨斯州, 伊拉克, 摩洛哥, 克罗地亚, 罗德西亚",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "阿皮亚",
+      "object": "萨摩亚",
+      "object_candidates": "英格兰王国, 孟加拉国, 爱达荷州, 芬兰, 柬埔寨, 摩洛哥, 玻利维亚, 几内亚, 白俄罗斯, 萨摩亚",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "布拉迪斯拉发",
+      "object": "斯洛伐克",
+      "object_candidates": "纳瓦拉, 坦桑尼亚, 爱达荷州, 乍得, 密歇根州, 爱尔兰共和国, 印度尼西亚, 阿尔巴县, 日本, 斯洛伐克",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "亚庇",
+      "object": "沙巴",
+      "object_candidates": "塔斯马尼亚州, 奥克拉荷马州, 法兰德斯, 摩洛哥, 诺尔省, 加蓬, 阿塞拜疆, 塞内加尔, 克罗地亚, 沙巴",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "塔什干",
+      "object": "乌兹别克斯坦",
+      "object_candidates": "南斯拉夫, 法国, 海地, 密歇根州, 挪威, 阿富汗, 宾夕法尼亚州, 艾伯塔省, 立陶宛, 乌兹别克斯坦",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "多多马",
+      "object": "坦桑尼亚",
+      "object_candidates": "堪萨斯州, 孟加拉国, 诺尔省, 克罗地亚, 科罗拉多州, 魁北克, 卢旺达, 约旦, 阿塞拜疆, 坦桑尼亚",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "地拉那",
+      "object": "阿尔巴尼亚",
+      "object_candidates": "喀拉拉邦, 普罗旺斯, 奈及利亚, 利比亚, 法兰德斯, 赞比亚, 四川省, 白俄罗斯, 塞尔维亚, 阿尔巴尼亚",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "坎帕拉",
+      "object": "乌干达",
+      "object_candidates": "拉脱维亚, 叙利亚, 俄罗斯, 瑞士, 田纳西州, 泰国, 斯洛伐克, 哈里亚纳邦, 波札那, 乌干达",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "河内市",
+      "object": "越南",
+      "object_candidates": "奥地利, 阿曼, 危地马拉, 也门, 贝宁, 乌兹别克斯坦, 丹麦, 诺曼底, 加泰罗尼亚, 越南",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "亚丁",
+      "object": "也门",
+      "object_candidates": "秘鲁, 老挝, 阿尔巴县, 诺曼底, 俄罗斯, 萨摩亚, 以色列, 尼加拉瓜, 波希米亚, 也门",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "路沙卡",
+      "object": "赞比亚",
+      "object_candidates": "卢森堡省, 塔斯马尼亚州, 阿塞拜疆, 也门, 爱沙尼亚, 葡萄牙, 肯尼亚, 果阿邦, 印度尼西亚, 赞比亚",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "叶里温",
+      "object": "亚美尼亚",
+      "object_candidates": "马耳他, 牛津郡, 科罗拉多州, 伊拉克, 埃及, 萨摩亚, 托斯卡纳, 叙利亚, 莱斯特郡, 亚美尼亚",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "科威特市",
+      "object": "科威特",
+      "object_candidates": "亚美尼亚, 法兰德斯, 萨克森自由州, 巴西, 也门, 马来西亚, 日本, 危地马拉, 乌兹别克斯坦, 科威特",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "路易港",
+      "object": "毛里求斯",
+      "object_candidates": "托斯卡纳, 田纳西州, 危地马拉, 约旦, 斯洛伐克, 哈里亚纳邦, 萨克森自由州, 加蓬, 科罗拉多州, 毛里求斯",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "阿克拉",
+      "object": "迦纳",
+      "object_candidates": "怀俄明州, 加利福尼亚州, 贝宁, 荷兰, 砂拉越, 伊朗, 堪萨斯州, 孟加拉国, 瑞典, 迦纳",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "斋浦尔",
+      "object": "拉贾斯坦邦",
+      "object_candidates": "英格兰, 尼泊尔, 科威特, 老挝, 立陶宛, 泰国, 亚美尼亚, 贝宁, 俄罗斯, 拉贾斯坦邦",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "明斯克",
+      "object": "白俄罗斯",
+      "object_candidates": "芬兰, 拉脱维亚, 格陵兰, 斯洛文尼亚, 艾伯塔省, 汶莱, 德国, 诺曼底, 魁北克, 白俄罗斯",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "德梅因",
+      "object": "艾奥瓦州",
+      "object_candidates": "旁遮普邦, 南斯拉夫, 马达加斯加, 撒丁岛, 莱斯特郡, 爱沙尼亚, 巴林, 马拉维, 阿尔巴尼亚, 艾奥瓦州",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "巴特那",
+      "object": "比哈尔邦",
+      "object_candidates": "加拿大, 科罗拉多州, 立陶宛, 阿曼, 巴拿马, 巴西, 卡纳塔克邦, 勃兰登堡, 阿富汗, 比哈尔邦",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "巴顿鲁治",
+      "object": "路易斯安那州",
+      "object_candidates": "犹大王国, 也门, 丹麦, 克罗地亚, 拉脱维亚, 瑞士, 安大略省, 勃兰登堡, 玻利维亚, 路易斯安那州",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "日惹",
+      "object": "印度尼西亚",
+      "object_candidates": "印第安纳州, 洪都拉斯, 巴林, 坦桑尼亚, 波希米亚, 乌拉圭, 卢旺达, 昆士兰州, 纳米比亚, 印度尼西亚",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "努尔-苏丹",
+      "object": "哈萨克斯坦",
+      "object_candidates": "沙巴, 埃塞俄比亚, 巴拿马, 明尼苏达州, 瑞典, 克罗地亚, 葡萄牙, 亚美尼亚, 加蓬, 哈萨克斯坦",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "威斯巴登",
+      "object": "黑森",
+      "object_candidates": "卡纳塔克邦, 阿塞拜疆, 马来西亚, 老挝, 勃艮第, 宾夕法尼亚州, 白俄罗斯, 皮埃蒙特, 维多利亚州, 黑森",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "第戎",
+      "object": "勃艮第",
+      "object_candidates": "普罗旺斯, 克罗地亚, 明尼苏达州, 卢森堡省, 阿尔巴尼亚, 奈及利亚, 肯尼亚, 夏威夷州, 皮埃蒙特, 勃艮第",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "鲁昂",
+      "object": "诺曼底",
+      "object_candidates": "瑞士, 拉脱维亚, 云南省, 密歇根州, 艾伯塔省, 古巴, 突尼西亚, 印度尼西亚, 比利时, 诺曼底",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "奥克拉荷马市",
+      "object": "奥克拉荷马州",
+      "object_candidates": "科罗拉多州, 辛巴威, 哈萨克斯坦, 麻萨诸塞州, 爱沙尼亚, 加拿大, 墨西哥, 莱斯特郡, 牛津郡, 奥克拉荷马州",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "小岩城",
+      "object": "阿肯色州",
+      "object_candidates": "中华民国, 巴伐利亚, 越南, 夏威夷州, 阿尔及利亚, 玻利维亚, 安哥拉, 立陶宛, 阿拉斯加州, 阿肯色州",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "恩贾梅纳",
+      "object": "乍得",
+      "object_candidates": "卢旺达, 塞内加尔, 索马里, 斯洛伐克, 安大略省, 芬兰, 纳米比亚, 海地, 诺曼底, 乍得",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "安曼",
+      "object": "约旦",
+      "object_candidates": "澳大利亚, 普罗旺斯, 丹麦, 危地马拉, 洪都拉斯, 纳米比亚, 得克萨斯州, 叙利亚, 波希米亚, 约旦",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "锡鲁万纳塔普拉姆",
+      "object": "喀拉拉邦",
+      "object_candidates": "约旦, 曼尼托巴, 索马里, 克罗地亚, 佛罗里达州, 苏格兰, 乍得, 麻萨诸塞州, 卢森堡省, 喀拉拉邦",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "布里奇顿",
+      "object": "巴巴多斯",
+      "object_candidates": "田纳西州, 意大利, 迦纳, 阿拉斯加州, 英格兰王国, 沙巴, 塔吉克斯坦, 加拿大, 牛津郡, 巴巴多斯",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "杜拜",
+      "object": "迪拜酋长国",
+      "object_candidates": "卢森堡省, 威尔斯, 突尼西亚, 澳大利亚, 旁遮普邦, 亚美尼亚, 葡萄牙, 马耳他, 特伦甘纳邦, 迪拜酋长国",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "波茨坦",
+      "object": "勃兰登堡",
+      "object_candidates": "厄瓜多尔, 纳瓦拉, 古巴, 康乃狄克州, 委内瑞拉, 法兰德斯, 丹麦, 犹他州, 阿拉贡, 勃兰登堡",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "塔那那利佛",
+      "object": "马达加斯加",
+      "object_candidates": "佛罗里达州, 艾奥瓦州, 英格兰王国, 阿曼, 法国, 迦纳, 泰国, 瑞士, 乌克兰, 马达加斯加",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "巴马科",
+      "object": "马里共和国",
+      "object_candidates": "阿拉贡, 麻萨诸塞州, 勃艮第, 斐济, 爱沙尼亚, 马拉维, 智利, 法兰德斯, 皮埃蒙特, 马里共和国",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "安那波利斯",
+      "object": "马里兰州",
+      "object_candidates": "斯洛伐克, 突尼西亚, 斯洛文尼亚, 得克萨斯州, 纳米比亚, 佛罗里达州, 挪威, 印度, 爱沙尼亚, 马里兰州",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "海得拉巴",
+      "object": "特伦甘纳邦",
+      "object_candidates": "白俄罗斯, 阿尔及利亚, 纳瓦拉, 英格兰, 老挝, 立陶宛, 喀拉拉邦, 黎巴嫩, 哈里亚纳邦, 特伦甘纳邦",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "昌迪加尔",
+      "object": "旁遮普邦",
+      "object_candidates": "古吉拉特邦, 萨摩亚, 马哈拉施特拉邦, 伊拉克, 葡萄牙, 马拉维, 法兰德斯, 巴伐利亚, 印度尼西亚, 旁遮普邦",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "布雷斯地区布尔格",
+      "object": "安省",
+      "object_candidates": "奥地利, 马里兰州, 斯洛伐克, 不丹, 果阿邦, 越南, 波兰, 洪都拉斯, 阿拉斯加州, 安省",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "苏瓦",
+      "object": "斐济",
+      "object_candidates": "艾奥瓦州, 维多利亚州, 阿根廷, 巴伐利亚, 广东省, 印度, 托斯卡纳, 普罗旺斯, 拉贾斯坦邦, 斐济",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "哈里斯堡",
+      "object": "宾夕法尼亚州",
+      "object_candidates": "堪萨斯州, 委内瑞拉, 意大利, 比哈尔邦, 拉贾斯坦邦, 老挝, 利比亚, 斯洛文尼亚, 曼尼托巴, 宾夕法尼亚州",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "萨那",
+      "object": "也门",
+      "object_candidates": "西西里岛, 比哈尔邦, 挪威, 艾伯塔省, 希腊, 黎巴嫩, 斐济, 贝宁, 哈里亚纳邦, 也门",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "帕纳吉",
+      "object": "果阿邦",
+      "object_candidates": "利比亚, 卢旺达, 伊拉克, 奥克拉荷马州, 秘鲁, 格陵兰, 希腊, 吉尔吉斯斯坦, 罗马尼亚, 果阿邦",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "斯里巴加湾市",
+      "object": "汶莱",
+      "object_candidates": "萨摩亚, 牛津郡, 利比亚, 马耳他, 黑森, 克罗地亚, 荷兰, 爱达荷州, 加蓬, 汶莱",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "夏延",
+      "object": "怀俄明州",
+      "object_candidates": "赛普勒斯, 萨摩亚, 几内亚, 德国, 曼尼托巴, 拉贾斯坦邦, 匈牙利, 安哥拉, 乌克兰, 怀俄明州",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "潘普洛纳",
+      "object": "纳瓦拉",
+      "object_candidates": "约旦, 洪都拉斯, 白俄罗斯, 危地马拉, 勃艮第, 智利, 克里特, 喀拉拉邦, 果阿邦, 纳瓦拉",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "利伯维尔",
+      "object": "加蓬",
+      "object_candidates": "玻利维亚, 乌克兰, 格鲁吉亚, 特伦甘纳邦, 法兰德斯, 萨尔茨堡州, 英格兰, 堪萨斯州, 越南, 加蓬",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "普里什蒂纳",
+      "object": "科索沃",
+      "object_candidates": "尼日尔, 西班牙, 匈牙利, 佛罗里达州, 白俄罗斯, 喀拉拉邦, 菲律宾, 波札那, 塞内加尔, 科索沃",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "努克",
+      "object": "格陵兰",
+      "object_candidates": "云南省, 安哥拉, 康乃狄克州, 迪拜酋长国, 罗马尼亚, 魁北克, 委内瑞拉, 乍得, 德国, 格陵兰",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "温彻斯特",
+      "object": "英格兰王国",
+      "object_candidates": "希腊, 日本, 巴基斯坦, 印度, 迦纳, 捷克斯洛伐克, 加利福尼亚州, 威尔斯, 加泰罗尼亚, 英格兰王国",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "贝尔格莱德",
+      "object": "南斯拉夫",
+      "object_candidates": "不丹, 意大利, 科索沃, 巴伐利亚, 纳瓦拉, 克里特, 赞比亚, 澳大利亚, 立陶宛, 南斯拉夫",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "哈特福",
+      "object": "康乃狄克州",
+      "object_candidates": "乌克兰, 沙巴, 中华民国, 荷兰, 科罗拉多州, 挪威, 马拉维, 曼尼托巴, 科威特, 康乃狄克州",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "利马",
+      "object": "秘鲁",
+      "object_candidates": "委内瑞拉, 乌兹别克斯坦, 怀俄明州, 沙巴, 瑞士, 毛里求斯, 加泰罗尼亚, 也门, 麻萨诸塞州, 秘鲁",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "科纳克里",
+      "object": "几内亚",
+      "object_candidates": "阿曼, 法国, 海地, 加拿大, 纳米比亚, 卢旺达, 加蓬, 艾奥瓦州, 巴西, 几内亚",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "朱诺",
+      "object": "阿拉斯加州",
+      "object_candidates": "苏格兰, 诺尔省, 牛津郡, 澳大利亚, 比哈尔邦, 坦桑尼亚, 印度, 旁遮普邦, 黑森, 阿拉斯加州",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "贝尔墨邦",
+      "object": "伯利兹",
+      "object_candidates": "印度, 中华民国, 英格兰, 厄瓜多尔, 诺曼底, 波兰, 密歇根州, 几内亚, 马达加斯加, 伯利兹",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "沙加缅度",
+      "object": "加利福尼亚州",
+      "object_candidates": "汶莱, 莫桑比克, 斯洛伐克, 魁北克, 澳大利亚, 以色列, 旁遮普邦, 智利, 瑞典, 加利福尼亚州",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "伦敦市",
+      "object": "英格兰王国",
+      "object_candidates": "泰国, 伯利兹, 艾奥瓦州, 卡塔尔, 佛罗里达州, 匈牙利, 迦纳, 撒丁岛, 犹大王国, 英格兰王国",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "吉佳利",
+      "object": "卢旺达",
+      "object_candidates": "宾夕法尼亚州, 阿根廷, 堪萨斯州, 加蓬, 比哈尔邦, 纳瓦拉, 不丹, 诺曼底, 塔斯马尼亚州, 卢旺达",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "布鲁塞尔市",
+      "object": "比利时",
+      "object_candidates": "老挝, 奥克拉荷马州, 中华民国, 尼泊尔, 意大利, 纳瓦拉, 法国, 危地马拉, 果阿邦, 比利时",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "廷布",
+      "object": "不丹",
+      "object_candidates": "印度, 丹麦, 越南, 匈牙利, 黑森, 马拉维, 捷克斯洛伐克, 塔斯马尼亚州, 卢森堡省, 不丹",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "纳夫普利翁",
+      "object": "希腊",
+      "object_candidates": "土耳其, 特伦甘纳邦, 利比里亚, 英格兰, 塔斯马尼亚州, 迦纳, 巴西, 奈及利亚, 西班牙, 希腊",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "阿尔巴尤利亚",
+      "object": "阿尔巴县",
+      "object_candidates": "索马里, 黑森, 瑞典, 印度尼西亚, 阿曼, 乌克兰, 塔斯马尼亚州, 希腊, 波兰, 阿尔巴县",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "博伊西",
+      "object": "爱达荷州",
+      "object_candidates": "卢旺达, 卢森堡省, 罗德西亚, 牛津郡, 白俄罗斯, 乌克兰, 伊拉克, 巴拿马, 佛罗里达州, 爱达荷州",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "纳什维尔",
+      "object": "田纳西州",
+      "object_candidates": "奈及利亚, 巴伐利亚, 魁北克, 孟加拉国, 荷兰, 英格兰王国, 旁遮普邦, 埃塞俄比亚, 黎巴嫩, 田纳西州",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "阿尔隆",
+      "object": "卢森堡省",
+      "object_candidates": "希腊, 波札那, 奥克拉荷马州, 诺曼底, 加泰罗尼亚, 犹大王国, 巴巴多斯, 卡纳塔克邦, 巴基斯坦, 卢森堡省",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "萨尔茨堡",
+      "object": "萨尔茨堡州",
+      "object_candidates": "加泰罗尼亚, 加利福尼亚州, 迦纳, 坦桑尼亚, 奈及利亚, 威尔斯, 诺尔省, 特伦甘纳邦, 古吉拉特邦, 萨尔茨堡州",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "奥斯汀",
+      "object": "得克萨斯州",
+      "object_candidates": "辛巴威, 阿富汗, 比哈尔邦, 塔吉克斯坦, 阿根廷, 魁北克, 路易斯安那州, 乌克兰, 印第安纳州, 得克萨斯州",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "圣保罗",
+      "object": "明尼苏达州",
+      "object_candidates": "萨克森自由州, 黑森, 巴拿马, 犹他州, 利比里亚, 南斯拉夫, 斯洛伐克, 丹麦, 捷克斯洛伐克, 明尼苏达州",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "马斯喀特",
+      "object": "阿曼",
+      "object_candidates": "保加利亚, 挪威, 坦桑尼亚, 加利福尼亚州, 英格兰, 巴林, 乌干达, 汶莱, 纳瓦拉, 阿曼",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "塔拉哈西",
+      "object": "佛罗里达州",
+      "object_candidates": "伊拉克, 沙巴, 匈牙利, 阿塞拜疆, 加拿大, 拉脱维亚, 巴林, 喀拉拉邦, 塞尔维亚, 佛罗里达州",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "第比利斯",
+      "object": "格鲁吉亚",
+      "object_candidates": "肯尼亚, 印度, 泰国, 捷克斯洛伐克, 印第安纳州, 巴林, 叙利亚, 艾伯塔省, 斐济, 格鲁吉亚",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "布鲁塞尔市",
+      "object": "法兰德斯",
+      "object_candidates": "喀拉拉邦, 安哥拉, 克罗地亚, 云南省, 阿尔及利亚, 加拿大, 魁北克, 秘鲁, 麻萨诸塞州, 法兰德斯",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "希伯仑",
+      "object": "犹大王国",
+      "object_candidates": "撒丁岛, 智利, 危地马拉, 巴伐利亚, 托斯卡纳, 萨克森自由州, 玻利维亚, 夏威夷州, 安大略省, 犹大王国",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "里尔",
+      "object": "诺尔省",
+      "object_candidates": "哈里亚纳邦, 爱沙尼亚, 奥地利, 科罗拉多州, 巴巴多斯, 辛巴威, 毛里求斯, 萨克森自由州, 伯利兹, 诺尔省",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "托皮卡",
+      "object": "堪萨斯州",
+      "object_candidates": "亚美尼亚, 南斯拉夫, 西班牙, 奥地利, 古巴, 安哥拉, 加蓬, 柬埔寨, 阿富汗, 堪萨斯州",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "圣地亚哥－德孔波斯特拉",
+      "object": "加利西亚",
+      "object_candidates": "利比亚, 萨尔茨堡州, 挪威, 突尼西亚, 特伦甘纳邦, 阿拉斯加州, 拉贾斯坦邦, 伯利兹, 托斯卡纳, 加利西亚",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

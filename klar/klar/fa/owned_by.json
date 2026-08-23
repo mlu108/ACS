@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "چه کسی <subject> را مالک است؟ پاسخ: <mask>",
+    "کدام شرکت یا شخص <subject> را مالک است؟ پاسخ: <mask>",
+    "مالک فعلی <subject> کیست؟ پاسخ: <mask>",
+    "به چه کسی <subject> تعلق دارد؟ پاسخ: <mask>",
+    "کدام نهاد مالکیت <subject> را دارد؟ پاسخ: <mask>",
+    " مالک <subject> <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "دوکاتی",
+      "object": "آئودی",
+      "object_candidates": "یاهو, برلین, پاریس, تویوتا, سونی, میلان, فرانسه, بی‌بی‌سی, لهستان, آئودی",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "لامبورگینی",
+      "object": "آئودی",
+      "object_candidates": "پاریس, یاهو, جنوا, میلان, آمازون.کام, لهستان, مایکروسافت, تویوتا, فرانسه, آئودی",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "برج ایفل",
+      "object": "پاریس",
+      "object_candidates": "لووف, قطر, یاهو, میلان, فرانسه, مایکروسافت, سونی, لهستان, تورین, پاریس",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "دویچه بان",
+      "object": "آلمان",
+      "object_candidates": "تورین, سونی, پاریس, برلین, جنوا, لهستان, قطر, تویوتا, شیکاگو, آلمان",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "جستجوگر گوگل",
+      "object": "گوگل",
+      "object_candidates": "تورین, سونی, آلمان, جنوا, لهستان, قطر, یاهو, شیکاگو, میلان, گوگل",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "لکسوس",
+      "object": "تویوتا",
+      "object_candidates": "لووف, گوگل, فرانسه, شیکاگو, بی‌بی‌سی, پالرمو, لهستان, جنوا, آلمان, تویوتا",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "یوتیوب",
+      "object": "گوگل",
+      "object_candidates": "شیکاگو, میلان, لووف, پاریس, ناپل, فرانسه, آلمان, تورین, بی‌بی‌سی, گوگل",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "لوح فشرده",
+      "object": "سونی",
+      "object_candidates": "تویوتا, لووف, بی‌بی‌سی, میلان, گوگل, یاهو, ناپل, جنوا, پاریس, سونی",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "فرودگاه بین‌المللی اوهیر شیکاگو",
+      "object": "شیکاگو",
+      "object_candidates": "بی‌بی‌سی, جنوا, فرانسه, قطر, آئودی, تویوتا, آمستردام, آمازون.کام, لووف, شیکاگو",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "بیبیسی وان",
+      "object": "بی‌بی‌سی",
+      "object_candidates": "فرانسه, لووف, جنوا, آئودی, یاهو, ناپل, پالرمو, پاریس, آمستردام, بی‌بی‌سی",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "سرگرمی کامپیوتری سونی",
+      "object": "سونی",
+      "object_candidates": "تورین, گوگل, یاهو, آمازون.کام, لووف, مایکروسافت, آئودی, تویوتا, آلمان, سونی",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "سونی پیکچرز",
+      "object": "سونی",
+      "object_candidates": "آلمان, شیکاگو, مایکروسافت, ناپل, لووف, آمازون.کام, آئودی, بی‌بی‌سی, قطر, سونی",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "جیمیل",
+      "object": "گوگل",
+      "object_candidates": "آئودی, ناپل, پاریس, سونی, لووف, تویوتا, پالرمو, قطر, یاهو, گوگل",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل مپس",
+      "object": "گوگل",
+      "object_candidates": "سونی, پالرمو, فرانسه, تورین, ناپل, میلان, تویوتا, برلین, لووف, گوگل",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "دی‌وی‌دی",
+      "object": "سونی",
+      "object_candidates": "قطر, جنوا, گوگل, تورین, پاریس, میلان, بی‌بی‌سی, تویوتا, مایکروسافت, سونی",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "ورزشگاه پارک دو پرنس",
+      "object": "پاریس",
+      "object_candidates": "لووف, لهستان, تویوتا, آلمان, برلین, یاهو, بی‌بی‌سی, مایکروسافت, گوگل, پاریس",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "گوگل استریت ویو",
+      "object": "گوگل",
+      "object_candidates": "آئودی, مایکروسافت, آمستردام, ناپل, برلین, سونی, پالرمو, لووف, لهستان, گوگل",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ویندوز مدیا پلیر",
+      "object": "مایکروسافت",
+      "object_candidates": "برلین, شیکاگو, میلان, یاهو, پاریس, تویوتا, گوگل, سونی, تورین, مایکروسافت",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ورزشگاه سن سیرو",
+      "object": "میلان",
+      "object_candidates": "جنوا, سونی, آلمان, آمازون.کام, قطر, لهستان, پاریس, آئودی, شیکاگو, میلان",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "بانک اطلاعات اینترنتی فیلم‌ها",
+      "object": "آمازون.کام",
+      "object_candidates": "فرانسه, شیکاگو, آئودی, لهستان, پاریس, گوگل, سونی, قطر, پالرمو, آمازون.کام",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "گوگل ادسنس",
+      "object": "گوگل",
+      "object_candidates": "ناپل, لهستان, پالرمو, آئودی, مایکروسافت, لووف, آمستردام, قطر, جنوا, گوگل",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "آمازون کیندل",
+      "object": "آمازون.کام",
+      "object_candidates": "میلان, ناپل, فرانسه, آلمان, آمستردام, لووف, مایکروسافت, جنوا, پالرمو, آمازون.کام",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "ورزشگاه رنزو باربرا",
+      "object": "پالرمو",
+      "object_candidates": "سونی, قطر, آلمان, آمستردام, فرانسه, آئودی, گوگل, برلین, بی‌بی‌سی, پالرمو",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "فلیکر",
+      "object": "یاهو",
+      "object_candidates": "شیکاگو, آلمان, بی‌بی‌سی, مایکروسافت, قطر, فرانسه, تورین, لهستان, تویوتا, یاهو",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "گوگل‌پلکس",
+      "object": "گوگل",
+      "object_candidates": "لهستان, میلان, مایکروسافت, پالرمو, فرانسه, آمستردام, جنوا, لووف, بی‌بی‌سی, گوگل",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل ارت",
+      "object": "گوگل",
+      "object_candidates": "آمستردام, مایکروسافت, یاهو, آمازون.کام, تویوتا, آئودی, شیکاگو, لووف, جنوا, گوگل",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "دایهاتسو",
+      "object": "تویوتا",
+      "object_candidates": "پاریس, برلین, مایکروسافت, آلمان, سونی, بی‌بی‌سی, ناپل, فرانسه, جنوا, تویوتا",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "تاق پیروزی",
+      "object": "فرانسه",
+      "object_candidates": "ناپل, آئودی, آمستردام, برلین, قطر, گوگل, پاریس, آلمان, مایکروسافت, فرانسه",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "کاخ فونتن‌بلو",
+      "object": "فرانسه",
+      "object_candidates": "تویوتا, سونی, آمستردام, آمازون.کام, لهستان, میلان, پالرمو, آئودی, جنوا, فرانسه",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "گوگل درایو",
+      "object": "گوگل",
+      "object_candidates": "جنوا, آئودی, آمازون.کام, سونی, پاریس, قطر, لهستان, لووف, برلین, گوگل",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "گوگل بوکس",
+      "object": "گوگل",
+      "object_candidates": "آلمان, میلان, آئودی, یاهو, قطر, تورین, ناپل, سونی, پاریس, گوگل",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ورزشگاه المپیک تورین",
+      "object": "تورین",
+      "object_candidates": "گوگل, آمستردام, فرانسه, میلان, جنوا, مایکروسافت, برلین, پالرمو, سونی, تورین",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "هواپیمایی قطر",
+      "object": "قطر",
+      "object_candidates": "یاهو, میلان, آمازون.کام, فرانسه, پاریس, ناپل, تویوتا, سونی, لووف, قطر",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "نگهبان شب",
+      "object": "آمستردام",
+      "object_candidates": "میلان, لووف, آئودی, فرانسه, تورین, بی‌بی‌سی, تویوتا, ناپل, لهستان, آمستردام",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "بلاگر",
+      "object": "گوگل",
+      "object_candidates": "سونی, تویوتا, لهستان, آئودی, پاریس, لووف, مایکروسافت, آمازون.کام, میلان, گوگل",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ورزشگاه المپیک برلین",
+      "object": "برلین",
+      "object_candidates": "قطر, پاریس, میلان, مایکروسافت, آمستردام, بی‌بی‌سی, شیکاگو, آئودی, تورین, برلین",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "لوت پولیش ایرلاینز",
+      "object": "لهستان",
+      "object_candidates": "لووف, پاریس, شیکاگو, آمازون.کام, یاهو, آمستردام, گوگل, سونی, آلمان, لهستان",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "ورزشگاه لوئیجی فراری",
+      "object": "جنوا",
+      "object_candidates": "قطر, سونی, مایکروسافت, لهستان, برلین, ناپل, آلمان, تویوتا, بی‌بی‌سی, جنوا",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "ترجمه‌گر گوگل",
+      "object": "گوگل",
+      "object_candidates": "ناپل, قطر, آمستردام, لهستان, یاهو, مایکروسافت, شیکاگو, میلان, فرانسه, گوگل",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "برج شارد لندن",
+      "object": "قطر",
+      "object_candidates": "لووف, آمستردام, ناپل, آمازون.کام, سونی, جنوا, بی‌بی‌سی, مایکروسافت, شیکاگو, قطر",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "ورزشگاه استاد دو فرانس",
+      "object": "فرانسه",
+      "object_candidates": "جنوا, لووف, یاهو, تویوتا, گوگل, مایکروسافت, تورین, شیکاگو, آمازون.کام, فرانسه",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "ورزشگاه لووف آرنا",
+      "object": "لووف",
+      "object_candidates": "ناپل, آمازون.کام, شیکاگو, تورین, فرانسه, آلمان, آئودی, تویوتا, قطر, لووف",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "لینکداین",
+      "object": "مایکروسافت",
+      "object_candidates": "تویوتا, قطر, شیکاگو, ناپل, پالرمو, سونی, آمستردام, آئودی, پاریس, مایکروسافت",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "تامبلر",
+      "object": "یاهو",
+      "object_candidates": "گوگل, مایکروسافت, لهستان, میلان, تورین, آلمان, جنوا, شیکاگو, آمستردام, یاهو",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "ورزشگاه سن پائولو",
+      "object": "ناپل",
+      "object_candidates": "برلین, مایکروسافت, گوگل, جنوا, آمستردام, یاهو, پاریس, پالرمو, لووف, ناپل",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "ورزشگاه دل آلپی",
+      "object": "تورین",
+      "object_candidates": "تویوتا, سونی, لووف, آلمان, گوگل, آمستردام, شیکاگو, پاریس, یاهو, تورین",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "فرودگاه بین‌المللی دبی",
+      "object": "دبی، امارات",
+      "object_candidates": "یاهو, جنوا, قطر, آمازون.کام, پالرمو, گوگل, بی‌بی‌سی, تورین, پاریس, دبی، امارات",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "گوگل اسکالر",
+      "object": "گوگل",
+      "object_candidates": "مایکروسافت, تورین, جنوا, لهستان, پالرمو, آئودی, پاریس, تویوتا, شیکاگو, گوگل",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "مونالیزا",
+      "object": "فرانسه",
+      "object_candidates": "پاریس, تورین, مایکروسافت, میلان, یاهو, پالرمو, ناپل, برلین, جنوا, فرانسه",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "باکس آفیس موجو",
+      "object": "آمازون.کام",
+      "object_candidates": "قطر, تویوتا, یاهو, آمستردام, آلمان, آئودی, فرانسه, مایکروسافت, جنوا, آمازون.کام",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

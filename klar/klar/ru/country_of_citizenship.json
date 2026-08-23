@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "В какой стране <subject> является гражданином? Ответ: <mask>",
+    "Какое гражданство у <subject>? Ответ: <mask>",
+    "В какой стране <subject> имеет гражданство? Ответ: <mask>",
+    "Где <subject> гражданин? Ответ: <mask>",
+    "Какая нация дает гражданство <subject>? Ответ: <mask>",
+    " Гражданство <subject> — это <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Борис Васильевич Спасский",
+      "object": "Франция",
+      "object_candidates": "Ирландия, Австралия, Катар, Ливан, Курдистан, Швейцария, Болгария, Индия, Аргентина, Франция",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ада Йонат",
+      "object": "Израиль",
+      "object_candidates": "Бразилия, Австралия, Катар, Ливан, Швеция, Япония, Греция, Вьетнам, Норвегия, Израиль",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Лионель Месси",
+      "object": "Аргентина",
+      "object_candidates": "Япония, Ирландия, Дания, Германия, Швеция, Ливан, Болгария, Греция, Израиль, Аргентина",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Карл II",
+      "object": "Испания",
+      "object_candidates": "Вьетнам, Канада, Норвегия, Швейцария, Израиль, Дания, Швеция, Австрия, Аргентина, Испания",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Адриано Челентано",
+      "object": "Италия",
+      "object_candidates": "Вьетнам, Австрия, Германия, Курдистан, Дания, Франкфурт-на-Майне, Греция, Израиль, Норвегия, Италия",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Георгий Пырванов",
+      "object": "Болгария",
+      "object_candidates": "Австралия, Греция, Италия, Бразилия, Катар, Израиль, Вьетнам, Германия, Королевство Англия, Болгария",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Дилма Русеф",
+      "object": "Бразилия",
+      "object_candidates": "Ирландия, Франкфурт-на-Майне, Курдистан, Канада, Дания, Швейцария, Япония, Испания, Австралия, Бразилия",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Роналдо",
+      "object": "Бразилия",
+      "object_candidates": "Ливан, Швейцария, Италия, Германия, Канада, Дания, Королевство Англия, Аргентина, Австрия, Бразилия",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Траян",
+      "object": "Испания",
+      "object_candidates": "Катар, Швейцария, Дания, Норвегия, Бразилия, Курдистан, Вьетнам, Королевство Англия, Аргентина, Испания",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Роналдиньо",
+      "object": "Бразилия",
+      "object_candidates": "Швейцария, Япония, Израиль, Болгария, Вьетнам, Швеция, Канада, Испания, Ливан, Бразилия",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Моррисон, Скотт",
+      "object": "Австралия",
+      "object_candidates": "Германия, Ирландия, Франкфурт-на-Майне, Польша, Канада, Австрия, Япония, Швеция, Италия, Австралия",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Хо Ши Мин",
+      "object": "Вьетнам",
+      "object_candidates": "Индия, Япония, Израиль, Аргентина, Швеция, Франция, Катар, Греция, Польша, Вьетнам",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Робер, Ален",
+      "object": "Франция",
+      "object_candidates": "Аргентина, Франкфурт-на-Майне, Греция, Вьетнам, Израиль, Ирландия, Польша, Курдистан, Норвегия, Франция",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Фердинанд де Соссюр",
+      "object": "Швейцария",
+      "object_candidates": "Индия, Аргентина, Курдистан, Бразилия, Канада, Катар, Австрия, Япония, Польша, Швейцария",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Огюст Роден",
+      "object": "Франция",
+      "object_candidates": "Испания, Франкфурт-на-Майне, Италия, Израиль, Индия, Аргентина, Болгария, Бразилия, Австрия, Франция",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Фридрих Вильгельм Бессель",
+      "object": "Германия",
+      "object_candidates": "Катар, Королевство Англия, Япония, Ливан, Аргентина, Италия, Болгария, Австрия, Бразилия, Германия",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Иоганн Вольфганг фон Гёте",
+      "object": "Франкфурт-на-Майне",
+      "object_candidates": "Швеция, Ирландия, Аргентина, Ливан, Болгария, Израиль, Италия, Греция, Япония, Франкфурт-на-Майне",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Массимо Д’Алема",
+      "object": "Италия",
+      "object_candidates": "Ливан, Индия, Швеция, Франция, Испания, Австралия, Польша, Дания, Вьетнам, Италия",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Рудольф Гесс",
+      "object": "Германия",
+      "object_candidates": "Польша, Австралия, Италия, Франция, Вьетнам, Аргентина, Курдистан, Бразилия, Дания, Германия",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Генрих V",
+      "object": "Королевство Англия",
+      "object_candidates": "Болгария, Германия, Израиль, Ирландия, Швеция, Вьетнам, Бразилия, Канада, Швейцария, Королевство Англия",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Мишель Уэльбек",
+      "object": "Франция",
+      "object_candidates": "Швейцария, Индия, Дания, Испания, Япония, Норвегия, Польша, Бразилия, Австрия, Франция",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Мазаччо",
+      "object": "Италия",
+      "object_candidates": "Дания, Королевство Англия, Франкфурт-на-Майне, Бразилия, Болгария, Франция, Канада, Австралия, Греция, Италия",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Франс Галль",
+      "object": "Франция",
+      "object_candidates": "Канада, Королевство Англия, Вьетнам, Австрия, Италия, Израиль, Франкфурт-на-Майне, Индия, Греция, Франция",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Рафаэль Альберти",
+      "object": "Испания",
+      "object_candidates": "Австрия, Болгария, Ливан, Норвегия, Италия, Вьетнам, Израиль, Польша, Австралия, Испания",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Усай, Бернардо Альберто",
+      "object": "Аргентина",
+      "object_candidates": "Катар, Германия, Израиль, Канада, Королевство Англия, Швейцария, Вьетнам, Курдистан, Болгария, Аргентина",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Миядзава, Киити",
+      "object": "Япония",
+      "object_candidates": "Бразилия, Норвегия, Франция, Индия, Болгария, Катар, Швеция, Израиль, Королевство Англия, Япония",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Оскар I",
+      "object": "Швеция",
+      "object_candidates": "Франция, Швейцария, Дания, Индия, Испания, Германия, Польша, Катар, Израиль, Швеция",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Карл Бош",
+      "object": "Германия",
+      "object_candidates": "Курдистан, Аргентина, Испания, Швеция, Израиль, Франция, Швейцария, Франкфурт-на-Майне, Ирландия, Германия",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Джидду Кришнамурти",
+      "object": "Индия",
+      "object_candidates": "Катар, Италия, Норвегия, Германия, Королевство Англия, Греция, Ирландия, Курдистан, Ливан, Индия",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "Елизавета I",
+      "object": "Королевство Англия",
+      "object_candidates": "Франция, Индия, Польша, Испания, Канада, Аргентина, Австрия, Дания, Швеция, Королевство Англия",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Сенье, Эммануэль",
+      "object": "Франция",
+      "object_candidates": "Катар, Франкфурт-на-Майне, Ливан, Италия, Индия, Курдистан, Болгария, Польша, Австралия, Франция",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Лято, Гжегож",
+      "object": "Польша",
+      "object_candidates": "Франция, Италия, Австралия, Ирландия, Болгария, Германия, Япония, Испания, Греция, Польша",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Курт Вальдхайм",
+      "object": "Австрия",
+      "object_candidates": "Израиль, Вьетнам, Испания, Швейцария, Курдистан, Аргентина, Австралия, Франкфурт-на-Майне, Ирландия, Австрия",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Маргарет Этвуд",
+      "object": "Канада",
+      "object_candidates": "Аргентина, Норвегия, Бразилия, Германия, Ливан, Австралия, Дания, Болгария, Курдистан, Канада",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Феррари, Энцо",
+      "object": "Италия",
+      "object_candidates": "Индия, Ливан, Испания, Австрия, Аргентина, Ирландия, Канада, Израиль, Бразилия, Италия",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Бурвиль",
+      "object": "Франция",
+      "object_candidates": "Индия, Норвегия, Аргентина, Австралия, Япония, Франкфурт-на-Майне, Королевство Англия, Израиль, Испания, Франция",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Вольфганг Паули",
+      "object": "Австрия",
+      "object_candidates": "Канада, Вьетнам, Дания, Ирландия, Швеция, Греция, Польша, Япония, Курдистан, Австрия",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Карл VI",
+      "object": "Франция",
+      "object_candidates": "Польша, Австрия, Германия, Дания, Болгария, Индия, Канада, Испания, Ирландия, Франция",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Мишель Наим Аун",
+      "object": "Ливан",
+      "object_candidates": "Вьетнам, Дания, Аргентина, Ирландия, Япония, Франкфурт-на-Майне, Бразилия, Польша, Италия, Ливан",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Карлсен, Магнус",
+      "object": "Норвегия",
+      "object_candidates": "Франкфурт-на-Майне, Испания, Франция, Курдистан, Австралия, Индия, Аргентина, Ливан, Греция, Норвегия",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Генрик Сенкевич",
+      "object": "Польша",
+      "object_candidates": "Ливан, Бразилия, Израиль, Испания, Катар, Япония, Франция, Дания, Канада, Польша",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Артур, принц Уэльский",
+      "object": "Королевство Англия",
+      "object_candidates": "Аргентина, Катар, Испания, Ирландия, Норвегия, Польша, Италия, Швеция, Курдистан, Королевство Англия",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Яков II",
+      "object": "Королевство Англия",
+      "object_candidates": "Норвегия, Швейцария, Болгария, Швеция, Вьетнам, Индия, Греция, Бразилия, Испания, Королевство Англия",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Хамад бин Халифа Аль Тани",
+      "object": "Катар",
+      "object_candidates": "Испания, Болгария, Италия, Швеция, Индия, Польша, Франкфурт-на-Майне, Швейцария, Япония, Катар",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Франсиско Гойя",
+      "object": "Испания",
+      "object_candidates": "Италия, Франция, Польша, Канада, Израиль, Австралия, Ливан, Греция, Бразилия, Испания",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Талабани, Джаляль",
+      "object": "Курдистан",
+      "object_candidates": "Ирландия, Королевство Англия, Италия, Польша, Франция, Франкфурт-на-Майне, Катар, Греция, Болгария, Курдистан",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Флориану Пейшоту",
+      "object": "Бразилия",
+      "object_candidates": "Франкфурт-на-Майне, Польша, Швеция, Италия, Курдистан, Норвегия, Австрия, Франция, Швейцария, Бразилия",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Самарас, Антонис",
+      "object": "Греция",
+      "object_candidates": "Королевство Англия, Австралия, Дания, Катар, Индия, Италия, Франция, Аргентина, Ливан, Греция",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Беппе Грилло",
+      "object": "Италия",
+      "object_candidates": "Королевство Англия, Индия, Испания, Греция, Израиль, Австралия, Франкфурт-на-Майне, Франция, Ливан, Италия",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Фредерик IX",
+      "object": "Дания",
+      "object_candidates": "Катар, Австрия, Канада, Франция, Норвегия, Франкфурт-на-Майне, Швеция, Австралия, Бразилия, Дания",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Майкл Фассбендер",
+      "object": "Ирландия",
+      "object_candidates": "Канада, Испания, Катар, Бразилия, Австрия, Курдистан, Германия, Франция, Болгария, Ирландия",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Александра Датская",
+      "object": "Дания",
+      "object_candidates": "Австрия, Швеция, Аргентина, Швейцария, Израиль, Австралия, Бразилия, Польша, Королевство Англия, Дания",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Мигель Идальго-и-Костилья",
+      "object": "Испания",
+      "object_candidates": "Израиль, Швейцария, Франкфурт-на-Майне, Норвегия, Ирландия, Королевство Англия, Италия, Аргентина, Австралия, Испания",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Эдмунд Густав Альбрехт Гуссерль",
+      "object": "Германия",
+      "object_candidates": "Италия, Ливан, Индия, Швеция, Польша, Австрия, Франция, Курдистан, Вьетнам, Германия",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Лиза Мейтнер",
+      "object": "Швеция",
+      "object_candidates": "Испания, Катар, Швейцария, Австрия, Ливан, Канада, Австралия, Франция, Польша, Швеция",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Альберт II",
+      "object": "Бельгия",
+      "object_candidates": "Польша, Швеция, Италия, Катар, Греция, Норвегия, Вьетнам, Швейцария, Испания, Бельгия",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Махавира",
+      "object": "Индия",
+      "object_candidates": "Аргентина, Германия, Вьетнам, Италия, Польша, Австралия, Канада, Курдистан, Бразилия, Индия",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Сванте Август Аррениус",
+      "object": "Швеция",
+      "object_candidates": "Австрия, Германия, Израиль, Бразилия, Норвегия, Катар, Австралия, Греция, Франция, Швеция",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Марио Монти",
+      "object": "Италия",
+      "object_candidates": "Испания, Дания, Индия, Германия, Франция, Ирландия, Болгария, Катар, Королевство Англия, Италия",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Пьер Жюль Сезар Жансен",
+      "object": "Франция",
+      "object_candidates": "Индия, Израиль, Испания, Ирландия, Ливан, Польша, Швейцария, Дания, Швеция, Франция",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

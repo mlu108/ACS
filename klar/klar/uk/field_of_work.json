@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "У якій галузі працює <subject>? Відповідь: <mask>",
+    "В якій галузі відомо, що працював <subject>? Відповідь: <mask>",
+    "З якою областю вивчення пов’язаний <subject>? Відповідь: <mask>",
+    "У якій дисципліні відомо, що працює <subject>? Відповідь: <mask>",
+    "Яка є основна область експертизи для <subject>? Відповідь: <mask>",
+    " Галузь роботи <subject> — це <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Алан Тюрінг",
+      "object": "логіка",
+      "object_candidates": "фізіологія, психологія, апартеїд, романіст, птахи, Нічний клуб, медицина, музикант, буддизм, логіка",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "Анаксагор",
+      "object": "філософія",
+      "object_candidates": "геометрія, астрономія, біологія, мовознавство, психологія, опера, логіка, тероризм, генетика, філософія",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Роберт Вільгельм Бунзен",
+      "object": "хімія",
+      "object_candidates": "буддизм, фізика, драматург, астроном, мовознавство, анатомія, опера, романіст, біологія, хімія",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Жан Кальвін",
+      "object": "богослів'я",
+      "object_candidates": "історія, анатомія, логіка, фізика, психологія, географія, математика, геологія, геометрія, богослів'я",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "фізична система",
+      "object": "фізика",
+      "object_candidates": "тероризм, психологія, історія, Топологія, музикант, астроном, опера, географія, економіка, фізика",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Карл Роджерс",
+      "object": "психологія",
+      "object_candidates": "мовознавство, логіка, апартеїд, Топологія, генетика, фізіологія, буддизм, наука, астроном, психологія",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Давид Гільберт",
+      "object": "геометрія",
+      "object_candidates": "економіст, географія, Топологія, математика, соціологія, вебсайт, драматург, екологія, апартеїд, геометрія",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Ріхард Вагнер",
+      "object": "опера",
+      "object_candidates": "вебсайт, математик, птахи, математика, філософія, економіка, буддизм, Нічний клуб, фізика, опера",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "Евклід",
+      "object": "геометрія",
+      "object_candidates": "вебсайт, генетика, тероризм, мовознавство, Нічний клуб, економіка, астроном, геологія, логіка, геометрія",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Макс Вебер",
+      "object": "соціологія",
+      "object_candidates": "економіка, хімія, музикант, геологія, тероризм, математика, астрономія, Топологія, наука, соціологія",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Ганс Айзенк",
+      "object": "психологія",
+      "object_candidates": "хімія, фізіологія, музикант, вебсайт, економіст, романіст, анатомія, фізика, астроном, психологія",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Юджин Пол Вігнер",
+      "object": "фізика",
+      "object_candidates": "драматург, економіст, географія, апартеїд, мовознавство, медицина, хімія, геометрія, тероризм, фізика",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Фред Хойл",
+      "object": "астрономія",
+      "object_candidates": "Топологія, апартеїд, тероризм, біологія, філософія, медицина, економіка, анатомія, математик, астрономія",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Клавдій Гален",
+      "object": "анатомія",
+      "object_candidates": "опера, математика, економіст, психологія, фізіологія, фізика, вебсайт, медицина, астроном, анатомія",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "Вільям Гарвей",
+      "object": "фізіологія",
+      "object_candidates": "біологія, медицина, генетика, музикант, мовознавство, анатомія, логіка, хімія, економіст, фізіологія",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Говард Картер",
+      "object": "археологія",
+      "object_candidates": "мовознавство, геометрія, богослів'я, географія, фізіологія, тероризм, математик, математика, економіка, археологія",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Генріх Шліман",
+      "object": "археологія",
+      "object_candidates": "музикант, економіка, логіка, драматург, біологія, джаз, опера, фізика, астрономія, археологія",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Клод Бернар",
+      "object": "фізіологія",
+      "object_candidates": "медицина, біологія, історія, економіст, хімія, економіка, апартеїд, Топологія, геометрія, фізіологія",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Ісаак Ньютон",
+      "object": "математика",
+      "object_candidates": "опера, геологія, фізіологія, геометрія, фізика, птахи, психологія, археологія, історія, математика",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Юстус фон Лібіх",
+      "object": "хімія",
+      "object_candidates": "опера, драматург, птахи, філософія, Нічний клуб, генетика, екологія, археологія, вебсайт, хімія",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Фредерік Бантинг",
+      "object": "фізіологія",
+      "object_candidates": "математик, музикант, геометрія, математика, романіст, тероризм, логіка, опера, буддизм, фізіологія",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Карл Маркс",
+      "object": "соціологія",
+      "object_candidates": "екологія, тероризм, Топологія, математик, медицина, астроном, богослів'я, логіка, джаз, соціологія",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Ганс Бете",
+      "object": "фізика",
+      "object_candidates": "апартеїд, буддизм, наука, анатомія, вебсайт, геологія, біологія, астрономія, мовознавство, фізика",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джек Рубі",
+      "object": "Нічний клуб",
+      "object_candidates": "геологія, хімія, астрономія, математика, джаз, фізіологія, фізика, психологія, соціологія, Нічний клуб",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "Персі Бріджмен",
+      "object": "фізика",
+      "object_candidates": "геологія, птахи, медицина, географія, романіст, філософія, фізіологія, Нічний клуб, математик, фізика",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джироламо Кардано",
+      "object": "математика",
+      "object_candidates": "наука, соціологія, економіст, птахи, вебсайт, астрономія, романіст, Топологія, анатомія, математика",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Макс Вебер",
+      "object": "економіка",
+      "object_candidates": "медицина, музикант, фізика, Топологія, економіст, астроном, буддизм, геометрія, тероризм, економіка",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Майкл Фарадей",
+      "object": "хімія",
+      "object_candidates": "музикант, Топологія, тероризм, фізика, генетика, опера, геологія, географія, біологія, хімія",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "орнітологія",
+      "object": "птахи",
+      "object_candidates": "драматург, історія, буддизм, богослів'я, Топологія, філософія, романіст, фізіологія, математик, птахи",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "Бонавентура Кавальєрі",
+      "object": "математика",
+      "object_candidates": "математик, соціологія, економіст, географія, Нічний клуб, екологія, музикант, опера, біологія, математика",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Галілео Галілей",
+      "object": "математика",
+      "object_candidates": "романіст, богослів'я, економіст, драматург, генетика, соціологія, психологія, археологія, Нічний клуб, математика",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Гіпатія",
+      "object": "математика",
+      "object_candidates": "фізика, мовознавство, романіст, медицина, математик, геометрія, фізіологія, економіст, астрономія, математика",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Мігель Сервет",
+      "object": "богослів'я",
+      "object_candidates": "екологія, економіст, геометрія, мовознавство, психологія, джаз, фізика, анатомія, економіка, богослів'я",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "Едвін Габбл",
+      "object": "астрономія",
+      "object_candidates": "Топологія, філософія, соціологія, математик, вебсайт, математика, апартеїд, буддизм, анатомія, астрономія",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Ісаак Ньютон",
+      "object": "фізика",
+      "object_candidates": "психологія, медицина, богослів'я, математик, астрономія, анатомія, драматург, опера, екологія, фізика",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Пригожин Ілля Романович",
+      "object": "фізика",
+      "object_candidates": "медицина, музикант, опера, Топологія, філософія, математик, психологія, тероризм, історія, фізика",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Гіпотеза Сепіра-Ворфа",
+      "object": "мовознавство",
+      "object_candidates": "наука, екологія, математик, економіст, анатомія, апартеїд, генетика, фізіологія, тероризм, мовознавство",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "науковий метод",
+      "object": "наука",
+      "object_candidates": "анатомія, філософія, драматург, історія, вебсайт, романіст, екологія, економіка, геологія, наука",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "Вільям Крукс",
+      "object": "хімія",
+      "object_candidates": "геологія, музикант, богослів'я, економіст, географія, анатомія, Топологія, опера, екологія, хімія",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Стів Біко",
+      "object": "апартеїд",
+      "object_candidates": "мовознавство, математика, психологія, математик, вебсайт, музикант, географія, богослів'я, історія, апартеїд",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "Чарлз Дарвін",
+      "object": "біологія",
+      "object_candidates": "Нічний клуб, соціологія, опера, тероризм, буддизм, фізика, географія, наука, богослів'я, біологія",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Тихо Браге",
+      "object": "астрономія",
+      "object_candidates": "буддизм, Нічний клуб, фізика, біологія, медицина, математик, психологія, філософія, музикант, астрономія",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Джон Стюарт Мілль",
+      "object": "філософія",
+      "object_candidates": "астроном, астрономія, птахи, соціологія, екологія, джаз, генетика, логіка, геологія, філософія",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Алан Тюрінг",
+      "object": "математика",
+      "object_candidates": "вебсайт, богослів'я, астроном, генетика, анатомія, фізика, музикант, птахи, математик, математика",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Вільфредо Парето",
+      "object": "соціологія",
+      "object_candidates": "психологія, опера, мовознавство, математика, біологія, джаз, астроном, Топологія, анатомія, соціологія",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Вільям Сомерсет Моем",
+      "object": "драматург",
+      "object_candidates": "геологія, генетика, астроном, астрономія, соціологія, екологія, археологія, тероризм, фізіологія, драматург",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "Вільям Сомерсет Моем",
+      "object": "романіст",
+      "object_candidates": "економіка, фізіологія, логіка, археологія, геометрія, економіст, наука, опера, хімія, романіст",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "Енріко Фермі",
+      "object": "фізика",
+      "object_candidates": "психологія, тероризм, птахи, хімія, фізіологія, музикант, вебсайт, філософія, медицина, фізика",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джованні Доменіко Кассіні",
+      "object": "астрономія",
+      "object_candidates": "анатомія, буддизм, геометрія, романіст, філософія, логіка, геологія, математик, астроном, астрономія",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Йоганн Вольфганг фон Гете",
+      "object": "анатомія",
+      "object_candidates": "психологія, математика, філософія, музикант, тероризм, економіст, вебсайт, буддизм, птахи, анатомія",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "Теофраст Парацельс",
+      "object": "медицина",
+      "object_candidates": "математик, буддизм, опера, наука, економіст, тероризм, астроном, драматург, економіка, медицина",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Джон Колтрейн",
+      "object": "джаз",
+      "object_candidates": "романіст, анатомія, астрономія, географія, фізіологія, мовознавство, опера, психологія, біологія, джаз",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "Герман фон Гельмгольц",
+      "object": "фізика",
+      "object_candidates": "історія, географія, медицина, вебсайт, наука, апартеїд, економіст, птахи, геометрія, фізика",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Клавдій Гален",
+      "object": "медицина",
+      "object_candidates": "логіка, біологія, математик, мовознавство, генетика, астроном, соціологія, апартеїд, тероризм, медицина",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Абрахам Маслоу",
+      "object": "психологія",
+      "object_candidates": "романіст, анатомія, геологія, астроном, хімія, математик, Нічний клуб, музикант, екологія, психологія",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Луї Пастер",
+      "object": "хімія",
+      "object_candidates": "наука, буддизм, фізіологія, соціологія, філософія, археологія, апартеїд, птахи, Топологія, хімія",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Генрі Кавендіш",
+      "object": "фізика",
+      "object_candidates": "птахи, археологія, вебсайт, історія, математика, генетика, музикант, геологія, анатомія, фізика",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Карл Маркс",
+      "object": "економіка",
+      "object_candidates": "археологія, буддизм, астроном, Топологія, апартеїд, богослів'я, анатомія, фізіологія, медицина, економіка",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Ульф фон Ейлер",
+      "object": "фізіологія",
+      "object_candidates": "Топологія, медицина, соціологія, драматург, богослів'я, фізика, математика, опера, геометрія, фізіологія",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Галілео Галілей",
+      "object": "астрономія",
+      "object_candidates": "хімія, Нічний клуб, наука, логіка, буддизм, опера, геометрія, медицина, біологія, астрономія",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Лобачевський Микола Іванович",
+      "object": "геометрія",
+      "object_candidates": "богослів'я, буддизм, логіка, романіст, соціологія, географія, апартеїд, психологія, геологія, геометрія",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Християн Гюйгенс",
+      "object": "математика",
+      "object_candidates": "джаз, історія, економіст, тероризм, хімія, логіка, фізика, астрономія, птахи, математика",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "вебзастосунок",
+      "object": "вебсайт",
+      "object_candidates": "історія, геометрія, біологія, геологія, буддизм, опера, психологія, фізіологія, хімія, вебсайт",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "Нагарджуна",
+      "object": "буддизм",
+      "object_candidates": "логіка, математик, фізика, птахи, екологія, джаз, анатомія, романіст, вебсайт, буддизм",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "Вільям Ровен Гамільтон",
+      "object": "математика",
+      "object_candidates": "наука, економіст, геометрія, археологія, астроном, географія, вебсайт, мовознавство, хімія, математика",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Ернест Резерфорд",
+      "object": "фізика",
+      "object_candidates": "тероризм, історія, економіст, мовознавство, археологія, Топологія, анатомія, екологія, математик, фізика",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Фрідріх Вільгельм Гершель",
+      "object": "астрономія",
+      "object_candidates": "наука, геологія, богослів'я, опера, філософія, історія, біологія, археологія, буддизм, астрономія",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Павлов Іван Петрович",
+      "object": "фізіологія",
+      "object_candidates": "апартеїд, психологія, астроном, Нічний клуб, біологія, економіст, фізика, географія, соціологія, фізіологія",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Герман Мінковський",
+      "object": "геометрія",
+      "object_candidates": "тероризм, вебсайт, богослів'я, медицина, фізика, Топологія, Нічний клуб, генетика, математика, геометрія",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Галілео Галілей",
+      "object": "фізика",
+      "object_candidates": "геометрія, Нічний клуб, екологія, Топологія, птахи, логіка, тероризм, музикант, драматург, фізика",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джуліан Швінгер",
+      "object": "фізика",
+      "object_candidates": "мовознавство, фізіологія, Топологія, анатомія, наука, соціологія, географія, хімія, богослів'я, фізика",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Терорист-смертник",
+      "object": "тероризм",
+      "object_candidates": "Топологія, психологія, філософія, географія, археологія, мовознавство, богослів'я, геометрія, птахи, тероризм",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "Виготський Лев Семенович",
+      "object": "психологія",
+      "object_candidates": "медицина, джаз, логіка, географія, генетика, математика, Нічний клуб, економіст, драматург, психологія",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Карл Маркс",
+      "object": "філософія",
+      "object_candidates": "психологія, тероризм, фізика, Нічний клуб, екологія, геологія, наука, астроном, музикант, філософія",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Фрідріх Вільгельм Бессель",
+      "object": "математика",
+      "object_candidates": "Нічний клуб, мовознавство, богослів'я, Топологія, фізіологія, біологія, опера, геологія, логіка, математика",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Йозеф Шумпетер",
+      "object": "економіка",
+      "object_candidates": "археологія, Нічний клуб, медицина, соціологія, філософія, джаз, математик, логіка, богослів'я, економіка",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Макс Вебер",
+      "object": "історія",
+      "object_candidates": "птахи, географія, анатомія, наука, астроном, біологія, генетика, Нічний клуб, екологія, історія",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "Едуард Гіббон",
+      "object": "історія",
+      "object_candidates": "мовознавство, тероризм, географія, філософія, богослів'я, соціологія, апартеїд, драматург, фізіологія, історія",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "Джон Арчибальд Вілер",
+      "object": "фізика",
+      "object_candidates": "соціологія, тероризм, Нічний клуб, біологія, вебсайт, апартеїд, географія, психологія, анатомія, фізика",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Леонард Ейлер",
+      "object": "фізика",
+      "object_candidates": "буддизм, географія, математика, психологія, математик, джаз, геологія, апартеїд, мовознавство, фізика",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Август Крог",
+      "object": "фізіологія",
+      "object_candidates": "біологія, археологія, логіка, Нічний клуб, буддизм, геологія, анатомія, вебсайт, економіка, фізіологія",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Фелікс Блох",
+      "object": "фізика",
+      "object_candidates": "апартеїд, наука, математик, психологія, математика, географія, романіст, опера, фізіологія, фізика",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Андерс Цельсій",
+      "object": "астрономія",
+      "object_candidates": "економіст, хімія, біологія, астроном, фізіологія, анатомія, птахи, вебсайт, геометрія, астрономія",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Віллем Ейнтговен",
+      "object": "фізіологія",
+      "object_candidates": "апартеїд, богослів'я, Нічний клуб, астрономія, географія, буддизм, мовознавство, логіка, екологія, фізіологія",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Йозеф фон Фраунгофер",
+      "object": "фізика",
+      "object_candidates": "медицина, музикант, наука, екологія, математика, джаз, хімія, математик, археологія, фізика",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Томонага Синітіро",
+      "object": "фізика",
+      "object_candidates": "логіка, геологія, філософія, богослів'я, астроном, економіст, буддизм, наука, психологія, фізика",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Герман Шварц",
+      "object": "математика",
+      "object_candidates": "астроном, психологія, драматург, фізика, Нічний клуб, музикант, геометрія, астрономія, фізіологія, математика",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Жан Лерон д'Аламбер",
+      "object": "математика",
+      "object_candidates": "хімія, романіст, фізіологія, генетика, філософія, біологія, медицина, археологія, музикант, математика",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Лука Пачолі",
+      "object": "математика",
+      "object_candidates": "медицина, астроном, мовознавство, психологія, астрономія, птахи, філософія, буддизм, біологія, математика",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Гінзбург Віталій Лазарович",
+      "object": "фізика",
+      "object_candidates": "географія, джаз, археологія, драматург, Топологія, астрономія, птахи, філософія, хімія, фізика",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Сима Цянь",
+      "object": "історія",
+      "object_candidates": "медицина, геологія, Нічний клуб, птахи, анатомія, вебсайт, екологія, драматург, тероризм, історія",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "Клавдій Птолемей",
+      "object": "математик",
+      "object_candidates": "драматург, птахи, тероризм, Топологія, медицина, астроном, геометрія, наука, музикант, математик",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "Жан Піаже",
+      "object": "психологія",
+      "object_candidates": "опера, логіка, соціологія, буддизм, богослів'я, хімія, вебсайт, анатомія, археологія, психологія",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Стефан Банах",
+      "object": "математика",
+      "object_candidates": "логіка, астрономія, біологія, археологія, фізіологія, наука, соціологія, тероризм, Топологія, математика",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Джозеф Прістлі",
+      "object": "філософія",
+      "object_candidates": "фізика, психологія, економіка, анатомія, медицина, тероризм, драматург, геометрія, математика, філософія",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Курт Левін",
+      "object": "психологія",
+      "object_candidates": "хімія, драматург, анатомія, економіка, астрономія, економіст, логіка, опера, буддизм, психологія",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Джеймс Клерк Максвелл",
+      "object": "фізика",
+      "object_candidates": "медицина, географія, психологія, економіка, опера, астрономія, тероризм, буддизм, біологія, фізика",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Альфред Маршалл",
+      "object": "економіка",
+      "object_candidates": "фізика, географія, біологія, буддизм, наука, геометрія, астрономія, математик, логіка, економіка",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Миколай Коперник",
+      "object": "астрономія",
+      "object_candidates": "логіка, Топологія, археологія, наука, птахи, географія, тероризм, Нічний клуб, біологія, астрономія",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Ерік Мескін",
+      "object": "економіст",
+      "object_candidates": "буддизм, романіст, астрономія, наука, екологія, соціологія, анатомія, астроном, медицина, економіст",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "Джаред Даймонд",
+      "object": "екологія",
+      "object_candidates": "хімія, археологія, геологія, логіка, фізика, вебсайт, наука, астроном, апартеїд, екологія",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "Колмогоров Андрій Миколайович",
+      "object": "геометрія",
+      "object_candidates": "біологія, фізика, мовознавство, драматург, математика, вебсайт, соціологія, романіст, джаз, геометрія",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Жозеф-Луї Гей-Люссак",
+      "object": "хімія",
+      "object_candidates": "астрономія, птахи, історія, географія, музикант, логіка, драматург, економіка, романіст, хімія",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Октан",
+      "object": "хімія",
+      "object_candidates": "мовознавство, Топологія, вебсайт, логіка, апартеїд, опера, наука, історія, романіст, хімія",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Даніель Бернуллі",
+      "object": "фізика",
+      "object_candidates": "медицина, археологія, птахи, богослів'я, драматург, психологія, опера, астроном, філософія, фізика",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Майкл Фарадей",
+      "object": "фізика",
+      "object_candidates": "птахи, біологія, опера, буддизм, економіка, Топологія, історія, медицина, психологія, фізика",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Гемфрі Деві",
+      "object": "хімія",
+      "object_candidates": "драматург, економіст, психологія, соціологія, філософія, логіка, джаз, романіст, географія, хімія",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Анрі Муассан",
+      "object": "хімія",
+      "object_candidates": "вебсайт, логіка, романіст, математика, Топологія, економіка, астроном, тероризм, Нічний клуб, хімія",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "П'єр Кюрі",
+      "object": "фізика",
+      "object_candidates": "економіка, богослів'я, драматург, геометрія, археологія, філософія, романіст, психологія, джаз, фізика",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Густав Роберт Кірхгоф",
+      "object": "фізика",
+      "object_candidates": "Топологія, математик, богослів'я, наука, філософія, математика, мовознавство, апартеїд, медицина, фізика",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Норберт Вінер",
+      "object": "математика",
+      "object_candidates": "логіка, буддизм, опера, хімія, екологія, соціологія, богослів'я, філософія, географія, математика",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Урбен Левер'є",
+      "object": "астрономія",
+      "object_candidates": "богослів'я, фізіологія, Нічний клуб, буддизм, географія, анатомія, біологія, вебсайт, геологія, астрономія",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Йоган Гейзинга",
+      "object": "історія",
+      "object_candidates": "математик, джаз, фізика, романіст, мовознавство, математика, географія, медицина, птахи, історія",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "Science",
+      "object": "наука",
+      "object_candidates": "музикант, геометрія, богослів'я, птахи, логіка, психологія, джаз, екологія, астроном, наука",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "Едвард Теллер",
+      "object": "фізика",
+      "object_candidates": "генетика, буддизм, математика, економіка, логіка, астроном, анатомія, соціологія, джаз, фізика",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Led Zeppelin",
+      "object": "музикант",
+      "object_candidates": "археологія, економіка, біологія, логіка, мовознавство, психологія, геологія, анатомія, генетика, музикант",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Ернест Орландо Лоуренс",
+      "object": "фізика",
+      "object_candidates": "наука, птахи, анатомія, історія, астрономія, Топологія, логіка, медицина, Нічний клуб, фізика",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Марія Склодовська-Кюрі",
+      "object": "хімія",
+      "object_candidates": "економіка, астроном, наука, буддизм, екологія, вебсайт, джаз, математик, математика, хімія",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Джон Непер",
+      "object": "математика",
+      "object_candidates": "мовознавство, богослів'я, астроном, опера, музикант, математик, медицина, романіст, генетика, математика",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Ісаак Ньютон",
+      "object": "астрономія",
+      "object_candidates": "богослів'я, екологія, економіка, апартеїд, генетика, географія, анатомія, математик, опера, астрономія",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Ларрі Сенгер",
+      "object": "філософія",
+      "object_candidates": "наука, фізика, фізіологія, археологія, екологія, астрономія, медицина, хімія, астроном, філософія",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Філіп Едуард Антон фон Ленард",
+      "object": "фізика",
+      "object_candidates": "тероризм, геологія, економіст, логіка, романіст, птахи, драматург, опера, соціологія, фізика",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Герман фон Гельмгольц",
+      "object": "фізіологія",
+      "object_candidates": "економіка, птахи, математика, генетика, фізика, вебсайт, екологія, математик, драматург, фізіологія",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Фрідріх Вільгельм Бессель",
+      "object": "астрономія",
+      "object_candidates": "апартеїд, психологія, вебсайт, логіка, геометрія, філософія, музикант, генетика, опера, астрономія",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Альфред Кінсі",
+      "object": "біологія",
+      "object_candidates": "драматург, хімія, соціологія, буддизм, екологія, геологія, генетика, історія, опера, біологія",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Месроп Маштоц",
+      "object": "мовознавство",
+      "object_candidates": "геологія, генетика, Нічний клуб, хімія, медицина, наука, апартеїд, фізика, Топологія, мовознавство",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "Джеймс Франк",
+      "object": "фізика",
+      "object_candidates": "астрономія, вебсайт, соціологія, екологія, економіка, наука, птахи, Нічний клуб, апартеїд, фізика",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Елінор Остром",
+      "object": "економіка",
+      "object_candidates": "астроном, фізіологія, математик, апартеїд, птахи, логіка, романіст, медицина, психологія, економіка",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Едвард Віктор Епплтон",
+      "object": "фізика",
+      "object_candidates": "математика, психологія, астроном, птахи, апартеїд, джаз, астрономія, екологія, богослів'я, фізика",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джон Дальтон",
+      "object": "хімія",
+      "object_candidates": "мовознавство, математик, драматург, історія, економіка, біологія, буддизм, географія, філософія, хімія",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Джон Дальтон",
+      "object": "фізика",
+      "object_candidates": "математик, тероризм, геометрія, Топологія, астроном, хімія, фізіологія, географія, анатомія, фізика",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Менделєєв Дмитро Іванович",
+      "object": "хімія",
+      "object_candidates": "фізика, астроном, вебсайт, археологія, опера, біологія, Нічний клуб, історія, екологія, хімія",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Менделєєв Дмитро Іванович",
+      "object": "фізика",
+      "object_candidates": "драматург, опера, соціологія, географія, медицина, математик, джаз, математика, тероризм, фізика",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Пол Маккартні",
+      "object": "музикант",
+      "object_candidates": "геометрія, астрономія, богослів'я, буддизм, драматург, тероризм, екологія, анатомія, романіст, музикант",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Чарлз Беббідж",
+      "object": "математика",
+      "object_candidates": "астрономія, Нічний клуб, анатомія, буддизм, психологія, біологія, філософія, драматург, вебсайт, математика",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Миколай Коперник",
+      "object": "математика",
+      "object_candidates": "анатомія, вебсайт, птахи, фізіологія, астрономія, астроном, біологія, фізика, географія, математика",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Аріабхата I",
+      "object": "астрономія",
+      "object_candidates": "соціологія, логіка, економіст, економіка, біологія, математик, історія, апартеїд, географія, астрономія",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Клайд Томбо",
+      "object": "астроном",
+      "object_candidates": "тероризм, романіст, логіка, географія, богослів'я, буддизм, мовознавство, Нічний клуб, хімія, астроном",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "Вілліс Лемб",
+      "object": "фізика",
+      "object_candidates": "економіка, анатомія, археологія, птахи, медицина, геометрія, мовознавство, астрономія, логіка, фізика",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Архімед",
+      "object": "геометрія",
+      "object_candidates": "фізіологія, джаз, Топологія, географія, вебсайт, геологія, філософія, екологія, біологія, геометрія",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Анаксагор",
+      "object": "астрономія",
+      "object_candidates": "апартеїд, історія, Топологія, астроном, генетика, анатомія, філософія, логіка, соціологія, астрономія",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Християн Гюйгенс",
+      "object": "фізика",
+      "object_candidates": "тероризм, опера, економіка, Нічний клуб, логіка, музикант, математика, геометрія, анатомія, фізика",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Майкл Джексон",
+      "object": "музикант",
+      "object_candidates": "фізика, економіст, геологія, археологія, астроном, математика, птахи, економіка, буддизм, музикант",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Адам Сміт",
+      "object": "економіка",
+      "object_candidates": "логіка, Топологія, генетика, джаз, математика, біологія, геологія, птахи, географія, економіка",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Роберт Ендрус Міллікен",
+      "object": "фізика",
+      "object_candidates": "екологія, геологія, медицина, драматург, Нічний клуб, джаз, географія, хімія, апартеїд, фізика",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Герард Меркатор",
+      "object": "географія",
+      "object_candidates": "анатомія, екологія, драматург, музикант, астроном, наука, логіка, опера, економіст, географія",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "Карл Лінней",
+      "object": "медицина",
+      "object_candidates": "логіка, філософія, Нічний клуб, богослів'я, математика, драматург, економіка, геологія, геометрія, медицина",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Чарлз Дарвін",
+      "object": "геологія",
+      "object_candidates": "психологія, логіка, наука, археологія, астроном, Нічний клуб, опера, богослів'я, географія, геологія",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "Френк Вільчек",
+      "object": "фізика",
+      "object_candidates": "філософія, геометрія, наука, психологія, анатомія, екологія, генетика, астрономія, птахи, фізика",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Колмогоров Андрій Миколайович",
+      "object": "Топологія",
+      "object_candidates": "археологія, наука, геометрія, генетика, математик, логіка, математика, птахи, романіст, Топологія",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "Йоганн Генріх Ламберт",
+      "object": "фізика",
+      "object_candidates": "астрономія, музикант, джаз, біологія, медицина, драматург, археологія, романіст, мовознавство, фізика",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Брамагупта",
+      "object": "математика",
+      "object_candidates": "економіка, анатомія, музикант, вебсайт, Нічний клуб, романіст, птахи, джаз, географія, математика",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Вільгельм Він",
+      "object": "фізика",
+      "object_candidates": "фізіологія, вебсайт, генетика, птахи, медицина, економіка, логіка, буддизм, соціологія, фізика",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Герман фон Гельмгольц",
+      "object": "психологія",
+      "object_candidates": "астрономія, математика, біологія, джаз, астроном, опера, медицина, тероризм, філософія, психологія",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Леонард Ейлер",
+      "object": "астрономія",
+      "object_candidates": "буддизм, соціологія, апартеїд, фізика, драматург, математик, геометрія, археологія, музикант, астрономія",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Галілео Галілей",
+      "object": "філософія",
+      "object_candidates": "психологія, фізика, математик, археологія, вебсайт, біологія, астрономія, джаз, логіка, філософія",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Грегор Мендель",
+      "object": "генетика",
+      "object_candidates": "анатомія, мовознавство, тероризм, астрономія, Топологія, економіка, психологія, географія, богослів'я, генетика",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "Брюс Спринстін",
+      "object": "музикант",
+      "object_candidates": "геологія, економіст, джаз, фізіологія, мовознавство, астроном, наука, географія, тероризм, музикант",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Ковалевська Софія Василівна",
+      "object": "математика",
+      "object_candidates": "біологія, хімія, математик, джаз, генетика, драматург, соціологія, геологія, мовознавство, математика",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Джордано Бруно",
+      "object": "філософія",
+      "object_candidates": "романіст, математик, джаз, буддизм, птахи, геологія, геометрія, економіка, біологія, філософія",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Антуан Анрі Беккерель",
+      "object": "фізика",
+      "object_candidates": "тероризм, логіка, птахи, астрономія, географія, богослів'я, мовознавство, астроном, геологія, фізика",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Кіп Торн",
+      "object": "фізика",
+      "object_candidates": "фізіологія, джаз, тероризм, апартеїд, геометрія, біологія, романіст, вебсайт, Топологія, фізика",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Август Вейсман",
+      "object": "біологія",
+      "object_candidates": "геологія, екологія, фізіологія, Топологія, генетика, тероризм, логіка, анатомія, медицина, біологія",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Поль Ланжевен",
+      "object": "фізика",
+      "object_candidates": "астроном, психологія, Топологія, фізіологія, філософія, геометрія, драматург, біологія, астрономія, фізика",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Джон Дуглас Кокрофт",
+      "object": "фізика",
+      "object_candidates": "птахи, геометрія, геологія, математик, наука, логіка, джаз, економіст, соціологія, фізика",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Сванте Август Арреніус",
+      "object": "хімія",
+      "object_candidates": "джаз, анатомія, соціологія, музикант, птахи, Топологія, психологія, економіст, вебсайт, хімія",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Рококо",
+      "object": "архітектура",
+      "object_candidates": "хімія, географія, астроном, логіка, фізіологія, Топологія, медицина, тероризм, математик, архітектура",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

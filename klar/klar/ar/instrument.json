@@ -1,0 +1,382 @@
+{
+  "name": "instrument",
+  "prompt_templates": [
+    "ما الآلة الموسيقية التي يعزفها <subject>? الجواب هو: <mask>",
+    "أي آلة موسيقية تعزفها <subject>? الجواب هو: <mask>",
+    "ما الذي يستخدمه <subject> لإنشاء الموسيقى؟ الجواب هو: <mask>",
+    "أي آلة يعرف <subject> بأنه يعزفها؟ الجواب هو: <mask>",
+    "ما الأداة الموسيقية التي يتقنها <subject>? الجواب هو: <mask>",
+    " الآلة الموسيقية التي يعزف عليها <subject> تسمى <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "نت كينغ كول",
+      "object": "بيانو",
+      "object_candidates": "كمان, قيثارة, هارمونيكا, كلارينيت, كمان متوسط, بيانو",
+      "index": 4757,
+      "subject_en": "Nat King Cole",
+      "object_en": "piano"
+    },
+    {
+      "subject": "جيمي بيج",
+      "object": "كمان",
+      "object_candidates": "قيثارة, كلارينيت, كمان متوسط, بيانو, هارمونيكا, كمان",
+      "index": 4758,
+      "subject_en": "Jimmy Page",
+      "object_en": "violin"
+    },
+    {
+      "subject": "نيل يونغ",
+      "object": "هارمونيكا",
+      "object_candidates": "كلارينيت, كمان, بيانو, قيثارة, كمان متوسط, هارمونيكا",
+      "index": 4759,
+      "subject_en": "Neil Young",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "أريثا فرانكلين",
+      "object": "بيانو",
+      "object_candidates": "كمان, هارمونيكا, كمان متوسط, كلارينيت, قيثارة, بيانو",
+      "index": 4760,
+      "subject_en": "Aretha Franklin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ليونارد برنستاين",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كمان, كمان متوسط, قيثارة, كلارينيت, بيانو",
+      "index": 4761,
+      "subject_en": "Leonard Bernstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "إريك كلابتون",
+      "object": "كمان",
+      "object_candidates": "كمان متوسط, كلارينيت, قيثارة, بيانو, هارمونيكا, كمان",
+      "index": 4762,
+      "subject_en": "Eric Clapton",
+      "object_en": "violin"
+    },
+    {
+      "subject": "إيمانويل شابرييه",
+      "object": "بيانو",
+      "object_candidates": "كمان, كمان متوسط, هارمونيكا, كلارينيت, قيثارة, بيانو",
+      "index": 4763,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "piano"
+    },
+    {
+      "subject": "سيرج غينسبور",
+      "object": "قيثارة",
+      "object_candidates": "كمان متوسط, كلارينيت, بيانو, هارمونيكا, كمان, قيثارة",
+      "index": 4764,
+      "subject_en": "Serge Gainsbourg",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "إيدفارد جريج",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كلارينيت, كمان, كمان متوسط, قيثارة, بيانو",
+      "index": 4765,
+      "subject_en": "Edvard Grieg",
+      "object_en": "piano"
+    },
+    {
+      "subject": "إسحاق بيرلمان",
+      "object": "كمان",
+      "object_candidates": "كلارينيت, هارمونيكا, قيثارة, كمان متوسط, بيانو, كمان",
+      "index": 4766,
+      "subject_en": "Itzhak Perlman",
+      "object_en": "violin"
+    },
+    {
+      "subject": "جورج مارتن",
+      "object": "بيانو",
+      "object_candidates": "كمان, كمان متوسط, هارمونيكا, كلارينيت, قيثارة, بيانو",
+      "index": 4767,
+      "subject_en": "George Martin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "بوب ديلن",
+      "object": "هارمونيكا",
+      "object_candidates": "كلارينيت, كمان متوسط, بيانو, كمان, قيثارة, هارمونيكا",
+      "index": 4768,
+      "subject_en": "Bob Dylan",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "مايك شينودا",
+      "object": "قيثارة",
+      "object_candidates": "كمان متوسط, كمان, كلارينيت, بيانو, هارمونيكا, قيثارة",
+      "index": 4769,
+      "subject_en": "Mike Shinoda",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "جاريد ليتو",
+      "object": "قيثارة",
+      "object_candidates": "هارمونيكا, كمان, كلارينيت, بيانو, كمان متوسط, قيثارة",
+      "index": 4770,
+      "subject_en": "Jared Leto",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "فولفغانغ أماديوس موزارت",
+      "object": "كمان متوسط",
+      "object_candidates": "بيانو, هارمونيكا, كلارينيت, كمان, قيثارة, كمان متوسط",
+      "index": 4771,
+      "subject_en": "Wolfgang Amadeus Mozart",
+      "object_en": "viola"
+    },
+    {
+      "subject": "فيليب غلاس",
+      "object": "بيانو",
+      "object_candidates": "كمان متوسط, هارمونيكا, كمان, قيثارة, كلارينيت, بيانو",
+      "index": 4772,
+      "subject_en": "Philip Glass",
+      "object_en": "piano"
+    },
+    {
+      "subject": "جيوسيب تارتيني",
+      "object": "كمان",
+      "object_candidates": "كمان متوسط, بيانو, قيثارة, كلارينيت, هارمونيكا, كمان",
+      "index": 4773,
+      "subject_en": "Giuseppe Tartini",
+      "object_en": "violin"
+    },
+    {
+      "subject": "فرانسيس بولنك",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كمان, كمان متوسط, قيثارة, كلارينيت, بيانو",
+      "index": 4774,
+      "subject_en": "Francis Poulenc",
+      "object_en": "piano"
+    },
+    {
+      "subject": "براد ديلسون",
+      "object": "قيثارة",
+      "object_candidates": "كمان متوسط, هارمونيكا, كمان, كلارينيت, بيانو, قيثارة",
+      "index": 4775,
+      "subject_en": "Brad Delson",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "ليدي غاغا",
+      "object": "بيانو",
+      "object_candidates": "كلارينيت, هارمونيكا, قيثارة, كمان متوسط, كمان, بيانو",
+      "index": 4776,
+      "subject_en": "Lady Gaga",
+      "object_en": "piano"
+    },
+    {
+      "subject": "إلفيس بريسلي",
+      "object": "قيثارة",
+      "object_candidates": "بيانو, كمان, كمان متوسط, كلارينيت, هارمونيكا, قيثارة",
+      "index": 4777,
+      "subject_en": "Elvis Presley",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "يوهان شتراوس الأب",
+      "object": "كمان",
+      "object_candidates": "قيثارة, بيانو, كمان متوسط, هارمونيكا, كلارينيت, كمان",
+      "index": 4778,
+      "subject_en": "Johann Strauss I",
+      "object_en": "violin"
+    },
+    {
+      "subject": "ليونارد كوهين",
+      "object": "قيثارة",
+      "object_candidates": "بيانو, كلارينيت, هارمونيكا, كمان, كمان متوسط, قيثارة",
+      "index": 4779,
+      "subject_en": "Leonard Cohen",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "جورج غيرشوين",
+      "object": "بيانو",
+      "object_candidates": "كمان متوسط, قيثارة, كمان, هارمونيكا, كلارينيت, بيانو",
+      "index": 4780,
+      "subject_en": "George Gershwin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "إرنست شوسون",
+      "object": "بيانو",
+      "object_candidates": "كلارينيت, كمان, كمان متوسط, هارمونيكا, قيثارة, بيانو",
+      "index": 4781,
+      "subject_en": "Ernest Chausson",
+      "object_en": "piano"
+    },
+    {
+      "subject": "سيلين ديون",
+      "object": "بيانو",
+      "object_candidates": "كمان, كمان متوسط, هارمونيكا, قيثارة, كلارينيت, بيانو",
+      "index": 4782,
+      "subject_en": "Céline Dion",
+      "object_en": "piano"
+    },
+    {
+      "subject": "بروس سبرينغستين",
+      "object": "هارمونيكا",
+      "object_candidates": "كلارينيت, قيثارة, كمان, بيانو, كمان متوسط, هارمونيكا",
+      "index": 4783,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "كارل تشيرني",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كلارينيت, كمان, كمان متوسط, قيثارة, بيانو",
+      "index": 4784,
+      "subject_en": "Carl Czerny",
+      "object_en": "piano"
+    },
+    {
+      "subject": "أنطونيو فيفالدي",
+      "object": "كمان",
+      "object_candidates": "كمان متوسط, هارمونيكا, بيانو, كلارينيت, قيثارة, كمان",
+      "index": 4785,
+      "subject_en": "Antonio Vivaldi",
+      "object_en": "violin"
+    },
+    {
+      "subject": "جيمي هندريكس",
+      "object": "قيثارة",
+      "object_candidates": "كلارينيت, كمان متوسط, كمان, هارمونيكا, بيانو, قيثارة",
+      "index": 4786,
+      "subject_en": "Jimi Hendrix",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "بول هيندميث",
+      "object": "كمان متوسط",
+      "object_candidates": "هارمونيكا, كلارينيت, قيثارة, بيانو, كمان, كمان متوسط",
+      "index": 4787,
+      "subject_en": "Paul Hindemith",
+      "object_en": "viola"
+    },
+    {
+      "subject": "جون كولترين",
+      "object": "كلارينيت",
+      "object_candidates": "قيثارة, كمان, بيانو, هارمونيكا, كمان متوسط, كلارينيت",
+      "index": 4788,
+      "subject_en": "John Coltrane",
+      "object_en": "clarinet"
+    },
+    {
+      "subject": "جورج اينيسكو",
+      "object": "كمان",
+      "object_candidates": "كلارينيت, بيانو, هارمونيكا, كمان متوسط, قيثارة, كمان",
+      "index": 4789,
+      "subject_en": "George Enescu",
+      "object_en": "violin"
+    },
+    {
+      "subject": "بول مكارتني",
+      "object": "بيانو",
+      "object_candidates": "كمان, قيثارة, هارمونيكا, كمان متوسط, كلارينيت, بيانو",
+      "index": 4790,
+      "subject_en": "Paul McCartney",
+      "object_en": "piano"
+    },
+    {
+      "subject": "تومازو ألبينوني",
+      "object": "كمان",
+      "object_candidates": "قيثارة, كلارينيت, هارمونيكا, بيانو, كمان متوسط, كمان",
+      "index": 4791,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "violin"
+    },
+    {
+      "subject": "روبرت شومان",
+      "object": "بيانو",
+      "object_candidates": "كلارينيت, كمان متوسط, هارمونيكا, قيثارة, كمان, بيانو",
+      "index": 4792,
+      "subject_en": "Robert Schumann",
+      "object_en": "piano"
+    },
+    {
+      "subject": "آرثر روبنشتاين",
+      "object": "بيانو",
+      "object_candidates": "كلارينيت, هارمونيكا, كمان, قيثارة, كمان متوسط, بيانو",
+      "index": 4793,
+      "subject_en": "Arthur Rubinstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ثالونيوس منك",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كمان متوسط, قيثارة, كمان, كلارينيت, بيانو",
+      "index": 4794,
+      "subject_en": "Thelonious Monk",
+      "object_en": "piano"
+    },
+    {
+      "subject": "مايك شينودا",
+      "object": "بيانو",
+      "object_candidates": "هارمونيكا, كمان, قيثارة, كلارينيت, كمان متوسط, بيانو",
+      "index": 4795,
+      "subject_en": "Mike Shinoda",
+      "object_en": "piano"
+    },
+    {
+      "subject": "إريك كلابتون",
+      "object": "قيثارة",
+      "object_candidates": "هارمونيكا, بيانو, كمان متوسط, كلارينيت, كمان, قيثارة",
+      "index": 4796,
+      "subject_en": "Eric Clapton",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "فرانز ليست",
+      "object": "بيانو",
+      "object_candidates": "كمان, كلارينيت, قيثارة, كمان متوسط, هارمونيكا, بيانو",
+      "index": 4797,
+      "subject_en": "Franz Liszt",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ستيفي وندر",
+      "object": "هارمونيكا",
+      "object_candidates": "قيثارة, كمان متوسط, بيانو, كمان, كلارينيت, هارمونيكا",
+      "index": 4798,
+      "subject_en": "Stevie Wonder",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "جاريد ليتو",
+      "object": "كمان",
+      "object_candidates": "هارمونيكا, كمان متوسط, قيثارة, كلارينيت, بيانو, كمان",
+      "index": 4799,
+      "subject_en": "Jared Leto",
+      "object_en": "violin"
+    },
+    {
+      "subject": "يوهانس برامس",
+      "object": "بيانو",
+      "object_candidates": "كمان متوسط, هارمونيكا, كلارينيت, قيثارة, كمان, بيانو",
+      "index": 4800,
+      "subject_en": "Johannes Brahms",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ري تشارلز",
+      "object": "بيانو",
+      "object_candidates": "كمان, كلارينيت, هارمونيكا, قيثارة, كمان متوسط, بيانو",
+      "index": 4801,
+      "subject_en": "Ray Charles",
+      "object_en": "piano"
+    },
+    {
+      "subject": "برايان ماي",
+      "object": "قيثارة",
+      "object_candidates": "كمان, بيانو, كمان متوسط, هارمونيكا, كلارينيت, قيثارة",
+      "index": 4802,
+      "subject_en": "Brian May",
+      "object_en": "guitar"
+    }
+  ],
+  "relation_id": "P1303"
+}

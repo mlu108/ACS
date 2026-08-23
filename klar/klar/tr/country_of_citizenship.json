@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "<subject> hangi ülkenin vatandaşıdır? Cevap: <mask>",
+    "<subject> hangi ulusun üyesidir? Cevap: <mask>",
+    "<subject> hangi ülkenin vatandaşıdır? Cevap: <mask>",
+    "<subject> nerede vatandaştır? Cevap: <mask>",
+    "<subject> hangi ulus <subject> vatandaşlığını verir? Cevap: <mask>",
+    " <subject>’in vatandaşlığı <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Boris Spassky",
+      "object": "Fransa",
+      "object_candidates": "İrlanda, Avustralya, Katar, Lübnan, Kürdistan, İsviçre, Bulgaristan, Hindistan, Arjantin, Fransa",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ada E. Yonath",
+      "object": "İsrail",
+      "object_candidates": "Brezilya, Avustralya, Katar, Lübnan, İsveç, Japonya, Yunanistan, Vietnam, Norveç, İsrail",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Lionel Messi",
+      "object": "Arjantin",
+      "object_candidates": "Japonya, İrlanda, Danimarka, Almanya, İsveç, Lübnan, Bulgaristan, Yunanistan, İsrail, Arjantin",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "II. Carlos",
+      "object": "İspanya",
+      "object_candidates": "Vietnam, Kanada, Norveç, İsviçre, İsrail, Danimarka, İsveç, Avusturya, Arjantin, İspanya",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Adriano Celentano",
+      "object": "İtalya",
+      "object_candidates": "Vietnam, Avusturya, Almanya, Kürdistan, Danimarka, Frankfurt am Main, Yunanistan, İsrail, Norveç, İtalya",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Georgi Parvanov",
+      "object": "Bulgaristan",
+      "object_candidates": "Avustralya, Yunanistan, İtalya, Brezilya, Katar, İsrail, Vietnam, Almanya, İngiltere Krallığı, Bulgaristan",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Dilma Rousseff",
+      "object": "Brezilya",
+      "object_candidates": "İrlanda, Frankfurt am Main, Kürdistan, Kanada, Danimarka, İsviçre, Japonya, İspanya, Avustralya, Brezilya",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Ronaldo",
+      "object": "Brezilya",
+      "object_candidates": "Lübnan, İsviçre, İtalya, Almanya, Kanada, Danimarka, İngiltere Krallığı, Arjantin, Avusturya, Brezilya",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Trajan",
+      "object": "İspanya",
+      "object_candidates": "Katar, İsviçre, Danimarka, Norveç, Brezilya, Kürdistan, Vietnam, İngiltere Krallığı, Arjantin, İspanya",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Ronaldinho",
+      "object": "Brezilya",
+      "object_candidates": "İsviçre, Japonya, İsrail, Bulgaristan, Vietnam, İsveç, Kanada, İspanya, Lübnan, Brezilya",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Scott Morrison",
+      "object": "Avustralya",
+      "object_candidates": "Almanya, İrlanda, Frankfurt am Main, Polonya, Kanada, Avusturya, Japonya, İsveç, İtalya, Avustralya",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Ho Chi Minh",
+      "object": "Vietnam",
+      "object_candidates": "Hindistan, Japonya, İsrail, Arjantin, İsveç, Fransa, Katar, Yunanistan, Polonya, Vietnam",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Alain Robert",
+      "object": "Fransa",
+      "object_candidates": "Arjantin, Frankfurt am Main, Yunanistan, Vietnam, İsrail, İrlanda, Polonya, Kürdistan, Norveç, Fransa",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ferdinand de Saussure",
+      "object": "İsviçre",
+      "object_candidates": "Hindistan, Arjantin, Kürdistan, Brezilya, Kanada, Katar, Avusturya, Japonya, Polonya, İsviçre",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Auguste Rodin",
+      "object": "Fransa",
+      "object_candidates": "İspanya, Frankfurt am Main, İtalya, İsrail, Hindistan, Arjantin, Bulgaristan, Brezilya, Avusturya, Fransa",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Friedrich Wilhelm Bessel",
+      "object": "Almanya",
+      "object_candidates": "Katar, İngiltere Krallığı, Japonya, Lübnan, Arjantin, İtalya, Bulgaristan, Avusturya, Brezilya, Almanya",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "Frankfurt am Main",
+      "object_candidates": "İsveç, İrlanda, Arjantin, Lübnan, Bulgaristan, İsrail, İtalya, Yunanistan, Japonya, Frankfurt am Main",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Massimo D'Alema",
+      "object": "İtalya",
+      "object_candidates": "Lübnan, Hindistan, İsveç, Fransa, İspanya, Avustralya, Polonya, Danimarka, Vietnam, İtalya",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Rudolf Hess",
+      "object": "Almanya",
+      "object_candidates": "Polonya, Avustralya, İtalya, Fransa, Vietnam, Arjantin, Kürdistan, Brezilya, Danimarka, Almanya",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "V. Henry",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Bulgaristan, Almanya, İsrail, İrlanda, İsveç, Vietnam, Brezilya, Kanada, İsviçre, İngiltere Krallığı",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Michel Houellebecq",
+      "object": "Fransa",
+      "object_candidates": "İsviçre, Hindistan, Danimarka, İspanya, Japonya, Norveç, Polonya, Brezilya, Avusturya, Fransa",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Masaccio",
+      "object": "İtalya",
+      "object_candidates": "Danimarka, İngiltere Krallığı, Frankfurt am Main, Brezilya, Bulgaristan, Fransa, Kanada, Avustralya, Yunanistan, İtalya",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "France Gall",
+      "object": "Fransa",
+      "object_candidates": "Kanada, İngiltere Krallığı, Vietnam, Avusturya, İtalya, İsrail, Frankfurt am Main, Hindistan, Yunanistan, Fransa",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Rafael Alberti",
+      "object": "İspanya",
+      "object_candidates": "Avusturya, Bulgaristan, Lübnan, Norveç, İtalya, Vietnam, İsrail, Polonya, Avustralya, İspanya",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Bernardo Houssay",
+      "object": "Arjantin",
+      "object_candidates": "Katar, Almanya, İsrail, Kanada, İngiltere Krallığı, İsviçre, Vietnam, Kürdistan, Bulgaristan, Arjantin",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Kiichi Miyazawa",
+      "object": "Japonya",
+      "object_candidates": "Brezilya, Norveç, Fransa, Hindistan, Bulgaristan, Katar, İsveç, İsrail, İngiltere Krallığı, Japonya",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "I. Oscar",
+      "object": "İsveç",
+      "object_candidates": "Fransa, İsviçre, Danimarka, Hindistan, İspanya, Almanya, Polonya, Katar, İsrail, İsveç",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Carl Bosch",
+      "object": "Almanya",
+      "object_candidates": "Kürdistan, Arjantin, İspanya, İsveç, İsrail, Fransa, İsviçre, Frankfurt am Main, İrlanda, Almanya",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Jiddu Krishnamurti",
+      "object": "Hindistan",
+      "object_candidates": "Katar, İtalya, Norveç, Almanya, İngiltere Krallığı, Yunanistan, İrlanda, Kürdistan, Lübnan, Hindistan",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "I. Elizabeth",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Fransa, Hindistan, Polonya, İspanya, Kanada, Arjantin, Avusturya, Danimarka, İsveç, İngiltere Krallığı",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Emmanuelle Seigner",
+      "object": "Fransa",
+      "object_candidates": "Katar, Frankfurt am Main, Lübnan, İtalya, Hindistan, Kürdistan, Bulgaristan, Polonya, Avustralya, Fransa",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Grzegorz Lato",
+      "object": "Polonya",
+      "object_candidates": "Fransa, İtalya, Avustralya, İrlanda, Bulgaristan, Almanya, Japonya, İspanya, Yunanistan, Polonya",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Kurt Waldheim",
+      "object": "Avusturya",
+      "object_candidates": "İsrail, Vietnam, İspanya, İsviçre, Kürdistan, Arjantin, Avustralya, Frankfurt am Main, İrlanda, Avusturya",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Margaret Atwood",
+      "object": "Kanada",
+      "object_candidates": "Arjantin, Norveç, Brezilya, Almanya, Lübnan, Avustralya, Danimarka, Bulgaristan, Kürdistan, Kanada",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Enzo Ferrari",
+      "object": "İtalya",
+      "object_candidates": "Hindistan, Lübnan, İspanya, Avusturya, Arjantin, İrlanda, Kanada, İsrail, Brezilya, İtalya",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Bourvil",
+      "object": "Fransa",
+      "object_candidates": "Hindistan, Norveç, Arjantin, Avustralya, Japonya, Frankfurt am Main, İngiltere Krallığı, İsrail, İspanya, Fransa",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Wolfgang Pauli",
+      "object": "Avusturya",
+      "object_candidates": "Kanada, Vietnam, Danimarka, İrlanda, İsveç, Yunanistan, Polonya, Japonya, Kürdistan, Avusturya",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "VI. Charles",
+      "object": "Fransa",
+      "object_candidates": "Polonya, Avusturya, Almanya, Danimarka, Bulgaristan, Hindistan, Kanada, İspanya, İrlanda, Fransa",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Mişel Avn",
+      "object": "Lübnan",
+      "object_candidates": "Vietnam, Danimarka, Arjantin, İrlanda, Japonya, Frankfurt am Main, Brezilya, Polonya, İtalya, Lübnan",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Magnus Carlsen",
+      "object": "Norveç",
+      "object_candidates": "Frankfurt am Main, İspanya, Fransa, Kürdistan, Avustralya, Hindistan, Arjantin, Lübnan, Yunanistan, Norveç",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Henryk Sienkiewicz",
+      "object": "Polonya",
+      "object_candidates": "Lübnan, Brezilya, İsrail, İspanya, Katar, Japonya, Fransa, Danimarka, Kanada, Polonya",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Arthur Tudor",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Arjantin, Katar, İspanya, İrlanda, Norveç, Polonya, İtalya, İsveç, Kürdistan, İngiltere Krallığı",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "II. James",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Norveç, İsviçre, Bulgaristan, İsveç, Vietnam, Hindistan, Yunanistan, Brezilya, İspanya, İngiltere Krallığı",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Hamad bin Halife es-Sani",
+      "object": "Katar",
+      "object_candidates": "İspanya, Bulgaristan, İtalya, İsveç, Hindistan, Polonya, Frankfurt am Main, İsviçre, Japonya, Katar",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Francisco Goya",
+      "object": "İspanya",
+      "object_candidates": "İtalya, Fransa, Polonya, Kanada, İsrail, Avustralya, Lübnan, Yunanistan, Brezilya, İspanya",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Celal Talabani",
+      "object": "Kürdistan",
+      "object_candidates": "İrlanda, İngiltere Krallığı, İtalya, Polonya, Fransa, Frankfurt am Main, Katar, Yunanistan, Bulgaristan, Kürdistan",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Floriano Peixoto",
+      "object": "Brezilya",
+      "object_candidates": "Frankfurt am Main, Polonya, İsveç, İtalya, Kürdistan, Norveç, Avusturya, Fransa, İsviçre, Brezilya",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Antonis Samaras",
+      "object": "Yunanistan",
+      "object_candidates": "İngiltere Krallığı, Avustralya, Danimarka, Katar, Hindistan, İtalya, Fransa, Arjantin, Lübnan, Yunanistan",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Beppe Grillo",
+      "object": "İtalya",
+      "object_candidates": "İngiltere Krallığı, Hindistan, İspanya, Yunanistan, İsrail, Avustralya, Frankfurt am Main, Fransa, Lübnan, İtalya",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "IX. Frederik",
+      "object": "Danimarka",
+      "object_candidates": "Katar, Avusturya, Kanada, Fransa, Norveç, Frankfurt am Main, İsveç, Avustralya, Brezilya, Danimarka",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Michael Fassbender",
+      "object": "İrlanda",
+      "object_candidates": "Kanada, İspanya, Katar, Brezilya, Avusturya, Kürdistan, Almanya, Fransa, Bulgaristan, İrlanda",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Alexandra (Danimarka prensesi)",
+      "object": "Danimarka",
+      "object_candidates": "Avusturya, İsveç, Arjantin, İsviçre, İsrail, Avustralya, Brezilya, Polonya, İngiltere Krallığı, Danimarka",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Miguel Hidalgo y Costilla",
+      "object": "İspanya",
+      "object_candidates": "İsrail, İsviçre, Frankfurt am Main, Norveç, İrlanda, İngiltere Krallığı, İtalya, Arjantin, Avustralya, İspanya",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Edmund Husserl",
+      "object": "Almanya",
+      "object_candidates": "İtalya, Lübnan, Hindistan, İsveç, Polonya, Avusturya, Fransa, Kürdistan, Vietnam, Almanya",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Lise Meitner",
+      "object": "İsveç",
+      "object_candidates": "İspanya, Katar, İsviçre, Avusturya, Lübnan, Kanada, Avustralya, Fransa, Polonya, İsveç",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "II. Albert",
+      "object": "Belçika",
+      "object_candidates": "Polonya, İsveç, İtalya, Katar, Yunanistan, Norveç, Vietnam, İsviçre, İspanya, Belçika",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "100 Mahavira",
+      "object": "Hindistan",
+      "object_candidates": "Arjantin, Almanya, Vietnam, İtalya, Polonya, Avustralya, Kanada, Kürdistan, Brezilya, Hindistan",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Svante Arrhenius",
+      "object": "İsveç",
+      "object_candidates": "Avusturya, Almanya, İsrail, Brezilya, Norveç, Katar, Avustralya, Yunanistan, Fransa, İsveç",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Mario Monti",
+      "object": "İtalya",
+      "object_candidates": "İspanya, Danimarka, Hindistan, Almanya, Fransa, İrlanda, Bulgaristan, Katar, İngiltere Krallığı, İtalya",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Pierre Janssen",
+      "object": "Fransa",
+      "object_candidates": "Hindistan, İsrail, İspanya, İrlanda, Lübnan, Polonya, İsviçre, Danimarka, İsveç, Fransa",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

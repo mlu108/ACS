@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "Кто владеет <subject> Ответ: <mask>",
+    "Какая компания или человек владеет <subject> Ответ: <mask>",
+    "Кто является текущим владельцем <subject> Ответ: <mask>",
+    "Кому принадлежит <subject> Ответ: <mask>",
+    "Какая сущность владеет <subject> Ответ: <mask>",
+    " Владелец <subject> — это <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Берлин, Париж, Toyota, Sony, Милан, Франция, Би-би-си, Польша, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Ламборгини",
+      "object": "Audi",
+      "object_candidates": "Париж, Yahoo!, Генуя, Милан, Amazon, Польша, Майкрософт, Toyota, Франция, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Эйфелева башня",
+      "object": "Париж",
+      "object_candidates": "Львов, Катар, Yahoo!, Милан, Франция, Майкрософт, Sony, Польша, Турин, Париж",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Германия",
+      "object_candidates": "Турин, Sony, Париж, Берлин, Генуя, Польша, Катар, Toyota, Чикаго, Германия",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Поиск Google",
+      "object": "Google",
+      "object_candidates": "Турин, Sony, Германия, Генуя, Польша, Катар, Yahoo!, Чикаго, Милан, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Львов, Google, Франция, Чикаго, Би-би-си, Палермо, Польша, Генуя, Германия, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "Чикаго, Милан, Львов, Париж, Неаполь, Франция, Германия, Турин, Би-би-си, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "компакт-диск",
+      "object": "Sony",
+      "object_candidates": "Toyota, Львов, Би-би-си, Милан, Google, Yahoo!, Неаполь, Генуя, Париж, Sony",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Международный аэропорт О’Хара",
+      "object": "Чикаго",
+      "object_candidates": "Би-би-си, Генуя, Франция, Катар, Audi, Toyota, Амстердам, Amazon, Львов, Чикаго",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "Би-би-си",
+      "object_candidates": "Франция, Львов, Генуя, Audi, Yahoo!, Неаполь, Палермо, Париж, Амстердам, Би-би-си",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony",
+      "object_candidates": "Турин, Google, Yahoo!, Amazon, Львов, Майкрософт, Audi, Toyota, Германия, Sony",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures Entertainment",
+      "object": "Sony",
+      "object_candidates": "Германия, Чикаго, Майкрософт, Неаполь, Львов, Amazon, Audi, Би-би-си, Катар, Sony",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Audi, Неаполь, Париж, Sony, Львов, Toyota, Палермо, Катар, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Карты Google",
+      "object": "Google",
+      "object_candidates": "Sony, Палермо, Франция, Турин, Неаполь, Милан, Toyota, Берлин, Львов, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "Sony",
+      "object_candidates": "Катар, Генуя, Google, Турин, Париж, Милан, Би-би-си, Toyota, Майкрософт, Sony",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Парк де Пренс",
+      "object": "Париж",
+      "object_candidates": "Львов, Польша, Toyota, Германия, Берлин, Yahoo!, Би-би-си, Майкрософт, Google, Париж",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google",
+      "object_candidates": "Audi, Майкрософт, Амстердам, Неаполь, Берлин, Sony, Палермо, Львов, Польша, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Проигрыватель Windows Media",
+      "object": "Майкрософт",
+      "object_candidates": "Берлин, Чикаго, Милан, Yahoo!, Париж, Toyota, Google, Sony, Турин, Майкрософт",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Джузеппе Меацца",
+      "object": "Милан",
+      "object_candidates": "Генуя, Sony, Германия, Amazon, Катар, Польша, Париж, Audi, Чикаго, Милан",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon",
+      "object_candidates": "Франция, Чикаго, Audi, Польша, Париж, Google, Sony, Катар, Палермо, Amazon",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "AdSense",
+      "object": "Google",
+      "object_candidates": "Неаполь, Польша, Палермо, Audi, Майкрософт, Львов, Амстердам, Катар, Генуя, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "Amazon",
+      "object_candidates": "Милан, Неаполь, Франция, Германия, Амстердам, Львов, Майкрософт, Генуя, Палермо, Amazon",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Ренцо Барбера",
+      "object": "Палермо",
+      "object_candidates": "Sony, Катар, Германия, Амстердам, Франция, Audi, Google, Берлин, Би-би-си, Палермо",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Чикаго, Германия, Би-би-си, Майкрософт, Катар, Франция, Турин, Польша, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "Польша, Милан, Майкрософт, Палермо, Франция, Амстердам, Генуя, Львов, Би-би-си, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Планета Земля",
+      "object": "Google",
+      "object_candidates": "Амстердам, Майкрософт, Yahoo!, Amazon, Toyota, Audi, Чикаго, Львов, Генуя, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "Париж, Берлин, Майкрософт, Германия, Sony, Би-би-си, Неаполь, Франция, Генуя, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Триумфальная арка",
+      "object": "Франция",
+      "object_candidates": "Неаполь, Audi, Амстердам, Берлин, Катар, Google, Париж, Германия, Майкрософт, Франция",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Дворец Фонтенбло",
+      "object": "Франция",
+      "object_candidates": "Toyota, Sony, Амстердам, Amazon, Польша, Милан, Палермо, Audi, Генуя, Франция",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Генуя, Audi, Amazon, Sony, Париж, Катар, Польша, Львов, Берлин, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Books",
+      "object": "Google",
+      "object_candidates": "Германия, Милан, Audi, Yahoo!, Катар, Турин, Неаполь, Sony, Париж, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Олимпийский стадион",
+      "object": "Турин",
+      "object_candidates": "Google, Амстердам, Франция, Милан, Генуя, Майкрософт, Берлин, Палермо, Sony, Турин",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Катар",
+      "object_candidates": "Yahoo!, Милан, Amazon, Франция, Париж, Неаполь, Toyota, Sony, Львов, Катар",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Ночной дозор",
+      "object": "Амстердам",
+      "object_candidates": "Милан, Львов, Audi, Франция, Турин, Би-би-си, Toyota, Неаполь, Польша, Амстердам",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Sony, Toyota, Польша, Audi, Париж, Львов, Майкрософт, Amazon, Милан, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Олимпийский стадион (Берлин)",
+      "object": "Берлин",
+      "object_candidates": "Катар, Париж, Милан, Майкрософт, Амстердам, Би-би-си, Чикаго, Audi, Турин, Берлин",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT",
+      "object": "Польша",
+      "object_candidates": "Львов, Париж, Чикаго, Amazon, Yahoo!, Амстердам, Google, Sony, Германия, Польша",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Луиджи Феррарис",
+      "object": "Генуя",
+      "object_candidates": "Катар, Sony, Майкрософт, Польша, Берлин, Неаполь, Германия, Toyota, Би-би-си, Генуя",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Google Переводчик",
+      "object": "Google",
+      "object_candidates": "Неаполь, Катар, Амстердам, Польша, Yahoo!, Майкрософт, Чикаго, Милан, Франция, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "The Shard",
+      "object": "Катар",
+      "object_candidates": "Львов, Амстердам, Неаполь, Amazon, Sony, Генуя, Би-би-си, Майкрософт, Чикаго, Катар",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Стад де Франс",
+      "object": "Франция",
+      "object_candidates": "Генуя, Львов, Yahoo!, Toyota, Google, Майкрософт, Турин, Чикаго, Amazon, Франция",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Арена Львов",
+      "object": "Львов",
+      "object_candidates": "Неаполь, Amazon, Чикаго, Турин, Франция, Германия, Audi, Toyota, Катар, Львов",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Майкрософт",
+      "object_candidates": "Toyota, Катар, Чикаго, Неаполь, Палермо, Sony, Амстердам, Audi, Париж, Майкрософт",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, Майкрософт, Польша, Милан, Турин, Германия, Генуя, Чикаго, Амстердам, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Сан-Паоло",
+      "object": "Неаполь",
+      "object_candidates": "Берлин, Майкрософт, Google, Генуя, Амстердам, Yahoo!, Париж, Палермо, Львов, Неаполь",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Делле Альпи",
+      "object": "Турин",
+      "object_candidates": "Toyota, Sony, Львов, Германия, Google, Амстердам, Чикаго, Париж, Yahoo!, Турин",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Дубай",
+      "object": "Дубай",
+      "object_candidates": "Yahoo!, Генуя, Катар, Amazon, Палермо, Google, Би-би-си, Турин, Париж, Дубай",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google",
+      "object_candidates": "Майкрософт, Турин, Генуя, Польша, Палермо, Audi, Париж, Toyota, Чикаго, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Мона Лиза",
+      "object": "Франция",
+      "object_candidates": "Париж, Турин, Майкрософт, Милан, Yahoo!, Палермо, Неаполь, Берлин, Генуя, Франция",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon",
+      "object_candidates": "Катар, Toyota, Yahoo!, Амстердам, Германия, Audi, Франция, Майкрософт, Генуя, Amazon",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

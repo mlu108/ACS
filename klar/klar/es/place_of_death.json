@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "¿Dónde murió <subject>? La respuesta es: <mask>",
+    "¿En qué ciudad falleció <subject>? La respuesta es: <mask>",
+    "¿Cuál fue el lugar de muerte de <subject>? La respuesta es: <mask>",
+    "¿Cuál fue la ubicación de la muerte de <subject>? La respuesta es: <mask>",
+    "¿Qué lugar marca la muerte de <subject>? La respuesta es: <mask>",
+    " El lugar donde falleció <subject> es <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Miguel Ángel",
+      "object": "Roma",
+      "object_candidates": "Praga, Varsovia, Surrey, Florencia, Belgrado, Estambul, Lyon, Helsinki, Cartago, Roma",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Coco Chanel",
+      "object": "París",
+      "object_candidates": "Surrey, Roma, Medina, Londres, Tokio, Damasco, Estocolmo, Varsovia, Belgrado, París",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Clemente XIV",
+      "object": "Roma",
+      "object_candidates": "Núremberg, Lyon, Helsinki, Kabul, Madison, Londres, París, El Cairo, Moscú, Roma",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Umar ibn al-Jattab",
+      "object": "Medina",
+      "object_candidates": "Moscú, Belgrado, Cartago, Varsovia, Surrey, Estocolmo, Florencia, Venecia, Londres, Medina",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Clemente III",
+      "object": "Roma",
+      "object_candidates": "Estocolmo, Medina, Londres, Bagdad, Varsovia, Belgrado, Venecia, Damasco, Surrey, Roma",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Balbino",
+      "object": "Roma",
+      "object_candidates": "Estambul, Estocolmo, Praga, Berlín, El Cairo, Madrid, Kabul, Núremberg, Madison, Roma",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Hrant Dink",
+      "object": "Estambul",
+      "object_candidates": "Jerusalén, Tokio, Moscú, Helsinki, Roma, Londres, Kabul, Florencia, Madrid, Estambul",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Nicéforo III",
+      "object": "Constantinopla",
+      "object_candidates": "Taipéi, Moscú, Estocolmo, Atenas, Kabul, Núremberg, Damasco, París, Surrey, Constantinopla",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Johann Pachelbel",
+      "object": "Núremberg",
+      "object_candidates": "Detroit, Atenas, Madrid, Tokio, Belgrado, Kabul, Roma, Praga, Moscú, Núremberg",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "Vaslav Nijinsky",
+      "object": "Londres",
+      "object_candidates": "Roma, Tokio, Madison, Estambul, Medina, Constantinopla, Venecia, Surrey, Bagdad, Londres",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "León X",
+      "object": "Roma",
+      "object_candidates": "Belgrado, Cartago, Surrey, El Cairo, Madison, París, Jerusalén, Venecia, Taipéi, Roma",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Donatello",
+      "object": "Florencia",
+      "object_candidates": "Detroit, Estocolmo, Atenas, Varsovia, Kabul, Bagdad, Londres, Jerusalén, Medina, Florencia",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Chiang Ching-kuo",
+      "object": "Taipéi",
+      "object_candidates": "Bagdad, Damasco, Atenas, Berlín, Helsinki, Lyon, Detroit, Núremberg, Madrid, Taipéi",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Robert Hooke",
+      "object": "Londres",
+      "object_candidates": "Estambul, El Cairo, Constantinopla, Berlín, Tokio, Madrid, Surrey, Lyon, Taipéi, Londres",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "Rosa Parks",
+      "object": "Detroit",
+      "object_candidates": "París, Estambul, Madrid, Bagdad, Berlín, Estocolmo, Madison, El Cairo, Atenas, Detroit",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Juan VIII Paleólogo",
+      "object": "Constantinopla",
+      "object_candidates": "Estocolmo, Varsovia, Moscú, Atenas, Bagdad, Taipéi, El Cairo, Florencia, Estambul, Constantinopla",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "John Dee",
+      "object": "Surrey",
+      "object_candidates": "Roma, Varsovia, Bagdad, Constantinopla, Tokio, Florencia, Lyon, Detroit, Praga, Surrey",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "Fernandel",
+      "object": "París",
+      "object_candidates": "Varsovia, Surrey, El Cairo, Atenas, Jerusalén, Praga, Venecia, Lyon, Helsinki, París",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Miguel II",
+      "object": "Constantinopla",
+      "object_candidates": "Varsovia, Estambul, Tokio, Núremberg, Moscú, El Cairo, Venecia, Lyon, Surrey, Constantinopla",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Karl Liebknecht",
+      "object": "Berlín",
+      "object_candidates": "Helsinki, El Cairo, Taipéi, Londres, París, Varsovia, Estambul, Madrid, Damasco, Berlín",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Richard Wagner",
+      "object": "Venecia",
+      "object_candidates": "Moscú, Belgrado, Jerusalén, Varsovia, Surrey, París, Detroit, Bagdad, Damasco, Venecia",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Antístenes",
+      "object": "Atenas",
+      "object_candidates": "Moscú, El Cairo, Medina, Constantinopla, Helsinki, Surrey, Kabul, París, Florencia, Atenas",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Max Ernst",
+      "object": "París",
+      "object_candidates": "Londres, Estocolmo, Tokio, Núremberg, Roma, Atenas, Venecia, Moscú, Belgrado, París",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Martin Buber",
+      "object": "Jerusalén",
+      "object_candidates": "Kabul, Bagdad, Estocolmo, Moscú, Estambul, Surrey, Lyon, Núremberg, Belgrado, Jerusalén",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Joseph Goebbels",
+      "object": "Berlín",
+      "object_candidates": "Londres, Cartago, Praga, Atenas, Constantinopla, Medina, Roma, Kabul, Madison, Berlín",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Montesquieu",
+      "object": "París",
+      "object_candidates": "Estocolmo, Kabul, El Cairo, Bagdad, Núremberg, Constantinopla, Damasco, Medina, Lyon, París",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Nicolás V",
+      "object": "Roma",
+      "object_candidates": "Moscú, Surrey, Lyon, Detroit, Núremberg, Bagdad, El Cairo, Madison, Damasco, Roma",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Charlotte Corday",
+      "object": "París",
+      "object_candidates": "Bagdad, Varsovia, Jerusalén, Kabul, Estambul, El Cairo, Tokio, Medina, Taipéi, París",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Mohammed Zahir Shah",
+      "object": "Kabul",
+      "object_candidates": "Medina, Jerusalén, Damasco, Venecia, Madison, Detroit, Moscú, Florencia, Surrey, Kabul",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Inocencio XI",
+      "object": "Roma",
+      "object_candidates": "Londres, Berlín, El Cairo, Venecia, Damasco, Madison, Cartago, Florencia, Atenas, Roma",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Gordiano II",
+      "object": "Cartago",
+      "object_candidates": "Madison, Lyon, Praga, Roma, Belgrado, Jerusalén, Bagdad, Damasco, Detroit, Cartago",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "Mstislav Rostropóvich",
+      "object": "Moscú",
+      "object_candidates": "Lyon, Estambul, Atenas, Núremberg, Madison, Berlín, Madrid, Tokio, Medina, Moscú",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Pío III",
+      "object": "Roma",
+      "object_candidates": "Estambul, Londres, Praga, Lyon, París, Varsovia, Belgrado, Kabul, Madrid, Roma",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Abdul Karim Qásim",
+      "object": "Bagdad",
+      "object_candidates": "Tokio, Roma, Florencia, Londres, París, El Cairo, Taipéi, Lyon, Damasco, Bagdad",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Gregorio XVI",
+      "object": "Roma",
+      "object_candidates": "Constantinopla, Varsovia, Taipéi, Bagdad, Kabul, Londres, Madrid, Cartago, Damasco, Roma",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Aram Jachaturián",
+      "object": "Moscú",
+      "object_candidates": "Jerusalén, Bagdad, Núremberg, Atenas, Londres, Helsinki, Detroit, Tokio, Cartago, Moscú",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Heinrich von Kleist",
+      "object": "Berlín",
+      "object_candidates": "Roma, Londres, Moscú, Lyon, Bagdad, Kabul, Florencia, Varsovia, Surrey, Berlín",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Abd-ul-Hamid I",
+      "object": "Constantinopla",
+      "object_candidates": "Estambul, Kabul, Venecia, El Cairo, Medina, Tokio, Detroit, Belgrado, París, Constantinopla",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Alejandro VIII",
+      "object": "Roma",
+      "object_candidates": "Lyon, Taipéi, Cartago, Madison, Estambul, Varsovia, Constantinopla, Londres, Madrid, Roma",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Johann Christian Bach",
+      "object": "Londres",
+      "object_candidates": "Atenas, Berlín, París, Kabul, Helsinki, Jerusalén, Damasco, Madrid, Lyon, Londres",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "Samuel Johnson",
+      "object": "Londres",
+      "object_candidates": "Cartago, Estambul, Medina, Estocolmo, Berlín, Varsovia, Moscú, El Cairo, Atenas, Londres",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "Jacques Cousteau",
+      "object": "París",
+      "object_candidates": "Atenas, Berlín, Venecia, Belgrado, Núremberg, Roma, Constantinopla, Jerusalén, Bagdad, París",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Sofia Kovalévskaya",
+      "object": "Estocolmo",
+      "object_candidates": "París, Helsinki, Berlín, Madison, Atenas, Florencia, Detroit, Praga, Kabul, Estocolmo",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Georg Wilhelm Friedrich Hegel",
+      "object": "Berlín",
+      "object_candidates": "Atenas, Madison, Kabul, Madrid, Bagdad, Praga, Estocolmo, Estambul, Medina, Berlín",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Sandro Botticelli",
+      "object": "Florencia",
+      "object_candidates": "Belgrado, Medina, Estambul, Madison, Núremberg, Detroit, Estocolmo, Kabul, Jerusalén, Florencia",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Samuel Taylor Coleridge",
+      "object": "Londres",
+      "object_candidates": "Estocolmo, Varsovia, Medina, Detroit, Jerusalén, Belgrado, Lyon, Moscú, Cartago, Londres",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ibn Jaldún",
+      "object": "El Cairo",
+      "object_candidates": "Lyon, Berlín, Núremberg, Jerusalén, Venecia, Moscú, Estambul, Taipéi, Damasco, El Cairo",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Enrique IV de Inglaterra",
+      "object": "Londres",
+      "object_candidates": "Estambul, Atenas, El Cairo, Roma, Núremberg, Damasco, Madrid, Venecia, Berlín, Londres",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Tomaso Albinoni",
+      "object": "Venecia",
+      "object_candidates": "París, Jerusalén, Medina, Lyon, Florencia, Detroit, Helsinki, Belgrado, Taipéi, Venecia",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Paavo Nurmi",
+      "object": "Helsinki",
+      "object_candidates": "Taipéi, Surrey, Estocolmo, Florencia, Kabul, París, Londres, Belgrado, Lyon, Helsinki",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Clemente de Roma",
+      "object": "Roma",
+      "object_candidates": "Londres, Bagdad, Helsinki, Estambul, Belgrado, París, Cartago, Constantinopla, Varsovia, Roma",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Luis XVII de Francia",
+      "object": "París",
+      "object_candidates": "Madrid, Venecia, Constantinopla, Estocolmo, Moscú, Florencia, Medina, Damasco, Núremberg, París",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Kishō Kurokawa",
+      "object": "Tokio",
+      "object_candidates": "Florencia, Atenas, Cartago, Moscú, Varsovia, El Cairo, Venecia, París, Roma, Tokio",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Maximilien Robespierre",
+      "object": "París",
+      "object_candidates": "Florencia, Moscú, Medina, Damasco, Roma, Tokio, Núremberg, Estocolmo, Bagdad, París",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Giorgione",
+      "object": "Venecia",
+      "object_candidates": "París, Roma, Atenas, Moscú, Helsinki, Londres, Constantinopla, Medina, Lyon, Venecia",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Pedro I de Serbia",
+      "object": "Belgrado",
+      "object_candidates": "Tokio, Bagdad, Londres, París, Taipéi, Kabul, Helsinki, Atenas, Núremberg, Belgrado",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "L. L. Zamenhof",
+      "object": "Varsovia",
+      "object_candidates": "Londres, Núremberg, Atenas, Belgrado, Lyon, Helsinki, Bagdad, Constantinopla, París, Varsovia",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Ibrahim bajá",
+      "object": "El Cairo",
+      "object_candidates": "París, Madison, Surrey, Praga, Belgrado, Varsovia, Atenas, Damasco, Estambul, El Cairo",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Clemente XII",
+      "object": "Roma",
+      "object_candidates": "Berlín, Estambul, El Cairo, Tokio, Constantinopla, Belgrado, Taipéi, Kabul, París, Roma",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ireneo de Lyon",
+      "object": "Lyon",
+      "object_candidates": "Detroit, Helsinki, Surrey, Medina, Núremberg, Londres, Florencia, Constantinopla, Moscú, Lyon",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "Jacques Derrida",
+      "object": "París",
+      "object_candidates": "Cartago, Berlín, Detroit, Atenas, Roma, Belgrado, Damasco, El Cairo, Lyon, París",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Carlos IV de España",
+      "object": "Roma",
+      "object_candidates": "Praga, Madrid, Atenas, Venecia, Varsovia, Tokio, Helsinki, Moscú, Jerusalén, Roma",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ralph Vaughan Williams",
+      "object": "Londres",
+      "object_candidates": "Roma, Madrid, Atenas, Berlín, Medina, París, Detroit, Lyon, El Cairo, Londres",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "Andréi Gromyko",
+      "object": "Moscú",
+      "object_candidates": "Madrid, Taipéi, Detroit, Atenas, Venecia, Damasco, Cartago, Londres, Núremberg, Moscú",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Ulrica Leonor de Suecia",
+      "object": "Estocolmo",
+      "object_candidates": "Atenas, Taipéi, Surrey, Varsovia, Jerusalén, Florencia, Madrid, Damasco, París, Estocolmo",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Otis Redding",
+      "object": "Madison",
+      "object_candidates": "París, Venecia, Roma, Cartago, Florencia, Estambul, Kabul, Bagdad, Estocolmo, Madison",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Henri Rousseau",
+      "object": "París",
+      "object_candidates": "Surrey, Florencia, Cartago, Helsinki, Venecia, Bagdad, Núremberg, Damasco, Belgrado, París",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Muawiya ibn Abi Sufyan",
+      "object": "Damasco",
+      "object_candidates": "Estocolmo, Tokio, Detroit, Constantinopla, Madison, Madrid, Surrey, Praga, París, Damasco",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Louis Aragon",
+      "object": "París",
+      "object_candidates": "El Cairo, Madrid, Medina, Surrey, Jerusalén, Varsovia, Madison, Bagdad, Damasco, París",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Baibars",
+      "object": "Damasco",
+      "object_candidates": "Moscú, Surrey, París, Jerusalén, Londres, Medina, Atenas, Madrid, Belgrado, Damasco",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Claus von Stauffenberg",
+      "object": "Berlín",
+      "object_candidates": "Londres, Praga, Varsovia, Kabul, París, Lyon, Taipéi, Belgrado, Detroit, Berlín",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Donato d'Angelo Bramante",
+      "object": "Roma",
+      "object_candidates": "Jerusalén, Helsinki, Lyon, Estocolmo, Berlín, Moscú, Kabul, Bagdad, Varsovia, Roma",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Francisco Franco",
+      "object": "Madrid",
+      "object_candidates": "Roma, Lyon, Atenas, Moscú, Jerusalén, Praga, Constantinopla, Berlín, Detroit, Madrid",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Claude Bernard",
+      "object": "París",
+      "object_candidates": "Medina, Constantinopla, Detroit, Damasco, Lyon, Surrey, Estocolmo, Madison, Berlín, París",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Gamal Abdel Nasser",
+      "object": "El Cairo",
+      "object_candidates": "Medina, Estambul, Núremberg, Estocolmo, Detroit, Taipéi, Florencia, Venecia, Varsovia, El Cairo",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Yákov Sverdlov",
+      "object": "Moscú",
+      "object_candidates": "Taipéi, Bagdad, Detroit, Núremberg, Damasco, Londres, Berlín, Venecia, Constantinopla, Moscú",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Charles Louis Alphonse Laveran",
+      "object": "París",
+      "object_candidates": "Madrid, Londres, Berlín, Jerusalén, Roma, Varsovia, Bagdad, Atenas, Belgrado, París",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Tycho Brahe",
+      "object": "Praga",
+      "object_candidates": "Cartago, Helsinki, Medina, Tokio, Roma, Estocolmo, Florencia, Estambul, Bagdad, Praga",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Edward Heath",
+      "object": "Salisbury",
+      "object_candidates": "Surrey, París, Taipéi, Constantinopla, Madison, Varsovia, Berlín, Londres, Cartago, Salisbury",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

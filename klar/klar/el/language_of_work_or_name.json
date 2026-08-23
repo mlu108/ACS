@@ -1,0 +1,878 @@
+{
+  "name": "language_of_work_or_name",
+  "prompt_templates": [
+    "Ποια είναι η αρχική γλώσσα του <subject>; Η απάντηση είναι: <mask>.",
+    "Σε ποια γλώσσα ήταν αρχικά γραμμένο το <subject>; Η απάντηση είναι: <mask>.",
+    "Σε ποια γλώσσα είναι αρχικά το <subject>; Η απάντηση είναι: <mask>.",
+    "Ποια γλώσσα χρησιμοποιήθηκε για το αρχικό έργο του <subject>; Η απάντηση είναι: <mask>.",
+    "Σε ποια γλώσσα παράχθηκε αρχικά το <subject>; Η απάντηση είναι: <mask>.",
+    " Η αρχική γλώσσα του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Η Παναγία των Παρισίων",
+      "object": "Γαλλικά",
+      "object_candidates": "Ολλανδικά, Ελληνικά, Ιταλικά, Γερμανικά, Ρωσικά, Φινλανδικά, Αγγλικά, Γαλλικά",
+      "index": 1682,
+      "subject_en": "The Hunchback of Notre Dame",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ο Βασιλιάς των Λιονταριών",
+      "object": "Αγγλικά",
+      "object_candidates": "Ρωσικά, Γαλλικά, Ολλανδικά, Ελληνικά, Γερμανικά, Ιταλικά, Φινλανδικά, Αγγλικά",
+      "index": 1683,
+      "subject_en": "The Lion King",
+      "object_en": "English"
+    },
+    {
+      "subject": "Intouchables",
+      "object": "Γαλλικά",
+      "object_candidates": "Ελληνικά, Φινλανδικά, Γερμανικά, Αγγλικά, Ολλανδικά, Ρωσικά, Ιταλικά, Γαλλικά",
+      "index": 1684,
+      "subject_en": "The Intouchables",
+      "object_en": "French"
+    },
+    {
+      "subject": "Adventure Time",
+      "object": "Αγγλικά",
+      "object_candidates": "Φινλανδικά, Γαλλικά, Ολλανδικά, Ιταλικά, Γερμανικά, Ελληνικά, Ρωσικά, Αγγλικά",
+      "index": 1685,
+      "subject_en": "Adventure Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ψεύτης ήλιος",
+      "object": "Ρωσικά",
+      "object_candidates": "Φινλανδικά, Ελληνικά, Ιταλικά, Γερμανικά, Αγγλικά, Γαλλικά, Ολλανδικά, Ρωσικά",
+      "index": 1686,
+      "subject_en": "Burnt by the Sun",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Ο Πιανίστας",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, Ελληνικά, Ολλανδικά, Ρωσικά, Γερμανικά, Φινλανδικά, Γαλλικά, Αγγλικά",
+      "index": 1687,
+      "subject_en": "The Pianist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Κόμης Μοντεχρήστος",
+      "object": "Γαλλικά",
+      "object_candidates": "Ρωσικά, Φινλανδικά, Γερμανικά, Ολλανδικά, Ελληνικά, Αγγλικά, Ιταλικά, Γαλλικά",
+      "index": 1688,
+      "subject_en": "The Count of Monte Cristo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Slumdog Millionaire",
+      "object": "Αγγλικά",
+      "object_candidates": "Φινλανδικά, Ολλανδικά, Ιταλικά, Ελληνικά, Ρωσικά, Γερμανικά, Γαλλικά, Αγγλικά",
+      "index": 1689,
+      "subject_en": "Slumdog Millionaire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "Αγγλικά",
+      "object_candidates": "Φινλανδικά, Ελληνικά, Γαλλικά, Ιταλικά, Ρωσικά, Ολλανδικά, Γερμανικά, Αγγλικά",
+      "index": 1690,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Νονός",
+      "object": "Αγγλικά",
+      "object_candidates": "Γαλλικά, Ελληνικά, Γερμανικά, Ρωσικά, Φινλανδικά, Ολλανδικά, Ιταλικά, Αγγλικά",
+      "index": 1691,
+      "subject_en": "The Godfather",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ghostbusters",
+      "object": "Αγγλικά",
+      "object_candidates": "Ολλανδικά, Γαλλικά, Ελληνικά, Γερμανικά, Φινλανδικά, Ιταλικά, Ρωσικά, Αγγλικά",
+      "index": 1692,
+      "subject_en": "Ghostbusters",
+      "object_en": "English"
+    },
+    {
+      "subject": "Οι Τρεις Σωματοφύλακες",
+      "object": "Γαλλικά",
+      "object_candidates": "Ολλανδικά, Ελληνικά, Αγγλικά, Γερμανικά, Φινλανδικά, Ιταλικά, Ρωσικά, Γαλλικά",
+      "index": 1693,
+      "subject_en": "The Three Musketeers",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ολλανδική Βικιπαίδεια",
+      "object": "Ολλανδικά",
+      "object_candidates": "Αγγλικά, Ρωσικά, Ελληνικά, Γαλλικά, Ιταλικά, Γερμανικά, Φινλανδικά, Ολλανδικά",
+      "index": 1694,
+      "subject_en": "Dutch Wikipedia",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "Γαλλικά",
+      "object_candidates": "Ιταλικά, Ρωσικά, Φινλανδικά, Αγγλικά, Ελληνικά, Ολλανδικά, Γερμανικά, Γαλλικά",
+      "index": 1695,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, Ολλανδικά, Ρωσικά, Γερμανικά, Γαλλικά, Ελληνικά, Φινλανδικά, Αγγλικά",
+      "index": 1696,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Καλός, Ο Κακός και ο Άσχημος",
+      "object": "Ιταλικά",
+      "object_candidates": "Ρωσικά, Αγγλικά, Γερμανικά, Γαλλικά, Ολλανδικά, Ελληνικά, Φινλανδικά, Ιταλικά",
+      "index": 1697,
+      "subject_en": "The Good, the Bad and the Ugly",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Οι Μαχητές των Δρόμων",
+      "object": "Αγγλικά",
+      "object_candidates": "Ρωσικά, Γαλλικά, Γερμανικά, Ιταλικά, Ολλανδικά, Ελληνικά, Φινλανδικά, Αγγλικά",
+      "index": 1698,
+      "subject_en": "The Fast and the Furious",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Μαγικός Αυλός",
+      "object": "Γερμανικά",
+      "object_candidates": "Ιταλικά, Ολλανδικά, Φινλανδικά, Αγγλικά, Γαλλικά, Ελληνικά, Ρωσικά, Γερμανικά",
+      "index": 1699,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "iCarly",
+      "object": "Αγγλικά",
+      "object_candidates": "Ελληνικά, Ολλανδικά, Γερμανικά, Γαλλικά, Ρωσικά, Φινλανδικά, Ιταλικά, Αγγλικά",
+      "index": 1700,
+      "subject_en": "iCarly",
+      "object_en": "English"
+    },
+    {
+      "subject": "Μεγάλη Σοβιετική Εγκυκλοπαίδεια",
+      "object": "Ρωσικά",
+      "object_candidates": "Ιταλικά, Γερμανικά, Γαλλικά, Ολλανδικά, Φινλανδικά, Ελληνικά, Αγγλικά, Ρωσικά",
+      "index": 1701,
+      "subject_en": "Great Soviet Encyclopedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Ο Παπουτσωμένος Γάτος",
+      "object": "Ιταλικά",
+      "object_candidates": "Ελληνικά, Γερμανικά, Αγγλικά, Γαλλικά, Φινλανδικά, Ολλανδικά, Ρωσικά, Ιταλικά",
+      "index": 1702,
+      "subject_en": "Puss in Boots",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "φινλανδική Βικιπαίδεια",
+      "object": "Φινλανδικά",
+      "object_candidates": "Ελληνικά, Γαλλικά, Γερμανικά, Ιταλικά, Αγγλικά, Ρωσικά, Ολλανδικά, Φινλανδικά",
+      "index": 1703,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Τομ και Τζέρι",
+      "object": "Αγγλικά",
+      "object_candidates": "Ρωσικά, Γερμανικά, Φινλανδικά, Ελληνικά, Ολλανδικά, Γαλλικά, Ιταλικά, Αγγλικά",
+      "index": 1704,
+      "subject_en": "Tom and Jerry",
+      "object_en": "English"
+    },
+    {
+      "subject": "Το Βιβλίο της Ζούγκλας",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, Φινλανδικά, Ρωσικά, Γαλλικά, Ελληνικά, Γερμανικά, Ολλανδικά, Αγγλικά",
+      "index": 1705,
+      "subject_en": "The Jungle Book",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ελληνική Βικιπαίδεια",
+      "object": "Ελληνικά",
+      "object_candidates": "Φινλανδικά, Ρωσικά, Ολλανδικά, Γαλλικά, Γερμανικά, Αγγλικά, Ιταλικά, Ελληνικά",
+      "index": 1706,
+      "subject_en": "Greek Wikipedia",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Meddle",
+      "object": "Αγγλικά",
+      "object_candidates": "Ισπανικά, Ιταλικά, Τουρκικά, Δανικά, μπενγκάλι γλώσσα, Γερμανικά, Γαλλικά, Κορεατική γλώσσα, Βουλγαρικά, Αγγλικά",
+      "index": 3379,
+      "subject_en": "Meddle",
+      "object_en": "English"
+    },
+    {
+      "subject": "Git (λογισμικό)",
+      "object": "Αγγλικά",
+      "object_candidates": "Πολωνικά, Τουρκικά, λατινική γλώσσα, μπενγκάλι γλώσσα, Τσεχικά, Ρωσικά, Ισπανικά, Ιταλικά, σουηδικά, Αγγλικά",
+      "index": 3380,
+      "subject_en": "Git",
+      "object_en": "English"
+    },
+    {
+      "subject": "Αινειάδα",
+      "object": "λατινική γλώσσα",
+      "object_candidates": "Βιετναμικά, Πολωνικά, Ιταλικά, Αγγλικά, Καταλανικά, Τσεχικά, Ουγγρικά, Ρωσικά, μπενγκάλι γλώσσα, λατινική γλώσσα",
+      "index": 3381,
+      "subject_en": "Aeneid",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Ρωσική Βικιπαίδεια",
+      "object": "Ρωσικά",
+      "object_candidates": "Κορεατική γλώσσα, σουηδικά, Βουλγαρικά, Ουγγρικά, Γερμανικά, Αγγλικά, Πολωνικά, μπενγκάλι γλώσσα, Ισπανικά, Ρωσικά",
+      "index": 3382,
+      "subject_en": "Russian Wikipedia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Star Trek into Darkness",
+      "object": "Αγγλικά",
+      "object_candidates": "μπενγκάλι γλώσσα, Ουκρανικά, Γερμανικά, σουηδικά, Πολωνικά, Βιετναμικά, Βουλγαρικά, λατινική γλώσσα, Ισπανικά, Αγγλικά",
+      "index": 3383,
+      "subject_en": "Star Trek Into Darkness",
+      "object_en": "English"
+    },
+    {
+      "subject": "Charlie Hebdo",
+      "object": "Γαλλικά",
+      "object_candidates": "Γερμανικά, Εσθονικά, Ισπανικά, Τουρκικά, Ουγγρικά, Ιταλικά, Βουλγαρικά, Ρωσικά, Αγγλικά, Γαλλικά",
+      "index": 3384,
+      "subject_en": "Charlie Hebdo",
+      "object_en": "French"
+    },
+    {
+      "subject": "The Washington Post",
+      "object": "Αγγλικά",
+      "object_candidates": "Δανικά, Εσθονικά, Ισπανικά, Γερμανικά, Ρωσικά, Ολλανδικά, Κορεατική γλώσσα, σουηδικά, Κροατικά, Αγγλικά",
+      "index": 3385,
+      "subject_en": "The Washington Post",
+      "object_en": "English"
+    },
+    {
+      "subject": "Playboy",
+      "object": "Αγγλικά",
+      "object_candidates": "Δανικά, Καταλανικά, Εσθονικά, Ουγγρικά, Ισπανικά, σουηδικά, Γερμανικά, Γαλλικά, Βουλγαρικά, Αγγλικά",
+      "index": 3386,
+      "subject_en": "Playboy",
+      "object_en": "English"
+    },
+    {
+      "subject": "New Horizons",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, Καταλανικά, Ουκρανικά, Ουγγρικά, μπενγκάλι γλώσσα, Φινλανδικά, σουηδικά, Πολωνικά, Ολλανδικά, Αγγλικά",
+      "index": 3387,
+      "subject_en": "New Horizons",
+      "object_en": "English"
+    },
+    {
+      "subject": "Αΐντα",
+      "object": "Ιταλικά",
+      "object_candidates": "Τουρκικά, Ολλανδικά, Ουγγρικά, Πολωνικά, λατινική γλώσσα, Ουκρανικά, σουηδικά, Καταλανικά, Βουλγαρικά, Ιταλικά",
+      "index": 3388,
+      "subject_en": "Aida",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Science",
+      "object": "Αγγλικά",
+      "object_candidates": "μπενγκάλι γλώσσα, Ουγγρικά, Βιετναμικά, Γερμανικά, Ουκρανικά, Βουλγαρικά, Κροατικά, Φινλανδικά, λατινική γλώσσα, Αγγλικά",
+      "index": 3389,
+      "subject_en": "Science",
+      "object_en": "English"
+    },
+    {
+      "subject": "Οδηγός Αισιοδοξίας",
+      "object": "Αγγλικά",
+      "object_candidates": "Ολλανδικά, Βιετναμικά, μπενγκάλι γλώσσα, Γερμανικά, λατινική γλώσσα, Δανικά, Ουγγρικά, Βουλγαρικά, Ρωσικά, Αγγλικά",
+      "index": 3390,
+      "subject_en": "Silver Linings Playbook",
+      "object_en": "English"
+    },
+    {
+      "subject": "Newsweek",
+      "object": "Αγγλικά",
+      "object_candidates": "Βουλγαρικά, Καταλανικά, λατινική γλώσσα, Τσεχικά, Δανικά, μπενγκάλι γλώσσα, Ιταλικά, Κροατικά, Ουγγρικά, Αγγλικά",
+      "index": 3391,
+      "subject_en": "Newsweek",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ράμπο: Το Πρώτο Αίμα",
+      "object": "Αγγλικά",
+      "object_candidates": "Γερμανικά, Εσθονικά, Ιταλικά, Πολωνικά, Ισπανικά, Γαλλικά, Κροατικά, Βουλγαρικά, Δανικά, Αγγλικά",
+      "index": 3392,
+      "subject_en": "First Blood",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Μικρός Πρίγκιπας",
+      "object": "Γαλλικά",
+      "object_candidates": "Εσθονικά, Ρωσικά, Ουκρανικά, λατινική γλώσσα, Ιταλικά, Ισπανικά, Τσεχικά, Αγγλικά, Βουλγαρικά, Γαλλικά",
+      "index": 3393,
+      "subject_en": "The Little Prince",
+      "object_en": "French"
+    },
+    {
+      "subject": "Siri",
+      "object": "Αγγλικά",
+      "object_candidates": "Ουκρανικά, Φινλανδικά, Κροατικά, Ιταλικά, Βουλγαρικά, Γερμανικά, σουηδικά, Ισπανικά, Γαλλικά, Αγγλικά",
+      "index": 3394,
+      "subject_en": "Siri",
+      "object_en": "English"
+    },
+    {
+      "subject": "Δανική Βικιπαίδεια",
+      "object": "Δανικά",
+      "object_candidates": "Φινλανδικά, Κροατικά, Ουγγρικά, Ρωσικά, λατινική γλώσσα, Ουκρανικά, Βουλγαρικά, Αγγλικά, σουηδικά, Δανικά",
+      "index": 3395,
+      "subject_en": "Danish Wikipedia",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Le Monde",
+      "object": "Γαλλικά",
+      "object_candidates": "Ουκρανικά, Εσθονικά, Δανικά, Κορεατική γλώσσα, σουηδικά, Κροατικά, Ρωσικά, Γερμανικά, Φινλανδικά, Γαλλικά",
+      "index": 3396,
+      "subject_en": "Le Monde",
+      "object_en": "French"
+    },
+    {
+      "subject": "Le Figaro",
+      "object": "Γαλλικά",
+      "object_candidates": "Πολωνικά, μπενγκάλι γλώσσα, Βιετναμικά, λατινική γλώσσα, Φινλανδικά, Ρωσικά, Ολλανδικά, σουηδικά, Εσθονικά, Γαλλικά",
+      "index": 3397,
+      "subject_en": "Le Figaro",
+      "object_en": "French"
+    },
+    {
+      "subject": "Τσεχική Βικιπαίδεια",
+      "object": "Τσεχικά",
+      "object_candidates": "Γαλλικά, μπενγκάλι γλώσσα, σουηδικά, Κροατικά, Βιετναμικά, Ουκρανικά, Εσθονικά, Κορεατική γλώσσα, Ιταλικά, Τσεχικά",
+      "index": 3398,
+      "subject_en": "Czech Wikipedia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "The Guardian",
+      "object": "Αγγλικά",
+      "object_candidates": "Ισπανικά, Ιταλικά, Βουλγαρικά, Ουγγρικά, Ολλανδικά, Ρωσικά, μπενγκάλι γλώσσα, Δανικά, Γερμανικά, Αγγλικά",
+      "index": 3399,
+      "subject_en": "The Guardian",
+      "object_en": "English"
+    },
+    {
+      "subject": "Κροατική Βικιπαίδεια",
+      "object": "Κροατικά",
+      "object_candidates": "Ουγγρικά, Βιετναμικά, Δανικά, Γαλλικά, Ισπανικά, μπενγκάλι γλώσσα, Ολλανδικά, Ρωσικά, Πολωνικά, Κροατικά",
+      "index": 3400,
+      "subject_en": "Croatian Wikipedia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Συνθήκη της Ουτρέχτης",
+      "object": "Αγγλικά",
+      "object_candidates": "Κροατικά, Ουκρανικά, Βιετναμικά, Τσεχικά, Ουγγρικά, Καταλανικά, σουηδικά, Βουλγαρικά, Ισπανικά, Αγγλικά",
+      "index": 3401,
+      "subject_en": "Treaty of Utrecht",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pulp Fiction",
+      "object": "Αγγλικά",
+      "object_candidates": "Βουλγαρικά, Βιετναμικά, Τσεχικά, Ουκρανικά, Φινλανδικά, Γερμανικά, Ισπανικά, Δανικά, Καταλανικά, Αγγλικά",
+      "index": 3402,
+      "subject_en": "Pulp Fiction",
+      "object_en": "English"
+    },
+    {
+      "subject": "Χετ Βιλχέλμους",
+      "object": "Ολλανδικά",
+      "object_candidates": "Τουρκικά, Τσεχικά, Κορεατική γλώσσα, Αγγλικά, Γαλλικά, Ισπανικά, Ουγγρικά, Γερμανικά, Ουκρανικά, Ολλανδικά",
+      "index": 3403,
+      "subject_en": "Wilhelmus",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Σουηδική Βικιπαίδεια",
+      "object": "σουηδικά",
+      "object_candidates": "Βουλγαρικά, Εσθονικά, Τουρκικά, Ιταλικά, Κροατικά, Ρωσικά, Ισπανικά, λατινική γλώσσα, Ουγγρικά, σουηδικά",
+      "index": 3404,
+      "subject_en": "Swedish Wikipedia",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Πολωνική Βικιπαίδεια",
+      "object": "Πολωνικά",
+      "object_candidates": "Εσθονικά, Γαλλικά, Φινλανδικά, Δανικά, Τσεχικά, Ισπανικά, Καταλανικά, Ολλανδικά, Ιταλικά, Πολωνικά",
+      "index": 3405,
+      "subject_en": "Polish Wikipedia",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Εσθονική Βικιπαίδεια",
+      "object": "Εσθονικά",
+      "object_candidates": "Ουγγρικά, Γερμανικά, Γαλλικά, Βιετναμικά, Τουρκικά, Κορεατική γλώσσα, Ισπανικά, λατινική γλώσσα, Ουκρανικά, Εσθονικά",
+      "index": 3406,
+      "subject_en": "Estonian Wikipedia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Abbey Road",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, Εσθονικά, Ρωσικά, Ισπανικά, Δανικά, Γαλλικά, Γερμανικά, Καταλανικά, Τσεχικά, Αγγλικά",
+      "index": 3407,
+      "subject_en": "Abbey Road",
+      "object_en": "English"
+    },
+    {
+      "subject": "Καταλανική Βικιπαίδεια",
+      "object": "Καταλανικά",
+      "object_candidates": "Ρωσικά, Εσθονικά, σουηδικά, Τουρκικά, Ιταλικά, Πολωνικά, Αγγλικά, Βιετναμικά, Κορεατική γλώσσα, Καταλανικά",
+      "index": 3408,
+      "subject_en": "Catalan Wikipedia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Βιετναμέζικη Βικιπαίδεια",
+      "object": "Βιετναμικά",
+      "object_candidates": "Πολωνικά, Γερμανικά, Τσεχικά, Τουρκικά, Ολλανδικά, Ουκρανικά, Ισπανικά, Κροατικά, Γαλλικά, Βιετναμικά",
+      "index": 3409,
+      "subject_en": "Vietnamese Wikipedia",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "Ο Μαγικός Αυλός",
+      "object": "Γερμανικά",
+      "object_candidates": "Φινλανδικά, Κροατικά, μπενγκάλι γλώσσα, Ισπανικά, Ρωσικά, Καταλανικά, Αγγλικά, Γαλλικά, Ολλανδικά, Γερμανικά",
+      "index": 3410,
+      "subject_en": "The Magic Flute",
+      "object_en": "German"
+    },
+    {
+      "subject": "Κορεατική Βικιπαίδεια",
+      "object": "Κορεατική γλώσσα",
+      "object_candidates": "Βιετναμικά, Ισπανικά, Φινλανδικά, Γερμανικά, μπενγκάλι γλώσσα, Βουλγαρικά, Εσθονικά, Ολλανδικά, Πολωνικά, Κορεατική γλώσσα",
+      "index": 3411,
+      "subject_en": "Korean Wikipedia",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Γαλλικά",
+      "object_candidates": "Δανικά, Βουλγαρικά, Φινλανδικά, Καταλανικά, λατινική γλώσσα, Ουγγρικά, Τσεχικά, Γερμανικά, Ισπανικά, Γαλλικά",
+      "index": 3412,
+      "subject_en": "Pinterest",
+      "object_en": "French"
+    },
+    {
+      "subject": "Όλιβερ Τουίστ",
+      "object": "Αγγλικά",
+      "object_candidates": "Καταλανικά, Κορεατική γλώσσα, Γαλλικά, Κροατικά, Δανικά, Εσθονικά, σουηδικά, Πολωνικά, Ρωσικά, Αγγλικά",
+      "index": 3413,
+      "subject_en": "Oliver Twist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Οι Περιπέτειες της Αλίκης στη Χώρα των Θαυμάτων",
+      "object": "Αγγλικά",
+      "object_candidates": "Καταλανικά, λατινική γλώσσα, Ουκρανικά, Βουλγαρικά, Ιταλικά, Φινλανδικά, Δανικά, Βιετναμικά, Τουρκικά, Αγγλικά",
+      "index": 3414,
+      "subject_en": "Alice's Adventures in Wonderland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Περηφάνια και προκατάληψη",
+      "object": "Αγγλικά",
+      "object_candidates": "Δανικά, Κορεατική γλώσσα, Φινλανδικά, Ιταλικά, Ουγγρικά, Γαλλικά, μπενγκάλι γλώσσα, Ισπανικά, Βουλγαρικά, Αγγλικά",
+      "index": 3415,
+      "subject_en": "Pride and Prejudice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Τάιμ",
+      "object": "Αγγλικά",
+      "object_candidates": "Βουλγαρικά, Γερμανικά, Πολωνικά, Καταλανικά, Τσεχικά, Εσθονικά, Ισπανικά, Ρωσικά, Ουκρανικά, Αγγλικά",
+      "index": 3416,
+      "subject_en": "Time",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ο Υπέροχος Γκάτσμπυ",
+      "object": "Αγγλικά",
+      "object_candidates": "Βουλγαρικά, Κορεατική γλώσσα, Τουρκικά, Καταλανικά, σουηδικά, Ισπανικά, Ιταλικά, Γαλλικά, Ρωσικά, Αγγλικά",
+      "index": 3417,
+      "subject_en": "The Great Gatsby",
+      "object_en": "English"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "Αγγλικά",
+      "object_candidates": "Τσεχικά, Κροατικά, Δανικά, Τουρκικά, μπενγκάλι γλώσσα, Φινλανδικά, Πολωνικά, Κορεατική γλώσσα, Γαλλικά, Αγγλικά",
+      "index": 3418,
+      "subject_en": "LibreOffice",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Ισπανικά",
+      "object_candidates": "Εσθονικά, Γερμανικά, Ρωσικά, σουηδικά, Βιετναμικά, Ουκρανικά, Ολλανδικά, λατινική γλώσσα, Βουλγαρικά, Ισπανικά",
+      "index": 3419,
+      "subject_en": "Pinterest",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Amar Shonar Bangla",
+      "object": "μπενγκάλι γλώσσα",
+      "object_candidates": "Ισπανικά, λατινική γλώσσα, Ουγγρικά, Πολωνικά, Ρωσικά, Ιταλικά, Εσθονικά, σουηδικά, Αγγλικά, μπενγκάλι γλώσσα",
+      "index": 3420,
+      "subject_en": "Amar Sonar Bangla",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "LibreOffice",
+      "object": "Φινλανδικά",
+      "object_candidates": "Τουρκικά, Κορεατική γλώσσα, Ολλανδικά, Ιταλικά, Ρωσικά, Βουλγαρικά, Καταλανικά, Κροατικά, Ουκρανικά, Φινλανδικά",
+      "index": 3421,
+      "subject_en": "LibreOffice",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Γερμανική Βικιπαίδεια",
+      "object": "Γερμανικά",
+      "object_candidates": "Ουγγρικά, Βουλγαρικά, Ολλανδικά, Ισπανικά, Ουκρανικά, μπενγκάλι γλώσσα, Τουρκικά, Κορεατική γλώσσα, Κροατικά, Γερμανικά",
+      "index": 3422,
+      "subject_en": "German Wikipedia",
+      "object_en": "German"
+    },
+    {
+      "subject": "Συνθήκη των Βερσαλλιών",
+      "object": "Γαλλικά",
+      "object_candidates": "Εσθονικά, Ισπανικά, Πολωνικά, Γερμανικά, Κορεατική γλώσσα, Ουκρανικά, μπενγκάλι γλώσσα, Ρωσικά, Αγγλικά, Γαλλικά",
+      "index": 3423,
+      "subject_en": "Treaty of Versailles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ευγένιος Ονέγκιν",
+      "object": "Ρωσικά",
+      "object_candidates": "Κορεατική γλώσσα, Βιετναμικά, σουηδικά, Πολωνικά, Φινλανδικά, Καταλανικά, Ουκρανικά, Βουλγαρικά, Ιταλικά, Ρωσικά",
+      "index": 3424,
+      "subject_en": "Eugene Onegin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Ουκρανική Βικιπαίδεια",
+      "object": "Ουκρανικά",
+      "object_candidates": "Ρωσικά, Τσεχικά, Ιταλικά, Βουλγαρικά, Καταλανικά, Ολλανδικά, Ισπανικά, Εσθονικά, Φινλανδικά, Ουκρανικά",
+      "index": 3425,
+      "subject_en": "Ukrainian Wikipedia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "1984",
+      "object": "Αγγλικά",
+      "object_candidates": "Ουκρανικά, Εσθονικά, Καταλανικά, Ιταλικά, Κροατικά, Γαλλικά, Ισπανικά, Βουλγαρικά, λατινική γλώσσα, Αγγλικά",
+      "index": 3426,
+      "subject_en": "1984",
+      "object_en": "English"
+    },
+    {
+      "subject": "Οι περιπέτειες του Τομ Σόγιερ",
+      "object": "Αγγλικά",
+      "object_candidates": "Ιταλικά, λατινική γλώσσα, Τσεχικά, Κορεατική γλώσσα, Ισπανικά, Καταλανικά, Γαλλικά, μπενγκάλι γλώσσα, Ολλανδικά, Αγγλικά",
+      "index": 3427,
+      "subject_en": "The Adventures of Tom Sawyer",
+      "object_en": "English"
+    },
+    {
+      "subject": "Εξολοθρευτής: Η Γένεση",
+      "object": "Αγγλικά",
+      "object_candidates": "Ολλανδικά, Γαλλικά, μπενγκάλι γλώσσα, Εσθονικά, Γερμανικά, Βουλγαρικά, Ιταλικά, Ουγγρικά, λατινική γλώσσα, Αγγλικά",
+      "index": 3428,
+      "subject_en": "Terminator Genisys",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nature",
+      "object": "Αγγλικά",
+      "object_candidates": "Τσεχικά, Βουλγαρικά, Ρωσικά, Δανικά, Καταλανικά, Φινλανδικά, Γερμανικά, Τουρκικά, Ολλανδικά, Αγγλικά",
+      "index": 3429,
+      "subject_en": "Nature",
+      "object_en": "English"
+    },
+    {
+      "subject": "Το Δεκαήμερο",
+      "object": "Ιταλικά",
+      "object_candidates": "σουηδικά, μπενγκάλι γλώσσα, Φινλανδικά, Τσεχικά, Καταλανικά, Βουλγαρικά, Κορεατική γλώσσα, Ουκρανικά, Γαλλικά, Ιταλικά",
+      "index": 3430,
+      "subject_en": "The Decameron",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Φινλανδικά",
+      "object_candidates": "Τσεχικά, Γαλλικά, Γερμανικά, Ολλανδικά, Βιετναμικά, Βουλγαρικά, λατινική γλώσσα, μπενγκάλι γλώσσα, Ουγγρικά, Φινλανδικά",
+      "index": 3431,
+      "subject_en": "Pinterest",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "The Economist",
+      "object": "Αγγλικά",
+      "object_candidates": "Πολωνικά, Ολλανδικά, Κροατικά, Ισπανικά, Γερμανικά, Τσεχικά, σουηδικά, Φινλανδικά, λατινική γλώσσα, Αγγλικά",
+      "index": 3432,
+      "subject_en": "The Economist",
+      "object_en": "English"
+    },
+    {
+      "subject": "Du gamla, Du fria",
+      "object": "σουηδικά",
+      "object_candidates": "Γερμανικά, Ιταλικά, Γαλλικά, Ισπανικά, Βουλγαρικά, Εσθονικά, Αγγλικά, Βιετναμικά, λατινική γλώσσα, σουηδικά",
+      "index": 3433,
+      "subject_en": "Du gamla, du fria",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Οι Περιπέτειες του Πινόκιο",
+      "object": "Ιταλικά",
+      "object_candidates": "Βιετναμικά, Τσεχικά, Κροατικά, Αγγλικά, Ουγγρικά, Κορεατική γλώσσα, Δανικά, Ολλανδικά, Τουρκικά, Ιταλικά",
+      "index": 3434,
+      "subject_en": "The Adventures of Pinocchio",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Μόμπι Ντικ",
+      "object": "Αγγλικά",
+      "object_candidates": "σουηδικά, Δανικά, Κροατικά, Ρωσικά, Βιετναμικά, Γερμανικά, Κορεατική γλώσσα, Ισπανικά, Γαλλικά, Αγγλικά",
+      "index": 3435,
+      "subject_en": "Moby-Dick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Ιταλικά",
+      "object_candidates": "Εσθονικά, Κροατικά, Τουρκικά, Φινλανδικά, λατινική γλώσσα, Γερμανικά, Ουκρανικά, Δανικά, Ολλανδικά, Ιταλικά",
+      "index": 3436,
+      "subject_en": "Pinterest",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Οι Γάμοι του Φίγκαρο",
+      "object": "Ιταλικά",
+      "object_candidates": "Αγγλικά, σουηδικά, Ουκρανικά, Ολλανδικά, Τουρκικά, λατινική γλώσσα, Καταλανικά, Ρωσικά, Ισπανικά, Ιταλικά",
+      "index": 3437,
+      "subject_en": "The Marriage of Figaro",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Συνθήκη του Μάαστριχτ",
+      "object": "Γαλλικά",
+      "object_candidates": "λατινική γλώσσα, Ουκρανικά, σουηδικά, Τουρκικά, Ουγγρικά, Κορεατική γλώσσα, Εσθονικά, Ολλανδικά, Τσεχικά, Γαλλικά",
+      "index": 3438,
+      "subject_en": "Maastricht Treaty",
+      "object_en": "French"
+    },
+    {
+      "subject": "Please Please Me",
+      "object": "Αγγλικά",
+      "object_candidates": "λατινική γλώσσα, Ολλανδικά, Ουγγρικά, Τουρκικά, Κορεατική γλώσσα, σουηδικά, Ρωσικά, Καταλανικά, Γερμανικά, Αγγλικά",
+      "index": 3439,
+      "subject_en": "Please Please Me",
+      "object_en": "English"
+    },
+    {
+      "subject": "Βουλγαρική Βικιπαίδεια",
+      "object": "Βουλγαρικά",
+      "object_candidates": "Κροατικά, Ολλανδικά, Καταλανικά, λατινική γλώσσα, Δανικά, Εσθονικά, Ουγγρικά, Πολωνικά, Φινλανδικά, Βουλγαρικά",
+      "index": 3440,
+      "subject_en": "Bulgarian Wikipedia",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "The Pirate Bay",
+      "object": "Ισπανικά",
+      "object_candidates": "Γερμανικά, σουηδικά, λατινική γλώσσα, Ουγγρικά, Βουλγαρικά, Βιετναμικά, Γαλλικά, Κορεατική γλώσσα, Φινλανδικά, Ισπανικά",
+      "index": 3441,
+      "subject_en": "The Pirate Bay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Τουρκική Βικιπαίδεια",
+      "object": "Τουρκικά",
+      "object_candidates": "σουηδικά, Φινλανδικά, Ρωσικά, Βιετναμικά, μπενγκάλι γλώσσα, Τσεχικά, Ισπανικά, Κορεατική γλώσσα, Καταλανικά, Τουρκικά",
+      "index": 3442,
+      "subject_en": "Turkish Wikipedia",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Ουγγρική Βικιπαίδεια",
+      "object": "Ουγγρικά",
+      "object_candidates": "Φινλανδικά, Κροατικά, Ισπανικά, Βουλγαρικά, σουηδικά, Ιταλικά, Κορεατική γλώσσα, μπενγκάλι γλώσσα, Δανικά, Ουγγρικά",
+      "index": 3443,
+      "subject_en": "Hungarian Wikipedia",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Άννα Καρένινα",
+      "object": "Ρωσικά",
+      "object_candidates": "Ουγγρικά, Ιταλικά, Φινλανδικά, Αγγλικά, Ουκρανικά, Εσθονικά, Πολωνικά, Ισπανικά, Τουρκικά, Ρωσικά",
+      "index": 3444,
+      "subject_en": "Anna Karenina",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Σερβική Βικιπαίδεια",
+      "object": "Σερβικά",
+      "object_candidates": "Βιετναμικά, λατινική γλώσσα, Φινλανδικά, Γερμανικά, Αγγλικά, Ολλανδικά, Βουλγαρικά, Τουρκικά, Ρωσικά, Σερβικά",
+      "index": 3445,
+      "subject_en": "Serbian Wikipedia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Ιταλική Βικιπαίδεια",
+      "object": "Ιταλικά",
+      "object_candidates": "Τουρκικά, Φινλανδικά, Γερμανικά, Τσεχικά, Δανικά, Καταλανικά, Κορεατική γλώσσα, σουηδικά, Ουκρανικά, Ιταλικά",
+      "index": 3446,
+      "subject_en": "Italian Wikipedia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Ισπανική Βικιπαίδεια",
+      "object": "Ισπανικά",
+      "object_candidates": "Καταλανικά, Δανικά, λατινική γλώσσα, Ιταλικά, Ουγγρικά, Εσθονικά, Φινλανδικά, μπενγκάλι γλώσσα, Κροατικά, Ισπανικά",
+      "index": 3447,
+      "subject_en": "Spanish Wikipedia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "φινλανδική Βικιπαίδεια",
+      "object": "Φινλανδικά",
+      "object_candidates": "Ιταλικά, Γερμανικά, Ισπανικά, Καταλανικά, Ουγγρικά, Κορεατική γλώσσα, μπενγκάλι γλώσσα, Δανικά, Ουκρανικά, Φινλανδικά",
+      "index": 3448,
+      "subject_en": "Finnish Wikipedia",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Απλή Αγγλική Βικιπαίδεια",
+      "object": "Αγγλικά",
+      "object_candidates": "Γερμανικά, Καταλανικά, μπενγκάλι γλώσσα, Ρωσικά, Βιετναμικά, Τσεχικά, Γαλλικά, Βουλγαρικά, Τουρκικά, Αγγλικά",
+      "index": 3449,
+      "subject_en": "Simple English Wikipedia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Άδωξοι Μπάσταρδη",
+      "object": "Αγγλικά",
+      "object_candidates": "Εσθονικά, Καταλανικά, Γαλλικά, Τουρκικά, Ισπανικά, Ουγγρικά, λατινική γλώσσα, Πολωνικά, Φινλανδικά, Αγγλικά",
+      "index": 3450,
+      "subject_en": "Inglourious Basterds",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pinterest",
+      "object": "Αγγλικά",
+      "object_candidates": "Γερμανικά, Ισπανικά, Γαλλικά, Ουγγρικά, Τσεχικά, Καταλανικά, μπενγκάλι γλώσσα, Βιετναμικά, Ουκρανικά, Αγγλικά",
+      "index": 3451,
+      "subject_en": "Pinterest",
+      "object_en": "English"
+    },
+    {
+      "subject": "Αλέξανδρος",
+      "object": "Αγγλικά",
+      "object_candidates": "λατινική γλώσσα, Κροατικά, Δανικά, Ιταλικά, Γερμανικά, Κορεατική γλώσσα, Φινλανδικά, Ουκρανικά, Καταλανικά, Αγγλικά",
+      "index": 3452,
+      "subject_en": "Alexander",
+      "object_en": "English"
+    },
+    {
+      "subject": "Το Παιχνίδι της Μίμησης",
+      "object": "Αγγλικά",
+      "object_candidates": "Καταλανικά, Γερμανικά, Δανικά, Γαλλικά, Τσεχικά, Φινλανδικά, Ισπανικά, Κροατικά, Ιταλικά, Αγγλικά",
+      "index": 3453,
+      "subject_en": "The Imitation Game",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ντον Τζοβάννι",
+      "object": "Ιταλικά",
+      "object_candidates": "Δανικά, Ουγγρικά, Ισπανικά, Φινλανδικά, Ολλανδικά, Κορεατική γλώσσα, Τσεχικά, Εσθονικά, Γαλλικά, Ιταλικά",
+      "index": 3454,
+      "subject_en": "Don Giovanni",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Off the Wall",
+      "object": "Αγγλικά",
+      "object_candidates": "Τσεχικά, Πολωνικά, Γερμανικά, Βιετναμικά, Βουλγαρικά, λατινική γλώσσα, Ουκρανικά, Ιταλικά, Ουγγρικά, Αγγλικά",
+      "index": 3455,
+      "subject_en": "Off the Wall",
+      "object_en": "English"
+    },
+    {
+      "subject": "Internet Archive",
+      "object": "Αγγλικά",
+      "object_candidates": "Εσθονικά, Ιταλικά, Ουγγρικά, λατινική γλώσσα, Βουλγαρικά, Δανικά, Γερμανικά, Τσεχικά, Ολλανδικά, Αγγλικά",
+      "index": 3456,
+      "subject_en": "Internet Archive",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bohemian Rhapsody",
+      "object": "Αγγλικά",
+      "object_candidates": "Ρωσικά, Κροατικά, Βουλγαρικά, Δανικά, Φινλανδικά, σουηδικά, Ολλανδικά, Γαλλικά, Γερμανικά, Αγγλικά",
+      "index": 3457,
+      "subject_en": "Bohemian Rhapsody",
+      "object_en": "English"
+    },
+    {
+      "subject": "Γαλλική Βικιπαίδεια",
+      "object": "Γαλλικά",
+      "object_candidates": "Ουκρανικά, Ισπανικά, Πολωνικά, Βουλγαρικά, σουηδικά, μπενγκάλι γλώσσα, Δανικά, Φινλανδικά, Τσεχικά, Γαλλικά",
+      "index": 3458,
+      "subject_en": "French Wikipedia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Los Angeles Times",
+      "object": "Αγγλικά",
+      "object_candidates": "Τουρκικά, λατινική γλώσσα, Ουγγρικά, Εσθονικά, Κορεατική γλώσσα, Δανικά, Ισπανικά, σουηδικά, Τσεχικά, Αγγλικά",
+      "index": 3459,
+      "subject_en": "Los Angeles Times",
+      "object_en": "English"
+    },
+    {
+      "subject": "Apache HTTP εξυπηρετητής",
+      "object": "Αγγλικά",
+      "object_candidates": "Ουκρανικά, Δανικά, Τσεχικά, Πολωνικά, σουηδικά, Γαλλικά, λατινική γλώσσα, Ισπανικά, Εσθονικά, Αγγλικά",
+      "index": 3460,
+      "subject_en": "Apache HTTP Server",
+      "object_en": "English"
+    },
+    {
+      "subject": "RIA Novosti",
+      "object": "Ρωσικά",
+      "object_candidates": "Αγγλικά, Βουλγαρικά, Ισπανικά, Ουγγρικά, Ουκρανικά, Δανικά, Φινλανδικά, Βιετναμικά, Κροατικά, Ρωσικά",
+      "index": 3461,
+      "subject_en": "RIA Novosti",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P407"
+}

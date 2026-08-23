@@ -1,0 +1,652 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "کدام کشور <subject> را به عنوان یک اصطلاح قانونی دارد؟ پاسخ: <mask>.",
+    "در کدام حوزه قضایی <subject> یک اصطلاح قانونی است؟ پاسخ: <mask>.",
+    "کجا اصطلاح قانونی <subject> به کار می‌رود؟ پاسخ: <mask>.",
+    "کدام نهاد قانونی از <subject> استفاده می‌کند؟ پاسخ: <mask>.",
+    "در کدام منطقه <subject> به عنوان یک اصطلاح قانونی شناخته شده است؟ پاسخ: <mask>.",
+    " حوزه قضایی که <subject> در آن به کار می‌رود <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "رئیس‌جمهور فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "سومالی, سوئیس, رومانی, سنگاپور, نروژ, کوبا, لیتوانی, تایوان, موناکو, فرانسه",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "نخست‌وزیر کانادا",
+      "object": "کانادا",
+      "object_candidates": "اوکراین, مکزیک, سومالی, موناکو, ترکیه, ایرلند, ژاپن, عراق, هلند, کانادا",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "حزب کارگر استرالیا",
+      "object": "استرالیا",
+      "object_candidates": "پرتغال, کانادا, اتریش, لیبی, نروژ, موناکو, ایتالیا, فنلاند, کوبا, استرالیا",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "رئیس‌جمهور مکزیک",
+      "object": "مکزیک",
+      "object_candidates": "جامائیکا, کوبا, مالزی, سوئیس, بلغارستان, ایتالیا, دانمارک, کانادا, فرانسه, مکزیک",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "صدراعظم آلمان",
+      "object": "آلمان",
+      "object_candidates": "بلغارستان, نروژ, لیبی, کرواسی, پرتغال, ایران, دانمارک, بلاروس, فیلیپین, آلمان",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "قانون اساسی آلمان",
+      "object": "آلمان",
+      "object_candidates": "سوئیس, ویتنام, آلبانی, پرتغال, رومانی, استرالیا, اتریش, لیتوانی, عراق, آلمان",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "پارلمان کانادا",
+      "object": "کانادا",
+      "object_candidates": "بلغارستان, نروژ, ایتالیا, ژاپن, کوبا, پرتغال, هائیتی, ویتنام, بلاروس, کانادا",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "لوک‌سابا",
+      "object": "هند",
+      "object_candidates": "فرانسه, اتریش, ژاپن, سنگاپور, پاکستان, اوکراین, جامائیکا, روسیه, آرژانتین, هند",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "کنست",
+      "object": "اسرائیل",
+      "object_candidates": "ویتنام, آلبانی, لیبی, فیلیپین, آلمان, کرواسی, سوئد, ماکائو, عراق, اسرائیل",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "نخست‌وزیر ژاپن",
+      "object": "ژاپن",
+      "object_candidates": "دانمارک, ترکیه, مکزیک, سوئد, کرواسی, ایتالیا, هلند, تایوان, ماکائو, ژاپن",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "رئیس‌جمهور ایرلند",
+      "object": "ایرلند",
+      "object_candidates": "کانادا, بلاروس, هلند, لیتوانی, مکزیک, سوئد, هند, پاکستان, لیبی, ایرلند",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "دلار استرالیا",
+      "object": "استرالیا",
+      "object_candidates": "هائیتی, تایوان, هلند, ماکائو, رومانی, لیتوانی, مالزی, دانمارک, جامائیکا, استرالیا",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "رئیس جمهور پاکستان",
+      "object": "پاکستان",
+      "object_candidates": "ویتنام, سوئد, بولیوی, سنگاپور, ترکیه, دانمارک, پرتغال, کانادا, ایران, پاکستان",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "فهرست رئیس‌جمهورهای فدراسیون روسیه",
+      "object": "روسیه",
+      "object_candidates": "ویتنام, هند, کوبا, فرانسه, رومانی, فنلاند, کانادا, سنگاپور, پاکستان, روسیه",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "رئیس حکومت(اتریش)",
+      "object": "اتریش",
+      "object_candidates": "اسپانیا, فیلیپین, پرتغال, بولیوی, هند, بلاروس, رومانی, کانادا, ژاپن, اتریش",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "ریکسداگ",
+      "object": "سوئد",
+      "object_candidates": "آلبانی, سنگاپور, اوکراین, ویتنام, هلند, مالزی, فرانسه, موناکو, فنلاند, سوئد",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "پرچم اسپانیا",
+      "object": "اسپانیا",
+      "object_candidates": "بولیوی, مکزیک, نروژ, عراق, فنلاند, آرژانتین, کانادا, هلند, ویتنام, اسپانیا",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "پرچم فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "پاکستان, هائیتی, اتریش, سنگاپور, روسیه, لیتوانی, بلاروس, ویتنام, آلمان, فرانسه",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "رئیس‌جمهور اوکراین",
+      "object": "اوکراین",
+      "object_candidates": "هلند, مکزیک, اسرائیل, بلاروس, ترکیه, اسپانیا, لیتوانی, استرالیا, نروژ, اوکراین",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "نخست‌وزیر فرانسه",
+      "object": "فرانسه",
+      "object_candidates": "عراق, پاکستان, پرتغال, ترکیه, فیلیپین, کرواسی, هلند, سنگاپور, هند, فرانسه",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "پرچم دانمارک",
+      "object": "دانمارک",
+      "object_candidates": "اسپانیا, ژاپن, عراق, نروژ, پرتغال, اسرائیل, سنگاپور, ترکیه, کانادا, دانمارک",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "بوندستاگ",
+      "object": "آلمان",
+      "object_candidates": "سومالی, ایرلند, مکزیک, سوئد, ژاپن, لیبی, کانادا, هند, اسرائیل, آلمان",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "پرچم جمهوری ایرلند",
+      "object": "ایرلند",
+      "object_candidates": "لیتوانی, فیلیپین, پرتغال, کوبا, فرانسه, بولیوی, موناکو, ایران, پاکستان, ایرلند",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "رئیس‌جمهور اتریش",
+      "object": "اتریش",
+      "object_candidates": "روسیه, استرالیا, ویتنام, لیتوانی, اسرائیل, پاکستان, جامائیکا, ترکیه, فنلاند, اتریش",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "نخست وزیر پاکستان",
+      "object": "پاکستان",
+      "object_candidates": "مالزی, آرژانتین, استرالیا, نروژ, ویتنام, جامائیکا, سنگاپور, اسرائیل, ایران, پاکستان",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "رئیس‌جمهور آلمان",
+      "object": "آلمان",
+      "object_candidates": "بولیوی, لیتوانی, ماکائو, کوبا, نروژ, موناکو, بلاروس, بلغارستان, روسیه, آلمان",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "نخست‌وزیر سوئد",
+      "object": "سوئد",
+      "object_candidates": "سنگاپور, ایرلند, کانادا, آلمان, هلند, سوئیس, فنلاند, اسپانیا, دانمارک, سوئد",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "مجمع ملی",
+      "object": "فرانسه",
+      "object_candidates": "ترکیه, سوئیس, کوبا, مکزیک, دانمارک, مالزی, نروژ, تایوان, اتریش, فرانسه",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "پرچم سوئیس",
+      "object": "سوئیس",
+      "object_candidates": "فیلیپین, بولیوی, روسیه, جامائیکا, اتریش, پرتغال, ایرلند, ایران, بلاروس, سوئیس",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "نخست‌وزیر روسیه",
+      "object": "روسیه",
+      "object_candidates": "هائیتی, اوکراین, مالزی, سوئیس, اسپانیا, پرتغال, ایتالیا, جامائیکا, کوبا, روسیه",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "پرچم سنگاپور",
+      "object": "سنگاپور",
+      "object_candidates": "پرتغال, بولیوی, آلمان, ماکائو, سومالی, ویتنام, اتریش, دانمارک, بلغارستان, سنگاپور",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "سنا",
+      "object": "فرانسه",
+      "object_candidates": "فنلاند, دانمارک, پرتغال, سومالی, پاکستان, مالزی, کوبا, ایران, تایوان, فرانسه",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "نخست‌وزیر اوکراین",
+      "object": "اوکراین",
+      "object_candidates": "اسرائیل, روسیه, کوبا, فنلاند, ترکیه, فرانسه, سومالی, موناکو, ویتنام, اوکراین",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "پرچم روسیه",
+      "object": "روسیه",
+      "object_candidates": "فرانسه, ماکائو, بلاروس, بلغارستان, هند, استرالیا, ایرلند, سوئیس, ایتالیا, روسیه",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "پرچم کانادا",
+      "object": "کانادا",
+      "object_candidates": "بولیوی, ماکائو, فنلاند, لیبی, هائیتی, هند, بلاروس, استرالیا, ایران, کانادا",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "رئیس‌جمهور رومانی",
+      "object": "رومانی",
+      "object_candidates": "ایران, فرانسه, مکزیک, ایتالیا, تایوان, مالزی, کوبا, هائیتی, ایرلند, رومانی",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "پرچم پادشاهی هلند",
+      "object": "هلند",
+      "object_candidates": "سوئد, سومالی, سنگاپور, اتریش, بولیوی, پرتغال, بلاروس, عراق, استرالیا, هلند",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "نخست وزیر مالزی",
+      "object": "مالزی",
+      "object_candidates": "اسپانیا, ویتنام, ایران, اسرائیل, لیتوانی, فنلاند, بلغارستان, پرتغال, دانمارک, مالزی",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "پرچم جامائیکا",
+      "object": "جامائیکا",
+      "object_candidates": "کرواسی, مالزی, آلمان, ایتالیا, سوئیس, استرالیا, بلغارستان, اسپانیا, موناکو, جامائیکا",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "پرچم آرژانتین",
+      "object": "آرژانتین",
+      "object_candidates": "جامائیکا, نروژ, هلند, فرانسه, لیتوانی, اسرائیل, استرالیا, هند, بلغارستان, آرژانتین",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "پرچم نروژ",
+      "object": "نروژ",
+      "object_candidates": "لیتوانی, کانادا, موناکو, ایران, آلمان, استرالیا, سوئد, اتریش, تایوان, نروژ",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "مجلس نمایندگان",
+      "object": "اسپانیا",
+      "object_candidates": "اسرائیل, عراق, روسیه, لیتوانی, فیلیپین, دانمارک, پاکستان, بولیوی, اوکراین, اسپانیا",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "امپراتور ژاپن",
+      "object": "ژاپن",
+      "object_candidates": "سوئد, پاکستان, کرواسی, لیتوانی, ترکیه, فیلیپین, ایرلند, رومانی, موناکو, ژاپن",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "پرچم لیتوانی",
+      "object": "لیتوانی",
+      "object_candidates": "هائیتی, سوئیس, روسیه, اسرائیل, مالزی, بولیوی, هلند, اسپانیا, ژاپن, لیتوانی",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "پرچم بلغارستان",
+      "object": "بلغارستان",
+      "object_candidates": "موناکو, بلاروس, مکزیک, آلبانی, سوئد, اوکراین, فرانسه, ترکیه, هلند, بلغارستان",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "رئیس دولت عراق",
+      "object": "عراق",
+      "object_candidates": "ایران, ترکیه, هائیتی, سنگاپور, کرواسی, مالزی, فنلاند, فیلیپین, ویتنام, عراق",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "پرچم ترکیه",
+      "object": "ترکیه",
+      "object_candidates": "کانادا, سنگاپور, ماکائو, ژاپن, عراق, مالزی, آرژانتین, سوئد, بولیوی, ترکیه",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "پرچم مالزی",
+      "object": "مالزی",
+      "object_candidates": "ماکائو, بولیوی, سوئیس, بلاروس, رومانی, روسیه, هائیتی, جامائیکا, نروژ, مالزی",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "پرچم بلاروس",
+      "object": "بلاروس",
+      "object_candidates": "دانمارک, آلمان, روسیه, مکزیک, سوئیس, هند, سوئد, بلغارستان, ماکائو, بلاروس",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "پرچم کوبا",
+      "object": "کوبا",
+      "object_candidates": "رومانی, ایرلند, مکزیک, تایوان, اتریش, مالزی, پاکستان, فرانسه, ماکائو, کوبا",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "پرچم ویتنام",
+      "object": "ویتنام",
+      "object_candidates": "فنلاند, پاکستان, هند, سنگاپور, استرالیا, رومانی, بلاروس, تایوان, موناکو, ویتنام",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "پرچم بولیوی",
+      "object": "بولیوی",
+      "object_candidates": "سوئیس, هند, اسرائیل, استرالیا, تایوان, رومانی, روسیه, پاکستان, فنلاند, بولیوی",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "پرچم هند",
+      "object": "هند",
+      "object_candidates": "موناکو, تایوان, هلند, سوئد, لیبی, کرواسی, ماکائو, سومالی, لیتوانی, هند",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "کارشناسی",
+      "object": "کانادا",
+      "object_candidates": "دانمارک, تایوان, ایتالیا, بولیوی, پاکستان, آلبانی, پرتغال, هند, موناکو, کانادا",
+      "index": 6013
+    },
+    {
+      "subject": "پاتاکای ماکانز",
+      "object": "ماکائو",
+      "object_candidates": "هائیتی, مکزیک, استرالیا, هلند, بلغارستان, نروژ, سنگاپور, آلبانی, اتریش, ماکائو",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "پرچم موناکو",
+      "object": "موناکو",
+      "object_candidates": "ترکیه, تایوان, ایران, فنلاند, هند, دانمارک, بلاروس, عراق, لیبی, موناکو",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "پرچم سومالی",
+      "object": "سومالی",
+      "object_candidates": "کرواسی, اسپانیا, ترکیه, مالزی, بلغارستان, هلند, فرانسه, نروژ, لیبی, سومالی",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "رئیس‌جمهور اسرائیل",
+      "object": "اسرائیل",
+      "object_candidates": "آلمان, پرتغال, لیتوانی, بلغارستان, جامائیکا, ژاپن, ترکیه, رومانی, تایوان, اسرائیل",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "پرچم سوئد",
+      "object": "سوئد",
+      "object_candidates": "کانادا, نروژ, بلاروس, لیتوانی, ویتنام, اسپانیا, رومانی, آلبانی, تایوان, سوئد",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "پرچم جمهوری چین",
+      "object": "تایوان",
+      "object_candidates": "سوئیس, ژاپن, بلاروس, لیتوانی, ویتنام, ماکائو, هند, هائیتی, ایرلند, تایوان",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "پرچم استرالیا",
+      "object": "استرالیا",
+      "object_candidates": "فیلیپین, عراق, آرژانتین, هند, پرتغال, کانادا, اسرائیل, آلمان, موناکو, استرالیا",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "پرچم اوکراین",
+      "object": "اوکراین",
+      "object_candidates": "فنلاند, ترکیه, دانمارک, هند, آلمان, اتریش, ایرلند, اسرائیل, پرتغال, اوکراین",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "رئیس جمهور بلاروس",
+      "object": "بلاروس",
+      "object_candidates": "سومالی, اسرائیل, هند, بلغارستان, سوئیس, ژاپن, آرژانتین, دانمارک, فرانسه, بلاروس",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "پرچم هائیتی",
+      "object": "هائیتی",
+      "object_candidates": "ایرلند, موناکو, رومانی, اتریش, آرژانتین, ویتنام, ژاپن, سومالی, بولیوی, هائیتی",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "نشان ملی مکزیک",
+      "object": "مکزیک",
+      "object_candidates": "لیتوانی, کوبا, اسرائیل, لیبی, نروژ, اتریش, ایران, ماکائو, سوئد, مکزیک",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "پرچم فنلاند",
+      "object": "فنلاند",
+      "object_candidates": "فرانسه, کانادا, بلغارستان, اسپانیا, فیلیپین, آلمان, بلاروس, روسیه, سومالی, فنلاند",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "پرچم کرواسی",
+      "object": "کرواسی",
+      "object_candidates": "آلمان, پرتغال, جامائیکا, آرژانتین, مالزی, نروژ, کانادا, سومالی, هائیتی, کرواسی",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "رئیس‌جمهور فنلاند",
+      "object": "فنلاند",
+      "object_candidates": "بلغارستان, عراق, سنگاپور, ایتالیا, تایوان, کرواسی, کانادا, مالزی, لیتوانی, فنلاند",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "پرچم آلبانی",
+      "object": "آلبانی",
+      "object_candidates": "اسرائیل, پاکستان, بلاروس, سومالی, هائیتی, ترکیه, سوئد, سوئیس, دانمارک, آلبانی",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "پرچم ایتالیا",
+      "object": "ایتالیا",
+      "object_candidates": "اسرائیل, ایران, ژاپن, ویتنام, سوئد, تایوان, بولیوی, فیلیپین, فنلاند, ایتالیا",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "پرچم آلمان",
+      "object": "آلمان",
+      "object_candidates": "روسیه, سوئد, فیلیپین, لیبی, اسپانیا, ایرلند, هند, سوئیس, سنگاپور, آلمان",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "پرچم لیبی",
+      "object": "لیبی",
+      "object_candidates": "استرالیا, بلغارستان, موناکو, پاکستان, مالزی, هائیتی, اسرائیل, سنگاپور, رومانی, لیبی",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "پرچم فیلیپین",
+      "object": "فیلیپین",
+      "object_candidates": "هلند, لیبی, اسرائیل, بلاروس, آرژانتین, کوبا, تایوان, اتریش, سوئد, فیلیپین",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "آلمان",
+      "object_candidates": "کانادا, پاکستان, ژاپن, ایتالیا, سومالی, هائیتی, اوکراین, فنلاند, فرانسه, آلمان",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "رئیس‌جمهور ایران",
+      "object": "ایران",
+      "object_candidates": "روسیه, ایتالیا, سوئیس, استرالیا, کرواسی, اسپانیا, آلبانی, سنگاپور, هند, ایران",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "پرچم پاکستان",
+      "object": "پاکستان",
+      "object_candidates": "اسپانیا, سوئد, سنگاپور, بولیوی, هائیتی, کانادا, پرتغال, تایوان, لیتوانی, پاکستان",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "پرچم پرتغال",
+      "object": "پرتغال",
+      "object_candidates": "آلمان, کوبا, استرالیا, ایرلند, آلبانی, سنگاپور, فنلاند, اسرائیل, روسیه, پرتغال",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "پرچم یونان",
+      "object": "یونان",
+      "object_candidates": "عراق, اتریش, کرواسی, اسرائیل, کانادا, مکزیک, هند, هلند, بلاروس, یونان",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "پرچم مکزیک",
+      "object": "مکزیک",
+      "object_candidates": "روسیه, سنگاپور, اسپانیا, تایوان, آلبانی, عراق, هلند, ایرلند, ایتالیا, مکزیک",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "پرچم ژاپن",
+      "object": "ژاپن",
+      "object_candidates": "هند, ترکیه, فرانسه, فنلاند, روسیه, مکزیک, بلاروس, رومانی, سنگاپور, ژاپن",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

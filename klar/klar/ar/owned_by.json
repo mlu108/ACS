@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "من يمتلك <subject>? الجواب هو: <mask>",
+    "أي شركة أو شخص يمتلك <subject>? الجواب هو: <mask>",
+    "من هو المالك الحالي لـ<subject>? الجواب هو: <mask>",
+    "من يملك <subject>? الجواب هو: <mask>",
+    "أي كيان يمتلك <subject>? الجواب هو: <mask>",
+    " مالك <subject> هو <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "دوكاتي",
+      "object": "أودي",
+      "object_candidates": "ياهو!, برلين, باريس, تويوتا, سوني, ميلانو, فرنسا, بي بي سي, بولندا, أودي",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "لامبورغيني",
+      "object": "أودي",
+      "object_candidates": "باريس, ياهو!, جنوة, ميلانو, أمازون, بولندا, مايكروسوفت, تويوتا, فرنسا, أودي",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "برج إيفل",
+      "object": "باريس",
+      "object_candidates": "لفيف, قطر, ياهو!, ميلانو, فرنسا, مايكروسوفت, سوني, بولندا, تورينو, باريس",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "دويتشه بان",
+      "object": "ألمانيا",
+      "object_candidates": "تورينو, سوني, باريس, برلين, جنوة, بولندا, قطر, تويوتا, شيكاغو, ألمانيا",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "بحث جوجل",
+      "object": "جوجل",
+      "object_candidates": "تورينو, سوني, ألمانيا, جنوة, بولندا, قطر, ياهو!, شيكاغو, ميلانو, جوجل",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "لكزس",
+      "object": "تويوتا",
+      "object_candidates": "لفيف, جوجل, فرنسا, شيكاغو, بي بي سي, باليرمو, بولندا, جنوة, ألمانيا, تويوتا",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "يوتيوب",
+      "object": "جوجل",
+      "object_candidates": "شيكاغو, ميلانو, لفيف, باريس, نابولي, فرنسا, ألمانيا, تورينو, بي بي سي, جوجل",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "قرص مضغوط",
+      "object": "سوني",
+      "object_candidates": "تويوتا, لفيف, بي بي سي, ميلانو, جوجل, ياهو!, نابولي, جنوة, باريس, سوني",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "مطار أوهير الدولي",
+      "object": "شيكاغو",
+      "object_candidates": "بي بي سي, جنوة, فرنسا, قطر, أودي, تويوتا, أمستردام, أمازون, لفيف, شيكاغو",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "بي بي سي وان",
+      "object": "بي بي سي",
+      "object_candidates": "فرنسا, لفيف, جنوة, أودي, ياهو!, نابولي, باليرمو, باريس, أمستردام, بي بي سي",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "سوني إنتراكتيف إنترتينمنت",
+      "object": "سوني",
+      "object_candidates": "تورينو, جوجل, ياهو!, أمازون, لفيف, مايكروسوفت, أودي, تويوتا, ألمانيا, سوني",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "سوني بيكتشرز إنترتينمنت",
+      "object": "سوني",
+      "object_candidates": "ألمانيا, شيكاغو, مايكروسوفت, نابولي, لفيف, أمازون, أودي, بي بي سي, قطر, سوني",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "جيميل",
+      "object": "جوجل",
+      "object_candidates": "أودي, نابولي, باريس, سوني, لفيف, تويوتا, باليرمو, قطر, ياهو!, جوجل",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "خرائط جوجل",
+      "object": "جوجل",
+      "object_candidates": "سوني, باليرمو, فرنسا, تورينو, نابولي, ميلانو, تويوتا, برلين, لفيف, جوجل",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "دي في دي",
+      "object": "سوني",
+      "object_candidates": "قطر, جنوة, جوجل, تورينو, باريس, ميلانو, بي بي سي, تويوتا, مايكروسوفت, سوني",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "بارك دي برينس",
+      "object": "باريس",
+      "object_candidates": "لفيف, بولندا, تويوتا, ألمانيا, برلين, ياهو!, بي بي سي, مايكروسوفت, جوجل, باريس",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "جوجل ستريت فيو",
+      "object": "جوجل",
+      "object_candidates": "أودي, مايكروسوفت, أمستردام, نابولي, برلين, سوني, باليرمو, لفيف, بولندا, جوجل",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ويندوز ميديا بلاير",
+      "object": "مايكروسوفت",
+      "object_candidates": "برلين, شيكاغو, ميلانو, ياهو!, باريس, تويوتا, جوجل, سوني, تورينو, مايكروسوفت",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ملعب جوزيبي مياتسا",
+      "object": "ميلانو",
+      "object_candidates": "جنوة, سوني, ألمانيا, أمازون, قطر, بولندا, باريس, أودي, شيكاغو, ميلانو",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "قاعدة بيانات الأفلام على الإنترنت",
+      "object": "أمازون",
+      "object_candidates": "فرنسا, شيكاغو, أودي, بولندا, باريس, جوجل, سوني, قطر, باليرمو, أمازون",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "جوجل أدسنس",
+      "object": "جوجل",
+      "object_candidates": "نابولي, بولندا, باليرمو, أودي, مايكروسوفت, لفيف, أمستردام, قطر, جنوة, جوجل",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "أمازون كيندل",
+      "object": "أمازون",
+      "object_candidates": "ميلانو, نابولي, فرنسا, ألمانيا, أمستردام, لفيف, مايكروسوفت, جنوة, باليرمو, أمازون",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "ملعب رينزو باربيرا",
+      "object": "باليرمو",
+      "object_candidates": "سوني, قطر, ألمانيا, أمستردام, فرنسا, أودي, جوجل, برلين, بي بي سي, باليرمو",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "فليكر",
+      "object": "ياهو!",
+      "object_candidates": "شيكاغو, ألمانيا, بي بي سي, مايكروسوفت, قطر, فرنسا, تورينو, بولندا, تويوتا, ياهو!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "جوجل بليكس",
+      "object": "جوجل",
+      "object_candidates": "بولندا, ميلانو, مايكروسوفت, باليرمو, فرنسا, أمستردام, جنوة, لفيف, بي بي سي, جوجل",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل إيرث",
+      "object": "جوجل",
+      "object_candidates": "أمستردام, مايكروسوفت, ياهو!, أمازون, تويوتا, أودي, شيكاغو, لفيف, جنوة, جوجل",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "دايهاتسو",
+      "object": "تويوتا",
+      "object_candidates": "باريس, برلين, مايكروسوفت, ألمانيا, سوني, بي بي سي, نابولي, فرنسا, جنوة, تويوتا",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "قوس النصر",
+      "object": "فرنسا",
+      "object_candidates": "نابولي, أودي, أمستردام, برلين, قطر, جوجل, باريس, ألمانيا, مايكروسوفت, فرنسا",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "قصر فونتينبلو",
+      "object": "فرنسا",
+      "object_candidates": "تويوتا, سوني, أمستردام, أمازون, بولندا, ميلانو, باليرمو, أودي, جنوة, فرنسا",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "جوجل درايف",
+      "object": "جوجل",
+      "object_candidates": "جنوة, أودي, أمازون, سوني, باريس, قطر, بولندا, لفيف, برلين, جوجل",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "كتب جوجل",
+      "object": "جوجل",
+      "object_candidates": "ألمانيا, ميلانو, أودي, ياهو!, قطر, تورينو, نابولي, سوني, باريس, جوجل",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ملعب تورينو الأولمبي",
+      "object": "تورينو",
+      "object_candidates": "جوجل, أمستردام, فرنسا, ميلانو, جنوة, مايكروسوفت, برلين, باليرمو, سوني, تورينو",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "الخطوط الجوية القطرية",
+      "object": "قطر",
+      "object_candidates": "ياهو!, ميلانو, أمازون, فرنسا, باريس, نابولي, تويوتا, سوني, لفيف, قطر",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "دورية الليل",
+      "object": "أمستردام",
+      "object_candidates": "ميلانو, لفيف, أودي, فرنسا, تورينو, بي بي سي, تويوتا, نابولي, بولندا, أمستردام",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "بلوغر",
+      "object": "جوجل",
+      "object_candidates": "سوني, تويوتا, بولندا, أودي, باريس, لفيف, مايكروسوفت, أمازون, ميلانو, جوجل",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "الملعب الأولمبي",
+      "object": "برلين",
+      "object_candidates": "قطر, باريس, ميلانو, مايكروسوفت, أمستردام, بي بي سي, شيكاغو, أودي, تورينو, برلين",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "خطوط لوت الجوية البولندية",
+      "object": "بولندا",
+      "object_candidates": "لفيف, باريس, شيكاغو, أمازون, ياهو!, أمستردام, جوجل, سوني, ألمانيا, بولندا",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "ملعب لويجي فيراريس",
+      "object": "جنوة",
+      "object_candidates": "قطر, سوني, مايكروسوفت, بولندا, برلين, نابولي, ألمانيا, تويوتا, بي بي سي, جنوة",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "ترجمة جوجل",
+      "object": "جوجل",
+      "object_candidates": "نابولي, قطر, أمستردام, بولندا, ياهو!, مايكروسوفت, شيكاغو, ميلانو, فرنسا, جوجل",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "برج شارد",
+      "object": "قطر",
+      "object_candidates": "لفيف, أمستردام, نابولي, أمازون, سوني, جنوة, بي بي سي, مايكروسوفت, شيكاغو, قطر",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "ملعب فرنسا",
+      "object": "فرنسا",
+      "object_candidates": "جنوة, لفيف, ياهو!, تويوتا, جوجل, مايكروسوفت, تورينو, شيكاغو, أمازون, فرنسا",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "أرينا لفيف",
+      "object": "لفيف",
+      "object_candidates": "نابولي, أمازون, شيكاغو, تورينو, فرنسا, ألمانيا, أودي, تويوتا, قطر, لفيف",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "لينكد إن",
+      "object": "مايكروسوفت",
+      "object_candidates": "تويوتا, قطر, شيكاغو, نابولي, باليرمو, سوني, أمستردام, أودي, باريس, مايكروسوفت",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "تمبلر",
+      "object": "ياهو!",
+      "object_candidates": "جوجل, مايكروسوفت, بولندا, ميلانو, تورينو, ألمانيا, جنوة, شيكاغو, أمستردام, ياهو!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "ملعب سان باولو",
+      "object": "نابولي",
+      "object_candidates": "برلين, مايكروسوفت, جوجل, جنوة, أمستردام, ياهو!, باريس, باليرمو, لفيف, نابولي",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "ملعب ديلي ألبي",
+      "object": "تورينو",
+      "object_candidates": "تويوتا, سوني, لفيف, ألمانيا, جوجل, أمستردام, شيكاغو, باريس, ياهو!, تورينو",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "مطار دبي الدولي",
+      "object": "إمارة دبي",
+      "object_candidates": "ياهو!, جنوة, قطر, أمازون, باليرمو, جوجل, بي بي سي, تورينو, باريس, إمارة دبي",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "جوجل سكولار",
+      "object": "جوجل",
+      "object_candidates": "مايكروسوفت, تورينو, جنوة, بولندا, باليرمو, أودي, باريس, تويوتا, شيكاغو, جوجل",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "موناليزا",
+      "object": "فرنسا",
+      "object_candidates": "باريس, تورينو, مايكروسوفت, ميلانو, ياهو!, باليرمو, نابولي, برلين, جنوة, فرنسا",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "بوكس أوفيس موجو",
+      "object": "أمازون",
+      "object_candidates": "قطر, تويوتا, ياهو!, أمستردام, ألمانيا, أودي, فرنسا, مايكروسوفت, جنوة, أمازون",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

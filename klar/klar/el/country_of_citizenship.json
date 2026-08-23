@@ -1,0 +1,494 @@
+{
+  "name": "country_of_citizenship",
+  "prompt_templates": [
+    "Σε ποια χώρα είναι πολίτης ο <subject>; Η απάντηση είναι: <mask>",
+    "Ποια είναι η εθνικότητα του <subject>; Η απάντηση είναι: <mask>",
+    "Σε ποια χώρα κατέχει πολιτογράφηση ο <subject>; Η απάντηση είναι: <mask>",
+    "Που είναι πολίτης ο <subject>; Η απάντηση είναι: <mask>",
+    "Ποια έθνος χορηγεί πολιτογράφηση στον <subject>; Η απάντηση είναι: <mask>",
+    " Η υπηκοότητα του <subject> είναι <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Μπόρις Σπάσκυ",
+      "object": "Γαλλία",
+      "object_candidates": "Δημοκρατία της Ιρλανδίας, Αυστραλία, Κατάρ, Λίβανος, Κουρδιστάν, Ελβετία, Βουλγαρία, Ινδία, Αργεντινή, Γαλλία",
+      "index": 3319,
+      "subject_en": "Boris Spassky",
+      "object_en": "France"
+    },
+    {
+      "subject": "Άντα Γιονάτ",
+      "object": "Ισραήλ",
+      "object_candidates": "Βραζιλία, Αυστραλία, Κατάρ, Λίβανος, Σουηδία, Ιαπωνία, Ελλάδα, Βιετνάμ, Νορβηγία, Ισραήλ",
+      "index": 3320,
+      "subject_en": "Ada Yonath",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Λιονέλ Μέσι",
+      "object": "Αργεντινή",
+      "object_candidates": "Ιαπωνία, Δημοκρατία της Ιρλανδίας, Δανία, Γερμανία, Σουηδία, Λίβανος, Βουλγαρία, Ελλάδα, Ισραήλ, Αργεντινή",
+      "index": 3321,
+      "subject_en": "Lionel Messi",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Κάρολος Β΄ της Ισπανίας",
+      "object": "Ισπανία",
+      "object_candidates": "Βιετνάμ, Καναδάς, Νορβηγία, Ελβετία, Ισραήλ, Δανία, Σουηδία, Αυστρία, Αργεντινή, Ισπανία",
+      "index": 3322,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Αντριάνο Τσελεντάνο",
+      "object": "Ιταλία",
+      "object_candidates": "Βιετνάμ, Αυστρία, Γερμανία, Κουρδιστάν, Δανία, Φραγκφούρτη, Ελλάδα, Ισραήλ, Νορβηγία, Ιταλία",
+      "index": 3323,
+      "subject_en": "Adriano Celentano",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Γκεόργκι Παρβάνοφ",
+      "object": "Βουλγαρία",
+      "object_candidates": "Αυστραλία, Ελλάδα, Ιταλία, Βραζιλία, Κατάρ, Ισραήλ, Βιετνάμ, Γερμανία, Βασίλειο της Αγγλίας, Βουλγαρία",
+      "index": 3324,
+      "subject_en": "Georgi Parvanov",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Ντίλμα Ρούσεφ",
+      "object": "Βραζιλία",
+      "object_candidates": "Δημοκρατία της Ιρλανδίας, Φραγκφούρτη, Κουρδιστάν, Καναδάς, Δανία, Ελβετία, Ιαπωνία, Ισπανία, Αυστραλία, Βραζιλία",
+      "index": 3325,
+      "subject_en": "Dilma Rousseff",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Ρονάλντο",
+      "object": "Βραζιλία",
+      "object_candidates": "Λίβανος, Ελβετία, Ιταλία, Γερμανία, Καναδάς, Δανία, Βασίλειο της Αγγλίας, Αργεντινή, Αυστρία, Βραζιλία",
+      "index": 3326,
+      "subject_en": "Ronaldo",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Τραϊανός",
+      "object": "Ισπανία",
+      "object_candidates": "Κατάρ, Ελβετία, Δανία, Νορβηγία, Βραζιλία, Κουρδιστάν, Βιετνάμ, Βασίλειο της Αγγλίας, Αργεντινή, Ισπανία",
+      "index": 3327,
+      "subject_en": "Trajan",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Ροναλντίνιο",
+      "object": "Βραζιλία",
+      "object_candidates": "Ελβετία, Ιαπωνία, Ισραήλ, Βουλγαρία, Βιετνάμ, Σουηδία, Καναδάς, Ισπανία, Λίβανος, Βραζιλία",
+      "index": 3328,
+      "subject_en": "Ronaldinho",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Σκοτ Μόρισον",
+      "object": "Αυστραλία",
+      "object_candidates": "Γερμανία, Δημοκρατία της Ιρλανδίας, Φραγκφούρτη, Πολωνία, Καναδάς, Αυστρία, Ιαπωνία, Σουηδία, Ιταλία, Αυστραλία",
+      "index": 3329,
+      "subject_en": "Scott Morrison",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Χο Τσι Μινχ",
+      "object": "Βιετνάμ",
+      "object_candidates": "Ινδία, Ιαπωνία, Ισραήλ, Αργεντινή, Σουηδία, Γαλλία, Κατάρ, Ελλάδα, Πολωνία, Βιετνάμ",
+      "index": 3330,
+      "subject_en": "Ho Chi Minh",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Αλέν Ρομπέρ",
+      "object": "Γαλλία",
+      "object_candidates": "Αργεντινή, Φραγκφούρτη, Ελλάδα, Βιετνάμ, Ισραήλ, Δημοκρατία της Ιρλανδίας, Πολωνία, Κουρδιστάν, Νορβηγία, Γαλλία",
+      "index": 3331,
+      "subject_en": "Alain Robert",
+      "object_en": "France"
+    },
+    {
+      "subject": "Φερντινάν ντε Σωσσύρ",
+      "object": "Ελβετία",
+      "object_candidates": "Ινδία, Αργεντινή, Κουρδιστάν, Βραζιλία, Καναδάς, Κατάρ, Αυστρία, Ιαπωνία, Πολωνία, Ελβετία",
+      "index": 3332,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Ογκίστ Ροντέν",
+      "object": "Γαλλία",
+      "object_candidates": "Ισπανία, Φραγκφούρτη, Ιταλία, Ισραήλ, Ινδία, Αργεντινή, Βουλγαρία, Βραζιλία, Αυστρία, Γαλλία",
+      "index": 3333,
+      "subject_en": "Auguste Rodin",
+      "object_en": "France"
+    },
+    {
+      "subject": "Φρίντριχ Βίλχελμ Μπέσελ",
+      "object": "Γερμανία",
+      "object_candidates": "Κατάρ, Βασίλειο της Αγγλίας, Ιαπωνία, Λίβανος, Αργεντινή, Ιταλία, Βουλγαρία, Αυστρία, Βραζιλία, Γερμανία",
+      "index": 3334,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Γιόχαν Βόλφγκανγκ φον Γκαίτε",
+      "object": "Φραγκφούρτη",
+      "object_candidates": "Σουηδία, Δημοκρατία της Ιρλανδίας, Αργεντινή, Λίβανος, Βουλγαρία, Ισραήλ, Ιταλία, Ελλάδα, Ιαπωνία, Φραγκφούρτη",
+      "index": 3335,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "Μάσσιμο Ντ'Αλέμα",
+      "object": "Ιταλία",
+      "object_candidates": "Λίβανος, Ινδία, Σουηδία, Γαλλία, Ισπανία, Αυστραλία, Πολωνία, Δανία, Βιετνάμ, Ιταλία",
+      "index": 3336,
+      "subject_en": "Massimo D'Alema",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Ρούντολφ Ες",
+      "object": "Γερμανία",
+      "object_candidates": "Πολωνία, Αυστραλία, Ιταλία, Γαλλία, Βιετνάμ, Αργεντινή, Κουρδιστάν, Βραζιλία, Δανία, Γερμανία",
+      "index": 3337,
+      "subject_en": "Rudolf Hess",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Ερρίκος Ε' της Αγγλίας",
+      "object": "Βασίλειο της Αγγλίας",
+      "object_candidates": "Βουλγαρία, Γερμανία, Ισραήλ, Δημοκρατία της Ιρλανδίας, Σουηδία, Βιετνάμ, Βραζιλία, Καναδάς, Ελβετία, Βασίλειο της Αγγλίας",
+      "index": 3338,
+      "subject_en": "Henry V of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Μισέλ Ουελμπέκ",
+      "object": "Γαλλία",
+      "object_candidates": "Ελβετία, Ινδία, Δανία, Ισπανία, Ιαπωνία, Νορβηγία, Πολωνία, Βραζιλία, Αυστρία, Γαλλία",
+      "index": 3339,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "France"
+    },
+    {
+      "subject": "Μαζάτσο",
+      "object": "Ιταλία",
+      "object_candidates": "Δανία, Βασίλειο της Αγγλίας, Φραγκφούρτη, Βραζιλία, Βουλγαρία, Γαλλία, Καναδάς, Αυστραλία, Ελλάδα, Ιταλία",
+      "index": 3340,
+      "subject_en": "Masaccio",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Φρανς Γκαλ",
+      "object": "Γαλλία",
+      "object_candidates": "Καναδάς, Βασίλειο της Αγγλίας, Βιετνάμ, Αυστρία, Ιταλία, Ισραήλ, Φραγκφούρτη, Ινδία, Ελλάδα, Γαλλία",
+      "index": 3341,
+      "subject_en": "France Gall",
+      "object_en": "France"
+    },
+    {
+      "subject": "Ραφαέλ Αλμπέρτι",
+      "object": "Ισπανία",
+      "object_candidates": "Αυστρία, Βουλγαρία, Λίβανος, Νορβηγία, Ιταλία, Βιετνάμ, Ισραήλ, Πολωνία, Αυστραλία, Ισπανία",
+      "index": 3342,
+      "subject_en": "Rafael Alberti",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Μπερνάρδο Ουσάυ",
+      "object": "Αργεντινή",
+      "object_candidates": "Κατάρ, Γερμανία, Ισραήλ, Καναδάς, Βασίλειο της Αγγλίας, Ελβετία, Βιετνάμ, Κουρδιστάν, Βουλγαρία, Αργεντινή",
+      "index": 3343,
+      "subject_en": "Bernardo Houssay",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Κιίτσι Μιγιαζάουα",
+      "object": "Ιαπωνία",
+      "object_candidates": "Βραζιλία, Νορβηγία, Γαλλία, Ινδία, Βουλγαρία, Κατάρ, Σουηδία, Ισραήλ, Βασίλειο της Αγγλίας, Ιαπωνία",
+      "index": 3344,
+      "subject_en": "Kiichi Miyazawa",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Όσκαρ Α΄ της Σουηδίας",
+      "object": "Σουηδία",
+      "object_candidates": "Γαλλία, Ελβετία, Δανία, Ινδία, Ισπανία, Γερμανία, Πολωνία, Κατάρ, Ισραήλ, Σουηδία",
+      "index": 3345,
+      "subject_en": "Oscar I of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Καρλ Μπος",
+      "object": "Γερμανία",
+      "object_candidates": "Κουρδιστάν, Αργεντινή, Ισπανία, Σουηδία, Ισραήλ, Γαλλία, Ελβετία, Φραγκφούρτη, Δημοκρατία της Ιρλανδίας, Γερμανία",
+      "index": 3346,
+      "subject_en": "Carl Bosch",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Τζίντου Κρισναμούρτι",
+      "object": "Ινδία",
+      "object_candidates": "Κατάρ, Ιταλία, Νορβηγία, Γερμανία, Βασίλειο της Αγγλίας, Ελλάδα, Δημοκρατία της Ιρλανδίας, Κουρδιστάν, Λίβανος, Ινδία",
+      "index": 3347,
+      "subject_en": "Jiddu Krishnamurti",
+      "object_en": "India"
+    },
+    {
+      "subject": "Ελισάβετ Α΄ της Αγγλίας",
+      "object": "Βασίλειο της Αγγλίας",
+      "object_candidates": "Γαλλία, Ινδία, Πολωνία, Ισπανία, Καναδάς, Αργεντινή, Αυστρία, Δανία, Σουηδία, Βασίλειο της Αγγλίας",
+      "index": 3348,
+      "subject_en": "Elizabeth I of England",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Εμανουέλ Σενιέ",
+      "object": "Γαλλία",
+      "object_candidates": "Κατάρ, Φραγκφούρτη, Λίβανος, Ιταλία, Ινδία, Κουρδιστάν, Βουλγαρία, Πολωνία, Αυστραλία, Γαλλία",
+      "index": 3349,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "France"
+    },
+    {
+      "subject": "Γκρέγκορζ Λάτο",
+      "object": "Πολωνία",
+      "object_candidates": "Γαλλία, Ιταλία, Αυστραλία, Δημοκρατία της Ιρλανδίας, Βουλγαρία, Γερμανία, Ιαπωνία, Ισπανία, Ελλάδα, Πολωνία",
+      "index": 3350,
+      "subject_en": "Grzegorz Lato",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Κουρτ Βάλντχαϊμ",
+      "object": "Αυστρία",
+      "object_candidates": "Ισραήλ, Βιετνάμ, Ισπανία, Ελβετία, Κουρδιστάν, Αργεντινή, Αυστραλία, Φραγκφούρτη, Δημοκρατία της Ιρλανδίας, Αυστρία",
+      "index": 3351,
+      "subject_en": "Kurt Waldheim",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Μάργκαρετ Άτγουντ",
+      "object": "Καναδάς",
+      "object_candidates": "Αργεντινή, Νορβηγία, Βραζιλία, Γερμανία, Λίβανος, Αυστραλία, Δανία, Βουλγαρία, Κουρδιστάν, Καναδάς",
+      "index": 3352,
+      "subject_en": "Margaret Atwood",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Έντσο Φερράρι",
+      "object": "Ιταλία",
+      "object_candidates": "Ινδία, Λίβανος, Ισπανία, Αυστρία, Αργεντινή, Δημοκρατία της Ιρλανδίας, Καναδάς, Ισραήλ, Βραζιλία, Ιταλία",
+      "index": 3353,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Μπουρβίλ",
+      "object": "Γαλλία",
+      "object_candidates": "Ινδία, Νορβηγία, Αργεντινή, Αυστραλία, Ιαπωνία, Φραγκφούρτη, Βασίλειο της Αγγλίας, Ισραήλ, Ισπανία, Γαλλία",
+      "index": 3354,
+      "subject_en": "Bourvil",
+      "object_en": "France"
+    },
+    {
+      "subject": "Βόλφγκανγκ Πάουλι",
+      "object": "Αυστρία",
+      "object_candidates": "Καναδάς, Βιετνάμ, Δανία, Δημοκρατία της Ιρλανδίας, Σουηδία, Ελλάδα, Πολωνία, Ιαπωνία, Κουρδιστάν, Αυστρία",
+      "index": 3355,
+      "subject_en": "Wolfgang Pauli",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Κάρολος ΣΤ΄ της Γαλλίας",
+      "object": "Γαλλία",
+      "object_candidates": "Πολωνία, Αυστρία, Γερμανία, Δανία, Βουλγαρία, Ινδία, Καναδάς, Ισπανία, Δημοκρατία της Ιρλανδίας, Γαλλία",
+      "index": 3356,
+      "subject_en": "Charles VI of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Μισέλ Αούν",
+      "object": "Λίβανος",
+      "object_candidates": "Βιετνάμ, Δανία, Αργεντινή, Δημοκρατία της Ιρλανδίας, Ιαπωνία, Φραγκφούρτη, Βραζιλία, Πολωνία, Ιταλία, Λίβανος",
+      "index": 3357,
+      "subject_en": "Michel Aoun",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Μάγνους Κάρλσεν",
+      "object": "Νορβηγία",
+      "object_candidates": "Φραγκφούρτη, Ισπανία, Γαλλία, Κουρδιστάν, Αυστραλία, Ινδία, Αργεντινή, Λίβανος, Ελλάδα, Νορβηγία",
+      "index": 3358,
+      "subject_en": "Magnus Carlsen",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Χένρικ Σιενκιέβιτς",
+      "object": "Πολωνία",
+      "object_candidates": "Λίβανος, Βραζιλία, Ισραήλ, Ισπανία, Κατάρ, Ιαπωνία, Γαλλία, Δανία, Καναδάς, Πολωνία",
+      "index": 3359,
+      "subject_en": "Henryk Sienkiewicz",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Αρθούρος της Ουαλίας",
+      "object": "Βασίλειο της Αγγλίας",
+      "object_candidates": "Αργεντινή, Κατάρ, Ισπανία, Δημοκρατία της Ιρλανδίας, Νορβηγία, Πολωνία, Ιταλία, Σουηδία, Κουρδιστάν, Βασίλειο της Αγγλίας",
+      "index": 3360,
+      "subject_en": "Arthur, Prince of Wales",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Ιάκωβος Β΄ της Αγγλίας",
+      "object": "Βασίλειο της Αγγλίας",
+      "object_candidates": "Νορβηγία, Ελβετία, Βουλγαρία, Σουηδία, Βιετνάμ, Ινδία, Ελλάδα, Βραζιλία, Ισπανία, Βασίλειο της Αγγλίας",
+      "index": 3361,
+      "subject_en": "James VII and II",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Χαμάντ μπιν Χαλίφα αλ Θανί",
+      "object": "Κατάρ",
+      "object_candidates": "Ισπανία, Βουλγαρία, Ιταλία, Σουηδία, Ινδία, Πολωνία, Φραγκφούρτη, Ελβετία, Ιαπωνία, Κατάρ",
+      "index": 3362,
+      "subject_en": "Hamad bin Khalifa Al Thani",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Φρανθίσκο Γκόγια",
+      "object": "Ισπανία",
+      "object_candidates": "Ιταλία, Γαλλία, Πολωνία, Καναδάς, Ισραήλ, Αυστραλία, Λίβανος, Ελλάδα, Βραζιλία, Ισπανία",
+      "index": 3363,
+      "subject_en": "Francisco Goya",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Τζαλάλ Ταλαμπανί",
+      "object": "Κουρδιστάν",
+      "object_candidates": "Δημοκρατία της Ιρλανδίας, Βασίλειο της Αγγλίας, Ιταλία, Πολωνία, Γαλλία, Φραγκφούρτη, Κατάρ, Ελλάδα, Βουλγαρία, Κουρδιστάν",
+      "index": 3364,
+      "subject_en": "Jalal Talabani",
+      "object_en": "Kurdistan"
+    },
+    {
+      "subject": "Φλοριάνο Πεϊσότο",
+      "object": "Βραζιλία",
+      "object_candidates": "Φραγκφούρτη, Πολωνία, Σουηδία, Ιταλία, Κουρδιστάν, Νορβηγία, Αυστρία, Γαλλία, Ελβετία, Βραζιλία",
+      "index": 3365,
+      "subject_en": "Floriano Peixoto",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Αντώνης Σαμαράς",
+      "object": "Ελλάδα",
+      "object_candidates": "Βασίλειο της Αγγλίας, Αυστραλία, Δανία, Κατάρ, Ινδία, Ιταλία, Γαλλία, Αργεντινή, Λίβανος, Ελλάδα",
+      "index": 3366,
+      "subject_en": "Antonis Samaras",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Μπέπε Γκρίλο",
+      "object": "Ιταλία",
+      "object_candidates": "Βασίλειο της Αγγλίας, Ινδία, Ισπανία, Ελλάδα, Ισραήλ, Αυστραλία, Φραγκφούρτη, Γαλλία, Λίβανος, Ιταλία",
+      "index": 3367,
+      "subject_en": "Beppe Grillo",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Φρειδερίκος Θ΄ της Δανίας",
+      "object": "Δανία",
+      "object_candidates": "Κατάρ, Αυστρία, Καναδάς, Γαλλία, Νορβηγία, Φραγκφούρτη, Σουηδία, Αυστραλία, Βραζιλία, Δανία",
+      "index": 3368,
+      "subject_en": "Frederick IX of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Μάικλ Φασμπέντερ",
+      "object": "Δημοκρατία της Ιρλανδίας",
+      "object_candidates": "Καναδάς, Ισπανία, Κατάρ, Βραζιλία, Αυστρία, Κουρδιστάν, Γερμανία, Γαλλία, Βουλγαρία, Δημοκρατία της Ιρλανδίας",
+      "index": 3369,
+      "subject_en": "Michael Fassbender",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Αλεξάνδρα της Δανίας",
+      "object": "Δανία",
+      "object_candidates": "Αυστρία, Σουηδία, Αργεντινή, Ελβετία, Ισραήλ, Αυστραλία, Βραζιλία, Πολωνία, Βασίλειο της Αγγλίας, Δανία",
+      "index": 3370,
+      "subject_en": "Alexandra of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Μιγκέλ Ιδάλγο ι Κοστίγια",
+      "object": "Ισπανία",
+      "object_candidates": "Ισραήλ, Ελβετία, Φραγκφούρτη, Νορβηγία, Δημοκρατία της Ιρλανδίας, Βασίλειο της Αγγλίας, Ιταλία, Αργεντινή, Αυστραλία, Ισπανία",
+      "index": 3371,
+      "subject_en": "Miguel Hidalgo y Costilla",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Έντμουντ Χούσερλ",
+      "object": "Γερμανία",
+      "object_candidates": "Ιταλία, Λίβανος, Ινδία, Σουηδία, Πολωνία, Αυστρία, Γαλλία, Κουρδιστάν, Βιετνάμ, Γερμανία",
+      "index": 3372,
+      "subject_en": "Edmund Husserl",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Λίζε Μάιτνερ",
+      "object": "Σουηδία",
+      "object_candidates": "Ισπανία, Κατάρ, Ελβετία, Αυστρία, Λίβανος, Καναδάς, Αυστραλία, Γαλλία, Πολωνία, Σουηδία",
+      "index": 3373,
+      "subject_en": "Lise Meitner",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Αλβέρτος Β΄ του Βελγίου",
+      "object": "Βέλγιο",
+      "object_candidates": "Πολωνία, Σουηδία, Ιταλία, Κατάρ, Ελλάδα, Νορβηγία, Βιετνάμ, Ελβετία, Ισπανία, Βέλγιο",
+      "index": 3374,
+      "subject_en": "Albert II of Belgium",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Μαχαβιρασβάμι",
+      "object": "Ινδία",
+      "object_candidates": "Αργεντινή, Γερμανία, Βιετνάμ, Ιταλία, Πολωνία, Αυστραλία, Καναδάς, Κουρδιστάν, Βραζιλία, Ινδία",
+      "index": 3375,
+      "subject_en": "Mahavira",
+      "object_en": "India"
+    },
+    {
+      "subject": "Σβάντε Αρρένιους",
+      "object": "Σουηδία",
+      "object_candidates": "Αυστρία, Γερμανία, Ισραήλ, Βραζιλία, Νορβηγία, Κατάρ, Αυστραλία, Ελλάδα, Γαλλία, Σουηδία",
+      "index": 3376,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Μάριο Μόντι",
+      "object": "Ιταλία",
+      "object_candidates": "Ισπανία, Δανία, Ινδία, Γερμανία, Γαλλία, Δημοκρατία της Ιρλανδίας, Βουλγαρία, Κατάρ, Βασίλειο της Αγγλίας, Ιταλία",
+      "index": 3377,
+      "subject_en": "Mario Monti",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Τζουλς Ζανσέν",
+      "object": "Γαλλία",
+      "object_candidates": "Ινδία, Ισραήλ, Ισπανία, Δημοκρατία της Ιρλανδίας, Λίβανος, Πολωνία, Ελβετία, Δανία, Σουηδία, Γαλλία",
+      "index": 3378,
+      "subject_en": "Pierre Janssen",
+      "object_en": "France"
+    }
+  ],
+  "relation_id": "P27"
+}

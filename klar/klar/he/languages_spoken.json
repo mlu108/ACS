@@ -1,0 +1,846 @@
+{
+  "name": "languages_spoken",
+  "prompt_templates": [
+    "איזו שפה השתמש <subject> כדי לתקשר? התשובה היא: <mask>",
+    "באיזו שפה דיבר <subject>? התשובה היא: <mask>",
+    "איזו שפה דיבר <subject>? התשובה היא: <mask>",
+    "איזו שפה השתמש <subject> לתקשורת? התשובה היא: <mask>",
+    "אילו שפות דיבר <subject>? התשובה היא: <mask>",
+    " השפה ש-<subject> מדבר בה היא <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "צ'ארלס ברונסון",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, עברית, רוסית, גרמנית, שוודית, איטלקית, מצרית, נורווגית, פולנית, אנגלית",
+      "index": 4010,
+      "subject_en": "Charles Bronson",
+      "object_en": "English"
+    },
+    {
+      "subject": "ויליאם ג'יימס",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, אינדונזית, נורווגית, מצרית, צרפתית, פרסית, שוודית, רומנית, איטלקית, אנגלית",
+      "index": 4011,
+      "subject_en": "William James",
+      "object_en": "English"
+    },
+    {
+      "subject": "ארנה סולברג",
+      "object": "נורווגית",
+      "object_candidates": "לטינית, מצרית, אינדונזית, פרסית, אזרית, גרמנית, אנגלית, קוריאנית, צרפתית, נורווגית",
+      "index": 4012,
+      "subject_en": "Erna Solberg",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "אפרים קציר",
+      "object": "עברית",
+      "object_candidates": "קוריאנית, ספרדית, שוודית, איטלקית, רומנית, אנגלית, פולנית, לטינית, שפות סיניות, עברית",
+      "index": 4013,
+      "subject_en": "Ephraim Katzir",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "פארק צ'אן-ווק",
+      "object": "קוריאנית",
+      "object_candidates": "צרפתית, שפות סיניות, גרמנית, ספרדית, מצרית, רומנית, לטינית, פרסית, אזרית, קוריאנית",
+      "index": 4014,
+      "subject_en": "Park Chan-wook",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "נתניאל הות'ורן",
+      "object": "אנגלית",
+      "object_candidates": "שפות סיניות, הולנדית, צרפתית, הונגרית, אינדונזית, מצרית, לטינית, שוודית, רוסית, אנגלית",
+      "index": 4015,
+      "subject_en": "Nathaniel Hawthorne",
+      "object_en": "English"
+    },
+    {
+      "subject": "ג'יימס ארל ג'ונס",
+      "object": "אנגלית",
+      "object_candidates": "נורווגית, עברית, אינדונזית, ספרדית, הונגרית, הולנדית, לטינית, צרפתית, פינית, אנגלית",
+      "index": 4016,
+      "subject_en": "James Earl Jones",
+      "object_en": "English"
+    },
+    {
+      "subject": "תור היירדאל",
+      "object": "נורווגית",
+      "object_candidates": "לטינית, הולנדית, צרפתית, שוודית, קוריאנית, מצרית, אנגלית, רוסית, אינדונזית, נורווגית",
+      "index": 4017,
+      "subject_en": "Thor Heyerdahl",
+      "object_en": "Norwegian"
+    },
+    {
+      "subject": "ג'ייסון סטיית'האם",
+      "object": "אנגלית",
+      "object_candidates": "גרמנית, איטלקית, שפות סיניות, נורווגית, קוריאנית, הולנדית, רומנית, עברית, לטינית, אנגלית",
+      "index": 4018,
+      "subject_en": "Jason Statham",
+      "object_en": "English"
+    },
+    {
+      "subject": "מרי וולסטונקראפט",
+      "object": "צרפתית",
+      "object_candidates": "הונגרית, איטלקית, פינית, אנגלית, אינדונזית, הולנדית, מצרית, רוסית, נורווגית, צרפתית",
+      "index": 4019,
+      "subject_en": "Mary Wollstonecraft",
+      "object_en": "French"
+    },
+    {
+      "subject": "פרידה קאלו",
+      "object": "ספרדית",
+      "object_candidates": "פולנית, מצרית, הונגרית, שפות סיניות, נורווגית, איטלקית, פרסית, רוסית, עברית, ספרדית",
+      "index": 4020,
+      "subject_en": "Frida Kahlo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ז'אן מורו",
+      "object": "צרפתית",
+      "object_candidates": "נורווגית, רומנית, רוסית, עברית, שוודית, הולנדית, קוריאנית, לטינית, גרמנית, צרפתית",
+      "index": 4021,
+      "subject_en": "Jeanne Moreau",
+      "object_en": "French"
+    },
+    {
+      "subject": "נדיה בולאנז'ה",
+      "object": "צרפתית",
+      "object_candidates": "רומנית, רוסית, לטינית, אינדונזית, שפות סיניות, עברית, הולנדית, פינית, פולנית, צרפתית",
+      "index": 4022,
+      "subject_en": "Nadia Boulanger",
+      "object_en": "French"
+    },
+    {
+      "subject": "ויקטוריה סילבסטד",
+      "object": "צרפתית",
+      "object_candidates": "שפות סיניות, ספרדית, גרמנית, עברית, אנגלית, הונגרית, נורווגית, איטלקית, לטינית, צרפתית",
+      "index": 4023,
+      "subject_en": "Victoria Silvstedt",
+      "object_en": "French"
+    },
+    {
+      "subject": "אלפרד ראסל וולאס",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, גרמנית, נורווגית, מצרית, רומנית, שפות סיניות, אינדונזית, אזרית, לטינית, אנגלית",
+      "index": 4024,
+      "subject_en": "Alfred Russel Wallace",
+      "object_en": "English"
+    },
+    {
+      "subject": "רעמסס השני",
+      "object": "מצרית",
+      "object_candidates": "גרמנית, אנגלית, שוודית, פולנית, קוריאנית, עברית, רוסית, פרסית, פינית, מצרית",
+      "index": 4025,
+      "subject_en": "Ramesses II",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "כריסטוף ויליבלד גלוק",
+      "object": "גרמנית",
+      "object_candidates": "צרפתית, פינית, לטינית, מצרית, שפות סיניות, אנגלית, איטלקית, נורווגית, רוסית, גרמנית",
+      "index": 4026,
+      "subject_en": "Christoph Willibald von Gluck",
+      "object_en": "German"
+    },
+    {
+      "subject": "אברהם דה מואבר",
+      "object": "אנגלית",
+      "object_candidates": "ספרדית, הולנדית, הונגרית, אינדונזית, עברית, איטלקית, גרמנית, רומנית, שוודית, אנגלית",
+      "index": 4027,
+      "subject_en": "Abraham de Moivre",
+      "object_en": "English"
+    },
+    {
+      "subject": "אהוד ברק",
+      "object": "אנגלית",
+      "object_candidates": "קוריאנית, רומנית, הונגרית, פינית, צרפתית, לטינית, פרסית, ספרדית, אינדונזית, אנגלית",
+      "index": 4028,
+      "subject_en": "Ehud Barak",
+      "object_en": "English"
+    },
+    {
+      "subject": "יעקב סברדלוב",
+      "object": "רוסית",
+      "object_candidates": "שפות סיניות, פולנית, פינית, אנגלית, צרפתית, רומנית, ספרדית, שוודית, מצרית, רוסית",
+      "index": 4029,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "מרקוס ליקיניוס קראסוס",
+      "object": "לטינית",
+      "object_candidates": "צרפתית, רומנית, אזרית, פולנית, פינית, נורווגית, שפות סיניות, ספרדית, שוודית, לטינית",
+      "index": 4030,
+      "subject_en": "Marcus Licinius Crassus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ז'אן-ז'אק אנו",
+      "object": "צרפתית",
+      "object_candidates": "לטינית, רומנית, פולנית, אנגלית, אינדונזית, אזרית, איטלקית, שוודית, גרמנית, צרפתית",
+      "index": 4031,
+      "subject_en": "Jean-Jacques Annaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "ורגיליוס",
+      "object": "לטינית",
+      "object_candidates": "גרמנית, אינדונזית, פולנית, פרסית, קוריאנית, מצרית, אזרית, ספרדית, צרפתית, לטינית",
+      "index": 4032,
+      "subject_en": "Virgil",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "האם תרזה",
+      "object": "אנגלית",
+      "object_candidates": "מצרית, קוריאנית, אינדונזית, שפות סיניות, נורווגית, פינית, פרסית, ספרדית, פולנית, אנגלית",
+      "index": 4033,
+      "subject_en": "Mother Teresa",
+      "object_en": "English"
+    },
+    {
+      "subject": "סטיב ביקו",
+      "object": "אנגלית",
+      "object_candidates": "הולנדית, פינית, רוסית, נורווגית, אזרית, פרסית, פולנית, לטינית, שוודית, אנגלית",
+      "index": 4034,
+      "subject_en": "Steve Biko",
+      "object_en": "English"
+    },
+    {
+      "subject": "כריסטיאן הויגנס",
+      "object": "לטינית",
+      "object_candidates": "שוודית, שפות סיניות, ספרדית, אינדונזית, צרפתית, מצרית, פולנית, אנגלית, גרמנית, לטינית",
+      "index": 4035,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "קלוד-אנרי דה סן-סימון",
+      "object": "צרפתית",
+      "object_candidates": "קוריאנית, פינית, לטינית, עברית, פרסית, נורווגית, שפות סיניות, רומנית, איטלקית, צרפתית",
+      "index": 4036,
+      "subject_en": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object_en": "French"
+    },
+    {
+      "subject": "ג'ורג' מייקל",
+      "object": "אנגלית",
+      "object_candidates": "מצרית, גרמנית, פולנית, איטלקית, אינדונזית, עברית, קוריאנית, פרסית, פינית, אנגלית",
+      "index": 4037,
+      "subject_en": "George Michael",
+      "object_en": "English"
+    },
+    {
+      "subject": "ג'וזפה פאנו",
+      "object": "איטלקית",
+      "object_candidates": "פינית, עברית, שוודית, רומנית, צרפתית, לטינית, נורווגית, הולנדית, קוריאנית, איטלקית",
+      "index": 4038,
+      "subject_en": "Giuseppe Peano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "וילם-אלכסנדר",
+      "object": "הולנדית",
+      "object_candidates": "רוסית, אנגלית, שוודית, ספרדית, צרפתית, אינדונזית, איטלקית, עברית, פינית, הולנדית",
+      "index": 4039,
+      "subject_en": "Willem-Alexander of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "טריסטן צארה",
+      "object": "צרפתית",
+      "object_candidates": "ספרדית, נורווגית, עברית, לטינית, שוודית, הולנדית, אינדונזית, קוריאנית, שפות סיניות, צרפתית",
+      "index": 4040,
+      "subject_en": "Tristan Tzara",
+      "object_en": "French"
+    },
+    {
+      "subject": "ריצ'רד ארקרייט",
+      "object": "אנגלית",
+      "object_candidates": "לטינית, נורווגית, איטלקית, אינדונזית, פינית, הולנדית, צרפתית, רוסית, שוודית, אנגלית",
+      "index": 4041,
+      "subject_en": "Richard Arkwright",
+      "object_en": "English"
+    },
+    {
+      "subject": "ז'וזפ גוארדיולה",
+      "object": "ספרדית",
+      "object_candidates": "שפות סיניות, אינדונזית, הולנדית, אזרית, מצרית, רוסית, צרפתית, לטינית, איטלקית, ספרדית",
+      "index": 4042,
+      "subject_en": "Pep Guardiola",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "אימרה נוג'",
+      "object": "הונגרית",
+      "object_candidates": "אנגלית, איטלקית, גרמנית, עברית, פינית, רומנית, הולנדית, שוודית, צרפתית, הונגרית",
+      "index": 4043,
+      "subject_en": "Imre Nagy",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "וילם איינטהובן",
+      "object": "הולנדית",
+      "object_candidates": "גרמנית, איטלקית, אנגלית, הונגרית, רוסית, אינדונזית, פרסית, קוריאנית, פולנית, הולנדית",
+      "index": 4044,
+      "subject_en": "Willem Einthoven",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "מרגרטה השנייה, מלכת דנמרק",
+      "object": "שוודית",
+      "object_candidates": "עברית, פולנית, רומנית, אזרית, איטלקית, מצרית, צרפתית, שפות סיניות, ספרדית, שוודית",
+      "index": 4045,
+      "subject_en": "Margrethe II of Denmark",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "סאטינדרה נאת בוז",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, לטינית, עברית, ספרדית, אזרית, אינדונזית, איטלקית, מצרית, פינית, אנגלית",
+      "index": 4046,
+      "subject_en": "Satyendra Nath Bose",
+      "object_en": "English"
+    },
+    {
+      "subject": "ארנסט שקלטון",
+      "object": "אנגלית",
+      "object_candidates": "לטינית, אינדונזית, הונגרית, ספרדית, איטלקית, צרפתית, עברית, גרמנית, פרסית, אנגלית",
+      "index": 4047,
+      "subject_en": "Ernest Shackleton",
+      "object_en": "English"
+    },
+    {
+      "subject": "סלבדור איינדה",
+      "object": "ספרדית",
+      "object_candidates": "אינדונזית, הולנדית, איטלקית, רומנית, אזרית, לטינית, הונגרית, שוודית, נורווגית, ספרדית",
+      "index": 4048,
+      "subject_en": "Salvador Allende",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ניקולאי לסקוב",
+      "object": "רוסית",
+      "object_candidates": "שפות סיניות, גרמנית, רומנית, נורווגית, אנגלית, איטלקית, עברית, אינדונזית, ספרדית, רוסית",
+      "index": 4049,
+      "subject_en": "Nikolai Leskov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ויטוריו אמנואלה השני, מלך איטליה",
+      "object": "איטלקית",
+      "object_candidates": "פולנית, מצרית, הולנדית, עברית, גרמנית, אנגלית, קוריאנית, פינית, רומנית, איטלקית",
+      "index": 4050,
+      "subject_en": "Victor Emmanuel II of Savoy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ג'ורג'ה אנסקו",
+      "object": "רומנית",
+      "object_candidates": "הולנדית, צרפתית, איטלקית, אזרית, מצרית, נורווגית, אינדונזית, רוסית, קוריאנית, רומנית",
+      "index": 4051,
+      "subject_en": "George Enescu",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "גלוריה אסטפן",
+      "object": "ספרדית",
+      "object_candidates": "רוסית, שוודית, אינדונזית, פרסית, צרפתית, פינית, פולנית, נורווגית, קוריאנית, ספרדית",
+      "index": 4052,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מייקל מור",
+      "object": "אנגלית",
+      "object_candidates": "שפות סיניות, עברית, אזרית, לטינית, הונגרית, אינדונזית, ספרדית, פינית, קוריאנית, אנגלית",
+      "index": 4053,
+      "subject_en": "Michael Moore",
+      "object_en": "English"
+    },
+    {
+      "subject": "פייר בומרשה",
+      "object": "צרפתית",
+      "object_candidates": "רומנית, שפות סיניות, איטלקית, אזרית, עברית, קוריאנית, פולנית, גרמנית, ספרדית, צרפתית",
+      "index": 4054,
+      "subject_en": "Pierre Beaumarchais",
+      "object_en": "French"
+    },
+    {
+      "subject": "בנדטו קרוצ'ה",
+      "object": "איטלקית",
+      "object_candidates": "רוסית, הונגרית, נורווגית, פרסית, ספרדית, לטינית, שוודית, קוריאנית, מצרית, איטלקית",
+      "index": 4055,
+      "subject_en": "Benedetto Croce",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ראווי שנקר",
+      "object": "אנגלית",
+      "object_candidates": "מצרית, נורווגית, אינדונזית, הונגרית, גרמנית, קוריאנית, עברית, פולנית, לטינית, אנגלית",
+      "index": 4056,
+      "subject_en": "Ravi Shankar",
+      "object_en": "English"
+    },
+    {
+      "subject": "סם מנדס",
+      "object": "אנגלית",
+      "object_candidates": "צרפתית, פינית, שוודית, אינדונזית, עברית, רומנית, פולנית, פרסית, קוריאנית, אנגלית",
+      "index": 4057,
+      "subject_en": "Sam Mendes",
+      "object_en": "English"
+    },
+    {
+      "subject": "איוואן בונין",
+      "object": "רוסית",
+      "object_candidates": "גרמנית, לטינית, רומנית, הולנדית, פרסית, פולנית, אנגלית, צרפתית, ספרדית, רוסית",
+      "index": 4058,
+      "subject_en": "Ivan Bunin",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "אבולחסן בני-סדר",
+      "object": "פרסית",
+      "object_candidates": "גרמנית, פולנית, מצרית, נורווגית, הונגרית, רוסית, אזרית, רומנית, אנגלית, פרסית",
+      "index": 4059,
+      "subject_en": "Abulhassan Banisadr",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "אנגון",
+      "object": "אינדונזית",
+      "object_candidates": "רוסית, קוריאנית, פולנית, לטינית, אזרית, נורווגית, גרמנית, הולנדית, פינית, אינדונזית",
+      "index": 4060,
+      "subject_en": "Anggun",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "קלארק גייבל",
+      "object": "אנגלית",
+      "object_candidates": "שוודית, אזרית, פינית, מצרית, אינדונזית, קוריאנית, רוסית, הונגרית, נורווגית, אנגלית",
+      "index": 4061,
+      "subject_en": "Clark Gable",
+      "object_en": "English"
+    },
+    {
+      "subject": "ז'אק לאקאן",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, פינית, ספרדית, רומנית, פרסית, הונגרית, אינדונזית, אנגלית, שפות סיניות, צרפתית",
+      "index": 4062,
+      "subject_en": "Jacques Lacan",
+      "object_en": "French"
+    },
+    {
+      "subject": "ג'יימס גארנר",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, פולנית, קוריאנית, צרפתית, נורווגית, ספרדית, גרמנית, פינית, מצרית, אנגלית",
+      "index": 4063,
+      "subject_en": "James Garner",
+      "object_en": "English"
+    },
+    {
+      "subject": "מנואל ואלס",
+      "object": "ספרדית",
+      "object_candidates": "הולנדית, פרסית, אינדונזית, קוריאנית, הונגרית, איטלקית, מצרית, צרפתית, שוודית, ספרדית",
+      "index": 4064,
+      "subject_en": "Manuel Valls",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "עבאס קיארוסטמי",
+      "object": "פרסית",
+      "object_candidates": "הונגרית, עברית, אזרית, לטינית, הולנדית, ספרדית, פולנית, צרפתית, קוריאנית, פרסית",
+      "index": 4065,
+      "subject_en": "Abbas Kiarostami",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "אוליבר קרומוול",
+      "object": "אנגלית",
+      "object_candidates": "אינדונזית, נורווגית, שוודית, הולנדית, צרפתית, שפות סיניות, גרמנית, עברית, הונגרית, אנגלית",
+      "index": 4066,
+      "subject_en": "Oliver Cromwell",
+      "object_en": "English"
+    },
+    {
+      "subject": "אוגוסטו פינושה",
+      "object": "ספרדית",
+      "object_candidates": "קוריאנית, לטינית, רוסית, גרמנית, צרפתית, אינדונזית, פולנית, הונגרית, פרסית, ספרדית",
+      "index": 4067,
+      "subject_en": "Augusto Pinochet",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "פרנסיס פולנק",
+      "object": "צרפתית",
+      "object_candidates": "עברית, אנגלית, ספרדית, רוסית, פולנית, אינדונזית, שוודית, שפות סיניות, קוריאנית, צרפתית",
+      "index": 4068,
+      "subject_en": "Francis Poulenc",
+      "object_en": "French"
+    },
+    {
+      "subject": "ז'יל מאסנה",
+      "object": "צרפתית",
+      "object_candidates": "איטלקית, עברית, הולנדית, הונגרית, נורווגית, פינית, אזרית, פולנית, שפות סיניות, צרפתית",
+      "index": 4069,
+      "subject_en": "Jules Massenet",
+      "object_en": "French"
+    },
+    {
+      "subject": "קרלוס מרצ'נה",
+      "object": "ספרדית",
+      "object_candidates": "פרסית, אינדונזית, שפות סיניות, פולנית, צרפתית, שוודית, אזרית, לטינית, גרמנית, ספרדית",
+      "index": 4070,
+      "subject_en": "Carlos Marchena",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "אליעזר לודוויג זמנהוף",
+      "object": "אנגלית",
+      "object_candidates": "קוריאנית, מצרית, לטינית, רוסית, עברית, הונגרית, רומנית, פולנית, גרמנית, אנגלית",
+      "index": 4071,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "English"
+    },
+    {
+      "subject": "מוחמד עלי",
+      "object": "אנגלית",
+      "object_candidates": "גרמנית, מצרית, קוריאנית, ספרדית, שפות סיניות, לטינית, הונגרית, אינדונזית, צרפתית, אנגלית",
+      "index": 4072,
+      "subject_en": "Muhammad Ali",
+      "object_en": "English"
+    },
+    {
+      "subject": "אנה מניאני",
+      "object": "איטלקית",
+      "object_candidates": "אנגלית, אינדונזית, שוודית, הולנדית, גרמנית, מצרית, ספרדית, פולנית, פרסית, איטלקית",
+      "index": 4073,
+      "subject_en": "Anna Magnani",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "אבבא",
+      "object": "שוודית",
+      "object_candidates": "עברית, שפות סיניות, נורווגית, רוסית, פולנית, לטינית, רומנית, אנגלית, איטלקית, שוודית",
+      "index": 4074,
+      "subject_en": "ABBA",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "ישו",
+      "object": "עברית",
+      "object_candidates": "פרסית, רוסית, נורווגית, גרמנית, פולנית, ספרדית, אזרית, צרפתית, פינית, עברית",
+      "index": 4075,
+      "subject_en": "Jesus Christ",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "ג'וזפה טורנאטורה",
+      "object": "איטלקית",
+      "object_candidates": "פינית, הונגרית, קוריאנית, ספרדית, רומנית, עברית, שוודית, גרמנית, שפות סיניות, איטלקית",
+      "index": 4076,
+      "subject_en": "Giuseppe Tornatore",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "גוון סטפאני",
+      "object": "אנגלית",
+      "object_candidates": "מצרית, נורווגית, צרפתית, אזרית, שפות סיניות, גרמנית, איטלקית, לטינית, רומנית, אנגלית",
+      "index": 4077,
+      "subject_en": "Gwen Stefani",
+      "object_en": "English"
+    },
+    {
+      "subject": "טקיטוס",
+      "object": "לטינית",
+      "object_candidates": "רומנית, פולנית, ספרדית, נורווגית, פינית, הולנדית, איטלקית, קוריאנית, הונגרית, לטינית",
+      "index": 4078,
+      "subject_en": "Tacitus",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "אלאניס מוריסט",
+      "object": "אנגלית",
+      "object_candidates": "פינית, אינדונזית, שוודית, אזרית, הולנדית, רוסית, לטינית, פרסית, פולנית, אנגלית",
+      "index": 4079,
+      "subject_en": "Alanis Morissette",
+      "object_en": "English"
+    },
+    {
+      "subject": "וויצ'ך ירוזלסקי",
+      "object": "פולנית",
+      "object_candidates": "פינית, איטלקית, צרפתית, פרסית, גרמנית, הולנדית, קוריאנית, שפות סיניות, אינדונזית, פולנית",
+      "index": 4080,
+      "subject_en": "Wojciech Jaruzelski",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "קיילי מינוג",
+      "object": "אנגלית",
+      "object_candidates": "עברית, פרסית, הונגרית, גרמנית, צרפתית, אזרית, רוסית, מצרית, אינדונזית, אנגלית",
+      "index": 4081,
+      "subject_en": "Kylie Minogue",
+      "object_en": "English"
+    },
+    {
+      "subject": "פואנטס, קרלוס",
+      "object": "ספרדית",
+      "object_candidates": "אזרית, קוריאנית, שפות סיניות, לטינית, שוודית, איטלקית, פרסית, הונגרית, מצרית, ספרדית",
+      "index": 4082,
+      "subject_en": "Carlos Fuentes",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "דווייט אייזנהאואר",
+      "object": "אנגלית",
+      "object_candidates": "נורווגית, פולנית, פרסית, שוודית, לטינית, הונגרית, עברית, צרפתית, פינית, אנגלית",
+      "index": 4083,
+      "subject_en": "Dwight D. Eisenhower",
+      "object_en": "English"
+    },
+    {
+      "subject": "תומא פיקטי",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, פרסית, לטינית, שוודית, נורווגית, רומנית, אנגלית, הולנדית, רוסית, צרפתית",
+      "index": 4084,
+      "subject_en": "Thomas Piketty",
+      "object_en": "French"
+    },
+    {
+      "subject": "אלכסיי ברוסילוב",
+      "object": "רוסית",
+      "object_candidates": "גרמנית, עברית, אינדונזית, פולנית, איטלקית, אנגלית, לטינית, רומנית, מצרית, רוסית",
+      "index": 4085,
+      "subject_en": "Aleksey Brusilov",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "לב קמנייב",
+      "object": "רוסית",
+      "object_candidates": "צרפתית, ספרדית, רומנית, שפות סיניות, הונגרית, הולנדית, אזרית, לטינית, נורווגית, רוסית",
+      "index": 4086,
+      "subject_en": "Lev Kamenev",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ג'ון אפדייק",
+      "object": "אנגלית",
+      "object_candidates": "רוסית, קוריאנית, איטלקית, הונגרית, צרפתית, אינדונזית, שפות סיניות, הולנדית, עברית, אנגלית",
+      "index": 4087,
+      "subject_en": "John Updike",
+      "object_en": "English"
+    },
+    {
+      "subject": "אן פריו",
+      "object": "צרפתית",
+      "object_candidates": "הונגרית, אזרית, אנגלית, ספרדית, עברית, שפות סיניות, פינית, רוסית, מצרית, צרפתית",
+      "index": 4088,
+      "subject_en": "Anne Parillaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "פליפה החמישי, מלך ספרד",
+      "object": "ספרדית",
+      "object_candidates": "עברית, רומנית, פינית, אינדונזית, אנגלית, הולנדית, צרפתית, הונגרית, נורווגית, ספרדית",
+      "index": 4089,
+      "subject_en": "Philip V of Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "עמנואל סנייה",
+      "object": "צרפתית",
+      "object_candidates": "גרמנית, אזרית, ספרדית, הונגרית, שפות סיניות, פולנית, נורווגית, מצרית, איטלקית, צרפתית",
+      "index": 4090,
+      "subject_en": "Emmanuelle Seigner",
+      "object_en": "French"
+    },
+    {
+      "subject": "ארנסט רתרפורד",
+      "object": "אנגלית",
+      "object_candidates": "קוריאנית, גרמנית, פרסית, רומנית, איטלקית, ספרדית, שפות סיניות, מצרית, עברית, אנגלית",
+      "index": 4091,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "English"
+    },
+    {
+      "subject": "יוג'ין או'ניל",
+      "object": "אנגלית",
+      "object_candidates": "פינית, פרסית, שוודית, שפות סיניות, רוסית, אינדונזית, צרפתית, פולנית, הונגרית, אנגלית",
+      "index": 4092,
+      "subject_en": "Eugene O'Neill",
+      "object_en": "English"
+    },
+    {
+      "subject": "ויליאם תומסון",
+      "object": "אנגלית",
+      "object_candidates": "עברית, מצרית, נורווגית, צרפתית, גרמנית, ספרדית, לטינית, אינדונזית, אזרית, אנגלית",
+      "index": 4093,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "English"
+    },
+    {
+      "subject": "ג'ניפר הדסון",
+      "object": "אנגלית",
+      "object_candidates": "עברית, הולנדית, פרסית, רומנית, לטינית, שוודית, אינדונזית, פולנית, קוריאנית, אנגלית",
+      "index": 4094,
+      "subject_en": "Jennifer Hudson",
+      "object_en": "English"
+    },
+    {
+      "subject": "הנרי קיסינג'ר",
+      "object": "אנגלית",
+      "object_candidates": "עברית, אינדונזית, גרמנית, לטינית, שוודית, אזרית, פולנית, רומנית, הונגרית, אנגלית",
+      "index": 4095,
+      "subject_en": "Henry Kissinger",
+      "object_en": "English"
+    },
+    {
+      "subject": "פיוס העשירי",
+      "object": "לטינית",
+      "object_candidates": "פולנית, הונגרית, צרפתית, שפות סיניות, רומנית, אנגלית, קוריאנית, נורווגית, שוודית, לטינית",
+      "index": 4096,
+      "subject_en": "Pius X",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "אוזייר חג'יביוב",
+      "object": "אזרית",
+      "object_candidates": "איטלקית, הונגרית, רומנית, נורווגית, גרמנית, אנגלית, ספרדית, פולנית, פרסית, אזרית",
+      "index": 4097,
+      "subject_en": "Uzeyir Hajibeyov",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "תומאס הובס",
+      "object": "לטינית",
+      "object_candidates": "גרמנית, מצרית, עברית, שוודית, אנגלית, רומנית, פינית, איטלקית, רוסית, לטינית",
+      "index": 4098,
+      "subject_en": "Thomas Hobbes",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "ג'ו שי",
+      "object": "שפות סיניות",
+      "object_candidates": "פרסית, אינדונזית, פינית, לטינית, מצרית, הולנדית, ספרדית, שוודית, קוריאנית, שפות סיניות",
+      "index": 4099,
+      "subject_en": "Zhu Xi",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "גד אלמלח",
+      "object": "צרפתית",
+      "object_candidates": "רוסית, שפות סיניות, מצרית, ספרדית, אינדונזית, לטינית, אנגלית, איטלקית, עברית, צרפתית",
+      "index": 4100,
+      "subject_en": "Gad Elmaleh",
+      "object_en": "French"
+    },
+    {
+      "subject": "אלברט ריירה",
+      "object": "ספרדית",
+      "object_candidates": "עברית, הולנדית, מצרית, פולנית, שפות סיניות, נורווגית, אנגלית, הונגרית, לטינית, ספרדית",
+      "index": 4101,
+      "subject_en": "Albert Riera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "יוהאן אוגוסט סטרינדברג",
+      "object": "שוודית",
+      "object_candidates": "מצרית, הולנדית, לטינית, פרסית, אינדונזית, עברית, אנגלית, שפות סיניות, פולנית, שוודית",
+      "index": 4102,
+      "subject_en": "August Strindberg",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "קריסטין סקוט-תומאס",
+      "object": "צרפתית",
+      "object_candidates": "שוודית, הונגרית, רומנית, גרמנית, הולנדית, מצרית, איטלקית, פינית, אזרית, צרפתית",
+      "index": 4103,
+      "subject_en": "Kristin Scott Thomas",
+      "object_en": "French"
+    },
+    {
+      "subject": "תומאס הרדי",
+      "object": "אנגלית",
+      "object_candidates": "לטינית, שפות סיניות, הונגרית, רוסית, איטלקית, קוריאנית, אזרית, גרמנית, פרסית, אנגלית",
+      "index": 4104,
+      "subject_en": "Thomas Hardy",
+      "object_en": "English"
+    },
+    {
+      "subject": "וולטר קרונקייט",
+      "object": "אנגלית",
+      "object_candidates": "פולנית, הונגרית, רומנית, פרסית, רוסית, גרמנית, עברית, קוריאנית, אזרית, אנגלית",
+      "index": 4105,
+      "subject_en": "Walter Cronkite",
+      "object_en": "English"
+    },
+    {
+      "subject": "רמב\"ם",
+      "object": "עברית",
+      "object_candidates": "אנגלית, פינית, אזרית, גרמנית, איטלקית, צרפתית, נורווגית, לטינית, שפות סיניות, עברית",
+      "index": 4106,
+      "subject_en": "Moshe ben Maimon",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "יועאן קרויף",
+      "object": "הולנדית",
+      "object_candidates": "פינית, שפות סיניות, פרסית, לטינית, צרפתית, נורווגית, רומנית, ספרדית, גרמנית, הולנדית",
+      "index": 4107,
+      "subject_en": "Johan Cruyff",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "גאו שינג'יאן",
+      "object": "שפות סיניות",
+      "object_candidates": "רומנית, קוריאנית, שוודית, נורווגית, רוסית, צרפתית, אזרית, ספרדית, הונגרית, שפות סיניות",
+      "index": 4108,
+      "subject_en": "Gao Xingjian",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "מיכאיל חודורקובסקי",
+      "object": "רוסית",
+      "object_candidates": "אנגלית, שפות סיניות, פינית, פולנית, מצרית, הונגרית, שוודית, פרסית, אינדונזית, רוסית",
+      "index": 4109,
+      "subject_en": "Mikhail Khodorkovsky",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ז'אן סיבליוס",
+      "object": "פינית",
+      "object_candidates": "אזרית, שפות סיניות, פולנית, מצרית, אנגלית, נורווגית, הונגרית, הולנדית, רוסית, פינית",
+      "index": 4110,
+      "subject_en": "Jean Sibelius",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אליעזר לודוויג זמנהוף",
+      "object": "רוסית",
+      "object_candidates": "מצרית, אזרית, לטינית, פינית, פולנית, רומנית, הונגרית, אינדונזית, נורווגית, רוסית",
+      "index": 4111,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פרימן דייסון",
+      "object": "אנגלית",
+      "object_candidates": "גרמנית, צרפתית, שוודית, אינדונזית, רומנית, שפות סיניות, פרסית, לטינית, איטלקית, אנגלית",
+      "index": 4112,
+      "subject_en": "Freeman Dyson",
+      "object_en": "English"
+    },
+    {
+      "subject": "אלבר קאמי",
+      "object": "צרפתית",
+      "object_candidates": "רוסית, פרסית, פולנית, הונגרית, עברית, איטלקית, מצרית, אנגלית, ספרדית, צרפתית",
+      "index": 4113,
+      "subject_en": "Albert Camus",
+      "object_en": "French"
+    }
+  ],
+  "relation_id": "P1412"
+}

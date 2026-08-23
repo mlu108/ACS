@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "Где расположена столица <subject>? Ответ: <mask>",
+    "Какая столица <subject>? Ответ: <mask>",
+    "Какой город служит столицей <subject>? Ответ: <mask>",
+    "Назовите столицу <subject>. Ответ: <mask>",
+    "Где у <subject> своя столица? Ответ: <mask>",
+    " Столица <subject> называется <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Азербайджан",
+      "object": "Баку",
+      "object_candidates": "Гвадалахара, Коломбо, Пирр, Джорджтаун, Бейрут, Алеппо, Линкольн, Дарвин, Вавилон, Баку",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Небраска",
+      "object": "Линкольн",
+      "object_candidates": "Амстердам, Дели, Уинчестер, Денвер, Хобарт, Тулуза, Салоники, София, Эксетер, Линкольн",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "Гэмпшир",
+      "object": "Уинчестер",
+      "object_candidates": "Аннаполис, Перт, Венеция, Палермо, Ницца, Анкара, Джакарта, Нашвилл, Гамильтон, Уинчестер",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Александрия",
+      "object": "Александрия",
+      "object_candidates": "Багдад, Токио, Белфаст, Берген, Риверсайд, Барселона, Карлайл, Осло, Киото, Александрия",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "Королевство Италия",
+      "object": "Флоренция",
+      "object_candidates": "Аннаполис, Кингстон, Виннипег, Денвер, Уинчестер, Линкольн, Бухарест, Вестминстер, Толедо, Флоренция",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Великое княжество Финляндское",
+      "object": "Хельсинки",
+      "object_candidates": "Эдо, Мадрид, Казань, Триполи, Лондон, Крайстчерч, Майнц, Вена, Берн, Хельсинки",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Телангана",
+      "object": "Хайдарабад",
+      "object_candidates": "Венеция, Братислава, Аделаида, Монтгомери, Мумбаи, Таллин, Оттава, Хельсинки, Ницца, Хайдарабад",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Южная Австралия",
+      "object": "Аделаида",
+      "object_candidates": "Сеул, Чарлстон, Лозанна, Кардифф, Мемфис, Херефорд, Тирана, Эдо, Неаполь, Аделаида",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "Шотландское королевство",
+      "object": "Эдинбург",
+      "object_candidates": "Лакхнау, Провиденс, Тирана, Тур, Бари, Анкара, Шайенн, Сараево, Загреб, Эдинбург",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "Польская Республика",
+      "object": "Варшава",
+      "object_candidates": "Хартфорд, Торонто, Баку, Константинополь, Вильнюс, Дарвин, Кингстон, Майами, Оксфорд, Варшава",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Кентербери",
+      "object": "Крайстчерч",
+      "object_candidates": "Хобарт, Генуя, Канберра, Бисмарк, Брюссель, Пекин, Валенсия, Майнц, Херефорд, Крайстчерч",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "Королевство Франция",
+      "object": "Париж",
+      "object_candidates": "Лиссабон, Вестминстер, Брюссель, Оттава, Дрезден, Хайдарабад, Мюнхен, Ченнаи, Пекин, Париж",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Альберта",
+      "object": "Эдмонтон",
+      "object_candidates": "Корк, Галифакс, Бойсе, Брест, Багдад, Вестминстер, Дели, Таллин, Аделаида, Эдмонтон",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "Германия",
+      "object": "Берлин",
+      "object_candidates": "Аннаполис, Любляна, Палермо, Неаполь, Иерусалим, Осло, Берн, Стамбул, Казань, Берлин",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Индиана",
+      "object": "Индианаполис",
+      "object_candidates": "Калькутта, Ченнаи, Колумбия, Одесса, Тайбэй, Гавана, Дубай, Прага, Кембридж, Индианаполис",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "Вторая французская империя",
+      "object": "Париж",
+      "object_candidates": "Копенгаген, Лансинг, Болонья, Аделаида, Окленд, Берген, Оттава, Манила, Иерусалим, Париж",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Кембриджшир",
+      "object": "Кембридж",
+      "object_candidates": "Дели, Линкольн, Киль, Бухарест, Барселона, Киев, Гамильтон, Нанкин, Тулуза, Кембридж",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "Королевство Сицилия",
+      "object": "Неаполь",
+      "object_candidates": "Стокгольм, Киото, Пирр, Канберра, Окленд, Москва, Прага, Казань, Дублин, Неаполь",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Эндр и Луара",
+      "object": "Тур",
+      "object_candidates": "Джорджтаун, Берлин, Стамбул, Монтевидео, Карачи, Джакарта, Брюссель, Вена, Барселона, Тур",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "Апулия",
+      "object": "Бари",
+      "object_candidates": "Уотерфорд, Сантьяго, Херефорд, Иерусалим, Голуэй, Лансинг, Лакхнау, Майами, Гаррисберг, Бари",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "Восточная Фландрия",
+      "object": "Гент",
+      "object_candidates": "Майнц, Джэксон, Сиракуза, Киев, Мумбаи, Амстердам, Тур, Вустер, Сакраменто, Гент",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "Дания",
+      "object": "Копенгаген",
+      "object_candidates": "Джакарта, Флоренция, Вильнюс, Эдо, Лилль, Манила, Толедо, Неаполь, Мемфис, Копенгаген",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "Мичиган",
+      "object": "Лансинг",
+      "object_candidates": "Данидин, Дели, Флоренция, Дублин, Сакраменто, Лиссабон, Кембридж, Эдмонтон, Сага, Лансинг",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "Султанат Айюбидов",
+      "object": "Каир",
+      "object_candidates": "Канберра, Глостер, Рим, Лондон, Генуя, Мекка, Уотерфорд, Нанкин, Медина, Каир",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Праведный халифат",
+      "object": "Медина",
+      "object_candidates": "Севилья, Виннипег, Братислава, Брюссель, Мюнхен, Таллин, Париж, Сакраменто, Тур, Медина",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Сёгунат Токугава",
+      "object": "Эдо",
+      "object_candidates": "Пальма, Гаррисберг, Хельсинки, Милан, Виннипег, Таллин, Лестер, Вавилон, Конкорд, Эдо",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "СССР",
+      "object": "Москва",
+      "object_candidates": "Барселона, Триполи, Вавилон, Бейрут, Вестминстер, Баку, Бордо, Нашвилл, Гонолулу, Москва",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Королевство Румыния",
+      "object": "Бухарест",
+      "object_candidates": "Аден, Галифакс, Токио, Окленд, Сантьяго, Кингстон, Барселона, Иерусалим, Тайбэй, Бухарест",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "Тасмания",
+      "object": "Хобарт",
+      "object_candidates": "Кембридж, Вена, Берген, Берн, Эдмонтон, Рига, Неаполь, Мадисон, Линкольн, Хобарт",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "Лимерик",
+      "object": "Лимерик",
+      "object_candidates": "Салоники, Колумбия, Лестер, Сиэтл, Флоренция, Колумбус, Виннипег, Каракас, Константинополь, Лимерик",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "Фатимидский халифат",
+      "object": "Каир",
+      "object_candidates": "Лондон, Дарвин, Оттава, Салоники, Риверсайд, Париж, Берлин, Киев, Хиросима, Каир",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Окленд",
+      "object": "Окленд",
+      "object_candidates": "Копенгаген, Лестер, София, Аннаполис, Лозанна, Хиросима, Алжир, Гап, Оксфорд, Окленд",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "Нью-Гэмпшир",
+      "object": "Конкорд",
+      "object_candidates": "Чарлстон, Киото, Зальцбург, Риверсайд, Брисбен, Торонто, Люблин, Бордо, Эдинбург, Конкорд",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "Одесская область",
+      "object": "Одесса",
+      "object_candidates": "Перт, Ричмонд, Тур, Алеппо, Тулуза, Мекка, Вавилон, Загреб, Глостер, Одесса",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "Австралия",
+      "object": "Канберра",
+      "object_candidates": "Ганновер, Эксетер, Денвер, Херефорд, Манчестер, Хиросима, Оттава, Джэксон, Сейлем, Канберра",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Османская империя",
+      "object": "Стамбул",
+      "object_candidates": "Тайбэй, Генуя, Болонья, Бейрут, Загреб, Флоренция, Гамильтон, Барселона, Ереван, Стамбул",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Юго-Западная Англия",
+      "object": "Бристоль",
+      "object_candidates": "Баку, Анкара, Мадисон, Бейрут, Вена, Бостон, Бари, Киото, Аугсбург, Бристоль",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "Техас",
+      "object": "Остин",
+      "object_candidates": "Белград, Майами, Кардифф, Любляна, Берн, Мемфис, Рим, Коломбо, Страсбург, Остин",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "Латинская империя",
+      "object": "Константинополь",
+      "object_candidates": "Пирр, Париж, Колумбус, Уотерфорд, Монтевидео, Будапешт, Гавана, Лакхнау, Мадисон, Константинополь",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Венгрия",
+      "object": "Будапешт",
+      "object_candidates": "Глостер, Валенсия, Нагоя, Карлайл, Оксфорд, Базель, Индианаполис, Киль, Амстердам, Будапешт",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Россия",
+      "object": "Москва",
+      "object_candidates": "Иерусалим, Шайенн, Хиросима, Чарлстон, Голуэй, Остин, Лима, Сага, Эксетер, Москва",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Венеция",
+      "object": "Венеция",
+      "object_candidates": "Мекка, Хиросима, Эдо, Найроби, Дамаск, Берген, Перт, Вена, Калькутта, Венеция",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Вустершир",
+      "object": "Вустер",
+      "object_candidates": "Монтевидео, Киль, Колумбия, Турин, Эдо, Копенгаген, Валенсия, Львов, Триполи, Вустер",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "Королевство Сицилия",
+      "object": "Палермо",
+      "object_candidates": "Ереван, Колумбия, Прага, Джорджтаун, Афины, Вестминстер, Гуанчжоу, Иокогама, Дели, Палермо",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Пенсильвания",
+      "object": "Гаррисберг",
+      "object_candidates": "Ганновер, Севилья, Анкара, Киль, Гонолулу, Кардифф, Хиросима, Прага, Брест, Гаррисберг",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "Папская область",
+      "object": "Рим",
+      "object_candidates": "Флоренция, Чарлстон, Осло, Александрия, Мадисон, Гвадалахара, Реджайна, Лансинг, Генуя, Рим",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Голуэй",
+      "object": "Голуэй",
+      "object_candidates": "Вавилон, Рóли, Трентон, Константинополь, Финикс, Мадрид, Стамбул, Гвадалахара, Гаррисберг, Голуэй",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "Австрийская империя",
+      "object": "Вена",
+      "object_candidates": "Гаррисберг, София, Гамильтон, Линкольн, Остин, Тулуза, Тирана, Реджайна, Нашвилл, Вена",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Голландская Ост-Индия",
+      "object": "Джакарта",
+      "object_candidates": "Бейрут, Иерусалим, Данидин, Вильнюс, Вена, Брисбен, Сараево, Базель, Монтгомери, Джакарта",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "Израиль",
+      "object": "Иерусалим",
+      "object_candidates": "Эдо, Корк, Мумбаи, Сакраменто, Бостон, Берн, Остин, Майами, Бисмарк, Иерусалим",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Айти",
+      "object": "Нагоя",
+      "object_candidates": "Мюнхен, Кингстон, Корк, Монтгомери, Майнц, Одесса, Хартфорд, Манчестер, Дели, Нагоя",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "Лестершир",
+      "object": "Лестер",
+      "object_candidates": "Майнц, Сантьяго, Мадисон, Крайстчерч, Эксетер, Джакарта, Херефорд, Базель, Аугсбург, Лестер",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "Кинг",
+      "object": "Сиэтл",
+      "object_candidates": "Милан, Мадрид, Эксетер, Ченнаи, Каракас, Киев, Москва, Кардифф, Вестминстер, Сиэтл",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "Герцогство Афинское",
+      "object": "Афины",
+      "object_candidates": "Валенсия, Тирана, Сага, Лозанна, Белград, Брест, Ницца, Спрингфилд, Тегеран, Афины",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Королевство Нидерландов",
+      "object": "Амстердам",
+      "object_candidates": "Берлин, Люблин, Тегеран, Александрия, Гамильтон, Бейрут, Иерусалим, Уинчестер, Салоники, Амстердам",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Албания",
+      "object": "Тирана",
+      "object_candidates": "Дарвин, Киото, Варшава, Гамильтон, Ричмонд, Бангалор, Ганновер, Таллин, Данидин, Тирана",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Генуя",
+      "object": "Генуя",
+      "object_candidates": "Дели, Уотерфорд, Брюссель, Провиденс, Гамильтон, Гаррисберг, Манчестер, Рóли, Венеция, Генуя",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Китайская Республика",
+      "object": "Тайбэй",
+      "object_candidates": "Калькутта, Каир, Сиэтл, Остин, Гент, Гап, Любляна, Киев, Анкара, Тайбэй",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Чехословакия",
+      "object": "Прага",
+      "object_candidates": "Бойсе, Уотерфорд, Гвадалахара, Монтевидео, Калькутта, Эдо, Салоники, Майами, Ричмонд, Прага",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Дубай",
+      "object": "Дубай",
+      "object_candidates": "Майнц, Спрингфилд, Лиссабон, Виктория, Кингстон, Эдинбург, Братислава, Голуэй, Мекка, Дубай",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "Северная Дакота",
+      "object": "Бисмарк",
+      "object_candidates": "Мекка, Уинчестер, Нанкин, Гонолулу, Триполи, Мадрид, Хайдарабад, Берген, Базель, Бисмарк",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "Андалусия",
+      "object": "Севилья",
+      "object_candidates": "Хиросима, Каир, Джорджтаун, Сараево, Страсбург, Трентон, Токио, Варшава, Хельсинки, Севилья",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "Махараштра",
+      "object": "Мумбаи",
+      "object_candidates": "Варшава, Гент, Амстердам, Мюнхен, Виннипег, Эдмонтон, Джэксон, Лансинг, Уотерфорд, Мумбаи",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "Карнатака",
+      "object": "Бангалор",
+      "object_candidates": "Дрезден, Бисмарк, Ричмонд, Лансинг, Эдо, Братислава, Канберра, Джорджтаун, Кардифф, Бангалор",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "Индонезия",
+      "object": "Джакарта",
+      "object_candidates": "Керман, Нанкин, Индианаполис, Виктория, Турин, Уинчестер, Коломбо, Торонто, Оттава, Джакарта",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "Итальянская социальная республика",
+      "object": "Рим",
+      "object_candidates": "Финикс, Осло, Загреб, Аннаполис, Александрия, Вустер, Ричмонд, Бойсе, Окленд, Рим",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Габсбургская монархия",
+      "object": "Вена",
+      "object_candidates": "Галифакс, Лозанна, Бисмарк, Денвер, Лима, Дели, Колумбус, Коломбо, Аделаида, Вена",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Португалия",
+      "object": "Лиссабон",
+      "object_candidates": "Дамаск, Монтгомери, Эксетер, Турин, Эдмонтон, Ницца, Гамильтон, Аугсбург, Гавана, Лиссабон",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "Балеарские острова",
+      "object": "Пальма",
+      "object_candidates": "Сеул, Венеция, Аделаида, Вавилон, Бейрут, Москва, Лансинг, Турин, Крайстчерч, Пальма",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Болонья",
+      "object": "Болонья",
+      "object_candidates": "Виннипег, Кардифф, Мумбаи, Уинчестер, Варшава, Барселона, Таллин, Берген, Пальма, Болонья",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "Куба",
+      "object": "Гавана",
+      "object_candidates": "Монтевидео, Москва, Бисмарк, Страсбург, Дарвин, Шайенн, Торонто, Брисбен, Любляна, Гавана",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "Толедо",
+      "object": "Толедо",
+      "object_candidates": "Карачи, Бари, Сейлем, Остин, Голуэй, Осло, Колумбия, Керман, Варшава, Толедо",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "Сиена",
+      "object": "Сиена",
+      "object_candidates": "Джорджтаун, Пекин, Палермо, Бристоль, Мюнхен, Нагоя, Тирана, Венеция, Кембридж, Сиена",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "Гонолулу",
+      "object": "Гонолулу",
+      "object_candidates": "Манчестер, Берлин, Сиракуза, Престон, Голуэй, Джорджтаун, Аугсбург, Амстердам, Люблин, Гонолулу",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Римская империя",
+      "object": "Константинополь",
+      "object_candidates": "Монтевидео, Зальцбург, Гент, Сиена, Бангкок, Провиденс, Бари, Милан, Берлин, Константинополь",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Коннектикут",
+      "object": "Хартфорд",
+      "object_candidates": "Индианаполис, Салоники, Дамаск, Сиэтл, Мадисон, Палермо, Эксетер, Вена, Хайдарабад, Хартфорд",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "Шотландия",
+      "object": "Эдинбург",
+      "object_candidates": "Рóли, Алжир, Вена, Хельсинки, Данидин, Стокгольм, Вустер, Сейлем, Риверсайд, Эдинбург",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "Анкара",
+      "object": "Анкара",
+      "object_candidates": "Тайбэй, Стокгольм, Хиросима, Амстердам, Мюнхен, Алеппо, Берн, Медина, Бостон, Анкара",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Лацио",
+      "object": "Рим",
+      "object_candidates": "Стамбул, Брест, Брюссель, Корк, Бухарест, Нашвилл, Сантьяго, Александрия, Медина, Рим",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Польская Народная Республика",
+      "object": "Варшава",
+      "object_candidates": "Киото, Сидней, Гвадалахара, Майнц, Киль, Виктория, Бонн, Уотерфорд, Виннипег, Варшава",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Базель-Штадт",
+      "object": "Базель",
+      "object_candidates": "Палермо, Аугсбург, Москва, Канберра, Ченнаи, Ереван, Вустер, Одесса, Севилья, Базель",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "Калифорния",
+      "object": "Сакраменто",
+      "object_candidates": "Тирана, Барселона, Стамбул, Минск, Лилль, Валенсия, Будапешт, Уотерфорд, Дарвин, Сакраменто",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "Зальцбург",
+      "object": "Зальцбург",
+      "object_candidates": "Ницца, Херефорд, Глостер, Одесса, Сидней, Лансинг, Салоники, Триполи, Галифакс, Зальцбург",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "Киото",
+      "object": "Киото",
+      "object_candidates": "Нашвилл, Сиракуза, Генуя, Херефорд, Джорджтаун, Севилья, Алжир, Майнц, Лансинг, Киото",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "Флоренция",
+      "object": "Флоренция",
+      "object_candidates": "Аннаполис, Толедо, Манила, Прага, Вена, Рóли, Каракас, Эдо, Лилль, Флоренция",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Ирак",
+      "object": "Багдад",
+      "object_candidates": "Токио, Дакка, Москва, Остин, Сага, Корк, Финикс, Осло, Мекка, Багдад",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Кампания",
+      "object": "Неаполь",
+      "object_candidates": "Токио, Нашвилл, Кабул, Монтевидео, Карачи, Валенсия, Вильнюс, Багдад, Мадрид, Неаполь",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Япония",
+      "object": "Токио",
+      "object_candidates": "Пальма, Каир, Рим, Сакраменто, Хайдарабад, Париж, Тулуза, Корк, Гап, Токио",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Майами-Дейд",
+      "object": "Майами",
+      "object_candidates": "Брест, Аугсбург, Рига, Бари, Тулуза, Мюнхен, Найроби, Манила, Мекка, Майами",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "Керман",
+      "object": "Керман",
+      "object_candidates": "Турин, Дакка, Ченнаи, Токио, Майами, Карлайл, Страсбург, Тирана, Болонья, Керман",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "Приморские Альпы",
+      "object": "Ницца",
+      "object_candidates": "Сиена, Львов, Братислава, Брисбен, Токио, Пекин, Кембридж, Оксфорд, Гавана, Ницца",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "Эстония",
+      "object": "Таллин",
+      "object_candidates": "Загреб, Турин, Дамаск, Люблин, Болонья, Трентон, Колумбия, Вена, Калькутта, Таллин",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "Западная Австралия",
+      "object": "Перт",
+      "object_candidates": "Бостон, Лансинг, Любляна, Лимерик, Кабул, Мадисон, Реджайна, Эксетер, Окленд, Перт",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "Львовская область",
+      "object": "Львов",
+      "object_candidates": "Керман, Аделаида, Багдад, Палермо, Шайенн, Гент, Дели, Иерусалим, Дублин, Львов",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "Новый Южный Уэльс",
+      "object": "Сидней",
+      "object_candidates": "Братислава, Базель, Лиссабон, Виктория, Тайбэй, Престон, Торонто, София, Гонолулу, Сидней",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "Риверсайд",
+      "object": "Риверсайд",
+      "object_candidates": "Баку, Ганновер, Дубай, Оттава, Майнц, Палермо, Лилль, Сакраменто, Данидин, Риверсайд",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "Венесуэла",
+      "object": "Каракас",
+      "object_candidates": "Милан, Чарлстон, Сиэтл, София, Хобарт, Корк, Вильнюс, Лансинг, Триполи, Каракас",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "Манитоба",
+      "object": "Виннипег",
+      "object_candidates": "Алжир, Пальма, Канберра, Гавана, Гонолулу, Оксфорд, Лима, Багдад, Гвадалахара, Виннипег",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "Королевство Италия",
+      "object": "Турин",
+      "object_candidates": "Дакка, Хартфорд, Берн, Колумбус, Бойсе, Аден, Осло, Бейрут, Бордо, Турин",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Ломбардия",
+      "object": "Милан",
+      "object_candidates": "Варшава, Флоренция, Монтгомери, Эдо, Трентон, Медина, Хайдарабад, Сантьяго, Аделаида, Милан",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Иран",
+      "object": "Тегеран",
+      "object_candidates": "Триполи, Торонто, Эдмонтон, Галифакс, Глостер, Медина, Стамбул, Тулуза, София, Тегеран",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Королевство Великобритания",
+      "object": "Лондон",
+      "object_candidates": "Мюнхен, Реджайна, Турин, Зальцбург, Загреб, Херефорд, Бари, Стокгольм, Лимерик, Лондон",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ливия",
+      "object": "Триполи",
+      "object_candidates": "Иокогама, Престон, Александрия, Аннаполис, Бисмарк, Алеппо, Джакарта, Медина, Аделаида, Триполи",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Великое княжество Московское",
+      "object": "Москва",
+      "object_candidates": "Дрезден, Мекка, Пальма, Гаррисберг, Гап, Торонто, Ричмонд, Аден, Бордо, Москва",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Австралийская столичная территория",
+      "object": "Канберра",
+      "object_candidates": "Белфаст, Перт, Брисбен, Киото, Бангкок, Кабул, Любляна, Берлин, Мумбаи, Канберра",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "Режим Виши",
+      "object": "Париж",
+      "object_candidates": "Люблин, Алжир, Найроби, Бисмарк, Крайстчерч, Виннипег, Гап, Берген, Остин, Париж",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Нижний Рейн",
+      "object": "Страсбург",
+      "object_candidates": "Пальма, Колумбия, Реджайна, Алеппо, Мумбаи, Карлайл, Колумбус, Бангалор, Уотерфорд, Страсбург",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Вильнюсский уезд",
+      "object": "Вильнюс",
+      "object_candidates": "Сараево, Индианаполис, Шайенн, Калькутта, Эдо, Киото, Мемфис, Нагоя, Турин, Вильнюс",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Брюссельский столичный регион",
+      "object": "Брюссель",
+      "object_candidates": "Мадисон, Тирана, Колумбия, Нашвилл, Амстердам, Аугсбург, Эдинбург, Хобарт, Валенсия, Брюссель",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Саскачеван",
+      "object": "Реджайна",
+      "object_candidates": "Торонто, Берген, Сараево, Тегеран, Бангкок, Пальма, Сантьяго, Венеция, Спрингфилд, Реджайна",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "Тегеран",
+      "object": "Тегеран",
+      "object_candidates": "Пекин, Париж, Тайбэй, Глостер, Стамбул, Сакраменто, Ченнаи, Валенсия, Киев, Тегеран",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Эмилия-Романья",
+      "object": "Болонья",
+      "object_candidates": "Сиена, Коломбо, Спрингфилд, Остин, Сиэтл, Окленд, Манила, Люблин, Будапешт, Болонья",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "Ирландия",
+      "object": "Дублин",
+      "object_candidates": "Гамильтон, Амстердам, Гент, Нашвилл, Брисбен, Вильнюс, Джэксон, Джорджтаун, Сейлем, Дублин",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Уругвай",
+      "object": "Монтевидео",
+      "object_candidates": "Берн, Галифакс, Токио, Спрингфилд, Дели, Бейрут, Загреб, Вустер, Карлайл, Монтевидео",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "Держава Ахеменидов",
+      "object": "Вавилон",
+      "object_candidates": "Алжир, Пирр, Сеул, Бангалор, Дакка, Варшава, Бисмарк, Киев, Хайдарабад, Вавилон",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "Перу",
+      "object": "Лима",
+      "object_candidates": "Колумбус, Лестер, Валенсия, Рóли, Глостер, Берген, Карлайл, Эдо, Генуя, Лима",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "Шри-Ланка",
+      "object": "Коломбо",
+      "object_candidates": "Уотерфорд, Эксетер, Гамильтон, Джорджтаун, Виннипег, Керман, Лиссабон, Ченнаи, Толедо, Коломбо",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "Королевство Ирак",
+      "object": "Багдад",
+      "object_candidates": "Эдинбург, Бари, Тулуза, Берген, Толедо, Хельсинки, Загреб, Престон, Сага, Багдад",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Конфедеративные Штаты Америки",
+      "object": "Монтгомери",
+      "object_candidates": "Медина, Севилья, Львов, Любляна, Рóли, Нашвилл, Виннипег, Ричмонд, Бордо, Монтгомери",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Королевство Сербия",
+      "object": "Белград",
+      "object_candidates": "Лондон, Киев, Лима, Зальцбург, Рим, Вильнюс, Бонн, Финикс, Флоренция, Белград",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Уотерфорд",
+      "object": "Уотерфорд",
+      "object_candidates": "Сакраменто, Колумбус, Дублин, Гаррисберг, Рим, Валенсия, Берлин, Окленд, Лиссабон, Уотерфорд",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "Сербия и Черногория",
+      "object": "Белград",
+      "object_candidates": "Базель, Барселона, Рига, Баку, Стокгольм, Дубай, Валенсия, Майами, Константинополь, Белград",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Украина",
+      "object": "Киев",
+      "object_candidates": "Нагоя, Токио, Лимерик, Валенсия, Брюссель, Люблин, Вестминстер, Виннипег, Генуя, Киев",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Босния и Герцеговина",
+      "object": "Сараево",
+      "object_candidates": "Ганновер, Анкара, Пекин, Дамаск, Карачи, Бордо, Индианаполис, Сидней, Виктория, Сараево",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Армения",
+      "object": "Ереван",
+      "object_candidates": "Мумбаи, Лимерик, Канберра, Милан, Бонн, Одесса, Херефорд, Мемфис, Сидней, Ереван",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "Аббасидский халифат",
+      "object": "Дамаск",
+      "object_candidates": "Мемфис, Братислава, Колумбия, Берн, Бостон, Киль, Хельсинки, Сиена, Эдо, Дамаск",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Халиско",
+      "object": "Гвадалахара",
+      "object_candidates": "Мекка, Джэксон, Иокогама, Вустер, Генуя, Джакарта, Москва, Сараево, Анкара, Гвадалахара",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "Бангладеш",
+      "object": "Дакка",
+      "object_candidates": "Каракас, Афины, Лондон, Бисмарк, Нагоя, Рим, Брест, Манила, Тайбэй, Дакка",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "Алабама",
+      "object": "Монтгомери",
+      "object_candidates": "Уотерфорд, Прага, Керман, Дарвин, Лима, Баку, Вавилон, Бангкок, Дамаск, Монтгомери",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "Иллинойс",
+      "object": "Спрингфилд",
+      "object_candidates": "Бисмарк, Дамаск, Александрия, Лансинг, Дублин, Будапешт, Гап, Белград, Тулуза, Спрингфилд",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "Линкольншир",
+      "object": "Линкольн",
+      "object_candidates": "Бойсе, Виктория, Карлайл, Алжир, Вустер, Бангалор, Гаррисберг, Индианаполис, Париж, Линкольн",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "Испанская империя",
+      "object": "Мадрид",
+      "object_candidates": "Мекка, Трентон, Стамбул, Белфаст, Сеул, Аден, Глостер, Братислава, Лиссабон, Мадрид",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Нор — Па-де-Кале",
+      "object": "Лилль",
+      "object_candidates": "Белфаст, Чарлстон, Генуя, Карлайл, Бордо, Бонн, Колумбия, Перт, Гап, Лилль",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "Висконсин",
+      "object": "Мадисон",
+      "object_candidates": "Казань, Торонто, Карачи, Гвадалахара, Нагоя, Оттава, Гент, Брюссель, Бари, Мадисон",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Сицилия",
+      "object": "Палермо",
+      "object_candidates": "Монтевидео, Эдмонтон, Багдад, Найроби, Базель, Осло, Реджайна, Карлайл, Аделаида, Палермо",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Королевство Ирландия",
+      "object": "Дублин",
+      "object_candidates": "Оттава, Брисбен, Каракас, Колумбус, Любляна, Нагоя, Сиена, Гуанчжоу, Провиденс, Дублин",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "Филиппины",
+      "object": "Манила",
+      "object_candidates": "Лима, Мадрид, Лансинг, Гавана, Галифакс, Толедо, Милан, Триполи, Кардифф, Манила",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "Венецианская республика",
+      "object": "Венеция",
+      "object_candidates": "Голуэй, Остин, Нашвилл, Стамбул, Виктория, Найроби, Александрия, Вустер, Аделаида, Венеция",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Халеб",
+      "object": "Алеппо",
+      "object_candidates": "Мумбаи, Венеция, Берген, Каракас, Сага, Лима, Оттава, Алжир, Брисбен, Алеппо",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "Колорадо",
+      "object": "Денвер",
+      "object_candidates": "Страсбург, Дамаск, Триполи, Дели, Бухарест, Майами, Дублин, Лимерик, Иерусалим, Денвер",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "Греция",
+      "object": "Афины",
+      "object_candidates": "Джорджтаун, Мекка, Трентон, Денвер, Лиссабон, Страсбург, Гуанчжоу, Алеппо, Оксфорд, Афины",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Независимое государство Хорватия",
+      "object": "Загреб",
+      "object_candidates": "Остин, Бари, Перт, Галифакс, Хельсинки, Милан, Тулуза, Дублин, Страсбург, Загреб",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Нидерланды",
+      "object": "Амстердам",
+      "object_candidates": "Аден, Сиракуза, Лондон, Гент, Александрия, Генуя, Тулуза, Хобарт, Вавилон, Амстердам",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Аризона",
+      "object": "Финикс",
+      "object_candidates": "Кардифф, Аден, Коломбо, Гент, Монтевидео, Львов, Константинополь, Мемфис, Париж, Финикс",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "Италия",
+      "object": "Рим",
+      "object_candidates": "Джэксон, Крайстчерч, Оттава, Страсбург, Лондон, Белфаст, Аделаида, Дели, Бухарест, Рим",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Королевство Югославия",
+      "object": "Белград",
+      "object_candidates": "Страсбург, Бангкок, Сеул, Аделаида, Сага, Карлайл, Кингстон, Ченнаи, Токио, Белград",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Великобритания",
+      "object": "Лондон",
+      "object_candidates": "Джорджтаун, Престон, Карлайл, Иерусалим, Бонн, Бейрут, Брест, Найроби, Будапешт, Лондон",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "Народная Социалистическая Республика Албания",
+      "object": "Тирана",
+      "object_candidates": "Бонн, Багдад, Толедо, Львов, Болонья, Окленд, Сидней, Токио, Копенгаген, Тирана",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Сербия",
+      "object": "Белград",
+      "object_candidates": "Аделаида, Колумбус, Бангалор, Колумбия, Иерусалим, Флоренция, Кингстон, Константинополь, Майами, Белград",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Королевство Ливия",
+      "object": "Триполи",
+      "object_candidates": "Колумбия, Тулуза, Вена, Майнц, Кингстон, Монтгомери, Ченнаи, Карлайл, Голуэй, Триполи",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "Канада",
+      "object": "Оттава",
+      "object_candidates": "Денвер, Иерусалим, Гап, Бристоль, Аугсбург, Иокогама, Спрингфилд, Берн, Шайенн, Оттава",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "Канагава",
+      "object": "Иокогама",
+      "object_candidates": "Ереван, Бари, Оксфорд, Севилья, Манчестер, Вена, Бангалор, Провиденс, Кингстон, Иокогама",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "Среднечешский край",
+      "object": "Прага",
+      "object_candidates": "Майами, Данидин, Сейлем, Джакарта, Дели, Чарлстон, Монтевидео, Багдад, Крайстчерч, Прага",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Франция",
+      "object": "Париж",
+      "object_candidates": "Москва, Манчестер, Лестер, Перт, Лилль, Варшава, Мемфис, Сидней, Джэксон, Париж",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Болгария",
+      "object": "София",
+      "object_candidates": "Уотерфорд, Базель, Гаррисберг, Сага, Прага, Данидин, Александрия, Копенгаген, Афины, София",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Девон",
+      "object": "Эксетер",
+      "object_candidates": "Хиросима, Индианаполис, Лакхнау, Таллин, Минск, Майами, Аугсбург, Люблин, Париж, Эксетер",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "Центральная Македония",
+      "object": "Салоники",
+      "object_candidates": "Мекка, Киль, Аден, Пирр, Монтевидео, Мадрид, Сараево, Кингстон, Дели, Салоники",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "Сицилийский эмират",
+      "object": "Палермо",
+      "object_candidates": "Уинчестер, Оксфорд, Конкорд, Варшава, Киев, Каракас, Майами, Пекин, Эдмонтон, Палермо",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Гайана",
+      "object": "Джорджтаун",
+      "object_candidates": "Александрия, Базель, Брест, Гуанчжоу, Багдад, Ченнаи, Хиросима, Лилль, Аделаида, Джорджтаун",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "Королевство Венгрия",
+      "object": "Будапешт",
+      "object_candidates": "Нанкин, Вестминстер, Колумбия, Бостон, Базель, Лозанна, Милан, Хельсинки, Сиэтл, Будапешт",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Саксония",
+      "object": "Дрезден",
+      "object_candidates": "Каракас, Провиденс, Хайдарабад, Колумбия, Бостон, Будапешт, Палермо, Берген, Бисмарк, Дрезден",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "империя Мин",
+      "object": "Нанкин",
+      "object_candidates": "Милан, Бари, Тегеран, Лестер, Пирр, Бонн, Тулуза, Вильнюс, Копенгаген, Нанкин",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "Мекка",
+      "object": "Мекка",
+      "object_candidates": "Багдад, Чарлстон, Эдо, Нанкин, Дамаск, Флоренция, Бейрут, Баку, Гамильтон, Мекка",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "Эялет Египет",
+      "object": "Каир",
+      "object_candidates": "Сага, Бухарест, Триполи, Гавана, Лима, Рóли, Барселона, Карачи, Казань, Каир",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Царство Польское",
+      "object": "Варшава",
+      "object_candidates": "Казань, Загреб, Оттава, Монтевидео, Майами, Бордо, Палермо, Канберра, Иокогама, Варшава",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Северная Ирландия",
+      "object": "Белфаст",
+      "object_candidates": "Дрезден, Хиросима, Остин, Таллин, Кембридж, Нашвилл, Братислава, Минск, Мадисон, Белфаст",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "Испания",
+      "object": "Мадрид",
+      "object_candidates": "Денвер, Окленд, Монтевидео, Афины, Спрингфилд, Варшава, Загреб, Карлайл, Рига, Мадрид",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "метрополия Франции",
+      "object": "Париж",
+      "object_candidates": "Уотерфорд, Лиссабон, Медина, Флоренция, Вавилон, Тирана, Белфаст, Мумбаи, Киев, Париж",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Татарстан",
+      "object": "Казань",
+      "object_candidates": "Майами, Сараево, Ницца, Лестер, Люблин, Варшава, Рим, Амстердам, Чарлстон, Казань",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "Брестская область",
+      "object": "Брест",
+      "object_candidates": "Эксетер, Крайстчерч, Лестер, Генуя, Шайенн, Данидин, Сантьяго, Кабул, Тайбэй, Брест",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "Подмандатная Палестина",
+      "object": "Иерусалим",
+      "object_candidates": "Тайбэй, Зальцбург, Гаррисберг, Бристоль, Братислава, Тегеран, Болонья, Трентон, Львов, Иерусалим",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Палермо",
+      "object": "Палермо",
+      "object_candidates": "Дели, Трентон, Сакраменто, Гамильтон, Дамаск, Оттава, Монтгомери, Гвадалахара, Джакарта, Палермо",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "королевство Бавария",
+      "object": "Мюнхен",
+      "object_candidates": "Канберра, Эдо, Минск, Кабул, Брюссель, Кембридж, Мадисон, Лозанна, Анкара, Мюнхен",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Тамилнад",
+      "object": "Ченнаи",
+      "object_candidates": "Эдмонтон, Киото, Прага, Дублин, Чарлстон, Гап, Любляна, Реджайна, Пальма, Ченнаи",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "Белоруссия",
+      "object": "Минск",
+      "object_candidates": "Гаррисберг, Аден, Мекка, Токио, Афины, Бангалор, Лозанна, Бейрут, Киото, Минск",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Глостершир",
+      "object": "Глостер",
+      "object_candidates": "Севилья, Бейрут, Виктория, Палермо, Рига, Мюнхен, Сага, Токио, Каир, Глостер",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "Во",
+      "object": "Лозанна",
+      "object_candidates": "Оттава, Аугсбург, Брюссель, Варшава, Алжир, Лестер, Данидин, Люблин, Престон, Лозанна",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "Европейский союз",
+      "object": "Страсбург",
+      "object_candidates": "Ченнаи, Аден, Чарлстон, Майнц, Медина, Афины, Белфаст, Мадисон, Лансинг, Страсбург",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Уттар-Прадеш",
+      "object": "Лакхнау",
+      "object_candidates": "Остин, Чарлстон, Гавана, Дакка, Брест, Амстердам, Севилья, Братислава, Эдинбург, Лакхнау",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "Республика Сербская",
+      "object": "Сараево",
+      "object_candidates": "Вильнюс, Валенсия, Бангалор, Лозанна, Мумбаи, Джакарта, Ченнаи, Калькутта, Лестер, Сараево",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Сараевский кантон",
+      "object": "Сараево",
+      "object_candidates": "Данидин, Линкольн, Монтгомери, Таллин, Гуанчжоу, Будапешт, Дакка, Бордо, Керман, Сараево",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "Венгерская Советская Республика",
+      "object": "Будапешт",
+      "object_candidates": "Лакхнау, Бойсе, Багдад, Дрезден, Хиросима, Виктория, Дели, Данидин, Константинополь, Будапешт",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Королевство Афганистан",
+      "object": "Кабул",
+      "object_candidates": "Лестер, Киль, Лакхнау, Мумбаи, Шайенн, Берген, Манчестер, Торонто, Хобарт, Кабул",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Люблинское воеводство",
+      "object": "Люблин",
+      "object_candidates": "Монтевидео, Бристоль, Конкорд, Сараево, Вильнюс, Москва, Сага, Калькутта, Бостон, Люблин",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "Виргиния",
+      "object": "Ричмонд",
+      "object_candidates": "Майами, Сараево, Крайстчерч, Амстердам, Калькутта, Брисбен, Сага, Гавана, Лондон, Ричмонд",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "Королевство Англия",
+      "object": "Уинчестер",
+      "object_candidates": "Манила, Сейлем, Вустер, Кембридж, Конкорд, Сиракуза, Мемфис, Афины, Любляна, Уинчестер",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Медина",
+      "object": "Медина",
+      "object_candidates": "Казань, Сакраменто, Хайдарабад, Белфаст, Перт, Дакка, Берн, Реджайна, Будапешт, Медина",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Стокгольм",
+      "object": "Стокгольм",
+      "object_candidates": "Сантьяго, Денвер, Голуэй, Хайдарабад, Виктория, Бристоль, Бангкок, Вена, Гавана, Стокгольм",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Азербайджанская ССР",
+      "object": "Баку",
+      "object_candidates": "Страсбург, Брисбен, Колумбия, Белград, Денвер, Нанкин, Монтевидео, Лозанна, Мумбаи, Баку",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "Королевство Греция",
+      "object": "Афины",
+      "object_candidates": "Ереван, Гамильтон, Салоники, Глостер, Аден, Нагоя, Риверсайд, Бристоль, Копенгаген, Афины",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Республика Корея",
+      "object": "Сеул",
+      "object_candidates": "Гап, Калькутта, Вестминстер, Белград, Баку, Вильнюс, Хартфорд, Джакарта, Лиссабон, Сеул",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "Мальтийский орден",
+      "object": "Рим",
+      "object_candidates": "Калькутта, Мекка, Оксфорд, Галифакс, Спрингфилд, Дрезден, Монтгомери, Бристоль, Дубай, Рим",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Камбрия",
+      "object": "Карлайл",
+      "object_candidates": "Гуанчжоу, Валенсия, Аугсбург, Медина, Ереван, Берлин, София, Монтевидео, Сага, Карлайл",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "Нижняя Саксония",
+      "object": "Ганновер",
+      "object_candidates": "Хиросима, Уотерфорд, Престон, Трентон, Дамаск, Киев, Баку, Кингстон, Анкара, Ганновер",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "Королевство Англия",
+      "object": "Вестминстер",
+      "object_candidates": "Лима, Уотерфорд, Гуанчжоу, Киль, Лилль, Гамильтон, Дублин, Одесса, Сейлем, Вестминстер",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "Турин",
+      "object": "Турин",
+      "object_candidates": "Тегеран, Копенгаген, Барселона, Ницца, Венеция, Окленд, Алеппо, Вавилон, Лакхнау, Турин",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Северная Каролина",
+      "object": "Рóли",
+      "object_candidates": "Лилль, Остин, Сиракуза, Сага, Крайстчерч, Прага, Калькутта, Бостон, Гуанчжоу, Рóли",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "Северная территория",
+      "object": "Дарвин",
+      "object_candidates": "Аннаполис, Бостон, София, Спрингфилд, Окленд, Валенсия, Оттава, Хобарт, Вильнюс, Дарвин",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "Королевство Ганновер",
+      "object": "Ганновер",
+      "object_candidates": "Аделаида, Тегеран, Джэксон, Финикс, Ченнаи, Вавилон, Мадисон, Тирана, Аугсбург, Ганновер",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "Хордаланн",
+      "object": "Берген",
+      "object_candidates": "Дубай, Сеул, Константинополь, Белфаст, Дакка, Багдад, Коломбо, Алжир, Рóли, Берген",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "Южная Дакота",
+      "object": "Пирр",
+      "object_candidates": "Одесса, Сиракуза, Бангалор, Финикс, Венеция, Денвер, Линкольн, Пальма, Карлайл, Пирр",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "Эльзас",
+      "object": "Страсбург",
+      "object_candidates": "Дубай, Перт, Зальцбург, Афины, Минск, Турин, Базель, Галифакс, Уинчестер, Страсбург",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "Онтарио",
+      "object": "Торонто",
+      "object_candidates": "Дублин, Аннаполис, Колумбия, Ганновер, Рим, Херефорд, Тайбэй, София, Львов, Торонто",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "Массачусетс",
+      "object": "Бостон",
+      "object_candidates": "Сидней, Любляна, Эдо, Белград, Гамильтон, Минск, Вустер, Алеппо, Дрезден, Бостон",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "Третье Болгарское царство",
+      "object": "София",
+      "object_candidates": "Колумбия, Гап, Уинчестер, Вильнюс, Каир, Виннипег, Чарлстон, Аугсбург, Манчестер, София",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "Неаполь",
+      "object": "Неаполь",
+      "object_candidates": "Баку, Сиена, Корк, Гаррисберг, Крайстчерч, Севилья, Трентон, Люблин, Дарвин, Неаполь",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Румыния",
+      "object": "Бухарест",
+      "object_candidates": "Вустер, Кабул, Манчестер, Майнц, Данидин, Мемфис, Вена, Нанкин, Берн, Бухарест",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "Швейцария",
+      "object": "Берн",
+      "object_candidates": "Алжир, Майами, Бойсе, Индианаполис, Лиссабон, Рим, Нанкин, Джакарта, Глостер, Берн",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "Австрия",
+      "object": "Вена",
+      "object_candidates": "Бейрут, Рига, Индианаполис, Нагоя, Эдо, Каракас, Мадрид, Бангалор, Бари, Вена",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Словакия",
+      "object": "Братислава",
+      "object_candidates": "Будапешт, Рим, Лима, Лиссабон, Дакка, Генуя, Киль, Базель, Кингстон, Братислава",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "Англия",
+      "object": "Лондон",
+      "object_candidates": "Турин, Пирр, Гавана, Братислава, Конкорд, Неаполь, Венеция, Голуэй, Осло, Лондон",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Египет",
+      "object": "Каир",
+      "object_candidates": "Оттава, Виктория, Константинополь, Гвадалахара, Лондон, Баку, Барселона, Севилья, Провиденс, Каир",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Уусимаа",
+      "object": "Хельсинки",
+      "object_candidates": "Монтевидео, Тирана, Одесса, Афины, Лозанна, Шайенн, Копенгаген, Гаррисберг, Виннипег, Хельсинки",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Ланкашир",
+      "object": "Престон",
+      "object_candidates": "Аден, Мемфис, Джорджтаун, Рим, Эксетер, Провиденс, Риверсайд, Аделаида, Бангалор, Престон",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "Хиросима",
+      "object": "Хиросима",
+      "object_candidates": "Крайстчерч, Бангкок, Лестер, Бостон, Дрезден, Берлин, Бонн, Бухарест, Базель, Хиросима",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "Священная Римская империя",
+      "object": "Вена",
+      "object_candidates": "Брюссель, Белград, Дубай, Спрингфилд, Будапешт, Окленд, Париж, Виктория, Лакхнау, Вена",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Соединённое королевство Великобритании и Ирландии",
+      "object": "Лондон",
+      "object_candidates": "Карачи, Милан, Тегеран, Стокгольм, Уинчестер, Торонто, Аделаида, Пирр, Бристоль, Лондон",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "Третий рейх",
+      "object": "Берлин",
+      "object_candidates": "Сараево, Амстердам, Галифакс, Мекка, Оттава, Бисмарк, Будапешт, Сеул, Лондон, Берлин",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Сиракуза",
+      "object": "Сиракуза",
+      "object_candidates": "Чарлстон, Реджайна, Кингстон, Уотерфорд, Дрезден, Оттава, Вестминстер, Конкорд, Токио, Сиракуза",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "РСФСР",
+      "object": "Москва",
+      "object_candidates": "Валенсия, Ницца, Бонн, Манчестер, Алеппо, Эдинбург, Осло, Колумбус, Крайстчерч, Москва",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Вайоминг",
+      "object": "Шайенн",
+      "object_candidates": "Дамаск, Кингстон, Хельсинки, Брисбен, Тулуза, Ричмонд, Лозанна, Уотерфорд, Сейлем, Шайенн",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "Украинская Советская Социалистическая Республика",
+      "object": "Киев",
+      "object_candidates": "Пекин, Прага, Гент, Одесса, Лилль, Колумбус, Мекка, Алеппо, Бейрут, Киев",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Византия",
+      "object": "Константинополь",
+      "object_candidates": "Кембридж, Мюнхен, Брест, Керман, Коломбо, Нанкин, Алеппо, Лима, Крайстчерч, Константинополь",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Омейядский халифат",
+      "object": "Дамаск",
+      "object_candidates": "Бари, Рóли, Окленд, Бисмарк, Любляна, Вустер, Сеул, Конкорд, Мекка, Дамаск",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Таиланд",
+      "object": "Бангкок",
+      "object_candidates": "Лилль, Лозанна, Пекин, Хельсинки, Перт, Сидней, Лакхнау, Неаполь, Иокогама, Бангкок",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "Андхра-Прадеш",
+      "object": "Хайдарабад",
+      "object_candidates": "Сиракуза, Престон, Бостон, Алеппо, Монтевидео, Ереван, Виктория, Брест, Гамильтон, Хайдарабад",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "Норвегия",
+      "object": "Осло",
+      "object_candidates": "Эдо, Рóли, Варшава, Лилль, Кембридж, Нанкин, Эдмонтон, Манчестер, Торонто, Осло",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Рейнланд-Пфальц",
+      "object": "Майнц",
+      "object_candidates": "Лансинг, Львов, Дамаск, Кабул, Медина, Афины, Перт, Мекка, Пальма, Майнц",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "Турция",
+      "object": "Анкара",
+      "object_candidates": "Чарлстон, Эксетер, Торонто, Шайенн, Эдмонтон, Мемфис, Гамильтон, Осло, Кембридж, Анкара",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "Дамаск",
+      "object": "Дамаск",
+      "object_candidates": "Гап, Конкорд, Багдад, Керман, Берн, Джакарта, Гуанчжоу, Лимерик, Лиссабон, Дамаск",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Швабия",
+      "object": "Аугсбург",
+      "object_candidates": "Лозанна, Дублин, Манила, Дамаск, Пекин, Тегеран, Эдинбург, Валенсия, Казань, Аугсбург",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "Оккупация Японии",
+      "object": "Токио",
+      "object_candidates": "Страсбург, Дарвин, Хартфорд, Москва, Реджайна, Тайбэй, Гент, Оттава, Тирана, Токио",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Род-Айленд",
+      "object": "Провиденс",
+      "object_candidates": "Глостер, Берген, Джорджтаун, Ченнаи, Лансинг, Киль, Лима, Эдо, Ницца, Провиденс",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "Айдахо",
+      "object": "Бойсе",
+      "object_candidates": "Мемфис, Баку, Эксетер, Мадисон, Сиракуза, Рига, Медина, Лондон, Белград, Бойсе",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "Хорватия",
+      "object": "Загреб",
+      "object_candidates": "Тирана, Казань, Севилья, Галифакс, Тулуза, Эдо, Триполи, Хельсинки, Голуэй, Загреб",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "Корк",
+      "object": "Корк",
+      "object_candidates": "Багдад, Рóли, София, Таллин, Виктория, Рига, Страсбург, Вестминстер, Сиракуза, Корк",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "Венеция",
+      "object": "Венеция",
+      "object_candidates": "Страсбург, Кембридж, Лакхнау, Хиросима, Дамаск, Толедо, Лондон, Барселона, Иокогама, Венеция",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Уэссекс",
+      "object": "Уинчестер",
+      "object_candidates": "Майнц, Бостон, Триполи, Лансинг, Зальцбург, Рим, Венеция, Каир, Бейрут, Уинчестер",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "Римская империя",
+      "object": "Рим",
+      "object_candidates": "Эдо, Калькутта, Мемфис, Монтгомери, Кингстон, Милан, Копенгаген, Виктория, Провиденс, Рим",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Алжир",
+      "object": "Алжир",
+      "object_candidates": "Багдад, Лакхнау, Алеппо, Эдинбург, Дублин, Гаррисберг, Венеция, Кабул, Нанкин, Алжир",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Британская Колумбия",
+      "object": "Виктория",
+      "object_candidates": "Париж, Хельсинки, Канберра, Шайенн, Рига, Гамильтон, Уинчестер, Брест, Одесса, Виктория",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "Западная Бенгалия",
+      "object": "Калькутта",
+      "object_candidates": "Страсбург, Прага, Севилья, Одесса, Хиросима, Люблин, Реджайна, Салоники, Палермо, Калькутта",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "Королевство Богемия",
+      "object": "Прага",
+      "object_candidates": "Токио, Берген, Базель, Гуанчжоу, Дакка, Триполи, Братислава, Аугсбург, Калькутта, Прага",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Московская область",
+      "object": "Москва",
+      "object_candidates": "Гуанчжоу, Канберра, Брест, Бангалор, Любляна, Ницца, Финикс, Сараево, Хиросима, Москва",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Ливан",
+      "object": "Бейрут",
+      "object_candidates": "Эксетер, Ченнаи, Салоники, Брюссель, Амстердам, Рóли, Финикс, Бухарест, Монтевидео, Бейрут",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "Латвия",
+      "object": "Рига",
+      "object_candidates": "Мемфис, Львов, Бостон, Найроби, Аделаида, Амстердам, Брисбен, Париж, Реджайна, Рига",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "Японская империя",
+      "object": "Токио",
+      "object_candidates": "Сакраменто, Кембридж, Тирана, Хайдарабад, Перт, Рим, Аден, Ницца, Карачи, Токио",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Уэльс",
+      "object": "Кардифф",
+      "object_candidates": "Гаррисберг, Сантьяго, Галифакс, Белфаст, Бойсе, Сиена, Мекка, Мадрид, Лансинг, Кардифф",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "Делийский султанат",
+      "object": "Дели",
+      "object_candidates": "Голуэй, Киев, Иерусалим, Галифакс, Болонья, Линкольн, Вестминстер, Токио, Престон, Дели",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "Демократическая Республика Афганистан",
+      "object": "Кабул",
+      "object_candidates": "Бостон, Тирана, Севилья, Аделаида, Дарвин, Корк, Перт, Лимерик, Виннипег, Кабул",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Польша",
+      "object": "Варшава",
+      "object_candidates": "Бордо, Хельсинки, Бухарест, Вестминстер, Брисбен, Таллин, Рига, Окленд, Медина, Варшава",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "каджары",
+      "object": "Тегеран",
+      "object_candidates": "Бисмарк, Кембридж, Карлайл, Сага, Анкара, Дамаск, Афины, Александрия, Базель, Тегеран",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "Аббасидский халифат",
+      "object": "Багдад",
+      "object_candidates": "Сеул, Мекка, Вустер, Флоренция, Мадрид, Хобарт, Бордо, Зальцбург, Дрезден, Багдад",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Синд",
+      "object": "Карачи",
+      "object_candidates": "Ченнаи, Трентон, Гаррисберг, Херефорд, Берлин, Сантьяго, Сиена, Копенгаген, Провиденс, Карачи",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "Акерсхус",
+      "object": "Осло",
+      "object_candidates": "Пирр, Бисмарк, Данидин, Лимерик, Сиракуза, Пекин, Алеппо, Таллин, Брисбен, Осло",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "Народная Демократическая Республика Йемен",
+      "object": "Аден",
+      "object_candidates": "Багдад, Триполи, Болонья, Джорджтаун, Алеппо, Нанкин, Керман, Лансинг, Салоники, Аден",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "Новая Аквитания",
+      "object": "Бордо",
+      "object_candidates": "Брисбен, Берлин, Окленд, Сараево, Каир, Белфаст, Аден, Триполи, Монтевидео, Бордо",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Северо-Западная Англия",
+      "object": "Манчестер",
+      "object_candidates": "Иокогама, Гвадалахара, Сеул, Тур, Тайбэй, Мемфис, Уотерфорд, Сантьяго, Голуэй, Манчестер",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "Китайская Народная Республика",
+      "object": "Пекин",
+      "object_candidates": "Базель, Прага, Бостон, Канберра, Баку, Иерусалим, Дарвин, Карлайл, Лилль, Пекин",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Древнее царство",
+      "object": "Мемфис",
+      "object_candidates": "Гонолулу, Найроби, Провиденс, Гвадалахара, Зальцбург, Гап, Манила, Чарлстон, Керман, Мемфис",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "Бермудские Острова",
+      "object": "Гамильтон",
+      "object_candidates": "Зальцбург, Афины, Гаррисберг, Казань, Бисмарк, Бангкок, Джэксон, Неаполь, Ницца, Гамильтон",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "Верхняя Гаронна",
+      "object": "Тулуза",
+      "object_candidates": "Тирана, Киото, Уотерфорд, Голуэй, Монтевидео, Остин, Афины, Данидин, Майнц, Тулуза",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "Объединённая Арабская Республика",
+      "object": "Каир",
+      "object_candidates": "Львов, Анкара, Манчестер, Милан, Венеция, Гап, Белград, Нанкин, Данидин, Каир",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Херефордшир",
+      "object": "Херефорд",
+      "object_candidates": "Лозанна, Гвадалахара, Ницца, Манчестер, Прага, Тирана, Таллин, Хобарт, Хельсинки, Херефорд",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "Жиронда",
+      "object": "Бордо",
+      "object_candidates": "Мумбаи, Алжир, Майнц, Корк, Эдмонтон, Бангкок, Бангалор, Монтевидео, Манчестер, Бордо",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Милан",
+      "object": "Милан",
+      "object_candidates": "Хобарт, Реджайна, Сидней, Бисмарк, Вена, Риверсайд, Данидин, Ереван, Берн, Милан",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Финляндия",
+      "object": "Хельсинки",
+      "object_candidates": "Эдмонтон, Париж, Дарвин, Галифакс, Сиена, Гвадалахара, Хартфорд, Окленд, Константинополь, Хельсинки",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Сирия",
+      "object": "Дамаск",
+      "object_candidates": "Венеция, Гамильтон, Львов, Хиросима, Эдо, Мадисон, Сиэтл, Крайстчерч, Дарвин, Дамаск",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Валенсия",
+      "object": "Валенсия",
+      "object_candidates": "Ганновер, Болонья, Ереван, Мекка, Торонто, Багдад, Престон, Сиракуза, Глостер, Валенсия",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "Белорусская Советская Социалистическая Республика",
+      "object": "Минск",
+      "object_candidates": "Амстердам, Хельсинки, Мемфис, Триполи, Александрия, Дублин, Милан, Дарвин, Бари, Минск",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Генуэзская республика",
+      "object": "Генуя",
+      "object_candidates": "Париж, Хайдарабад, Осло, Бристоль, Провиденс, Братислава, Багдад, Вена, Копенгаген, Генуя",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Бельгия",
+      "object": "Брюссель",
+      "object_candidates": "Флоренция, Салоники, Амстердам, Сага, Тирана, Дубай, Тулуза, Корк, Страсбург, Брюссель",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "Тирана",
+      "object": "Тирана",
+      "object_candidates": "Гаррисберг, Дарвин, Пирр, Данидин, Дакка, Торонто, Риверсайд, Дрезден, Александрия, Тирана",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "Лигурия",
+      "object": "Генуя",
+      "object_candidates": "Майами, Аделаида, Хельсинки, Неаполь, Лозанна, Прага, Манчестер, Бисмарк, Дарвин, Генуя",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Аквитания",
+      "object": "Бордо",
+      "object_candidates": "Калькутта, Гавана, Сараево, Александрия, Дарвин, Неаполь, Крайстчерч, Трентон, Пекин, Бордо",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "Австро-Венгрия",
+      "object": "Вена",
+      "object_candidates": "Чарлстон, София, Аделаида, Хиросима, Прага, Найроби, Спрингфилд, Джакарта, Мадрид, Вена",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "Рим",
+      "object": "Рим",
+      "object_candidates": "Сакраменто, Гвадалахара, Кембридж, Аугсбург, Бристоль, Карачи, Лестер, Нагоя, Мекка, Рим",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Стокгольм",
+      "object": "Стокгольм",
+      "object_candidates": "Лозанна, Неаполь, Уотерфорд, Мадисон, Каракас, Пекин, Минск, Рига, Милан, Стокгольм",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Королевство Египет",
+      "object": "Каир",
+      "object_candidates": "Алеппо, Крайстчерч, Львов, Рóли, Иокогама, Дрезден, Виннипег, Салоники, Хартфорд, Каир",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Теннесси",
+      "object": "Нашвилл",
+      "object_candidates": "Белград, Нагоя, Гаррисберг, Аден, Кабул, Глостер, Флоренция, Белфаст, Галифакс, Нашвилл",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "Сага",
+      "object": "Сага",
+      "object_candidates": "Риверсайд, Эдинбург, Осло, Сакраменто, Тур, Толедо, Карачи, Триполи, Аннаполис, Сага",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "Швеция",
+      "object": "Стокгольм",
+      "object_candidates": "Брест, Бордо, Прага, Рим, Майнц, Севилья, Аден, Милан, Бейрут, Стокгольм",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Французский Алжир",
+      "object": "Алжир",
+      "object_candidates": "Вавилон, Аделаида, Джакарта, Минск, Кингстон, Гент, Бейрут, Бухарест, Галифакс, Алжир",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "Огайо",
+      "object": "Колумбус",
+      "object_candidates": "Эдо, Алжир, Вильнюс, Сага, Бари, Киль, Гап, Коломбо, Хобарт, Колумбус",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "Южная Каролина",
+      "object": "Колумбия",
+      "object_candidates": "Мемфис, Каракас, Остин, Рóли, Лондон, Финикс, Казань, Толедо, Кардифф, Колумбия",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "Ямайка",
+      "object": "Кингстон",
+      "object_candidates": "Анкара, Дубай, Бухарест, Иокогама, Одесса, Братислава, Рига, Бари, Оксфорд, Кингстон",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "Киевская Русь",
+      "object": "Киев",
+      "object_candidates": "Пирр, Лакхнау, Уотерфорд, Бейрут, Нашвилл, Кингстон, Денвер, Аден, Бойсе, Киев",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "Верхние Альпы",
+      "object": "Гап",
+      "object_candidates": "Монтгомери, Тур, Пекин, Бари, Флоренция, Болонья, Окленд, Манчестер, Алеппо, Гап",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "Королевство Англия",
+      "object": "Лондон",
+      "object_candidates": "Уотерфорд, Бангалор, София, Джэксон, Варшава, Гонолулу, Корк, Перт, Киото, Лондон",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Каталония",
+      "object": "Барселона",
+      "object_candidates": "Бристоль, Венеция, Пальма, Виннипег, Алеппо, Гаррисберг, Хельсинки, Хартфорд, Сиэтл, Барселона",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "Парижская коммуна",
+      "object": "Париж",
+      "object_candidates": "Гуанчжоу, Торонто, Бостон, Афины, Аделаида, Найроби, Крайстчерч, Братислава, Лилль, Париж",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Пьемонт",
+      "object": "Турин",
+      "object_candidates": "Салоники, Монтгомери, Джакарта, Сиракуза, Гуанчжоу, Денвер, Киль, Манила, Лозанна, Турин",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Чехия",
+      "object": "Прага",
+      "object_candidates": "Берн, Вавилон, Джэксон, Бордо, Мюнхен, Ницца, Палермо, Толедо, Копенгаген, Прага",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Новая Шотландия",
+      "object": "Галифакс",
+      "object_candidates": "Ганновер, Линкольн, Белфаст, Лансинг, Лиссабон, Окленд, Канберра, Афины, Калькутта, Галифакс",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "Оксфордшир",
+      "object": "Оксфорд",
+      "object_candidates": "Стамбул, Дакка, Вустер, Бонн, Кингстон, Крайстчерч, Канберра, Киль, Лиссабон, Оксфорд",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "Европейский союз",
+      "object": "Брюссель",
+      "object_candidates": "Херефорд, Торонто, Гавана, Сидней, Лакхнау, Рим, Крайстчерч, Ницца, Дублин, Брюссель",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "СФРЮ",
+      "object": "Белград",
+      "object_candidates": "Тегеран, Брюссель, Эдмонтон, Хельсинки, Дамаск, Бисмарк, Ереван, Спрингфилд, Пекин, Белград",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Британская Индия",
+      "object": "Калькутта",
+      "object_candidates": "Загреб, Сантьяго, Рим, Белфаст, Лимерик, Париж, Хиросима, Тирана, Карачи, Калькутта",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "империя Цин",
+      "object": "Пекин",
+      "object_candidates": "Бухарест, Калькутта, Коломбо, Сиэтл, Турин, Денвер, Лимерик, Зальцбург, Аугсбург, Пекин",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "Великое княжество Литовское",
+      "object": "Вильнюс",
+      "object_candidates": "Пальма, Виннипег, Эдмонтон, Прага, Бристоль, Иокогама, Болонья, Нашвилл, Тегеран, Вильнюс",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Сардинское королевство",
+      "object": "Турин",
+      "object_candidates": "Салоники, София, Гап, Гонолулу, Эксетер, Нанкин, Данидин, Херефорд, Страсбург, Турин",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Мэриленд",
+      "object": "Аннаполис",
+      "object_candidates": "Салоники, Виннипег, Стокгольм, Манила, Сеул, Берн, Турин, Гвадалахара, Ереван, Аннаполис",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "Веймарская республика",
+      "object": "Берлин",
+      "object_candidates": "Одесса, Мюнхен, Сеул, Бари, Копенгаген, Зальцбург, Алеппо, Тур, Амстердам, Берлин",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Конфедеративные Штаты Америки",
+      "object": "Ричмонд",
+      "object_candidates": "Сиэтл, Милан, Киев, Рим, Любляна, Бостон, Хобарт, Москва, Будапешт, Ричмонд",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "Нейстрия",
+      "object": "Париж",
+      "object_candidates": "Лестер, Кембридж, Сиена, Зальцбург, Страсбург, Гент, Дубай, Медина, Гуанчжоу, Париж",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Бавария",
+      "object": "Мюнхен",
+      "object_candidates": "Чарлстон, Дублин, Будапешт, Киев, Оксфорд, Монтгомери, Торонто, Мемфис, Братислава, Мюнхен",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "Гавайи",
+      "object": "Гонолулу",
+      "object_candidates": "Тулуза, Триполи, Виктория, Коломбо, Трентон, Гамильтон, Сеул, Денвер, Бонн, Гонолулу",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "Германия в 1945—1949 годах",
+      "object": "Берлин",
+      "object_candidates": "Лондон, Шайенн, Вестминстер, Кингстон, Белград, Берн, Нанкин, Эдо, Майнц, Берлин",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Квинсленд",
+      "object": "Брисбен",
+      "object_candidates": "Бейрут, Линкольн, Сиэтл, Берген, Загреб, Валенсия, Виннипег, Прага, Бристоль, Брисбен",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "Богемия",
+      "object": "Прага",
+      "object_candidates": "Сидней, Токио, Уинчестер, Сантьяго, Баку, Тур, Сеул, Пекин, Пальма, Прага",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Исламский Эмират Афганистан",
+      "object": "Кабул",
+      "object_candidates": "Венеция, Данидин, Корк, Спрингфилд, Уинчестер, Вестминстер, Глостер, Виннипег, Дублин, Кабул",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Хомс",
+      "object": "Дамаск",
+      "object_candidates": "Рим, Аден, Брюссель, Гаррисберг, Виктория, Риверсайд, Престон, Ереван, Таллин, Дамаск",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Западная Виргиния",
+      "object": "Чарлстон",
+      "object_candidates": "Индианаполис, Брюссель, Болонья, Вестминстер, Токио, Мемфис, Толедо, Александрия, Вильнюс, Чарлстон",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "Кения",
+      "object": "Найроби",
+      "object_candidates": "Бонн, Пекин, Тур, Каракас, Аннаполис, Тегеран, Генуя, Зальцбург, Остин, Найроби",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "Федеративная Республика Германии",
+      "object": "Бонн",
+      "object_candidates": "Казань, Бухарест, Сиэтл, Севилья, Найроби, Бристоль, Гаррисберг, Калькутта, Палермо, Бонн",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "Словения",
+      "object": "Любляна",
+      "object_candidates": "Каракас, Кабул, Хартфорд, Колумбия, Тайбэй, Дарвин, Бордо, Колумбус, Крайстчерч, Любляна",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "Отаго",
+      "object": "Данидин",
+      "object_candidates": "Брисбен, Базель, Пальма, Монтевидео, Хартфорд, Денвер, Мадрид, Страсбург, Кардифф, Данидин",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "Цзянсу",
+      "object": "Нанкин",
+      "object_candidates": "Бухарест, Глостер, Корк, Джэксон, Гавана, Окленд, София, Кабул, Данидин, Нанкин",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "Нью-Джерси",
+      "object": "Трентон",
+      "object_candidates": "Конкорд, Медина, Сеул, Таллин, Лозанна, Люблин, Бухарест, Неаполь, Москва, Трентон",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "Орегон",
+      "object": "Сейлем",
+      "object_candidates": "Бангкок, Зальцбург, Минск, Страсбург, Джакарта, Гавана, Будапешт, Берген, Сеул, Сейлем",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "Королевство Италия",
+      "object": "Рим",
+      "object_candidates": "Лансинг, Престон, Дакка, Иокогама, Аннаполис, Гап, Колумбия, Денвер, Бостон, Рим",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Шлезвиг-Гольштейн",
+      "object": "Киль",
+      "object_candidates": "Казань, Лестер, Киото, Карачи, Базель, Аугсбург, Медина, Аннаполис, Анкара, Киль",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "Литва",
+      "object": "Вильнюс",
+      "object_candidates": "Крайстчерч, Джэксон, Хельсинки, Александрия, Сеул, Херефорд, Кембридж, Майами, Провиденс, Вильнюс",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "Миссисипи",
+      "object": "Джэксон",
+      "object_candidates": "Спрингфилд, Алжир, Бухарест, Калькутта, Лансинг, Торонто, Каракас, Киев, Ричмонд, Джэксон",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "Австро-Венгрия",
+      "object": "Будапешт",
+      "object_candidates": "Берген, Стокгольм, Бисмарк, Нанкин, Иокогама, Манила, Кингстон, Гуанчжоу, Александрия, Будапешт",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "Минская область",
+      "object": "Минск",
+      "object_candidates": "Бейрут, Кардифф, Колумбус, Вильнюс, Херефорд, Найроби, Страсбург, Голуэй, Манчестер, Минск",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "Гуандун",
+      "object": "Гуанчжоу",
+      "object_candidates": "Пекин, Аделаида, Осло, Александрия, Гап, Манила, Пирр, Тирана, Бристоль, Гуанчжоу",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "Римская республика",
+      "object": "Рим",
+      "object_candidates": "Токио, Гавана, Хиросима, Афины, Базель, Лилль, Кингстон, Хайдарабад, Таллин, Рим",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "королевство Пруссия",
+      "object": "Берлин",
+      "object_candidates": "Карачи, Баку, Провиденс, Алеппо, Флоренция, Севилья, Париж, Зальцбург, Хельсинки, Берлин",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Афганистан",
+      "object": "Кабул",
+      "object_candidates": "Спрингфилд, Джорджтаун, Перт, Копенгаген, Канберра, Уотерфорд, Стамбул, Рóли, Загреб, Кабул",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Чили",
+      "object": "Сантьяго",
+      "object_candidates": "Гуанчжоу, Александрия, Калькутта, Москва, Тур, Дарвин, Денвер, Кабул, Нашвилл, Сантьяго",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "Югославия",
+      "object": "Белград",
+      "object_candidates": "Лондон, Алжир, Лестер, Братислава, Тайбэй, Бухарест, Кембридж, Реджайна, Бордо, Белград",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Мальорка",
+      "object": "Пальма",
+      "object_candidates": "Нанкин, Баку, Сеул, Львов, Лозанна, Реджайна, Эдинбург, Афины, Уинчестер, Пальма",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "Норфолк",
+      "object": "Норидж",
+      "object_candidates": "Ереван, Мадрид, Канберра, Бангалор, Карлайл, Риверсайд, Виннипег, Найроби, Базель, Норидж",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "Мазовецкое воеводство",
+      "object": "Варшава",
+      "object_candidates": "Одесса, Ганновер, Конкорд, Москва, Канберра, Берген, Бисмарк, Казань, Виктория, Варшава",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Фландрия",
+      "object": "Брюссель",
+      "object_candidates": "Тирана, Барселона, Варшава, Дарвин, Москва, Афины, Дели, Флоренция, Мумбаи, Брюссель",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

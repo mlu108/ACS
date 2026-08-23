@@ -1,0 +1,382 @@
+{
+  "name": "occupation",
+  "prompt_templates": [
+    "Яка професія у <subject>? Відповідь: <mask>.",
+    "Чим займається <subject> у професійній сфері? Відповідь: <mask>.",
+    "З якою професією пов'язаний/пов'язана <subject>? Відповідь: <mask>.",
+    "Яка кар'єра у <subject>? Відповідь: <mask>.",
+    "Який посадовий титул у <subject>? Відповідь: <mask>.",
+    " Професія <subject> — це <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Геллі Беррі",
+      "object": "модель",
+      "object_candidates": "політик, композитор, сценарист, піаніст, романіст, актор, драматург, фізик, фотограф, модель",
+      "index": 1959,
+      "subject_en": "Halle Berry",
+      "object_en": "model"
+    },
+    {
+      "subject": "Мухаммад Ікбал",
+      "object": "поет",
+      "object_candidates": "політик, сценарист, журналіст, романіст, фізик, драматург, модель, математик, філософ, поет",
+      "index": 1960,
+      "subject_en": "Muhammad Iqbal",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Енні Леннокс",
+      "object": "автор пісні",
+      "object_candidates": "модель, політик, композитор, астроном, сценарист, поет, бібліотекар, дипломат, фотограф, автор пісні",
+      "index": 1961,
+      "subject_en": "Annie Lennox",
+      "object_en": "songwriter"
+    },
+    {
+      "subject": "Боецій",
+      "object": "філософ",
+      "object_candidates": "астроном, піаніст, фізик, дипломат, романіст, актор, політик, поет, модель, філософ",
+      "index": 1962,
+      "subject_en": "Boethius",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "Мікеланджело Буонарроті",
+      "object": "поет",
+      "object_candidates": "піаніст, філософ, романіст, модель, фізик, математик, журналіст, політик, автор пісні, поет",
+      "index": 1963,
+      "subject_en": "Michelangelo",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Поліна Гагаріна",
+      "object": "актор",
+      "object_candidates": "бібліотекар, дипломат, романіст, фотограф, астроном, журналіст, сценарист, модель, поет, актор",
+      "index": 1964,
+      "subject_en": "Polina Gagarina",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Ельфріде Єлінек",
+      "object": "поет",
+      "object_candidates": "дипломат, астроном, автор пісні, бібліотекар, модель, філософ, драматург, актор, фізик, поет",
+      "index": 1965,
+      "subject_en": "Elfriede Jelinek",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Єва Лонгорія",
+      "object": "актор",
+      "object_candidates": "філософ, політик, поет, сценарист, математик, піаніст, композитор, автор пісні, романіст, актор",
+      "index": 1966,
+      "subject_en": "Eva Longoria",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Огюстен Жан Френель",
+      "object": "фізик",
+      "object_candidates": "піаніст, філософ, композитор, бібліотекар, драматург, фотограф, політик, автор пісні, дипломат, фізик",
+      "index": 1967,
+      "subject_en": "Augustin-Jean Fresnel",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "Ян Кхама",
+      "object": "політик",
+      "object_candidates": "філософ, дипломат, математик, бібліотекар, піаніст, фізик, актор, фотограф, композитор, політик",
+      "index": 1968,
+      "subject_en": "Ian Khama",
+      "object_en": "politician"
+    },
+    {
+      "subject": "Фред Астер",
+      "object": "сценарист",
+      "object_candidates": "поет, політик, фізик, журналіст, романіст, дипломат, композитор, актор, автор пісні, сценарист",
+      "index": 1969,
+      "subject_en": "Fred Astaire",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "Джон Бойнтон Прістлі",
+      "object": "романіст",
+      "object_candidates": "актор, фотограф, модель, філософ, дипломат, фізик, піаніст, автор пісні, композитор, романіст",
+      "index": 1970,
+      "subject_en": "J. B. Priestley",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "Джек Г'юстон",
+      "object": "актор",
+      "object_candidates": "поет, автор пісні, романіст, астроном, бібліотекар, філософ, журналіст, політик, сценарист, актор",
+      "index": 1971,
+      "subject_en": "Jack Huston",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Вернер Гейзенберг",
+      "object": "фізик",
+      "object_candidates": "композитор, журналіст, актор, романіст, поет, математик, політик, піаніст, модель, фізик",
+      "index": 1972,
+      "subject_en": "Werner Heisenberg",
+      "object_en": "physicist"
+    },
+    {
+      "subject": "Г'ю Бонневіль",
+      "object": "актор",
+      "object_candidates": "політик, журналіст, композитор, дипломат, бібліотекар, фотограф, романіст, автор пісні, піаніст, актор",
+      "index": 1973,
+      "subject_en": "Hugh Bonneville",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Андерс Фог Расмуссен",
+      "object": "політик",
+      "object_candidates": "модель, математик, поет, дипломат, фізик, піаніст, журналіст, актор, автор пісні, політик",
+      "index": 1974,
+      "subject_en": "Anders Fogh Rasmussen",
+      "object_en": "politician"
+    },
+    {
+      "subject": "Енріке Гранадос",
+      "object": "композитор",
+      "object_candidates": "астроном, політик, фотограф, актор, філософ, модель, піаніст, журналіст, бібліотекар, композитор",
+      "index": 1975,
+      "subject_en": "Enrique Granados",
+      "object_en": "composer"
+    },
+    {
+      "subject": "Карен Ґіллан",
+      "object": "актор",
+      "object_candidates": "математик, журналіст, драматург, композитор, піаніст, модель, дипломат, сценарист, бібліотекар, актор",
+      "index": 1976,
+      "subject_en": "Karen Gillan",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Хорхе Луїс Борхес",
+      "object": "бібліотекар",
+      "object_candidates": "фотограф, політик, композитор, модель, математик, фізик, актор, автор пісні, драматург, бібліотекар",
+      "index": 1977,
+      "subject_en": "Jorge Luis Borges",
+      "object_en": "librarian"
+    },
+    {
+      "subject": "Жак Одіар",
+      "object": "сценарист",
+      "object_candidates": "астроном, дипломат, поет, філософ, піаніст, актор, модель, фотограф, бібліотекар, сценарист",
+      "index": 1978,
+      "subject_en": "Jacques Audiard",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "Воррен Бітті",
+      "object": "сценарист",
+      "object_candidates": "піаніст, фізик, астроном, дипломат, математик, актор, філософ, романіст, автор пісні, сценарист",
+      "index": 1979,
+      "subject_en": "Warren Beatty",
+      "object_en": "screenwriter"
+    },
+    {
+      "subject": "Йоганн Вольфганг фон Гете",
+      "object": "політик",
+      "object_candidates": "фотограф, композитор, автор пісні, сценарист, дипломат, піаніст, журналіст, драматург, поет, політик",
+      "index": 1980,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "politician"
+    },
+    {
+      "subject": "Рашида Джонс",
+      "object": "актор",
+      "object_candidates": "сценарист, піаніст, драматург, астроном, математик, фотограф, журналіст, бібліотекар, фізик, актор",
+      "index": 1981,
+      "subject_en": "Rashida Jones",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Еммануель Шабріє",
+      "object": "композитор",
+      "object_candidates": "піаніст, сценарист, драматург, фотограф, актор, політик, дипломат, математик, автор пісні, композитор",
+      "index": 1982,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "composer"
+    },
+    {
+      "subject": "Маркіз де Сад",
+      "object": "драматург",
+      "object_candidates": "піаніст, автор пісні, фотограф, математик, політик, журналіст, сценарист, поет, композитор, драматург",
+      "index": 1983,
+      "subject_en": "Marquis de Sade",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "Мадхурі Дікшит",
+      "object": "актор",
+      "object_candidates": "філософ, сценарист, математик, астроном, модель, фотограф, автор пісні, драматург, дипломат, актор",
+      "index": 1984,
+      "subject_en": "Madhuri Dixit",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Арно Аллан Пензіас",
+      "object": "астроном",
+      "object_candidates": "піаніст, філософ, бібліотекар, модель, композитор, фотограф, автор пісні, математик, драматург, астроном",
+      "index": 1985,
+      "subject_en": "Arno Allan Penzias",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "Мішель Вельбек",
+      "object": "поет",
+      "object_candidates": "бібліотекар, модель, філософ, піаніст, автор пісні, журналіст, астроном, драматург, фотограф, поет",
+      "index": 1986,
+      "subject_en": "Michel Houellebecq",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Арістотель",
+      "object": "математик",
+      "object_candidates": "драматург, автор пісні, дипломат, астроном, піаніст, політик, композитор, романіст, актор, математик",
+      "index": 1987,
+      "subject_en": "Aristotle",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "Кадзуо Ішіґуро",
+      "object": "романіст",
+      "object_candidates": "журналіст, фотограф, модель, фізик, філософ, драматург, актор, сценарист, піаніст, романіст",
+      "index": 1988,
+      "subject_en": "Kazuo Ishiguro",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "Лу Рід",
+      "object": "фотограф",
+      "object_candidates": "математик, драматург, астроном, філософ, політик, модель, журналіст, фізик, бібліотекар, фотограф",
+      "index": 1989,
+      "subject_en": "Lou Reed",
+      "object_en": "photographer"
+    },
+    {
+      "subject": "Клемент Венцель фон Меттерніх",
+      "object": "дипломат",
+      "object_candidates": "філософ, поет, драматург, політик, бібліотекар, журналіст, романіст, актор, модель, дипломат",
+      "index": 1990,
+      "subject_en": "Klemens von Metternich",
+      "object_en": "diplomat"
+    },
+    {
+      "subject": "Юстин I",
+      "object": "політик",
+      "object_candidates": "сценарист, філософ, дипломат, драматург, актор, математик, фізик, модель, піаніст, політик",
+      "index": 1991,
+      "subject_en": "Justin I",
+      "object_en": "politician"
+    },
+    {
+      "subject": "Гіт Леджер",
+      "object": "актор",
+      "object_candidates": "фотограф, журналіст, політик, фізик, автор пісні, дипломат, астроном, сценарист, бібліотекар, актор",
+      "index": 1992,
+      "subject_en": "Heath Ledger",
+      "object_en": "actor"
+    },
+    {
+      "subject": "Агоштінью Нету",
+      "object": "поет",
+      "object_candidates": "дипломат, драматург, сценарист, піаніст, бібліотекар, актор, автор пісні, модель, математик, поет",
+      "index": 1993,
+      "subject_en": "Agostinho Neto",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Едгар Аллан По",
+      "object": "драматург",
+      "object_candidates": "філософ, автор пісні, модель, фізик, математик, астроном, дипломат, поет, фотограф, драматург",
+      "index": 1994,
+      "subject_en": "Edgar Allan Poe",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "Солженіцин Олександр Ісайович",
+      "object": "поет",
+      "object_candidates": "композитор, політик, філософ, астроном, фізик, дипломат, драматург, модель, бібліотекар, поет",
+      "index": 1995,
+      "subject_en": "Aleksandr Solzhenitsyn",
+      "object_en": "poet"
+    },
+    {
+      "subject": "Стівен Кольбер",
+      "object": "журналіст",
+      "object_candidates": "композитор, дипломат, філософ, модель, піаніст, політик, астроном, актор, фізик, журналіст",
+      "index": 1996,
+      "subject_en": "Stephen Colbert",
+      "object_en": "journalist"
+    },
+    {
+      "subject": "Вітні Х'юстон",
+      "object": "композитор",
+      "object_candidates": "філософ, дипломат, астроном, сценарист, фізик, фотограф, математик, журналіст, політик, композитор",
+      "index": 1997,
+      "subject_en": "Whitney Houston",
+      "object_en": "composer"
+    },
+    {
+      "subject": "Лопе де Вега",
+      "object": "драматург",
+      "object_candidates": "математик, бібліотекар, модель, політик, фізик, композитор, фотограф, астроном, автор пісні, драматург",
+      "index": 1998,
+      "subject_en": "Lope de Vega",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "Джанет Джексон",
+      "object": "модель",
+      "object_candidates": "дипломат, журналіст, актор, піаніст, фотограф, бібліотекар, композитор, фізик, політик, модель",
+      "index": 1999,
+      "subject_en": "Janet Jackson",
+      "object_en": "model"
+    },
+    {
+      "subject": "Франсіс Пуленк",
+      "object": "піаніст",
+      "object_candidates": "драматург, політик, актор, композитор, поет, філософ, романіст, журналіст, автор пісні, піаніст",
+      "index": 2000,
+      "subject_en": "Francis Poulenc",
+      "object_en": "pianist"
+    },
+    {
+      "subject": "Джеймс Фенімор Купер",
+      "object": "романіст",
+      "object_candidates": "модель, математик, сценарист, композитор, фізик, автор пісні, актор, поет, бібліотекар, романіст",
+      "index": 2001,
+      "subject_en": "James Fenimore Cooper",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "П'єр Абеляр",
+      "object": "філософ",
+      "object_candidates": "дипломат, драматург, модель, поет, актор, політик, автор пісні, журналіст, астроном, філософ",
+      "index": 2002,
+      "subject_en": "Peter Abelard",
+      "object_en": "philosopher"
+    },
+    {
+      "subject": "Львов Георгій Євгенович",
+      "object": "політик",
+      "object_candidates": "автор пісні, піаніст, романіст, бібліотекар, філософ, сценарист, актор, фотограф, математик, політик",
+      "index": 2003,
+      "subject_en": "Georgy Lvov",
+      "object_en": "politician"
+    },
+    {
+      "subject": "Говард Лавкрафт",
+      "object": "журналіст",
+      "object_candidates": "поет, бібліотекар, автор пісні, романіст, фізик, сценарист, філософ, композитор, дипломат, журналіст",
+      "index": 2004,
+      "subject_en": "H. P. Lovecraft",
+      "object_en": "journalist"
+    }
+  ],
+  "relation_id": "P106"
+}

@@ -1,0 +1,542 @@
+{
+  "name": "location_of_formation",
+  "prompt_templates": [
+    "<subject>가 어디에서 만들어졌나요? 대답은: <mask>",
+    "어떤 장소에서 <subject>가 형성되었나요? 대답은: <mask>",
+    "<subject>의 형성은 어느 위치에서 이루어졌나요? 대답은: <mask>",
+    "<subject>가 만들어진 나라나 장소는 어디인가요? 대답은: <mask>",
+    "<subject>는 어디에서 만들어졌나요? 대답은: <mask>",
+    " <subject>가 설립된 나라는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "원초적 본능",
+      "object": "프랑스",
+      "object_candidates": "터키, 스코틀랜드, 멕시코, 독일, 자메이카, 일본, 잉글랜드, 이탈리아, 아일랜드, 프랑스",
+      "index": 6071,
+      "subject_en": "Basic Instinct",
+      "object_en": "France"
+    },
+    {
+      "subject": "욕망",
+      "object": "이탈리아",
+      "object_candidates": "터키, 일본, 자메이카, 벨기에, 잉글랜드, 스코틀랜드, 멕시코, 프랑스, 오스트레일리아, 이탈리아",
+      "index": 6072,
+      "subject_en": "Blowup",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "테니스",
+      "object": "잉글랜드",
+      "object_candidates": "일본, 벨기에, 멕시코, 프랑스, 터키, 아일랜드, 이탈리아, 오스트레일리아, 독일, 잉글랜드",
+      "index": 6073,
+      "subject_en": "tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "레게",
+      "object": "자메이카",
+      "object_candidates": "프랑스, 아일랜드, 일본, 스코틀랜드, 오스트레일리아, 벨기에, 독일, 이탈리아, 잉글랜드, 자메이카",
+      "index": 6074,
+      "subject_en": "reggae",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "프랑크푸르터 알게마이네 차이퉁",
+      "object": "독일",
+      "object_candidates": "터키, 벨기에, 이탈리아, 잉글랜드, 오스트레일리아, 멕시코, 자메이카, 아일랜드, 일본, 독일",
+      "index": 6075,
+      "subject_en": "Frankfurter Allgemeine Zeitung",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "높이뛰기",
+      "object": "스코틀랜드",
+      "object_candidates": "오스트레일리아, 멕시코, 아일랜드, 프랑스, 자메이카, 일본, 터키, 이탈리아, 독일, 스코틀랜드",
+      "index": 6076,
+      "subject_en": "high jump",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "이탈리아 파시즘",
+      "object": "이탈리아",
+      "object_candidates": "스코틀랜드, 오스트레일리아, 아일랜드, 일본, 멕시코, 자메이카, 터키, 잉글랜드, 벨기에, 이탈리아",
+      "index": 6077,
+      "subject_en": "Italian Fascism",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "다다미",
+      "object": "일본",
+      "object_candidates": "멕시코, 스코틀랜드, 프랑스, 벨기에, 이탈리아, 잉글랜드, 자메이카, 독일, 아일랜드, 일본",
+      "index": 6078,
+      "subject_en": "tatami",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "기네스 세계 기록",
+      "object": "아일랜드",
+      "object_candidates": "일본, 벨기에, 터키, 스코틀랜드, 자메이카, 프랑스, 잉글랜드, 독일, 오스트레일리아, 아일랜드",
+      "index": 6079,
+      "subject_en": "Guinness World Records",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "고도를 기다리며",
+      "object": "프랑스",
+      "object_candidates": "벨기에, 독일, 일본, 이탈리아, 아일랜드, 오스트레일리아, 스코틀랜드, 터키, 자메이카, 프랑스",
+      "index": 6080,
+      "subject_en": "Waiting for Godot",
+      "object_en": "France"
+    },
+    {
+      "subject": "인생은 아름다워",
+      "object": "이탈리아",
+      "object_candidates": "터키, 잉글랜드, 프랑스, 오스트레일리아, 일본, 아일랜드, 멕시코, 스코틀랜드, 자메이카, 이탈리아",
+      "index": 6081,
+      "subject_en": "Life is Beautiful",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "코리에레 델라 세라",
+      "object": "이탈리아",
+      "object_candidates": "프랑스, 독일, 멕시코, 터키, 아일랜드, 자메이카, 잉글랜드, 오스트레일리아, 벨기에, 이탈리아",
+      "index": 6082,
+      "subject_en": "Corriere della Sera",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "터키 커피",
+      "object": "터키",
+      "object_candidates": "스코틀랜드, 자메이카, 독일, 프랑스, 오스트레일리아, 잉글랜드, 이탈리아, 벨기에, 일본, 터키",
+      "index": 6083,
+      "subject_en": "Turkish coffee",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "카망베르",
+      "object": "프랑스",
+      "object_candidates": "자메이카, 멕시코, 잉글랜드, 이탈리아, 스코틀랜드, 벨기에, 터키, 오스트레일리아, 일본, 프랑스",
+      "index": 6084,
+      "subject_en": "Camembert",
+      "object_en": "France"
+    },
+    {
+      "subject": "데스노트",
+      "object": "일본",
+      "object_candidates": "벨기에, 스코틀랜드, 오스트레일리아, 터키, 아일랜드, 잉글랜드, 이탈리아, 자메이카, 독일, 일본",
+      "index": 6085,
+      "subject_en": "Death Note",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "두부",
+      "object": "일본",
+      "object_candidates": "이탈리아, 스코틀랜드, 아일랜드, 오스트레일리아, 벨기에, 멕시코, 자메이카, 독일, 프랑스, 일본",
+      "index": 6086,
+      "subject_en": "tofu",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "페스토",
+      "object": "이탈리아",
+      "object_candidates": "아일랜드, 자메이카, 잉글랜드, 일본, 독일, 멕시코, 프랑스, 오스트레일리아, 터키, 이탈리아",
+      "index": 6087,
+      "subject_en": "pesto",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "크라프트베르크",
+      "object": "독일",
+      "object_candidates": "벨기에, 잉글랜드, 터키, 이탈리아, 스코틀랜드, 자메이카, 일본, 아일랜드, 프랑스, 독일",
+      "index": 6088,
+      "subject_en": "Kraftwerk",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "도베르만",
+      "object": "독일",
+      "object_candidates": "프랑스, 터키, 스코틀랜드, 이탈리아, 멕시코, 오스트레일리아, 자메이카, 잉글랜드, 벨기에, 독일",
+      "index": 6089,
+      "subject_en": "Dobermann",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "겐지 이야기",
+      "object": "일본",
+      "object_candidates": "이탈리아, 멕시코, 독일, 오스트레일리아, 터키, 벨기에, 스코틀랜드, 프랑스, 아일랜드, 일본",
+      "index": 6090,
+      "subject_en": "The Tale of Genji",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "과카몰레",
+      "object": "멕시코",
+      "object_candidates": "자메이카, 잉글랜드, 스코틀랜드, 벨기에, 아일랜드, 터키, 일본, 이탈리아, 프랑스, 멕시코",
+      "index": 6091,
+      "subject_en": "guacamole",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "탁구",
+      "object": "잉글랜드",
+      "object_candidates": "벨기에, 프랑스, 오스트레일리아, 스코틀랜드, 자메이카, 이탈리아, 일본, 독일, 멕시코, 잉글랜드",
+      "index": 6092,
+      "subject_en": "table tennis",
+      "object_en": "England"
+    },
+    {
+      "subject": "J-pop",
+      "object": "일본",
+      "object_candidates": "자메이카, 멕시코, 독일, 터키, 프랑스, 아일랜드, 잉글랜드, 이탈리아, 벨기에, 일본",
+      "index": 6093,
+      "subject_en": "J-pop",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "와플",
+      "object": "벨기에",
+      "object_candidates": "터키, 일본, 이탈리아, 잉글랜드, 프랑스, 아일랜드, 스코틀랜드, 멕시코, 독일, 벨기에",
+      "index": 6094,
+      "subject_en": "waffle",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "축구",
+      "object": "잉글랜드",
+      "object_candidates": "벨기에, 아일랜드, 터키, 프랑스, 독일, 이탈리아, 멕시코, 오스트레일리아, 일본, 잉글랜드",
+      "index": 6095,
+      "subject_en": "association football",
+      "object_en": "England"
+    },
+    {
+      "subject": "대니 미노그",
+      "object": "오스트레일리아",
+      "object_candidates": "이탈리아, 잉글랜드, 프랑스, 독일, 일본, 벨기에, 아일랜드, 자메이카, 멕시코, 오스트레일리아",
+      "index": 6096,
+      "subject_en": "Dannii Minogue",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "데카메론",
+      "object": "이탈리아",
+      "object_candidates": "벨기에, 일본, 멕시코, 스코틀랜드, 자메이카, 아일랜드, 독일, 터키, 프랑스, 이탈리아",
+      "index": 6097,
+      "subject_en": "The Decameron",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "U2",
+      "object": "아일랜드",
+      "object_candidates": "스코틀랜드, 잉글랜드, 독일, 일본, 이탈리아, 프랑스, 멕시코, 터키, 자메이카, 아일랜드",
+      "index": 6098,
+      "subject_en": "U2",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "골프",
+      "object": "스코틀랜드",
+      "object_candidates": "멕시코, 일본, 오스트레일리아, 자메이카, 잉글랜드, 프랑스, 벨기에, 터키, 이탈리아, 스코틀랜드",
+      "index": 6099,
+      "subject_en": "golf",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "브레첼",
+      "object": "독일",
+      "object_candidates": "잉글랜드, 스코틀랜드, 일본, 아일랜드, 프랑스, 벨기에, 이탈리아, 터키, 멕시코, 독일",
+      "index": 6100,
+      "subject_en": "pretzel",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "레노버",
+      "object": "베이징시",
+      "object_candidates": "시카고, 루블린, 버밍엄, 프랑크푸르트, 디트로이트, 마이애미, 스톡홀름, 서울특별시, 런던, 베이징시",
+      "index": 6488,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "코카콜라 컴퍼니",
+      "object": "애틀랜타",
+      "object_candidates": "스톡홀름, 루블린, 베이징시, 암스테르담, 로테르담, 버밍엄, 런던, 리머릭, 잉글랜드, 애틀랜타",
+      "index": 6489,
+      "subject_en": "The Coca-Cola Company",
+      "object_en": "Atlanta"
+    },
+    {
+      "subject": "에릭슨",
+      "object": "스톡홀름",
+      "object_candidates": "런던, 버밍엄, 리머릭, 암스테르담, 프랑크푸르트, 루블린, 마이애미, 애틀랜타, 시카고, 스톡홀름",
+      "index": 6490,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "스티비 원더",
+      "object": "디트로이트",
+      "object_candidates": "셰필드, 마이애미, 루블린, 도쿄도, 잉글랜드, 시카고, 베를린, 애틀랜타, 버밍엄, 디트로이트",
+      "index": 6491,
+      "subject_en": "Stevie Wonder",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "삼성전자",
+      "object": "서울특별시",
+      "object_candidates": "루블린, 도쿄도, 암스테르담, 프랑크푸르트, 잉글랜드, 베를린, 맨체스터, 베이징시, 리머릭, 서울특별시",
+      "index": 6492,
+      "subject_en": "Samsung Electronics",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "카니예 웨스트",
+      "object": "시카고",
+      "object_candidates": "맨체스터, 디트로이트, 셰필드, 런던, 로테르담, 마이애미, 서울특별시, 암스테르담, 루블린, 시카고",
+      "index": 6493,
+      "subject_en": "Kanye West",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "크랜베리스",
+      "object": "리머릭",
+      "object_candidates": "잉글랜드, 런던, 디트로이트, 헬싱키, 스톡홀름, 암스테르담, 버밍엄, 프랑크푸르트, 파리, 리머릭",
+      "index": 6494,
+      "subject_en": "The Cranberries",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "콜드플레이",
+      "object": "런던",
+      "object_candidates": "도쿄도, 잉글랜드, 스톡홀름, 리머릭, 파리, 암스테르담, 베를린, 버밍엄, 로테르담, 런던",
+      "index": 6495,
+      "subject_en": "Coldplay",
+      "object_en": "London"
+    },
+    {
+      "subject": "지멘스 AG",
+      "object": "베를린",
+      "object_candidates": "도쿄도, 시카고, 밴쿠버, 디트로이트, 루블린, 스톡홀름, 버밍엄, 마이애미, 베이징시, 베를린",
+      "index": 6496,
+      "subject_en": "Siemens",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "그린피스",
+      "object": "밴쿠버",
+      "object_candidates": "프랑크푸르트, 버밍엄, 베이징시, 시애틀, 잉글랜드, 디트로이트, 도쿄도, 스톡홀름, 시카고, 밴쿠버",
+      "index": 6497,
+      "subject_en": "Greenpeace",
+      "object_en": "Vancouver"
+    },
+    {
+      "subject": "샤오미 테크",
+      "object": "베이징시",
+      "object_candidates": "서울특별시, 베를린, 맨체스터, 암스테르담, 버밍엄, 도쿄도, 리머릭, 헬싱키, 프랑크푸르트, 베이징시",
+      "index": 6498,
+      "subject_en": "Xiaomi",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "국제축구연맹",
+      "object": "파리",
+      "object_candidates": "마이애미, 밴쿠버, 버밍엄, 시애틀, 루블린, 리머릭, 암스테르담, 헬싱키, 도쿄도, 파리",
+      "index": 6499,
+      "subject_en": "FIFA",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "루블린 연합",
+      "object": "루블린",
+      "object_candidates": "디트로이트, 서울특별시, 파리, 시카고, 맨체스터, 마이애미, 잉글랜드, 시애틀, 베를린, 루블린",
+      "index": 6500,
+      "subject_en": "Union of Lublin",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "프랑크푸르트 학파",
+      "object": "프랑크푸르트",
+      "object_candidates": "시카고, 런던, 헬싱키, 마이애미, 베이징시, 리머릭, 암스테르담, 밴쿠버, 도쿄도, 프랑크푸르트",
+      "index": 6501,
+      "subject_en": "Frankfurt School",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "스카우트 운동",
+      "object": "잉글랜드",
+      "object_candidates": "런던, 헬싱키, 로테르담, 마이애미, 파리, 스톡홀름, 셰필드, 루블린, 베이징시, 잉글랜드",
+      "index": 6502,
+      "subject_en": "scouting",
+      "object_en": "England"
+    },
+    {
+      "subject": "비 지스",
+      "object": "맨체스터",
+      "object_candidates": "서울특별시, 스톡홀름, 헬싱키, 밴쿠버, 시카고, 셰필드, 파리, 버밍엄, 잉글랜드, 맨체스터",
+      "index": 6503,
+      "subject_en": "Bee Gees",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "보잉",
+      "object": "시애틀",
+      "object_candidates": "로테르담, 마이애미, 스톡홀름, 파리, 서울특별시, 디트로이트, 버밍엄, 런던, 맨체스터, 시애틀",
+      "index": 6504,
+      "subject_en": "Boeing",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "로르디",
+      "object": "헬싱키",
+      "object_candidates": "베를린, 프랑크푸르트, 파리, 루블린, 서울특별시, 베이징시, 셰필드, 맨체스터, 디트로이트, 헬싱키",
+      "index": 6505,
+      "subject_en": "Lordi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "버거킹",
+      "object": "마이애미",
+      "object_candidates": "프랑크푸르트, 베이징시, 밴쿠버, 파리, 시카고, 애틀랜타, 암스테르담, 리머릭, 루블린, 마이애미",
+      "index": 6506,
+      "subject_en": "Burger King",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "람슈타인",
+      "object": "베를린",
+      "object_candidates": "버밍엄, 베이징시, 리머릭, 파리, 로테르담, 헬싱키, 프랑크푸르트, 밴쿠버, 애틀랜타, 베를린",
+      "index": 6507,
+      "subject_en": "Rammstein",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "푸 파이터스",
+      "object": "시애틀",
+      "object_candidates": "암스테르담, 리머릭, 잉글랜드, 맨체스터, 프랑크푸르트, 서울특별시, 로테르담, 베를린, 버밍엄, 시애틀",
+      "index": 6508,
+      "subject_en": "Foo Fighters",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "더 후",
+      "object": "런던",
+      "object_candidates": "잉글랜드, 시애틀, 프랑크푸르트, 디트로이트, 버밍엄, 베를린, 애틀랜타, 셰필드, 베이징시, 런던",
+      "index": 6509,
+      "subject_en": "The Who",
+      "object_en": "London"
+    },
+    {
+      "subject": "페예노르트",
+      "object": "로테르담",
+      "object_candidates": "도쿄도, 디트로이트, 시애틀, 베를린, 버밍엄, 잉글랜드, 마이애미, 맨체스터, 헬싱키, 로테르담",
+      "index": 6510,
+      "subject_en": "Feyenoord",
+      "object_en": "Rotterdam"
+    },
+    {
+      "subject": "AFC 아약스",
+      "object": "암스테르담",
+      "object_candidates": "도쿄도, 서울특별시, 리머릭, 버밍엄, 로테르담, 시애틀, 파리, 스톡홀름, 프랑크푸르트, 암스테르담",
+      "index": 6511,
+      "subject_en": "AFC Ajax",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "독일철도주식회사",
+      "object": "베를린",
+      "object_candidates": "리머릭, 밴쿠버, 디트로이트, 도쿄도, 서울특별시, 애틀랜타, 로테르담, 마이애미, 프랑크푸르트, 베를린",
+      "index": 6512,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "세가",
+      "object": "도쿄도",
+      "object_candidates": "파리, 암스테르담, 서울특별시, 버밍엄, 로테르담, 밴쿠버, 시카고, 프랑크푸르트, 루블린, 도쿄도",
+      "index": 6513,
+      "subject_en": "Sega",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "애스턴 마틴",
+      "object": "런던",
+      "object_candidates": "로테르담, 스톡홀름, 도쿄도, 버밍엄, 암스테르담, 베이징시, 시애틀, 파리, 맨체스터, 런던",
+      "index": 6514,
+      "subject_en": "Aston Martin Lagonda",
+      "object_en": "London"
+    },
+    {
+      "subject": "악틱 몽키즈",
+      "object": "셰필드",
+      "object_candidates": "로테르담, 헬싱키, 프랑크푸르트, 마이애미, 베이징시, 잉글랜드, 파리, 리머릭, 런던, 셰필드",
+      "index": 6515,
+      "subject_en": "Arctic Monkeys",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "글로리아 에스테판",
+      "object": "마이애미",
+      "object_candidates": "도쿄도, 암스테르담, 버밍엄, 파리, 셰필드, 로테르담, 스톡홀름, 시애틀, 베이징시, 마이애미",
+      "index": 6516,
+      "subject_en": "Gloria Estefan",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "EMI",
+      "object": "런던",
+      "object_candidates": "시카고, 로테르담, 시애틀, 헬싱키, 프랑크푸르트, 베이징시, 마이애미, 버밍엄, 서울특별시, 런던",
+      "index": 6517,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "듀란 듀란",
+      "object": "버밍엄",
+      "object_candidates": "애틀랜타, 파리, 베이징시, 잉글랜드, 서울특별시, 리머릭, 시카고, 베를린, 시애틀, 버밍엄",
+      "index": 6518,
+      "subject_en": "Duran Duran",
+      "object_en": "Birmingham"
+    },
+    {
+      "subject": "런던 증권거래소",
+      "object": "런던",
+      "object_candidates": "시애틀, 암스테르담, 버밍엄, 루블린, 맨체스터, 베이징시, 도쿄도, 애틀랜타, 시카고, 런던",
+      "index": 6519,
+      "subject_en": "London Stock Exchange",
+      "object_en": "London"
+    },
+    {
+      "subject": "두카티",
+      "object": "볼로냐",
+      "object_candidates": "파리, 도쿄도, 암스테르담, 프랑크푸르트, 애틀랜타, 스톡홀름, 서울특별시, 로테르담, 베를린, 볼로냐",
+      "index": 6520,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "더 라스무스",
+      "object": "헬싱키",
+      "object_candidates": "맨체스터, 서울특별시, 밴쿠버, 마이애미, 리머릭, 디트로이트, 베이징시, 버밍엄, 시애틀, 헬싱키",
+      "index": 6521,
+      "subject_en": "The Rasmus",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "데프 레퍼드",
+      "object": "셰필드",
+      "object_candidates": "로테르담, 도쿄도, 헬싱키, 버밍엄, 파리, 베를린, 프랑크푸르트, 루블린, 서울특별시, 셰필드",
+      "index": 6522,
+      "subject_en": "Def Leppard",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "니콘",
+      "object": "도쿄도",
+      "object_candidates": "헬싱키, 버밍엄, 리머릭, 베이징시, 로테르담, 서울특별시, 베를린, 밴쿠버, 루블린, 도쿄도",
+      "index": 6523,
+      "subject_en": "Nikon",
+      "object_en": "Tokyo"
+    }
+  ],
+  "relation_id": "P740"
+}

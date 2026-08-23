@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "<subject>は誰が所有していますか？ 答えは：<mask>",
+    "<subject>はどの会社または個人が所有していますか？ 答えは：<mask>",
+    "<subject>の現在の所有者は誰ですか？ 答えは：<mask>",
+    "<subject>は誰のものですか？ 答えは：<mask>",
+    "<subject>の所有権を持っているのはどのエンティティですか？ 答えは：<mask>",
+    " <subject>の所有者は<mask>です"
+  ],
+  "samples": [
+    {
+      "subject": "ドゥカティ",
+      "object": "アウディ",
+      "object_candidates": "Yahoo!, ベルリン, パリ, トヨタ自動車, ソニー, ミラノ, フランス, 英国放送協会, ポーランド, アウディ",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "ランボルギーニ",
+      "object": "アウディ",
+      "object_candidates": "パリ, Yahoo!, ジェノヴァ, ミラノ, Amazon.com, ポーランド, マイクロソフト, トヨタ自動車, フランス, アウディ",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "エッフェル塔",
+      "object": "パリ",
+      "object_candidates": "リヴィウ, カタール, Yahoo!, ミラノ, フランス, マイクロソフト, ソニー, ポーランド, トリノ, パリ",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ドイツ鉄道",
+      "object": "ドイツ",
+      "object_candidates": "トリノ, ソニー, パリ, ベルリン, ジェノヴァ, ポーランド, カタール, トヨタ自動車, シカゴ, ドイツ",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Google検索",
+      "object": "Google",
+      "object_candidates": "トリノ, ソニー, ドイツ, ジェノヴァ, ポーランド, カタール, Yahoo!, シカゴ, ミラノ, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "レクサス",
+      "object": "トヨタ自動車",
+      "object_candidates": "リヴィウ, Google, フランス, シカゴ, 英国放送協会, パレルモ, ポーランド, ジェノヴァ, ドイツ, トヨタ自動車",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "シカゴ, ミラノ, リヴィウ, パリ, ナポリ, フランス, ドイツ, トリノ, 英国放送協会, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "コンパクトディスク",
+      "object": "ソニー",
+      "object_candidates": "トヨタ自動車, リヴィウ, 英国放送協会, ミラノ, Google, Yahoo!, ナポリ, ジェノヴァ, パリ, ソニー",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "シカゴ・オヘア国際空港",
+      "object": "シカゴ",
+      "object_candidates": "英国放送協会, ジェノヴァ, フランス, カタール, アウディ, トヨタ自動車, アムステルダム, Amazon.com, リヴィウ, シカゴ",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "英国放送協会",
+      "object_candidates": "フランス, リヴィウ, ジェノヴァ, アウディ, Yahoo!, ナポリ, パレルモ, パリ, アムステルダム, 英国放送協会",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "ソニー・インタラクティブエンタテインメント",
+      "object": "ソニー",
+      "object_candidates": "トリノ, Google, Yahoo!, Amazon.com, リヴィウ, マイクロソフト, アウディ, トヨタ自動車, ドイツ, ソニー",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "ソニー・ピクチャーズ・エンタテインメント",
+      "object": "ソニー",
+      "object_candidates": "ドイツ, シカゴ, マイクロソフト, ナポリ, リヴィウ, Amazon.com, アウディ, 英国放送協会, カタール, ソニー",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "アウディ, ナポリ, パリ, ソニー, リヴィウ, トヨタ自動車, パレルモ, カタール, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google マップ",
+      "object": "Google",
+      "object_candidates": "ソニー, パレルモ, フランス, トリノ, ナポリ, ミラノ, トヨタ自動車, ベルリン, リヴィウ, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "ソニー",
+      "object_candidates": "カタール, ジェノヴァ, Google, トリノ, パリ, ミラノ, 英国放送協会, トヨタ自動車, マイクロソフト, ソニー",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "パルク・デ・プランス",
+      "object": "パリ",
+      "object_candidates": "リヴィウ, ポーランド, トヨタ自動車, ドイツ, ベルリン, Yahoo!, 英国放送協会, マイクロソフト, Google, パリ",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google ストリートビュー",
+      "object": "Google",
+      "object_candidates": "アウディ, マイクロソフト, アムステルダム, ナポリ, ベルリン, ソニー, パレルモ, リヴィウ, ポーランド, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "マイクロソフト",
+      "object_candidates": "ベルリン, シカゴ, ミラノ, Yahoo!, パリ, トヨタ自動車, Google, ソニー, トリノ, マイクロソフト",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "スタディオ・ジュゼッペ・メアッツァ",
+      "object": "ミラノ",
+      "object_candidates": "ジェノヴァ, ソニー, ドイツ, Amazon.com, カタール, ポーランド, パリ, アウディ, シカゴ, ミラノ",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "インターネット・ムービー・データベース",
+      "object": "Amazon.com",
+      "object_candidates": "フランス, シカゴ, アウディ, ポーランド, パリ, Google, ソニー, カタール, パレルモ, Amazon.com",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google",
+      "object_candidates": "ナポリ, ポーランド, パレルモ, アウディ, マイクロソフト, リヴィウ, アムステルダム, カタール, ジェノヴァ, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "アマゾン・キンドル",
+      "object": "Amazon.com",
+      "object_candidates": "ミラノ, ナポリ, フランス, ドイツ, アムステルダム, リヴィウ, マイクロソフト, ジェノヴァ, パレルモ, Amazon.com",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "スタディオ・レンツォ・バルベラ",
+      "object": "パレルモ",
+      "object_candidates": "ソニー, カタール, ドイツ, アムステルダム, フランス, アウディ, Google, ベルリン, 英国放送協会, パレルモ",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "シカゴ, ドイツ, 英国放送協会, マイクロソフト, カタール, フランス, トリノ, ポーランド, トヨタ自動車, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "ポーランド, ミラノ, マイクロソフト, パレルモ, フランス, アムステルダム, ジェノヴァ, リヴィウ, 英国放送協会, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google",
+      "object_candidates": "アムステルダム, マイクロソフト, Yahoo!, Amazon.com, トヨタ自動車, アウディ, シカゴ, リヴィウ, ジェノヴァ, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ダイハツ工業",
+      "object": "トヨタ自動車",
+      "object_candidates": "パリ, ベルリン, マイクロソフト, ドイツ, ソニー, 英国放送協会, ナポリ, フランス, ジェノヴァ, トヨタ自動車",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "エトワール凱旋門",
+      "object": "フランス",
+      "object_candidates": "ナポリ, アウディ, アムステルダム, ベルリン, カタール, Google, パリ, ドイツ, マイクロソフト, フランス",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "フォンテーヌブロー宮殿",
+      "object": "フランス",
+      "object_candidates": "トヨタ自動車, ソニー, アムステルダム, Amazon.com, ポーランド, ミラノ, パレルモ, アウディ, ジェノヴァ, フランス",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "ジェノヴァ, アウディ, Amazon.com, ソニー, パリ, カタール, ポーランド, リヴィウ, ベルリン, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google ブックス",
+      "object": "Google",
+      "object_candidates": "ドイツ, ミラノ, アウディ, Yahoo!, カタール, トリノ, ナポリ, ソニー, パリ, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "スタディオ・オリンピコ・ディ・トリノ",
+      "object": "トリノ",
+      "object_candidates": "Google, アムステルダム, フランス, ミラノ, ジェノヴァ, マイクロソフト, ベルリン, パレルモ, ソニー, トリノ",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "カタール航空",
+      "object": "カタール",
+      "object_candidates": "Yahoo!, ミラノ, Amazon.com, フランス, パリ, ナポリ, トヨタ自動車, ソニー, リヴィウ, カタール",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "夜警",
+      "object": "アムステルダム",
+      "object_candidates": "ミラノ, リヴィウ, アウディ, フランス, トリノ, 英国放送協会, トヨタ自動車, ナポリ, ポーランド, アムステルダム",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "ソニー, トヨタ自動車, ポーランド, アウディ, パリ, リヴィウ, マイクロソフト, Amazon.com, ミラノ, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ベルリン・オリンピアシュタディオン",
+      "object": "ベルリン",
+      "object_candidates": "カタール, パリ, ミラノ, マイクロソフト, アムステルダム, 英国放送協会, シカゴ, アウディ, トリノ, ベルリン",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOTポーランド航空",
+      "object": "ポーランド",
+      "object_candidates": "リヴィウ, パリ, シカゴ, Amazon.com, Yahoo!, アムステルダム, Google, ソニー, ドイツ, ポーランド",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "スタディオ・ルイジ・フェッラーリス",
+      "object": "ジェノヴァ",
+      "object_candidates": "カタール, ソニー, マイクロソフト, ポーランド, ベルリン, ナポリ, ドイツ, トヨタ自動車, 英国放送協会, ジェノヴァ",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Google翻訳",
+      "object": "Google",
+      "object_candidates": "ナポリ, カタール, アムステルダム, ポーランド, Yahoo!, マイクロソフト, シカゴ, ミラノ, フランス, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ザ・シャード",
+      "object": "カタール",
+      "object_candidates": "リヴィウ, アムステルダム, ナポリ, Amazon.com, ソニー, ジェノヴァ, 英国放送協会, マイクロソフト, シカゴ, カタール",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "スタッド・ド・フランス",
+      "object": "フランス",
+      "object_candidates": "ジェノヴァ, リヴィウ, Yahoo!, トヨタ自動車, Google, マイクロソフト, トリノ, シカゴ, Amazon.com, フランス",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "アリーナ・リヴィウ",
+      "object": "リヴィウ",
+      "object_candidates": "ナポリ, Amazon.com, シカゴ, トリノ, フランス, ドイツ, アウディ, トヨタ自動車, カタール, リヴィウ",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "マイクロソフト",
+      "object_candidates": "トヨタ自動車, カタール, シカゴ, ナポリ, パレルモ, ソニー, アムステルダム, アウディ, パリ, マイクロソフト",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, マイクロソフト, ポーランド, ミラノ, トリノ, ドイツ, ジェノヴァ, シカゴ, アムステルダム, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "スタディオ・サン・パオロ",
+      "object": "ナポリ",
+      "object_candidates": "ベルリン, マイクロソフト, Google, ジェノヴァ, アムステルダム, Yahoo!, パリ, パレルモ, リヴィウ, ナポリ",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "スタディオ・デッレ・アルピ",
+      "object": "トリノ",
+      "object_candidates": "トヨタ自動車, ソニー, リヴィウ, ドイツ, Google, アムステルダム, シカゴ, パリ, Yahoo!, トリノ",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "ドバイ国際空港",
+      "object": "ドバイ首長国",
+      "object_candidates": "Yahoo!, ジェノヴァ, カタール, Amazon.com, パレルモ, Google, 英国放送協会, トリノ, パリ, ドバイ首長国",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google",
+      "object_candidates": "マイクロソフト, トリノ, ジェノヴァ, ポーランド, パレルモ, アウディ, パリ, トヨタ自動車, シカゴ, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "モナ・リザ",
+      "object": "フランス",
+      "object_candidates": "パリ, トリノ, マイクロソフト, ミラノ, Yahoo!, パレルモ, ナポリ, ベルリン, ジェノヴァ, フランス",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon.com",
+      "object_candidates": "カタール, トヨタ自動車, Yahoo!, アムステルダム, ドイツ, アウディ, フランス, マイクロソフト, ジェノヴァ, Amazon.com",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

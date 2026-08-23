@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "چه زمینه‌ای <subject> در آن کار می‌کند؟ پاسخ: <mask>",
+    "در کدام زمینه <subject> شناخته شده است که کار کرده است؟ پاسخ: <mask>",
+    "چه حوزه‌ای از مطالعه با <subject> مرتبط است؟ پاسخ: <mask>",
+    "کدام رشته <subject> به خاطر کار در آن مشهور است؟ پاسخ: <mask>",
+    "حوزه اصلی تخصص <subject> چیست؟ پاسخ: <mask>",
+    " زمینه کاری <subject> <mask> است"
+  ],
+  "samples": [
+    {
+      "subject": "آلن تورینگ",
+      "object": "منطق",
+      "object_candidates": "فیزیولوژی, روان‌شناسی, آپارتاید, رمان‌نویس, پرنده, باشگاه شبانه, پزشکی, موسیقی‌دان, بوداگرایی, منطق",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "آناکساگوراس",
+      "object": "فلسفه",
+      "object_candidates": "هندسه, اخترشناسی, زیست‌شناسی, زبان‌شناسی, روان‌شناسی, اپرا, منطق, تروریسم, ژنتیک, فلسفه",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "روبرت بونزن",
+      "object": "شیمی",
+      "object_candidates": "بوداگرایی, فیزیک, نمایشنامه‌نویس, ستاره‌شناس, زبان‌شناسی, کالبدشناسی, اپرا, رمان‌نویس, زیست‌شناسی, شیمی",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ژان کالون",
+      "object": "الهیات",
+      "object_candidates": "تاریخ, کالبدشناسی, منطق, فیزیک, روان‌شناسی, جغرافیا, ریاضیات, زمین‌شناسی, هندسه, الهیات",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "سامانه فیزیکی",
+      "object": "فیزیک",
+      "object_candidates": "تروریسم, روان‌شناسی, تاریخ, توپولوژی, موسیقی‌دان, ستاره‌شناس, اپرا, جغرافیا, علم اقتصاد, فیزیک",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "کارل راجرز",
+      "object": "روان‌شناسی",
+      "object_candidates": "زبان‌شناسی, منطق, آپارتاید, توپولوژی, ژنتیک, فیزیولوژی, بوداگرایی, علم, ستاره‌شناس, روان‌شناسی",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "داوید هیلبرت",
+      "object": "هندسه",
+      "object_candidates": "اقتصاددان, جغرافیا, توپولوژی, ریاضیات, جامعه‌شناسی, وب‌گاه, نمایشنامه‌نویس, بوم‌شناسی, آپارتاید, هندسه",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ریشارد واگنر",
+      "object": "اپرا",
+      "object_candidates": "وب‌گاه, ریاضی‌دان, پرنده, ریاضیات, فلسفه, علم اقتصاد, بوداگرایی, باشگاه شبانه, فیزیک, اپرا",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "اقلیدس",
+      "object": "هندسه",
+      "object_candidates": "وب‌گاه, ژنتیک, تروریسم, زبان‌شناسی, باشگاه شبانه, علم اقتصاد, ستاره‌شناس, زمین‌شناسی, منطق, هندسه",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ماکس وبر",
+      "object": "جامعه‌شناسی",
+      "object_candidates": "علم اقتصاد, شیمی, موسیقی‌دان, زمین‌شناسی, تروریسم, ریاضیات, اخترشناسی, توپولوژی, علم, جامعه‌شناسی",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "هانس ایسنک",
+      "object": "روان‌شناسی",
+      "object_candidates": "شیمی, فیزیولوژی, موسیقی‌دان, وب‌گاه, اقتصاددان, رمان‌نویس, کالبدشناسی, فیزیک, ستاره‌شناس, روان‌شناسی",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "یوجین ویگنر",
+      "object": "فیزیک",
+      "object_candidates": "نمایشنامه‌نویس, اقتصاددان, جغرافیا, آپارتاید, زبان‌شناسی, پزشکی, شیمی, هندسه, تروریسم, فیزیک",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "فرد هویل",
+      "object": "اخترشناسی",
+      "object_candidates": "توپولوژی, آپارتاید, تروریسم, زیست‌شناسی, فلسفه, پزشکی, علم اقتصاد, کالبدشناسی, ریاضی‌دان, اخترشناسی",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "جالینوس",
+      "object": "کالبدشناسی",
+      "object_candidates": "اپرا, ریاضیات, اقتصاددان, روان‌شناسی, فیزیولوژی, فیزیک, وب‌گاه, پزشکی, ستاره‌شناس, کالبدشناسی",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "ویلیام هاروی",
+      "object": "فیزیولوژی",
+      "object_candidates": "زیست‌شناسی, پزشکی, ژنتیک, موسیقی‌دان, زبان‌شناسی, کالبدشناسی, منطق, شیمی, اقتصاددان, فیزیولوژی",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "هاوارد کارتر",
+      "object": "باستان‌شناسی",
+      "object_candidates": "زبان‌شناسی, هندسه, الهیات, جغرافیا, فیزیولوژی, تروریسم, ریاضی‌دان, ریاضیات, علم اقتصاد, باستان‌شناسی",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "هاینریش شلیمان",
+      "object": "باستان‌شناسی",
+      "object_candidates": "موسیقی‌دان, علم اقتصاد, منطق, نمایشنامه‌نویس, زیست‌شناسی, جاز, اپرا, فیزیک, اخترشناسی, باستان‌شناسی",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "کلاود برنارد",
+      "object": "فیزیولوژی",
+      "object_candidates": "پزشکی, زیست‌شناسی, تاریخ, اقتصاددان, شیمی, علم اقتصاد, آپارتاید, توپولوژی, هندسه, فیزیولوژی",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "آیزاک نیوتن",
+      "object": "ریاضیات",
+      "object_candidates": "اپرا, زمین‌شناسی, فیزیولوژی, هندسه, فیزیک, پرنده, روان‌شناسی, باستان‌شناسی, تاریخ, ریاضیات",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "یوستوس فون لیبیش",
+      "object": "شیمی",
+      "object_candidates": "اپرا, نمایشنامه‌نویس, پرنده, فلسفه, باشگاه شبانه, ژنتیک, بوم‌شناسی, باستان‌شناسی, وب‌گاه, شیمی",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "فردریک بنتینگ",
+      "object": "فیزیولوژی",
+      "object_candidates": "ریاضی‌دان, موسیقی‌دان, هندسه, ریاضیات, رمان‌نویس, تروریسم, منطق, اپرا, بوداگرایی, فیزیولوژی",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "کارل مارکس",
+      "object": "جامعه‌شناسی",
+      "object_candidates": "بوم‌شناسی, تروریسم, توپولوژی, ریاضی‌دان, پزشکی, ستاره‌شناس, الهیات, منطق, جاز, جامعه‌شناسی",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "هانس بته",
+      "object": "فیزیک",
+      "object_candidates": "آپارتاید, بوداگرایی, علم, کالبدشناسی, وب‌گاه, زمین‌شناسی, زیست‌شناسی, اخترشناسی, زبان‌شناسی, فیزیک",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جک رابی",
+      "object": "باشگاه شبانه",
+      "object_candidates": "زمین‌شناسی, شیمی, اخترشناسی, ریاضیات, جاز, فیزیولوژی, فیزیک, روان‌شناسی, جامعه‌شناسی, باشگاه شبانه",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "پرسی ویلیام بریجمن",
+      "object": "فیزیک",
+      "object_candidates": "زمین‌شناسی, پرنده, پزشکی, جغرافیا, رمان‌نویس, فلسفه, فیزیولوژی, باشگاه شبانه, ریاضی‌دان, فیزیک",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جرلامو کاردانو",
+      "object": "ریاضیات",
+      "object_candidates": "علم, جامعه‌شناسی, اقتصاددان, پرنده, وب‌گاه, اخترشناسی, رمان‌نویس, توپولوژی, کالبدشناسی, ریاضیات",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ماکس وبر",
+      "object": "علم اقتصاد",
+      "object_candidates": "پزشکی, موسیقی‌دان, فیزیک, توپولوژی, اقتصاددان, ستاره‌شناس, بوداگرایی, هندسه, تروریسم, علم اقتصاد",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "مایکل فارادی",
+      "object": "شیمی",
+      "object_candidates": "موسیقی‌دان, توپولوژی, تروریسم, فیزیک, ژنتیک, اپرا, زمین‌شناسی, جغرافیا, زیست‌شناسی, شیمی",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "پرنده‌شناسی",
+      "object": "پرنده",
+      "object_candidates": "نمایشنامه‌نویس, تاریخ, بوداگرایی, الهیات, توپولوژی, فلسفه, رمان‌نویس, فیزیولوژی, ریاضی‌دان, پرنده",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "بوناونتورا کاوالیری",
+      "object": "ریاضیات",
+      "object_candidates": "ریاضی‌دان, جامعه‌شناسی, اقتصاددان, جغرافیا, باشگاه شبانه, بوم‌شناسی, موسیقی‌دان, اپرا, زیست‌شناسی, ریاضیات",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "گالیلئو گالیله",
+      "object": "ریاضیات",
+      "object_candidates": "رمان‌نویس, الهیات, اقتصاددان, نمایشنامه‌نویس, ژنتیک, جامعه‌شناسی, روان‌شناسی, باستان‌شناسی, باشگاه شبانه, ریاضیات",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "هیپاتیا",
+      "object": "ریاضیات",
+      "object_candidates": "فیزیک, زبان‌شناسی, رمان‌نویس, پزشکی, ریاضی‌دان, هندسه, فیزیولوژی, اقتصاددان, اخترشناسی, ریاضیات",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "میکاییل سروتوس",
+      "object": "الهیات",
+      "object_candidates": "بوم‌شناسی, اقتصاددان, هندسه, زبان‌شناسی, روان‌شناسی, جاز, فیزیک, کالبدشناسی, علم اقتصاد, الهیات",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "ادوین هابل",
+      "object": "اخترشناسی",
+      "object_candidates": "توپولوژی, فلسفه, جامعه‌شناسی, ریاضی‌دان, وب‌گاه, ریاضیات, آپارتاید, بوداگرایی, کالبدشناسی, اخترشناسی",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "آیزاک نیوتن",
+      "object": "فیزیک",
+      "object_candidates": "روان‌شناسی, پزشکی, الهیات, ریاضی‌دان, اخترشناسی, کالبدشناسی, نمایشنامه‌نویس, اپرا, بوم‌شناسی, فیزیک",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ایلیا پریگوژین",
+      "object": "فیزیک",
+      "object_candidates": "پزشکی, موسیقی‌دان, اپرا, توپولوژی, فلسفه, ریاضی‌دان, روان‌شناسی, تروریسم, تاریخ, فیزیک",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "فرضیه ساپیر-وورف",
+      "object": "زبان‌شناسی",
+      "object_candidates": "علم, بوم‌شناسی, ریاضی‌دان, اقتصاددان, کالبدشناسی, آپارتاید, ژنتیک, فیزیولوژی, تروریسم, زبان‌شناسی",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "روش علمی",
+      "object": "علم",
+      "object_candidates": "کالبدشناسی, فلسفه, نمایشنامه‌نویس, تاریخ, وب‌گاه, رمان‌نویس, بوم‌شناسی, علم اقتصاد, زمین‌شناسی, علم",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "ویلیام کروکز",
+      "object": "شیمی",
+      "object_candidates": "زمین‌شناسی, موسیقی‌دان, الهیات, اقتصاددان, جغرافیا, کالبدشناسی, توپولوژی, اپرا, بوم‌شناسی, شیمی",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "استیو بایکو",
+      "object": "آپارتاید",
+      "object_candidates": "زبان‌شناسی, ریاضیات, روان‌شناسی, ریاضی‌دان, وب‌گاه, موسیقی‌دان, جغرافیا, الهیات, تاریخ, آپارتاید",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "چارلز داروین",
+      "object": "زیست‌شناسی",
+      "object_candidates": "باشگاه شبانه, جامعه‌شناسی, اپرا, تروریسم, بوداگرایی, فیزیک, جغرافیا, علم, الهیات, زیست‌شناسی",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "تیکو براهه",
+      "object": "اخترشناسی",
+      "object_candidates": "بوداگرایی, باشگاه شبانه, فیزیک, زیست‌شناسی, پزشکی, ریاضی‌دان, روان‌شناسی, فلسفه, موسیقی‌دان, اخترشناسی",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "جان استوارت میل",
+      "object": "فلسفه",
+      "object_candidates": "ستاره‌شناس, اخترشناسی, پرنده, جامعه‌شناسی, بوم‌شناسی, جاز, ژنتیک, منطق, زمین‌شناسی, فلسفه",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "آلن تورینگ",
+      "object": "ریاضیات",
+      "object_candidates": "وب‌گاه, الهیات, ستاره‌شناس, ژنتیک, کالبدشناسی, فیزیک, موسیقی‌دان, پرنده, ریاضی‌دان, ریاضیات",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ویلفردو پارتو",
+      "object": "جامعه‌شناسی",
+      "object_candidates": "روان‌شناسی, اپرا, زبان‌شناسی, ریاضیات, زیست‌شناسی, جاز, ستاره‌شناس, توپولوژی, کالبدشناسی, جامعه‌شناسی",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "ویلیام سامرست موآم",
+      "object": "نمایشنامه‌نویس",
+      "object_candidates": "زمین‌شناسی, ژنتیک, ستاره‌شناس, اخترشناسی, جامعه‌شناسی, بوم‌شناسی, باستان‌شناسی, تروریسم, فیزیولوژی, نمایشنامه‌نویس",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "ویلیام سامرست موآم",
+      "object": "رمان‌نویس",
+      "object_candidates": "علم اقتصاد, فیزیولوژی, منطق, باستان‌شناسی, هندسه, اقتصاددان, علم, اپرا, شیمی, رمان‌نویس",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "انریکو فرمی",
+      "object": "فیزیک",
+      "object_candidates": "روان‌شناسی, تروریسم, پرنده, شیمی, فیزیولوژی, موسیقی‌دان, وب‌گاه, فلسفه, پزشکی, فیزیک",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جووانی دومنیکو کاسینی",
+      "object": "اخترشناسی",
+      "object_candidates": "کالبدشناسی, بوداگرایی, هندسه, رمان‌نویس, فلسفه, منطق, زمین‌شناسی, ریاضی‌دان, ستاره‌شناس, اخترشناسی",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "یوهان ولفگانگ گوته",
+      "object": "کالبدشناسی",
+      "object_candidates": "روان‌شناسی, ریاضیات, فلسفه, موسیقی‌دان, تروریسم, اقتصاددان, وب‌گاه, بوداگرایی, پرنده, کالبدشناسی",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "پاراسلسوس",
+      "object": "پزشکی",
+      "object_candidates": "ریاضی‌دان, بوداگرایی, اپرا, علم, اقتصاددان, تروریسم, ستاره‌شناس, نمایشنامه‌نویس, علم اقتصاد, پزشکی",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "جان کولترین",
+      "object": "جاز",
+      "object_candidates": "رمان‌نویس, کالبدشناسی, اخترشناسی, جغرافیا, فیزیولوژی, زبان‌شناسی, اپرا, روان‌شناسی, زیست‌شناسی, جاز",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "فیزیک",
+      "object_candidates": "تاریخ, جغرافیا, پزشکی, وب‌گاه, علم, آپارتاید, اقتصاددان, پرنده, هندسه, فیزیک",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جالینوس",
+      "object": "پزشکی",
+      "object_candidates": "منطق, زیست‌شناسی, ریاضی‌دان, زبان‌شناسی, ژنتیک, ستاره‌شناس, جامعه‌شناسی, آپارتاید, تروریسم, پزشکی",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "آبراهام مزلو",
+      "object": "روان‌شناسی",
+      "object_candidates": "رمان‌نویس, کالبدشناسی, زمین‌شناسی, ستاره‌شناس, شیمی, ریاضی‌دان, باشگاه شبانه, موسیقی‌دان, بوم‌شناسی, روان‌شناسی",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "لویی پاستور",
+      "object": "شیمی",
+      "object_candidates": "علم, بوداگرایی, فیزیولوژی, جامعه‌شناسی, فلسفه, باستان‌شناسی, آپارتاید, پرنده, توپولوژی, شیمی",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "هنری کاوندیش",
+      "object": "فیزیک",
+      "object_candidates": "پرنده, باستان‌شناسی, وب‌گاه, تاریخ, ریاضیات, ژنتیک, موسیقی‌دان, زمین‌شناسی, کالبدشناسی, فیزیک",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "کارل مارکس",
+      "object": "علم اقتصاد",
+      "object_candidates": "باستان‌شناسی, بوداگرایی, ستاره‌شناس, توپولوژی, آپارتاید, الهیات, کالبدشناسی, فیزیولوژی, پزشکی, علم اقتصاد",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "اولف اویلر",
+      "object": "فیزیولوژی",
+      "object_candidates": "توپولوژی, پزشکی, جامعه‌شناسی, نمایشنامه‌نویس, الهیات, فیزیک, ریاضیات, اپرا, هندسه, فیزیولوژی",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "گالیلئو گالیله",
+      "object": "اخترشناسی",
+      "object_candidates": "شیمی, باشگاه شبانه, علم, منطق, بوداگرایی, اپرا, هندسه, پزشکی, زیست‌شناسی, اخترشناسی",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "نیکلای ایوانویچ لباچفسکی",
+      "object": "هندسه",
+      "object_candidates": "الهیات, بوداگرایی, منطق, رمان‌نویس, جامعه‌شناسی, جغرافیا, آپارتاید, روان‌شناسی, زمین‌شناسی, هندسه",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "کریستیان هویگنس",
+      "object": "ریاضیات",
+      "object_candidates": "جاز, تاریخ, اقتصاددان, تروریسم, شیمی, منطق, فیزیک, اخترشناسی, پرنده, ریاضیات",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "برنامه کاربردی وب",
+      "object": "وب‌گاه",
+      "object_candidates": "تاریخ, هندسه, زیست‌شناسی, زمین‌شناسی, بوداگرایی, اپرا, روان‌شناسی, فیزیولوژی, شیمی, وب‌گاه",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "ناگارجونه",
+      "object": "بوداگرایی",
+      "object_candidates": "منطق, ریاضی‌دان, فیزیک, پرنده, بوم‌شناسی, جاز, کالبدشناسی, رمان‌نویس, وب‌گاه, بوداگرایی",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "ویلیام همیلتون",
+      "object": "ریاضیات",
+      "object_candidates": "علم, اقتصاددان, هندسه, باستان‌شناسی, ستاره‌شناس, جغرافیا, وب‌گاه, زبان‌شناسی, شیمی, ریاضیات",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ارنست رادرفورد",
+      "object": "فیزیک",
+      "object_candidates": "تروریسم, تاریخ, اقتصاددان, زبان‌شناسی, باستان‌شناسی, توپولوژی, کالبدشناسی, بوم‌شناسی, ریاضی‌دان, فیزیک",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ویلیام هرشل",
+      "object": "اخترشناسی",
+      "object_candidates": "علم, زمین‌شناسی, الهیات, اپرا, فلسفه, تاریخ, زیست‌شناسی, باستان‌شناسی, بوداگرایی, اخترشناسی",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "ایوان پاولف",
+      "object": "فیزیولوژی",
+      "object_candidates": "آپارتاید, روان‌شناسی, ستاره‌شناس, باشگاه شبانه, زیست‌شناسی, اقتصاددان, فیزیک, جغرافیا, جامعه‌شناسی, فیزیولوژی",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "هرمان مینکوفسکی",
+      "object": "هندسه",
+      "object_candidates": "تروریسم, وب‌گاه, الهیات, پزشکی, فیزیک, توپولوژی, باشگاه شبانه, ژنتیک, ریاضیات, هندسه",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "گالیلئو گالیله",
+      "object": "فیزیک",
+      "object_candidates": "هندسه, باشگاه شبانه, بوم‌شناسی, توپولوژی, پرنده, منطق, تروریسم, موسیقی‌دان, نمایشنامه‌نویس, فیزیک",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جولیان شوینگر",
+      "object": "فیزیک",
+      "object_candidates": "زبان‌شناسی, فیزیولوژی, توپولوژی, کالبدشناسی, علم, جامعه‌شناسی, جغرافیا, شیمی, الهیات, فیزیک",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "حمله انتحاری",
+      "object": "تروریسم",
+      "object_candidates": "توپولوژی, روان‌شناسی, فلسفه, جغرافیا, باستان‌شناسی, زبان‌شناسی, الهیات, هندسه, پرنده, تروریسم",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "لو ویگوتسکی",
+      "object": "روان‌شناسی",
+      "object_candidates": "پزشکی, جاز, منطق, جغرافیا, ژنتیک, ریاضیات, باشگاه شبانه, اقتصاددان, نمایشنامه‌نویس, روان‌شناسی",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "کارل مارکس",
+      "object": "فلسفه",
+      "object_candidates": "روان‌شناسی, تروریسم, فیزیک, باشگاه شبانه, بوم‌شناسی, زمین‌شناسی, علم, ستاره‌شناس, موسیقی‌دان, فلسفه",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "فردریش بسل",
+      "object": "ریاضیات",
+      "object_candidates": "باشگاه شبانه, زبان‌شناسی, الهیات, توپولوژی, فیزیولوژی, زیست‌شناسی, اپرا, زمین‌شناسی, منطق, ریاضیات",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "یوزف شومپیتر",
+      "object": "علم اقتصاد",
+      "object_candidates": "باستان‌شناسی, باشگاه شبانه, پزشکی, جامعه‌شناسی, فلسفه, جاز, ریاضی‌دان, منطق, الهیات, علم اقتصاد",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "ماکس وبر",
+      "object": "تاریخ",
+      "object_candidates": "پرنده, جغرافیا, کالبدشناسی, علم, ستاره‌شناس, زیست‌شناسی, ژنتیک, باشگاه شبانه, بوم‌شناسی, تاریخ",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "ادوارد گیبون",
+      "object": "تاریخ",
+      "object_candidates": "زبان‌شناسی, تروریسم, جغرافیا, فلسفه, الهیات, جامعه‌شناسی, آپارتاید, نمایشنامه‌نویس, فیزیولوژی, تاریخ",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "جان ویلر",
+      "object": "فیزیک",
+      "object_candidates": "جامعه‌شناسی, تروریسم, باشگاه شبانه, زیست‌شناسی, وب‌گاه, آپارتاید, جغرافیا, روان‌شناسی, کالبدشناسی, فیزیک",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "لئونارد اویلر",
+      "object": "فیزیک",
+      "object_candidates": "بوداگرایی, جغرافیا, ریاضیات, روان‌شناسی, ریاضی‌دان, جاز, زمین‌شناسی, آپارتاید, زبان‌شناسی, فیزیک",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "شاک کروگ",
+      "object": "فیزیولوژی",
+      "object_candidates": "زیست‌شناسی, باستان‌شناسی, منطق, باشگاه شبانه, بوداگرایی, زمین‌شناسی, کالبدشناسی, وب‌گاه, علم اقتصاد, فیزیولوژی",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "فلیکس بلاک",
+      "object": "فیزیک",
+      "object_candidates": "آپارتاید, علم, ریاضی‌دان, روان‌شناسی, ریاضیات, جغرافیا, رمان‌نویس, اپرا, فیزیولوژی, فیزیک",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "آندرس سلسیوس",
+      "object": "اخترشناسی",
+      "object_candidates": "اقتصاددان, شیمی, زیست‌شناسی, ستاره‌شناس, فیزیولوژی, کالبدشناسی, پرنده, وب‌گاه, هندسه, اخترشناسی",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "ویلم اینتهوون",
+      "object": "فیزیولوژی",
+      "object_candidates": "آپارتاید, الهیات, باشگاه شبانه, اخترشناسی, جغرافیا, بوداگرایی, زبان‌شناسی, منطق, بوم‌شناسی, فیزیولوژی",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "یوزف فون فراونهوفر",
+      "object": "فیزیک",
+      "object_candidates": "پزشکی, موسیقی‌دان, علم, بوم‌شناسی, ریاضیات, جاز, شیمی, ریاضی‌دان, باستان‌شناسی, فیزیک",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "سین‌ایترو تومونوجا",
+      "object": "فیزیک",
+      "object_candidates": "منطق, زمین‌شناسی, فلسفه, الهیات, ستاره‌شناس, اقتصاددان, بوداگرایی, علم, روان‌شناسی, فیزیک",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هرمان اشوارتس",
+      "object": "ریاضیات",
+      "object_candidates": "ستاره‌شناس, روان‌شناسی, نمایشنامه‌نویس, فیزیک, باشگاه شبانه, موسیقی‌دان, هندسه, اخترشناسی, فیزیولوژی, ریاضیات",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ژان لو رون دالامبر",
+      "object": "ریاضیات",
+      "object_candidates": "شیمی, رمان‌نویس, فیزیولوژی, ژنتیک, فلسفه, زیست‌شناسی, پزشکی, باستان‌شناسی, موسیقی‌دان, ریاضیات",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "لوکا پاچیولی",
+      "object": "ریاضیات",
+      "object_candidates": "پزشکی, ستاره‌شناس, زبان‌شناسی, روان‌شناسی, اخترشناسی, پرنده, فلسفه, بوداگرایی, زیست‌شناسی, ریاضیات",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ویتالی لازاریویچ گینزبرگ",
+      "object": "فیزیک",
+      "object_candidates": "جغرافیا, جاز, باستان‌شناسی, نمایشنامه‌نویس, توپولوژی, اخترشناسی, پرنده, فلسفه, شیمی, فیزیک",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "سیما چیان",
+      "object": "تاریخ",
+      "object_candidates": "پزشکی, زمین‌شناسی, باشگاه شبانه, پرنده, کالبدشناسی, وب‌گاه, بوم‌شناسی, نمایشنامه‌نویس, تروریسم, تاریخ",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "بطلمیوس",
+      "object": "ریاضی‌دان",
+      "object_candidates": "نمایشنامه‌نویس, پرنده, تروریسم, توپولوژی, پزشکی, ستاره‌شناس, هندسه, علم, موسیقی‌دان, ریاضی‌دان",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "ژان پیاژه",
+      "object": "روان‌شناسی",
+      "object_candidates": "اپرا, منطق, جامعه‌شناسی, بوداگرایی, الهیات, شیمی, وب‌گاه, کالبدشناسی, باستان‌شناسی, روان‌شناسی",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "استفان باناخ",
+      "object": "ریاضیات",
+      "object_candidates": "منطق, اخترشناسی, زیست‌شناسی, باستان‌شناسی, فیزیولوژی, علم, جامعه‌شناسی, تروریسم, توپولوژی, ریاضیات",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "جوزف پریستلی",
+      "object": "فلسفه",
+      "object_candidates": "فیزیک, روان‌شناسی, علم اقتصاد, کالبدشناسی, پزشکی, تروریسم, نمایشنامه‌نویس, هندسه, ریاضیات, فلسفه",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "کورت لوین",
+      "object": "روان‌شناسی",
+      "object_candidates": "شیمی, نمایشنامه‌نویس, کالبدشناسی, علم اقتصاد, اخترشناسی, اقتصاددان, منطق, اپرا, بوداگرایی, روان‌شناسی",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "جیمز کلرک ماکسول",
+      "object": "فیزیک",
+      "object_candidates": "پزشکی, جغرافیا, روان‌شناسی, علم اقتصاد, اپرا, اخترشناسی, تروریسم, بوداگرایی, زیست‌شناسی, فیزیک",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "آلفرد مارشال",
+      "object": "علم اقتصاد",
+      "object_candidates": "فیزیک, جغرافیا, زیست‌شناسی, بوداگرایی, علم, هندسه, اخترشناسی, ریاضی‌دان, منطق, علم اقتصاد",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "نیکلاس کوپرنیک",
+      "object": "اخترشناسی",
+      "object_candidates": "منطق, توپولوژی, باستان‌شناسی, علم, پرنده, جغرافیا, تروریسم, باشگاه شبانه, زیست‌شناسی, اخترشناسی",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "اریک ماسکین",
+      "object": "اقتصاددان",
+      "object_candidates": "بوداگرایی, رمان‌نویس, اخترشناسی, علم, بوم‌شناسی, جامعه‌شناسی, کالبدشناسی, ستاره‌شناس, پزشکی, اقتصاددان",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "جارد دایموند",
+      "object": "بوم‌شناسی",
+      "object_candidates": "شیمی, باستان‌شناسی, زمین‌شناسی, منطق, فیزیک, وب‌گاه, علم, ستاره‌شناس, آپارتاید, بوم‌شناسی",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "آندره کولموگروف",
+      "object": "هندسه",
+      "object_candidates": "زیست‌شناسی, فیزیک, زبان‌شناسی, نمایشنامه‌نویس, ریاضیات, وب‌گاه, جامعه‌شناسی, رمان‌نویس, جاز, هندسه",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "ژوزف لویی گیلوساک",
+      "object": "شیمی",
+      "object_candidates": "اخترشناسی, پرنده, تاریخ, جغرافیا, موسیقی‌دان, منطق, نمایشنامه‌نویس, علم اقتصاد, رمان‌نویس, شیمی",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "اکتان",
+      "object": "شیمی",
+      "object_candidates": "زبان‌شناسی, توپولوژی, وب‌گاه, منطق, آپارتاید, اپرا, علم, تاریخ, رمان‌نویس, شیمی",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "دانیل برنولی",
+      "object": "فیزیک",
+      "object_candidates": "پزشکی, باستان‌شناسی, پرنده, الهیات, نمایشنامه‌نویس, روان‌شناسی, اپرا, ستاره‌شناس, فلسفه, فیزیک",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "مایکل فارادی",
+      "object": "فیزیک",
+      "object_candidates": "پرنده, زیست‌شناسی, اپرا, بوداگرایی, علم اقتصاد, توپولوژی, تاریخ, پزشکی, روان‌شناسی, فیزیک",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "همفری دیوی",
+      "object": "شیمی",
+      "object_candidates": "نمایشنامه‌نویس, اقتصاددان, روان‌شناسی, جامعه‌شناسی, فلسفه, منطق, جاز, رمان‌نویس, جغرافیا, شیمی",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "هانری مواسان",
+      "object": "شیمی",
+      "object_candidates": "وب‌گاه, منطق, رمان‌نویس, ریاضیات, توپولوژی, علم اقتصاد, ستاره‌شناس, تروریسم, باشگاه شبانه, شیمی",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "پیر کوری",
+      "object": "فیزیک",
+      "object_candidates": "علم اقتصاد, الهیات, نمایشنامه‌نویس, هندسه, باستان‌شناسی, فلسفه, رمان‌نویس, روان‌شناسی, جاز, فیزیک",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "گوستاو کیرشهف",
+      "object": "فیزیک",
+      "object_candidates": "توپولوژی, ریاضی‌دان, الهیات, علم, فلسفه, ریاضیات, زبان‌شناسی, آپارتاید, پزشکی, فیزیک",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "نوربرت وینر",
+      "object": "ریاضیات",
+      "object_candidates": "منطق, بوداگرایی, اپرا, شیمی, بوم‌شناسی, جامعه‌شناسی, الهیات, فلسفه, جغرافیا, ریاضیات",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "اوربن لو وریه",
+      "object": "اخترشناسی",
+      "object_candidates": "الهیات, فیزیولوژی, باشگاه شبانه, بوداگرایی, جغرافیا, کالبدشناسی, زیست‌شناسی, وب‌گاه, زمین‌شناسی, اخترشناسی",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "یوهان هویزینگا",
+      "object": "تاریخ",
+      "object_candidates": "ریاضی‌دان, جاز, فیزیک, رمان‌نویس, زبان‌شناسی, ریاضیات, جغرافیا, پزشکی, پرنده, تاریخ",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "ساینس",
+      "object": "علم",
+      "object_candidates": "موسیقی‌دان, هندسه, الهیات, پرنده, منطق, روان‌شناسی, جاز, بوم‌شناسی, ستاره‌شناس, علم",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "ادوارد تلر",
+      "object": "فیزیک",
+      "object_candidates": "ژنتیک, بوداگرایی, ریاضیات, علم اقتصاد, منطق, ستاره‌شناس, کالبدشناسی, جامعه‌شناسی, جاز, فیزیک",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "لد زپلین",
+      "object": "موسیقی‌دان",
+      "object_candidates": "باستان‌شناسی, علم اقتصاد, زیست‌شناسی, منطق, زبان‌شناسی, روان‌شناسی, زمین‌شناسی, کالبدشناسی, ژنتیک, موسیقی‌دان",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "ارنست ارلاندو لارنس",
+      "object": "فیزیک",
+      "object_candidates": "علم, پرنده, کالبدشناسی, تاریخ, اخترشناسی, توپولوژی, منطق, پزشکی, باشگاه شبانه, فیزیک",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ماری کوری",
+      "object": "شیمی",
+      "object_candidates": "علم اقتصاد, ستاره‌شناس, علم, بوداگرایی, بوم‌شناسی, وب‌گاه, جاز, ریاضی‌دان, ریاضیات, شیمی",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "جان نپر",
+      "object": "ریاضیات",
+      "object_candidates": "زبان‌شناسی, الهیات, ستاره‌شناس, اپرا, موسیقی‌دان, ریاضی‌دان, پزشکی, رمان‌نویس, ژنتیک, ریاضیات",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "آیزاک نیوتن",
+      "object": "اخترشناسی",
+      "object_candidates": "الهیات, بوم‌شناسی, علم اقتصاد, آپارتاید, ژنتیک, جغرافیا, کالبدشناسی, ریاضی‌دان, اپرا, اخترشناسی",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "لری سنگر",
+      "object": "فلسفه",
+      "object_candidates": "علم, فیزیک, فیزیولوژی, باستان‌شناسی, بوم‌شناسی, اخترشناسی, پزشکی, شیمی, ستاره‌شناس, فلسفه",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "فیلیپ لنارت",
+      "object": "فیزیک",
+      "object_candidates": "تروریسم, زمین‌شناسی, اقتصاددان, منطق, رمان‌نویس, پرنده, نمایشنامه‌نویس, اپرا, جامعه‌شناسی, فیزیک",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "فیزیولوژی",
+      "object_candidates": "علم اقتصاد, پرنده, ریاضیات, ژنتیک, فیزیک, وب‌گاه, بوم‌شناسی, ریاضی‌دان, نمایشنامه‌نویس, فیزیولوژی",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "فردریش بسل",
+      "object": "اخترشناسی",
+      "object_candidates": "آپارتاید, روان‌شناسی, وب‌گاه, منطق, هندسه, فلسفه, موسیقی‌دان, ژنتیک, اپرا, اخترشناسی",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "آلفرد کینزی",
+      "object": "زیست‌شناسی",
+      "object_candidates": "نمایشنامه‌نویس, شیمی, جامعه‌شناسی, بوداگرایی, بوم‌شناسی, زمین‌شناسی, ژنتیک, تاریخ, اپرا, زیست‌شناسی",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "مسروب ماشتوتس",
+      "object": "زبان‌شناسی",
+      "object_candidates": "زمین‌شناسی, ژنتیک, باشگاه شبانه, شیمی, پزشکی, علم, آپارتاید, فیزیک, توپولوژی, زبان‌شناسی",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "جیمز فرانک",
+      "object": "فیزیک",
+      "object_candidates": "اخترشناسی, وب‌گاه, جامعه‌شناسی, بوم‌شناسی, علم اقتصاد, علم, پرنده, باشگاه شبانه, آپارتاید, فیزیک",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "الینور اوستروم",
+      "object": "علم اقتصاد",
+      "object_candidates": "ستاره‌شناس, فیزیولوژی, ریاضی‌دان, آپارتاید, پرنده, منطق, رمان‌نویس, پزشکی, روان‌شناسی, علم اقتصاد",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "ادوارد ویکتور اپلتون",
+      "object": "فیزیک",
+      "object_candidates": "ریاضیات, روان‌شناسی, ستاره‌شناس, پرنده, آپارتاید, جاز, اخترشناسی, بوم‌شناسی, الهیات, فیزیک",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جان دالتون",
+      "object": "شیمی",
+      "object_candidates": "زبان‌شناسی, ریاضی‌دان, نمایشنامه‌نویس, تاریخ, علم اقتصاد, زیست‌شناسی, بوداگرایی, جغرافیا, فلسفه, شیمی",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "جان دالتون",
+      "object": "فیزیک",
+      "object_candidates": "ریاضی‌دان, تروریسم, هندسه, توپولوژی, ستاره‌شناس, شیمی, فیزیولوژی, جغرافیا, کالبدشناسی, فیزیک",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "دمیتری مندلیف",
+      "object": "شیمی",
+      "object_candidates": "فیزیک, ستاره‌شناس, وب‌گاه, باستان‌شناسی, اپرا, زیست‌شناسی, باشگاه شبانه, تاریخ, بوم‌شناسی, شیمی",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "دمیتری مندلیف",
+      "object": "فیزیک",
+      "object_candidates": "نمایشنامه‌نویس, اپرا, جامعه‌شناسی, جغرافیا, پزشکی, ریاضی‌دان, جاز, ریاضیات, تروریسم, فیزیک",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "پل مک‌کارتنی",
+      "object": "موسیقی‌دان",
+      "object_candidates": "هندسه, اخترشناسی, الهیات, بوداگرایی, نمایشنامه‌نویس, تروریسم, بوم‌شناسی, کالبدشناسی, رمان‌نویس, موسیقی‌دان",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "چارلز ببیج",
+      "object": "ریاضیات",
+      "object_candidates": "اخترشناسی, باشگاه شبانه, کالبدشناسی, بوداگرایی, روان‌شناسی, زیست‌شناسی, فلسفه, نمایشنامه‌نویس, وب‌گاه, ریاضیات",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "نیکلاس کوپرنیک",
+      "object": "ریاضیات",
+      "object_candidates": "کالبدشناسی, وب‌گاه, پرنده, فیزیولوژی, اخترشناسی, ستاره‌شناس, زیست‌شناسی, فیزیک, جغرافیا, ریاضیات",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "آریابهاتا",
+      "object": "اخترشناسی",
+      "object_candidates": "جامعه‌شناسی, منطق, اقتصاددان, علم اقتصاد, زیست‌شناسی, ریاضی‌دان, تاریخ, آپارتاید, جغرافیا, اخترشناسی",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "کلاید تامبا",
+      "object": "ستاره‌شناس",
+      "object_candidates": "تروریسم, رمان‌نویس, منطق, جغرافیا, الهیات, بوداگرایی, زبان‌شناسی, باشگاه شبانه, شیمی, ستاره‌شناس",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "ویلیس اوژن لمب",
+      "object": "فیزیک",
+      "object_candidates": "علم اقتصاد, کالبدشناسی, باستان‌شناسی, پرنده, پزشکی, هندسه, زبان‌شناسی, اخترشناسی, منطق, فیزیک",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ارشمیدس",
+      "object": "هندسه",
+      "object_candidates": "فیزیولوژی, جاز, توپولوژی, جغرافیا, وب‌گاه, زمین‌شناسی, فلسفه, بوم‌شناسی, زیست‌شناسی, هندسه",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "آناکساگوراس",
+      "object": "اخترشناسی",
+      "object_candidates": "آپارتاید, تاریخ, توپولوژی, ستاره‌شناس, ژنتیک, کالبدشناسی, فلسفه, منطق, جامعه‌شناسی, اخترشناسی",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "کریستیان هویگنس",
+      "object": "فیزیک",
+      "object_candidates": "تروریسم, اپرا, علم اقتصاد, باشگاه شبانه, منطق, موسیقی‌دان, ریاضیات, هندسه, کالبدشناسی, فیزیک",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "مایکل جکسون",
+      "object": "موسیقی‌دان",
+      "object_candidates": "فیزیک, اقتصاددان, زمین‌شناسی, باستان‌شناسی, ستاره‌شناس, ریاضیات, پرنده, علم اقتصاد, بوداگرایی, موسیقی‌دان",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "آدام اسمیت",
+      "object": "علم اقتصاد",
+      "object_candidates": "منطق, توپولوژی, ژنتیک, جاز, ریاضیات, زیست‌شناسی, زمین‌شناسی, پرنده, جغرافیا, علم اقتصاد",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "رابرت میلیکان",
+      "object": "فیزیک",
+      "object_candidates": "بوم‌شناسی, زمین‌شناسی, پزشکی, نمایشنامه‌نویس, باشگاه شبانه, جاز, جغرافیا, شیمی, آپارتاید, فیزیک",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "گراردوس مرکاتور",
+      "object": "جغرافیا",
+      "object_candidates": "کالبدشناسی, بوم‌شناسی, نمایشنامه‌نویس, موسیقی‌دان, ستاره‌شناس, علم, منطق, اپرا, اقتصاددان, جغرافیا",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "کارل لینه",
+      "object": "پزشکی",
+      "object_candidates": "منطق, فلسفه, باشگاه شبانه, الهیات, ریاضیات, نمایشنامه‌نویس, علم اقتصاد, زمین‌شناسی, هندسه, پزشکی",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "چارلز داروین",
+      "object": "زمین‌شناسی",
+      "object_candidates": "روان‌شناسی, منطق, علم, باستان‌شناسی, ستاره‌شناس, باشگاه شبانه, اپرا, الهیات, جغرافیا, زمین‌شناسی",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "فرانک ویلچک",
+      "object": "فیزیک",
+      "object_candidates": "فلسفه, هندسه, علم, روان‌شناسی, کالبدشناسی, بوم‌شناسی, ژنتیک, اخترشناسی, پرنده, فیزیک",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "آندره کولموگروف",
+      "object": "توپولوژی",
+      "object_candidates": "باستان‌شناسی, علم, هندسه, ژنتیک, ریاضی‌دان, منطق, ریاضیات, پرنده, رمان‌نویس, توپولوژی",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "یوهان هاینریش لمبرت",
+      "object": "فیزیک",
+      "object_candidates": "اخترشناسی, موسیقی‌دان, جاز, زیست‌شناسی, پزشکی, نمایشنامه‌نویس, باستان‌شناسی, رمان‌نویس, زبان‌شناسی, فیزیک",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "برهماگوپتا",
+      "object": "ریاضیات",
+      "object_candidates": "علم اقتصاد, کالبدشناسی, موسیقی‌دان, وب‌گاه, باشگاه شبانه, رمان‌نویس, پرنده, جاز, جغرافیا, ریاضیات",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "ویلهلم وین",
+      "object": "فیزیک",
+      "object_candidates": "فیزیولوژی, وب‌گاه, ژنتیک, پرنده, پزشکی, علم اقتصاد, منطق, بوداگرایی, جامعه‌شناسی, فیزیک",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "هرمان فون هلمهولتز",
+      "object": "روان‌شناسی",
+      "object_candidates": "اخترشناسی, ریاضیات, زیست‌شناسی, جاز, ستاره‌شناس, اپرا, پزشکی, تروریسم, فلسفه, روان‌شناسی",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "لئونارد اویلر",
+      "object": "اخترشناسی",
+      "object_candidates": "بوداگرایی, جامعه‌شناسی, آپارتاید, فیزیک, نمایشنامه‌نویس, ریاضی‌دان, هندسه, باستان‌شناسی, موسیقی‌دان, اخترشناسی",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "گالیلئو گالیله",
+      "object": "فلسفه",
+      "object_candidates": "روان‌شناسی, فیزیک, ریاضی‌دان, باستان‌شناسی, وب‌گاه, زیست‌شناسی, اخترشناسی, جاز, منطق, فلسفه",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "گرگور مندل",
+      "object": "ژنتیک",
+      "object_candidates": "کالبدشناسی, زبان‌شناسی, تروریسم, اخترشناسی, توپولوژی, علم اقتصاد, روان‌شناسی, جغرافیا, الهیات, ژنتیک",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "بروس اسپرینگستین",
+      "object": "موسیقی‌دان",
+      "object_candidates": "زمین‌شناسی, اقتصاددان, جاز, فیزیولوژی, زبان‌شناسی, ستاره‌شناس, علم, جغرافیا, تروریسم, موسیقی‌دان",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "سوفیا کووالوسکایا",
+      "object": "ریاضیات",
+      "object_candidates": "زیست‌شناسی, شیمی, ریاضی‌دان, جاز, ژنتیک, نمایشنامه‌نویس, جامعه‌شناسی, زمین‌شناسی, زبان‌شناسی, ریاضیات",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "جوردانو برونو",
+      "object": "فلسفه",
+      "object_candidates": "رمان‌نویس, ریاضی‌دان, جاز, بوداگرایی, پرنده, زمین‌شناسی, هندسه, علم اقتصاد, زیست‌شناسی, فلسفه",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "هانری بکرل",
+      "object": "فیزیک",
+      "object_candidates": "تروریسم, منطق, پرنده, اخترشناسی, جغرافیا, الهیات, زبان‌شناسی, ستاره‌شناس, زمین‌شناسی, فیزیک",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "کیپ تورن",
+      "object": "فیزیک",
+      "object_candidates": "فیزیولوژی, جاز, تروریسم, آپارتاید, هندسه, زیست‌شناسی, رمان‌نویس, وب‌گاه, توپولوژی, فیزیک",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "آوگوست وایسمان",
+      "object": "زیست‌شناسی",
+      "object_candidates": "زمین‌شناسی, بوم‌شناسی, فیزیولوژی, توپولوژی, ژنتیک, تروریسم, منطق, کالبدشناسی, پزشکی, زیست‌شناسی",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "پل لانژون",
+      "object": "فیزیک",
+      "object_candidates": "ستاره‌شناس, روان‌شناسی, توپولوژی, فیزیولوژی, فلسفه, هندسه, نمایشنامه‌نویس, زیست‌شناسی, اخترشناسی, فیزیک",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "جان داگلاس کاکرافت",
+      "object": "فیزیک",
+      "object_candidates": "پرنده, هندسه, زمین‌شناسی, ریاضی‌دان, علم, منطق, جاز, اقتصاددان, جامعه‌شناسی, فیزیک",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "سوانت آرنیوس",
+      "object": "شیمی",
+      "object_candidates": "جاز, کالبدشناسی, جامعه‌شناسی, موسیقی‌دان, پرنده, توپولوژی, روان‌شناسی, اقتصاددان, وب‌گاه, شیمی",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "روکوکو",
+      "object": "معماری",
+      "object_candidates": "شیمی, جغرافیا, ستاره‌شناس, منطق, فیزیولوژی, توپولوژی, پزشکی, تروریسم, ریاضی‌دان, معماری",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

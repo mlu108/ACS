@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "哪个国家把<subject>作为法律术语？答案是：<mask>。",
+    "<subject>在哪个司法管辖区是一个法律术语？答案是：<mask>。",
+    "法律术语<subject>适用于哪里？答案是：<mask>。",
+    "哪个法律实体使用<subject>？答案是：<mask>。",
+    "<subject>在哪个地区是一个公认的法律术语？答案是：<mask>。",
+    "<subject>作为法律术语适用的司法管辖区是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "法国总统",
+      "object": "法国",
+      "object_candidates": "索马里, 瑞士, 罗马尼亚, 新加坡, 挪威, 古巴, 立陶宛, 中华民国, 摩纳哥, 法国",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "加拿大总理",
+      "object": "加拿大",
+      "object_candidates": "乌克兰, 墨西哥, 索马里, 摩纳哥, 土耳其, 爱尔兰共和国, 日本, 伊拉克, 荷兰, 加拿大",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "澳大利亚工党",
+      "object": "澳大利亚",
+      "object_candidates": "葡萄牙, 加拿大, 奥地利, 利比亚, 挪威, 摩纳哥, 意大利, 芬兰, 古巴, 澳大利亚",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "墨西哥总统",
+      "object": "墨西哥",
+      "object_candidates": "牙买加, 古巴, 马来西亚, 瑞士, 保加利亚, 意大利, 丹麦, 加拿大, 法国, 墨西哥",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "德国总理",
+      "object": "德国",
+      "object_candidates": "保加利亚, 挪威, 利比亚, 克罗地亚, 葡萄牙, 伊朗, 丹麦, 白俄罗斯, 菲律宾, 德国",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "德意志联邦共和国基本法",
+      "object": "德国",
+      "object_candidates": "瑞士, 越南, 阿尔巴尼亚, 葡萄牙, 罗马尼亚, 澳大利亚, 奥地利, 立陶宛, 伊拉克, 德国",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "加拿大国会",
+      "object": "加拿大",
+      "object_candidates": "保加利亚, 挪威, 意大利, 日本, 古巴, 葡萄牙, 海地, 越南, 白俄罗斯, 加拿大",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "人民院",
+      "object": "印度",
+      "object_candidates": "法国, 奥地利, 日本, 新加坡, 巴基斯坦, 乌克兰, 牙买加, 俄罗斯, 阿根廷, 印度",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "以色列国会",
+      "object": "以色列",
+      "object_candidates": "越南, 阿尔巴尼亚, 利比亚, 菲律宾, 德国, 克罗地亚, 瑞典, 澳门, 伊拉克, 以色列",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "日本内阁总理大臣",
+      "object": "日本",
+      "object_candidates": "丹麦, 土耳其, 墨西哥, 瑞典, 克罗地亚, 意大利, 荷兰, 中华民国, 澳门, 日本",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "爱尔兰总统",
+      "object": "爱尔兰共和国",
+      "object_candidates": "加拿大, 白俄罗斯, 荷兰, 立陶宛, 墨西哥, 瑞典, 印度, 巴基斯坦, 利比亚, 爱尔兰共和国",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "澳大利亚元",
+      "object": "澳大利亚",
+      "object_candidates": "海地, 中华民国, 荷兰, 澳门, 罗马尼亚, 立陶宛, 马来西亚, 丹麦, 牙买加, 澳大利亚",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "巴基斯坦总统",
+      "object": "巴基斯坦",
+      "object_candidates": "越南, 瑞典, 玻利维亚, 新加坡, 土耳其, 丹麦, 葡萄牙, 加拿大, 伊朗, 巴基斯坦",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "俄罗斯总统",
+      "object": "俄罗斯",
+      "object_candidates": "越南, 印度, 古巴, 法国, 罗马尼亚, 芬兰, 加拿大, 新加坡, 巴基斯坦, 俄罗斯",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "奥地利总理",
+      "object": "奥地利",
+      "object_candidates": "西班牙, 菲律宾, 葡萄牙, 玻利维亚, 印度, 白俄罗斯, 罗马尼亚, 加拿大, 日本, 奥地利",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "瑞典国会",
+      "object": "瑞典",
+      "object_candidates": "阿尔巴尼亚, 新加坡, 乌克兰, 越南, 荷兰, 马来西亚, 法国, 摩纳哥, 芬兰, 瑞典",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "西班牙国旗",
+      "object": "西班牙",
+      "object_candidates": "玻利维亚, 墨西哥, 挪威, 伊拉克, 芬兰, 阿根廷, 加拿大, 荷兰, 越南, 西班牙",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "法国国旗",
+      "object": "法国",
+      "object_candidates": "巴基斯坦, 海地, 奥地利, 新加坡, 俄罗斯, 立陶宛, 白俄罗斯, 越南, 德国, 法国",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "乌克兰总统",
+      "object": "乌克兰",
+      "object_candidates": "荷兰, 墨西哥, 以色列, 白俄罗斯, 土耳其, 西班牙, 立陶宛, 澳大利亚, 挪威, 乌克兰",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "法国总理",
+      "object": "法国",
+      "object_candidates": "伊拉克, 巴基斯坦, 葡萄牙, 土耳其, 菲律宾, 克罗地亚, 荷兰, 新加坡, 印度, 法国",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "丹麦国旗",
+      "object": "丹麦",
+      "object_candidates": "西班牙, 日本, 伊拉克, 挪威, 葡萄牙, 以色列, 新加坡, 土耳其, 加拿大, 丹麦",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "德国联邦议院",
+      "object": "德国",
+      "object_candidates": "索马里, 爱尔兰共和国, 墨西哥, 瑞典, 日本, 利比亚, 加拿大, 印度, 以色列, 德国",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "爱尔兰国旗",
+      "object": "爱尔兰共和国",
+      "object_candidates": "立陶宛, 菲律宾, 葡萄牙, 古巴, 法国, 玻利维亚, 摩纳哥, 伊朗, 巴基斯坦, 爱尔兰共和国",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "奥地利总统",
+      "object": "奥地利",
+      "object_candidates": "俄罗斯, 澳大利亚, 越南, 立陶宛, 以色列, 巴基斯坦, 牙买加, 土耳其, 芬兰, 奥地利",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "巴基斯坦总理",
+      "object": "巴基斯坦",
+      "object_candidates": "马来西亚, 阿根廷, 澳大利亚, 挪威, 越南, 牙买加, 新加坡, 以色列, 伊朗, 巴基斯坦",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "德国联邦总统",
+      "object": "德国",
+      "object_candidates": "玻利维亚, 立陶宛, 澳门, 古巴, 挪威, 摩纳哥, 白俄罗斯, 保加利亚, 俄罗斯, 德国",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "瑞典首相",
+      "object": "瑞典",
+      "object_candidates": "新加坡, 爱尔兰共和国, 加拿大, 德国, 荷兰, 瑞士, 芬兰, 西班牙, 丹麦, 瑞典",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "法国国民议会",
+      "object": "法国",
+      "object_candidates": "土耳其, 瑞士, 古巴, 墨西哥, 丹麦, 马来西亚, 挪威, 中华民国, 奥地利, 法国",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "瑞士国旗",
+      "object": "瑞士",
+      "object_candidates": "菲律宾, 玻利维亚, 俄罗斯, 牙买加, 奥地利, 葡萄牙, 爱尔兰共和国, 伊朗, 白俄罗斯, 瑞士",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "俄罗斯总理",
+      "object": "俄罗斯",
+      "object_candidates": "海地, 乌克兰, 马来西亚, 瑞士, 西班牙, 葡萄牙, 意大利, 牙买加, 古巴, 俄罗斯",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "新加坡国旗",
+      "object": "新加坡",
+      "object_candidates": "葡萄牙, 玻利维亚, 德国, 澳门, 索马里, 越南, 奥地利, 丹麦, 保加利亚, 新加坡",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "法国参议院",
+      "object": "法国",
+      "object_candidates": "芬兰, 丹麦, 葡萄牙, 索马里, 巴基斯坦, 马来西亚, 古巴, 伊朗, 中华民国, 法国",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "乌克兰总理",
+      "object": "乌克兰",
+      "object_candidates": "以色列, 俄罗斯, 古巴, 芬兰, 土耳其, 法国, 索马里, 摩纳哥, 越南, 乌克兰",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "俄罗斯联邦国旗",
+      "object": "俄罗斯",
+      "object_candidates": "法国, 澳门, 白俄罗斯, 保加利亚, 印度, 澳大利亚, 爱尔兰共和国, 瑞士, 意大利, 俄罗斯",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "加拿大国旗",
+      "object": "加拿大",
+      "object_candidates": "玻利维亚, 澳门, 芬兰, 利比亚, 海地, 印度, 白俄罗斯, 澳大利亚, 伊朗, 加拿大",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "罗马尼亚总统",
+      "object": "罗马尼亚",
+      "object_candidates": "伊朗, 法国, 墨西哥, 意大利, 中华民国, 马来西亚, 古巴, 海地, 爱尔兰共和国, 罗马尼亚",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "荷兰国旗",
+      "object": "荷兰",
+      "object_candidates": "瑞典, 索马里, 新加坡, 奥地利, 玻利维亚, 葡萄牙, 白俄罗斯, 伊拉克, 澳大利亚, 荷兰",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "马来西亚首相",
+      "object": "马来西亚",
+      "object_candidates": "西班牙, 越南, 伊朗, 以色列, 立陶宛, 芬兰, 保加利亚, 葡萄牙, 丹麦, 马来西亚",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "牙买加国旗",
+      "object": "牙买加",
+      "object_candidates": "克罗地亚, 马来西亚, 德国, 意大利, 瑞士, 澳大利亚, 保加利亚, 西班牙, 摩纳哥, 牙买加",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "阿根廷国旗",
+      "object": "阿根廷",
+      "object_candidates": "牙买加, 挪威, 荷兰, 法国, 立陶宛, 以色列, 澳大利亚, 印度, 保加利亚, 阿根廷",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "挪威国旗",
+      "object": "挪威",
+      "object_candidates": "立陶宛, 加拿大, 摩纳哥, 伊朗, 德国, 澳大利亚, 瑞典, 奥地利, 中华民国, 挪威",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "众议院",
+      "object": "西班牙",
+      "object_candidates": "以色列, 伊拉克, 俄罗斯, 立陶宛, 菲律宾, 丹麦, 巴基斯坦, 玻利维亚, 乌克兰, 西班牙",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "天皇",
+      "object": "日本",
+      "object_candidates": "瑞典, 巴基斯坦, 克罗地亚, 立陶宛, 土耳其, 菲律宾, 爱尔兰共和国, 罗马尼亚, 摩纳哥, 日本",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "立陶宛国旗",
+      "object": "立陶宛",
+      "object_candidates": "海地, 瑞士, 俄罗斯, 以色列, 马来西亚, 玻利维亚, 荷兰, 西班牙, 日本, 立陶宛",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "保加利亚国旗",
+      "object": "保加利亚",
+      "object_candidates": "摩纳哥, 白俄罗斯, 墨西哥, 阿尔巴尼亚, 瑞典, 乌克兰, 法国, 土耳其, 荷兰, 保加利亚",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "伊拉克总统",
+      "object": "伊拉克",
+      "object_candidates": "伊朗, 土耳其, 海地, 新加坡, 克罗地亚, 马来西亚, 芬兰, 菲律宾, 越南, 伊拉克",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "土耳其国旗",
+      "object": "土耳其",
+      "object_candidates": "加拿大, 新加坡, 澳门, 日本, 伊拉克, 马来西亚, 阿根廷, 瑞典, 玻利维亚, 土耳其",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "马来西亚国旗",
+      "object": "马来西亚",
+      "object_candidates": "澳门, 玻利维亚, 瑞士, 白俄罗斯, 罗马尼亚, 俄罗斯, 海地, 牙买加, 挪威, 马来西亚",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "白俄罗斯国旗",
+      "object": "白俄罗斯",
+      "object_candidates": "丹麦, 德国, 俄罗斯, 墨西哥, 瑞士, 印度, 瑞典, 保加利亚, 澳门, 白俄罗斯",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "古巴国旗",
+      "object": "古巴",
+      "object_candidates": "罗马尼亚, 爱尔兰共和国, 墨西哥, 中华民国, 奥地利, 马来西亚, 巴基斯坦, 法国, 澳门, 古巴",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "越南国旗",
+      "object": "越南",
+      "object_candidates": "芬兰, 巴基斯坦, 印度, 新加坡, 澳大利亚, 罗马尼亚, 白俄罗斯, 中华民国, 摩纳哥, 越南",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "玻利维亚国旗",
+      "object": "玻利维亚",
+      "object_candidates": "瑞士, 印度, 以色列, 澳大利亚, 中华民国, 罗马尼亚, 俄罗斯, 巴基斯坦, 芬兰, 玻利维亚",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "印度国旗",
+      "object": "印度",
+      "object_candidates": "摩纳哥, 中华民国, 荷兰, 瑞典, 利比亚, 克罗地亚, 澳门, 索马里, 立陶宛, 印度",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "澳门币",
+      "object": "澳门",
+      "object_candidates": "海地, 墨西哥, 澳大利亚, 荷兰, 保加利亚, 挪威, 新加坡, 阿尔巴尼亚, 奥地利, 澳门",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "摩纳哥国旗",
+      "object": "摩纳哥",
+      "object_candidates": "土耳其, 中华民国, 伊朗, 芬兰, 印度, 丹麦, 白俄罗斯, 伊拉克, 利比亚, 摩纳哥",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "索马里国旗",
+      "object": "索马里",
+      "object_candidates": "克罗地亚, 西班牙, 土耳其, 马来西亚, 保加利亚, 荷兰, 法国, 挪威, 利比亚, 索马里",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "以色列总统",
+      "object": "以色列",
+      "object_candidates": "德国, 葡萄牙, 立陶宛, 保加利亚, 牙买加, 日本, 土耳其, 罗马尼亚, 中华民国, 以色列",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "瑞典国旗",
+      "object": "瑞典",
+      "object_candidates": "加拿大, 挪威, 白俄罗斯, 立陶宛, 越南, 西班牙, 罗马尼亚, 阿尔巴尼亚, 中华民国, 瑞典",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "中华民国国旗",
+      "object": "中华民国",
+      "object_candidates": "瑞士, 日本, 白俄罗斯, 立陶宛, 越南, 澳门, 印度, 海地, 爱尔兰共和国, 中华民国",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "澳大利亚国旗",
+      "object": "澳大利亚",
+      "object_candidates": "菲律宾, 伊拉克, 阿根廷, 印度, 葡萄牙, 加拿大, 以色列, 德国, 摩纳哥, 澳大利亚",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "乌克兰国旗",
+      "object": "乌克兰",
+      "object_candidates": "芬兰, 土耳其, 丹麦, 印度, 德国, 奥地利, 爱尔兰共和国, 以色列, 葡萄牙, 乌克兰",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "白俄罗斯总统",
+      "object": "白俄罗斯",
+      "object_candidates": "索马里, 以色列, 印度, 保加利亚, 瑞士, 日本, 阿根廷, 丹麦, 法国, 白俄罗斯",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "海地国旗",
+      "object": "海地",
+      "object_candidates": "爱尔兰共和国, 摩纳哥, 罗马尼亚, 奥地利, 阿根廷, 越南, 日本, 索马里, 玻利维亚, 海地",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "墨西哥国徽",
+      "object": "墨西哥",
+      "object_candidates": "立陶宛, 古巴, 以色列, 利比亚, 挪威, 奥地利, 伊朗, 澳门, 瑞典, 墨西哥",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "芬兰国旗",
+      "object": "芬兰",
+      "object_candidates": "法国, 加拿大, 保加利亚, 西班牙, 菲律宾, 德国, 白俄罗斯, 俄罗斯, 索马里, 芬兰",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "克罗地亚国旗",
+      "object": "克罗地亚",
+      "object_candidates": "德国, 葡萄牙, 牙买加, 阿根廷, 马来西亚, 挪威, 加拿大, 索马里, 海地, 克罗地亚",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "芬兰总统",
+      "object": "芬兰",
+      "object_candidates": "保加利亚, 伊拉克, 新加坡, 意大利, 中华民国, 克罗地亚, 加拿大, 马来西亚, 立陶宛, 芬兰",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "阿尔巴尼亚国旗",
+      "object": "阿尔巴尼亚",
+      "object_candidates": "以色列, 巴基斯坦, 白俄罗斯, 索马里, 海地, 土耳其, 瑞典, 瑞士, 丹麦, 阿尔巴尼亚",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "意大利国旗",
+      "object": "意大利",
+      "object_candidates": "以色列, 伊朗, 日本, 越南, 瑞典, 中华民国, 玻利维亚, 菲律宾, 芬兰, 意大利",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "德国国旗",
+      "object": "德国",
+      "object_candidates": "俄罗斯, 瑞典, 菲律宾, 利比亚, 西班牙, 爱尔兰共和国, 印度, 瑞士, 新加坡, 德国",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "利比亚国旗",
+      "object": "利比亚",
+      "object_candidates": "澳大利亚, 保加利亚, 摩纳哥, 巴基斯坦, 马来西亚, 海地, 以色列, 新加坡, 罗马尼亚, 利比亚",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "菲律宾国旗",
+      "object": "菲律宾",
+      "object_candidates": "荷兰, 利比亚, 以色列, 白俄罗斯, 阿根廷, 古巴, 中华民国, 奥地利, 瑞典, 菲律宾",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "德国",
+      "object_candidates": "加拿大, 巴基斯坦, 日本, 意大利, 索马里, 海地, 乌克兰, 芬兰, 法国, 德国",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "伊朗总统",
+      "object": "伊朗",
+      "object_candidates": "俄罗斯, 意大利, 瑞士, 澳大利亚, 克罗地亚, 西班牙, 阿尔巴尼亚, 新加坡, 印度, 伊朗",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "巴基斯坦国旗",
+      "object": "巴基斯坦",
+      "object_candidates": "西班牙, 瑞典, 新加坡, 玻利维亚, 海地, 加拿大, 葡萄牙, 中华民国, 立陶宛, 巴基斯坦",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "葡萄牙国旗",
+      "object": "葡萄牙",
+      "object_candidates": "德国, 古巴, 澳大利亚, 爱尔兰共和国, 阿尔巴尼亚, 新加坡, 芬兰, 以色列, 俄罗斯, 葡萄牙",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "希腊国旗",
+      "object": "希腊",
+      "object_candidates": "伊拉克, 奥地利, 克罗地亚, 以色列, 加拿大, 墨西哥, 印度, 荷兰, 白俄罗斯, 希腊",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "墨西哥国旗",
+      "object": "墨西哥",
+      "object_candidates": "俄罗斯, 新加坡, 西班牙, 中华民国, 阿尔巴尼亚, 伊拉克, 荷兰, 爱尔兰共和国, 意大利, 墨西哥",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "日本国旗",
+      "object": "日本",
+      "object_candidates": "印度, 土耳其, 法国, 芬兰, 俄罗斯, 墨西哥, 白俄罗斯, 罗马尼亚, 新加坡, 日本",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

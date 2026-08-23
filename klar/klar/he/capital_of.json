@@ -1,0 +1,1716 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "מה המדינה או המדינה שלגביה <subject> היא הבירה? התשובה היא: <mask>",
+    "איפה <subject> היא הבירה של? התשובה היא: <mask>",
+    "איזו מדינה או מדינה יש לה <subject> כבירה? התשובה היא: <mask>",
+    "איזה מקום יש לו <subject> כבירה? התשובה היא: <mask>",
+    "איפה <subject> משמשת כבירה? התשובה היא: <mask>",
+    " <subject> היא עיר בירה של מדינה ששמה <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "אדמונטון",
+      "object": "אלברטה",
+      "object_candidates": "צ'כוסלובקיה, לאוס, גוג'ראט, בוואריה, סראוואק, בנגלדש, טקסס, קטר, פרובאנס, אלברטה",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "אנקרה",
+      "object": "טורקיה",
+      "object_candidates": "זמביה, גרמניה, סנגל, פולין, הפיליפינים, לטביה, לוב, ארקנסו, גרינלנד, טורקיה",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "אמסטרדם",
+      "object": "הולנד",
+      "object_candidates": "לטביה, אן, קנזס, בוואריה, נפאל, סלובניה, מאלי, קונטיקט, רודזיה, הולנד",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "באקו",
+      "object": "אזרבייג'ן",
+      "object_candidates": "הולנד, בלגיה, בוטסואנה, מהאראשטרה, דנמרק, ניז'ר, אוקראינה, סומליה, תימן, אזרבייג'ן",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "קהיר",
+      "object": "מצרים",
+      "object_candidates": "עומאן, בוליביה, נווארה, קזחסטן, מרילנד, קונטיקט, אנגליה, מוזמביק, ממלכת יהודה, מצרים",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "קופנהגן",
+      "object": "דנמרק",
+      "object_candidates": "מסצ'וסטס, סלובקיה, ונצואלה, ישראל, עיראק, פלנדריה, איידהו, בנגלדש, גואטמלה, דנמרק",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "ברצלונה",
+      "object": "קטלוניה",
+      "object_candidates": "לוקסמבורג, קולורדו, טוסקנה, בחריין, בליז, סצ'ואן, דובאי, ירדן, לאוס, קטלוניה",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "בואנוס איירס",
+      "object": "ארגנטינה",
+      "object_candidates": "קטר, אראגון, גרמניה, מונטנגרו, יוטה, רוסיה, בוליביה, פורטוגל, סראוואק, ארגנטינה",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "מינכן",
+      "object": "בוואריה",
+      "object_candidates": "קווינסלנד, פורטוגל, אינדיאנה, ברוניי, פולין, קונטיקט, פלנדריה, אוזבקיסטן, ממלכת יהודה, בוואריה",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "פירנצה",
+      "object": "טוסקנה",
+      "object_candidates": "ליבריה, מונטנגרו, גואנגדונג, סרביה, אירלנד, לואיזיאנה, בלארוס, הודו, נורווגיה, טוסקנה",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "רומא",
+      "object": "איטליה",
+      "object_candidates": "אפגניסטן, אינדונזיה, ברזיל, מסצ'וסטס, מלטה, זימבבואה, גרמניה, ונצואלה, בהוטן, איטליה",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "אלג'יר",
+      "object": "אלג'יריה",
+      "object_candidates": "האיטי, בלגיה, גאורגיה, מלאווי, גינאה, פקיסטן, זימבבואה, סנגל, סראוואק, אלג'יריה",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "טריפולי",
+      "object": "לוב",
+      "object_candidates": "אורוגוואי, פרובאנס, קטר, טג'יקיסטן, הונגריה, קירגיזסטן, פקיסטן, קניה, פולין, לוב",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "קנברה",
+      "object": "אוסטרליה",
+      "object_candidates": "אלסקה, מינסוטה, גרינלנד, הריאנה, קווינסלנד, קרואטיה, מרוקו, בולגריה, טורקיה, אוסטרליה",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "וינדהוק",
+      "object": "נמיביה",
+      "object_candidates": "בלגיה, כווית, סוריה, נפאל, יפן, גינאה, אירלנד, הפיליפינים, טוסקנה, נמיביה",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "הרקליון",
+      "object": "כרתים",
+      "object_candidates": "פורטוגל, ירדן, אתיופיה, טאיוואן, פנג'אב, אלסקה, גרמניה, אן, אינדיאנה, כרתים",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "בגדאד",
+      "object": "עיראק",
+      "object_candidates": "רודזיה, אפגניסטן, רוסיה, הולנד, ברזיל, כווית, בלארוס, מרוקו, בולגריה, עיראק",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "אדינבורו",
+      "object": "סקוטלנד",
+      "object_candidates": "טלנגאנה, ביהר, לואיזיאנה, ניקרגואה, הולנד, ארקנסו, ברזיל, יוטה, אוקלהומה, סקוטלנד",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "קאבול",
+      "object": "אפגניסטן",
+      "object_candidates": "ויילס, אוזבקיסטן, קרנאטקה, תימן, סצ'ואן, אלסקה, קטר, ויומינג, פקיסטן, אפגניסטן",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "בון",
+      "object": "גרמניה",
+      "object_candidates": "בלארוס, טקסס, נפאל, הפיליפינים, אראגון, בוואריה, מישיגן, ארקנסו, ליבריה, גרמניה",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "ברלין",
+      "object": "גרמניה",
+      "object_candidates": "גרינלנד, פיימונטה, עומאן, ונצואלה, פיג'י, לטביה, טאיוואן, נורווגיה, רומניה, גרמניה",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "פורטו נובו",
+      "object": "בנין",
+      "object_candidates": "יוטה, קירגיזסטן, ספרד, סלובניה, אראגון, טקסס, אורוגוואי, בוליביה, אוגנדה, בנין",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "גאבורון",
+      "object": "בוטסואנה",
+      "object_candidates": "רומניה, קליפורניה, סרדיניה, תאילנד, אסטוניה, סרביה, אורוגוואי, מניטובה, הריאנה, בוטסואנה",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "פריז",
+      "object": "צרפת",
+      "object_candidates": "האיטי, פקיסטן, ביהר, ברזיל, כווית, נמיביה, פלורידה, קרלה, קזחסטן, צרפת",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "מומבאי",
+      "object": "מהאראשטרה",
+      "object_candidates": "קובה, מניטובה, נור, סמואה, מישיגן, סצ'ואן, ניז'ר, טנסי, לוקסמבורג, מהאראשטרה",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "אוסלו",
+      "object": "נורווגיה",
+      "object_candidates": "מדגסקר, צרפת, אונטריו, טורקיה, כווית, פיימונטה, בולגריה, טנזניה, קונטיקט, נורווגיה",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "ירושלים",
+      "object": "ממלכת יהודה",
+      "object_candidates": "בורגון, סוריה, שווייץ, גרינלנד, ברזיל, מלאווי, מצרים, תאילנד, ויומינג, ממלכת יהודה",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "בישקק",
+      "object": "קירגיזסטן",
+      "object_candidates": "ביהר, סצ'ואן, ארמניה, פנג'אב, צ'אד, עומאן, קרנאטקה, טלנגאנה, טסמניה, קירגיזסטן",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "בוקרשט",
+      "object": "רומניה",
+      "object_candidates": "אנגליה, נווארה, זימבבואה, איידהו, ליבריה, תאילנד, אלבה, לטביה, מצרים, רומניה",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "מלבורן",
+      "object": "ויקטוריה",
+      "object_candidates": "סראוואק, אן, אלג'יריה, אוקספורדשייר, אקוודור, הסן, קולורדו, אלברטה, מאוריציוס, ויקטוריה",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "בייג'ינג",
+      "object": "טאיוואן",
+      "object_candidates": "מרוקו, בנגלדש, שוודיה, אירלנד, יונאן, אלסקה, קרלה, מצרים, סלובקיה, טאיוואן",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "צ'ונגצ'ינג",
+      "object": "טאיוואן",
+      "object_candidates": "ויומינג, הוואי, לטביה, אן, מלטה, טג'יקיסטן, גרינלנד, טסמניה, אוזבקיסטן, טאיוואן",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "הוואנה",
+      "object": "קובה",
+      "object_candidates": "מלזיה, פרובאנס, מלטה, לואיזיאנה, יונאן, קטלוניה, לסטרשייר, תוניסיה, גואטמלה, קובה",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "דנוור",
+      "object": "קולורדו",
+      "object_candidates": "אראגון, אנגולה, סוריה, סומליה, לוב, פינלנד, זלצבורג, אונטריו, פרובאנס, קולורדו",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "מוגדישו",
+      "object": "סומליה",
+      "object_candidates": "הולנד, ליטא, סמואה, צרפת, אורוגוואי, טאיוואן, גאנה, איראן, יונאן, סומליה",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "קארדיף",
+      "object": "ויילס",
+      "object_candidates": "קטר, מרילנד, פלנדריה, פרו, בלארוס, נורווגיה, אוגנדה, איטליה, הודו, ויילס",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "דבלין",
+      "object": "אירלנד",
+      "object_candidates": "מאוריציוס, וייטנאם, אלבניה, אינדונזיה, מקסיקו, מינסוטה, גינאה, צרפת, אזרבייג'ן, אירלנד",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "תוניס",
+      "object": "תוניסיה",
+      "object_candidates": "ארקנסו, אוסטרליה, פנג'אב, בהוטן, לאוס, קליפורניה, בנין, אלברטה, תאילנד, תוניסיה",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "ריו דה ז'ניירו",
+      "object": "ברזיל",
+      "object_candidates": "סצ'ואן, לואיזיאנה, אוקלהומה, ממלכת אנגליה, ויקטוריה, יוטה, קפריסין, סודאן, סראוואק, ברזיל",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "ולטה",
+      "object": "מלטה",
+      "object_candidates": "גבון, גאנה, פיג'י, שווייץ, מרוקו, קמבודיה, מרילנד, קנזס, יוון, מלטה",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "לונדון",
+      "object": "אנגליה",
+      "object_candidates": "הפיליפינים, נורמנדי, קזחסטן, סבה, קפריסין, שוודיה, גוג'ראט, אלברטה, אנגולה, אנגליה",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "רבאט",
+      "object": "מרוקו",
+      "object_candidates": "ונצואלה, קפריסין, קנדה, קירגיזסטן, טג'יקיסטן, סרביה, בוליביה, קווינסלנד, מלטה, מרוקו",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "ריגה",
+      "object": "לטביה",
+      "object_candidates": "תאילנד, טקסס, ליבריה, מאוריציוס, מלטה, סראוואק, ברנדנבורג, סצ'ואן, זלצבורג, לטביה",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "דמשק",
+      "object": "סוריה",
+      "object_candidates": "סבה, תאילנד, מניטובה, טג'יקיסטן, תימן, אוגנדה, עיראק, אלברטה, מסצ'וסטס, סוריה",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "דאר א-סלאם",
+      "object": "טנזניה",
+      "object_candidates": "פיימונטה, בלארוס, בחריין, צ'ילה, סצ'ואן, גואטמלה, דנמרק, בוטסואנה, קירגיזסטן, טנזניה",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "לונדון",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "גואנגדונג, רוסיה, סלובקיה, אוקראינה, רואנדה, קטר, אקוודור, אינדיאנה, טקסס, ממלכת אנגליה",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "סטוקהולם",
+      "object": "שוודיה",
+      "object_candidates": "בוליביה, טוסקנה, קזחסטן, זימבבואה, מצרים, זלצבורג, פרו, הוואי, אוקראינה, שוודיה",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "הלסינקי",
+      "object": "פינלנד",
+      "object_candidates": "נפאל, אלבה, ליבריה, ארקנסו, לוקסמבורג, מרילנד, מרוקו, בליז, רודזיה, פינלנד",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "פראג",
+      "object": "בוהמיה",
+      "object_candidates": "זלצבורג, קובה, בלארוס, אלג'יריה, אלבניה, הסן, אראגון, טנסי, אזרבייג'ן, בוהמיה",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "אינדיאנפוליס",
+      "object": "אינדיאנה",
+      "object_candidates": "תאילנד, פלורידה, קונטיקט, הודו, פנמה, אנגולה, ניקרגואה, בולגריה, מקסיקו, אינדיאנה",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "מדריד",
+      "object": "ספרד",
+      "object_candidates": "רואנדה, פלורידה, לוב, פולין, קליפורניה, צרפת, אקוודור, ראג'סטאן, רודזיה, ספרד",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "גואטמלה סיטי",
+      "object": "גואטמלה",
+      "object_candidates": "צ'אד, אירלנד, קנדה, טקסס, ברבדוס, אנגולה, ביהר, אלבניה, לטביה, גואטמלה",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "ורשה",
+      "object": "פולין",
+      "object_candidates": "האיטי, טורקיה, ממלכת אנגליה, בוואריה, מלטה, דובאי, איטליה, גואה, קנזס, פולין",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "גואנגג'ואו",
+      "object": "גואנגדונג",
+      "object_candidates": "זמביה, סוריה, בוואריה, ברוניי, ברזיל, סצ'ואן, אוקראינה, סקסוניה, אלבה, גואנגדונג",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "דרזדן",
+      "object": "סקסוניה",
+      "object_candidates": "ארקנסו, תאילנד, גואטמלה, פרובאנס, ירדן, זלצבורג, מלזיה, הוואי, קנדה, סקסוניה",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "פורט-או-פרנס",
+      "object": "האיטי",
+      "object_candidates": "יפן, אנגולה, צ'כוסלובקיה, ארגנטינה, קרנאטקה, בחריין, גינאה, צרפת, מהאראשטרה, האיטי",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "אתונה",
+      "object": "יוון",
+      "object_candidates": "מצרים, קונטיקט, מאלי, הונגריה, אוקלהומה, הונדורס, ארמניה, אנגולה, זלצבורג, יוון",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "הובארט",
+      "object": "טסמניה",
+      "object_candidates": "ירדן, סרביה, גאורגיה, ברזיל, לוקסמבורג, איווה, פקיסטן, אוקלהומה, ביהר, טסמניה",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "טאלין",
+      "object": "אסטוניה",
+      "object_candidates": "פנג'אב, נווארה, פורטוגל, פנסילבניה, הפיליפינים, ברנדנבורג, פיג'י, מוזמביק, קרואטיה, אסטוניה",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "טוקיו",
+      "object": "יפן",
+      "object_candidates": "ויקטוריה, אוגנדה, מצרים, הונגריה, לבנון, רואנדה, אפגניסטן, טאיוואן, סרדיניה, יפן",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "וינה",
+      "object": "אוסטריה",
+      "object_candidates": "צ'כוסלובקיה, גוג'ראט, ישראל, טורקיה, אנגליה, קזחסטן, יוטה, אנגולה, תימן, אוסטריה",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "ליובליאנה",
+      "object": "סלובניה",
+      "object_candidates": "ישראל, סנגל, מונטנגרו, סיציליה, פינלנד, ניגריה, טג'יקיסטן, אפגניסטן, גינאה, סלובניה",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "ירושלים",
+      "object": "ישראל",
+      "object_candidates": "סנגל, ונצואלה, טלנגאנה, אזרבייג'ן, ברוניי, הונגריה, מהאראשטרה, אוקספורדשייר, טקסס, ישראל",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "ג'קרטה",
+      "object": "אינדונזיה",
+      "object_candidates": "מוזמביק, ירדן, קליפורניה, צ'ילה, גואנגדונג, אוקלהומה, ברוניי, קרנאטקה, ראג'סטאן, אינדונזיה",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "טורינו",
+      "object": "פיימונטה",
+      "object_candidates": "סנגל, איטליה, יוגוסלביה, קווינסלנד, מונטנגרו, גואה, גינאה, אלסקה, אונטריו, פיימונטה",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "ניירובי",
+      "object": "קניה",
+      "object_candidates": "בליז, לטביה, ליבריה, אנגליה, בהוטן, פנג'אב, אוזבקיסטן, טאיוואן, קונטיקט, קניה",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "קואלה לומפור",
+      "object": "מלזיה",
+      "object_candidates": "אינדיאנה, רודזיה, יוגוסלביה, קנדה, טאיוואן, שוודיה, טורקיה, מישיגן, גוג'ראט, מלזיה",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "אסלאמאבאד",
+      "object": "פקיסטן",
+      "object_candidates": "מלטה, גוג'ראט, מדגסקר, ליטא, גאורגיה, לוב, תאילנד, קניה, בליז, פקיסטן",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "קטמנדו",
+      "object": "נפאל",
+      "object_candidates": "רודזיה, אלבה, איטליה, אסטוניה, אוזבקיסטן, ברנדנבורג, פרובאנס, ניז'ר, אלג'יריה, נפאל",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "ח'רטום",
+      "object": "סודאן",
+      "object_candidates": "אוקראינה, אלסקה, קוויבק, פרובאנס, ליבריה, ויקטוריה, פרו, קובה, קרלה, סודאן",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "וילנה",
+      "object": "ליטא",
+      "object_candidates": "נווארה, בנין, אלבה, קולורדו, ניז'ר, ניגריה, בוטסואנה, הריאנה, הסן, ליטא",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "ביירות",
+      "object": "לבנון",
+      "object_candidates": "הפיליפינים, קובה, קניה, גואנגדונג, קטלוניה, בהוטן, קנדה, וייטנאם, מסצ'וסטס, לבנון",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "ליסבון",
+      "object": "פורטוגל",
+      "object_candidates": "נורווגיה, זימבבואה, מקסיקו, סקסוניה, סיציליה, ויילס, לטביה, אוסטרליה, ליבריה, פורטוגל",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "לואנדה",
+      "object": "אנגולה",
+      "object_candidates": "הודו, האיטי, לטביה, יפן, קרואטיה, פקיסטן, יוגוסלביה, מניטובה, תאילנד, אנגולה",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "מוסקבה",
+      "object": "רוסיה",
+      "object_candidates": "תאילנד, מדגסקר, קניה, איווה, קווינסלנד, בחריין, אפגניסטן, רואנדה, אלסקה, רוסיה",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "ויניפג",
+      "object": "מניטובה",
+      "object_candidates": "פולין, אלברטה, זמביה, אראגון, האיטי, הפיליפינים, אלבה, טאיוואן, הונגריה, מניטובה",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "לילונגווה",
+      "object": "מלאווי",
+      "object_candidates": "ויומינג, אפגניסטן, קווינסלנד, צ'אד, קוויבק, טנזניה, פולין, קניה, בוהמיה, מלאווי",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "מקסיקו סיטי",
+      "object": "מקסיקו",
+      "object_candidates": "אונטריו, ליבריה, אזרבייג'ן, פלורידה, גוג'ראט, ספרד, ארמניה, סרדיניה, ביהר, מקסיקו",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "מפוטו",
+      "object": "מוזמביק",
+      "object_candidates": "פקיסטן, גאנה, בנגלדש, אינדונזיה, ארקנסו, אנגולה, קנדה, ניז'ר, לאוס, מוזמביק",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "בוסטון",
+      "object": "מסצ'וסטס",
+      "object_candidates": "מישיגן, הונגריה, ברבדוס, אלבה, בהוטן, אלבניה, ספרד, קטלוניה, קירגיזסטן, מסצ'וסטס",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "אוטווה",
+      "object": "קנדה",
+      "object_candidates": "מסצ'וסטס, סראוואק, אוסטריה, טסמניה, קליפורניה, אלסקה, קווינסלנד, גאורגיה, גינאה, קנדה",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "מונטווידאו",
+      "object": "אורוגוואי",
+      "object_candidates": "מינסוטה, האיטי, רודזיה, הונדורס, ארקנסו, פלורידה, פנג'אב, רומניה, קטר, אורוגוואי",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "מנאמה",
+      "object": "בחריין",
+      "object_candidates": "פורטוגל, פיימונטה, ארגנטינה, טקסס, קונטיקט, ניז'ר, לאוס, גאנה, אוגנדה, בחריין",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "בנגלור",
+      "object": "קרנאטקה",
+      "object_candidates": "ארגנטינה, קזחסטן, מלאווי, גרינלנד, קמבודיה, אוזבקיסטן, הולנד, סמואה, בולגריה, קרנאטקה",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "בודפשט",
+      "object": "הונגריה",
+      "object_candidates": "אלבה, פרובאנס, נורמנדי, ארמניה, עיראק, פנג'אב, ליבריה, מניטובה, הולנד, הונגריה",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "טגוסיגלפה",
+      "object": "הונדורס",
+      "object_candidates": "תוניסיה, כווית, ראג'סטאן, בורגון, אוקספורדשייר, אלבה, ארקנסו, טסמניה, נורמנדי, הונדורס",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "גנדינגאר",
+      "object": "גוג'ראט",
+      "object_candidates": "יוטה, קרואטיה, קטלוניה, מלאווי, סרדיניה, צרפת, האיטי, טאיוואן, בורגון, גוג'ראט",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "פודגוריצה",
+      "object": "מונטנגרו",
+      "object_candidates": "בנין, ויקטוריה, טנסי, תימן, רומניה, אקוודור, סצ'ואן, האיטי, זלצבורג, מונטנגרו",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "טורונטו",
+      "object": "אונטריו",
+      "object_candidates": "סמואה, בחריין, בוהמיה, בולגריה, ראג'סטאן, פיג'י, כווית, סיציליה, סרביה, אונטריו",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "פנמה סיטי",
+      "object": "פנמה",
+      "object_candidates": "פנסילבניה, ארגנטינה, ויקטוריה, קנדה, לבנון, סקסוניה, קוסובו, קניה, ספרד, פנמה",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "דקר",
+      "object": "סנגל",
+      "object_candidates": "גבון, לטביה, מישיגן, בוטסואנה, יוטה, בלגיה, ליטא, טלנגאנה, ויומינג, סנגל",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "לאגוס",
+      "object": "ניגריה",
+      "object_candidates": "קוויבק, קוסובו, אוקספורדשייר, מצרים, יונאן, סקוטלנד, אוקראינה, בנין, טנזניה, ניגריה",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "בנגקוק",
+      "object": "תאילנד",
+      "object_candidates": "פורטוגל, קרואטיה, הונגריה, יוגוסלביה, ירדן, קרנאטקה, איווה, קפריסין, ליבריה, תאילנד",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "סנטיאגו דה צ'ילה",
+      "object": "צ'ילה",
+      "object_candidates": "נורווגיה, אוגנדה, רודזיה, כווית, קליפורניה, מרוקו, אינדיאנה, פורטוגל, בנגלדש, צ'ילה",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "ניו דלהי",
+      "object": "הודו",
+      "object_candidates": "קונטיקט, קרלה, עומאן, אנגליה, הסן, ראג'סטאן, אקוודור, פיג'י, פינלנד, הודו",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "בלגרד",
+      "object": "סרביה",
+      "object_candidates": "פלורידה, תוניסיה, אנגליה, מהאראשטרה, קרואטיה, ביהר, נווארה, אלבה, גואטמלה, סרביה",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "קליארי",
+      "object": "סרדיניה",
+      "object_candidates": "סקסוניה, פיימונטה, טסמניה, האיטי, נווארה, סלובניה, כווית, קוויבק, בלגיה, סרדיניה",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "קראקס",
+      "object": "ונצואלה",
+      "object_candidates": "טורקיה, גואנגדונג, יוגוסלביה, נפאל, נור, אוקראינה, בלארוס, סוריה, סצ'ואן, ונצואלה",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "ניקוסיה",
+      "object": "קפריסין",
+      "object_candidates": "קונטיקט, יוון, יוגוסלביה, הוואי, מקסיקו, מדגסקר, ראג'סטאן, קובה, אפגניסטן, קפריסין",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "קייב",
+      "object": "אוקראינה",
+      "object_candidates": "אלבה, אינדונזיה, סומליה, ליטא, זלצבורג, גאנה, אתיופיה, ברזיל, לאוס, אוקראינה",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "טאיפיי",
+      "object": "טאיוואן",
+      "object_candidates": "טוסקנה, שווייץ, אלג'יריה, מקסיקו, סקסוניה, קווינסלנד, סוריה, ברבדוס, זמביה, טאיוואן",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "אבוג'ה",
+      "object": "ניגריה",
+      "object_candidates": "פרובאנס, צ'ילה, אוקראינה, ברבדוס, אלבניה, גבון, סרדיניה, גרינלנד, האיטי, ניגריה",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "סופיה",
+      "object": "בולגריה",
+      "object_candidates": "מלטה, אוקלהומה, ברבדוס, טקסס, טוסקנה, ליבריה, בלארוס, כרתים, גבון, בולגריה",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "סולט לייק סיטי",
+      "object": "יוטה",
+      "object_candidates": "ניקרגואה, טורקיה, קטר, צ'אד, יונאן, דנמרק, מניטובה, ויקטוריה, ונצואלה, יוטה",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "פלרמו",
+      "object": "סיציליה",
+      "object_candidates": "קמבודיה, בורגון, ברוניי, סקוטלנד, קטלוניה, פרובאנס, מרוקו, ברזיל, גואה, סיציליה",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "טהראן",
+      "object": "איראן",
+      "object_candidates": "בלארוס, ארקנסו, רודזיה, ויקטוריה, יוגוסלביה, סקסוניה, טנזניה, סרביה, מלזיה, איראן",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "קוויבק סיטי",
+      "object": "קוויבק",
+      "object_candidates": "ניגריה, בלגיה, טלנגאנה, בוטסואנה, דובאי, אזרבייג'ן, ברזיל, איראן, ישראל, קוויבק",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "פראג",
+      "object": "צ'כוסלובקיה",
+      "object_candidates": "בליז, עיראק, טוסקנה, טאיוואן, אתיופיה, כווית, פרובאנס, סודאן, אלג'יריה, צ'כוסלובקיה",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "דאקה",
+      "object": "בנגלדש",
+      "object_candidates": "אלבה, קירגיזסטן, ויומינג, סלובניה, אפגניסטן, בוואריה, קנדה, רואנדה, גאנה, בנגלדש",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "בריזבן",
+      "object": "קווינסלנד",
+      "object_candidates": "אינדונזיה, מסצ'וסטס, זלצבורג, סלובקיה, סרביה, כווית, איראן, אלבה, מהאראשטרה, קווינסלנד",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "הארארה",
+      "object": "זימבבואה",
+      "object_candidates": "מרוקו, גרמניה, ניגריה, טסמניה, קרנאטקה, אוסטרליה, הסן, בלארוס, בוהמיה, זימבבואה",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "אקס-אן-פרובאנס",
+      "object": "פרובאנס",
+      "object_candidates": "האיטי, קרלה, קמבודיה, אורוגוואי, פנמה, טורקיה, צ'אד, טוסקנה, איווה, פרובאנס",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "מונרוביה",
+      "object": "ליבריה",
+      "object_candidates": "גוג'ראט, אנגליה, טנזניה, בליז, אזרבייג'ן, נור, סודאן, קפריסין, צרפת, ליבריה",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "ברן",
+      "object": "שווייץ",
+      "object_candidates": "דנמרק, מקסיקו, צרפת, בהוטן, אנגליה, אינדונזיה, אונטריו, אלסקה, שוודיה, שווייץ",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "אדיס אבבה",
+      "object": "אתיופיה",
+      "object_candidates": "מאוריציוס, פולין, זלצבורג, נפאל, הונגריה, סנגל, בהוטן, אפגניסטן, עומאן, אתיופיה",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "זאגרב",
+      "object": "קרואטיה",
+      "object_candidates": "פורטוגל, נפאל, בחריין, איווה, ביהר, בלארוס, גואנגדונג, טסמניה, תאילנד, קרואטיה",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "פנום פן",
+      "object": "קמבודיה",
+      "object_candidates": "בוליביה, צ'כוסלובקיה, יפן, קוסובו, לסטרשייר, אוזבקיסטן, אלסקה, ברוניי, בנגלדש, קמבודיה",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "דושנבה",
+      "object": "טג'יקיסטן",
+      "object_candidates": "בנגלדש, טלנגאנה, הפיליפינים, קובה, הסן, בוואריה, סבה, ארקנסו, טוסקנה, טג'יקיסטן",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "לאנסינג",
+      "object": "מישיגן",
+      "object_candidates": "סיציליה, ויילס, הודו, בוהמיה, אוגנדה, קפריסין, ברוניי, לטביה, הפיליפינים, מישיגן",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "קוצ'ינג",
+      "object": "סראוואק",
+      "object_candidates": "ממלכת אנגליה, לוב, בוליביה, נפאל, אן, צרפת, איידהו, טסמניה, סלובקיה, סראוואק",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "מנילה",
+      "object": "הפיליפינים",
+      "object_candidates": "צ'ילה, גאנה, מסצ'וסטס, מקסיקו, דובאי, סקוטלנד, ונצואלה, מרילנד, אוקראינה, הפיליפינים",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "וסטמינסטר",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "ליטא, צ'ילה, סיציליה, טסמניה, פינלנד, גואטמלה, ניגריה, קניה, אראגון, ממלכת אנגליה",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "קיטו",
+      "object": "אקוודור",
+      "object_candidates": "בליז, תאילנד, סבה, קרואטיה, קרנאטקה, טאיוואן, קליפורניה, ברזיל, קזחסטן, אקוודור",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "לסטר",
+      "object": "לסטרשייר",
+      "object_candidates": "קוויבק, סלובניה, ארגנטינה, איווה, אלבניה, בלארוס, צ'כוסלובקיה, סראוואק, פינלנד, לסטרשייר",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "קונמינג",
+      "object": "יונאן",
+      "object_candidates": "ביהר, סקוטלנד, קרלה, אלבה, נורווגיה, הונדורס, קליפורניה, ויקטוריה, מינסוטה, יונאן",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "מנגואה",
+      "object": "ניקרגואה",
+      "object_candidates": "כרתים, קנדה, הוואי, מקסיקו, גואנגדונג, הונגריה, ארקנסו, פיג'י, זמביה, ניקרגואה",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "סוקרה",
+      "object": "בוליביה",
+      "object_candidates": "פנסילבניה, סרביה, לוב, אלבה, זימבבואה, תוניסיה, מצרים, אורוגוואי, תאילנד, בוליביה",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "הונולולו",
+      "object": "הוואי",
+      "object_candidates": "בליז, סלובניה, קרלה, צרפת, ויקטוריה, אלברטה, מניטובה, קליפורניה, סנגל, הוואי",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "ויינטיאן",
+      "object": "לאוס",
+      "object_candidates": "גינאה, מסצ'וסטס, גאורגיה, פרובאנס, סרדיניה, צ'אד, לוב, קולורדו, יוון, לאוס",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "צ'נגדו",
+      "object": "סצ'ואן",
+      "object_candidates": "ממלכת יהודה, אלבה, בנין, רואנדה, אוגנדה, גואה, פולין, מישיגן, קנדה, סצ'ואן",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "סרגוסה",
+      "object": "אראגון",
+      "object_candidates": "טלנגאנה, מונטנגרו, טורקיה, יוטה, קנזס, לוקסמבורג, בהוטן, מקסיקו, אוקראינה, אראגון",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "אוקספורד",
+      "object": "אוקספורדשייר",
+      "object_candidates": "פינלנד, לסטרשייר, האיטי, אלבה, פולין, נמיביה, ישראל, בנגלדש, אלסקה, אוקספורדשייר",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "צ'אנדיגאר",
+      "object": "הריאנה",
+      "object_candidates": "איראן, ברזיל, מניטובה, פיימונטה, מלאווי, קירגיזסטן, זמביה, ארמניה, קמבודיה, הריאנה",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "ניאמיי",
+      "object": "ניז'ר",
+      "object_candidates": "אראגון, גבון, ונצואלה, פיימונטה, בליז, איראן, גינאה, קזחסטן, רוסיה, ניז'ר",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "נאנג'ינג",
+      "object": "טאיוואן",
+      "object_candidates": "גואטמלה, ירדן, לואיזיאנה, סרביה, אוסטרליה, סקסוניה, זמביה, מלטה, אוקספורדשייר, טאיוואן",
+      "index": 3884
+    },
+    {
+      "subject": "דוחה",
+      "object": "קטר",
+      "object_candidates": "אוזבקיסטן, מלטה, בהוטן, אינדיאנה, סלובקיה, כרתים, יפן, פנג'אב, אנגליה, קטר",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "הארארה",
+      "object": "רודזיה",
+      "object_candidates": "רומניה, גואנגדונג, פיג'י, מונטנגרו, מלזיה, קנזס, עיראק, מרוקו, קרואטיה, רודזיה",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "אפיה",
+      "object": "סמואה",
+      "object_candidates": "ממלכת אנגליה, בנגלדש, איידהו, פינלנד, קמבודיה, מרוקו, בוליביה, גינאה, בלארוס, סמואה",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "ברטיסלאבה",
+      "object": "סלובקיה",
+      "object_candidates": "נווארה, טנזניה, איידהו, צ'אד, מישיגן, אירלנד, אינדונזיה, אלבה, יפן, סלובקיה",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "קוטה קינבאלו",
+      "object": "סבה",
+      "object_candidates": "טסמניה, אוקלהומה, פלנדריה, מרוקו, נור, גבון, אזרבייג'ן, סנגל, קרואטיה, סבה",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "טשקנט",
+      "object": "אוזבקיסטן",
+      "object_candidates": "יוגוסלביה, צרפת, האיטי, מישיגן, נורווגיה, אפגניסטן, פנסילבניה, אלברטה, ליטא, אוזבקיסטן",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "דודומה",
+      "object": "טנזניה",
+      "object_candidates": "קנזס, בנגלדש, נור, קרואטיה, קולורדו, קוויבק, רואנדה, ירדן, אזרבייג'ן, טנזניה",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "טירנה",
+      "object": "אלבניה",
+      "object_candidates": "קרלה, פרובאנס, ניגריה, לוב, פלנדריה, זמביה, סצ'ואן, בלארוס, סרביה, אלבניה",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "קמפלה",
+      "object": "אוגנדה",
+      "object_candidates": "לטביה, סוריה, רוסיה, שווייץ, טנסי, תאילנד, סלובקיה, הריאנה, בוטסואנה, אוגנדה",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "האנוי",
+      "object": "וייטנאם",
+      "object_candidates": "אוסטריה, עומאן, גואטמלה, תימן, בנין, אוזבקיסטן, דנמרק, נורמנדי, קטלוניה, וייטנאם",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "עדן",
+      "object": "תימן",
+      "object_candidates": "פרו, לאוס, אלבה, נורמנדי, רוסיה, סמואה, ישראל, ניקרגואה, בוהמיה, תימן",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "לוסקה",
+      "object": "זמביה",
+      "object_candidates": "לוקסמבורג, טסמניה, אזרבייג'ן, תימן, אסטוניה, פורטוגל, קניה, גואה, אינדונזיה, זמביה",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "ירוואן",
+      "object": "ארמניה",
+      "object_candidates": "מלטה, אוקספורדשייר, קולורדו, עיראק, מצרים, סמואה, טוסקנה, סוריה, לסטרשייר, ארמניה",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "כווית סיטי",
+      "object": "כווית",
+      "object_candidates": "ארמניה, פלנדריה, סקסוניה, ברזיל, תימן, מלזיה, יפן, גואטמלה, אוזבקיסטן, כווית",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "פור לואי",
+      "object": "מאוריציוס",
+      "object_candidates": "טוסקנה, טנסי, גואטמלה, ירדן, סלובקיה, הריאנה, סקסוניה, גבון, קולורדו, מאוריציוס",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "אקרה",
+      "object": "גאנה",
+      "object_candidates": "ויומינג, קליפורניה, בנין, הולנד, סראוואק, איראן, קנזס, בנגלדש, שוודיה, גאנה",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "ג'איפור",
+      "object": "ראג'סטאן",
+      "object_candidates": "אנגליה, נפאל, כווית, לאוס, ליטא, תאילנד, ארמניה, בנין, רוסיה, ראג'סטאן",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "מינסק",
+      "object": "בלארוס",
+      "object_candidates": "פינלנד, לטביה, גרינלנד, סלובניה, אלברטה, ברוניי, גרמניה, נורמנדי, קוויבק, בלארוס",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "דה מוין",
+      "object": "איווה",
+      "object_candidates": "פנג'אב, יוגוסלביה, מדגסקר, סרדיניה, לסטרשייר, אסטוניה, בחריין, מלאווי, אלבניה, איווה",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "פטנה",
+      "object": "ביהר",
+      "object_candidates": "קנדה, קולורדו, ליטא, עומאן, פנמה, ברזיל, קרנאטקה, ברנדנבורג, אפגניסטן, ביהר",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "באטון רוז'",
+      "object": "לואיזיאנה",
+      "object_candidates": "ממלכת יהודה, תימן, דנמרק, קרואטיה, לטביה, שווייץ, אונטריו, ברנדנבורג, בוליביה, לואיזיאנה",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "יוגיאקרטה",
+      "object": "אינדונזיה",
+      "object_candidates": "אינדיאנה, הונדורס, בחריין, טנזניה, בוהמיה, אורוגוואי, רואנדה, קווינסלנד, נמיביה, אינדונזיה",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "נור-סולטן",
+      "object": "קזחסטן",
+      "object_candidates": "סבה, אתיופיה, פנמה, מינסוטה, שוודיה, קרואטיה, פורטוגל, ארמניה, גבון, קזחסטן",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "ויסבאדן",
+      "object": "הסן",
+      "object_candidates": "קרנאטקה, אזרבייג'ן, מלזיה, לאוס, בורגון, פנסילבניה, בלארוס, פיימונטה, ויקטוריה, הסן",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "דיז'ון",
+      "object": "בורגון",
+      "object_candidates": "פרובאנס, קרואטיה, מינסוטה, לוקסמבורג, אלבניה, ניגריה, קניה, הוואי, פיימונטה, בורגון",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "רואן",
+      "object": "נורמנדי",
+      "object_candidates": "שווייץ, לטביה, יונאן, מישיגן, אלברטה, קובה, תוניסיה, אינדונזיה, בלגיה, נורמנדי",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "אוקלהומה סיטי",
+      "object": "אוקלהומה",
+      "object_candidates": "קולורדו, זימבבואה, קזחסטן, מסצ'וסטס, אסטוניה, קנדה, מקסיקו, לסטרשייר, אוקספורדשייר, אוקלהומה",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "ליטל רוק",
+      "object": "ארקנסו",
+      "object_candidates": "טאיוואן, בוואריה, וייטנאם, הוואי, אלג'יריה, בוליביה, אנגולה, ליטא, אלסקה, ארקנסו",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "נג'מנה",
+      "object": "צ'אד",
+      "object_candidates": "רואנדה, סנגל, סומליה, סלובקיה, אונטריו, פינלנד, נמיביה, האיטי, נורמנדי, צ'אד",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "עמאן",
+      "object": "ירדן",
+      "object_candidates": "אוסטרליה, פרובאנס, דנמרק, גואטמלה, הונדורס, נמיביה, טקסס, סוריה, בוהמיה, ירדן",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "טריוונדרום",
+      "object": "קרלה",
+      "object_candidates": "ירדן, מניטובה, סומליה, קרואטיה, פלורידה, סקוטלנד, צ'אד, מסצ'וסטס, לוקסמבורג, קרלה",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "ברידג'טאון",
+      "object": "ברבדוס",
+      "object_candidates": "טנסי, איטליה, גאנה, אלסקה, ממלכת אנגליה, סבה, טג'יקיסטן, קנדה, אוקספורדשייר, ברבדוס",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "דובאי",
+      "object": "דובאי",
+      "object_candidates": "לוקסמבורג, ויילס, תוניסיה, אוסטרליה, פנג'אב, ארמניה, פורטוגל, מלטה, טלנגאנה, דובאי",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "פוטסדאם",
+      "object": "ברנדנבורג",
+      "object_candidates": "אקוודור, נווארה, קובה, קונטיקט, ונצואלה, פלנדריה, דנמרק, יוטה, אראגון, ברנדנבורג",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "אנטננריבו",
+      "object": "מדגסקר",
+      "object_candidates": "פלורידה, איווה, ממלכת אנגליה, עומאן, צרפת, גאנה, תאילנד, שווייץ, אוקראינה, מדגסקר",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "במקו",
+      "object": "מאלי",
+      "object_candidates": "אראגון, מסצ'וסטס, בורגון, פיג'י, אסטוניה, מלאווי, צ'ילה, פלנדריה, פיימונטה, מאלי",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "אנאפוליס",
+      "object": "מרילנד",
+      "object_candidates": "סלובקיה, תוניסיה, סלובניה, טקסס, נמיביה, פלורידה, נורווגיה, הודו, אסטוניה, מרילנד",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "היידראבאד",
+      "object": "טלנגאנה",
+      "object_candidates": "בלארוס, אלג'יריה, נווארה, אנגליה, לאוס, ליטא, קרלה, לבנון, הריאנה, טלנגאנה",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "צ'אנדיגאר",
+      "object": "פנג'אב",
+      "object_candidates": "גוג'ראט, סמואה, מהאראשטרה, עיראק, פורטוגל, מלאווי, פלנדריה, בוואריה, אינדונזיה, פנג'אב",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "בור-אן-ברס",
+      "object": "אן",
+      "object_candidates": "אוסטריה, מרילנד, סלובקיה, בהוטן, גואה, וייטנאם, פולין, הונדורס, אלסקה, אן",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "סובה",
+      "object": "פיג'י",
+      "object_candidates": "איווה, ויקטוריה, ארגנטינה, בוואריה, גואנגדונג, הודו, טוסקנה, פרובאנס, ראג'סטאן, פיג'י",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "האריסברג",
+      "object": "פנסילבניה",
+      "object_candidates": "קנזס, ונצואלה, איטליה, ביהר, ראג'סטאן, לאוס, לוב, סלובניה, מניטובה, פנסילבניה",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "צנעא",
+      "object": "תימן",
+      "object_candidates": "סיציליה, ביהר, נורווגיה, אלברטה, יוון, לבנון, פיג'י, בנין, הריאנה, תימן",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "פאנאג'י",
+      "object": "גואה",
+      "object_candidates": "לוב, רואנדה, עיראק, אוקלהומה, פרו, גרינלנד, יוון, קירגיזסטן, רומניה, גואה",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "בנדר סרי בגוואן",
+      "object": "ברוניי",
+      "object_candidates": "סמואה, אוקספורדשייר, לוב, מלטה, הסן, קרואטיה, הולנד, איידהו, גבון, ברוניי",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "שאיין",
+      "object": "ויומינג",
+      "object_candidates": "קפריסין, סמואה, גינאה, גרמניה, מניטובה, ראג'סטאן, הונגריה, אנגולה, אוקראינה, ויומינג",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "פמפלונה",
+      "object": "נווארה",
+      "object_candidates": "ירדן, הונדורס, בלארוס, גואטמלה, בורגון, צ'ילה, כרתים, קרלה, גואה, נווארה",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "ליברוויל",
+      "object": "גבון",
+      "object_candidates": "בוליביה, אוקראינה, גאורגיה, טלנגאנה, פלנדריה, זלצבורג, אנגליה, קנזס, וייטנאם, גבון",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "פרישטינה",
+      "object": "קוסובו",
+      "object_candidates": "ניז'ר, ספרד, הונגריה, פלורידה, בלארוס, קרלה, הפיליפינים, בוטסואנה, סנגל, קוסובו",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "נואוק",
+      "object": "גרינלנד",
+      "object_candidates": "יונאן, אנגולה, קונטיקט, דובאי, רומניה, קוויבק, ונצואלה, צ'אד, גרמניה, גרינלנד",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "וינצ'סטר",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "יוון, יפן, פקיסטן, הודו, גאנה, צ'כוסלובקיה, קליפורניה, ויילס, קטלוניה, ממלכת אנגליה",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "בלגרד",
+      "object": "יוגוסלביה",
+      "object_candidates": "בהוטן, איטליה, קוסובו, בוואריה, נווארה, כרתים, זמביה, אוסטרליה, ליטא, יוגוסלביה",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "הרטפורד",
+      "object": "קונטיקט",
+      "object_candidates": "אוקראינה, סבה, טאיוואן, הולנד, קולורדו, נורווגיה, מלאווי, מניטובה, כווית, קונטיקט",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "לימה",
+      "object": "פרו",
+      "object_candidates": "ונצואלה, אוזבקיסטן, ויומינג, סבה, שווייץ, מאוריציוס, קטלוניה, תימן, מסצ'וסטס, פרו",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "קונאקרי",
+      "object": "גינאה",
+      "object_candidates": "עומאן, צרפת, האיטי, קנדה, נמיביה, רואנדה, גבון, איווה, ברזיל, גינאה",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "ג'ונו",
+      "object": "אלסקה",
+      "object_candidates": "סקוטלנד, נור, אוקספורדשייר, אוסטרליה, ביהר, טנזניה, הודו, פנג'אב, הסן, אלסקה",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "בלמופן",
+      "object": "בליז",
+      "object_candidates": "הודו, טאיוואן, אנגליה, אקוודור, נורמנדי, פולין, מישיגן, גינאה, מדגסקר, בליז",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "סקרמנטו",
+      "object": "קליפורניה",
+      "object_candidates": "ברוניי, מוזמביק, סלובקיה, קוויבק, אוסטרליה, ישראל, פנג'אב, צ'ילה, שוודיה, קליפורניה",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "הסיטי של לונדון",
+      "object": "ממלכת אנגליה",
+      "object_candidates": "תאילנד, בליז, איווה, קטר, פלורידה, הונגריה, גאנה, סרדיניה, ממלכת יהודה, ממלכת אנגליה",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "קיגאלי",
+      "object": "רואנדה",
+      "object_candidates": "פנסילבניה, ארגנטינה, קנזס, גבון, ביהר, נווארה, בהוטן, נורמנדי, טסמניה, רואנדה",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "בריסל",
+      "object": "בלגיה",
+      "object_candidates": "לאוס, אוקלהומה, טאיוואן, נפאל, איטליה, נווארה, צרפת, גואטמלה, גואה, בלגיה",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "טהימפהו",
+      "object": "בהוטן",
+      "object_candidates": "הודו, דנמרק, וייטנאם, הונגריה, הסן, מלאווי, צ'כוסלובקיה, טסמניה, לוקסמבורג, בהוטן",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "נאפפליו",
+      "object": "יוון",
+      "object_candidates": "טורקיה, טלנגאנה, ליבריה, אנגליה, טסמניה, גאנה, ברזיל, ניגריה, ספרד, יוון",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "אלבה יוליה",
+      "object": "אלבה",
+      "object_candidates": "סומליה, הסן, שוודיה, אינדונזיה, עומאן, אוקראינה, טסמניה, יוון, פולין, אלבה",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "בויסי",
+      "object": "איידהו",
+      "object_candidates": "רואנדה, לוקסמבורג, רודזיה, אוקספורדשייר, בלארוס, אוקראינה, עיראק, פנמה, פלורידה, איידהו",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "נאשוויל",
+      "object": "טנסי",
+      "object_candidates": "ניגריה, בוואריה, קוויבק, בנגלדש, הולנד, ממלכת אנגליה, פנג'אב, אתיופיה, לבנון, טנסי",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "ארלון",
+      "object": "לוקסמבורג",
+      "object_candidates": "יוון, בוטסואנה, אוקלהומה, נורמנדי, קטלוניה, ממלכת יהודה, ברבדוס, קרנאטקה, פקיסטן, לוקסמבורג",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "זלצבורג",
+      "object": "זלצבורג",
+      "object_candidates": "קטלוניה, קליפורניה, גאנה, טנזניה, ניגריה, ויילס, נור, טלנגאנה, גוג'ראט, זלצבורג",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "אוסטין",
+      "object": "טקסס",
+      "object_candidates": "זימבבואה, אפגניסטן, ביהר, טג'יקיסטן, ארגנטינה, קוויבק, לואיזיאנה, אוקראינה, אינדיאנה, טקסס",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "סיינט פול",
+      "object": "מינסוטה",
+      "object_candidates": "סקסוניה, הסן, פנמה, יוטה, ליבריה, יוגוסלביה, סלובקיה, דנמרק, צ'כוסלובקיה, מינסוטה",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "מסקט",
+      "object": "עומאן",
+      "object_candidates": "בולגריה, נורווגיה, טנזניה, קליפורניה, אנגליה, בחריין, אוגנדה, ברוניי, נווארה, עומאן",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "טאלאהאסי",
+      "object": "פלורידה",
+      "object_candidates": "עיראק, סבה, הונגריה, אזרבייג'ן, קנדה, לטביה, בחריין, קרלה, סרביה, פלורידה",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "טביליסי",
+      "object": "גאורגיה",
+      "object_candidates": "קניה, הודו, תאילנד, צ'כוסלובקיה, אינדיאנה, בחריין, סוריה, אלברטה, פיג'י, גאורגיה",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "בריסל",
+      "object": "פלנדריה",
+      "object_candidates": "קרלה, אנגולה, קרואטיה, יונאן, אלג'יריה, קנדה, קוויבק, פרו, מסצ'וסטס, פלנדריה",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "חברון",
+      "object": "ממלכת יהודה",
+      "object_candidates": "סרדיניה, צ'ילה, גואטמלה, בוואריה, טוסקנה, סקסוניה, בוליביה, הוואי, אונטריו, ממלכת יהודה",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "ליל",
+      "object": "נור",
+      "object_candidates": "הריאנה, אסטוניה, אוסטריה, קולורדו, ברבדוס, זימבבואה, מאוריציוס, סקסוניה, בליז, נור",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "טופיקה",
+      "object": "קנזס",
+      "object_candidates": "ארמניה, יוגוסלביה, ספרד, אוסטריה, קובה, אנגולה, גבון, קמבודיה, אפגניסטן, קנזס",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "סנטיאגו דה קומפוסטלה",
+      "object": "גליסיה",
+      "object_candidates": "לוב, זלצבורג, נורווגיה, תוניסיה, טלנגאנה, אלסקה, ראג'סטאן, בליז, טוסקנה, גליסיה",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

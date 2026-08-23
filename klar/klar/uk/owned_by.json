@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "Хто володіє <subject>? Відповідь: <mask>",
+    "Яка компанія або особа володіє <subject>? Відповідь: <mask>",
+    "Хто є поточним власником <subject>? Відповідь: <mask>",
+    "Кому належить <subject>? Відповідь: <mask>",
+    "Яке підприємство володіє <subject>? Відповідь: <mask>",
+    " Власник <subject> — це <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Берлін, Париж, Toyota, Sony, Мілан, Франція, BBC, Польща, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Lamborghini",
+      "object": "Audi",
+      "object_candidates": "Париж, Yahoo!, Генуя, Мілан, Amazon.com, Польща, Microsoft, Toyota, Франція, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Ейфелева вежа",
+      "object": "Париж",
+      "object_candidates": "Львів, Катар, Yahoo!, Мілан, Франція, Microsoft, Sony, Польща, Турин, Париж",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Німеччина",
+      "object_candidates": "Турин, Sony, Париж, Берлін, Генуя, Польща, Катар, Toyota, Чикаго, Німеччина",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Пошук Google",
+      "object": "Google",
+      "object_candidates": "Турин, Sony, Німеччина, Генуя, Польща, Катар, Yahoo!, Чикаго, Мілан, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Львів, Google, Франція, Чикаго, BBC, Палермо, Польща, Генуя, Німеччина, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "Чикаго, Мілан, Львів, Париж, Неаполь, Франція, Німеччина, Турин, BBC, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "компакт-диск",
+      "object": "Sony",
+      "object_candidates": "Toyota, Львів, BBC, Мілан, Google, Yahoo!, Неаполь, Генуя, Париж, Sony",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Міжнародний аеропорт О'Гари",
+      "object": "Чикаго",
+      "object_candidates": "BBC, Генуя, Франція, Катар, Audi, Toyota, Амстердам, Amazon.com, Львів, Чикаго",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "BBC",
+      "object_candidates": "Франція, Львів, Генуя, Audi, Yahoo!, Неаполь, Палермо, Париж, Амстердам, BBC",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony",
+      "object_candidates": "Турин, Google, Yahoo!, Amazon.com, Львів, Microsoft, Audi, Toyota, Німеччина, Sony",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures Entertainment",
+      "object": "Sony",
+      "object_candidates": "Німеччина, Чикаго, Microsoft, Неаполь, Львів, Amazon.com, Audi, BBC, Катар, Sony",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Audi, Неаполь, Париж, Sony, Львів, Toyota, Палермо, Катар, Yahoo!, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Maps",
+      "object": "Google",
+      "object_candidates": "Sony, Палермо, Франція, Турин, Неаполь, Мілан, Toyota, Берлін, Львів, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "DVD",
+      "object": "Sony",
+      "object_candidates": "Катар, Генуя, Google, Турин, Париж, Мілан, BBC, Toyota, Microsoft, Sony",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Парк де Пренс",
+      "object": "Париж",
+      "object_candidates": "Львів, Польща, Toyota, Німеччина, Берлін, Yahoo!, BBC, Microsoft, Google, Париж",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google",
+      "object_candidates": "Audi, Microsoft, Амстердам, Неаполь, Берлін, Sony, Палермо, Львів, Польща, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "Microsoft",
+      "object_candidates": "Берлін, Чикаго, Мілан, Yahoo!, Париж, Toyota, Google, Sony, Турин, Microsoft",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Сан-Сіро",
+      "object": "Мілан",
+      "object_candidates": "Генуя, Sony, Німеччина, Amazon.com, Катар, Польща, Париж, Audi, Чикаго, Мілан",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon.com",
+      "object_candidates": "Франція, Чикаго, Audi, Польща, Париж, Google, Sony, Катар, Палермо, Amazon.com",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google",
+      "object_candidates": "Неаполь, Польща, Палермо, Audi, Microsoft, Львів, Амстердам, Катар, Генуя, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "Amazon.com",
+      "object_candidates": "Мілан, Неаполь, Франція, Німеччина, Амстердам, Львів, Microsoft, Генуя, Палермо, Amazon.com",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Стадіо Ренцо Барбера",
+      "object": "Палермо",
+      "object_candidates": "Sony, Катар, Німеччина, Амстердам, Франція, Audi, Google, Берлін, BBC, Палермо",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Чикаго, Німеччина, BBC, Microsoft, Катар, Франція, Турин, Польща, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "Польща, Мілан, Microsoft, Палермо, Франція, Амстердам, Генуя, Львів, BBC, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google",
+      "object_candidates": "Амстердам, Microsoft, Yahoo!, Amazon.com, Toyota, Audi, Чикаго, Львів, Генуя, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "Париж, Берлін, Microsoft, Німеччина, Sony, BBC, Неаполь, Франція, Генуя, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Тріумфальна арка",
+      "object": "Франція",
+      "object_candidates": "Неаполь, Audi, Амстердам, Берлін, Катар, Google, Париж, Німеччина, Microsoft, Франція",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Палац Фонтенбло",
+      "object": "Франція",
+      "object_candidates": "Toyota, Sony, Амстердам, Amazon.com, Польща, Мілан, Палермо, Audi, Генуя, Франція",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Генуя, Audi, Amazon.com, Sony, Париж, Катар, Польща, Львів, Берлін, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google книги",
+      "object": "Google",
+      "object_candidates": "Німеччина, Мілан, Audi, Yahoo!, Катар, Турин, Неаполь, Sony, Париж, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Олімпійський стадіон",
+      "object": "Турин",
+      "object_candidates": "Google, Амстердам, Франція, Мілан, Генуя, Microsoft, Берлін, Палермо, Sony, Турин",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Катар",
+      "object_candidates": "Yahoo!, Мілан, Amazon.com, Франція, Париж, Неаполь, Toyota, Sony, Львів, Катар",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Нічна варта",
+      "object": "Амстердам",
+      "object_candidates": "Мілан, Львів, Audi, Франція, Турин, BBC, Toyota, Неаполь, Польща, Амстердам",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Sony, Toyota, Польща, Audi, Париж, Львів, Microsoft, Amazon.com, Мілан, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Олімпійський стадіон",
+      "object": "Берлін",
+      "object_candidates": "Катар, Париж, Мілан, Microsoft, Амстердам, BBC, Чикаго, Audi, Турин, Берлін",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT",
+      "object": "Польща",
+      "object_candidates": "Львів, Париж, Чикаго, Amazon.com, Yahoo!, Амстердам, Google, Sony, Німеччина, Польща",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Стадіо Луїджі Ферраріс",
+      "object": "Генуя",
+      "object_candidates": "Катар, Sony, Microsoft, Польща, Берлін, Неаполь, Німеччина, Toyota, BBC, Генуя",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Google Перекладач",
+      "object": "Google",
+      "object_candidates": "Неаполь, Катар, Амстердам, Польща, Yahoo!, Microsoft, Чикаго, Мілан, Франція, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Shard London Bridge",
+      "object": "Катар",
+      "object_candidates": "Львів, Амстердам, Неаполь, Amazon.com, Sony, Генуя, BBC, Microsoft, Чикаго, Катар",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Стад де Франс",
+      "object": "Франція",
+      "object_candidates": "Генуя, Львів, Yahoo!, Toyota, Google, Microsoft, Турин, Чикаго, Amazon.com, Франція",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Арена Львів",
+      "object": "Львів",
+      "object_candidates": "Неаполь, Amazon.com, Чикаго, Турин, Франція, Німеччина, Audi, Toyota, Катар, Львів",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Microsoft",
+      "object_candidates": "Toyota, Катар, Чикаго, Неаполь, Палермо, Sony, Амстердам, Audi, Париж, Microsoft",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google, Microsoft, Польща, Мілан, Турин, Німеччина, Генуя, Чикаго, Амстердам, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Сан-Паоло",
+      "object": "Неаполь",
+      "object_candidates": "Берлін, Microsoft, Google, Генуя, Амстердам, Yahoo!, Париж, Палермо, Львів, Неаполь",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Делле Альпі",
+      "object": "Турин",
+      "object_candidates": "Toyota, Sony, Львів, Німеччина, Google, Амстердам, Чикаго, Париж, Yahoo!, Турин",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Дубай",
+      "object": "Дубай",
+      "object_candidates": "Yahoo!, Генуя, Катар, Amazon.com, Палермо, Google, BBC, Турин, Париж, Дубай",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google",
+      "object_candidates": "Microsoft, Турин, Генуя, Польща, Палермо, Audi, Париж, Toyota, Чикаго, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Мона Ліза",
+      "object": "Франція",
+      "object_candidates": "Париж, Турин, Microsoft, Мілан, Yahoo!, Палермо, Неаполь, Берлін, Генуя, Франція",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon.com",
+      "object_candidates": "Катар, Toyota, Yahoo!, Амстердам, Німеччина, Audi, Франція, Microsoft, Генуя, Amazon.com",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

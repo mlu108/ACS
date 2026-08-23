@@ -1,0 +1,4830 @@
+{
+  "name": "official_language",
+  "prompt_templates": [
+    "Mi az <subject> hivatalos nyelve? A válasz: <mask>",
+    "Melyik nyelvet használják hivatalosan <subject>-en? A válasz: <mask>",
+    "Mi az <subject>-en beszélt elsődleges nyelv? A válasz: <mask>",
+    "Melyik nyelv rendelkezik hivatalos státusszal <subject>-en? A válasz: <mask>",
+    "Melyik nyelvet ismerik el hivatalosként <subject>-en? A válasz: <mask>",
+    " <subject> hivatalos nyelve <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Francia Polinézia",
+      "object": "francia",
+      "object_candidates": "azeri, baszk, török, hawaii, orosz, tamil, magyar, albán, dán, francia",
+      "index": 235,
+      "subject_en": "French Polynesia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Brunei",
+      "object": "maláj",
+      "object_candidates": "olasz, urdu, albán, szicíliai, spanyol, német, indonéz, szomáli, héber, maláj",
+      "index": 236,
+      "subject_en": "Brunei",
+      "object_en": "Malay"
+    },
+    {
+      "subject": "Uttar Prades",
+      "object": "urdu",
+      "object_candidates": "macedón, török, khmer, hindi, nepáli, maláj, perzsa, maráthi, albán, urdu",
+      "index": 237,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "finn",
+      "object_candidates": "nepáli, egyiptomi, olasz, szlovén, montenegrói, macedón, ír, breton, litván, finn",
+      "index": 238,
+      "subject_en": "European Union",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Vallon Régió",
+      "object": "francia",
+      "object_candidates": "Normand nyelv, pandzsábi, walesi, katalán, hindi, malajálam, vietnámi, lett, ukrán, francia",
+      "index": 239,
+      "subject_en": "Wallonia",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "szlovén",
+      "object_candidates": "lengyel, scots, grúz, litván, japán, angol, portugál, svéd, malajálam, szlovén",
+      "index": 240,
+      "subject_en": "European Union",
+      "object_en": "Slovene"
+    },
+    {
+      "subject": "Haiti",
+      "object": "francia",
+      "object_candidates": "örmény, finn, holland, maráthi, telugu, máltai, észt, izlandi, katalán, francia",
+      "index": 241,
+      "subject_en": "Haiti",
+      "object_en": "French"
+    },
+    {
+      "subject": "Dél-afrikai Unió",
+      "object": "holland",
+      "object_candidates": "japán, maráthi, szomáli, pandzsábi, görög, hindi, baszk, katalán, walesi, holland",
+      "index": 242,
+      "subject_en": "Union of South Africa",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Sanghaji Együttműködési Szervezet",
+      "object": "orosz",
+      "object_candidates": "szicíliai, angol, montenegrói, szlovák, latin, máltai, indonéz, litván, mongol, orosz",
+      "index": 243,
+      "subject_en": "Shanghai Cooperation Organisation",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Wyoming",
+      "object": "angol",
+      "object_candidates": "lett, kínai, lengyel, hawaii, scots, nepáli, tamil, breton, román, angol",
+      "index": 244,
+      "subject_en": "Wyoming",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nemzetközi Atlétikai Szövetség",
+      "object": "francia",
+      "object_candidates": "héber, scots, khmer, ukrán, kínai, katalán, malajálam, egyiptomi, grúz, francia",
+      "index": 245,
+      "subject_en": "World Athletics",
+      "object_en": "French"
+    },
+    {
+      "subject": "Odesszai terület",
+      "object": "orosz",
+      "object_candidates": "holland, walesi, macedón, román, albán, bengáli, máltai, görög, khmer, orosz",
+      "index": 246,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Apostoli Szentszék",
+      "object": "latin",
+      "object_candidates": "belarusz, koreai, egyiptomi, szlovák, holland, német, katalán, svéd, hawaii, latin",
+      "index": 247,
+      "subject_en": "Holy See",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Uruguay",
+      "object": "spanyol",
+      "object_candidates": "bengáli, pandzsábi, portugál, baszk, lett, szlovén, thai, török, hawaii, spanyol",
+      "index": 248,
+      "subject_en": "Uruguay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Dzsamsedpur",
+      "object": "hindi",
+      "object_candidates": "szlovén, szlovák, nepáli, japán, francia, mongol, orosz, Velencei nyelv, pandzsábi, hindi",
+      "index": 249,
+      "subject_en": "Jamshedpur",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Dél-Oszétia",
+      "object": "grúz",
+      "object_candidates": "finn, malajálam, walesi, svéd, görög, spanyol, orosz, egyiptomi, héber, grúz",
+      "index": 250,
+      "subject_en": "South Ossetia",
+      "object_en": "Georgian"
+    },
+    {
+      "subject": "Kambodzsa",
+      "object": "khmer",
+      "object_candidates": "baszk, hindi, egyiptomi, Normand nyelv, walesi, szlovák, bolgár, svéd, örmény, khmer",
+      "index": 251,
+      "subject_en": "Cambodia",
+      "object_en": "Khmer"
+    },
+    {
+      "subject": "Krasznojarszki határterület",
+      "object": "orosz",
+      "object_candidates": "olasz, finn, észt, kínai, maráthi, bengáli, cseh, magyar, scots, orosz",
+      "index": 252,
+      "subject_en": "Krasnoyarsk Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Kongói Köztársaság",
+      "object": "francia",
+      "object_candidates": "Velencei nyelv, nepáli, finn, német, hindi, latin, telugu, kínai, indonéz, francia",
+      "index": 253,
+      "subject_en": "Republic of the Congo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Salamon-szigetek",
+      "object": "angol",
+      "object_candidates": "orosz, dán, maláj, scots, máltai, hawaii, latin, bolgár, telugu, angol",
+      "index": 254,
+      "subject_en": "Solomon Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Meghálaja",
+      "object": "angol",
+      "object_candidates": "macedón, török, román, hawaii, Velencei nyelv, litván, belarusz, scots, baszk, angol",
+      "index": 255,
+      "subject_en": "Meghalaya",
+      "object_en": "English"
+    },
+    {
+      "subject": "Rádzsasztán",
+      "object": "hindi",
+      "object_candidates": "ukrán, tamil, izlandi, vietnámi, máltai, horvát, malajálam, lengyel, latin, hindi",
+      "index": 256,
+      "subject_en": "Rajasthan",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Sanghaji Együttműködési Szervezet",
+      "object": "kínai",
+      "object_candidates": "német, román, angol, latin, máltai, horvát, ír, örmény, belarusz, kínai",
+      "index": 257,
+      "subject_en": "Shanghai Cooperation Organisation",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Húsvét-sziget",
+      "object": "spanyol",
+      "object_candidates": "baszk, Normand nyelv, magyar, lett, francia, grúz, thai, angol, orosz, spanyol",
+      "index": 258,
+      "subject_en": "Easter Island",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Mallorca",
+      "object": "katalán",
+      "object_candidates": "ír, dán, héber, francia, örmény, mongol, görög, horvát, urdu, katalán",
+      "index": 259,
+      "subject_en": "Majorca",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Brazília",
+      "object": "portugál",
+      "object_candidates": "baszk, cseh, bolgár, tamil, román, máltai, mongol, grúz, egyiptomi, portugál",
+      "index": 260,
+      "subject_en": "Brazil",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Mexikó",
+      "object": "spanyol",
+      "object_candidates": "tamil, cseh, Velencei nyelv, hawaii, örmény, héber, portugál, bolgár, scots, spanyol",
+      "index": 261,
+      "subject_en": "Mexico",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Gambia",
+      "object": "angol",
+      "object_candidates": "belarusz, hawaii, tamil, malajálam, telugu, ír, perzsa, portugál, Velencei nyelv, angol",
+      "index": 262,
+      "subject_en": "The Gambia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kiotó prefektúra",
+      "object": "japán",
+      "object_candidates": "egyiptomi, román, angol, urdu, maláj, lengyel, cseh, azeri, olasz, japán",
+      "index": 263,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Japanese"
+    },
+    {
+      "subject": "Déli-Georgia és Déli-Sandwich-szigetek",
+      "object": "angol",
+      "object_candidates": "örmény, ír, holland, Velencei nyelv, szomáli, indonéz, macedón, román, katalán, angol",
+      "index": 264,
+      "subject_en": "South Georgia and the South Sandwich Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Man",
+      "object": "angol",
+      "object_candidates": "telugu, hawaii, Velencei nyelv, breton, spanyol, albán, grúz, lett, scots, angol",
+      "index": 265,
+      "subject_en": "Isle of Man",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mississippi",
+      "object": "angol",
+      "object_candidates": "mongol, katalán, spanyol, malajálam, tamil, perzsa, portugál, ukrán, nepáli, angol",
+      "index": 266,
+      "subject_en": "Mississippi",
+      "object_en": "English"
+    },
+    {
+      "subject": "Makaó",
+      "object": "kínai",
+      "object_candidates": "indonéz, román, malajálam, magyar, svéd, lengyel, máltai, albán, szomáli, kínai",
+      "index": 267,
+      "subject_en": "Macau",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Csehszlovákia",
+      "object": "szlovák",
+      "object_candidates": "örmény, svéd, német, szerb, szicíliai, egyiptomi, latin, ír, héber, szlovák",
+      "index": 268,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "Donecki terület",
+      "object": "orosz",
+      "object_candidates": "baszk, máltai, montenegrói, Normand nyelv, koreai, horvát, tamil, bengáli, dán, orosz",
+      "index": 269,
+      "subject_en": "Donetsk Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Izrael",
+      "object": "héber",
+      "object_candidates": "szomáli, orosz, japán, urdu, vietnámi, grúz, koreai, baszk, lengyel, héber",
+      "index": 270,
+      "subject_en": "Israel",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Szamoa",
+      "object": "angol",
+      "object_candidates": "nepáli, szlovén, vietnámi, izlandi, ír, örmény, tamil, katalán, urdu, angol",
+      "index": 271,
+      "subject_en": "Samoa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tatárföld",
+      "object": "orosz",
+      "object_candidates": "Normand nyelv, perzsa, vietnámi, finn, latin, bengáli, litván, scots, malajálam, orosz",
+      "index": 272,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Brüsszel fővárosi régió",
+      "object": "holland",
+      "object_candidates": "svéd, szlovén, cseh, dán, maráthi, román, örmény, khmer, mongol, holland",
+      "index": 273,
+      "subject_en": "Brussels region",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Hawaii",
+      "object": "hawaii",
+      "object_candidates": "baszk, katalán, svéd, urdu, thai, szerb, román, grúz, belarusz, hawaii",
+      "index": 274,
+      "subject_en": "Hawaii",
+      "object_en": "Hawaiian"
+    },
+    {
+      "subject": "Svájc",
+      "object": "francia",
+      "object_candidates": "horvát, cseh, szlovén, scots, bengáli, khmer, perzsa, bolgár, finn, francia",
+      "index": 275,
+      "subject_en": "Switzerland",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kajaani",
+      "object": "finn",
+      "object_candidates": "maláj, pandzsábi, egyiptomi, szomáli, portugál, katalán, tamil, holland, vietnámi, finn",
+      "index": 276,
+      "subject_en": "Kajaani",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Belgium",
+      "object": "német",
+      "object_candidates": "koreai, malajálam, angol, olasz, örmény, héber, grúz, észt, hindi, német",
+      "index": 277,
+      "subject_en": "Belgium",
+      "object_en": "German"
+    },
+    {
+      "subject": "Nauru",
+      "object": "angol",
+      "object_candidates": "ír, baszk, görög, breton, koreai, katalán, hindi, montenegrói, magyar, angol",
+      "index": 278,
+      "subject_en": "Nauru",
+      "object_en": "English"
+    },
+    {
+      "subject": "Delhi",
+      "object": "angol",
+      "object_candidates": "baszk, macedón, szerb, kínai, spanyol, litván, héber, Velencei nyelv, azeri, angol",
+      "index": 279,
+      "subject_en": "Delhi",
+      "object_en": "English"
+    },
+    {
+      "subject": "Navarra",
+      "object": "spanyol",
+      "object_candidates": "német, dán, holland, grúz, katalán, török, ír, maláj, khmer, spanyol",
+      "index": 280,
+      "subject_en": "Navarre",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Ibiza",
+      "object": "spanyol",
+      "object_candidates": "indonéz, finn, breton, lett, olasz, koreai, héber, perzsa, portugál, spanyol",
+      "index": 281,
+      "subject_en": "Ibiza",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Kerala",
+      "object": "angol",
+      "object_candidates": "lengyel, hawaii, svéd, cseh, francia, észt, spanyol, örmény, izlandi, angol",
+      "index": 282,
+      "subject_en": "Kerala",
+      "object_en": "English"
+    },
+    {
+      "subject": "Falkland-szigetek",
+      "object": "angol",
+      "object_candidates": "latin, walesi, szerb, szomáli, montenegrói, Velencei nyelv, malajálam, baszk, szlovén, angol",
+      "index": 283,
+      "subject_en": "Falkland Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Danzig Szabad Város",
+      "object": "lengyel",
+      "object_candidates": "walesi, egyiptomi, portugál, szomáli, spanyol, telugu, orosz, azeri, észt, lengyel",
+      "index": 284,
+      "subject_en": "Free City of Danzig",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Európai Labdarúgó-szövetség",
+      "object": "francia",
+      "object_candidates": "görög, montenegrói, perzsa, pandzsábi, kínai, török, mongol, finn, breton, francia",
+      "index": 285,
+      "subject_en": "Union of European Football Associations",
+      "object_en": "French"
+    },
+    {
+      "subject": "Frízföld",
+      "object": "holland",
+      "object_candidates": "szlovák, bolgár, svéd, angol, walesi, malajálam, baszk, vietnámi, szlovén, holland",
+      "index": 286,
+      "subject_en": "Friesland",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Guinea",
+      "object": "francia",
+      "object_candidates": "breton, orosz, albán, belarusz, scots, telugu, szlovák, tamil, hawaii, francia",
+      "index": 287,
+      "subject_en": "Guinea",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kojambuttúr",
+      "object": "tamil",
+      "object_candidates": "dán, román, magyar, észt, Velencei nyelv, walesi, albán, lengyel, szomáli, tamil",
+      "index": 288,
+      "subject_en": "Coimbatore",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "Ausztrália",
+      "object": "angol",
+      "object_candidates": "koreai, walesi, katalán, holland, Velencei nyelv, vietnámi, cseh, scots, maráthi, angol",
+      "index": 289,
+      "subject_en": "Australia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Peru",
+      "object": "spanyol",
+      "object_candidates": "azeri, thai, macedón, pandzsábi, holland, scots, Velencei nyelv, ukrán, szomáli, spanyol",
+      "index": 290,
+      "subject_en": "Peru",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Delhi",
+      "object": "pandzsábi",
+      "object_candidates": "Velencei nyelv, török, breton, szicíliai, montenegrói, malajálam, grúz, holland, koreai, pandzsábi",
+      "index": 291,
+      "subject_en": "Delhi",
+      "object_en": "Punjabi"
+    },
+    {
+      "subject": "Lesotho",
+      "object": "angol",
+      "object_candidates": "orosz, urdu, ír, nepáli, baszk, mongol, dán, cseh, macedón, angol",
+      "index": 292,
+      "subject_en": "Lesotho",
+      "object_en": "English"
+    },
+    {
+      "subject": "India",
+      "object": "angol",
+      "object_candidates": "urdu, észt, román, japán, maráthi, ukrán, francia, szerb, telugu, angol",
+      "index": 293,
+      "subject_en": "India",
+      "object_en": "English"
+    },
+    {
+      "subject": "Pitcairn-szigetek",
+      "object": "angol",
+      "object_candidates": "thai, khmer, finn, tamil, maláj, örmény, szlovén, szlovák, magyar, angol",
+      "index": 294,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hanti- és Manysiföld",
+      "object": "orosz",
+      "object_candidates": "tamil, ukrán, litván, izlandi, ír, török, spanyol, szerb, cseh, orosz",
+      "index": 295,
+      "subject_en": "Khanty-Mansi Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Zimbabwe",
+      "object": "angol",
+      "object_candidates": "észt, cseh, maráthi, szicíliai, héber, izlandi, macedón, olasz, lett, angol",
+      "index": 296,
+      "subject_en": "Zimbabwe",
+      "object_en": "English"
+    },
+    {
+      "subject": "Lucerne",
+      "object": "német",
+      "object_candidates": "portugál, spanyol, albán, bengáli, indonéz, lett, lengyel, török, cseh, német",
+      "index": 297,
+      "subject_en": "Lucerne",
+      "object_en": "German"
+    },
+    {
+      "subject": "Dnyeszter Menti Köztársaság",
+      "object": "ukrán",
+      "object_candidates": "albán, koreai, olasz, macedón, szomáli, thai, indonéz, francia, japán, ukrán",
+      "index": 298,
+      "subject_en": "Transnistria",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Dzsibuti",
+      "object": "francia",
+      "object_candidates": "bolgár, tamil, scots, walesi, belarusz, orosz, Velencei nyelv, román, svéd, francia",
+      "index": 299,
+      "subject_en": "Djibouti",
+      "object_en": "French"
+    },
+    {
+      "subject": "Sint Eustatius",
+      "object": "angol",
+      "object_candidates": "holland, koreai, olasz, szlovák, izlandi, pandzsábi, francia, telugu, román, angol",
+      "index": 300,
+      "subject_en": "Sint Eustatius",
+      "object_en": "English"
+    },
+    {
+      "subject": "Montana",
+      "object": "angol",
+      "object_candidates": "francia, svéd, cseh, litván, katalán, román, szerb, görög, egyiptomi, angol",
+      "index": 301,
+      "subject_en": "Montana",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bahama-szigetek",
+      "object": "angol",
+      "object_candidates": "hindi, khmer, maláj, baszk, grúz, olasz, német, örmény, lengyel, angol",
+      "index": 302,
+      "subject_en": "The Bahamas",
+      "object_en": "English"
+    },
+    {
+      "subject": "Dagesztán",
+      "object": "azeri",
+      "object_candidates": "finn, bengáli, horvát, grúz, scots, ír, lett, telugu, görög, azeri",
+      "index": 303,
+      "subject_en": "Republic of Dagestan",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Észak-Macedónia",
+      "object": "macedón",
+      "object_candidates": "török, máltai, szlovák, magyar, belarusz, katalán, mongol, ukrán, orosz, macedón",
+      "index": 304,
+      "subject_en": "North Macedonia",
+      "object_en": "Macedonian"
+    },
+    {
+      "subject": "Ontario",
+      "object": "angol",
+      "object_candidates": "olasz, örmény, magyar, malajálam, telugu, vietnámi, orosz, indonéz, kínai, angol",
+      "index": 305,
+      "subject_en": "Ontario",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alberta",
+      "object": "angol",
+      "object_candidates": "svéd, katalán, lengyel, kínai, pandzsábi, szerb, máltai, lett, szlovén, angol",
+      "index": 306,
+      "subject_en": "Alberta",
+      "object_en": "English"
+    },
+    {
+      "subject": "Montenegró",
+      "object": "szerb",
+      "object_candidates": "scots, Normand nyelv, svéd, perzsa, hawaii, holland, Velencei nyelv, orosz, héber, szerb",
+      "index": 307,
+      "subject_en": "Montenegro",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Dzsammu és Kasmír",
+      "object": "urdu",
+      "object_candidates": "khmer, szlovén, magyar, héber, perzsa, szerb, szlovák, olasz, azeri, urdu",
+      "index": 308,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Szváziföld",
+      "object": "angol",
+      "object_candidates": "belarusz, Normand nyelv, horvát, Velencei nyelv, finn, magyar, francia, montenegrói, azeri, angol",
+      "index": 309,
+      "subject_en": "Eswatini",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "holland",
+      "object_candidates": "hawaii, azeri, bolgár, Velencei nyelv, litván, mongol, khmer, szlovén, ír, holland",
+      "index": 310,
+      "subject_en": "European Union",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Grenada",
+      "object": "angol",
+      "object_candidates": "nepáli, szlovén, héber, latin, egyiptomi, pandzsábi, khmer, malajálam, dán, angol",
+      "index": 311,
+      "subject_en": "Grenada",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alderney",
+      "object": "angol",
+      "object_candidates": "héber, japán, máltai, indonéz, baszk, lett, grúz, spanyol, Normand nyelv, angol",
+      "index": 312,
+      "subject_en": "Alderney",
+      "object_en": "English"
+    },
+    {
+      "subject": "Aargau kanton",
+      "object": "német",
+      "object_candidates": "bengáli, vietnámi, indonéz, azeri, macedón, szlovén, mongol, román, örmény, német",
+      "index": 313,
+      "subject_en": "Aargau",
+      "object_en": "German"
+    },
+    {
+      "subject": "Hakaszföld",
+      "object": "orosz",
+      "object_candidates": "holland, hawaii, észt, magyar, indonéz, szlovén, román, izlandi, német, orosz",
+      "index": 314,
+      "subject_en": "Republic of Khakassia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Csecsenföld",
+      "object": "orosz",
+      "object_candidates": "litván, svéd, szicíliai, örmény, török, angol, malajálam, latin, albán, orosz",
+      "index": 315,
+      "subject_en": "Chechen Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Mikolajivi terület",
+      "object": "orosz",
+      "object_candidates": "latin, montenegrói, belarusz, urdu, lett, khmer, svéd, indonéz, máltai, orosz",
+      "index": 316,
+      "subject_en": "Mykolaiv Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Pandzsáb",
+      "object": "pandzsábi",
+      "object_candidates": "nepáli, lengyel, tamil, orosz, görög, azeri, héber, román, japán, pandzsábi",
+      "index": 317,
+      "subject_en": "Punjab",
+      "object_en": "Punjabi"
+    },
+    {
+      "subject": "Ruanda",
+      "object": "angol",
+      "object_candidates": "albán, telugu, maráthi, ukrán, khmer, török, malajálam, finn, svéd, angol",
+      "index": 318,
+      "subject_en": "Rwanda",
+      "object_en": "English"
+    },
+    {
+      "subject": "Finnország",
+      "object": "finn",
+      "object_candidates": "maláj, macedón, görög, szlovén, svéd, észt, szlovák, tamil, koreai, finn",
+      "index": 319,
+      "subject_en": "Finland",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Nebraska",
+      "object": "angol",
+      "object_candidates": "nepáli, telugu, walesi, urdu, portugál, spanyol, thai, scots, héber, angol",
+      "index": 320,
+      "subject_en": "Nebraska",
+      "object_en": "English"
+    },
+    {
+      "subject": "Lengyelország",
+      "object": "lengyel",
+      "object_candidates": "latin, baszk, urdu, koreai, héber, ír, holland, máltai, egyiptomi, lengyel",
+      "index": 321,
+      "subject_en": "Poland",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Ukrán Szovjet Szocialista Köztársaság",
+      "object": "orosz",
+      "object_candidates": "litván, hindi, tamil, vietnámi, szlovák, máltai, nepáli, walesi, malajálam, orosz",
+      "index": 322,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Nyon",
+      "object": "francia",
+      "object_candidates": "máltai, bolgár, perzsa, finn, nepáli, katalán, hindi, kínai, észt, francia",
+      "index": 323,
+      "subject_en": "Nyon",
+      "object_en": "French"
+    },
+    {
+      "subject": "Bázel",
+      "object": "német",
+      "object_candidates": "khmer, lett, perzsa, litván, baszk, izlandi, dán, cseh, egyiptomi, német",
+      "index": 324,
+      "subject_en": "Basel",
+      "object_en": "German"
+    },
+    {
+      "subject": "Arkansas",
+      "object": "angol",
+      "object_candidates": "pandzsábi, japán, walesi, belarusz, hawaii, szomáli, orosz, örmény, breton, angol",
+      "index": 325,
+      "subject_en": "Arkansas",
+      "object_en": "English"
+    },
+    {
+      "subject": "Románia",
+      "object": "román",
+      "object_candidates": "spanyol, dán, görög, tamil, bolgár, vietnámi, angol, máltai, lett, román",
+      "index": 326,
+      "subject_en": "Romania",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "Srí Lanka",
+      "object": "tamil",
+      "object_candidates": "portugál, észt, bolgár, indonéz, malajálam, albán, Normand nyelv, japán, görög, tamil",
+      "index": 327,
+      "subject_en": "Sri Lanka",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "görög",
+      "object_candidates": "ír, finn, grúz, spanyol, malajálam, azeri, mongol, máltai, magyar, görög",
+      "index": 328,
+      "subject_en": "European Union",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "ír",
+      "object_candidates": "hawaii, maráthi, portugál, mongol, román, telugu, lett, breton, bengáli, ír",
+      "index": 329,
+      "subject_en": "European Union",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "Kenya",
+      "object": "angol",
+      "object_candidates": "khmer, román, francia, maráthi, görög, örmény, bengáli, hawaii, macedón, angol",
+      "index": 330,
+      "subject_en": "Kenya",
+      "object_en": "English"
+    },
+    {
+      "subject": "Francia déli és antarktiszi területek",
+      "object": "francia",
+      "object_candidates": "német, román, örmény, baszk, dán, ukrán, kínai, egyiptomi, szlovák, francia",
+      "index": 331,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "French"
+    },
+    {
+      "subject": "Ghána",
+      "object": "angol",
+      "object_candidates": "scots, montenegrói, belarusz, breton, hawaii, malajálam, telugu, japán, walesi, angol",
+      "index": 332,
+      "subject_en": "Ghana",
+      "object_en": "English"
+    },
+    {
+      "subject": "Provence",
+      "object": "francia",
+      "object_candidates": "tamil, német, szlovák, bengáli, spanyol, görög, japán, grúz, észt, francia",
+      "index": 333,
+      "subject_en": "Provence",
+      "object_en": "French"
+    },
+    {
+      "subject": "Szlovénia",
+      "object": "szlovén",
+      "object_candidates": "azeri, scots, latin, telugu, japán, ír, baszk, spanyol, lengyel, szlovén",
+      "index": 334,
+      "subject_en": "Slovenia",
+      "object_en": "Slovene"
+    },
+    {
+      "subject": "Moldova",
+      "object": "román",
+      "object_candidates": "albán, montenegrói, finn, észt, khmer, Velencei nyelv, malajálam, szlovén, koreai, román",
+      "index": 335,
+      "subject_en": "Moldova",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "Európai Biztonsági és Együttműködési Szervezet",
+      "object": "francia",
+      "object_candidates": "hindi, pandzsábi, indonéz, Normand nyelv, holland, azeri, román, katalán, bolgár, francia",
+      "index": 336,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "French"
+    },
+    {
+      "subject": "Francia Guyana",
+      "object": "francia",
+      "object_candidates": "magyar, walesi, latin, spanyol, ukrán, szomáli, albán, horvát, koreai, francia",
+      "index": 337,
+      "subject_en": "French Guiana",
+      "object_en": "French"
+    },
+    {
+      "subject": "Litvánia",
+      "object": "litván",
+      "object_candidates": "indonéz, japán, mongol, maráthi, Normand nyelv, örmény, magyar, ukrán, észt, litván",
+      "index": 338,
+      "subject_en": "Lithuania",
+      "object_en": "Lithuanian"
+    },
+    {
+      "subject": "Komiföld",
+      "object": "orosz",
+      "object_candidates": "bolgár, khmer, ukrán, tamil, nepáli, scots, román, belarusz, dán, orosz",
+      "index": 339,
+      "subject_en": "Komi Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Anguilla",
+      "object": "angol",
+      "object_candidates": "észt, hawaii, malajálam, baszk, ír, magyar, perzsa, máltai, thai, angol",
+      "index": 340,
+      "subject_en": "Anguilla",
+      "object_en": "English"
+    },
+    {
+      "subject": "Belize",
+      "object": "angol",
+      "object_candidates": "észt, hawaii, japán, szlovén, máltai, scots, kínai, indonéz, szlovák, angol",
+      "index": 341,
+      "subject_en": "Belize",
+      "object_en": "English"
+    },
+    {
+      "subject": "Spanyolország",
+      "object": "katalán",
+      "object_candidates": "indonéz, észt, angol, koreai, perzsa, szlovén, macedón, német, tamil, katalán",
+      "index": 342,
+      "subject_en": "Spain",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Barbados",
+      "object": "angol",
+      "object_candidates": "tamil, urdu, olasz, albán, vietnámi, maláj, szicíliai, malajálam, indonéz, angol",
+      "index": 343,
+      "subject_en": "Barbados",
+      "object_en": "English"
+    },
+    {
+      "subject": "Melitopol",
+      "object": "ukrán",
+      "object_candidates": "walesi, török, szicíliai, bolgár, izlandi, nepáli, macedón, katalán, urdu, ukrán",
+      "index": 344,
+      "subject_en": "Melitopol",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Nyugat-Németország",
+      "object": "német",
+      "object_candidates": "szlovén, cseh, breton, vietnámi, Velencei nyelv, román, hindi, ír, bengáli, német",
+      "index": 345,
+      "subject_en": "West Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "Nyenyecföld",
+      "object": "orosz",
+      "object_candidates": "izlandi, hindi, montenegrói, máltai, szicíliai, albán, horvát, telugu, vietnámi, orosz",
+      "index": 346,
+      "subject_en": "Nenets Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Karibi Hollandia",
+      "object": "angol",
+      "object_candidates": "perzsa, szlovák, hawaii, egyiptomi, héber, thai, japán, Normand nyelv, szerb, angol",
+      "index": 347,
+      "subject_en": "Caribbean Netherlands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kolumbia",
+      "object": "spanyol",
+      "object_candidates": "pandzsábi, szicíliai, Normand nyelv, szlovák, malajálam, lengyel, albán, indonéz, finn, spanyol",
+      "index": 348,
+      "subject_en": "Colombia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Bahia",
+      "object": "portugál",
+      "object_candidates": "hindi, baszk, malajálam, dán, kínai, hawaii, urdu, szomáli, macedón, portugál",
+      "index": 349,
+      "subject_en": "Bahia",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Brunei",
+      "object": "angol",
+      "object_candidates": "khmer, scots, svéd, thai, finn, katalán, héber, bolgár, örmény, angol",
+      "index": 350,
+      "subject_en": "Brunei",
+      "object_en": "English"
+    },
+    {
+      "subject": "Szicíliai Királyság",
+      "object": "latin",
+      "object_candidates": "angol, thai, bengáli, portugál, ír, azeri, macedón, lengyel, német, latin",
+      "index": 351,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Donecki terület",
+      "object": "ukrán",
+      "object_candidates": "kínai, orosz, dán, egyiptomi, latin, lengyel, katalán, lett, szomáli, ukrán",
+      "index": 352,
+      "subject_en": "Donetsk Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Patna",
+      "object": "hindi",
+      "object_candidates": "orosz, török, olasz, katalán, pandzsábi, tamil, macedón, ukrán, spanyol, hindi",
+      "index": 353,
+      "subject_en": "Patna",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Szevasztopol",
+      "object": "ukrán",
+      "object_candidates": "hindi, szomáli, egyiptomi, orosz, maláj, tamil, lengyel, thai, örmény, ukrán",
+      "index": 354,
+      "subject_en": "Sevastopol",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Pakisztán",
+      "object": "urdu",
+      "object_candidates": "grúz, horvát, Normand nyelv, scots, görög, perzsa, lett, katalán, litván, urdu",
+      "index": 355,
+      "subject_en": "Pakistan",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Mariehamn",
+      "object": "svéd",
+      "object_candidates": "német, grúz, francia, maráthi, kínai, vietnámi, japán, görög, szerb, svéd",
+      "index": 356,
+      "subject_en": "Mariehamn",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Bern kanton",
+      "object": "francia",
+      "object_candidates": "macedón, bengáli, német, izlandi, japán, belarusz, szlovén, malajálam, tamil, francia",
+      "index": 357,
+      "subject_en": "canton of Bern",
+      "object_en": "French"
+    },
+    {
+      "subject": "Luhanszki Népköztársaság",
+      "object": "ukrán",
+      "object_candidates": "macedón, horvát, pandzsábi, német, maráthi, bengáli, thai, holland, mongol, ukrán",
+      "index": 358,
+      "subject_en": "Luhansk People's Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "La Chaux-de-Fonds",
+      "object": "francia",
+      "object_candidates": "walesi, koreai, urdu, maráthi, bolgár, román, montenegrói, máltai, azeri, francia",
+      "index": 359,
+      "subject_en": "La Chaux-de-Fonds",
+      "object_en": "French"
+    },
+    {
+      "subject": "Moszkvai Nagyfejedelemség",
+      "object": "orosz",
+      "object_candidates": "ír, Normand nyelv, görög, lett, maráthi, francia, montenegrói, portugál, török, orosz",
+      "index": 360,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Csehszlovákia",
+      "object": "cseh",
+      "object_candidates": "albán, szlovén, kínai, indonéz, montenegrói, holland, görög, ukrán, szicíliai, cseh",
+      "index": 361,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "Szenegál",
+      "object": "francia",
+      "object_candidates": "magyar, tamil, albán, belarusz, montenegrói, koreai, khmer, török, thai, francia",
+      "index": 362,
+      "subject_en": "Senegal",
+      "object_en": "French"
+    },
+    {
+      "subject": "Máltai lovagrend",
+      "object": "latin",
+      "object_candidates": "izlandi, ukrán, hawaii, cseh, román, máltai, finn, bolgár, egyiptomi, latin",
+      "index": 363,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Nunavut",
+      "object": "angol",
+      "object_candidates": "horvát, hindi, litván, katalán, belarusz, szomáli, walesi, bengáli, pandzsábi, angol",
+      "index": 364,
+      "subject_en": "Nunavut",
+      "object_en": "English"
+    },
+    {
+      "subject": "Genf",
+      "object": "francia",
+      "object_candidates": "albán, scots, orosz, máltai, észt, telugu, svéd, thai, magyar, francia",
+      "index": 365,
+      "subject_en": "Geneva",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "bolgár",
+      "object_candidates": "hindi, pandzsábi, örmény, német, cseh, ukrán, montenegrói, spanyol, urdu, bolgár",
+      "index": 366,
+      "subject_en": "European Union",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "Bern kanton",
+      "object": "német",
+      "object_candidates": "azeri, cseh, spanyol, Velencei nyelv, Normand nyelv, szlovák, macedón, bengáli, walesi, német",
+      "index": 367,
+      "subject_en": "canton of Bern",
+      "object_en": "German"
+    },
+    {
+      "subject": "Egészségügyi Világszervezet",
+      "object": "angol",
+      "object_candidates": "vietnámi, belarusz, örmény, lengyel, bolgár, portugál, szlovák, héber, egyiptomi, angol",
+      "index": 368,
+      "subject_en": "World Health Organization",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sint Eustatius",
+      "object": "holland",
+      "object_candidates": "latin, montenegrói, macedón, albán, telugu, scots, francia, szicíliai, máltai, holland",
+      "index": 369,
+      "subject_en": "Sint Eustatius",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Bosznia-Hercegovina",
+      "object": "szerb",
+      "object_candidates": "thai, holland, szomáli, görög, lett, szicíliai, scots, maráthi, szlovák, szerb",
+      "index": 370,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Bolzano autonóm megye",
+      "object": "olasz",
+      "object_candidates": "román, mongol, szlovén, héber, urdu, görög, belarusz, walesi, szomáli, olasz",
+      "index": 371,
+      "subject_en": "South Tyrol",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Finnország",
+      "object": "svéd",
+      "object_candidates": "egyiptomi, Velencei nyelv, török, ukrán, koreai, örmény, maráthi, latin, cseh, svéd",
+      "index": 372,
+      "subject_en": "Finland",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Pápua Új-Guinea",
+      "object": "angol",
+      "object_candidates": "khmer, Velencei nyelv, bolgár, maláj, észt, örmény, szerb, urdu, horvát, angol",
+      "index": 373,
+      "subject_en": "Papua New Guinea",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ticino kanton",
+      "object": "olasz",
+      "object_candidates": "albán, ukrán, görög, hawaii, bengáli, szomáli, magyar, török, kínai, olasz",
+      "index": 374,
+      "subject_en": "Ticino",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Málta",
+      "object": "máltai",
+      "object_candidates": "telugu, német, urdu, lett, macedón, tamil, ír, scots, holland, máltai",
+      "index": 375,
+      "subject_en": "Malta",
+      "object_en": "Maltese"
+    },
+    {
+      "subject": "Ruanda",
+      "object": "francia",
+      "object_candidates": "izlandi, lett, indonéz, horvát, japán, máltai, portugál, maráthi, magyar, francia",
+      "index": 376,
+      "subject_en": "Rwanda",
+      "object_en": "French"
+    },
+    {
+      "subject": "Nepál",
+      "object": "nepáli",
+      "object_candidates": "portugál, belarusz, maláj, szlovák, német, tamil, lett, bolgár, hawaii, nepáli",
+      "index": 377,
+      "subject_en": "Nepal",
+      "object_en": "Nepali"
+    },
+    {
+      "subject": "Velencei Köztársaság",
+      "object": "olasz",
+      "object_candidates": "örmény, egyiptomi, azeri, román, mongol, spanyol, német, lett, tamil, olasz",
+      "index": 378,
+      "subject_en": "Republic of Venice",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Csád",
+      "object": "francia",
+      "object_candidates": "horvát, észt, walesi, finn, thai, bengáli, örmény, hawaii, montenegrói, francia",
+      "index": 379,
+      "subject_en": "Chad",
+      "object_en": "French"
+    },
+    {
+      "subject": "Jereván",
+      "object": "örmény",
+      "object_candidates": "magyar, perzsa, svéd, lett, német, belarusz, bengáli, breton, Velencei nyelv, örmény",
+      "index": 380,
+      "subject_en": "Yerevan",
+      "object_en": "Armenian"
+    },
+    {
+      "subject": "Bolívia",
+      "object": "spanyol",
+      "object_candidates": "katalán, orosz, litván, észt, máltai, latin, maláj, ír, magyar, spanyol",
+      "index": 381,
+      "subject_en": "Bolivia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Benelux államok",
+      "object": "holland",
+      "object_candidates": "thai, tamil, portugál, héber, magyar, észt, izlandi, montenegrói, ukrán, holland",
+      "index": 382,
+      "subject_en": "Benelux",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Malajzia",
+      "object": "angol",
+      "object_candidates": "lengyel, belarusz, maráthi, orosz, szlovén, francia, észt, azeri, cseh, angol",
+      "index": 383,
+      "subject_en": "Malaysia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Orosz Birodalom",
+      "object": "finn",
+      "object_candidates": "szerb, montenegrói, máltai, telugu, scots, urdu, nepáli, lett, svéd, finn",
+      "index": 384,
+      "subject_en": "Russian Empire",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Dél-Szudán",
+      "object": "angol",
+      "object_candidates": "svéd, horvát, montenegrói, breton, albán, latin, litván, lengyel, szlovák, angol",
+      "index": 385,
+      "subject_en": "South Sudan",
+      "object_en": "English"
+    },
+    {
+      "subject": "Egyenlítői-Guinea",
+      "object": "francia",
+      "object_candidates": "egyiptomi, pandzsábi, Velencei nyelv, horvát, máltai, német, kínai, svéd, szlovén, francia",
+      "index": 386,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "magyar",
+      "object_candidates": "pandzsábi, hindi, svéd, ír, Normand nyelv, macedón, indonéz, héber, litván, magyar",
+      "index": 387,
+      "subject_en": "European Union",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Kirgizisztán",
+      "object": "orosz",
+      "object_candidates": "perzsa, egyiptomi, magyar, maráthi, maláj, montenegrói, malajálam, baszk, olasz, orosz",
+      "index": 388,
+      "subject_en": "Kyrgyzstan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Basel-Stadt kanton",
+      "object": "német",
+      "object_candidates": "spanyol, szerb, koreai, olasz, holland, egyiptomi, walesi, izlandi, japán, német",
+      "index": 389,
+      "subject_en": "Basel-Stadt",
+      "object_en": "German"
+    },
+    {
+      "subject": "Japán",
+      "object": "japán",
+      "object_candidates": "vietnámi, bolgár, dán, malajálam, grúz, török, orosz, portugál, indonéz, japán",
+      "index": 390,
+      "subject_en": "Japan",
+      "object_en": "Japanese"
+    },
+    {
+      "subject": "Belorusz Szovjet Szocialista Köztársaság",
+      "object": "orosz",
+      "object_candidates": "telugu, thai, lengyel, örmény, magyar, máltai, scots, izlandi, héber, orosz",
+      "index": 391,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Irán",
+      "object": "perzsa",
+      "object_candidates": "mongol, szerb, khmer, német, indonéz, észt, walesi, görög, ír, perzsa",
+      "index": 392,
+      "subject_en": "Iran",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Tampere",
+      "object": "finn",
+      "object_candidates": "máltai, angol, örmény, bengáli, litván, spanyol, szomáli, francia, Velencei nyelv, finn",
+      "index": 393,
+      "subject_en": "Tampere",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Oulu",
+      "object": "finn",
+      "object_candidates": "perzsa, örmény, hindi, holland, török, német, ír, szicíliai, spanyol, finn",
+      "index": 394,
+      "subject_en": "Oulu",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Harmadik Birodalom",
+      "object": "német",
+      "object_candidates": "szerb, scots, portugál, román, kínai, breton, belarusz, szlovák, bengáli, német",
+      "index": 395,
+      "subject_en": "Nazi Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "Espoo",
+      "object": "svéd",
+      "object_candidates": "urdu, bolgár, bengáli, görög, máltai, montenegrói, indonéz, olasz, thai, svéd",
+      "index": 396,
+      "subject_en": "Espoo",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Aragónia",
+      "object": "spanyol",
+      "object_candidates": "azeri, breton, baszk, maráthi, japán, indonéz, Velencei nyelv, litván, katalán, spanyol",
+      "index": 397,
+      "subject_en": "Aragon",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Panama",
+      "object": "spanyol",
+      "object_candidates": "hawaii, finn, örmény, Normand nyelv, urdu, azeri, dán, thai, kínai, spanyol",
+      "index": 398,
+      "subject_en": "Panama",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Québec",
+      "object": "francia",
+      "object_candidates": "holland, khmer, katalán, scots, belarusz, angol, tamil, pandzsábi, Normand nyelv, francia",
+      "index": 399,
+      "subject_en": "Quebec",
+      "object_en": "French"
+    },
+    {
+      "subject": "Római Birodalom",
+      "object": "latin",
+      "object_candidates": "lengyel, portugál, izlandi, grúz, angol, baszk, katalán, vietnámi, litván, latin",
+      "index": 400,
+      "subject_en": "Roman Empire",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Egyenlítői-Guinea",
+      "object": "spanyol",
+      "object_candidates": "bengáli, finn, szlovén, telugu, thai, lengyel, olasz, tamil, japán, spanyol",
+      "index": 401,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Új-Fundland és Labrador",
+      "object": "angol",
+      "object_candidates": "bengáli, nepáli, horvát, portugál, pandzsábi, szlovák, litván, szlovén, bolgár, angol",
+      "index": 402,
+      "subject_en": "Newfoundland and Labrador",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jamali Nyenyecföld",
+      "object": "orosz",
+      "object_candidates": "izlandi, hawaii, lett, pandzsábi, thai, latin, urdu, mongol, telugu, orosz",
+      "index": 403,
+      "subject_en": "Yamalo-Nenets Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "észt",
+      "object_candidates": "orosz, malajálam, thai, maráthi, montenegrói, szicíliai, máltai, hindi, mongol, észt",
+      "index": 404,
+      "subject_en": "European Union",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Bolzano autonóm megye",
+      "object": "német",
+      "object_candidates": "szicíliai, spanyol, pandzsábi, portugál, hindi, bengáli, nepáli, Velencei nyelv, telugu, német",
+      "index": 405,
+      "subject_en": "South Tyrol",
+      "object_en": "German"
+    },
+    {
+      "subject": "Velencei Köztársaság",
+      "object": "latin",
+      "object_candidates": "perzsa, telugu, észt, belarusz, lett, cseh, román, thai, maráthi, latin",
+      "index": 406,
+      "subject_en": "Republic of Venice",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Benelux államok",
+      "object": "francia",
+      "object_candidates": "örmény, nepáli, azeri, albán, szlovén, hindi, finn, kínai, holland, francia",
+      "index": 407,
+      "subject_en": "Benelux",
+      "object_en": "French"
+    },
+    {
+      "subject": "Menorca",
+      "object": "katalán",
+      "object_candidates": "vietnámi, horvát, scots, szomáli, észt, koreai, malajálam, bolgár, nepáli, katalán",
+      "index": 408,
+      "subject_en": "Menorca",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Egyesült Nemzetek Szervezete",
+      "object": "spanyol",
+      "object_candidates": "indonéz, Velencei nyelv, dán, szlovén, urdu, horvát, grúz, scots, nepáli, spanyol",
+      "index": 409,
+      "subject_en": "United Nations",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Saba",
+      "object": "holland",
+      "object_candidates": "baszk, Normand nyelv, svéd, latin, bengáli, mongol, szerb, szlovén, szomáli, holland",
+      "index": 410,
+      "subject_en": "Saba",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Luhanszki terület",
+      "object": "ukrán",
+      "object_candidates": "bengáli, hindi, khmer, görög, orosz, német, grúz, maráthi, bolgár, ukrán",
+      "index": 411,
+      "subject_en": "Luhansk Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Vaasa",
+      "object": "svéd",
+      "object_candidates": "szlovák, portugál, walesi, katalán, nepáli, telugu, urdu, grúz, Normand nyelv, svéd",
+      "index": 412,
+      "subject_en": "Vaasa",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Jakutföld",
+      "object": "orosz",
+      "object_candidates": "vietnámi, lett, görög, észt, ír, egyiptomi, azeri, pandzsábi, mongol, orosz",
+      "index": 413,
+      "subject_en": "Sakha Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Delhi",
+      "object": "hindi",
+      "object_candidates": "izlandi, finn, portugál, belarusz, angol, latin, örmény, montenegrói, breton, hindi",
+      "index": 414,
+      "subject_en": "Delhi",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "lengyel",
+      "object_candidates": "macedón, malajálam, breton, ír, örmény, észt, maláj, szlovák, pandzsábi, lengyel",
+      "index": 415,
+      "subject_en": "European Union",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Amerikai Virgin-szigetek",
+      "object": "angol",
+      "object_candidates": "holland, izlandi, khmer, lett, román, mongol, macedón, máltai, belarusz, angol",
+      "index": 416,
+      "subject_en": "United States Virgin Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Dominikai Köztársaság",
+      "object": "spanyol",
+      "object_candidates": "urdu, lett, nepáli, malajálam, latin, perzsa, török, baszk, albán, spanyol",
+      "index": 417,
+      "subject_en": "Dominican Republic",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Wales",
+      "object": "walesi",
+      "object_candidates": "baszk, német, lengyel, hindi, latin, bengáli, telugu, egyiptomi, koreai, walesi",
+      "index": 418,
+      "subject_en": "Wales",
+      "object_en": "Welsh"
+    },
+    {
+      "subject": "Lakhnau",
+      "object": "urdu",
+      "object_candidates": "török, szicíliai, lengyel, észt, görög, belarusz, cseh, svéd, szomáli, urdu",
+      "index": 419,
+      "subject_en": "Lucknow",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Doneck",
+      "object": "ukrán",
+      "object_candidates": "baszk, spanyol, pandzsábi, olasz, hindi, lett, malajálam, latin, grúz, ukrán",
+      "index": 420,
+      "subject_en": "Donetsk",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Flandria",
+      "object": "holland",
+      "object_candidates": "finn, örmény, ukrán, horvát, tamil, japán, thai, portugál, maláj, holland",
+      "index": 421,
+      "subject_en": "Flanders",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Zsidó autonóm terület",
+      "object": "orosz",
+      "object_candidates": "egyiptomi, scots, holland, örmény, portugál, perzsa, indonéz, észt, baszk, orosz",
+      "index": 422,
+      "subject_en": "Jewish Autonomous Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Brit Columbia",
+      "object": "angol",
+      "object_candidates": "macedón, thai, finn, spanyol, maráthi, cseh, kínai, román, örmény, angol",
+      "index": 423,
+      "subject_en": "British Columbia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Belgium",
+      "object": "holland",
+      "object_candidates": "hawaii, maláj, svéd, francia, kínai, izlandi, litván, scots, malajálam, holland",
+      "index": 424,
+      "subject_en": "Belgium",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Kongresszusi Lengyelország",
+      "object": "lengyel",
+      "object_candidates": "nepáli, macedón, azeri, portugál, japán, francia, finn, egyiptomi, grúz, lengyel",
+      "index": 425,
+      "subject_en": "Congress Poland",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Quetzaltenango",
+      "object": "spanyol",
+      "object_candidates": "tamil, ír, máltai, perzsa, pandzsábi, indonéz, bengáli, egyiptomi, örmény, spanyol",
+      "index": 426,
+      "subject_en": "Quetzaltenango",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Bizánci Birodalom",
+      "object": "latin",
+      "object_candidates": "magyar, kínai, bolgár, cseh, nepáli, szlovák, német, walesi, spanyol, latin",
+      "index": 427,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Írország",
+      "object": "angol",
+      "object_candidates": "Normand nyelv, litván, holland, maráthi, román, bengáli, baszk, mongol, izlandi, angol",
+      "index": 428,
+      "subject_en": "Ireland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hollandia",
+      "object": "holland",
+      "object_candidates": "hawaii, grúz, ír, tamil, breton, lengyel, lett, orosz, walesi, holland",
+      "index": 429,
+      "subject_en": "Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Kansas",
+      "object": "angol",
+      "object_candidates": "magyar, ír, urdu, egyiptomi, albán, baszk, finn, lengyel, perzsa, angol",
+      "index": 430,
+      "subject_en": "Kansas",
+      "object_en": "English"
+    },
+    {
+      "subject": "Vantaa",
+      "object": "finn",
+      "object_candidates": "szlovák, scots, bengáli, urdu, walesi, macedón, Velencei nyelv, spanyol, cseh, finn",
+      "index": 431,
+      "subject_en": "Vantaa",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Dél-afrikai Köztársaság",
+      "object": "angol",
+      "object_candidates": "szlovén, svéd, bengáli, walesi, breton, perzsa, thai, nepáli, vietnámi, angol",
+      "index": 432,
+      "subject_en": "South Africa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Locarno",
+      "object": "olasz",
+      "object_candidates": "angol, mongol, latin, román, dán, perzsa, pandzsábi, finn, macedón, olasz",
+      "index": 433,
+      "subject_en": "Locarno",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Vanuatu",
+      "object": "angol",
+      "object_candidates": "macedón, koreai, hindi, finn, horvát, maráthi, litván, szomáli, grúz, angol",
+      "index": 434,
+      "subject_en": "Vanuatu",
+      "object_en": "English"
+    },
+    {
+      "subject": "Montenegró",
+      "object": "horvát",
+      "object_candidates": "pandzsábi, montenegrói, maráthi, belarusz, indonéz, baszk, grúz, Normand nyelv, vietnámi, horvát",
+      "index": 435,
+      "subject_en": "Montenegro",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Suriname",
+      "object": "holland",
+      "object_candidates": "bengáli, walesi, latin, észt, finn, Velencei nyelv, francia, vietnámi, olasz, holland",
+      "index": 436,
+      "subject_en": "Suriname",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Dzshárkhand",
+      "object": "hindi",
+      "object_candidates": "szlovák, khmer, japán, horvát, svéd, malajálam, dán, macedón, máltai, hindi",
+      "index": 437,
+      "subject_en": "Jharkhand",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Lugano",
+      "object": "olasz",
+      "object_candidates": "bengáli, dán, grúz, holland, angol, telugu, magyar, walesi, lett, olasz",
+      "index": 438,
+      "subject_en": "Lugano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Udmurtföld",
+      "object": "orosz",
+      "object_candidates": "koreai, maláj, hindi, tamil, thai, spanyol, szerb, montenegrói, holland, orosz",
+      "index": 439,
+      "subject_en": "Udmurt Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Colorado",
+      "object": "angol",
+      "object_candidates": "mongol, cseh, francia, bolgár, pandzsábi, lengyel, szlovák, egyiptomi, román, angol",
+      "index": 440,
+      "subject_en": "Colorado",
+      "object_en": "English"
+    },
+    {
+      "subject": "Vaasa",
+      "object": "finn",
+      "object_candidates": "spanyol, olasz, portugál, angol, francia, lengyel, maláj, Normand nyelv, perzsa, finn",
+      "index": 441,
+      "subject_en": "Vaasa",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Kabard- és Balkárföld",
+      "object": "orosz",
+      "object_candidates": "bolgár, koreai, urdu, nepáli, thai, maláj, olasz, tamil, holland, orosz",
+      "index": 442,
+      "subject_en": "Kabardino-Balkaria",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Tonga",
+      "object": "angol",
+      "object_candidates": "magyar, német, ukrán, izlandi, macedón, dán, bengáli, olasz, finn, angol",
+      "index": 443,
+      "subject_en": "Tonga",
+      "object_en": "English"
+    },
+    {
+      "subject": "Anglia",
+      "object": "angol",
+      "object_candidates": "horvát, szlovák, török, malajálam, dán, kínai, lengyel, bolgár, koreai, angol",
+      "index": 444,
+      "subject_en": "England",
+      "object_en": "English"
+    },
+    {
+      "subject": "Egyenlítői-Guinea",
+      "object": "portugál",
+      "object_candidates": "koreai, malajálam, szomáli, szlovák, horvát, nepáli, latin, egyiptomi, khmer, portugál",
+      "index": 445,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Dnyeszter Menti Köztársaság",
+      "object": "orosz",
+      "object_candidates": "szlovák, magyar, szicíliai, koreai, maláj, macedón, khmer, görög, malajálam, orosz",
+      "index": 446,
+      "subject_en": "Transnistria",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Belorusz Szovjet Szocialista Köztársaság",
+      "object": "belarusz",
+      "object_candidates": "bengáli, francia, telugu, angol, koreai, maráthi, albán, horvát, görög, belarusz",
+      "index": 447,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Belarusian"
+    },
+    {
+      "subject": "Kjusztendil megye",
+      "object": "bolgár",
+      "object_candidates": "héber, azeri, máltai, grúz, vietnámi, katalán, macedón, holland, Normand nyelv, bolgár",
+      "index": 448,
+      "subject_en": "Kyustendil Province",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "Írország",
+      "object": "ír",
+      "object_candidates": "német, román, olasz, szlovén, hindi, maláj, thai, görög, telugu, ír",
+      "index": 449,
+      "subject_en": "Ireland",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "Bissau-Guinea",
+      "object": "portugál",
+      "object_candidates": "maláj, német, izlandi, japán, észt, görög, scots, mongol, szerb, portugál",
+      "index": 450,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Bosznia-Hercegovina",
+      "object": "horvát",
+      "object_candidates": "román, holland, angol, koreai, Normand nyelv, breton, mongol, ír, kínai, horvát",
+      "index": 451,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Indiana",
+      "object": "angol",
+      "object_candidates": "kínai, walesi, svéd, orosz, azeri, bolgár, francia, Normand nyelv, szomáli, angol",
+      "index": 452,
+      "subject_en": "Indiana",
+      "object_en": "English"
+    },
+    {
+      "subject": "Észak-Korea",
+      "object": "koreai",
+      "object_candidates": "orosz, magyar, szerb, bengáli, ír, román, Velencei nyelv, nepáli, baszk, koreai",
+      "index": 453,
+      "subject_en": "North Korea",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Donyecki Népköztársaság",
+      "object": "ukrán",
+      "object_candidates": "malajálam, tamil, svéd, észt, horvát, szicíliai, breton, holland, albán, ukrán",
+      "index": 454,
+      "subject_en": "Donetsk People's Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Szingapúr",
+      "object": "tamil",
+      "object_candidates": "máltai, román, malajálam, bolgár, vietnámi, azeri, Velencei nyelv, japán, angol, tamil",
+      "index": 455,
+      "subject_en": "Singapore",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "Oroszország",
+      "object": "ukrán",
+      "object_candidates": "szlovén, egyiptomi, spanyol, maráthi, izlandi, horvát, holland, héber, Normand nyelv, ukrán",
+      "index": 456,
+      "subject_en": "Russia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Szicíliai Királyság",
+      "object": "szicíliai",
+      "object_candidates": "szlovák, hindi, maláj, lengyel, vietnámi, macedón, horvát, francia, magyar, szicíliai",
+      "index": 457,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Sicilian"
+    },
+    {
+      "subject": "Kollektív Biztonsági Szerződés Szervezete",
+      "object": "orosz",
+      "object_candidates": "örmény, thai, szicíliai, latin, hawaii, baszk, kínai, walesi, vietnámi, orosz",
+      "index": 458,
+      "subject_en": "Collective Security Treaty Organisation",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Kuopio",
+      "object": "finn",
+      "object_candidates": "szlovák, perzsa, izlandi, szerb, horvát, maráthi, vietnámi, török, héber, finn",
+      "index": 459,
+      "subject_en": "Kuopio",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Argentína",
+      "object": "spanyol",
+      "object_candidates": "portugál, kínai, grúz, Normand nyelv, hawaii, egyiptomi, szerb, ukrán, telugu, spanyol",
+      "index": 460,
+      "subject_en": "Argentina",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Mikkeli",
+      "object": "finn",
+      "object_candidates": "azeri, macedón, egyiptomi, montenegrói, Normand nyelv, maráthi, tamil, belarusz, urdu, finn",
+      "index": 461,
+      "subject_en": "Mikkeli",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Normandiai hercegség",
+      "object": "Normand nyelv",
+      "object_candidates": "szomáli, egyiptomi, macedón, belarusz, szlovák, malajálam, észt, dán, mongol, Normand nyelv",
+      "index": 462,
+      "subject_en": "Duchy of Normandy",
+      "object_en": "Norman"
+    },
+    {
+      "subject": "Holland Antillák",
+      "object": "angol",
+      "object_candidates": "török, ukrán, hawaii, szerb, máltai, bengáli, szicíliai, breton, mongol, angol",
+      "index": 463,
+      "subject_en": "Netherlands Antilles",
+      "object_en": "English"
+    },
+    {
+      "subject": "Espoo",
+      "object": "finn",
+      "object_candidates": "izlandi, katalán, koreai, magyar, szlovák, spanyol, szlovén, perzsa, Velencei nyelv, finn",
+      "index": 464,
+      "subject_en": "Espoo",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Aarau",
+      "object": "német",
+      "object_candidates": "örmény, török, grúz, montenegrói, spanyol, koreai, macedón, belarusz, scots, német",
+      "index": 465,
+      "subject_en": "Aarau",
+      "object_en": "German"
+    },
+    {
+      "subject": "Jalta",
+      "object": "orosz",
+      "object_candidates": "ukrán, macedón, bolgár, telugu, német, finn, angol, svéd, lett, orosz",
+      "index": 466,
+      "subject_en": "Yalta",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Új-Skócia",
+      "object": "angol",
+      "object_candidates": "lett, macedón, lengyel, finn, perzsa, ukrán, khmer, máltai, svéd, angol",
+      "index": 467,
+      "subject_en": "Nova Scotia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Gazdasági Együttműködési és Fejlesztési Szervezet",
+      "object": "angol",
+      "object_candidates": "cseh, albán, Normand nyelv, thai, olasz, lengyel, bengáli, nepáli, azeri, angol",
+      "index": 468,
+      "subject_en": "Organisation for Economic Cooperation and Development",
+      "object_en": "English"
+    },
+    {
+      "subject": "Hawaii",
+      "object": "angol",
+      "object_candidates": "japán, cseh, lett, scots, walesi, urdu, azeri, pandzsábi, thai, angol",
+      "index": 469,
+      "subject_en": "Hawaii",
+      "object_en": "English"
+    },
+    {
+      "subject": "Campione d’Italia",
+      "object": "olasz",
+      "object_candidates": "svéd, bengáli, bolgár, spanyol, ír, urdu, görög, holland, maráthi, olasz",
+      "index": 470,
+      "subject_en": "Campione d'Italia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Vantaa",
+      "object": "svéd",
+      "object_candidates": "cseh, koreai, tamil, szlovák, máltai, belarusz, indonéz, kínai, macedón, svéd",
+      "index": 471,
+      "subject_en": "Vantaa",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Orosz Cárság",
+      "object": "orosz",
+      "object_candidates": "breton, mongol, litván, bengáli, holland, szlovák, albán, tamil, cseh, orosz",
+      "index": 472,
+      "subject_en": "Tsardom of Russia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Carouge (GE)",
+      "object": "francia",
+      "object_candidates": "pandzsábi, Velencei nyelv, portugál, bengáli, khmer, belarusz, katalán, svéd, német, francia",
+      "index": 473,
+      "subject_en": "Carouge",
+      "object_en": "French"
+    },
+    {
+      "subject": "Egészségügyi Világszervezet",
+      "object": "orosz",
+      "object_candidates": "francia, lengyel, urdu, grúz, litván, baszk, török, finn, japán, orosz",
+      "index": 474,
+      "subject_en": "World Health Organization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Palau",
+      "object": "angol",
+      "object_candidates": "spanyol, albán, horvát, észt, vietnámi, macedón, thai, katalán, telugu, angol",
+      "index": 475,
+      "subject_en": "Palau",
+      "object_en": "English"
+    },
+    {
+      "subject": "Cork megye",
+      "object": "ír",
+      "object_candidates": "breton, nepáli, mongol, cseh, portugál, tamil, japán, maláj, bolgár, ír",
+      "index": 476,
+      "subject_en": "County Cork",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "Azerbajdzsáni Szovjet Szocialista Köztársaság",
+      "object": "azeri",
+      "object_candidates": "portugál, izlandi, ír, svéd, bengáli, grúz, scots, szicíliai, urdu, azeri",
+      "index": 477,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Rovaniemi",
+      "object": "finn",
+      "object_candidates": "szerb, bolgár, örmény, albán, szicíliai, észt, koreai, lengyel, nepáli, finn",
+      "index": 478,
+      "subject_en": "Rovaniemi",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Niue",
+      "object": "angol",
+      "object_candidates": "olasz, indonéz, magyar, szlovák, kínai, szomáli, lett, vietnámi, tamil, angol",
+      "index": 479,
+      "subject_en": "Niue",
+      "object_en": "English"
+    },
+    {
+      "subject": "Egyiptomi Óbirodalom",
+      "object": "egyiptomi",
+      "object_candidates": "német, örmény, katalán, azeri, telugu, scots, malajálam, ukrán, thai, egyiptomi",
+      "index": 480,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "Elefántcsontpart",
+      "object": "francia",
+      "object_candidates": "walesi, thai, breton, szerb, portugál, azeri, szomáli, orosz, cseh, francia",
+      "index": 481,
+      "subject_en": "Ivory Coast",
+      "object_en": "French"
+    },
+    {
+      "subject": "Honduras",
+      "object": "spanyol",
+      "object_candidates": "lett, maráthi, macedón, albán, román, latin, telugu, vietnámi, walesi, spanyol",
+      "index": 482,
+      "subject_en": "Honduras",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "New Hampshire",
+      "object": "angol",
+      "object_candidates": "bolgár, tamil, örmény, hawaii, cseh, orosz, görög, ír, urdu, angol",
+      "index": 483,
+      "subject_en": "New Hampshire",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kajmán-szigetek",
+      "object": "angol",
+      "object_candidates": "mongol, svéd, pandzsábi, magyar, román, héber, cseh, japán, katalán, angol",
+      "index": 484,
+      "subject_en": "Cayman Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Burundi",
+      "object": "angol",
+      "object_candidates": "olasz, malajálam, portugál, pandzsábi, breton, thai, albán, khmer, francia, angol",
+      "index": 485,
+      "subject_en": "Burundi",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kamerun",
+      "object": "angol",
+      "object_candidates": "szlovák, szicíliai, török, vietnámi, görög, grúz, Normand nyelv, bolgár, német, angol",
+      "index": 486,
+      "subject_en": "Cameroon",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alaszka",
+      "object": "angol",
+      "object_candidates": "koreai, spanyol, indonéz, mongol, görög, bengáli, egyiptomi, breton, hindi, angol",
+      "index": 487,
+      "subject_en": "Alaska",
+      "object_en": "English"
+    },
+    {
+      "subject": "Vatikán",
+      "object": "olasz",
+      "object_candidates": "dán, görög, észt, bolgár, koreai, thai, egyiptomi, spanyol, szicíliai, olasz",
+      "index": 488,
+      "subject_en": "Vatican City",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Doneck",
+      "object": "orosz",
+      "object_candidates": "máltai, hawaii, azeri, angol, thai, román, koreai, maráthi, breton, orosz",
+      "index": 489,
+      "subject_en": "Donetsk",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Mozambik",
+      "object": "portugál",
+      "object_candidates": "belarusz, dán, lett, horvát, grúz, máltai, malajálam, breton, holland, portugál",
+      "index": 490,
+      "subject_en": "Mozambique",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Kelet-Timor",
+      "object": "portugál",
+      "object_candidates": "bolgár, telugu, lett, román, tamil, görög, maláj, katalán, máltai, portugál",
+      "index": 491,
+      "subject_en": "East Timor",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Akrotíri és Dekélia",
+      "object": "angol",
+      "object_candidates": "macedón, svéd, litván, hawaii, dán, magyar, mongol, maráthi, német, angol",
+      "index": 492,
+      "subject_en": "Akrotiri and Dhekelia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Brit antarktiszi terület",
+      "object": "angol",
+      "object_candidates": "grúz, vietnámi, ír, portugál, malajálam, máltai, maláj, montenegrói, belarusz, angol",
+      "index": 493,
+      "subject_en": "British Antarctic Territory",
+      "object_en": "English"
+    },
+    {
+      "subject": "Orosz Birodalom",
+      "object": "orosz",
+      "object_candidates": "holland, montenegrói, kínai, pandzsábi, angol, román, spanyol, finn, hawaii, orosz",
+      "index": 494,
+      "subject_en": "Russian Empire",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Nigéria",
+      "object": "angol",
+      "object_candidates": "román, lett, spanyol, perzsa, albán, kínai, finn, katalán, litván, angol",
+      "index": 495,
+      "subject_en": "Nigeria",
+      "object_en": "English"
+    },
+    {
+      "subject": "Holland Királyság",
+      "object": "holland",
+      "object_candidates": "szlovén, hindi, francia, maláj, Normand nyelv, latin, hawaii, azeri, kínai, holland",
+      "index": 496,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Abházia",
+      "object": "orosz",
+      "object_candidates": "maláj, észt, kínai, indonéz, hindi, ukrán, dán, telugu, bengáli, orosz",
+      "index": 497,
+      "subject_en": "Abkhazia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Mallorca",
+      "object": "spanyol",
+      "object_candidates": "ír, walesi, török, Velencei nyelv, szomáli, scots, Normand nyelv, ukrán, egyiptomi, spanyol",
+      "index": 498,
+      "subject_en": "Majorca",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Portugália",
+      "object": "portugál",
+      "object_candidates": "görög, vietnámi, lett, szomáli, nepáli, szicíliai, albán, horvát, khmer, portugál",
+      "index": 499,
+      "subject_en": "Portugal",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Manitoba",
+      "object": "angol",
+      "object_candidates": "vietnámi, Normand nyelv, lengyel, baszk, ukrán, maláj, macedón, breton, szlovák, angol",
+      "index": 500,
+      "subject_en": "Manitoba",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Űrügynökség",
+      "object": "francia",
+      "object_candidates": "bolgár, baszk, észt, thai, portugál, koreai, perzsa, urdu, bengáli, francia",
+      "index": 501,
+      "subject_en": "European Space Agency",
+      "object_en": "French"
+    },
+    {
+      "subject": "Malabo",
+      "object": "spanyol",
+      "object_candidates": "lengyel, máltai, japán, német, ukrán, angol, bolgár, szomáli, portugál, spanyol",
+      "index": 502,
+      "subject_en": "Malabo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "spanyol",
+      "object_candidates": "izlandi, montenegrói, német, kínai, egyiptomi, walesi, tamil, holland, finn, spanyol",
+      "index": 503,
+      "subject_en": "European Union",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Mariföld",
+      "object": "orosz",
+      "object_candidates": "lengyel, francia, telugu, horvát, khmer, koreai, portugál, maráthi, breton, orosz",
+      "index": 504,
+      "subject_en": "Mari El Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Helsinki",
+      "object": "finn",
+      "object_candidates": "egyiptomi, szerb, japán, szlovén, angol, örmény, latin, montenegrói, horvát, finn",
+      "index": 505,
+      "subject_en": "Helsinki",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Katalónia",
+      "object": "spanyol",
+      "object_candidates": "katalán, belarusz, tamil, litván, török, magyar, szicíliai, máltai, portugál, spanyol",
+      "index": 506,
+      "subject_en": "Catalonia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Orosz Birodalom",
+      "object": "lengyel",
+      "object_candidates": "thai, macedón, örmény, vietnámi, maláj, montenegrói, finn, azeri, olasz, lengyel",
+      "index": 507,
+      "subject_en": "Russian Empire",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Cshattíszgarh",
+      "object": "hindi",
+      "object_candidates": "török, indonéz, perzsa, khmer, lengyel, latin, bengáli, német, urdu, hindi",
+      "index": 508,
+      "subject_en": "Chhattisgarh",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Krími Autonóm Köztársaság",
+      "object": "ukrán",
+      "object_candidates": "latin, spanyol, szlovén, szerb, ír, olasz, tamil, észt, német, ukrán",
+      "index": 509,
+      "subject_en": "Autonomous Republic of Crimea",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Seychelle-szigetek",
+      "object": "angol",
+      "object_candidates": "macedón, khmer, baszk, örmény, kínai, latin, szerb, maláj, nepáli, angol",
+      "index": 510,
+      "subject_en": "Seychelles",
+      "object_en": "English"
+    },
+    {
+      "subject": "Navarra",
+      "object": "baszk",
+      "object_candidates": "malajálam, lett, német, cseh, angol, bolgár, ír, hawaii, telugu, baszk",
+      "index": 511,
+      "subject_en": "Navarre",
+      "object_en": "Basque"
+    },
+    {
+      "subject": "Spanyol Birodalom",
+      "object": "spanyol",
+      "object_candidates": "angol, walesi, olasz, nepáli, szerb, latin, szicíliai, koreai, szomáli, spanyol",
+      "index": 512,
+      "subject_en": "Spanish Empire",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Saskatchewan",
+      "object": "angol",
+      "object_candidates": "török, ukrán, lett, urdu, bengáli, Velencei nyelv, grúz, egyiptomi, albán, angol",
+      "index": 513,
+      "subject_en": "Saskatchewan",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ukrán Szovjet Szocialista Köztársaság",
+      "object": "ukrán",
+      "object_candidates": "latin, koreai, japán, héber, szerb, baszk, német, román, khmer, ukrán",
+      "index": 514,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Asztúria",
+      "object": "spanyol",
+      "object_candidates": "indonéz, mongol, maráthi, albán, baszk, szicíliai, bolgár, grúz, német, spanyol",
+      "index": 515,
+      "subject_en": "Asturias",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Vietnám",
+      "object": "vietnámi",
+      "object_candidates": "latin, finn, azeri, belarusz, magyar, breton, izlandi, litván, örmény, vietnámi",
+      "index": 516,
+      "subject_en": "Vietnam",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "Koszovó",
+      "object": "albán",
+      "object_candidates": "héber, maráthi, malajálam, Velencei nyelv, japán, ukrán, lett, magyar, pandzsábi, albán",
+      "index": 517,
+      "subject_en": "Kosovo",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "Kereskedelmi Világszervezet",
+      "object": "francia",
+      "object_candidates": "héber, angol, azeri, latin, thai, maráthi, olasz, kínai, nepáli, francia",
+      "index": 518,
+      "subject_en": "World Trade Organization",
+      "object_en": "French"
+    },
+    {
+      "subject": "Lappeenranta",
+      "object": "finn",
+      "object_candidates": "bengáli, francia, macedón, montenegrói, szlovén, baszk, szerb, mongol, hindi, finn",
+      "index": 519,
+      "subject_en": "Lappeenranta",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Ecuador",
+      "object": "spanyol",
+      "object_candidates": "olasz, máltai, pandzsábi, svéd, ír, orosz, szomáli, japán, maláj, spanyol",
+      "index": 520,
+      "subject_en": "Ecuador",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Luhanszki terület",
+      "object": "orosz",
+      "object_candidates": "telugu, perzsa, egyiptomi, azeri, baszk, tamil, román, urdu, maláj, orosz",
+      "index": 521,
+      "subject_en": "Luhansk Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Haidarábád",
+      "object": "telugu",
+      "object_candidates": "spanyol, malajálam, khmer, hawaii, ukrán, Normand nyelv, perzsa, izlandi, hindi, telugu",
+      "index": 522,
+      "subject_en": "Hyderabad",
+      "object_en": "Telugu"
+    },
+    {
+      "subject": "Egyesült Nemzetek Szervezete",
+      "object": "angol",
+      "object_candidates": "ukrán, montenegrói, mongol, baszk, vietnámi, khmer, malajálam, görög, latin, angol",
+      "index": 523,
+      "subject_en": "United Nations",
+      "object_en": "English"
+    },
+    {
+      "subject": "Jersey",
+      "object": "angol",
+      "object_candidates": "macedón, telugu, izlandi, latin, magyar, máltai, görög, koreai, belarusz, angol",
+      "index": 524,
+      "subject_en": "Jersey",
+      "object_en": "English"
+    },
+    {
+      "subject": "Csing-dinasztia",
+      "object": "mongol",
+      "object_candidates": "angol, orosz, litván, koreai, latin, szicíliai, albán, telugu, maráthi, mongol",
+      "index": 525,
+      "subject_en": "Qing dynasty",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "Guyana",
+      "object": "angol",
+      "object_candidates": "latin, bengáli, magyar, pandzsábi, szlovák, belarusz, tamil, malajálam, héber, angol",
+      "index": 526,
+      "subject_en": "Guyana",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ausztria",
+      "object": "német",
+      "object_candidates": "telugu, indonéz, francia, belarusz, maláj, török, svéd, olasz, görög, német",
+      "index": 527,
+      "subject_en": "Austria",
+      "object_en": "German"
+    },
+    {
+      "subject": "Szingapúr",
+      "object": "maláj",
+      "object_candidates": "svéd, telugu, szlovák, breton, örmény, katalán, perzsa, khmer, izlandi, maláj",
+      "index": 528,
+      "subject_en": "Singapore",
+      "object_en": "Malay"
+    },
+    {
+      "subject": "Törökország",
+      "object": "török",
+      "object_candidates": "izlandi, ír, belarusz, azeri, szicíliai, japán, szerb, orosz, litván, török",
+      "index": 529,
+      "subject_en": "Turkey",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Chile",
+      "object": "spanyol",
+      "object_candidates": "litván, japán, mongol, lett, malajálam, Velencei nyelv, tamil, thai, hindi, spanyol",
+      "index": 530,
+      "subject_en": "Chile",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Sint Maarten",
+      "object": "holland",
+      "object_candidates": "angol, finn, Normand nyelv, szomáli, koreai, héber, maráthi, breton, ukrán, holland",
+      "index": 531,
+      "subject_en": "Sint Maarten (Dutch part)",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Nemzetközi Szabványügyi Szervezet",
+      "object": "francia",
+      "object_candidates": "szomáli, török, bolgár, belarusz, magyar, német, tamil, román, maráthi, francia",
+      "index": 532,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "angol",
+      "object_candidates": "telugu, khmer, egyiptomi, litván, görög, hawaii, vietnámi, észt, francia, angol",
+      "index": 533,
+      "subject_en": "European Union",
+      "object_en": "English"
+    },
+    {
+      "subject": "Brüsszel fővárosi régió",
+      "object": "francia",
+      "object_candidates": "spanyol, japán, szlovén, héber, holland, indonéz, magyar, vietnámi, litván, francia",
+      "index": 534,
+      "subject_en": "Brussels region",
+      "object_en": "French"
+    },
+    {
+      "subject": "Wallis kanton",
+      "object": "francia",
+      "object_candidates": "szomáli, ír, görög, Normand nyelv, máltai, Velencei nyelv, horvát, szerb, román, francia",
+      "index": 535,
+      "subject_en": "canton of Valais",
+      "object_en": "French"
+    },
+    {
+      "subject": "Delhi",
+      "object": "urdu",
+      "object_candidates": "francia, bolgár, grúz, ukrán, vietnámi, orosz, breton, katalán, örmény, urdu",
+      "index": 536,
+      "subject_en": "Delhi",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Dél-Dakota",
+      "object": "angol",
+      "object_candidates": "máltai, görög, macedón, perzsa, olasz, szomáli, észt, magyar, spanyol, angol",
+      "index": 537,
+      "subject_en": "South Dakota",
+      "object_en": "English"
+    },
+    {
+      "subject": "Alabama",
+      "object": "angol",
+      "object_candidates": "khmer, örmény, dán, grúz, japán, latin, héber, breton, baszk, angol",
+      "index": 538,
+      "subject_en": "Alabama",
+      "object_en": "English"
+    },
+    {
+      "subject": "Miss Universe",
+      "object": "angol",
+      "object_candidates": "magyar, orosz, örmény, holland, svéd, Normand nyelv, telugu, maláj, thai, angol",
+      "index": 539,
+      "subject_en": "Miss Universe",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kalifornia",
+      "object": "angol",
+      "object_candidates": "horvát, vietnámi, cseh, Normand nyelv, latin, francia, lengyel, Velencei nyelv, magyar, angol",
+      "index": 540,
+      "subject_en": "California",
+      "object_en": "English"
+    },
+    {
+      "subject": "Svájc",
+      "object": "olasz",
+      "object_candidates": "Velencei nyelv, héber, görög, latin, hawaii, magyar, svéd, szlovén, perzsa, olasz",
+      "index": 541,
+      "subject_en": "Switzerland",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Tuva",
+      "object": "orosz",
+      "object_candidates": "görög, szlovén, örmény, szlovák, szicíliai, pandzsábi, Normand nyelv, egyiptomi, olasz, orosz",
+      "index": 542,
+      "subject_en": "Tuva Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Oroszország",
+      "object": "orosz",
+      "object_candidates": "azeri, breton, magyar, vietnámi, szomáli, német, mongol, walesi, portugál, orosz",
+      "index": 543,
+      "subject_en": "Russia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Yukon",
+      "object": "angol",
+      "object_candidates": "azeri, egyiptomi, örmény, szerb, lett, finn, svéd, malajálam, lengyel, angol",
+      "index": 544,
+      "subject_en": "Yukon",
+      "object_en": "English"
+    },
+    {
+      "subject": "Burkina Faso",
+      "object": "francia",
+      "object_candidates": "khmer, koreai, perzsa, bolgár, román, malajálam, orosz, urdu, kínai, francia",
+      "index": 545,
+      "subject_en": "Burkina Faso",
+      "object_en": "French"
+    },
+    {
+      "subject": "Jersey",
+      "object": "francia",
+      "object_candidates": "portugál, montenegrói, bolgár, japán, szicíliai, ukrán, Normand nyelv, görög, malajálam, francia",
+      "index": 546,
+      "subject_en": "Jersey",
+      "object_en": "French"
+    },
+    {
+      "subject": "Oroszország",
+      "object": "azeri",
+      "object_candidates": "horvát, Velencei nyelv, orosz, bolgár, breton, portugál, észt, hawaii, szlovén, azeri",
+      "index": 547,
+      "subject_en": "Russia",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Nunavut",
+      "object": "francia",
+      "object_candidates": "német, maláj, khmer, telugu, hawaii, görög, észt, izlandi, japán, francia",
+      "index": 548,
+      "subject_en": "Nunavut",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kotka",
+      "object": "finn",
+      "object_candidates": "macedón, francia, észt, khmer, litván, grúz, lett, ír, thai, finn",
+      "index": 549,
+      "subject_en": "Kotka",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Olaszország",
+      "object": "olasz",
+      "object_candidates": "lett, görög, azeri, urdu, japán, orosz, örmény, indonéz, szomáli, olasz",
+      "index": 550,
+      "subject_en": "Italy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Csing-dinasztia",
+      "object": "kínai",
+      "object_candidates": "észt, lengyel, walesi, latin, olasz, máltai, tamil, izlandi, horvát, kínai",
+      "index": 551,
+      "subject_en": "Qing dynasty",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Észak-Karolina",
+      "object": "angol",
+      "object_candidates": "thai, maráthi, indonéz, montenegrói, finn, bengáli, Velencei nyelv, német, telugu, angol",
+      "index": 552,
+      "subject_en": "North Carolina",
+      "object_en": "English"
+    },
+    {
+      "subject": "Fülöp-szigetek",
+      "object": "angol",
+      "object_candidates": "tamil, szomáli, perzsa, nepáli, szicíliai, héber, hindi, khmer, albán, angol",
+      "index": 553,
+      "subject_en": "Philippines",
+      "object_en": "English"
+    },
+    {
+      "subject": "Svédország",
+      "object": "finn",
+      "object_candidates": "Velencei nyelv, montenegrói, perzsa, koreai, portugál, scots, szlovák, német, örmény, finn",
+      "index": 554,
+      "subject_en": "Sweden",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Idaho",
+      "object": "angol",
+      "object_candidates": "szomáli, khmer, maláj, cseh, örmény, török, lengyel, koreai, holland, angol",
+      "index": 555,
+      "subject_en": "Idaho",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mahárástra",
+      "object": "maráthi",
+      "object_candidates": "máltai, tamil, holland, török, román, orosz, Velencei nyelv, lengyel, pandzsábi, maráthi",
+      "index": 556,
+      "subject_en": "Maharashtra",
+      "object_en": "Marathi"
+    },
+    {
+      "subject": "Burjátföld",
+      "object": "orosz",
+      "object_candidates": "latin, malajálam, thai, Normand nyelv, maláj, urdu, khmer, török, albán, orosz",
+      "index": 557,
+      "subject_en": "Republic of Buryatia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Niger",
+      "object": "francia",
+      "object_candidates": "héber, svéd, máltai, grúz, finn, horvát, portugál, holland, thai, francia",
+      "index": 558,
+      "subject_en": "Niger",
+      "object_en": "French"
+    },
+    {
+      "subject": "Solna község",
+      "object": "svéd",
+      "object_candidates": "héber, grúz, tamil, finn, ír, japán, szerb, lett, nepáli, svéd",
+      "index": 559,
+      "subject_en": "Solna Municipality",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Lakhnau",
+      "object": "angol",
+      "object_candidates": "ukrán, kínai, azeri, malajálam, lett, maláj, latin, maráthi, magyar, angol",
+      "index": 560,
+      "subject_en": "Lucknow",
+      "object_en": "English"
+    },
+    {
+      "subject": "Oroszországi Szovjet Szövetségi Szocialista Köztársaság",
+      "object": "orosz",
+      "object_candidates": "görög, japán, máltai, telugu, perzsa, bolgár, maláj, angol, lengyel, orosz",
+      "index": 561,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Palesztin Mandátum",
+      "object": "héber",
+      "object_candidates": "koreai, lengyel, vietnámi, orosz, hindi, francia, török, nepáli, dán, héber",
+      "index": 562,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "Délkelet-ázsiai Nemzetek Szövetsége",
+      "object": "indonéz",
+      "object_candidates": "héber, urdu, lengyel, pandzsábi, belarusz, máltai, török, magyar, francia, indonéz",
+      "index": 563,
+      "subject_en": "ASEAN",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Szerbia és Montenegró",
+      "object": "szerb",
+      "object_candidates": "finn, szlovén, magyar, svéd, indonéz, thai, szicíliai, portugál, örmény, szerb",
+      "index": 564,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Nemzetközi Szabványügyi Szervezet",
+      "object": "angol",
+      "object_candidates": "ukrán, bolgár, héber, finn, thai, szerb, hindi, khmer, görög, angol",
+      "index": 565,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "English"
+    },
+    {
+      "subject": "Horvátország",
+      "object": "horvát",
+      "object_candidates": "finn, japán, breton, macedón, szicíliai, azeri, magyar, hawaii, indonéz, horvát",
+      "index": 566,
+      "subject_en": "Croatia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Meshed",
+      "object": "perzsa",
+      "object_candidates": "maráthi, mongol, vietnámi, szerb, magyar, szomáli, albán, belarusz, katalán, perzsa",
+      "index": 567,
+      "subject_en": "Mashhad",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Amerikai Szamoa",
+      "object": "angol",
+      "object_candidates": "bolgár, tamil, telugu, portugál, urdu, szlovén, cseh, görög, macedón, angol",
+      "index": 568,
+      "subject_en": "American Samoa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Csehország",
+      "object": "cseh",
+      "object_candidates": "latin, francia, angol, breton, magyar, pandzsábi, scots, hindi, török, cseh",
+      "index": 569,
+      "subject_en": "Czech Republic",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "Saint Lucia",
+      "object": "angol",
+      "object_candidates": "Normand nyelv, koreai, bengáli, maláj, malajálam, mongol, máltai, Velencei nyelv, holland, angol",
+      "index": 570,
+      "subject_en": "Saint Lucia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Észak-amerikai Szabadkereskedelmi Egyezmény",
+      "object": "spanyol",
+      "object_candidates": "francia, szicíliai, olasz, azeri, lett, szlovén, montenegrói, japán, urdu, spanyol",
+      "index": 571,
+      "subject_en": "North American Free Trade Agreement",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Liechtenstein",
+      "object": "német",
+      "object_candidates": "kínai, perzsa, örmény, vietnámi, grúz, svéd, scots, hindi, román, német",
+      "index": 572,
+      "subject_en": "Liechtenstein",
+      "object_en": "German"
+    },
+    {
+      "subject": "Uganda",
+      "object": "angol",
+      "object_candidates": "finn, héber, görög, magyar, albán, francia, tamil, szerb, hindi, angol",
+      "index": 573,
+      "subject_en": "Uganda",
+      "object_en": "English"
+    },
+    {
+      "subject": "Adigeföld",
+      "object": "orosz",
+      "object_candidates": "vietnámi, török, izlandi, indonéz, örmény, magyar, mongol, román, katalán, orosz",
+      "index": 574,
+      "subject_en": "Republic of Adygea",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Csuvasföld",
+      "object": "orosz",
+      "object_candidates": "holland, horvát, koreai, észt, vietnámi, litván, albán, finn, bolgár, orosz",
+      "index": 575,
+      "subject_en": "Chuvash Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Seychelle-szigetek",
+      "object": "francia",
+      "object_candidates": "szlovák, khmer, mongol, walesi, szerb, nepáli, magyar, máltai, svéd, francia",
+      "index": 576,
+      "subject_en": "Seychelles",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "cseh",
+      "object_candidates": "baszk, macedón, héber, német, tamil, török, észt, nepáli, szomáli, cseh",
+      "index": 577,
+      "subject_en": "European Union",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "Eritrea",
+      "object": "angol",
+      "object_candidates": "azeri, belarusz, román, dán, görög, bengáli, Velencei nyelv, thai, malajálam, angol",
+      "index": 578,
+      "subject_en": "Eritrea",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mauritius",
+      "object": "francia",
+      "object_candidates": "azeri, cseh, mongol, finn, egyiptomi, szlovén, izlandi, Normand nyelv, koreai, francia",
+      "index": 579,
+      "subject_en": "Mauritius",
+      "object_en": "French"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "litván",
+      "object_candidates": "khmer, Velencei nyelv, perzsa, breton, katalán, szerb, maráthi, finn, spanyol, litván",
+      "index": 580,
+      "subject_en": "European Union",
+      "object_en": "Lithuanian"
+    },
+    {
+      "subject": "Észak-Oszétia",
+      "object": "orosz",
+      "object_candidates": "szlovák, maláj, izlandi, mongol, magyar, koreai, tamil, perzsa, dán, orosz",
+      "index": 581,
+      "subject_en": "Republic of North Ossetia-Alania",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Franciaország",
+      "object": "francia",
+      "object_candidates": "szicíliai, izlandi, lett, olasz, dán, macedón, magyar, horvát, orosz, francia",
+      "index": 582,
+      "subject_en": "France",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kerala",
+      "object": "malajálam",
+      "object_candidates": "szerb, hindi, lett, maláj, koreai, scots, vietnámi, szicíliai, japán, malajálam",
+      "index": 583,
+      "subject_en": "Kerala",
+      "object_en": "Malayalam"
+    },
+    {
+      "subject": "Kamerun",
+      "object": "francia",
+      "object_candidates": "finn, mongol, héber, spanyol, angol, scots, bolgár, lengyel, thai, francia",
+      "index": 584,
+      "subject_en": "Cameroon",
+      "object_en": "French"
+    },
+    {
+      "subject": "Québec",
+      "object": "francia",
+      "object_candidates": "azeri, magyar, olasz, német, mongol, portugál, görög, szlovák, breton, francia",
+      "index": 585,
+      "subject_en": "Quebec City",
+      "object_en": "French"
+    },
+    {
+      "subject": "Valencia",
+      "object": "spanyol",
+      "object_candidates": "orosz, ír, urdu, szomáli, lett, latin, nepáli, hindi, horvát, spanyol",
+      "index": 586,
+      "subject_en": "Community of Valencia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Thaiföld",
+      "object": "thai",
+      "object_candidates": "holland, cseh, bolgár, azeri, orosz, lett, walesi, mongol, svéd, thai",
+      "index": 587,
+      "subject_en": "Thailand",
+      "object_en": "Thai"
+    },
+    {
+      "subject": "Európai Biztonsági és Együttműködési Szervezet",
+      "object": "olasz",
+      "object_candidates": "belarusz, izlandi, ír, máltai, montenegrói, lengyel, török, spanyol, latin, olasz",
+      "index": 588,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Kongói Demokratikus Köztársaság",
+      "object": "francia",
+      "object_candidates": "szlovén, finn, malajálam, indonéz, török, vietnámi, szomáli, lengyel, hindi, francia",
+      "index": 589,
+      "subject_en": "Democratic Republic of the Congo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Magyarország",
+      "object": "magyar",
+      "object_candidates": "szicíliai, észt, szomáli, pandzsábi, olasz, finn, ír, macedón, Velencei nyelv, magyar",
+      "index": 590,
+      "subject_en": "Hungary",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "Donyecki Népköztársaság",
+      "object": "orosz",
+      "object_candidates": "vietnámi, koreai, magyar, indonéz, szomáli, francia, máltai, katalán, román, orosz",
+      "index": 591,
+      "subject_en": "Donetsk People's Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Vanuatu",
+      "object": "francia",
+      "object_candidates": "maráthi, telugu, indonéz, dán, baszk, macedón, görög, román, spanyol, francia",
+      "index": 592,
+      "subject_en": "Vanuatu",
+      "object_en": "French"
+    },
+    {
+      "subject": "Észtország",
+      "object": "észt",
+      "object_candidates": "magyar, macedón, ír, görög, német, baszk, pandzsábi, finn, grúz, észt",
+      "index": 593,
+      "subject_en": "Estonia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "Kentucky",
+      "object": "angol",
+      "object_candidates": "macedón, scots, török, telugu, héber, horvát, montenegrói, ukrán, Velencei nyelv, angol",
+      "index": 594,
+      "subject_en": "Kentucky",
+      "object_en": "English"
+    },
+    {
+      "subject": "Lakhnau",
+      "object": "hindi",
+      "object_candidates": "magyar, scots, svéd, koreai, szlovén, maráthi, török, szlovák, urdu, hindi",
+      "index": 595,
+      "subject_en": "Lucknow",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Bali",
+      "object": "indonéz",
+      "object_candidates": "finn, walesi, szomáli, holland, román, albán, nepáli, baszk, latin, indonéz",
+      "index": 596,
+      "subject_en": "Bali",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Észak-Dakota",
+      "object": "angol",
+      "object_candidates": "cseh, görög, grúz, maráthi, svéd, finn, dán, német, macedón, angol",
+      "index": 597,
+      "subject_en": "North Dakota",
+      "object_en": "English"
+    },
+    {
+      "subject": "Spanyolország",
+      "object": "baszk",
+      "object_candidates": "horvát, szicíliai, ukrán, tamil, örmény, hindi, bengáli, szlovák, izlandi, baszk",
+      "index": 598,
+      "subject_en": "Spain",
+      "object_en": "Basque"
+    },
+    {
+      "subject": "Málta",
+      "object": "angol",
+      "object_candidates": "dán, kínai, maláj, litván, olasz, perzsa, vietnámi, román, örmény, angol",
+      "index": 599,
+      "subject_en": "Malta",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kalmükföld",
+      "object": "orosz",
+      "object_candidates": "maráthi, ukrán, katalán, spanyol, vietnámi, koreai, pandzsábi, indonéz, olasz, orosz",
+      "index": 600,
+      "subject_en": "Republic of Kalmykia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Fribourg kanton",
+      "object": "francia",
+      "object_candidates": "latin, Velencei nyelv, belarusz, holland, olasz, ír, szerb, khmer, finn, francia",
+      "index": 601,
+      "subject_en": "Canton of Fribourg",
+      "object_en": "French"
+    },
+    {
+      "subject": "Északnyugati területek",
+      "object": "angol",
+      "object_candidates": "izlandi, svéd, koreai, szicíliai, horvát, hawaii, finn, belarusz, azeri, angol",
+      "index": 602,
+      "subject_en": "Northwest Territories",
+      "object_en": "English"
+    },
+    {
+      "subject": "Új-Brunswick",
+      "object": "angol",
+      "object_candidates": "örmény, albán, Velencei nyelv, görög, máltai, litván, francia, azeri, japán, angol",
+      "index": 603,
+      "subject_en": "New Brunswick",
+      "object_en": "English"
+    },
+    {
+      "subject": "Wales",
+      "object": "angol",
+      "object_candidates": "albán, szerb, ukrán, görög, khmer, orosz, máltai, horvát, walesi, angol",
+      "index": 604,
+      "subject_en": "Wales",
+      "object_en": "English"
+    },
+    {
+      "subject": "Comore-szigetek",
+      "object": "francia",
+      "object_candidates": "hindi, montenegrói, scots, belarusz, Velencei nyelv, maláj, bolgár, kínai, szlovén, francia",
+      "index": 605,
+      "subject_en": "Comoros",
+      "object_en": "French"
+    },
+    {
+      "subject": "Szicíliai Királyság",
+      "object": "görög",
+      "object_candidates": "maráthi, maláj, mongol, örmény, macedón, lengyel, dán, belarusz, svéd, görög",
+      "index": 606,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Egészségügyi Világszervezet",
+      "object": "francia",
+      "object_candidates": "perzsa, ukrán, Normand nyelv, holland, nepáli, albán, Velencei nyelv, montenegrói, urdu, francia",
+      "index": 607,
+      "subject_en": "World Health Organization",
+      "object_en": "French"
+    },
+    {
+      "subject": "Fribourg kanton",
+      "object": "német",
+      "object_candidates": "khmer, héber, katalán, máltai, svéd, bolgár, albán, magyar, török, német",
+      "index": 608,
+      "subject_en": "Canton of Fribourg",
+      "object_en": "German"
+    },
+    {
+      "subject": "Nemzetközi Polgári Repülési Szervezet",
+      "object": "orosz",
+      "object_candidates": "mongol, angol, német, nepáli, Velencei nyelv, ukrán, szerb, Normand nyelv, thai, orosz",
+      "index": 609,
+      "subject_en": "International Civil Aviation Organization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Egyesült Nemzetek Szervezete",
+      "object": "francia",
+      "object_candidates": "héber, egyiptomi, urdu, malajálam, szerb, tamil, azeri, szlovén, ukrán, francia",
+      "index": 610,
+      "subject_en": "United Nations",
+      "object_en": "French"
+    },
+    {
+      "subject": "Római Birodalom",
+      "object": "görög",
+      "object_candidates": "katalán, ukrán, szlovák, macedón, román, angol, hindi, albán, khmer, görög",
+      "index": 611,
+      "subject_en": "Roman Empire",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "Indaur",
+      "object": "hindi",
+      "object_candidates": "görög, bengáli, szlovák, maláj, khmer, indonéz, belarusz, azeri, thai, hindi",
+      "index": 612,
+      "subject_en": "Indore",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Gibraltár",
+      "object": "angol",
+      "object_candidates": "hindi, khmer, Normand nyelv, perzsa, héber, svéd, maráthi, Velencei nyelv, baszk, angol",
+      "index": 613,
+      "subject_en": "Gibraltar",
+      "object_en": "English"
+    },
+    {
+      "subject": "Belorusz Szovjet Szocialista Köztársaság",
+      "object": "lengyel",
+      "object_candidates": "scots, észt, lett, dán, máltai, indonéz, szicíliai, montenegrói, angol, lengyel",
+      "index": 614,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "Spanyolország",
+      "object": "spanyol",
+      "object_candidates": "szomáli, örmény, horvát, portugál, tamil, lett, máltai, ír, svéd, spanyol",
+      "index": 615,
+      "subject_en": "Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Tamilnádu",
+      "object": "tamil",
+      "object_candidates": "magyar, francia, szerb, perzsa, dán, macedón, észt, albán, belarusz, tamil",
+      "index": 616,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "Altaji határterület",
+      "object": "orosz",
+      "object_candidates": "francia, macedón, ukrán, román, görög, lett, örmény, belarusz, telugu, orosz",
+      "index": 617,
+      "subject_en": "Altai Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Luxemburg",
+      "object": "francia",
+      "object_candidates": "katalán, máltai, egyiptomi, héber, portugál, szomáli, Normand nyelv, bengáli, román, francia",
+      "index": 618,
+      "subject_en": "Luxembourg",
+      "object_en": "French"
+    },
+    {
+      "subject": "Aceh",
+      "object": "indonéz",
+      "object_candidates": "montenegrói, egyiptomi, pandzsábi, spanyol, azeri, scots, lett, Velencei nyelv, horvát, indonéz",
+      "index": 619,
+      "subject_en": "Aceh",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "El Salvador",
+      "object": "spanyol",
+      "object_candidates": "görög, holland, héber, török, egyiptomi, malajálam, lett, örmény, tamil, spanyol",
+      "index": 620,
+      "subject_en": "El Salvador",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "francia",
+      "object_candidates": "indonéz, spanyol, litván, portugál, angol, örmény, svéd, maláj, tamil, francia",
+      "index": 621,
+      "subject_en": "European Union",
+      "object_en": "French"
+    },
+    {
+      "subject": "Egyesült Királyság",
+      "object": "walesi",
+      "object_candidates": "khmer, lengyel, máltai, örmény, román, török, albán, német, scots, walesi",
+      "index": 622,
+      "subject_en": "United Kingdom",
+      "object_en": "Welsh"
+    },
+    {
+      "subject": "Dánia",
+      "object": "dán",
+      "object_candidates": "bolgár, perzsa, montenegrói, maláj, japán, thai, cseh, svéd, koreai, dán",
+      "index": 623,
+      "subject_en": "Denmark",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Nemzetközi Szabványügyi Szervezet",
+      "object": "orosz",
+      "object_candidates": "észt, szicíliai, Velencei nyelv, macedón, ukrán, tamil, olasz, horvát, belarusz, orosz",
+      "index": 624,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Kanada",
+      "object": "francia",
+      "object_candidates": "perzsa, tamil, szerb, nepáli, lett, breton, bolgár, izlandi, grúz, francia",
+      "index": 625,
+      "subject_en": "Canada",
+      "object_en": "French"
+    },
+    {
+      "subject": "Cork megye",
+      "object": "angol",
+      "object_candidates": "macedón, német, urdu, khmer, belarusz, orosz, japán, észt, szicíliai, angol",
+      "index": 626,
+      "subject_en": "County Cork",
+      "object_en": "English"
+    },
+    {
+      "subject": "San Marino",
+      "object": "olasz",
+      "object_candidates": "macedón, örmény, francia, grúz, maláj, azeri, baszk, hawaii, vietnámi, olasz",
+      "index": 627,
+      "subject_en": "San Marino",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Pakisztán",
+      "object": "angol",
+      "object_candidates": "lengyel, francia, maráthi, vietnámi, német, japán, kínai, spanyol, ír, angol",
+      "index": 628,
+      "subject_en": "Pakistan",
+      "object_en": "English"
+    },
+    {
+      "subject": "Azerbajdzsáni Demokratikus Köztársaság",
+      "object": "azeri",
+      "object_candidates": "malajálam, Normand nyelv, urdu, bolgár, nepáli, román, koreai, pandzsábi, svéd, azeri",
+      "index": 629,
+      "subject_en": "Azerbaijan Democratic Republic",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "portugál",
+      "object_candidates": "örmény, breton, montenegrói, görög, walesi, héber, vietnámi, lengyel, indonéz, portugál",
+      "index": 630,
+      "subject_en": "European Union",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Guernsey Bailiffség",
+      "object": "angol",
+      "object_candidates": "breton, horvát, héber, szicíliai, mongol, maráthi, lengyel, litván, szerb, angol",
+      "index": 631,
+      "subject_en": "Guernsey",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Biztonsági és Együttműködési Szervezet",
+      "object": "orosz",
+      "object_candidates": "Normand nyelv, perzsa, lett, montenegrói, belarusz, bolgár, portugál, macedón, német, orosz",
+      "index": 632,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Velencei Köztársaság",
+      "object": "Velencei nyelv",
+      "object_candidates": "finn, latin, észt, hawaii, svéd, scots, holland, szlovén, német, Velencei nyelv",
+      "index": 633,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venetian"
+    },
+    {
+      "subject": "Dominikai Közösség",
+      "object": "angol",
+      "object_candidates": "bengáli, észt, thai, görög, nepáli, montenegrói, dán, mongol, héber, angol",
+      "index": 634,
+      "subject_en": "Dominica",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nemzetközi Atlétikai Szövetség",
+      "object": "angol",
+      "object_candidates": "albán, koreai, hindi, szerb, spanyol, szomáli, japán, ír, cseh, angol",
+      "index": 635,
+      "subject_en": "World Athletics",
+      "object_en": "English"
+    },
+    {
+      "subject": "Nemzetközi Atomenergia-ügynökség",
+      "object": "orosz",
+      "object_candidates": "malajálam, francia, vietnámi, spanyol, grúz, breton, szlovák, lengyel, szicíliai, orosz",
+      "index": 636,
+      "subject_en": "International Atomic Energy Agency",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Guatemala",
+      "object": "spanyol",
+      "object_candidates": "szlovák, egyiptomi, indonéz, magyar, héber, malajálam, német, mongol, grúz, spanyol",
+      "index": 637,
+      "subject_en": "Guatemala",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Fehéroroszország",
+      "object": "orosz",
+      "object_candidates": "montenegrói, máltai, román, észt, bolgár, francia, grúz, egyiptomi, török, orosz",
+      "index": 638,
+      "subject_en": "Belarus",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Dél-Karolina",
+      "object": "angol",
+      "object_candidates": "montenegrói, cseh, koreai, szicíliai, spanyol, katalán, telugu, breton, horvát, angol",
+      "index": 639,
+      "subject_en": "South Carolina",
+      "object_en": "English"
+    },
+    {
+      "subject": "Saint Vincent és a Grenadine-szigetek",
+      "object": "angol",
+      "object_candidates": "lett, francia, japán, lengyel, dán, román, indonéz, koreai, breton, angol",
+      "index": 640,
+      "subject_en": "Saint Vincent and the Grenadines",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mauritius",
+      "object": "angol",
+      "object_candidates": "svéd, grúz, walesi, perzsa, török, holland, kínai, tamil, lengyel, angol",
+      "index": 641,
+      "subject_en": "Mauritius",
+      "object_en": "English"
+    },
+    {
+      "subject": "Timuridák",
+      "object": "perzsa",
+      "object_candidates": "pandzsábi, héber, cseh, holland, lengyel, bolgár, francia, malajálam, örmény, perzsa",
+      "index": 642,
+      "subject_en": "Timurid Empire",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "Nicaragua",
+      "object": "spanyol",
+      "object_candidates": "breton, katalán, malajálam, montenegrói, szlovén, francia, horvát, dán, baszk, spanyol",
+      "index": 643,
+      "subject_en": "Nicaragua",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Szerbia",
+      "object": "szerb",
+      "object_candidates": "szomáli, angol, magyar, máltai, lett, finn, telugu, egyiptomi, hindi, szerb",
+      "index": 644,
+      "subject_en": "Serbia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Poroszország",
+      "object": "német",
+      "object_candidates": "angol, vietnámi, spanyol, Normand nyelv, olasz, észt, izlandi, szlovák, azeri, német",
+      "index": 645,
+      "subject_en": "Prussia",
+      "object_en": "German"
+    },
+    {
+      "subject": "Feröer",
+      "object": "dán",
+      "object_candidates": "koreai, perzsa, katalán, orosz, Velencei nyelv, maráthi, görög, nepáli, vietnámi, dán",
+      "index": 646,
+      "subject_en": "Faroe Islands",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Izland",
+      "object": "izlandi",
+      "object_candidates": "maláj, szlovák, holland, szicíliai, egyiptomi, mongol, héber, görög, észt, izlandi",
+      "index": 647,
+      "subject_en": "Iceland",
+      "object_en": "Icelandic"
+    },
+    {
+      "subject": "Montenegró",
+      "object": "montenegrói",
+      "object_candidates": "szomáli, albán, német, breton, grúz, maráthi, izlandi, lengyel, khmer, montenegrói",
+      "index": 648,
+      "subject_en": "Montenegro",
+      "object_en": "Montenegrin"
+    },
+    {
+      "subject": "Stockholm község",
+      "object": "svéd",
+      "object_candidates": "telugu, perzsa, bengáli, holland, héber, katalán, thai, latin, albán, svéd",
+      "index": 649,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Vichy-kormány",
+      "object": "francia",
+      "object_candidates": "bolgár, horvát, spanyol, lett, szlovák, belarusz, finn, szerb, szomáli, francia",
+      "index": 650,
+      "subject_en": "Vichy France",
+      "object_en": "French"
+    },
+    {
+      "subject": "Melitopol",
+      "object": "orosz",
+      "object_candidates": "baszk, portugál, szlovák, ír, dán, breton, török, koreai, észt, orosz",
+      "index": 651,
+      "subject_en": "Melitopol",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Luzern kanton",
+      "object": "német",
+      "object_candidates": "szomáli, litván, Normand nyelv, kínai, khmer, telugu, magyar, mongol, olasz, német",
+      "index": 652,
+      "subject_en": "Canton of Lucerne",
+      "object_en": "German"
+    },
+    {
+      "subject": "Hongkong",
+      "object": "angol",
+      "object_candidates": "kínai, katalán, szerb, horvát, maráthi, cseh, breton, olasz, orosz, angol",
+      "index": 653,
+      "subject_en": "Hong Kong",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "román",
+      "object_candidates": "szicíliai, ír, japán, örmény, holland, héber, nepáli, baszk, lengyel, román",
+      "index": 654,
+      "subject_en": "European Union",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "Szuj-dinasztia",
+      "object": "kínai",
+      "object_candidates": "olasz, latin, grúz, holland, angol, észt, finn, breton, héber, kínai",
+      "index": 655,
+      "subject_en": "Sui dynasty",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Haidarábád",
+      "object": "urdu",
+      "object_candidates": "thai, breton, grúz, ír, magyar, héber, szerb, pandzsábi, szicíliai, urdu",
+      "index": 656,
+      "subject_en": "Hyderabad",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "Dél-Oszétia",
+      "object": "orosz",
+      "object_candidates": "finn, bolgár, thai, belarusz, nepáli, izlandi, scots, mongol, szerb, orosz",
+      "index": 657,
+      "subject_en": "South Ossetia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "New Jersey",
+      "object": "angol",
+      "object_candidates": "szerb, bengáli, svéd, montenegrói, koreai, héber, ukrán, perzsa, olasz, angol",
+      "index": 658,
+      "subject_en": "New Jersey",
+      "object_en": "English"
+    },
+    {
+      "subject": "Namíbia",
+      "object": "angol",
+      "object_candidates": "török, indonéz, grúz, dán, litván, finn, telugu, walesi, olasz, angol",
+      "index": 659,
+      "subject_en": "Namibia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Holland Antillák",
+      "object": "holland",
+      "object_candidates": "baszk, khmer, belarusz, orosz, horvát, portugál, ukrán, maráthi, szlovén, holland",
+      "index": 660,
+      "subject_en": "Netherlands Antilles",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "szlovák",
+      "object_candidates": "azeri, lett, scots, Normand nyelv, hawaii, perzsa, bolgár, thai, walesi, szlovák",
+      "index": 661,
+      "subject_en": "European Union",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "Banglades",
+      "object": "bengáli",
+      "object_candidates": "észt, orosz, ukrán, Velencei nyelv, telugu, litván, katalán, macedón, izlandi, bengáli",
+      "index": 662,
+      "subject_en": "Bangladesh",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "Andorra",
+      "object": "katalán",
+      "object_candidates": "grúz, perzsa, örmény, bolgár, szlovén, román, szerb, szomáli, angol, katalán",
+      "index": 663,
+      "subject_en": "Andorra",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Trinidad és Tobago",
+      "object": "angol",
+      "object_candidates": "román, montenegrói, svéd, Normand nyelv, szlovén, szomáli, dán, vietnámi, portugál, angol",
+      "index": 664,
+      "subject_en": "Trinidad and Tobago",
+      "object_en": "English"
+    },
+    {
+      "subject": "Egyesült Királyság",
+      "object": "angol",
+      "object_candidates": "khmer, vietnámi, maláj, szerb, katalán, walesi, máltai, szlovén, Normand nyelv, angol",
+      "index": 665,
+      "subject_en": "United Kingdom",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kamcsatkai határterület",
+      "object": "orosz",
+      "object_candidates": "hawaii, szerb, német, thai, maláj, bolgár, hindi, ír, mongol, orosz",
+      "index": 666,
+      "subject_en": "Kamchatka Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Németország",
+      "object": "német",
+      "object_candidates": "ír, japán, pandzsábi, máltai, szlovén, scots, koreai, bolgár, szomáli, német",
+      "index": 667,
+      "subject_en": "Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "Lausanne",
+      "object": "francia",
+      "object_candidates": "katalán, svéd, egyiptomi, walesi, koreai, örmény, hawaii, japán, breton, francia",
+      "index": 668,
+      "subject_en": "Lausanne",
+      "object_en": "French"
+    },
+    {
+      "subject": "Botswana",
+      "object": "angol",
+      "object_candidates": "hawaii, montenegrói, szlovák, Normand nyelv, grúz, maráthi, kínai, latin, hindi, angol",
+      "index": 669,
+      "subject_en": "Botswana",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sint Maarten",
+      "object": "angol",
+      "object_candidates": "magyar, Velencei nyelv, latin, finn, máltai, német, hawaii, thai, egyiptomi, angol",
+      "index": 670,
+      "subject_en": "Sint Maarten (Dutch part)",
+      "object_en": "English"
+    },
+    {
+      "subject": "Sztavropoli határterület",
+      "object": "orosz",
+      "object_candidates": "portugál, latin, szlovén, egyiptomi, mongol, olasz, cseh, észt, Velencei nyelv, orosz",
+      "index": 671,
+      "subject_en": "Stavropol Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Közép-afrikai Köztársaság",
+      "object": "francia",
+      "object_candidates": "tamil, scots, szicíliai, maláj, kínai, hawaii, malajálam, latin, azeri, francia",
+      "index": 672,
+      "subject_en": "Central African Republic",
+      "object_en": "French"
+    },
+    {
+      "subject": "Gagauzia",
+      "object": "orosz",
+      "object_candidates": "vietnámi, ír, észt, angol, Normand nyelv, héber, olasz, máltai, hindi, orosz",
+      "index": 673,
+      "subject_en": "Gagauzia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Észak-atlanti Szerződés Szervezete",
+      "object": "angol",
+      "object_candidates": "pandzsábi, finn, héber, görög, spanyol, portugál, ukrán, szlovén, khmer, angol",
+      "index": 674,
+      "subject_en": "NATO",
+      "object_en": "English"
+    },
+    {
+      "subject": "Togliatti",
+      "object": "orosz",
+      "object_candidates": "észt, máltai, Velencei nyelv, Normand nyelv, macedón, ukrán, malajálam, spanyol, hindi, orosz",
+      "index": 675,
+      "subject_en": "Tolyatti",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Mercia",
+      "object": "latin",
+      "object_candidates": "bengáli, dán, walesi, macedón, francia, urdu, azeri, japán, észt, latin",
+      "index": 676,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "Utah",
+      "object": "angol",
+      "object_candidates": "olasz, hindi, belarusz, japán, román, kínai, francia, albán, dán, angol",
+      "index": 677,
+      "subject_en": "Utah",
+      "object_en": "English"
+    },
+    {
+      "subject": "Transvaal Köztársaság",
+      "object": "holland",
+      "object_candidates": "bolgár, szlovák, örmény, magyar, francia, svéd, hindi, japán, belarusz, holland",
+      "index": 678,
+      "subject_en": "South African Republic",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Dundee",
+      "object": "scots",
+      "object_candidates": "máltai, szlovén, montenegrói, Normand nyelv, indonéz, bolgár, horvát, görög, spanyol, scots",
+      "index": 679,
+      "subject_en": "Dundee",
+      "object_en": "Scots"
+    },
+    {
+      "subject": "Kouvola",
+      "object": "finn",
+      "object_candidates": "izlandi, kínai, scots, albán, héber, hawaii, német, román, francia, finn",
+      "index": 680,
+      "subject_en": "Kouvola",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Palesztin Mandátum",
+      "object": "angol",
+      "object_candidates": "máltai, finn, perzsa, katalán, walesi, szerb, azeri, lengyel, portugál, angol",
+      "index": 681,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "English"
+    },
+    {
+      "subject": "Krasznodari határterület",
+      "object": "orosz",
+      "object_candidates": "scots, azeri, litván, khmer, maráthi, Normand nyelv, dán, malajálam, japán, orosz",
+      "index": 682,
+      "subject_en": "Krasnodar Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Togo",
+      "object": "francia",
+      "object_candidates": "ír, szicíliai, montenegrói, ukrán, japán, latin, Velencei nyelv, bolgár, holland, francia",
+      "index": 683,
+      "subject_en": "Togo",
+      "object_en": "French"
+    },
+    {
+      "subject": "Basel-Landschaft kanton",
+      "object": "német",
+      "object_candidates": "román, szomáli, walesi, breton, francia, maráthi, scots, magyar, ukrán, német",
+      "index": 684,
+      "subject_en": "Basel-Landschaft",
+      "object_en": "German"
+    },
+    {
+      "subject": "Zambia",
+      "object": "angol",
+      "object_candidates": "ír, tamil, walesi, urdu, egyiptomi, kínai, mongol, koreai, izlandi, angol",
+      "index": 685,
+      "subject_en": "Zambia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Libéria",
+      "object": "angol",
+      "object_candidates": "német, maráthi, szomáli, hindi, szerb, albán, máltai, thai, magyar, angol",
+      "index": 686,
+      "subject_en": "Liberia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Prince Edward-sziget",
+      "object": "angol",
+      "object_candidates": "belarusz, maláj, indonéz, bengáli, ukrán, maráthi, khmer, katalán, telugu, angol",
+      "index": 687,
+      "subject_en": "Prince Edward Island",
+      "object_en": "English"
+    },
+    {
+      "subject": "Koszovó",
+      "object": "szerb",
+      "object_candidates": "breton, macedón, hindi, belarusz, örmény, scots, ukrán, szlovák, latin, szerb",
+      "index": 688,
+      "subject_en": "Kosovo",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "Mikolajivi terület",
+      "object": "ukrán",
+      "object_candidates": "olasz, spanyol, perzsa, hindi, urdu, máltai, Velencei nyelv, észt, dán, ukrán",
+      "index": 689,
+      "subject_en": "Mykolaiv Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Malawi",
+      "object": "angol",
+      "object_candidates": "szlovén, grúz, holland, montenegrói, hindi, belarusz, cseh, szlovák, török, angol",
+      "index": 690,
+      "subject_en": "Malawi",
+      "object_en": "English"
+    },
+    {
+      "subject": "Turku",
+      "object": "finn",
+      "object_candidates": "olasz, héber, maráthi, bolgár, észt, mongol, szomáli, latin, lett, finn",
+      "index": 691,
+      "subject_en": "Turku",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Nemzetközi Olimpiai Bizottság",
+      "object": "francia",
+      "object_candidates": "hawaii, olasz, thai, román, bolgár, khmer, tamil, lett, svéd, francia",
+      "index": 692,
+      "subject_en": "International Olympic Committee",
+      "object_en": "French"
+    },
+    {
+      "subject": "Angola",
+      "object": "portugál",
+      "object_candidates": "latin, scots, lengyel, azeri, cseh, montenegrói, mongol, spanyol, lett, portugál",
+      "index": 693,
+      "subject_en": "Angola",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Turku",
+      "object": "svéd",
+      "object_candidates": "bengáli, máltai, baszk, kínai, latin, telugu, macedón, montenegrói, szlovén, svéd",
+      "index": 694,
+      "subject_en": "Turku",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Dzsamsedpur",
+      "object": "angol",
+      "object_candidates": "holland, pandzsábi, szicíliai, héber, litván, vietnámi, szomáli, török, breton, angol",
+      "index": 695,
+      "subject_en": "Jamshedpur",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bermuda",
+      "object": "angol",
+      "object_candidates": "portugál, pandzsábi, maláj, hawaii, malajálam, khmer, orosz, urdu, cseh, angol",
+      "index": 696,
+      "subject_en": "Bermuda",
+      "object_en": "English"
+    },
+    {
+      "subject": "Formentera",
+      "object": "katalán",
+      "object_candidates": "Normand nyelv, izlandi, portugál, horvát, grúz, hindi, görög, montenegrói, litván, katalán",
+      "index": 697,
+      "subject_en": "Formentera",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Bonaire",
+      "object": "holland",
+      "object_candidates": "orosz, szlovák, litván, dán, észt, scots, perzsa, finn, bengáli, holland",
+      "index": 698,
+      "subject_en": "Bonaire",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Szudán",
+      "object": "angol",
+      "object_candidates": "belarusz, macedón, horvát, bengáli, malajálam, japán, maláj, nepáli, telugu, angol",
+      "index": 699,
+      "subject_en": "Sudan",
+      "object_en": "English"
+    },
+    {
+      "subject": "Szovjetunió",
+      "object": "orosz",
+      "object_candidates": "horvát, Normand nyelv, olasz, katalán, baszk, bolgár, breton, holland, scots, orosz",
+      "index": 700,
+      "subject_en": "Soviet Union",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Saskatchewan",
+      "object": "francia",
+      "object_candidates": "hindi, izlandi, thai, mongol, cseh, török, montenegrói, lengyel, katalán, francia",
+      "index": 701,
+      "subject_en": "Saskatchewan",
+      "object_en": "French"
+    },
+    {
+      "subject": "Aruba",
+      "object": "holland",
+      "object_candidates": "máltai, szicíliai, lett, walesi, telugu, szerb, egyiptomi, szlovén, szomáli, holland",
+      "index": 702,
+      "subject_en": "Aruba",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Montserrat",
+      "object": "angol",
+      "object_candidates": "thai, dán, khmer, lett, szlovák, görög, katalán, szomáli, mongol, angol",
+      "index": 703,
+      "subject_en": "Montserrat",
+      "object_en": "English"
+    },
+    {
+      "subject": "Szomália",
+      "object": "szomáli",
+      "object_candidates": "indonéz, francia, svéd, német, egyiptomi, angol, walesi, görög, nepáli, szomáli",
+      "index": 704,
+      "subject_en": "Somalia",
+      "object_en": "Somali"
+    },
+    {
+      "subject": "Európai Biztonsági és Együttműködési Szervezet",
+      "object": "spanyol",
+      "object_candidates": "montenegrói, katalán, szerb, ír, német, román, belarusz, urdu, baszk, spanyol",
+      "index": 705,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Karacsáj- és Cserkeszföld",
+      "object": "orosz",
+      "object_candidates": "Velencei nyelv, baszk, perzsa, albán, ukrán, máltai, malajálam, horvát, német, orosz",
+      "index": 706,
+      "subject_en": "Karachay-Cherkess Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Helsinki",
+      "object": "svéd",
+      "object_candidates": "izlandi, szlovák, grúz, bengáli, dán, lengyel, telugu, magyar, kínai, svéd",
+      "index": 707,
+      "subject_en": "Helsinki",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Európai Űrügynökség",
+      "object": "angol",
+      "object_candidates": "ukrán, szerb, litván, azeri, scots, héber, német, görög, hawaii, angol",
+      "index": 708,
+      "subject_en": "European Space Agency",
+      "object_en": "English"
+    },
+    {
+      "subject": "Arizona",
+      "object": "angol",
+      "object_candidates": "lengyel, lett, mongol, grúz, litván, ukrán, kínai, szicíliai, perzsa, angol",
+      "index": 709,
+      "subject_en": "Arizona",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kazvin tartomány",
+      "object": "azeri",
+      "object_candidates": "baszk, észt, bengáli, grúz, belarusz, szlovák, nepáli, scots, orosz, azeri",
+      "index": 710,
+      "subject_en": "Qazvin Province",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Mongólia",
+      "object": "mongol",
+      "object_candidates": "Velencei nyelv, egyiptomi, kínai, vietnámi, litván, khmer, svéd, finn, albán, mongol",
+      "index": 711,
+      "subject_en": "Mongolia",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "lett",
+      "object_candidates": "mongol, ír, orosz, maláj, hindi, Normand nyelv, angol, ukrán, vietnámi, lett",
+      "index": 712,
+      "subject_en": "European Union",
+      "object_en": "Latvian"
+    },
+    {
+      "subject": "Sierra Leone",
+      "object": "angol",
+      "object_candidates": "belarusz, baszk, izlandi, örmény, dán, bengáli, hawaii, horvát, koreai, angol",
+      "index": 713,
+      "subject_en": "Sierra Leone",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ibiza",
+      "object": "katalán",
+      "object_candidates": "lett, lengyel, szicíliai, német, thai, angol, Velencei nyelv, kínai, egyiptomi, katalán",
+      "index": 714,
+      "subject_en": "Ibiza",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Paraguay",
+      "object": "spanyol",
+      "object_candidates": "szlovák, pandzsábi, francia, grúz, héber, ír, izlandi, angol, német, spanyol",
+      "index": 715,
+      "subject_en": "Paraguay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Baskíria",
+      "object": "orosz",
+      "object_candidates": "indonéz, pandzsábi, lett, francia, görög, török, észt, tamil, maláj, orosz",
+      "index": 716,
+      "subject_en": "Republic of Bashkortostan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Indonézia",
+      "object": "indonéz",
+      "object_candidates": "breton, szlovén, szlovák, dán, szicíliai, örmény, román, maláj, Velencei nyelv, indonéz",
+      "index": 717,
+      "subject_en": "Indonesia",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Monaco",
+      "object": "francia",
+      "object_candidates": "német, finn, ír, mongol, litván, angol, szicíliai, Velencei nyelv, nepáli, francia",
+      "index": 718,
+      "subject_en": "Monaco",
+      "object_en": "French"
+    },
+    {
+      "subject": "Bajkálontúli határterület",
+      "object": "orosz",
+      "object_candidates": "kínai, latin, telugu, máltai, dán, vietnámi, mongol, maráthi, nepáli, orosz",
+      "index": 719,
+      "subject_en": "Zabaykalsky Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Északi-Mariana-szigetek",
+      "object": "angol",
+      "object_candidates": "észt, khmer, cseh, perzsa, izlandi, szerb, grúz, francia, szicíliai, angol",
+      "index": 720,
+      "subject_en": "Northern Mariana Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Azerbajdzsán",
+      "object": "azeri",
+      "object_candidates": "nepáli, latin, telugu, Normand nyelv, német, pandzsábi, urdu, maláj, Velencei nyelv, azeri",
+      "index": 721,
+      "subject_en": "Azerbaijan",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "Vaud kanton",
+      "object": "francia",
+      "object_candidates": "szlovák, szomáli, finn, szerb, nepáli, lett, örmény, dán, török, francia",
+      "index": 722,
+      "subject_en": "Canton of Vaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "Szingapúr",
+      "object": "angol",
+      "object_candidates": "szerb, hawaii, olasz, litván, nepáli, horvát, spanyol, Normand nyelv, katalán, angol",
+      "index": 723,
+      "subject_en": "Singapore",
+      "object_en": "English"
+    },
+    {
+      "subject": "Gazdasági Együttműködési és Fejlesztési Szervezet",
+      "object": "francia",
+      "object_candidates": "indonéz, walesi, kínai, holland, scots, montenegrói, szlovák, finn, szlovén, francia",
+      "index": 724,
+      "subject_en": "Organisation for Economic Cooperation and Development",
+      "object_en": "French"
+    },
+    {
+      "subject": "Bern",
+      "object": "német",
+      "object_candidates": "latin, ukrán, francia, hindi, indonéz, török, telugu, perzsa, lett, német",
+      "index": 725,
+      "subject_en": "Bern",
+      "object_en": "German"
+    },
+    {
+      "subject": "Csennai",
+      "object": "tamil",
+      "object_candidates": "román, telugu, szicíliai, görög, ukrán, héber, szerb, örmény, szomáli, tamil",
+      "index": 726,
+      "subject_en": "Chennai",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "Fidzsi-szigetek",
+      "object": "angol",
+      "object_candidates": "román, grúz, mongol, montenegrói, izlandi, cseh, orosz, japán, finn, angol",
+      "index": 727,
+      "subject_en": "Fiji",
+      "object_en": "English"
+    },
+    {
+      "subject": "India",
+      "object": "hindi",
+      "object_candidates": "albán, grúz, latin, scots, egyiptomi, macedón, dán, olasz, izlandi, hindi",
+      "index": 728,
+      "subject_en": "India",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Kanada",
+      "object": "angol",
+      "object_candidates": "olasz, thai, egyiptomi, svéd, dán, urdu, máltai, maráthi, román, angol",
+      "index": 729,
+      "subject_en": "Canada",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mongol Népköztársaság",
+      "object": "mongol",
+      "object_candidates": "indonéz, baszk, urdu, breton, kínai, japán, orosz, egyiptomi, maláj, mongol",
+      "index": 730,
+      "subject_en": "Mongolian People's Republic",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "Egyesült Nemzetek Szervezete",
+      "object": "orosz",
+      "object_candidates": "kínai, szerb, katalán, baszk, német, telugu, walesi, grúz, japán, orosz",
+      "index": 731,
+      "subject_en": "United Nations",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Burundi",
+      "object": "francia",
+      "object_candidates": "horvát, szlovén, malajálam, walesi, finn, litván, hawaii, breton, portugál, francia",
+      "index": 732,
+      "subject_en": "Burundi",
+      "object_en": "French"
+    },
+    {
+      "subject": "Thiruvananthapuram",
+      "object": "malajálam",
+      "object_candidates": "francia, grúz, horvát, latin, perzsa, török, angol, nepáli, Velencei nyelv, malajálam",
+      "index": 733,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Malayalam"
+    },
+    {
+      "subject": "Nemzetközi Olimpiai Bizottság",
+      "object": "angol",
+      "object_candidates": "izlandi, olasz, pandzsábi, grúz, hindi, görög, lengyel, telugu, belarusz, angol",
+      "index": 734,
+      "subject_en": "International Olympic Committee",
+      "object_en": "English"
+    },
+    {
+      "subject": "Zaire",
+      "object": "francia",
+      "object_candidates": "azeri, magyar, lett, litván, scots, dán, thai, szomáli, maláj, francia",
+      "index": 735,
+      "subject_en": "Zaire",
+      "object_en": "French"
+    },
+    {
+      "subject": "Észak-Írország",
+      "object": "angol",
+      "object_candidates": "szicíliai, tamil, magyar, lengyel, izlandi, grúz, vietnámi, francia, indonéz, angol",
+      "index": 736,
+      "subject_en": "Northern Ireland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Mali",
+      "object": "francia",
+      "object_candidates": "albán, örmény, pandzsábi, bolgár, szerb, japán, malajálam, mongol, máltai, francia",
+      "index": 737,
+      "subject_en": "Mali",
+      "object_en": "French"
+    },
+    {
+      "subject": "Saint Kitts és Nevis",
+      "object": "angol",
+      "object_candidates": "khmer, Normand nyelv, máltai, ír, svéd, lengyel, kínai, észt, spanyol, angol",
+      "index": 738,
+      "subject_en": "Saint Kitts and Nevis",
+      "object_en": "English"
+    },
+    {
+      "subject": "Formentera",
+      "object": "spanyol",
+      "object_candidates": "ír, szomáli, koreai, perzsa, máltai, héber, hindi, japán, portugál, spanyol",
+      "index": 739,
+      "subject_en": "Formentera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Saba",
+      "object": "angol",
+      "object_candidates": "svéd, vietnámi, pandzsábi, mongol, szlovák, máltai, horvát, perzsa, holland, angol",
+      "index": 740,
+      "subject_en": "Saba",
+      "object_en": "English"
+    },
+    {
+      "subject": "Odesszai terület",
+      "object": "ukrán",
+      "object_candidates": "katalán, német, finn, szicíliai, breton, bolgár, montenegrói, lengyel, ír, ukrán",
+      "index": 741,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Luxemburg",
+      "object": "német",
+      "object_candidates": "malajálam, máltai, szomáli, bolgár, belarusz, török, maláj, spanyol, macedón, német",
+      "index": 742,
+      "subject_en": "Luxembourg",
+      "object_en": "German"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "dán",
+      "object_candidates": "maláj, belarusz, telugu, izlandi, vietnámi, héber, albán, szomáli, khmer, dán",
+      "index": 743,
+      "subject_en": "European Union",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "Jura kanton",
+      "object": "francia",
+      "object_candidates": "észt, magyar, bengáli, ír, szerb, török, szicíliai, szomáli, lengyel, francia",
+      "index": 744,
+      "subject_en": "Canton of Jura",
+      "object_en": "French"
+    },
+    {
+      "subject": "Albánia",
+      "object": "albán",
+      "object_candidates": "vietnámi, mongol, orosz, khmer, török, Velencei nyelv, egyiptomi, görög, bolgár, albán",
+      "index": 745,
+      "subject_en": "Albania",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "Ciprus",
+      "object": "török",
+      "object_candidates": "szomáli, baszk, urdu, szlovén, magyar, ír, litván, horvát, montenegrói, török",
+      "index": 746,
+      "subject_en": "Cyprus",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "Lettország",
+      "object": "lett",
+      "object_candidates": "svéd, horvát, holland, magyar, török, izlandi, nepáli, japán, észt, lett",
+      "index": 747,
+      "subject_en": "Latvia",
+      "object_en": "Latvian"
+    },
+    {
+      "subject": "Dagesztán",
+      "object": "orosz",
+      "object_candidates": "egyiptomi, török, héber, szlovák, horvát, német, cseh, szomáli, urdu, orosz",
+      "index": 748,
+      "subject_en": "Republic of Dagestan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Független Államok Közössége",
+      "object": "orosz",
+      "object_candidates": "hindi, héber, hawaii, katalán, montenegrói, Velencei nyelv, albán, horvát, bolgár, orosz",
+      "index": 749,
+      "subject_en": "Commonwealth of Independent States",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Észak-atlanti Szerződés Szervezete",
+      "object": "francia",
+      "object_candidates": "lengyel, walesi, katalán, izlandi, bengáli, lett, maláj, litván, holland, francia",
+      "index": 750,
+      "subject_en": "NATO",
+      "object_en": "French"
+    },
+    {
+      "subject": "Saint-Pierre és Miquelon",
+      "object": "francia",
+      "object_candidates": "szomáli, orosz, telugu, egyiptomi, kínai, latin, walesi, izlandi, albán, francia",
+      "index": 751,
+      "subject_en": "Saint Pierre and Miquelon",
+      "object_en": "French"
+    },
+    {
+      "subject": "Bhopál",
+      "object": "hindi",
+      "object_candidates": "Velencei nyelv, német, orosz, spanyol, szomáli, örmény, nepáli, malajálam, belarusz, hindi",
+      "index": 752,
+      "subject_en": "Bhopal",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Örményország",
+      "object": "örmény",
+      "object_candidates": "szicíliai, szomáli, szlovén, ukrán, baszk, indonéz, katalán, egyiptomi, mongol, örmény",
+      "index": 753,
+      "subject_en": "Armenia",
+      "object_en": "Armenian"
+    },
+    {
+      "subject": "Nyugat-Fokföld",
+      "object": "angol",
+      "object_candidates": "perzsa, thai, szerb, orosz, egyiptomi, azeri, maláj, lengyel, lett, angol",
+      "index": 754,
+      "subject_en": "Western Cape",
+      "object_en": "English"
+    },
+    {
+      "subject": "Bolgár Királyság",
+      "object": "bolgár",
+      "object_candidates": "pandzsábi, szlovák, walesi, észt, katalán, latin, thai, szerb, Velencei nyelv, bolgár",
+      "index": 755,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "Gabon",
+      "object": "francia",
+      "object_candidates": "kínai, maláj, spanyol, hindi, szicíliai, montenegrói, latin, katalán, koreai, francia",
+      "index": 756,
+      "subject_en": "Gabon",
+      "object_en": "French"
+    },
+    {
+      "subject": "Puerto Rico",
+      "object": "spanyol",
+      "object_candidates": "angol, olasz, kínai, walesi, cseh, lett, dán, indonéz, török, spanyol",
+      "index": 757,
+      "subject_en": "Puerto Rico",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Puerto Rico",
+      "object": "angol",
+      "object_candidates": "grúz, ír, Normand nyelv, szlovén, finn, maráthi, hindi, máltai, hawaii, angol",
+      "index": 758,
+      "subject_en": "Puerto Rico",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tuvalu",
+      "object": "angol",
+      "object_candidates": "szerb, mongol, litván, szomáli, cseh, olasz, breton, Velencei nyelv, finn, angol",
+      "index": 759,
+      "subject_en": "Tuvalu",
+      "object_en": "English"
+    },
+    {
+      "subject": "Iowa",
+      "object": "angol",
+      "object_candidates": "román, litván, bolgár, francia, pandzsábi, urdu, japán, görög, svéd, angol",
+      "index": 760,
+      "subject_en": "Iowa",
+      "object_en": "English"
+    },
+    {
+      "subject": "Svédország",
+      "object": "svéd",
+      "object_candidates": "hawaii, bolgár, angol, hindi, horvát, katalán, maráthi, vietnámi, észt, svéd",
+      "index": 761,
+      "subject_en": "Sweden",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Aragónia",
+      "object": "katalán",
+      "object_candidates": "ír, szomáli, lett, izlandi, macedón, Normand nyelv, baszk, hindi, maláj, katalán",
+      "index": 762,
+      "subject_en": "Aragon",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Guam",
+      "object": "angol",
+      "object_candidates": "horvát, görög, dán, török, román, szlovák, izlandi, katalán, japán, angol",
+      "index": 763,
+      "subject_en": "Guam",
+      "object_en": "English"
+    },
+    {
+      "subject": "Krími Autonóm Köztársaság",
+      "object": "orosz",
+      "object_candidates": "Velencei nyelv, dán, macedón, szlovák, grúz, urdu, katalán, japán, bolgár, orosz",
+      "index": 764,
+      "subject_en": "Autonomous Republic of Crimea",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Benin",
+      "object": "francia",
+      "object_candidates": "nepáli, katalán, máltai, olasz, japán, macedón, malajálam, khmer, maráthi, francia",
+      "index": 765,
+      "subject_en": "Benin",
+      "object_en": "French"
+    },
+    {
+      "subject": "Florida",
+      "object": "angol",
+      "object_candidates": "finn, bengáli, Velencei nyelv, mongol, német, magyar, albán, koreai, görög, angol",
+      "index": 766,
+      "subject_en": "Florida",
+      "object_en": "English"
+    },
+    {
+      "subject": "Virginia",
+      "object": "angol",
+      "object_candidates": "perzsa, belarusz, albán, bolgár, azeri, hawaii, dán, örmény, szerb, angol",
+      "index": 767,
+      "subject_en": "Virginia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Joensuu",
+      "object": "finn",
+      "object_candidates": "szerb, szlovák, észt, thai, scots, litván, baszk, svéd, cseh, finn",
+      "index": 768,
+      "subject_en": "Joensuu",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Antigua és Barbuda",
+      "object": "angol",
+      "object_candidates": "thai, izlandi, perzsa, hindi, finn, montenegrói, litván, Velencei nyelv, spanyol, angol",
+      "index": 769,
+      "subject_en": "Antigua and Barbuda",
+      "object_en": "English"
+    },
+    {
+      "subject": "Délkelet-ázsiai Nemzetek Szövetsége",
+      "object": "kínai",
+      "object_candidates": "német, khmer, lett, spanyol, szomáli, thai, dán, bolgár, szlovén, kínai",
+      "index": 770,
+      "subject_en": "ASEAN",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Belgium",
+      "object": "francia",
+      "object_candidates": "hawaii, kínai, koreai, grúz, Velencei nyelv, szicíliai, szlovák, dán, bengáli, francia",
+      "index": 771,
+      "subject_en": "Belgium",
+      "object_en": "French"
+    },
+    {
+      "subject": "Független Horvát Állam",
+      "object": "horvát",
+      "object_candidates": "japán, breton, tamil, olasz, magyar, walesi, egyiptomi, baszk, német, horvát",
+      "index": 772,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "Katalónia",
+      "object": "katalán",
+      "object_candidates": "szomáli, magyar, angol, baszk, belarusz, egyiptomi, ukrán, bengáli, urdu, katalán",
+      "index": 773,
+      "subject_en": "Catalonia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Petrozavodszk",
+      "object": "orosz",
+      "object_candidates": "szlovén, lett, telugu, Velencei nyelv, maláj, nepáli, portugál, holland, Normand nyelv, orosz",
+      "index": 774,
+      "subject_en": "Petrozavodsk",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Csukcsföld",
+      "object": "orosz",
+      "object_candidates": "latin, örmény, angol, izlandi, telugu, észt, hindi, román, vietnámi, orosz",
+      "index": 775,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Loire mente",
+      "object": "breton",
+      "object_candidates": "török, francia, maláj, román, spanyol, walesi, khmer, thai, izlandi, breton",
+      "index": 776,
+      "subject_en": "Pays de la Loire",
+      "object_en": "Breton"
+    },
+    {
+      "subject": "Dundee",
+      "object": "angol",
+      "object_candidates": "perzsa, egyiptomi, finn, azeri, grúz, maláj, szerb, belarusz, dán, angol",
+      "index": 777,
+      "subject_en": "Dundee",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "máltai",
+      "object_candidates": "urdu, tamil, szicíliai, szlovák, ír, hindi, walesi, maláj, dán, máltai",
+      "index": 778,
+      "subject_en": "European Union",
+      "object_en": "Maltese"
+    },
+    {
+      "subject": "Azerbajdzsáni Szovjet Szocialista Köztársaság",
+      "object": "orosz",
+      "object_candidates": "héber, holland, vietnámi, egyiptomi, walesi, kínai, cseh, perzsa, dán, orosz",
+      "index": 779,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Norfolk-sziget",
+      "object": "angol",
+      "object_candidates": "egyiptomi, ukrán, magyar, perzsa, bengáli, spanyol, dán, litván, lett, angol",
+      "index": 780,
+      "subject_en": "Norfolk Island",
+      "object_en": "English"
+    },
+    {
+      "subject": "Skócia",
+      "object": "angol",
+      "object_candidates": "telugu, dán, észt, albán, belarusz, Velencei nyelv, szerb, horvát, olasz, angol",
+      "index": 781,
+      "subject_en": "Scotland",
+      "object_en": "English"
+    },
+    {
+      "subject": "Kuba",
+      "object": "spanyol",
+      "object_candidates": "latin, scots, orosz, breton, azeri, hawaii, indonéz, japán, grúz, spanyol",
+      "index": 782,
+      "subject_en": "Cuba",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Mikronéziai Szövetségi Államok",
+      "object": "angol",
+      "object_candidates": "észt, azeri, indonéz, tamil, macedón, holland, bengáli, katalán, vietnámi, angol",
+      "index": 783,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "English"
+    },
+    {
+      "subject": "Permi határterület",
+      "object": "orosz",
+      "object_candidates": "japán, olasz, maláj, portugál, német, francia, finn, szomáli, dán, orosz",
+      "index": 784,
+      "subject_en": "Perm Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Kongresszusi Lengyelország",
+      "object": "orosz",
+      "object_candidates": "mongol, maláj, urdu, maráthi, latin, thai, örmény, walesi, lengyel, orosz",
+      "index": 785,
+      "subject_en": "Congress Poland",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Bulgária",
+      "object": "bolgár",
+      "object_candidates": "grúz, spanyol, azeri, kínai, thai, lengyel, izlandi, ukrán, szerb, bolgár",
+      "index": 786,
+      "subject_en": "Bulgaria",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "Amerikai Egyesült Államok",
+      "object": "angol",
+      "object_candidates": "mongol, koreai, tamil, lett, német, grúz, pandzsábi, thai, maráthi, angol",
+      "index": 787,
+      "subject_en": "United States of America",
+      "object_en": "English"
+    },
+    {
+      "subject": "Illinois",
+      "object": "angol",
+      "object_candidates": "maráthi, baszk, urdu, finn, azeri, svéd, walesi, lett, dán, angol",
+      "index": 788,
+      "subject_en": "Illinois",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "olasz",
+      "object_candidates": "Normand nyelv, szomáli, tamil, máltai, finn, Velencei nyelv, magyar, izlandi, portugál, olasz",
+      "index": 789,
+      "subject_en": "European Union",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "Észak-Szumátra",
+      "object": "indonéz",
+      "object_candidates": "walesi, kínai, finn, szerb, mongol, héber, litván, bengáli, grúz, indonéz",
+      "index": 790,
+      "subject_en": "North Sumatra",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "Délkelet-ázsiai Nemzetek Szövetsége",
+      "object": "thai",
+      "object_candidates": "lett, indonéz, vietnámi, telugu, azeri, malajálam, egyiptomi, hawaii, mongol, thai",
+      "index": 791,
+      "subject_en": "ASEAN",
+      "object_en": "Thai"
+    },
+    {
+      "subject": "Hongkong brit gyarmatként",
+      "object": "kínai",
+      "object_candidates": "szerb, perzsa, német, ír, dán, tamil, malajálam, egyiptomi, Velencei nyelv, kínai",
+      "index": 792,
+      "subject_en": "British Hong Kong",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "Tennessee",
+      "object": "angol",
+      "object_candidates": "izlandi, ukrán, macedón, görög, észt, holland, örmény, khmer, svéd, angol",
+      "index": 793,
+      "subject_en": "Tennessee",
+      "object_en": "English"
+    },
+    {
+      "subject": "Uusikaupunki",
+      "object": "finn",
+      "object_candidates": "maláj, belarusz, cseh, magyar, török, spanyol, Normand nyelv, szicíliai, perzsa, finn",
+      "index": 794,
+      "subject_en": "Uusikaupunki",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Orosz Birodalom",
+      "object": "svéd",
+      "object_candidates": "holland, montenegrói, ukrán, örmény, katalán, máltai, Velencei nyelv, belarusz, pandzsábi, svéd",
+      "index": 795,
+      "subject_en": "Russian Empire",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "svéd",
+      "object_candidates": "izlandi, héber, finn, khmer, dán, szerb, lett, litván, malajálam, svéd",
+      "index": 796,
+      "subject_en": "European Union",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "Ándhra Prades",
+      "object": "telugu",
+      "object_candidates": "észt, pandzsábi, ír, héber, macedón, walesi, vietnámi, litván, tamil, telugu",
+      "index": 797,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Telugu"
+    },
+    {
+      "subject": "Guernsey Bailiffség",
+      "object": "francia",
+      "object_candidates": "perzsa, litván, albán, mongol, német, ukrán, breton, román, grúz, francia",
+      "index": 798,
+      "subject_en": "Guernsey",
+      "object_en": "French"
+    },
+    {
+      "subject": "Kanári-szigetek",
+      "object": "spanyol",
+      "object_candidates": "holland, szlovák, lengyel, észt, máltai, maláj, héber, urdu, indonéz, spanyol",
+      "index": 799,
+      "subject_en": "Canary Islands",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Mordvinföld",
+      "object": "orosz",
+      "object_candidates": "svéd, maráthi, latin, khmer, pandzsábi, urdu, belarusz, magyar, cseh, orosz",
+      "index": 800,
+      "subject_en": "Republic of Mordovia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Makaó",
+      "object": "portugál",
+      "object_candidates": "német, ír, észt, mongol, szomáli, maráthi, grúz, pandzsábi, telugu, portugál",
+      "index": 801,
+      "subject_en": "Macau",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Altaj köztársaság",
+      "object": "orosz",
+      "object_candidates": "indonéz, vietnámi, malajálam, észt, héber, breton, francia, japán, katalán, orosz",
+      "index": 802,
+      "subject_en": "Altai Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Costa Rica",
+      "object": "spanyol",
+      "object_candidates": "izlandi, montenegrói, görög, urdu, magyar, román, észt, örmény, francia, spanyol",
+      "index": 803,
+      "subject_en": "Costa Rica",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Saint Vincent és a Grenadine-szigetek",
+      "object": "spanyol",
+      "object_candidates": "cseh, kínai, lengyel, maráthi, szlovák, malajálam, macedón, észt, latin, spanyol",
+      "index": 804,
+      "subject_en": "Saint Vincent and the Grenadines",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Európai Unió",
+      "object": "német",
+      "object_candidates": "hawaii, magyar, perzsa, bolgár, Velencei nyelv, olasz, észt, albán, litván, német",
+      "index": 805,
+      "subject_en": "European Union",
+      "object_en": "German"
+    },
+    {
+      "subject": "Nemzetközi Büntetőbíróság",
+      "object": "francia",
+      "object_candidates": "Normand nyelv, grúz, dán, orosz, török, mongol, lett, lengyel, maráthi, francia",
+      "index": 806,
+      "subject_en": "International Criminal Court",
+      "object_en": "French"
+    },
+    {
+      "subject": "Pori",
+      "object": "finn",
+      "object_candidates": "latin, telugu, mongol, baszk, macedón, maláj, angol, magyar, urdu, finn",
+      "index": 807,
+      "subject_en": "Pori",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Menorca",
+      "object": "spanyol",
+      "object_candidates": "dán, maráthi, héber, macedón, bolgár, lengyel, máltai, pandzsábi, portugál, spanyol",
+      "index": 808,
+      "subject_en": "Menorca",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Montenegró",
+      "object": "albán",
+      "object_candidates": "hawaii, lengyel, macedón, szlovén, bolgár, latin, francia, magyar, azeri, albán",
+      "index": 809,
+      "subject_en": "Montenegro",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "Párizsi Kommün",
+      "object": "francia",
+      "object_candidates": "litván, angol, szicíliai, telugu, tamil, urdu, román, holland, lengyel, francia",
+      "index": 810,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "French"
+    },
+    {
+      "subject": "Venezuela",
+      "object": "spanyol",
+      "object_candidates": "thai, azeri, katalán, mongol, dán, tamil, vietnámi, hawaii, walesi, spanyol",
+      "index": 811,
+      "subject_en": "Venezuela",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Marshall-szigetek",
+      "object": "angol",
+      "object_candidates": "török, horvát, olasz, tamil, montenegrói, telugu, máltai, szicíliai, azeri, angol",
+      "index": 812,
+      "subject_en": "Marshall Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Karélia",
+      "object": "orosz",
+      "object_candidates": "indonéz, bengáli, egyiptomi, magyar, nepáli, finn, telugu, azeri, breton, orosz",
+      "index": 813,
+      "subject_en": "Karelia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Valencia",
+      "object": "katalán",
+      "object_candidates": "khmer, albán, pandzsábi, örmény, telugu, maláj, német, perzsa, mongol, katalán",
+      "index": 814,
+      "subject_en": "Community of Valencia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "Szlovákia",
+      "object": "szlovák",
+      "object_candidates": "breton, grúz, lett, pandzsábi, holland, francia, malajálam, héber, koreai, szlovák",
+      "index": 815,
+      "subject_en": "Slovakia",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "Harijána",
+      "object": "hindi",
+      "object_candidates": "svéd, magyar, perzsa, montenegrói, szlovák, thai, ír, pandzsábi, koreai, hindi",
+      "index": 816,
+      "subject_en": "Haryana",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Dél-Korea",
+      "object": "koreai",
+      "object_candidates": "macedón, Velencei nyelv, észt, lett, máltai, japán, török, litván, walesi, koreai",
+      "index": 817,
+      "subject_en": "South Korea",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "Zöld-foki Köztársaság",
+      "object": "portugál",
+      "object_candidates": "szicíliai, szlovák, pandzsábi, maráthi, walesi, szomáli, török, örmény, baszk, portugál",
+      "index": 818,
+      "subject_en": "Cape Verde",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "Simlá",
+      "object": "hindi",
+      "object_candidates": "lengyel, latin, török, breton, szlovén, szicíliai, tamil, japán, Velencei nyelv, hindi",
+      "index": 819,
+      "subject_en": "Shimla",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Karibi Hollandia",
+      "object": "holland",
+      "object_candidates": "szicíliai, Normand nyelv, maláj, malajálam, litván, magyar, khmer, vietnámi, pandzsábi, holland",
+      "index": 820,
+      "subject_en": "Caribbean Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "Oklahoma",
+      "object": "angol",
+      "object_candidates": "lett, portugál, izlandi, indonéz, perzsa, hawaii, macedón, maláj, litván, angol",
+      "index": 821,
+      "subject_en": "Oklahoma",
+      "object_en": "English"
+    },
+    {
+      "subject": "Ukrajna",
+      "object": "ukrán",
+      "object_candidates": "izlandi, szerb, belarusz, német, török, tamil, máltai, walesi, hawaii, ukrán",
+      "index": 822,
+      "subject_en": "Ukraine",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "Cook-szigetek",
+      "object": "angol",
+      "object_candidates": "török, spanyol, cseh, Velencei nyelv, német, breton, bolgár, litván, holland, angol",
+      "index": 823,
+      "subject_en": "Cook Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "Európai Labdarúgó-szövetség",
+      "object": "angol",
+      "object_candidates": "urdu, izlandi, szomáli, belarusz, japán, szerb, vietnámi, holland, maráthi, angol",
+      "index": 824,
+      "subject_en": "Union of European Football Associations",
+      "object_en": "English"
+    },
+    {
+      "subject": "Tanzánia",
+      "object": "angol",
+      "object_candidates": "magyar, belarusz, lett, ukrán, Normand nyelv, spanyol, olasz, japán, holland, angol",
+      "index": 825,
+      "subject_en": "Tanzania",
+      "object_en": "English"
+    },
+    {
+      "subject": "Türkmenisztán",
+      "object": "orosz",
+      "object_candidates": "belarusz, örmény, koreai, vietnámi, angol, tamil, szlovén, görög, katalán, orosz",
+      "index": 826,
+      "subject_en": "Turkmenistan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Szomáliföld",
+      "object": "szomáli",
+      "object_candidates": "izlandi, scots, orosz, katalán, észt, török, egyiptomi, thai, dán, szomáli",
+      "index": 827,
+      "subject_en": "Somaliland",
+      "object_en": "Somali"
+    },
+    {
+      "subject": "Svájc",
+      "object": "német",
+      "object_candidates": "ír, héber, finn, katalán, orosz, francia, olasz, cseh, macedón, német",
+      "index": 828,
+      "subject_en": "Switzerland",
+      "object_en": "German"
+    },
+    {
+      "subject": "Habarovszki határterület",
+      "object": "orosz",
+      "object_candidates": "cseh, maráthi, görög, hawaii, észt, breton, Velencei nyelv, ukrán, latin, orosz",
+      "index": 829,
+      "subject_en": "Khabarovsk Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Lahti",
+      "object": "finn",
+      "object_candidates": "görög, hawaii, észt, perzsa, szlovák, portugál, macedón, montenegrói, dán, finn",
+      "index": 830,
+      "subject_en": "Lahti",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "Alicante",
+      "object": "spanyol",
+      "object_candidates": "kínai, dán, malajálam, horvát, máltai, szlovén, vietnámi, szicíliai, lett, spanyol",
+      "index": 831,
+      "subject_en": "Alicante",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "Fehéroroszország",
+      "object": "belarusz",
+      "object_candidates": "vietnámi, örmény, szicíliai, albán, indonéz, litván, szomáli, walesi, malajálam, belarusz",
+      "index": 832,
+      "subject_en": "Belarus",
+      "object_en": "Belarusian"
+    },
+    {
+      "subject": "Uttar Prades",
+      "object": "hindi",
+      "object_candidates": "hawaii, szicíliai, magyar, maláj, ír, holland, albán, telugu, finn, hindi",
+      "index": 833,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "Luhanszki Népköztársaság",
+      "object": "orosz",
+      "object_candidates": "bolgár, francia, ír, szerb, macedón, ukrán, baszk, olasz, holland, orosz",
+      "index": 834,
+      "subject_en": "Luhansk People's Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "Laosz",
+      "object": "lao",
+      "object_candidates": "magyar, görög, egyiptomi, svéd, albán, ír, holland, maláj, pandzsábi, lao",
+      "index": 835,
+      "subject_en": "Laos",
+      "object_en": "Lao"
+    },
+    {
+      "subject": "Ingusföld",
+      "object": "orosz",
+      "object_candidates": "scots, horvát, pandzsábi, spanyol, egyiptomi, thai, német, grúz, Normand nyelv, orosz",
+      "index": 836,
+      "subject_en": "Republic of Ingushetia",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P37"
+}

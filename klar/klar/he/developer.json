@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "איזו חברה היא המפתחת של <subject>? התשובה היא: <mask>",
+    "מי פיתח את <subject>? התשובה היא: <mask>",
+    "איזו חברה אחראית לפיתוח של <subject>? התשובה היא: <mask>",
+    "על ידי מי פותח <subject>? התשובה היא: <mask>",
+    "איזו ארגון זוכה להכרה על הפיתוח של <subject>? התשובה היא: <mask>",
+    " החברה שפיתחה את <subject> נקראת <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "macOS",
+      "object": "אפל",
+      "object_candidates": "בואינג, IBM, חברת גוגל, אדובי מערכות, נוקיה, אינטל, נינטנדו, מיקרוסופט, איירבוס, אפל",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iOS",
+      "object": "אפל",
+      "object_candidates": "IBM, חברת גוגל, אדובי מערכות, נינטנדו, בואינג, איירבוס, נוקיה, אינטל, מיקרוסופט, אפל",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ספארי",
+      "object": "אפל",
+      "object_candidates": "נוקיה, איירבוס, בואינג, נינטנדו, אדובי מערכות, חברת גוגל, אינטל, IBM, מיקרוסופט, אפל",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "פוסטסקריפט",
+      "object": "אדובי מערכות",
+      "object_candidates": "אינטל, איירבוס, בואינג, נוקיה, חברת גוגל, IBM, אפל, מיקרוסופט, נינטנדו, אדובי מערכות",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Windows Vista",
+      "object": "מיקרוסופט",
+      "object_candidates": "נינטנדו, נוקיה, חברת גוגל, אדובי מערכות, אפל, בואינג, אינטל, איירבוס, IBM, מיקרוסופט",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "אינטרנט אקספלורר",
+      "object": "מיקרוסופט",
+      "object_candidates": "אפל, חברת גוגל, בואינג, IBM, נינטנדו, איירבוס, אדובי מערכות, נוקיה, אינטל, מיקרוסופט",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-17 מבצר מעופף",
+      "object": "בואינג",
+      "object_candidates": "אפל, איירבוס, נינטנדו, נוקיה, חברת גוגל, אינטל, מיקרוסופט, אדובי מערכות, IBM, בואינג",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "DirectX",
+      "object": "מיקרוסופט",
+      "object_candidates": "אפל, נינטנדו, בואינג, אדובי מערכות, IBM, חברת גוגל, איירבוס, נוקיה, אינטל, מיקרוסופט",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows",
+      "object": "מיקרוסופט",
+      "object_candidates": "נינטנדו, אינטל, אדובי מערכות, איירבוס, אפל, חברת גוגל, נוקיה, IBM, בואינג, מיקרוסופט",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox 360",
+      "object": "מיקרוסופט",
+      "object_candidates": "אפל, חברת גוגל, נינטנדו, אדובי מערכות, איירבוס, נוקיה, בואינג, IBM, אינטל, מיקרוסופט",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox One",
+      "object": "מיקרוסופט",
+      "object_candidates": "איירבוס, אדובי מערכות, בואינג, נוקיה, נינטנדו, אפל, אינטל, חברת גוגל, IBM, מיקרוסופט",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "MS-DOS",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, נוקיה, אפל, חברת גוגל, בואינג, איירבוס, נינטנדו, IBM, אינטל, מיקרוסופט",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Fortran",
+      "object": "IBM",
+      "object_candidates": "אדובי מערכות, איירבוס, חברת גוגל, אפל, אינטל, נינטנדו, מיקרוסופט, נוקיה, בואינג, IBM",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "Windows 1.0",
+      "object": "מיקרוסופט",
+      "object_candidates": "בואינג, נינטנדו, נוקיה, אינטל, חברת גוגל, IBM, אפל, איירבוס, אדובי מערכות, מיקרוסופט",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Nintendo 3DS",
+      "object": "נינטנדו",
+      "object_candidates": "נוקיה, איירבוס, בואינג, מיקרוסופט, אינטל, אפל, אדובי מערכות, IBM, חברת גוגל, נינטנדו",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "אינטל 80386",
+      "object": "אינטל",
+      "object_candidates": "אפל, IBM, נוקיה, איירבוס, נינטנדו, חברת גוגל, מיקרוסופט, בואינג, אדובי מערכות, אינטל",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Windows 10",
+      "object": "מיקרוסופט",
+      "object_candidates": "נוקיה, נינטנדו, IBM, אפל, אינטל, בואינג, איירבוס, אדובי מערכות, חברת גוגל, מיקרוסופט",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "מיקרוסופט אקסל",
+      "object": "מיקרוסופט",
+      "object_candidates": "נוקיה, אינטל, בואינג, אפל, אדובי מערכות, נינטנדו, IBM, חברת גוגל, איירבוס, מיקרוסופט",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "מיקרוסופט אופיס",
+      "object": "מיקרוסופט",
+      "object_candidates": "אינטל, אפל, אדובי מערכות, חברת גוגל, נינטנדו, בואינג, איירבוס, נוקיה, IBM, מיקרוסופט",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "מיקרוסופט וורד",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, בואינג, אינטל, איירבוס, IBM, נינטנדו, נוקיה, חברת גוגל, אפל, מיקרוסופט",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Mac OS",
+      "object": "אפל",
+      "object_candidates": "נוקיה, נינטנדו, מיקרוסופט, איירבוס, IBM, אדובי מערכות, אינטל, בואינג, חברת גוגל, אפל",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Windows 95",
+      "object": "מיקרוסופט",
+      "object_candidates": "IBM, אדובי מערכות, אינטל, חברת גוגל, נוקיה, איירבוס, אפל, נינטנדו, בואינג, מיקרוסופט",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ויז'ואל סטודיו",
+      "object": "מיקרוסופט",
+      "object_candidates": "אפל, אדובי מערכות, IBM, בואינג, נינטנדו, אינטל, חברת גוגל, איירבוס, נוקיה, מיקרוסופט",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 98",
+      "object": "מיקרוסופט",
+      "object_candidates": "בואינג, IBM, אפל, נינטנדו, נוקיה, איירבוס, אדובי מערכות, חברת גוגל, אינטל, מיקרוסופט",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "אדובי אקרובט",
+      "object": "אדובי מערכות",
+      "object_candidates": "נוקיה, אפל, מיקרוסופט, בואינג, איירבוס, IBM, חברת גוגל, אינטל, נינטנדו, אדובי מערכות",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "PDF",
+      "object": "אדובי מערכות",
+      "object_candidates": "IBM, נינטנדו, אינטל, מיקרוסופט, נוקיה, חברת גוגל, אפל, בואינג, איירבוס, אדובי מערכות",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Intel Core 2",
+      "object": "אינטל",
+      "object_candidates": "נוקיה, בואינג, חברת גוגל, נינטנדו, אדובי מערכות, אפל, IBM, איירבוס, מיקרוסופט, אינטל",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "אדובי פלאש",
+      "object": "אדובי מערכות",
+      "object_candidates": "איירבוס, אפל, בואינג, נינטנדו, נוקיה, אינטל, IBM, חברת גוגל, מיקרוסופט, אדובי מערכות",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "סימביאן",
+      "object": "נוקיה",
+      "object_candidates": "איירבוס, מיקרוסופט, אפל, IBM, אינטל, חברת גוגל, נינטנדו, בואינג, אדובי מערכות, נוקיה",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "Windows Phone",
+      "object": "מיקרוסופט",
+      "object_candidates": "חברת גוגל, איירבוס, IBM, נינטנדו, בואינג, אפל, אינטל, אדובי מערכות, נוקיה, מיקרוסופט",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "פנטיום",
+      "object": "אינטל",
+      "object_candidates": "מיקרוסופט, IBM, בואינג, חברת גוגל, נינטנדו, איירבוס, אפל, אדובי מערכות, נוקיה, אינטל",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "אדובי פוטושופ",
+      "object": "אדובי מערכות",
+      "object_candidates": "אפל, אינטל, בואינג, נינטנדו, נוקיה, מיקרוסופט, איירבוס, IBM, חברת גוגל, אדובי מערכות",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "QuickTime",
+      "object": "אפל",
+      "object_candidates": "בואינג, IBM, אינטל, אדובי מערכות, חברת גוגל, איירבוס, נינטנדו, נוקיה, מיקרוסופט, אפל",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Wii U",
+      "object": "נינטנדו",
+      "object_candidates": "IBM, אפל, חברת גוגל, בואינג, אינטל, נוקיה, מיקרוסופט, איירבוס, אדובי מערכות, נינטנדו",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "Windows XP",
+      "object": "מיקרוסופט",
+      "object_candidates": "נוקיה, בואינג, נינטנדו, אינטל, חברת גוגל, IBM, אפל, איירבוס, אדובי מערכות, מיקרוסופט",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 2000",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, נינטנדו, אינטל, איירבוס, נוקיה, אפל, חברת גוגל, בואינג, IBM, מיקרוסופט",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "NTFS",
+      "object": "מיקרוסופט",
+      "object_candidates": "אינטל, בואינג, אפל, אדובי מערכות, נינטנדו, איירבוס, נוקיה, חברת גוגל, IBM, מיקרוסופט",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 8",
+      "object": "מיקרוסופט",
+      "object_candidates": "אינטל, חברת גוגל, אדובי מערכות, נוקיה, נינטנדו, איירבוס, בואינג, אפל, IBM, מיקרוסופט",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "אייפוד",
+      "object": "אפל",
+      "object_candidates": "מיקרוסופט, חברת גוגל, IBM, אינטל, אדובי מערכות, איירבוס, נוקיה, נינטנדו, בואינג, אפל",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Gmail",
+      "object": "חברת גוגל",
+      "object_candidates": "בואינג, איירבוס, מיקרוסופט, נוקיה, אפל, אינטל, IBM, אדובי מערכות, נינטנדו, חברת גוגל",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל מפות",
+      "object": "חברת גוגל",
+      "object_candidates": "אפל, נוקיה, IBM, איירבוס, נינטנדו, מיקרוסופט, אדובי מערכות, בואינג, אינטל, חברת גוגל",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Live Messenger",
+      "object": "מיקרוסופט",
+      "object_candidates": "בואינג, אינטל, אדובי מערכות, אפל, IBM, חברת גוגל, איירבוס, נינטנדו, נוקיה, מיקרוסופט",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "גוגל תצוגת רחוב",
+      "object": "חברת גוגל",
+      "object_candidates": "בואינג, אדובי מערכות, נוקיה, מיקרוסופט, איירבוס, אינטל, IBM, נינטנדו, אפל, חברת גוגל",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "מיקרוסופט",
+      "object_candidates": "אינטל, נינטנדו, איירבוס, אדובי מערכות, בואינג, IBM, נוקיה, אפל, חברת גוגל, מיקרוסופט",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": ".NET",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, אינטל, חברת גוגל, נוקיה, איירבוס, נינטנדו, IBM, בואינג, אפל, מיקרוסופט",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Update",
+      "object": "מיקרוסופט",
+      "object_candidates": "בואינג, אדובי מערכות, אינטל, אפל, איירבוס, IBM, נוקיה, נינטנדו, חברת גוגל, מיקרוסופט",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "B-52 סטרטופורטרס",
+      "object": "בואינג",
+      "object_candidates": "איירבוס, אפל, נינטנדו, IBM, מיקרוסופט, אדובי מערכות, אינטל, חברת גוגל, נוקיה, בואינג",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "אייטונס",
+      "object": "אפל",
+      "object_candidates": "נינטנדו, מיקרוסופט, אינטל, חברת גוגל, נוקיה, IBM, איירבוס, אדובי מערכות, בואינג, אפל",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Windows 2.0",
+      "object": "מיקרוסופט",
+      "object_candidates": "אפל, נינטנדו, נוקיה, בואינג, IBM, אינטל, איירבוס, אדובי מערכות, חברת גוגל, מיקרוסופט",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "חברת גוגל",
+      "object_candidates": "אדובי מערכות, מיקרוסופט, איירבוס, אפל, נוקיה, IBM, אינטל, נינטנדו, בואינג, חברת גוגל",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows 7",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, נוקיה, איירבוס, אפל, נינטנדו, IBM, חברת גוגל, בואינג, אינטל, מיקרוסופט",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "איירבוס A350",
+      "object": "איירבוס",
+      "object_candidates": "אפל, אדובי מערכות, נינטנדו, אינטל, נוקיה, חברת גוגל, בואינג, IBM, מיקרוסופט, איירבוס",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "פיקאסה",
+      "object": "חברת גוגל",
+      "object_candidates": "נוקיה, נינטנדו, בואינג, איירבוס, IBM, אדובי מערכות, אינטל, מיקרוסופט, אפל, חברת גוגל",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "חברת גוגל",
+      "object_candidates": "נינטנדו, בואינג, מיקרוסופט, IBM, איירבוס, נוקיה, אדובי מערכות, אינטל, אפל, חברת גוגל",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Play",
+      "object": "חברת גוגל",
+      "object_candidates": "איירבוס, אינטל, IBM, נוקיה, אדובי מערכות, אפל, מיקרוסופט, נינטנדו, בואינג, חברת גוגל",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ICloud",
+      "object": "אפל",
+      "object_candidates": "נוקיה, נינטנדו, מיקרוסופט, חברת גוגל, אדובי מערכות, אינטל, איירבוס, IBM, בואינג, אפל",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "סירי",
+      "object": "אפל",
+      "object_candidates": "אינטל, IBM, נוקיה, מיקרוסופט, אדובי מערכות, נינטנדו, בואינג, איירבוס, חברת גוגל, אפל",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "App Store",
+      "object": "אפל",
+      "object_candidates": "אינטל, IBM, אדובי מערכות, בואינג, נינטנדו, חברת גוגל, נוקיה, מיקרוסופט, איירבוס, אפל",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "מיקרוסופט אקסס",
+      "object": "מיקרוסופט",
+      "object_candidates": "אינטל, נינטנדו, איירבוס, אפל, בואינג, אדובי מערכות, חברת גוגל, IBM, נוקיה, מיקרוסופט",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Apple Watch",
+      "object": "אפל",
+      "object_candidates": "חברת גוגל, מיקרוסופט, איירבוס, אינטל, נוקיה, אדובי מערכות, נינטנדו, IBM, בואינג, אפל",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "IBooks",
+      "object": "אפל",
+      "object_candidates": "מיקרוסופט, איירבוס, בואינג, IBM, נינטנדו, אדובי מערכות, אינטל, חברת גוגל, נוקיה, אפל",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "כונן גוגל",
+      "object": "חברת גוגל",
+      "object_candidates": "נינטנדו, IBM, בואינג, אדובי מערכות, נוקיה, מיקרוסופט, אפל, אינטל, איירבוס, חברת גוגל",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Hangouts",
+      "object": "חברת גוגל",
+      "object_candidates": "איירבוס, מיקרוסופט, אדובי מערכות, נוקיה, IBM, נינטנדו, אינטל, אפל, בואינג, חברת גוגל",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "יומן גוגל",
+      "object": "חברת גוגל",
+      "object_candidates": "מיקרוסופט, אפל, IBM, אדובי מערכות, נינטנדו, נוקיה, בואינג, אינטל, איירבוס, חברת גוגל",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "סקייפ",
+      "object": "מיקרוסופט",
+      "object_candidates": "חברת גוגל, IBM, אינטל, איירבוס, אפל, נינטנדו, בואינג, נוקיה, אדובי מערכות, מיקרוסופט",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "אדובי אינדיזיין",
+      "object": "אדובי מערכות",
+      "object_candidates": "חברת גוגל, אפל, IBM, איירבוס, מיקרוסופט, נינטנדו, אינטל, בואינג, נוקיה, אדובי מערכות",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Microsoft Store",
+      "object": "מיקרוסופט",
+      "object_candidates": "איירבוס, נוקיה, חברת גוגל, IBM, אדובי מערכות, נינטנדו, בואינג, אפל, אינטל, מיקרוסופט",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "מיקרו-בקר 8051",
+      "object": "אינטל",
+      "object_candidates": "IBM, איירבוס, נוקיה, נינטנדו, מיקרוסופט, אפל, חברת גוגל, אדובי מערכות, בואינג, אינטל",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Blogger",
+      "object": "חברת גוגל",
+      "object_candidates": "אפל, אדובי מערכות, נוקיה, בואינג, מיקרוסופט, אינטל, נינטנדו, איירבוס, IBM, חברת גוגל",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל כרום",
+      "object": "חברת גוגל",
+      "object_candidates": "IBM, מיקרוסופט, בואינג, נינטנדו, אפל, אינטל, נוקיה, איירבוס, אדובי מערכות, חברת גוגל",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל תרגום",
+      "object": "חברת גוגל",
+      "object_candidates": "בואינג, אדובי מערכות, אפל, IBM, מיקרוסופט, איירבוס, נוקיה, אינטל, נינטנדו, חברת גוגל",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "גוגל גלאס",
+      "object": "חברת גוגל",
+      "object_candidates": "מיקרוסופט, בואינג, IBM, נוקיה, אדובי מערכות, נינטנדו, אפל, אינטל, איירבוס, חברת גוגל",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Phone",
+      "object": "מיקרוסופט",
+      "object_candidates": "איירבוס, אדובי מערכות, אפל, נינטנדו, בואינג, נוקיה, אינטל, IBM, חברת גוגל, מיקרוסופט",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Me",
+      "object": "מיקרוסופט",
+      "object_candidates": "נינטנדו, אינטל, בואינג, אפל, נוקיה, איירבוס, IBM, אדובי מערכות, חברת גוגל, מיקרוסופט",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Minecraft",
+      "object": "מיקרוסופט",
+      "object_candidates": "חברת גוגל, בואינג, נינטנדו, IBM, איירבוס, נוקיה, אפל, אינטל, אדובי מערכות, מיקרוסופט",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Security Essentials",
+      "object": "מיקרוסופט",
+      "object_candidates": "אדובי מערכות, אפל, בואינג, IBM, נוקיה, חברת גוגל, איירבוס, נינטנדו, אינטל, מיקרוסופט",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

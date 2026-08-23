@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "Wie is eigenaar van <subject>? Het antwoord is: <mask>",
+    "Welk bedrijf of persoon bezit <subject>? Het antwoord is: <mask>",
+    "Wie is de huidige eigenaar van <subject>? Het antwoord is: <mask>",
+    "Van wie is <subject>? Het antwoord is: <mask>",
+    "Welke entiteit is eigenaar van <subject>? Het antwoord is: <mask>",
+    " De eigenaar van <subject> is <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Ducati",
+      "object": "Audi",
+      "object_candidates": "Yahoo!, Berlijn, Parijs, Toyota, Sony Corporation, Milaan, Frankrijk, British Broadcasting Corporation, Polen, Audi",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Lamborghini",
+      "object": "Audi",
+      "object_candidates": "Parijs, Yahoo!, Genua, Milaan, Amazon.com, Polen, Microsoft, Toyota, Frankrijk, Audi",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "Eiffeltoren",
+      "object": "Parijs",
+      "object_candidates": "Lviv, Qatar, Yahoo!, Milaan, Frankrijk, Microsoft, Sony Corporation, Polen, Turijn, Parijs",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Deutsche Bahn",
+      "object": "Duitsland",
+      "object_candidates": "Turijn, Sony Corporation, Parijs, Berlijn, Genua, Polen, Qatar, Toyota, Chicago, Duitsland",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Google",
+      "object": "Google Inc.",
+      "object_candidates": "Turijn, Sony Corporation, Duitsland, Genua, Polen, Qatar, Yahoo!, Chicago, Milaan, Google Inc.",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Lexus",
+      "object": "Toyota",
+      "object_candidates": "Lviv, Google Inc., Frankrijk, Chicago, British Broadcasting Corporation, Palermo, Polen, Genua, Duitsland, Toyota",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google Inc.",
+      "object_candidates": "Chicago, Milaan, Lviv, Parijs, Napels, Frankrijk, Duitsland, Turijn, British Broadcasting Corporation, Google Inc.",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "compact disc",
+      "object": "Sony Corporation",
+      "object_candidates": "Toyota, Lviv, British Broadcasting Corporation, Milaan, Google Inc., Yahoo!, Napels, Genua, Parijs, Sony Corporation",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "O'Hare International Airport",
+      "object": "Chicago",
+      "object_candidates": "British Broadcasting Corporation, Genua, Frankrijk, Qatar, Audi, Toyota, Amsterdam, Amazon.com, Lviv, Chicago",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BBC One",
+      "object": "British Broadcasting Corporation",
+      "object_candidates": "Frankrijk, Lviv, Genua, Audi, Yahoo!, Napels, Palermo, Parijs, Amsterdam, British Broadcasting Corporation",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "Sony Interactive Entertainment",
+      "object": "Sony Corporation",
+      "object_candidates": "Turijn, Google Inc., Yahoo!, Amazon.com, Lviv, Microsoft, Audi, Toyota, Duitsland, Sony Corporation",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Sony Pictures Entertainment",
+      "object": "Sony Corporation",
+      "object_candidates": "Duitsland, Chicago, Microsoft, Napels, Lviv, Amazon.com, Audi, British Broadcasting Corporation, Qatar, Sony Corporation",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google Inc.",
+      "object_candidates": "Audi, Napels, Parijs, Sony Corporation, Lviv, Toyota, Palermo, Qatar, Yahoo!, Google Inc.",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Maps",
+      "object": "Google Inc.",
+      "object_candidates": "Sony Corporation, Palermo, Frankrijk, Turijn, Napels, Milaan, Toyota, Berlijn, Lviv, Google Inc.",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "dvd",
+      "object": "Sony Corporation",
+      "object_candidates": "Qatar, Genua, Google Inc., Turijn, Parijs, Milaan, British Broadcasting Corporation, Toyota, Microsoft, Sony Corporation",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Parc des Princes",
+      "object": "Parijs",
+      "object_candidates": "Lviv, Polen, Toyota, Duitsland, Berlijn, Yahoo!, British Broadcasting Corporation, Microsoft, Google Inc., Parijs",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google Inc.",
+      "object_candidates": "Audi, Microsoft, Amsterdam, Napels, Berlijn, Sony Corporation, Palermo, Lviv, Polen, Google Inc.",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Media Player",
+      "object": "Microsoft",
+      "object_candidates": "Berlijn, Chicago, Milaan, Yahoo!, Parijs, Toyota, Google Inc., Sony Corporation, Turijn, Microsoft",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Stadio Giuseppe Meazza",
+      "object": "Milaan",
+      "object_candidates": "Genua, Sony Corporation, Duitsland, Amazon.com, Qatar, Polen, Parijs, Audi, Chicago, Milaan",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "Internet Movie Database",
+      "object": "Amazon.com",
+      "object_candidates": "Frankrijk, Chicago, Audi, Polen, Parijs, Google Inc., Sony Corporation, Qatar, Palermo, Amazon.com",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google Inc.",
+      "object_candidates": "Napels, Polen, Palermo, Audi, Microsoft, Lviv, Amsterdam, Qatar, Genua, Google Inc.",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Kindle",
+      "object": "Amazon.com",
+      "object_candidates": "Milaan, Napels, Frankrijk, Duitsland, Amsterdam, Lviv, Microsoft, Genua, Palermo, Amazon.com",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Stadio Renzo Barbera",
+      "object": "Palermo",
+      "object_candidates": "Sony Corporation, Qatar, Duitsland, Amsterdam, Frankrijk, Audi, Google Inc., Berlijn, British Broadcasting Corporation, Palermo",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "Yahoo!",
+      "object_candidates": "Chicago, Duitsland, British Broadcasting Corporation, Microsoft, Qatar, Frankrijk, Turijn, Polen, Toyota, Yahoo!",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google Inc.",
+      "object_candidates": "Polen, Milaan, Microsoft, Palermo, Frankrijk, Amsterdam, Genua, Lviv, British Broadcasting Corporation, Google Inc.",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Earth",
+      "object": "Google Inc.",
+      "object_candidates": "Amsterdam, Microsoft, Yahoo!, Amazon.com, Toyota, Audi, Chicago, Lviv, Genua, Google Inc.",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Daihatsu",
+      "object": "Toyota",
+      "object_candidates": "Parijs, Berlijn, Microsoft, Duitsland, Sony Corporation, British Broadcasting Corporation, Napels, Frankrijk, Genua, Toyota",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "Arc de Triomphe",
+      "object": "Frankrijk",
+      "object_candidates": "Napels, Audi, Amsterdam, Berlijn, Qatar, Google Inc., Parijs, Duitsland, Microsoft, Frankrijk",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "Kasteel van Fontainebleau",
+      "object": "Frankrijk",
+      "object_candidates": "Toyota, Sony Corporation, Amsterdam, Amazon.com, Polen, Milaan, Palermo, Audi, Genua, Frankrijk",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google Inc.",
+      "object_candidates": "Genua, Audi, Amazon.com, Sony Corporation, Parijs, Qatar, Polen, Lviv, Berlijn, Google Inc.",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Books",
+      "object": "Google Inc.",
+      "object_candidates": "Duitsland, Milaan, Audi, Yahoo!, Qatar, Turijn, Napels, Sony Corporation, Parijs, Google Inc.",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Olympisch Stadion",
+      "object": "Turijn",
+      "object_candidates": "Google Inc., Amsterdam, Frankrijk, Milaan, Genua, Microsoft, Berlijn, Palermo, Sony Corporation, Turijn",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Qatar Airways",
+      "object": "Qatar",
+      "object_candidates": "Yahoo!, Milaan, Amazon.com, Frankrijk, Parijs, Napels, Toyota, Sony Corporation, Lviv, Qatar",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "De Nachtwacht",
+      "object": "Amsterdam",
+      "object_candidates": "Milaan, Lviv, Audi, Frankrijk, Turijn, British Broadcasting Corporation, Toyota, Napels, Polen, Amsterdam",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google Inc.",
+      "object_candidates": "Sony Corporation, Toyota, Polen, Audi, Parijs, Lviv, Microsoft, Amazon.com, Milaan, Google Inc.",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Olympiastadion",
+      "object": "Berlijn",
+      "object_candidates": "Qatar, Parijs, Milaan, Microsoft, Amsterdam, British Broadcasting Corporation, Chicago, Audi, Turijn, Berlijn",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT Polish Airlines",
+      "object": "Polen",
+      "object_candidates": "Lviv, Parijs, Chicago, Amazon.com, Yahoo!, Amsterdam, Google Inc., Sony Corporation, Duitsland, Polen",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Stadio Luigi Ferraris",
+      "object": "Genua",
+      "object_candidates": "Qatar, Sony Corporation, Microsoft, Polen, Berlijn, Napels, Duitsland, Toyota, British Broadcasting Corporation, Genua",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "Google Translate",
+      "object": "Google Inc.",
+      "object_candidates": "Napels, Qatar, Amsterdam, Polen, Yahoo!, Microsoft, Chicago, Milaan, Frankrijk, Google Inc.",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "The Shard",
+      "object": "Qatar",
+      "object_candidates": "Lviv, Amsterdam, Napels, Amazon.com, Sony Corporation, Genua, British Broadcasting Corporation, Microsoft, Chicago, Qatar",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Stade de France",
+      "object": "Frankrijk",
+      "object_candidates": "Genua, Lviv, Yahoo!, Toyota, Google Inc., Microsoft, Turijn, Chicago, Amazon.com, Frankrijk",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "Arena Lviv",
+      "object": "Lviv",
+      "object_candidates": "Napels, Amazon.com, Chicago, Turijn, Frankrijk, Duitsland, Audi, Toyota, Qatar, Lviv",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "LinkedIn",
+      "object": "Microsoft",
+      "object_candidates": "Toyota, Qatar, Chicago, Napels, Palermo, Sony Corporation, Amsterdam, Audi, Parijs, Microsoft",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "Yahoo!",
+      "object_candidates": "Google Inc., Microsoft, Polen, Milaan, Turijn, Duitsland, Genua, Chicago, Amsterdam, Yahoo!",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Stadio San Paolo",
+      "object": "Napels",
+      "object_candidates": "Berlijn, Microsoft, Google Inc., Genua, Amsterdam, Yahoo!, Parijs, Palermo, Lviv, Napels",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "Stadio delle Alpi",
+      "object": "Turijn",
+      "object_candidates": "Toyota, Sony Corporation, Lviv, Duitsland, Google Inc., Amsterdam, Chicago, Parijs, Yahoo!, Turijn",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "Dubai International Airport",
+      "object": "Dubai",
+      "object_candidates": "Yahoo!, Genua, Qatar, Amazon.com, Palermo, Google Inc., British Broadcasting Corporation, Turijn, Parijs, Dubai",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google Scholar",
+      "object": "Google Inc.",
+      "object_candidates": "Microsoft, Turijn, Genua, Polen, Palermo, Audi, Parijs, Toyota, Chicago, Google Inc.",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Mona Lisa",
+      "object": "Frankrijk",
+      "object_candidates": "Parijs, Turijn, Microsoft, Milaan, Yahoo!, Palermo, Napels, Berlijn, Genua, Frankrijk",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "Amazon.com",
+      "object_candidates": "Qatar, Toyota, Yahoo!, Amsterdam, Duitsland, Audi, Frankrijk, Microsoft, Genua, Amazon.com",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

@@ -1,0 +1,294 @@
+{
+  "name": "place_of_birth",
+  "prompt_templates": [
+    "در کدام شهر <subject> به دنیا آمد؟ پاسخ: <mask>.",
+    "کجا <subject> به دنیا آمد؟ پاسخ: <mask>.",
+    "زادگاه <subject> چیست؟ پاسخ: <mask>.",
+    "کدام مکان زادگاه <subject> است؟ پاسخ: <mask>.",
+    "در کدام کشور <subject> به دنیا آمد؟ پاسخ: <mask>.",
+    " شهری که <subject> در آن به دنیا آمده نام دارد <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "کارلوس دوم اسپانیا",
+      "object": "مادرید",
+      "object_candidates": "تورنتو, لندن, بلگراد, منچستر, ناپل, بروکلین, وین, استانبول, ژنو, مادرید",
+      "index": 0,
+      "subject_en": "Charles II of Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "دیوید کولتارد",
+      "object": "اسکاتلند",
+      "object_candidates": "بروکلین, وین, پکن, بلفاست, پاریس, استانبول, هیوستون, میلان, وست‌مینستر, اسکاتلند",
+      "index": 1,
+      "subject_en": "David Coulthard",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "کریستینا روستی",
+      "object": "لندن",
+      "object_candidates": "بلفاست, کومو, مسکو, استانبول, برلین, اسکاتلند, رم, منچستر, ارمنستان, لندن",
+      "index": 2,
+      "subject_en": "Christina Rossetti",
+      "object_en": "London"
+    },
+    {
+      "subject": "کنی راجرز",
+      "object": "هیوستون",
+      "object_candidates": "استانبول, بلگراد, شیکاگو, مادرید, پاریس, لندن, میلان, وین, بروکلین, هیوستون",
+      "index": 3,
+      "subject_en": "Kenny Rogers",
+      "object_en": "Houston"
+    },
+    {
+      "subject": "حسین بن علی",
+      "object": "مدینه",
+      "object_candidates": "پاریس, مسکو, برلین, ژنو, بروکلین, رم, اسکاتلند, پکن, بلگراد, مدینه",
+      "index": 4,
+      "subject_en": "Husayn ibn Ali",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "ویلیام تامسون",
+      "object": "بلفاست",
+      "object_candidates": "مسکو, ژنو, مادرید, وست‌مینستر, پاریس, مدینه, بلگراد, پکن, رم, بلفاست",
+      "index": 5,
+      "subject_en": "William Thomson, 1st Baron Kelvin",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "آلفرد آدلر",
+      "object": "وین",
+      "object_candidates": "پاریس, مادرید, تورنتو, کلن, کومو, لندن, بلفاست, استانبول, مونیخ, وین",
+      "index": 6,
+      "subject_en": "Alfred Adler",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "چوش لمپراوه",
+      "object": "مادرید",
+      "object_candidates": "ناپل, رم, مکه, شیکاگو, ارمنستان, لندن, کومو, اسکاتلند, استانبول, مادرید",
+      "index": 7,
+      "subject_en": "Chus Lampreave",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "سرگئی لاوروف",
+      "object": "مسکو",
+      "object_candidates": "پکن, ژنو, مدینه, استانبول, بلفاست, بلگراد, مادرید, وست‌مینستر, لندن, مسکو",
+      "index": 8,
+      "subject_en": "Sergey Lavrov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "کنراد لورنتز",
+      "object": "وین",
+      "object_candidates": "مکه, میلان, برلین, بلگراد, لندن, شیکاگو, پکن, استانبول, بلفاست, وین",
+      "index": 9,
+      "subject_en": "Konrad Lorenz",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "لو رید",
+      "object": "بروکلین",
+      "object_candidates": "هیوستون, ژنو, مونیخ, رم, وین, مدینه, وست‌مینستر, کلن, برلین, بروکلین",
+      "index": 10,
+      "subject_en": "Lou Reed",
+      "object_en": "Brooklyn"
+    },
+    {
+      "subject": "لئوی پنجم",
+      "object": "ارمنستان",
+      "object_candidates": "برلین, تورنتو, کلن, مکه, منچستر, مسکو, کومو, استانبول, مادرید, ارمنستان",
+      "index": 11,
+      "subject_en": "Leo V the Armenian",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "مارکو دلوکیو",
+      "object": "میلان",
+      "object_candidates": "مکه, مونیخ, وست‌مینستر, کلن, پکن, بلگراد, ژنو, تورنتو, ارمنستان, میلان",
+      "index": 12,
+      "subject_en": "Marco Delvecchio",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "کارل ارف",
+      "object": "مونیخ",
+      "object_candidates": "رم, تورنتو, هیوستون, منچستر, وین, پکن, کلن, شیکاگو, برلین, مونیخ",
+      "index": 13,
+      "subject_en": "Carl Orff",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "پلینیوس",
+      "object": "کومو",
+      "object_candidates": "تورنتو, مونیخ, ژنو, پاریس, میلان, وست‌مینستر, منچستر, برلین, لندن, کومو",
+      "index": 14,
+      "subject_en": "Pliny the Elder",
+      "object_en": "Como"
+    },
+    {
+      "subject": "فریدریش ویلهلم دوم",
+      "object": "برلین",
+      "object_candidates": "ارمنستان, مادرید, تورنتو, بلفاست, وست‌مینستر, اسکاتلند, هیوستون, پاریس, کلن, برلین",
+      "index": 15,
+      "subject_en": "Frederick William II of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "بونیفاس سوم",
+      "object": "رم",
+      "object_candidates": "بروکلین, ناپل, هیوستون, کومو, مسکو, منچستر, میلان, بلگراد, پاریس, رم",
+      "index": 16,
+      "subject_en": "Boniface III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "کلودیو آبادو",
+      "object": "میلان",
+      "object_candidates": "مادرید, کلن, بلگراد, بلفاست, وین, شیکاگو, پکن, لندن, برلین, میلان",
+      "index": 17,
+      "subject_en": "Claudio Abbado",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "انریکو کاروسو",
+      "object": "ناپل",
+      "object_candidates": "کلن, رم, کومو, منچستر, وین, برلین, پاریس, اسکاتلند, هیوستون, ناپل",
+      "index": 18,
+      "subject_en": "Enrico Caruso",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "محمد ششم",
+      "object": "استانبول",
+      "object_candidates": "مادرید, وست‌مینستر, مونیخ, بلفاست, بلگراد, مسکو, ژنو, تورنتو, هیوستون, استانبول",
+      "index": 19,
+      "subject_en": "Mehmed VI",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "دنیس فارینا",
+      "object": "شیکاگو",
+      "object_candidates": "مسکو, بلفاست, تورنتو, برلین, مادرید, میلان, ارمنستان, ناپل, استانبول, شیکاگو",
+      "index": 20,
+      "subject_en": "Dennis Farina",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "مارک استرانگ",
+      "object": "لندن",
+      "object_candidates": "میلان, مادرید, بلفاست, ژنو, رم, بروکلین, تورنتو, پاریس, هیوستون, لندن",
+      "index": 21,
+      "subject_en": "Mark Strong",
+      "object_en": "London"
+    },
+    {
+      "subject": "ادوارد یکم",
+      "object": "وست‌مینستر",
+      "object_candidates": "کلن, بروکلین, مسکو, ژنو, میلان, تورنتو, وین, ارمنستان, مدینه, وست‌مینستر",
+      "index": 22,
+      "subject_en": "Edward I of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "د ویکند",
+      "object": "تورنتو",
+      "object_candidates": "منچستر, میلان, لندن, کلن, مکه, وست‌مینستر, برلین, مادرید, هیوستون, تورنتو",
+      "index": 23,
+      "subject_en": "The Weeknd",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "لری کینگ",
+      "object": "بروکلین",
+      "object_candidates": "ژنو, کومو, رم, مدینه, پاریس, برلین, کلن, مونیخ, شیکاگو, بروکلین",
+      "index": 24,
+      "subject_en": "Larry King",
+      "object_en": "Brooklyn"
+    },
+    {
+      "subject": "آرتور هاردن",
+      "object": "منچستر",
+      "object_candidates": "لندن, رم, کلن, بلفاست, اسکاتلند, مکه, استانبول, تورنتو, مسکو, منچستر",
+      "index": 25,
+      "subject_en": "Arthur Harden",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "مارکی دوساد",
+      "object": "پاریس",
+      "object_candidates": "مدینه, میلان, هیوستون, منچستر, ناپل, استانبول, تورنتو, مکه, رم, پاریس",
+      "index": 26,
+      "subject_en": "Marquis de Sade",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ژانگ زئی",
+      "object": "پکن",
+      "object_candidates": "ناپل, مدینه, شیکاگو, برلین, بلگراد, مادرید, رم, مسکو, مکه, پکن",
+      "index": 27,
+      "subject_en": "Zhang Ziyi",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "کنراد آدناور",
+      "object": "کلن",
+      "object_candidates": "بلگراد, تورنتو, ژنو, کومو, مسکو, هیوستون, میلان, لندن, مدینه, کلن",
+      "index": 28,
+      "subject_en": "Konrad Adenauer",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "فردینان دو سوسور",
+      "object": "ژنو",
+      "object_candidates": "استانبول, مونیخ, مسکو, کومو, ناپل, کلن, بلگراد, مادرید, لندن, ژنو",
+      "index": 29,
+      "subject_en": "Ferdinand de Saussure",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "واسیلی سوم (روسیه)",
+      "object": "مسکو",
+      "object_candidates": "میلان, تورنتو, مکه, برلین, رم, پکن, استانبول, مادرید, ژنو, مسکو",
+      "index": 30,
+      "subject_en": "Vasili III of Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ژرژ دوامل",
+      "object": "پاریس",
+      "object_candidates": "وین, میلان, وست‌مینستر, بلفاست, مکه, ارمنستان, منچستر, مدینه, تورنتو, پاریس",
+      "index": 31,
+      "subject_en": "Georges Duhamel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "عایشه",
+      "object": "مکه",
+      "object_candidates": "کومو, کلن, پاریس, بروکلین, بلفاست, هیوستون, اسکاتلند, وین, مادرید, مکه",
+      "index": 32,
+      "subject_en": "Aisha",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "پتر اول صربستان",
+      "object": "بلگراد",
+      "object_candidates": "وین, پکن, میلان, ژنو, ارمنستان, بروکلین, شیکاگو, ناپل, بلفاست, بلگراد",
+      "index": 33,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "بینگ کرازبی",
+      "object": "تاکوما، واشینگتن",
+      "object_candidates": "شیکاگو, هیوستون, وین, استانبول, کومو, لندن, مدینه, بروکلین, ناپل, تاکوما، واشینگتن",
+      "index": 34,
+      "subject_en": "Bing Crosby",
+      "object_en": "Tacoma"
+    }
+  ],
+  "relation_id": "P19"
+}

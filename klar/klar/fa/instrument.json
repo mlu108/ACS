@@ -1,0 +1,382 @@
+{
+  "name": "instrument",
+  "prompt_templates": [
+    "چه سازی <subject> می‌نوازد؟ پاسخ: <mask>",
+    "کدام ساز موسیقی توسط <subject> نواخته می‌شود؟ پاسخ: <mask>",
+    "چه چیزی <subject> برای خلق موسیقی استفاده می‌کند؟ پاسخ: <mask>",
+    "کدام ساز به خاطر نواختن آن <subject> شناخته شده است؟ پاسخ: <mask>",
+    "کدام ابزار موسیقی <subject> در آن مهارت دارد؟ پاسخ: <mask>",
+    " سازی که <subject> می‌نوازد نام دارد <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "نت کینگ کول",
+      "object": "پیانو",
+      "object_candidates": "ویولن, گیتار, سازدهنی, کلارینت, ویولا, پیانو",
+      "index": 4757,
+      "subject_en": "Nat King Cole",
+      "object_en": "piano"
+    },
+    {
+      "subject": "جیمی پیج",
+      "object": "ویولن",
+      "object_candidates": "گیتار, کلارینت, ویولا, پیانو, سازدهنی, ویولن",
+      "index": 4758,
+      "subject_en": "Jimmy Page",
+      "object_en": "violin"
+    },
+    {
+      "subject": "نیل یانگ",
+      "object": "سازدهنی",
+      "object_candidates": "کلارینت, ویولن, پیانو, گیتار, ویولا, سازدهنی",
+      "index": 4759,
+      "subject_en": "Neil Young",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "آرتا فرانکلین",
+      "object": "پیانو",
+      "object_candidates": "ویولن, سازدهنی, ویولا, کلارینت, گیتار, پیانو",
+      "index": 4760,
+      "subject_en": "Aretha Franklin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "لنارد برنستاین",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, ویولن, ویولا, گیتار, کلارینت, پیانو",
+      "index": 4761,
+      "subject_en": "Leonard Bernstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "اریک کلپتون",
+      "object": "ویولن",
+      "object_candidates": "ویولا, کلارینت, گیتار, پیانو, سازدهنی, ویولن",
+      "index": 4762,
+      "subject_en": "Eric Clapton",
+      "object_en": "violin"
+    },
+    {
+      "subject": "امانوئل شابریه",
+      "object": "پیانو",
+      "object_candidates": "ویولن, ویولا, سازدهنی, کلارینت, گیتار, پیانو",
+      "index": 4763,
+      "subject_en": "Emmanuel Chabrier",
+      "object_en": "piano"
+    },
+    {
+      "subject": "سرگه گاینسبورگ",
+      "object": "گیتار",
+      "object_candidates": "ویولا, کلارینت, پیانو, سازدهنی, ویولن, گیتار",
+      "index": 4764,
+      "subject_en": "Serge Gainsbourg",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "ادوارد گریگ",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, کلارینت, ویولن, ویولا, گیتار, پیانو",
+      "index": 4765,
+      "subject_en": "Edvard Grieg",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ایتسحاق پرلمان",
+      "object": "ویولن",
+      "object_candidates": "کلارینت, سازدهنی, گیتار, ویولا, پیانو, ویولن",
+      "index": 4766,
+      "subject_en": "Itzhak Perlman",
+      "object_en": "violin"
+    },
+    {
+      "subject": "جورج مارتین",
+      "object": "پیانو",
+      "object_candidates": "ویولن, ویولا, سازدهنی, کلارینت, گیتار, پیانو",
+      "index": 4767,
+      "subject_en": "George Martin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "باب دیلن",
+      "object": "سازدهنی",
+      "object_candidates": "کلارینت, ویولا, پیانو, ویولن, گیتار, سازدهنی",
+      "index": 4768,
+      "subject_en": "Bob Dylan",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "مایک شینودا",
+      "object": "گیتار",
+      "object_candidates": "ویولا, ویولن, کلارینت, پیانو, سازدهنی, گیتار",
+      "index": 4769,
+      "subject_en": "Mike Shinoda",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "جرد لتو",
+      "object": "گیتار",
+      "object_candidates": "سازدهنی, ویولن, کلارینت, پیانو, ویولا, گیتار",
+      "index": 4770,
+      "subject_en": "Jared Leto",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "ولفگانگ آمادئوس موتسارت",
+      "object": "ویولا",
+      "object_candidates": "پیانو, سازدهنی, کلارینت, ویولن, گیتار, ویولا",
+      "index": 4771,
+      "subject_en": "Wolfgang Amadeus Mozart",
+      "object_en": "viola"
+    },
+    {
+      "subject": "فیلیپ گلس",
+      "object": "پیانو",
+      "object_candidates": "ویولا, سازدهنی, ویولن, گیتار, کلارینت, پیانو",
+      "index": 4772,
+      "subject_en": "Philip Glass",
+      "object_en": "piano"
+    },
+    {
+      "subject": "جوزپه تارتینی",
+      "object": "ویولن",
+      "object_candidates": "ویولا, پیانو, گیتار, کلارینت, سازدهنی, ویولن",
+      "index": 4773,
+      "subject_en": "Giuseppe Tartini",
+      "object_en": "violin"
+    },
+    {
+      "subject": "فرانسیس پولنک",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, ویولن, ویولا, گیتار, کلارینت, پیانو",
+      "index": 4774,
+      "subject_en": "Francis Poulenc",
+      "object_en": "piano"
+    },
+    {
+      "subject": "برد دلسون",
+      "object": "گیتار",
+      "object_candidates": "ویولا, سازدهنی, ویولن, کلارینت, پیانو, گیتار",
+      "index": 4775,
+      "subject_en": "Brad Delson",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "لیدی گاگا",
+      "object": "پیانو",
+      "object_candidates": "کلارینت, سازدهنی, گیتار, ویولا, ویولن, پیانو",
+      "index": 4776,
+      "subject_en": "Lady Gaga",
+      "object_en": "piano"
+    },
+    {
+      "subject": "الویس پریسلی",
+      "object": "گیتار",
+      "object_candidates": "پیانو, ویولن, ویولا, کلارینت, سازدهنی, گیتار",
+      "index": 4777,
+      "subject_en": "Elvis Presley",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "یوهان اشتراوس پدر",
+      "object": "ویولن",
+      "object_candidates": "گیتار, پیانو, ویولا, سازدهنی, کلارینت, ویولن",
+      "index": 4778,
+      "subject_en": "Johann Strauss I",
+      "object_en": "violin"
+    },
+    {
+      "subject": "لئونارد کوهن",
+      "object": "گیتار",
+      "object_candidates": "پیانو, کلارینت, سازدهنی, ویولن, ویولا, گیتار",
+      "index": 4779,
+      "subject_en": "Leonard Cohen",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "جورج گرشوین",
+      "object": "پیانو",
+      "object_candidates": "ویولا, گیتار, ویولن, سازدهنی, کلارینت, پیانو",
+      "index": 4780,
+      "subject_en": "George Gershwin",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ارنست شوسون",
+      "object": "پیانو",
+      "object_candidates": "کلارینت, ویولن, ویولا, سازدهنی, گیتار, پیانو",
+      "index": 4781,
+      "subject_en": "Ernest Chausson",
+      "object_en": "piano"
+    },
+    {
+      "subject": "سلین دیون",
+      "object": "پیانو",
+      "object_candidates": "ویولن, ویولا, سازدهنی, گیتار, کلارینت, پیانو",
+      "index": 4782,
+      "subject_en": "Céline Dion",
+      "object_en": "piano"
+    },
+    {
+      "subject": "بروس اسپرینگستین",
+      "object": "سازدهنی",
+      "object_candidates": "کلارینت, گیتار, ویولن, پیانو, ویولا, سازدهنی",
+      "index": 4783,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "کارل چرنی",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, کلارینت, ویولن, ویولا, گیتار, پیانو",
+      "index": 4784,
+      "subject_en": "Carl Czerny",
+      "object_en": "piano"
+    },
+    {
+      "subject": "آنتونیو ویوالدی",
+      "object": "ویولن",
+      "object_candidates": "ویولا, سازدهنی, پیانو, کلارینت, گیتار, ویولن",
+      "index": 4785,
+      "subject_en": "Antonio Vivaldi",
+      "object_en": "violin"
+    },
+    {
+      "subject": "جیمی هندریکس",
+      "object": "گیتار",
+      "object_candidates": "کلارینت, ویولا, ویولن, سازدهنی, پیانو, گیتار",
+      "index": 4786,
+      "subject_en": "Jimi Hendrix",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "پل هیندمیت",
+      "object": "ویولا",
+      "object_candidates": "سازدهنی, کلارینت, گیتار, پیانو, ویولن, ویولا",
+      "index": 4787,
+      "subject_en": "Paul Hindemith",
+      "object_en": "viola"
+    },
+    {
+      "subject": "جان کولترین",
+      "object": "کلارینت",
+      "object_candidates": "گیتار, ویولن, پیانو, سازدهنی, ویولا, کلارینت",
+      "index": 4788,
+      "subject_en": "John Coltrane",
+      "object_en": "clarinet"
+    },
+    {
+      "subject": "ژرژ انسکو",
+      "object": "ویولن",
+      "object_candidates": "کلارینت, پیانو, سازدهنی, ویولا, گیتار, ویولن",
+      "index": 4789,
+      "subject_en": "George Enescu",
+      "object_en": "violin"
+    },
+    {
+      "subject": "پل مک‌کارتنی",
+      "object": "پیانو",
+      "object_candidates": "ویولن, گیتار, سازدهنی, ویولا, کلارینت, پیانو",
+      "index": 4790,
+      "subject_en": "Paul McCartney",
+      "object_en": "piano"
+    },
+    {
+      "subject": "توماسو آلبینونی",
+      "object": "ویولن",
+      "object_candidates": "گیتار, کلارینت, سازدهنی, پیانو, ویولا, ویولن",
+      "index": 4791,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "violin"
+    },
+    {
+      "subject": "روبرت شومان",
+      "object": "پیانو",
+      "object_candidates": "کلارینت, ویولا, سازدهنی, گیتار, ویولن, پیانو",
+      "index": 4792,
+      "subject_en": "Robert Schumann",
+      "object_en": "piano"
+    },
+    {
+      "subject": "آرتور روبنشتاین",
+      "object": "پیانو",
+      "object_candidates": "کلارینت, سازدهنی, ویولن, گیتار, ویولا, پیانو",
+      "index": 4793,
+      "subject_en": "Arthur Rubinstein",
+      "object_en": "piano"
+    },
+    {
+      "subject": "تلانیوس مانک",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, ویولا, گیتار, ویولن, کلارینت, پیانو",
+      "index": 4794,
+      "subject_en": "Thelonious Monk",
+      "object_en": "piano"
+    },
+    {
+      "subject": "مایک شینودا",
+      "object": "پیانو",
+      "object_candidates": "سازدهنی, ویولن, گیتار, کلارینت, ویولا, پیانو",
+      "index": 4795,
+      "subject_en": "Mike Shinoda",
+      "object_en": "piano"
+    },
+    {
+      "subject": "اریک کلپتون",
+      "object": "گیتار",
+      "object_candidates": "سازدهنی, پیانو, ویولا, کلارینت, ویولن, گیتار",
+      "index": 4796,
+      "subject_en": "Eric Clapton",
+      "object_en": "guitar"
+    },
+    {
+      "subject": "فرانتز لیست",
+      "object": "پیانو",
+      "object_candidates": "ویولن, کلارینت, گیتار, ویولا, سازدهنی, پیانو",
+      "index": 4797,
+      "subject_en": "Franz Liszt",
+      "object_en": "piano"
+    },
+    {
+      "subject": "استیوی واندر",
+      "object": "سازدهنی",
+      "object_candidates": "گیتار, ویولا, پیانو, ویولن, کلارینت, سازدهنی",
+      "index": 4798,
+      "subject_en": "Stevie Wonder",
+      "object_en": "harmonica"
+    },
+    {
+      "subject": "جرد لتو",
+      "object": "ویولن",
+      "object_candidates": "سازدهنی, ویولا, گیتار, کلارینت, پیانو, ویولن",
+      "index": 4799,
+      "subject_en": "Jared Leto",
+      "object_en": "violin"
+    },
+    {
+      "subject": "یوهانس برامس",
+      "object": "پیانو",
+      "object_candidates": "ویولا, سازدهنی, کلارینت, گیتار, ویولن, پیانو",
+      "index": 4800,
+      "subject_en": "Johannes Brahms",
+      "object_en": "piano"
+    },
+    {
+      "subject": "ری چارلز",
+      "object": "پیانو",
+      "object_candidates": "ویولن, کلارینت, سازدهنی, گیتار, ویولا, پیانو",
+      "index": 4801,
+      "subject_en": "Ray Charles",
+      "object_en": "piano"
+    },
+    {
+      "subject": "برایان می",
+      "object": "گیتار",
+      "object_candidates": "ویولن, پیانو, ویولا, سازدهنی, کلارینت, گیتار",
+      "index": 4802,
+      "subject_en": "Brian May",
+      "object_en": "guitar"
+    }
+  ],
+  "relation_id": "P1303"
+}

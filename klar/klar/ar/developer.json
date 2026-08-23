@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "أي شركة هي مطور <subject>؟ الإجابة: <mask>",
+    "من قام بتطوير <subject>? الإجابة: <mask>",
+    "ما الشركة المسؤولة عن تطوير <subject>? الإجابة: <mask>",
+    "من قام بتطوير <subject>? الإجابة: <mask>",
+    "أي منظمة مُعتَرَف بها بتطوير <subject>? الإجابة: <mask>",
+    " الشركة التي طورت <subject> تسمى <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "ماك أوس",
+      "object": "أبل",
+      "object_candidates": "بوينغ, آي‌ بي‌ إم, جوجل, أدوبي سيستمز, نوكيا, إنتل, نينتندو, مايكروسوفت, إيرباص, أبل",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آي أو إس",
+      "object": "أبل",
+      "object_candidates": "آي‌ بي‌ إم, جوجل, أدوبي سيستمز, نينتندو, بوينغ, إيرباص, نوكيا, إنتل, مايكروسوفت, أبل",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "سفاري",
+      "object": "أبل",
+      "object_candidates": "نوكيا, إيرباص, بوينغ, نينتندو, أدوبي سيستمز, جوجل, إنتل, آي‌ بي‌ إم, مايكروسوفت, أبل",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "بوست سكريبت",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "إنتل, إيرباص, بوينغ, نوكيا, جوجل, آي‌ بي‌ إم, أبل, مايكروسوفت, نينتندو, أدوبي سيستمز",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "ويندوز فيستا",
+      "object": "مايكروسوفت",
+      "object_candidates": "نينتندو, نوكيا, جوجل, أدوبي سيستمز, أبل, بوينغ, إنتل, إيرباص, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إنترنت إكسبلورر",
+      "object": "مايكروسوفت",
+      "object_candidates": "أبل, جوجل, بوينغ, آي‌ بي‌ إم, نينتندو, إيرباص, أدوبي سيستمز, نوكيا, إنتل, مايكروسوفت",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "بوينغ بي-17 القلعة الطائرة",
+      "object": "بوينغ",
+      "object_candidates": "أبل, إيرباص, نينتندو, نوكيا, جوجل, إنتل, مايكروسوفت, أدوبي سيستمز, آي‌ بي‌ إم, بوينغ",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "دايركت إكس",
+      "object": "مايكروسوفت",
+      "object_candidates": "أبل, نينتندو, بوينغ, أدوبي سيستمز, آي‌ بي‌ إم, جوجل, إيرباص, نوكيا, إنتل, مايكروسوفت",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت ويندوز",
+      "object": "مايكروسوفت",
+      "object_candidates": "نينتندو, إنتل, أدوبي سيستمز, إيرباص, أبل, جوجل, نوكيا, آي‌ بي‌ إم, بوينغ, مايكروسوفت",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إكس بوكس 360",
+      "object": "مايكروسوفت",
+      "object_candidates": "أبل, جوجل, نينتندو, أدوبي سيستمز, إيرباص, نوكيا, بوينغ, آي‌ بي‌ إم, إنتل, مايكروسوفت",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إكس بوكس ون",
+      "object": "مايكروسوفت",
+      "object_candidates": "إيرباص, أدوبي سيستمز, بوينغ, نوكيا, نينتندو, أبل, إنتل, جوجل, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إم إس-دوس",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, نوكيا, أبل, جوجل, بوينغ, إيرباص, نينتندو, آي‌ بي‌ إم, إنتل, مايكروسوفت",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "فورتران",
+      "object": "آي‌ بي‌ إم",
+      "object_candidates": "أدوبي سيستمز, إيرباص, جوجل, أبل, إنتل, نينتندو, مايكروسوفت, نوكيا, بوينغ, آي‌ بي‌ إم",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "ويندوز 1.0",
+      "object": "مايكروسوفت",
+      "object_candidates": "بوينغ, نينتندو, نوكيا, إنتل, جوجل, آي‌ بي‌ إم, أبل, إيرباص, أدوبي سيستمز, مايكروسوفت",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "نينتندو 3دي أس",
+      "object": "نينتندو",
+      "object_candidates": "نوكيا, إيرباص, بوينغ, مايكروسوفت, إنتل, أبل, أدوبي سيستمز, آي‌ بي‌ إم, جوجل, نينتندو",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "إنتل 80386",
+      "object": "إنتل",
+      "object_candidates": "أبل, آي‌ بي‌ إم, نوكيا, إيرباص, نينتندو, جوجل, مايكروسوفت, بوينغ, أدوبي سيستمز, إنتل",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "ويندوز 10",
+      "object": "مايكروسوفت",
+      "object_candidates": "نوكيا, نينتندو, آي‌ بي‌ إم, أبل, إنتل, بوينغ, إيرباص, أدوبي سيستمز, جوجل, مايكروسوفت",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت إكسل",
+      "object": "مايكروسوفت",
+      "object_candidates": "نوكيا, إنتل, بوينغ, أبل, أدوبي سيستمز, نينتندو, آي‌ بي‌ إم, جوجل, إيرباص, مايكروسوفت",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت أوفيس",
+      "object": "مايكروسوفت",
+      "object_candidates": "إنتل, أبل, أدوبي سيستمز, جوجل, نينتندو, بوينغ, إيرباص, نوكيا, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت وورد",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, بوينغ, إنتل, إيرباص, آي‌ بي‌ إم, نينتندو, نوكيا, جوجل, أبل, مايكروسوفت",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ماك أو إس",
+      "object": "أبل",
+      "object_candidates": "نوكيا, نينتندو, مايكروسوفت, إيرباص, آي‌ بي‌ إم, أدوبي سيستمز, إنتل, بوينغ, جوجل, أبل",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ويندوز 95",
+      "object": "مايكروسوفت",
+      "object_candidates": "آي‌ بي‌ إم, أدوبي سيستمز, إنتل, جوجل, نوكيا, إيرباص, أبل, نينتندو, بوينغ, مايكروسوفت",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت فيجوال ستوديو",
+      "object": "مايكروسوفت",
+      "object_candidates": "أبل, أدوبي سيستمز, آي‌ بي‌ إم, بوينغ, نينتندو, إنتل, جوجل, إيرباص, نوكيا, مايكروسوفت",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ويندوز 98",
+      "object": "مايكروسوفت",
+      "object_candidates": "بوينغ, آي‌ بي‌ إم, أبل, نينتندو, نوكيا, إيرباص, أدوبي سيستمز, جوجل, إنتل, مايكروسوفت",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "أدوبي أكروبات",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "نوكيا, أبل, مايكروسوفت, بوينغ, إيرباص, آي‌ بي‌ إم, جوجل, إنتل, نينتندو, أدوبي سيستمز",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "نسق المستندات المنقولة",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "آي‌ بي‌ إم, نينتندو, إنتل, مايكروسوفت, نوكيا, جوجل, أبل, بوينغ, إيرباص, أدوبي سيستمز",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "إنتل كور 2",
+      "object": "إنتل",
+      "object_candidates": "نوكيا, بوينغ, جوجل, نينتندو, أدوبي سيستمز, أبل, آي‌ بي‌ إم, إيرباص, مايكروسوفت, إنتل",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "أدوبي فلاش",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "إيرباص, أبل, بوينغ, نينتندو, نوكيا, إنتل, آي‌ بي‌ إم, جوجل, مايكروسوفت, أدوبي سيستمز",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "نظام تشغيل سيمبيان",
+      "object": "نوكيا",
+      "object_candidates": "إيرباص, مايكروسوفت, أبل, آي‌ بي‌ إم, إنتل, جوجل, نينتندو, بوينغ, أدوبي سيستمز, نوكيا",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "ويندوز فون",
+      "object": "مايكروسوفت",
+      "object_candidates": "جوجل, إيرباص, آي‌ بي‌ إم, نينتندو, بوينغ, أبل, إنتل, أدوبي سيستمز, نوكيا, مايكروسوفت",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "بنتيوم",
+      "object": "إنتل",
+      "object_candidates": "مايكروسوفت, آي‌ بي‌ إم, بوينغ, جوجل, نينتندو, إيرباص, أبل, أدوبي سيستمز, نوكيا, إنتل",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "أدوبي فوتوشوب",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "أبل, إنتل, بوينغ, نينتندو, نوكيا, مايكروسوفت, إيرباص, آي‌ بي‌ إم, جوجل, أدوبي سيستمز",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "كويك تايم",
+      "object": "أبل",
+      "object_candidates": "بوينغ, آي‌ بي‌ إم, إنتل, أدوبي سيستمز, جوجل, إيرباص, نينتندو, نوكيا, مايكروسوفت, أبل",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "وي يو",
+      "object": "نينتندو",
+      "object_candidates": "آي‌ بي‌ إم, أبل, جوجل, بوينغ, إنتل, نوكيا, مايكروسوفت, إيرباص, أدوبي سيستمز, نينتندو",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "ويندوز إكس بي",
+      "object": "مايكروسوفت",
+      "object_candidates": "نوكيا, بوينغ, نينتندو, إنتل, جوجل, آي‌ بي‌ إم, أبل, إيرباص, أدوبي سيستمز, مايكروسوفت",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ويندوز 2000",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, نينتندو, إنتل, إيرباص, نوكيا, أبل, جوجل, بوينغ, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إن تي إف إس",
+      "object": "مايكروسوفت",
+      "object_candidates": "إنتل, بوينغ, أبل, أدوبي سيستمز, نينتندو, إيرباص, نوكيا, جوجل, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ويندوز 8",
+      "object": "مايكروسوفت",
+      "object_candidates": "إنتل, جوجل, أدوبي سيستمز, نوكيا, نينتندو, إيرباص, بوينغ, أبل, آي‌ بي‌ إم, مايكروسوفت",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "آي بود",
+      "object": "أبل",
+      "object_candidates": "مايكروسوفت, جوجل, آي‌ بي‌ إم, إنتل, أدوبي سيستمز, إيرباص, نوكيا, نينتندو, بوينغ, أبل",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "جيميل",
+      "object": "جوجل",
+      "object_candidates": "بوينغ, إيرباص, مايكروسوفت, نوكيا, أبل, إنتل, آي‌ بي‌ إم, أدوبي سيستمز, نينتندو, جوجل",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "خرائط جوجل",
+      "object": "جوجل",
+      "object_candidates": "أبل, نوكيا, آي‌ بي‌ إم, إيرباص, نينتندو, مايكروسوفت, أدوبي سيستمز, بوينغ, إنتل, جوجل",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ويندوز لايف ماسنجر",
+      "object": "مايكروسوفت",
+      "object_candidates": "بوينغ, إنتل, أدوبي سيستمز, أبل, آي‌ بي‌ إم, جوجل, إيرباص, نينتندو, نوكيا, مايكروسوفت",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "جوجل ستريت فيو",
+      "object": "جوجل",
+      "object_candidates": "بوينغ, أدوبي سيستمز, نوكيا, مايكروسوفت, إيرباص, إنتل, آي‌ بي‌ إم, نينتندو, أبل, جوجل",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ويندوز ميديا بلاير",
+      "object": "مايكروسوفت",
+      "object_candidates": "إنتل, نينتندو, إيرباص, أدوبي سيستمز, بوينغ, آي‌ بي‌ إم, نوكيا, أبل, جوجل, مايكروسوفت",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "دوت نت فريموورك",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, إنتل, جوجل, نوكيا, إيرباص, نينتندو, آي‌ بي‌ إم, بوينغ, أبل, مايكروسوفت",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "تحديث ويندوز",
+      "object": "مايكروسوفت",
+      "object_candidates": "بوينغ, أدوبي سيستمز, إنتل, أبل, إيرباص, آي‌ بي‌ إم, نوكيا, نينتندو, جوجل, مايكروسوفت",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "بي-52 ستراتوفورتريس",
+      "object": "بوينغ",
+      "object_candidates": "إيرباص, أبل, نينتندو, آي‌ بي‌ إم, مايكروسوفت, أدوبي سيستمز, إنتل, جوجل, نوكيا, بوينغ",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "آي تيونز",
+      "object": "أبل",
+      "object_candidates": "نينتندو, مايكروسوفت, إنتل, جوجل, نوكيا, آي‌ بي‌ إم, إيرباص, أدوبي سيستمز, بوينغ, أبل",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "ويندوز 2.0",
+      "object": "مايكروسوفت",
+      "object_candidates": "أبل, نينتندو, نوكيا, بوينغ, آي‌ بي‌ إم, إنتل, إيرباص, أدوبي سيستمز, جوجل, مايكروسوفت",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "جوجل أدسنس",
+      "object": "جوجل",
+      "object_candidates": "أدوبي سيستمز, مايكروسوفت, إيرباص, أبل, نوكيا, آي‌ بي‌ إم, إنتل, نينتندو, بوينغ, جوجل",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ويندوز 7",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, نوكيا, إيرباص, أبل, نينتندو, آي‌ بي‌ إم, جوجل, بوينغ, إنتل, مايكروسوفت",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "إيرباص ايه 350 أكس دبليو بي",
+      "object": "إيرباص",
+      "object_candidates": "أبل, أدوبي سيستمز, نينتندو, إنتل, نوكيا, جوجل, بوينغ, آي‌ بي‌ إم, مايكروسوفت, إيرباص",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "بيكاسا",
+      "object": "جوجل",
+      "object_candidates": "نوكيا, نينتندو, بوينغ, إيرباص, آي‌ بي‌ إم, أدوبي سيستمز, إنتل, مايكروسوفت, أبل, جوجل",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل إيرث",
+      "object": "جوجل",
+      "object_candidates": "نينتندو, بوينغ, مايكروسوفت, آي‌ بي‌ إم, إيرباص, نوكيا, أدوبي سيستمز, إنتل, أبل, جوجل",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل بلاي",
+      "object": "جوجل",
+      "object_candidates": "إيرباص, إنتل, آي‌ بي‌ إم, نوكيا, أدوبي سيستمز, أبل, مايكروسوفت, نينتندو, بوينغ, جوجل",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "آي كلاود",
+      "object": "أبل",
+      "object_candidates": "نوكيا, نينتندو, مايكروسوفت, جوجل, أدوبي سيستمز, إنتل, إيرباص, آي‌ بي‌ إم, بوينغ, أبل",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "سيري",
+      "object": "أبل",
+      "object_candidates": "إنتل, آي‌ بي‌ إم, نوكيا, مايكروسوفت, أدوبي سيستمز, نينتندو, بوينغ, إيرباص, جوجل, أبل",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آب ستور",
+      "object": "أبل",
+      "object_candidates": "إنتل, آي‌ بي‌ إم, أدوبي سيستمز, بوينغ, نينتندو, جوجل, نوكيا, مايكروسوفت, إيرباص, أبل",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "مايكروسوفت أكسس",
+      "object": "مايكروسوفت",
+      "object_candidates": "إنتل, نينتندو, إيرباص, أبل, بوينغ, أدوبي سيستمز, جوجل, آي‌ بي‌ إم, نوكيا, مايكروسوفت",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "أبل واتش",
+      "object": "أبل",
+      "object_candidates": "جوجل, مايكروسوفت, إيرباص, إنتل, نوكيا, أدوبي سيستمز, نينتندو, آي‌ بي‌ إم, بوينغ, أبل",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "آي بوكس",
+      "object": "أبل",
+      "object_candidates": "مايكروسوفت, إيرباص, بوينغ, آي‌ بي‌ إم, نينتندو, أدوبي سيستمز, إنتل, جوجل, نوكيا, أبل",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "جوجل درايف",
+      "object": "جوجل",
+      "object_candidates": "نينتندو, آي‌ بي‌ إم, بوينغ, أدوبي سيستمز, نوكيا, مايكروسوفت, أبل, إنتل, إيرباص, جوجل",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل هانج آوتس",
+      "object": "جوجل",
+      "object_candidates": "إيرباص, مايكروسوفت, أدوبي سيستمز, نوكيا, آي‌ بي‌ إم, نينتندو, إنتل, أبل, بوينغ, جوجل",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل كاليندر",
+      "object": "جوجل",
+      "object_candidates": "مايكروسوفت, أبل, آي‌ بي‌ إم, أدوبي سيستمز, نينتندو, نوكيا, بوينغ, إنتل, إيرباص, جوجل",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "سكايب",
+      "object": "مايكروسوفت",
+      "object_candidates": "جوجل, آي‌ بي‌ إم, إنتل, إيرباص, أبل, نينتندو, بوينغ, نوكيا, أدوبي سيستمز, مايكروسوفت",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "أدوبي إنديزاين",
+      "object": "أدوبي سيستمز",
+      "object_candidates": "جوجل, أبل, آي‌ بي‌ إم, إيرباص, مايكروسوفت, نينتندو, إنتل, بوينغ, نوكيا, أدوبي سيستمز",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "مايكروسوفت ستور",
+      "object": "مايكروسوفت",
+      "object_candidates": "إيرباص, نوكيا, جوجل, آي‌ بي‌ إم, أدوبي سيستمز, نينتندو, بوينغ, أبل, إنتل, مايكروسوفت",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "المتحكم الدقيق ثمانون واحد وخمسين",
+      "object": "إنتل",
+      "object_candidates": "آي‌ بي‌ إم, إيرباص, نوكيا, نينتندو, مايكروسوفت, أبل, جوجل, أدوبي سيستمز, بوينغ, إنتل",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "بلوغر",
+      "object": "جوجل",
+      "object_candidates": "أبل, أدوبي سيستمز, نوكيا, بوينغ, مايكروسوفت, إنتل, نينتندو, إيرباص, آي‌ بي‌ إم, جوجل",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "جوجل كروم",
+      "object": "جوجل",
+      "object_candidates": "آي‌ بي‌ إم, مايكروسوفت, بوينغ, نينتندو, أبل, إنتل, نوكيا, إيرباص, أدوبي سيستمز, جوجل",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ترجمة جوجل",
+      "object": "جوجل",
+      "object_candidates": "بوينغ, أدوبي سيستمز, أبل, آي‌ بي‌ إم, مايكروسوفت, إيرباص, نوكيا, إنتل, نينتندو, جوجل",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "نظارات جوجل",
+      "object": "جوجل",
+      "object_candidates": "مايكروسوفت, بوينغ, آي‌ بي‌ إم, نوكيا, أدوبي سيستمز, نينتندو, أبل, إنتل, إيرباص, جوجل",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "ويندوز موبايل",
+      "object": "مايكروسوفت",
+      "object_candidates": "إيرباص, أدوبي سيستمز, أبل, نينتندو, بوينغ, نوكيا, إنتل, آي‌ بي‌ إم, جوجل, مايكروسوفت",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ويندوز ميلينيوم",
+      "object": "مايكروسوفت",
+      "object_candidates": "نينتندو, إنتل, بوينغ, أبل, نوكيا, إيرباص, آي‌ بي‌ إم, أدوبي سيستمز, جوجل, مايكروسوفت",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "ماينكرافت",
+      "object": "مايكروسوفت",
+      "object_candidates": "جوجل, بوينغ, نينتندو, آي‌ بي‌ إم, إيرباص, نوكيا, أبل, إنتل, أدوبي سيستمز, مايكروسوفت",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "مايكروسوفت سيكيوريتي إشانسيلز",
+      "object": "مايكروسوفت",
+      "object_candidates": "أدوبي سيستمز, أبل, بوينغ, آي‌ بي‌ إم, نوكيا, جوجل, إيرباص, نينتندو, إنتل, مايكروسوفت",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

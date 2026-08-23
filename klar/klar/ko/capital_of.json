@@ -1,0 +1,1710 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "<subject>의 수도가되는 나라 또는 주는 무엇인가요? 답은: <mask>",
+    "<subject>의 수도가 되는 곳은 어디인가요? 답은: <mask>",
+    "<subject>를 수도로하는 나라 또는 주는 무엇인가요? 답은: <mask>",
+    "<subject>를 수도로 하는 장소는 어디인가요? 답은: <mask>",
+    "<subject>가 수도로 섬기는 곳은 어디인가요? 답은: <mask>",
+    " <subject>는 <mask>라는 나라의 수도입니다"
+  ],
+  "samples": [
+    {
+      "subject": "에드먼턴",
+      "object": "앨버타주",
+      "object_candidates": "체코슬로바키아, 라오스, 구자라트주, 바이에른주, 사라왁주, 방글라데시, 텍사스주, 카타르, 프로방스, 앨버타주",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "앙카라",
+      "object": "터키",
+      "object_candidates": "잠비아, 독일, 세네갈, 폴란드, 필리핀, 라트비아, 리비아, 아칸소주, 그린란드, 터키",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "암스테르담",
+      "object": "네덜란드",
+      "object_candidates": "라트비아, 앵주, 캔자스주, 바이에른주, 네팔, 슬로베니아, 말리, 코네티컷주, 로디지아, 네덜란드",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "바쿠",
+      "object": "아제르바이잔",
+      "object_candidates": "네덜란드, 벨기에, 보츠와나, 마하라슈트라주, 덴마크, 니제르, 우크라이나, 소말리아, 예멘, 아제르바이잔",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "카이로",
+      "object": "이집트",
+      "object_candidates": "오만, 볼리비아, 나바라 지방, 카자흐스탄, 메릴랜드주, 코네티컷주, 잉글랜드, 모잠비크, 유다 왕국, 이집트",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "코펜하겐",
+      "object": "덴마크",
+      "object_candidates": "매사추세츠주, 슬로바키아, 베네수엘라, 이스라엘, 이라크, 플랑드르, 아이다호주, 방글라데시, 과테말라, 덴마크",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "바르셀로나",
+      "object": "카탈루냐 지방",
+      "object_candidates": "뤽상부르주, 콜로라도주, 토스카나주, 바레인, 벨리즈, 쓰촨성, 두바이 토후국, 요르단, 라오스, 카탈루냐 지방",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "부에노스아이레스",
+      "object": "아르헨티나",
+      "object_candidates": "카타르, 아라곤 지방, 독일, 몬테네그로, 유타주, 러시아, 볼리비아, 포르투갈, 사라왁주, 아르헨티나",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "뮌헨",
+      "object": "바이에른주",
+      "object_candidates": "퀸즐랜드주, 포르투갈, 인디애나주, 브루나이, 폴란드, 코네티컷주, 플랑드르, 우즈베키스탄, 유다 왕국, 바이에른주",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "피렌체",
+      "object": "토스카나주",
+      "object_candidates": "라이베리아, 몬테네그로, 광둥성, 세르비아, 아일랜드, 루이지애나주, 벨라루스, 인도, 노르웨이, 토스카나주",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "로마",
+      "object": "이탈리아",
+      "object_candidates": "아프가니스탄, 인도네시아, 브라질, 매사추세츠주, 몰타, 짐바브웨, 독일, 베네수엘라, 부탄, 이탈리아",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "알제",
+      "object": "알제리",
+      "object_candidates": "아이티, 벨기에, 조지아, 말라위, 기니, 파키스탄, 짐바브웨, 세네갈, 사라왁주, 알제리",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "트리폴리",
+      "object": "리비아",
+      "object_candidates": "우루과이, 프로방스, 카타르, 타지키스탄, 헝가리, 키르기스스탄, 파키스탄, 케냐, 폴란드, 리비아",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "캔버라",
+      "object": "오스트레일리아",
+      "object_candidates": "알래스카주, 미네소타주, 그린란드, 하리아나주, 퀸즐랜드주, 크로아티아, 모로코, 불가리아, 터키, 오스트레일리아",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "빈트후크",
+      "object": "나미비아",
+      "object_candidates": "벨기에, 쿠웨이트, 시리아, 네팔, 일본, 기니, 아일랜드, 필리핀, 토스카나주, 나미비아",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "이라클리오",
+      "object": "크레타",
+      "object_candidates": "포르투갈, 요르단, 에티오피아, 중화민국, 펀자브주, 알래스카주, 독일, 앵주, 인디애나주, 크레타",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "바그다드",
+      "object": "이라크",
+      "object_candidates": "로디지아, 아프가니스탄, 러시아, 네덜란드, 브라질, 쿠웨이트, 벨라루스, 모로코, 불가리아, 이라크",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "에든버러",
+      "object": "스코틀랜드",
+      "object_candidates": "텔랑가나주, 비하르주, 루이지애나주, 니카라과, 네덜란드, 아칸소주, 브라질, 유타주, 오클라호마주, 스코틀랜드",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "카불",
+      "object": "아프가니스탄",
+      "object_candidates": "웨일스, 우즈베키스탄, 카르나타카주, 예멘, 쓰촨성, 알래스카주, 카타르, 와이오밍주, 파키스탄, 아프가니스탄",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "본",
+      "object": "독일",
+      "object_candidates": "벨라루스, 텍사스주, 네팔, 필리핀, 아라곤 지방, 바이에른주, 미시간주, 아칸소주, 라이베리아, 독일",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "베를린",
+      "object": "독일",
+      "object_candidates": "그린란드, 피에몬테주, 오만, 베네수엘라, 피지, 라트비아, 중화민국, 노르웨이, 루마니아, 독일",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "포르토노보",
+      "object": "베냉",
+      "object_candidates": "유타주, 키르기스스탄, 스페인, 슬로베니아, 아라곤 지방, 텍사스주, 우루과이, 볼리비아, 우간다, 베냉",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "가보로네",
+      "object": "보츠와나",
+      "object_candidates": "루마니아, 캘리포니아주, 사르데냐, 태국, 에스토니아, 세르비아, 우루과이, 매니토바주, 하리아나주, 보츠와나",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "파리",
+      "object": "프랑스",
+      "object_candidates": "아이티, 파키스탄, 비하르주, 브라질, 쿠웨이트, 나미비아, 플로리다주, 케랄라주, 카자흐스탄, 프랑스",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "뭄바이",
+      "object": "마하라슈트라주",
+      "object_candidates": "쿠바, 매니토바주, 노르주, 사모아, 미시간주, 쓰촨성, 니제르, 테네시주, 뤽상부르주, 마하라슈트라주",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "오슬로",
+      "object": "노르웨이",
+      "object_candidates": "마다가스카르, 프랑스, 온타리오주, 터키, 쿠웨이트, 피에몬테주, 불가리아, 탄자니아, 코네티컷주, 노르웨이",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "예루살렘",
+      "object": "유다 왕국",
+      "object_candidates": "부르고뉴, 시리아, 스위스, 그린란드, 브라질, 말라위, 이집트, 태국, 와이오밍주, 유다 왕국",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "비슈케크",
+      "object": "키르기스스탄",
+      "object_candidates": "비하르주, 쓰촨성, 아르메니아, 펀자브주, 차드, 오만, 카르나타카주, 텔랑가나주, 태즈메이니아주, 키르기스스탄",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "부쿠레슈티",
+      "object": "루마니아",
+      "object_candidates": "잉글랜드, 나바라 지방, 짐바브웨, 아이다호주, 라이베리아, 태국, 알바주, 라트비아, 이집트, 루마니아",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "멜버른",
+      "object": "빅토리아주",
+      "object_candidates": "사라왁주, 앵주, 알제리, 옥스퍼드셔주, 에콰도르, 헤센주, 콜로라도주, 앨버타주, 모리셔스, 빅토리아주",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "베이징시",
+      "object": "중화민국",
+      "object_candidates": "모로코, 방글라데시, 스웨덴, 아일랜드, 윈난성, 알래스카주, 케랄라주, 이집트, 슬로바키아, 중화민국",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "충칭시",
+      "object": "중화민국",
+      "object_candidates": "와이오밍주, 하와이주, 라트비아, 앵주, 몰타, 타지키스탄, 그린란드, 태즈메이니아주, 우즈베키스탄, 중화민국",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "아바나",
+      "object": "쿠바",
+      "object_candidates": "말레이시아, 프로방스, 몰타, 루이지애나주, 윈난성, 카탈루냐 지방, 레스터셔주, 튀니지, 과테말라, 쿠바",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "덴버",
+      "object": "콜로라도주",
+      "object_candidates": "아라곤 지방, 앙골라, 시리아, 소말리아, 리비아, 핀란드, 잘츠부르크주, 온타리오주, 프로방스, 콜로라도주",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "모가디슈",
+      "object": "소말리아",
+      "object_candidates": "네덜란드, 리투아니아, 사모아, 프랑스, 우루과이, 중화민국, 가나, 이란, 윈난성, 소말리아",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "카디프",
+      "object": "웨일스",
+      "object_candidates": "카타르, 메릴랜드주, 플랑드르, 페루, 벨라루스, 노르웨이, 우간다, 이탈리아, 인도, 웨일스",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "더블린",
+      "object": "아일랜드",
+      "object_candidates": "모리셔스, 베트남, 알바니아, 인도네시아, 멕시코, 미네소타주, 기니, 프랑스, 아제르바이잔, 아일랜드",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "튀니스",
+      "object": "튀니지",
+      "object_candidates": "아칸소주, 오스트레일리아, 펀자브주, 부탄, 라오스, 캘리포니아주, 베냉, 앨버타주, 태국, 튀니지",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "리우데자네이루",
+      "object": "브라질",
+      "object_candidates": "쓰촨성, 루이지애나주, 오클라호마주, 잉글랜드 왕국, 빅토리아주, 유타주, 키프로스, 수단, 사라왁주, 브라질",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "발레타",
+      "object": "몰타",
+      "object_candidates": "가봉, 가나, 피지, 스위스, 모로코, 캄보디아, 메릴랜드주, 캔자스주, 그리스, 몰타",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "런던",
+      "object": "잉글랜드",
+      "object_candidates": "필리핀, 노르망디, 카자흐스탄, 사바주, 키프로스, 스웨덴, 구자라트주, 앨버타주, 앙골라, 잉글랜드",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "라바트",
+      "object": "모로코",
+      "object_candidates": "베네수엘라, 키프로스, 캐나다, 키르기스스탄, 타지키스탄, 세르비아, 볼리비아, 퀸즐랜드주, 몰타, 모로코",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "리가",
+      "object": "라트비아",
+      "object_candidates": "태국, 텍사스주, 라이베리아, 모리셔스, 몰타, 사라왁주, 브란덴부르크주, 쓰촨성, 잘츠부르크주, 라트비아",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "다마스쿠스",
+      "object": "시리아",
+      "object_candidates": "사바주, 태국, 매니토바주, 타지키스탄, 예멘, 우간다, 이라크, 앨버타주, 매사추세츠주, 시리아",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "다르에스살람",
+      "object": "탄자니아",
+      "object_candidates": "피에몬테주, 벨라루스, 바레인, 칠레, 쓰촨성, 과테말라, 덴마크, 보츠와나, 키르기스스탄, 탄자니아",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "런던",
+      "object": "잉글랜드 왕국",
+      "object_candidates": "광둥성, 러시아, 슬로바키아, 우크라이나, 르완다, 카타르, 에콰도르, 인디애나주, 텍사스주, 잉글랜드 왕국",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "스톡홀름",
+      "object": "스웨덴",
+      "object_candidates": "볼리비아, 토스카나주, 카자흐스탄, 짐바브웨, 이집트, 잘츠부르크주, 페루, 하와이주, 우크라이나, 스웨덴",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "헬싱키",
+      "object": "핀란드",
+      "object_candidates": "네팔, 알바주, 라이베리아, 아칸소주, 뤽상부르주, 메릴랜드주, 모로코, 벨리즈, 로디지아, 핀란드",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "프라하",
+      "object": "보헤미아",
+      "object_candidates": "잘츠부르크주, 쿠바, 벨라루스, 알제리, 알바니아, 헤센주, 아라곤 지방, 테네시주, 아제르바이잔, 보헤미아",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "인디애나폴리스",
+      "object": "인디애나주",
+      "object_candidates": "태국, 플로리다주, 코네티컷주, 인도, 파나마, 앙골라, 니카라과, 불가리아, 멕시코, 인디애나주",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "마드리드",
+      "object": "스페인",
+      "object_candidates": "르완다, 플로리다주, 리비아, 폴란드, 캘리포니아주, 프랑스, 에콰도르, 라자스탄주, 로디지아, 스페인",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "과테말라 시티",
+      "object": "과테말라",
+      "object_candidates": "차드, 아일랜드, 캐나다, 텍사스주, 바베이도스, 앙골라, 비하르주, 알바니아, 라트비아, 과테말라",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "바르샤바",
+      "object": "폴란드",
+      "object_candidates": "아이티, 터키, 잉글랜드 왕국, 바이에른주, 몰타, 두바이 토후국, 이탈리아, 고아주, 캔자스주, 폴란드",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "광저우시",
+      "object": "광둥성",
+      "object_candidates": "잠비아, 시리아, 바이에른주, 브루나이, 브라질, 쓰촨성, 우크라이나, 작센주, 알바주, 광둥성",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "드레스덴",
+      "object": "작센주",
+      "object_candidates": "아칸소주, 태국, 과테말라, 프로방스, 요르단, 잘츠부르크주, 말레이시아, 하와이주, 캐나다, 작센주",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "포르토프랭스",
+      "object": "아이티",
+      "object_candidates": "일본, 앙골라, 체코슬로바키아, 아르헨티나, 카르나타카주, 바레인, 기니, 프랑스, 마하라슈트라주, 아이티",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "아테네",
+      "object": "그리스",
+      "object_candidates": "이집트, 코네티컷주, 말리, 헝가리, 오클라호마주, 온두라스, 아르메니아, 앙골라, 잘츠부르크주, 그리스",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "호바트",
+      "object": "태즈메이니아주",
+      "object_candidates": "요르단, 세르비아, 조지아, 브라질, 뤽상부르주, 아이오와주, 파키스탄, 오클라호마주, 비하르주, 태즈메이니아주",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "탈린",
+      "object": "에스토니아",
+      "object_candidates": "펀자브주, 나바라 지방, 포르투갈, 펜실베이니아주, 필리핀, 브란덴부르크주, 피지, 모잠비크, 크로아티아, 에스토니아",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "도쿄도",
+      "object": "일본",
+      "object_candidates": "빅토리아주, 우간다, 이집트, 헝가리, 레바논, 르완다, 아프가니스탄, 중화민국, 사르데냐, 일본",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "빈",
+      "object": "오스트리아",
+      "object_candidates": "체코슬로바키아, 구자라트주, 이스라엘, 터키, 잉글랜드, 카자흐스탄, 유타주, 앙골라, 예멘, 오스트리아",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "류블랴나",
+      "object": "슬로베니아",
+      "object_candidates": "이스라엘, 세네갈, 몬테네그로, 시칠리아, 핀란드, 나이지리아, 타지키스탄, 아프가니스탄, 기니, 슬로베니아",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "예루살렘",
+      "object": "이스라엘",
+      "object_candidates": "세네갈, 베네수엘라, 텔랑가나주, 아제르바이잔, 브루나이, 헝가리, 마하라슈트라주, 옥스퍼드셔주, 텍사스주, 이스라엘",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "자카르타",
+      "object": "인도네시아",
+      "object_candidates": "모잠비크, 요르단, 캘리포니아주, 칠레, 광둥성, 오클라호마주, 브루나이, 카르나타카주, 라자스탄주, 인도네시아",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "토리노",
+      "object": "피에몬테주",
+      "object_candidates": "세네갈, 이탈리아, 유고슬라비아, 퀸즐랜드주, 몬테네그로, 고아주, 기니, 알래스카주, 온타리오주, 피에몬테주",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "나이로비",
+      "object": "케냐",
+      "object_candidates": "벨리즈, 라트비아, 라이베리아, 잉글랜드, 부탄, 펀자브주, 우즈베키스탄, 중화민국, 코네티컷주, 케냐",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "쿠알라룸푸르",
+      "object": "말레이시아",
+      "object_candidates": "인디애나주, 로디지아, 유고슬라비아, 캐나다, 중화민국, 스웨덴, 터키, 미시간주, 구자라트주, 말레이시아",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "이슬라마바드",
+      "object": "파키스탄",
+      "object_candidates": "몰타, 구자라트주, 마다가스카르, 리투아니아, 조지아, 리비아, 태국, 케냐, 벨리즈, 파키스탄",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "카트만두",
+      "object": "네팔",
+      "object_candidates": "로디지아, 알바주, 이탈리아, 에스토니아, 우즈베키스탄, 브란덴부르크주, 프로방스, 니제르, 알제리, 네팔",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "하르툼",
+      "object": "수단",
+      "object_candidates": "우크라이나, 알래스카주, 퀘벡주, 프로방스, 라이베리아, 빅토리아주, 페루, 쿠바, 케랄라주, 수단",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "빌뉴스",
+      "object": "리투아니아",
+      "object_candidates": "나바라 지방, 베냉, 알바주, 콜로라도주, 니제르, 나이지리아, 보츠와나, 하리아나주, 헤센주, 리투아니아",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "베이루트",
+      "object": "레바논",
+      "object_candidates": "필리핀, 쿠바, 케냐, 광둥성, 카탈루냐 지방, 부탄, 캐나다, 베트남, 매사추세츠주, 레바논",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "리스본",
+      "object": "포르투갈",
+      "object_candidates": "노르웨이, 짐바브웨, 멕시코, 작센주, 시칠리아, 웨일스, 라트비아, 오스트레일리아, 라이베리아, 포르투갈",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "루안다",
+      "object": "앙골라",
+      "object_candidates": "인도, 아이티, 라트비아, 일본, 크로아티아, 파키스탄, 유고슬라비아, 매니토바주, 태국, 앙골라",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "모스크바",
+      "object": "러시아",
+      "object_candidates": "태국, 마다가스카르, 케냐, 아이오와주, 퀸즐랜드주, 바레인, 아프가니스탄, 르완다, 알래스카주, 러시아",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "위니펙",
+      "object": "매니토바주",
+      "object_candidates": "폴란드, 앨버타주, 잠비아, 아라곤 지방, 아이티, 필리핀, 알바주, 중화민국, 헝가리, 매니토바주",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "릴롱궤",
+      "object": "말라위",
+      "object_candidates": "와이오밍주, 아프가니스탄, 퀸즐랜드주, 차드, 퀘벡주, 탄자니아, 폴란드, 케냐, 보헤미아, 말라위",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "멕시코시티",
+      "object": "멕시코",
+      "object_candidates": "온타리오주, 라이베리아, 아제르바이잔, 플로리다주, 구자라트주, 스페인, 아르메니아, 사르데냐, 비하르주, 멕시코",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "마푸투",
+      "object": "모잠비크",
+      "object_candidates": "파키스탄, 가나, 방글라데시, 인도네시아, 아칸소주, 앙골라, 캐나다, 니제르, 라오스, 모잠비크",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "보스턴",
+      "object": "매사추세츠주",
+      "object_candidates": "미시간주, 헝가리, 바베이도스, 알바주, 부탄, 알바니아, 스페인, 카탈루냐 지방, 키르기스스탄, 매사추세츠주",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "오타와",
+      "object": "캐나다",
+      "object_candidates": "매사추세츠주, 사라왁주, 오스트리아, 태즈메이니아주, 캘리포니아주, 알래스카주, 퀸즐랜드주, 조지아, 기니, 캐나다",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "몬테비데오",
+      "object": "우루과이",
+      "object_candidates": "미네소타주, 아이티, 로디지아, 온두라스, 아칸소주, 플로리다주, 펀자브주, 루마니아, 카타르, 우루과이",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "마나마",
+      "object": "바레인",
+      "object_candidates": "포르투갈, 피에몬테주, 아르헨티나, 텍사스주, 코네티컷주, 니제르, 라오스, 가나, 우간다, 바레인",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "벵갈루루",
+      "object": "카르나타카주",
+      "object_candidates": "아르헨티나, 카자흐스탄, 말라위, 그린란드, 캄보디아, 우즈베키스탄, 네덜란드, 사모아, 불가리아, 카르나타카주",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "부다페스트",
+      "object": "헝가리",
+      "object_candidates": "알바주, 프로방스, 노르망디, 아르메니아, 이라크, 펀자브주, 라이베리아, 매니토바주, 네덜란드, 헝가리",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "테구시갈파",
+      "object": "온두라스",
+      "object_candidates": "튀니지, 쿠웨이트, 라자스탄주, 부르고뉴, 옥스퍼드셔주, 알바주, 아칸소주, 태즈메이니아주, 노르망디, 온두라스",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "간디나가르",
+      "object": "구자라트주",
+      "object_candidates": "유타주, 크로아티아, 카탈루냐 지방, 말라위, 사르데냐, 프랑스, 아이티, 중화민국, 부르고뉴, 구자라트주",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "포드고리차",
+      "object": "몬테네그로",
+      "object_candidates": "베냉, 빅토리아주, 테네시주, 예멘, 루마니아, 에콰도르, 쓰촨성, 아이티, 잘츠부르크주, 몬테네그로",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "토론토",
+      "object": "온타리오주",
+      "object_candidates": "사모아, 바레인, 보헤미아, 불가리아, 라자스탄주, 피지, 쿠웨이트, 시칠리아, 세르비아, 온타리오주",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "파나마시티",
+      "object": "파나마",
+      "object_candidates": "펜실베이니아주, 아르헨티나, 빅토리아주, 캐나다, 레바논, 작센주, 코소보, 케냐, 스페인, 파나마",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "다카르",
+      "object": "세네갈",
+      "object_candidates": "가봉, 라트비아, 미시간주, 보츠와나, 유타주, 벨기에, 리투아니아, 텔랑가나주, 와이오밍주, 세네갈",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "라고스",
+      "object": "나이지리아",
+      "object_candidates": "퀘벡주, 코소보, 옥스퍼드셔주, 이집트, 윈난성, 스코틀랜드, 우크라이나, 베냉, 탄자니아, 나이지리아",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "방콕",
+      "object": "태국",
+      "object_candidates": "포르투갈, 크로아티아, 헝가리, 유고슬라비아, 요르단, 카르나타카주, 아이오와주, 키프로스, 라이베리아, 태국",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "산티아고",
+      "object": "칠레",
+      "object_candidates": "노르웨이, 우간다, 로디지아, 쿠웨이트, 캘리포니아주, 모로코, 인디애나주, 포르투갈, 방글라데시, 칠레",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "뉴델리",
+      "object": "인도",
+      "object_candidates": "코네티컷주, 케랄라주, 오만, 잉글랜드, 헤센주, 라자스탄주, 에콰도르, 피지, 핀란드, 인도",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "베오그라드",
+      "object": "세르비아",
+      "object_candidates": "플로리다주, 튀니지, 잉글랜드, 마하라슈트라주, 크로아티아, 비하르주, 나바라 지방, 알바주, 과테말라, 세르비아",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "칼리아리",
+      "object": "사르데냐",
+      "object_candidates": "작센주, 피에몬테주, 태즈메이니아주, 아이티, 나바라 지방, 슬로베니아, 쿠웨이트, 퀘벡주, 벨기에, 사르데냐",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "카라카스",
+      "object": "베네수엘라",
+      "object_candidates": "터키, 광둥성, 유고슬라비아, 네팔, 노르주, 우크라이나, 벨라루스, 시리아, 쓰촨성, 베네수엘라",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "니코시아",
+      "object": "키프로스",
+      "object_candidates": "코네티컷주, 그리스, 유고슬라비아, 하와이주, 멕시코, 마다가스카르, 라자스탄주, 쿠바, 아프가니스탄, 키프로스",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "키예프",
+      "object": "우크라이나",
+      "object_candidates": "알바주, 인도네시아, 소말리아, 리투아니아, 잘츠부르크주, 가나, 에티오피아, 브라질, 라오스, 우크라이나",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "타이베이시",
+      "object": "중화민국",
+      "object_candidates": "토스카나주, 스위스, 알제리, 멕시코, 작센주, 퀸즐랜드주, 시리아, 바베이도스, 잠비아, 중화민국",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "아부자",
+      "object": "나이지리아",
+      "object_candidates": "프로방스, 칠레, 우크라이나, 바베이도스, 알바니아, 가봉, 사르데냐, 그린란드, 아이티, 나이지리아",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "소피아",
+      "object": "불가리아",
+      "object_candidates": "몰타, 오클라호마주, 바베이도스, 텍사스주, 토스카나주, 라이베리아, 벨라루스, 크레타, 가봉, 불가리아",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "솔트레이크시티",
+      "object": "유타주",
+      "object_candidates": "니카라과, 터키, 카타르, 차드, 윈난성, 덴마크, 매니토바주, 빅토리아주, 베네수엘라, 유타주",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "팔레르모",
+      "object": "시칠리아",
+      "object_candidates": "캄보디아, 부르고뉴, 브루나이, 스코틀랜드, 카탈루냐 지방, 프로방스, 모로코, 브라질, 고아주, 시칠리아",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "테헤란",
+      "object": "이란",
+      "object_candidates": "벨라루스, 아칸소주, 로디지아, 빅토리아주, 유고슬라비아, 작센주, 탄자니아, 세르비아, 말레이시아, 이란",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "퀘벡",
+      "object": "퀘벡주",
+      "object_candidates": "나이지리아, 벨기에, 텔랑가나주, 보츠와나, 두바이 토후국, 아제르바이잔, 브라질, 이란, 이스라엘, 퀘벡주",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "프라하",
+      "object": "체코슬로바키아",
+      "object_candidates": "벨리즈, 이라크, 토스카나주, 중화민국, 에티오피아, 쿠웨이트, 프로방스, 수단, 알제리, 체코슬로바키아",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "다카",
+      "object": "방글라데시",
+      "object_candidates": "알바주, 키르기스스탄, 와이오밍주, 슬로베니아, 아프가니스탄, 바이에른주, 캐나다, 르완다, 가나, 방글라데시",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "브리즈번",
+      "object": "퀸즐랜드주",
+      "object_candidates": "인도네시아, 매사추세츠주, 잘츠부르크주, 슬로바키아, 세르비아, 쿠웨이트, 이란, 알바주, 마하라슈트라주, 퀸즐랜드주",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "하라레",
+      "object": "짐바브웨",
+      "object_candidates": "모로코, 독일, 나이지리아, 태즈메이니아주, 카르나타카주, 오스트레일리아, 헤센주, 벨라루스, 보헤미아, 짐바브웨",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "엑상프로방스",
+      "object": "프로방스",
+      "object_candidates": "아이티, 케랄라주, 캄보디아, 우루과이, 파나마, 터키, 차드, 토스카나주, 아이오와주, 프로방스",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "몬로비아",
+      "object": "라이베리아",
+      "object_candidates": "구자라트주, 잉글랜드, 탄자니아, 벨리즈, 아제르바이잔, 노르주, 수단, 키프로스, 프랑스, 라이베리아",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "베른",
+      "object": "스위스",
+      "object_candidates": "덴마크, 멕시코, 프랑스, 부탄, 잉글랜드, 인도네시아, 온타리오주, 알래스카주, 스웨덴, 스위스",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "아디스아바바",
+      "object": "에티오피아",
+      "object_candidates": "모리셔스, 폴란드, 잘츠부르크주, 네팔, 헝가리, 세네갈, 부탄, 아프가니스탄, 오만, 에티오피아",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "자그레브",
+      "object": "크로아티아",
+      "object_candidates": "포르투갈, 네팔, 바레인, 아이오와주, 비하르주, 벨라루스, 광둥성, 태즈메이니아주, 태국, 크로아티아",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "프놈펜",
+      "object": "캄보디아",
+      "object_candidates": "볼리비아, 체코슬로바키아, 일본, 코소보, 레스터셔주, 우즈베키스탄, 알래스카주, 브루나이, 방글라데시, 캄보디아",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "두샨베",
+      "object": "타지키스탄",
+      "object_candidates": "방글라데시, 텔랑가나주, 필리핀, 쿠바, 헤센주, 바이에른주, 사바주, 아칸소주, 토스카나주, 타지키스탄",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "랜싱",
+      "object": "미시간주",
+      "object_candidates": "시칠리아, 웨일스, 인도, 보헤미아, 우간다, 키프로스, 브루나이, 라트비아, 필리핀, 미시간주",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "쿠칭",
+      "object": "사라왁주",
+      "object_candidates": "잉글랜드 왕국, 리비아, 볼리비아, 네팔, 앵주, 프랑스, 아이다호주, 태즈메이니아주, 슬로바키아, 사라왁주",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "마닐라",
+      "object": "필리핀",
+      "object_candidates": "칠레, 가나, 매사추세츠주, 멕시코, 두바이 토후국, 스코틀랜드, 베네수엘라, 메릴랜드주, 우크라이나, 필리핀",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "웨스트민스터",
+      "object": "잉글랜드 왕국",
+      "object_candidates": "리투아니아, 칠레, 시칠리아, 태즈메이니아주, 핀란드, 과테말라, 나이지리아, 케냐, 아라곤 지방, 잉글랜드 왕국",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "키토",
+      "object": "에콰도르",
+      "object_candidates": "벨리즈, 태국, 사바주, 크로아티아, 카르나타카주, 중화민국, 캘리포니아주, 브라질, 카자흐스탄, 에콰도르",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "레스터",
+      "object": "레스터셔주",
+      "object_candidates": "퀘벡주, 슬로베니아, 아르헨티나, 아이오와주, 알바니아, 벨라루스, 체코슬로바키아, 사라왁주, 핀란드, 레스터셔주",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "쿤밍시",
+      "object": "윈난성",
+      "object_candidates": "비하르주, 스코틀랜드, 케랄라주, 알바주, 노르웨이, 온두라스, 캘리포니아주, 빅토리아주, 미네소타주, 윈난성",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "마나과",
+      "object": "니카라과",
+      "object_candidates": "크레타, 캐나다, 하와이주, 멕시코, 광둥성, 헝가리, 아칸소주, 피지, 잠비아, 니카라과",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "수크레",
+      "object": "볼리비아",
+      "object_candidates": "펜실베이니아주, 세르비아, 리비아, 알바주, 짐바브웨, 튀니지, 이집트, 우루과이, 태국, 볼리비아",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "호놀룰루",
+      "object": "하와이주",
+      "object_candidates": "벨리즈, 슬로베니아, 케랄라주, 프랑스, 빅토리아주, 앨버타주, 매니토바주, 캘리포니아주, 세네갈, 하와이주",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "비엔티안",
+      "object": "라오스",
+      "object_candidates": "기니, 매사추세츠주, 조지아, 프로방스, 사르데냐, 차드, 리비아, 콜로라도주, 그리스, 라오스",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "청두시",
+      "object": "쓰촨성",
+      "object_candidates": "유다 왕국, 알바주, 베냉, 르완다, 우간다, 고아주, 폴란드, 미시간주, 캐나다, 쓰촨성",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "사라고사",
+      "object": "아라곤 지방",
+      "object_candidates": "텔랑가나주, 몬테네그로, 터키, 유타주, 캔자스주, 뤽상부르주, 부탄, 멕시코, 우크라이나, 아라곤 지방",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "옥스퍼드",
+      "object": "옥스퍼드셔주",
+      "object_candidates": "핀란드, 레스터셔주, 아이티, 알바주, 폴란드, 나미비아, 이스라엘, 방글라데시, 알래스카주, 옥스퍼드셔주",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "찬디가르",
+      "object": "하리아나주",
+      "object_candidates": "이란, 브라질, 매니토바주, 피에몬테주, 말라위, 키르기스스탄, 잠비아, 아르메니아, 캄보디아, 하리아나주",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "니아메",
+      "object": "니제르",
+      "object_candidates": "아라곤 지방, 가봉, 베네수엘라, 피에몬테주, 벨리즈, 이란, 기니, 카자흐스탄, 러시아, 니제르",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "도하",
+      "object": "카타르",
+      "object_candidates": "우즈베키스탄, 몰타, 부탄, 인디애나주, 슬로바키아, 크레타, 일본, 펀자브주, 잉글랜드, 카타르",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "하라레",
+      "object": "로디지아",
+      "object_candidates": "루마니아, 광둥성, 피지, 몬테네그로, 말레이시아, 캔자스주, 이라크, 모로코, 크로아티아, 로디지아",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "아피아",
+      "object": "사모아",
+      "object_candidates": "잉글랜드 왕국, 방글라데시, 아이다호주, 핀란드, 캄보디아, 모로코, 볼리비아, 기니, 벨라루스, 사모아",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "브라티슬라바",
+      "object": "슬로바키아",
+      "object_candidates": "나바라 지방, 탄자니아, 아이다호주, 차드, 미시간주, 아일랜드, 인도네시아, 알바주, 일본, 슬로바키아",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "코타키나발루",
+      "object": "사바주",
+      "object_candidates": "태즈메이니아주, 오클라호마주, 플랑드르, 모로코, 노르주, 가봉, 아제르바이잔, 세네갈, 크로아티아, 사바주",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "타슈켄트",
+      "object": "우즈베키스탄",
+      "object_candidates": "유고슬라비아, 프랑스, 아이티, 미시간주, 노르웨이, 아프가니스탄, 펜실베이니아주, 앨버타주, 리투아니아, 우즈베키스탄",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "도도마",
+      "object": "탄자니아",
+      "object_candidates": "캔자스주, 방글라데시, 노르주, 크로아티아, 콜로라도주, 퀘벡주, 르완다, 요르단, 아제르바이잔, 탄자니아",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "티라나",
+      "object": "알바니아",
+      "object_candidates": "케랄라주, 프로방스, 나이지리아, 리비아, 플랑드르, 잠비아, 쓰촨성, 벨라루스, 세르비아, 알바니아",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "캄팔라",
+      "object": "우간다",
+      "object_candidates": "라트비아, 시리아, 러시아, 스위스, 테네시주, 태국, 슬로바키아, 하리아나주, 보츠와나, 우간다",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "하노이",
+      "object": "베트남",
+      "object_candidates": "오스트리아, 오만, 과테말라, 예멘, 베냉, 우즈베키스탄, 덴마크, 노르망디, 카탈루냐 지방, 베트남",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "아덴",
+      "object": "예멘",
+      "object_candidates": "페루, 라오스, 알바주, 노르망디, 러시아, 사모아, 이스라엘, 니카라과, 보헤미아, 예멘",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "루사카",
+      "object": "잠비아",
+      "object_candidates": "뤽상부르주, 태즈메이니아주, 아제르바이잔, 예멘, 에스토니아, 포르투갈, 케냐, 고아주, 인도네시아, 잠비아",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "예레반",
+      "object": "아르메니아",
+      "object_candidates": "몰타, 옥스퍼드셔주, 콜로라도주, 이라크, 이집트, 사모아, 토스카나주, 시리아, 레스터셔주, 아르메니아",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "쿠웨이트 시",
+      "object": "쿠웨이트",
+      "object_candidates": "아르메니아, 플랑드르, 작센주, 브라질, 예멘, 말레이시아, 일본, 과테말라, 우즈베키스탄, 쿠웨이트",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "포트루이스",
+      "object": "모리셔스",
+      "object_candidates": "토스카나주, 테네시주, 과테말라, 요르단, 슬로바키아, 하리아나주, 작센주, 가봉, 콜로라도주, 모리셔스",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "아크라",
+      "object": "가나",
+      "object_candidates": "와이오밍주, 캘리포니아주, 베냉, 네덜란드, 사라왁주, 이란, 캔자스주, 방글라데시, 스웨덴, 가나",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "자이푸르",
+      "object": "라자스탄주",
+      "object_candidates": "잉글랜드, 네팔, 쿠웨이트, 라오스, 리투아니아, 태국, 아르메니아, 베냉, 러시아, 라자스탄주",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "민스크",
+      "object": "벨라루스",
+      "object_candidates": "핀란드, 라트비아, 그린란드, 슬로베니아, 앨버타주, 브루나이, 독일, 노르망디, 퀘벡주, 벨라루스",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "디모인",
+      "object": "아이오와주",
+      "object_candidates": "펀자브주, 유고슬라비아, 마다가스카르, 사르데냐, 레스터셔주, 에스토니아, 바레인, 말라위, 알바니아, 아이오와주",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "파트나",
+      "object": "비하르주",
+      "object_candidates": "캐나다, 콜로라도주, 리투아니아, 오만, 파나마, 브라질, 카르나타카주, 브란덴부르크주, 아프가니스탄, 비하르주",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "배턴루지",
+      "object": "루이지애나주",
+      "object_candidates": "유다 왕국, 예멘, 덴마크, 크로아티아, 라트비아, 스위스, 온타리오주, 브란덴부르크주, 볼리비아, 루이지애나주",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "욕야카르타",
+      "object": "인도네시아",
+      "object_candidates": "인디애나주, 온두라스, 바레인, 탄자니아, 보헤미아, 우루과이, 르완다, 퀸즐랜드주, 나미비아, 인도네시아",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "누르술탄",
+      "object": "카자흐스탄",
+      "object_candidates": "사바주, 에티오피아, 파나마, 미네소타주, 스웨덴, 크로아티아, 포르투갈, 아르메니아, 가봉, 카자흐스탄",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "비스바덴",
+      "object": "헤센주",
+      "object_candidates": "카르나타카주, 아제르바이잔, 말레이시아, 라오스, 부르고뉴, 펜실베이니아주, 벨라루스, 피에몬테주, 빅토리아주, 헤센주",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "디종",
+      "object": "부르고뉴",
+      "object_candidates": "프로방스, 크로아티아, 미네소타주, 뤽상부르주, 알바니아, 나이지리아, 케냐, 하와이주, 피에몬테주, 부르고뉴",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "루앙",
+      "object": "노르망디",
+      "object_candidates": "스위스, 라트비아, 윈난성, 미시간주, 앨버타주, 쿠바, 튀니지, 인도네시아, 벨기에, 노르망디",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "오클라호마시티",
+      "object": "오클라호마주",
+      "object_candidates": "콜로라도주, 짐바브웨, 카자흐스탄, 매사추세츠주, 에스토니아, 캐나다, 멕시코, 레스터셔주, 옥스퍼드셔주, 오클라호마주",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "리틀록",
+      "object": "아칸소주",
+      "object_candidates": "중화민국, 바이에른주, 베트남, 하와이주, 알제리, 볼리비아, 앙골라, 리투아니아, 알래스카주, 아칸소주",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "은자메나",
+      "object": "차드",
+      "object_candidates": "르완다, 세네갈, 소말리아, 슬로바키아, 온타리오주, 핀란드, 나미비아, 아이티, 노르망디, 차드",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "암만",
+      "object": "요르단",
+      "object_candidates": "오스트레일리아, 프로방스, 덴마크, 과테말라, 온두라스, 나미비아, 텍사스주, 시리아, 보헤미아, 요르단",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "티루바난타푸람",
+      "object": "케랄라주",
+      "object_candidates": "요르단, 매니토바주, 소말리아, 크로아티아, 플로리다주, 스코틀랜드, 차드, 매사추세츠주, 뤽상부르주, 케랄라주",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "브리지타운",
+      "object": "바베이도스",
+      "object_candidates": "테네시주, 이탈리아, 가나, 알래스카주, 잉글랜드 왕국, 사바주, 타지키스탄, 캐나다, 옥스퍼드셔주, 바베이도스",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "두바이",
+      "object": "두바이 토후국",
+      "object_candidates": "뤽상부르주, 웨일스, 튀니지, 오스트레일리아, 펀자브주, 아르메니아, 포르투갈, 몰타, 텔랑가나주, 두바이 토후국",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "포츠담",
+      "object": "브란덴부르크주",
+      "object_candidates": "에콰도르, 나바라 지방, 쿠바, 코네티컷주, 베네수엘라, 플랑드르, 덴마크, 유타주, 아라곤 지방, 브란덴부르크주",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "안타나나리보",
+      "object": "마다가스카르",
+      "object_candidates": "플로리다주, 아이오와주, 잉글랜드 왕국, 오만, 프랑스, 가나, 태국, 스위스, 우크라이나, 마다가스카르",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "바마코",
+      "object": "말리",
+      "object_candidates": "아라곤 지방, 매사추세츠주, 부르고뉴, 피지, 에스토니아, 말라위, 칠레, 플랑드르, 피에몬테주, 말리",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "아나폴리스",
+      "object": "메릴랜드주",
+      "object_candidates": "슬로바키아, 튀니지, 슬로베니아, 텍사스주, 나미비아, 플로리다주, 노르웨이, 인도, 에스토니아, 메릴랜드주",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "하이데라바드",
+      "object": "텔랑가나주",
+      "object_candidates": "벨라루스, 알제리, 나바라 지방, 잉글랜드, 라오스, 리투아니아, 케랄라주, 레바논, 하리아나주, 텔랑가나주",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "찬디가르",
+      "object": "펀자브주",
+      "object_candidates": "구자라트주, 사모아, 마하라슈트라주, 이라크, 포르투갈, 말라위, 플랑드르, 바이에른주, 인도네시아, 펀자브주",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "부르캉브레스",
+      "object": "앵주",
+      "object_candidates": "오스트리아, 메릴랜드주, 슬로바키아, 부탄, 고아주, 베트남, 폴란드, 온두라스, 알래스카주, 앵주",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "수바",
+      "object": "피지",
+      "object_candidates": "아이오와주, 빅토리아주, 아르헨티나, 바이에른주, 광둥성, 인도, 토스카나주, 프로방스, 라자스탄주, 피지",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "해리스버그",
+      "object": "펜실베이니아주",
+      "object_candidates": "캔자스주, 베네수엘라, 이탈리아, 비하르주, 라자스탄주, 라오스, 리비아, 슬로베니아, 매니토바주, 펜실베이니아주",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "사나",
+      "object": "예멘",
+      "object_candidates": "시칠리아, 비하르주, 노르웨이, 앨버타주, 그리스, 레바논, 피지, 베냉, 하리아나주, 예멘",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "파나지",
+      "object": "고아주",
+      "object_candidates": "리비아, 르완다, 이라크, 오클라호마주, 페루, 그린란드, 그리스, 키르기스스탄, 루마니아, 고아주",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "반다르스리브가완",
+      "object": "브루나이",
+      "object_candidates": "사모아, 옥스퍼드셔주, 리비아, 몰타, 헤센주, 크로아티아, 네덜란드, 아이다호주, 가봉, 브루나이",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "샤이엔",
+      "object": "와이오밍주",
+      "object_candidates": "키프로스, 사모아, 기니, 독일, 매니토바주, 라자스탄주, 헝가리, 앙골라, 우크라이나, 와이오밍주",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "팜플로나",
+      "object": "나바라 지방",
+      "object_candidates": "요르단, 온두라스, 벨라루스, 과테말라, 부르고뉴, 칠레, 크레타, 케랄라주, 고아주, 나바라 지방",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "리브르빌",
+      "object": "가봉",
+      "object_candidates": "볼리비아, 우크라이나, 조지아, 텔랑가나주, 플랑드르, 잘츠부르크주, 잉글랜드, 캔자스주, 베트남, 가봉",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "프리슈티나",
+      "object": "코소보",
+      "object_candidates": "니제르, 스페인, 헝가리, 플로리다주, 벨라루스, 케랄라주, 필리핀, 보츠와나, 세네갈, 코소보",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "누크",
+      "object": "그린란드",
+      "object_candidates": "윈난성, 앙골라, 코네티컷주, 두바이 토후국, 루마니아, 퀘벡주, 베네수엘라, 차드, 독일, 그린란드",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "윈체스터",
+      "object": "잉글랜드 왕국",
+      "object_candidates": "그리스, 일본, 파키스탄, 인도, 가나, 체코슬로바키아, 캘리포니아주, 웨일스, 카탈루냐 지방, 잉글랜드 왕국",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "베오그라드",
+      "object": "유고슬라비아",
+      "object_candidates": "부탄, 이탈리아, 코소보, 바이에른주, 나바라 지방, 크레타, 잠비아, 오스트레일리아, 리투아니아, 유고슬라비아",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "하트퍼드",
+      "object": "코네티컷주",
+      "object_candidates": "우크라이나, 사바주, 중화민국, 네덜란드, 콜로라도주, 노르웨이, 말라위, 매니토바주, 쿠웨이트, 코네티컷주",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "리마",
+      "object": "페루",
+      "object_candidates": "베네수엘라, 우즈베키스탄, 와이오밍주, 사바주, 스위스, 모리셔스, 카탈루냐 지방, 예멘, 매사추세츠주, 페루",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "코나크리",
+      "object": "기니",
+      "object_candidates": "오만, 프랑스, 아이티, 캐나다, 나미비아, 르완다, 가봉, 아이오와주, 브라질, 기니",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "주노",
+      "object": "알래스카주",
+      "object_candidates": "스코틀랜드, 노르주, 옥스퍼드셔주, 오스트레일리아, 비하르주, 탄자니아, 인도, 펀자브주, 헤센주, 알래스카주",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "벨모판",
+      "object": "벨리즈",
+      "object_candidates": "인도, 중화민국, 잉글랜드, 에콰도르, 노르망디, 폴란드, 미시간주, 기니, 마다가스카르, 벨리즈",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "새크라멘토",
+      "object": "캘리포니아주",
+      "object_candidates": "브루나이, 모잠비크, 슬로바키아, 퀘벡주, 오스트레일리아, 이스라엘, 펀자브주, 칠레, 스웨덴, 캘리포니아주",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "시티오브런던",
+      "object": "잉글랜드 왕국",
+      "object_candidates": "태국, 벨리즈, 아이오와주, 카타르, 플로리다주, 헝가리, 가나, 사르데냐, 유다 왕국, 잉글랜드 왕국",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "키갈리",
+      "object": "르완다",
+      "object_candidates": "펜실베이니아주, 아르헨티나, 캔자스주, 가봉, 비하르주, 나바라 지방, 부탄, 노르망디, 태즈메이니아주, 르완다",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "브뤼셀 시",
+      "object": "벨기에",
+      "object_candidates": "라오스, 오클라호마주, 중화민국, 네팔, 이탈리아, 나바라 지방, 프랑스, 과테말라, 고아주, 벨기에",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "팀부",
+      "object": "부탄",
+      "object_candidates": "인도, 덴마크, 베트남, 헝가리, 헤센주, 말라위, 체코슬로바키아, 태즈메이니아주, 뤽상부르주, 부탄",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "나플리오",
+      "object": "그리스",
+      "object_candidates": "터키, 텔랑가나주, 라이베리아, 잉글랜드, 태즈메이니아주, 가나, 브라질, 나이지리아, 스페인, 그리스",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "알바이울리아",
+      "object": "알바주",
+      "object_candidates": "소말리아, 헤센주, 스웨덴, 인도네시아, 오만, 우크라이나, 태즈메이니아주, 그리스, 폴란드, 알바주",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "보이시",
+      "object": "아이다호주",
+      "object_candidates": "르완다, 뤽상부르주, 로디지아, 옥스퍼드셔주, 벨라루스, 우크라이나, 이라크, 파나마, 플로리다주, 아이다호주",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "내슈빌",
+      "object": "테네시주",
+      "object_candidates": "나이지리아, 바이에른주, 퀘벡주, 방글라데시, 네덜란드, 잉글랜드 왕국, 펀자브주, 에티오피아, 레바논, 테네시주",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "아를롱",
+      "object": "뤽상부르주",
+      "object_candidates": "그리스, 보츠와나, 오클라호마주, 노르망디, 카탈루냐 지방, 유다 왕국, 바베이도스, 카르나타카주, 파키스탄, 뤽상부르주",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "잘츠부르크",
+      "object": "잘츠부르크주",
+      "object_candidates": "카탈루냐 지방, 캘리포니아주, 가나, 탄자니아, 나이지리아, 웨일스, 노르주, 텔랑가나주, 구자라트주, 잘츠부르크주",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "오스틴",
+      "object": "텍사스주",
+      "object_candidates": "짐바브웨, 아프가니스탄, 비하르주, 타지키스탄, 아르헨티나, 퀘벡주, 루이지애나주, 우크라이나, 인디애나주, 텍사스주",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "세인트폴",
+      "object": "미네소타주",
+      "object_candidates": "작센주, 헤센주, 파나마, 유타주, 라이베리아, 유고슬라비아, 슬로바키아, 덴마크, 체코슬로바키아, 미네소타주",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "무스카트",
+      "object": "오만",
+      "object_candidates": "불가리아, 노르웨이, 탄자니아, 캘리포니아주, 잉글랜드, 바레인, 우간다, 브루나이, 나바라 지방, 오만",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "탤러해시",
+      "object": "플로리다주",
+      "object_candidates": "이라크, 사바주, 헝가리, 아제르바이잔, 캐나다, 라트비아, 바레인, 케랄라주, 세르비아, 플로리다주",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "트빌리시",
+      "object": "조지아",
+      "object_candidates": "케냐, 인도, 태국, 체코슬로바키아, 인디애나주, 바레인, 시리아, 앨버타주, 피지, 조지아",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "브뤼셀 시",
+      "object": "플랑드르",
+      "object_candidates": "케랄라주, 앙골라, 크로아티아, 윈난성, 알제리, 캐나다, 퀘벡주, 페루, 매사추세츠주, 플랑드르",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "헤브론",
+      "object": "유다 왕국",
+      "object_candidates": "사르데냐, 칠레, 과테말라, 바이에른주, 토스카나주, 작센주, 볼리비아, 하와이주, 온타리오주, 유다 왕국",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "릴",
+      "object": "노르주",
+      "object_candidates": "하리아나주, 에스토니아, 오스트리아, 콜로라도주, 바베이도스, 짐바브웨, 모리셔스, 작센주, 벨리즈, 노르주",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "토피카",
+      "object": "캔자스주",
+      "object_candidates": "아르메니아, 유고슬라비아, 스페인, 오스트리아, 쿠바, 앙골라, 가봉, 캄보디아, 아프가니스탄, 캔자스주",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "산티아고데콤포스텔라",
+      "object": "갈리시아 지방",
+      "object_candidates": "리비아, 잘츠부르크주, 노르웨이, 튀니지, 텔랑가나주, 알래스카주, 라자스탄주, 벨리즈, 토스카나주, 갈리시아 지방",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

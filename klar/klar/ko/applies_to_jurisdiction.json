@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "<subject>를 법적 용어로 사용하는 나라는 어디인가요? 대답은: <mask>입니다.",
+    "<subject>가 법적 용어로 사용되는 관할권은 어디인가요? 대답은: <mask>입니다.",
+    "법적 용어 <subject>이(가) 적용되는 곳은 어디인가요? 대답은: <mask>입니다.",
+    "어떤 법적 단체가 <subject>을(를) 사용합니까? 대답은: <mask>입니다.",
+    "<subject>가 법적 용어로 인정받는 지역은 어디인가요? 대답은: <mask>입니다.",
+    " <subject>가 적용되는 관할권은 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "프랑스의 대통령",
+      "object": "프랑스",
+      "object_candidates": "소말리아, 스위스, 루마니아, 싱가포르, 노르웨이, 쿠바, 리투아니아, 중화민국, 모나코, 프랑스",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "캐나다의 총리",
+      "object": "캐나다",
+      "object_candidates": "우크라이나, 멕시코, 소말리아, 모나코, 터키, 아일랜드, 일본, 이라크, 네덜란드, 캐나다",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "오스트레일리아 노동당",
+      "object": "오스트레일리아",
+      "object_candidates": "포르투갈, 캐나다, 오스트리아, 리비아, 노르웨이, 모나코, 이탈리아, 핀란드, 쿠바, 오스트레일리아",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "멕시코의 대통령",
+      "object": "멕시코",
+      "object_candidates": "자메이카, 쿠바, 말레이시아, 스위스, 불가리아, 이탈리아, 덴마크, 캐나다, 프랑스, 멕시코",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "독일의 총리",
+      "object": "독일",
+      "object_candidates": "불가리아, 노르웨이, 리비아, 크로아티아, 포르투갈, 이란, 덴마크, 벨라루스, 필리핀, 독일",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "독일연방공화국 기본법",
+      "object": "독일",
+      "object_candidates": "스위스, 베트남, 알바니아, 포르투갈, 루마니아, 오스트레일리아, 오스트리아, 리투아니아, 이라크, 독일",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "캐나다 의회",
+      "object": "캐나다",
+      "object_candidates": "불가리아, 노르웨이, 이탈리아, 일본, 쿠바, 포르투갈, 아이티, 베트남, 벨라루스, 캐나다",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "로크 사바",
+      "object": "인도",
+      "object_candidates": "프랑스, 오스트리아, 일본, 싱가포르, 파키스탄, 우크라이나, 자메이카, 러시아, 아르헨티나, 인도",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "크네셋",
+      "object": "이스라엘",
+      "object_candidates": "베트남, 알바니아, 리비아, 필리핀, 독일, 크로아티아, 스웨덴, 마카오, 이라크, 이스라엘",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "일본의 내각총리대신",
+      "object": "일본",
+      "object_candidates": "덴마크, 터키, 멕시코, 스웨덴, 크로아티아, 이탈리아, 네덜란드, 중화민국, 마카오, 일본",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "우아크타런",
+      "object": "아일랜드",
+      "object_candidates": "캐나다, 벨라루스, 네덜란드, 리투아니아, 멕시코, 스웨덴, 인도, 파키스탄, 리비아, 아일랜드",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "오스트레일리아 달러",
+      "object": "오스트레일리아",
+      "object_candidates": "아이티, 중화민국, 네덜란드, 마카오, 루마니아, 리투아니아, 말레이시아, 덴마크, 자메이카, 오스트레일리아",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "파키스탄의 대통령",
+      "object": "파키스탄",
+      "object_candidates": "베트남, 스웨덴, 볼리비아, 싱가포르, 터키, 덴마크, 포르투갈, 캐나다, 이란, 파키스탄",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "러시아의 대통령",
+      "object": "러시아",
+      "object_candidates": "베트남, 인도, 쿠바, 프랑스, 루마니아, 핀란드, 캐나다, 싱가포르, 파키스탄, 러시아",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "오스트리아의 총리",
+      "object": "오스트리아",
+      "object_candidates": "스페인, 필리핀, 포르투갈, 볼리비아, 인도, 벨라루스, 루마니아, 캐나다, 일본, 오스트리아",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "스웨덴 의회",
+      "object": "스웨덴",
+      "object_candidates": "알바니아, 싱가포르, 우크라이나, 베트남, 네덜란드, 말레이시아, 프랑스, 모나코, 핀란드, 스웨덴",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "스페인의 국기",
+      "object": "스페인",
+      "object_candidates": "볼리비아, 멕시코, 노르웨이, 이라크, 핀란드, 아르헨티나, 캐나다, 네덜란드, 베트남, 스페인",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "프랑스의 국기",
+      "object": "프랑스",
+      "object_candidates": "파키스탄, 아이티, 오스트리아, 싱가포르, 러시아, 리투아니아, 벨라루스, 베트남, 독일, 프랑스",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "우크라이나의 대통령",
+      "object": "우크라이나",
+      "object_candidates": "네덜란드, 멕시코, 이스라엘, 벨라루스, 터키, 스페인, 리투아니아, 오스트레일리아, 노르웨이, 우크라이나",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "프랑스의 총리",
+      "object": "프랑스",
+      "object_candidates": "이라크, 파키스탄, 포르투갈, 터키, 필리핀, 크로아티아, 네덜란드, 싱가포르, 인도, 프랑스",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "덴마크의 국기",
+      "object": "덴마크",
+      "object_candidates": "스페인, 일본, 이라크, 노르웨이, 포르투갈, 이스라엘, 싱가포르, 터키, 캐나다, 덴마크",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "독일 연방의회",
+      "object": "독일",
+      "object_candidates": "소말리아, 아일랜드, 멕시코, 스웨덴, 일본, 리비아, 캐나다, 인도, 이스라엘, 독일",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "아일랜드의 국기",
+      "object": "아일랜드",
+      "object_candidates": "리투아니아, 필리핀, 포르투갈, 쿠바, 프랑스, 볼리비아, 모나코, 이란, 파키스탄, 아일랜드",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "오스트리아의 대통령",
+      "object": "오스트리아",
+      "object_candidates": "러시아, 오스트레일리아, 베트남, 리투아니아, 이스라엘, 파키스탄, 자메이카, 터키, 핀란드, 오스트리아",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "파키스탄의 총리",
+      "object": "파키스탄",
+      "object_candidates": "말레이시아, 아르헨티나, 오스트레일리아, 노르웨이, 베트남, 자메이카, 싱가포르, 이스라엘, 이란, 파키스탄",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "독일의 대통령",
+      "object": "독일",
+      "object_candidates": "볼리비아, 리투아니아, 마카오, 쿠바, 노르웨이, 모나코, 벨라루스, 불가리아, 러시아, 독일",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "스웨덴의 총리",
+      "object": "스웨덴",
+      "object_candidates": "싱가포르, 아일랜드, 캐나다, 독일, 네덜란드, 스위스, 핀란드, 스페인, 덴마크, 스웨덴",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "프랑스 국민의회",
+      "object": "프랑스",
+      "object_candidates": "터키, 스위스, 쿠바, 멕시코, 덴마크, 말레이시아, 노르웨이, 중화민국, 오스트리아, 프랑스",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "스위스의 국기",
+      "object": "스위스",
+      "object_candidates": "필리핀, 볼리비아, 러시아, 자메이카, 오스트리아, 포르투갈, 아일랜드, 이란, 벨라루스, 스위스",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "러시아의 총리",
+      "object": "러시아",
+      "object_candidates": "아이티, 우크라이나, 말레이시아, 스위스, 스페인, 포르투갈, 이탈리아, 자메이카, 쿠바, 러시아",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "싱가포르의 국기",
+      "object": "싱가포르",
+      "object_candidates": "포르투갈, 볼리비아, 독일, 마카오, 소말리아, 베트남, 오스트리아, 덴마크, 불가리아, 싱가포르",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "프랑스 상원",
+      "object": "프랑스",
+      "object_candidates": "핀란드, 덴마크, 포르투갈, 소말리아, 파키스탄, 말레이시아, 쿠바, 이란, 중화민국, 프랑스",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "우크라이나의 총리",
+      "object": "우크라이나",
+      "object_candidates": "이스라엘, 러시아, 쿠바, 핀란드, 터키, 프랑스, 소말리아, 모나코, 베트남, 우크라이나",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "러시아의 국기",
+      "object": "러시아",
+      "object_candidates": "프랑스, 마카오, 벨라루스, 불가리아, 인도, 오스트레일리아, 아일랜드, 스위스, 이탈리아, 러시아",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "캐나다의 국기",
+      "object": "캐나다",
+      "object_candidates": "볼리비아, 마카오, 핀란드, 리비아, 아이티, 인도, 벨라루스, 오스트레일리아, 이란, 캐나다",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "루마니아의 대통령",
+      "object": "루마니아",
+      "object_candidates": "이란, 프랑스, 멕시코, 이탈리아, 중화민국, 말레이시아, 쿠바, 아이티, 아일랜드, 루마니아",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "네덜란드의 국기",
+      "object": "네덜란드",
+      "object_candidates": "스웨덴, 소말리아, 싱가포르, 오스트리아, 볼리비아, 포르투갈, 벨라루스, 이라크, 오스트레일리아, 네덜란드",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "말레이시아의 총리",
+      "object": "말레이시아",
+      "object_candidates": "스페인, 베트남, 이란, 이스라엘, 리투아니아, 핀란드, 불가리아, 포르투갈, 덴마크, 말레이시아",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "자메이카의 국기",
+      "object": "자메이카",
+      "object_candidates": "크로아티아, 말레이시아, 독일, 이탈리아, 스위스, 오스트레일리아, 불가리아, 스페인, 모나코, 자메이카",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "아르헨티나의 국기",
+      "object": "아르헨티나",
+      "object_candidates": "자메이카, 노르웨이, 네덜란드, 프랑스, 리투아니아, 이스라엘, 오스트레일리아, 인도, 불가리아, 아르헨티나",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "노르웨이의 국기",
+      "object": "노르웨이",
+      "object_candidates": "리투아니아, 캐나다, 모나코, 이란, 독일, 오스트레일리아, 스웨덴, 오스트리아, 중화민국, 노르웨이",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "스페인 하원",
+      "object": "스페인",
+      "object_candidates": "이스라엘, 이라크, 러시아, 리투아니아, 필리핀, 덴마크, 파키스탄, 볼리비아, 우크라이나, 스페인",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "일본 천황",
+      "object": "일본",
+      "object_candidates": "스웨덴, 파키스탄, 크로아티아, 리투아니아, 터키, 필리핀, 아일랜드, 루마니아, 모나코, 일본",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "리투아니아의 국기",
+      "object": "리투아니아",
+      "object_candidates": "아이티, 스위스, 러시아, 이스라엘, 말레이시아, 볼리비아, 네덜란드, 스페인, 일본, 리투아니아",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "불가리아의 국기",
+      "object": "불가리아",
+      "object_candidates": "모나코, 벨라루스, 멕시코, 알바니아, 스웨덴, 우크라이나, 프랑스, 터키, 네덜란드, 불가리아",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "이라크의 대통령",
+      "object": "이라크",
+      "object_candidates": "이란, 터키, 아이티, 싱가포르, 크로아티아, 말레이시아, 핀란드, 필리핀, 베트남, 이라크",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "터키의 국기",
+      "object": "터키",
+      "object_candidates": "캐나다, 싱가포르, 마카오, 일본, 이라크, 말레이시아, 아르헨티나, 스웨덴, 볼리비아, 터키",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "말레이시아의 국기",
+      "object": "말레이시아",
+      "object_candidates": "마카오, 볼리비아, 스위스, 벨라루스, 루마니아, 러시아, 아이티, 자메이카, 노르웨이, 말레이시아",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "벨라루스의 국기",
+      "object": "벨라루스",
+      "object_candidates": "덴마크, 독일, 러시아, 멕시코, 스위스, 인도, 스웨덴, 불가리아, 마카오, 벨라루스",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "쿠바의 국기",
+      "object": "쿠바",
+      "object_candidates": "루마니아, 아일랜드, 멕시코, 중화민국, 오스트리아, 말레이시아, 파키스탄, 프랑스, 마카오, 쿠바",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "베트남의 국기",
+      "object": "베트남",
+      "object_candidates": "핀란드, 파키스탄, 인도, 싱가포르, 오스트레일리아, 루마니아, 벨라루스, 중화민국, 모나코, 베트남",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "볼리비아의 국기",
+      "object": "볼리비아",
+      "object_candidates": "스위스, 인도, 이스라엘, 오스트레일리아, 중화민국, 루마니아, 러시아, 파키스탄, 핀란드, 볼리비아",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "인도의 국기",
+      "object": "인도",
+      "object_candidates": "모나코, 중화민국, 네덜란드, 스웨덴, 리비아, 크로아티아, 마카오, 소말리아, 리투아니아, 인도",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "마카오 파타카",
+      "object": "마카오",
+      "object_candidates": "아이티, 멕시코, 오스트레일리아, 네덜란드, 불가리아, 노르웨이, 싱가포르, 알바니아, 오스트리아, 마카오",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "모나코의 국기",
+      "object": "모나코",
+      "object_candidates": "터키, 중화민국, 이란, 핀란드, 인도, 덴마크, 벨라루스, 이라크, 리비아, 모나코",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "소말리아의 국기",
+      "object": "소말리아",
+      "object_candidates": "크로아티아, 스페인, 터키, 말레이시아, 불가리아, 네덜란드, 프랑스, 노르웨이, 리비아, 소말리아",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "이스라엘의 대통령",
+      "object": "이스라엘",
+      "object_candidates": "독일, 포르투갈, 리투아니아, 불가리아, 자메이카, 일본, 터키, 루마니아, 중화민국, 이스라엘",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "스웨덴의 국기",
+      "object": "스웨덴",
+      "object_candidates": "캐나다, 노르웨이, 벨라루스, 리투아니아, 베트남, 스페인, 루마니아, 알바니아, 중화민국, 스웨덴",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "중화민국의 국기",
+      "object": "중화민국",
+      "object_candidates": "스위스, 일본, 벨라루스, 리투아니아, 베트남, 마카오, 인도, 아이티, 아일랜드, 중화민국",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "오스트레일리아의 국기",
+      "object": "오스트레일리아",
+      "object_candidates": "필리핀, 이라크, 아르헨티나, 인도, 포르투갈, 캐나다, 이스라엘, 독일, 모나코, 오스트레일리아",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "우크라이나의 국기",
+      "object": "우크라이나",
+      "object_candidates": "핀란드, 터키, 덴마크, 인도, 독일, 오스트리아, 아일랜드, 이스라엘, 포르투갈, 우크라이나",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "벨라루스의 대통령",
+      "object": "벨라루스",
+      "object_candidates": "소말리아, 이스라엘, 인도, 불가리아, 스위스, 일본, 아르헨티나, 덴마크, 프랑스, 벨라루스",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "아이티의 국기",
+      "object": "아이티",
+      "object_candidates": "아일랜드, 모나코, 루마니아, 오스트리아, 아르헨티나, 베트남, 일본, 소말리아, 볼리비아, 아이티",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "멕시코의 국장",
+      "object": "멕시코",
+      "object_candidates": "리투아니아, 쿠바, 이스라엘, 리비아, 노르웨이, 오스트리아, 이란, 마카오, 스웨덴, 멕시코",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "핀란드의 국기",
+      "object": "핀란드",
+      "object_candidates": "프랑스, 캐나다, 불가리아, 스페인, 필리핀, 독일, 벨라루스, 러시아, 소말리아, 핀란드",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "크로아티아의 국기",
+      "object": "크로아티아",
+      "object_candidates": "독일, 포르투갈, 자메이카, 아르헨티나, 말레이시아, 노르웨이, 캐나다, 소말리아, 아이티, 크로아티아",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "핀란드의 대통령",
+      "object": "핀란드",
+      "object_candidates": "불가리아, 이라크, 싱가포르, 이탈리아, 중화민국, 크로아티아, 캐나다, 말레이시아, 리투아니아, 핀란드",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "알바니아의 국기",
+      "object": "알바니아",
+      "object_candidates": "이스라엘, 파키스탄, 벨라루스, 소말리아, 아이티, 터키, 스웨덴, 스위스, 덴마크, 알바니아",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "이탈리아의 국기",
+      "object": "이탈리아",
+      "object_candidates": "이스라엘, 이란, 일본, 베트남, 스웨덴, 중화민국, 볼리비아, 필리핀, 핀란드, 이탈리아",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "독일의 국기",
+      "object": "독일",
+      "object_candidates": "러시아, 스웨덴, 필리핀, 리비아, 스페인, 아일랜드, 인도, 스위스, 싱가포르, 독일",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "리비아의 국기",
+      "object": "리비아",
+      "object_candidates": "오스트레일리아, 불가리아, 모나코, 파키스탄, 말레이시아, 아이티, 이스라엘, 싱가포르, 루마니아, 리비아",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "필리핀의 국기",
+      "object": "필리핀",
+      "object_candidates": "네덜란드, 리비아, 이스라엘, 벨라루스, 아르헨티나, 쿠바, 중화민국, 오스트리아, 스웨덴, 필리핀",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "독일",
+      "object_candidates": "캐나다, 파키스탄, 일본, 이탈리아, 소말리아, 아이티, 우크라이나, 핀란드, 프랑스, 독일",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "이란의 대통령",
+      "object": "이란",
+      "object_candidates": "러시아, 이탈리아, 스위스, 오스트레일리아, 크로아티아, 스페인, 알바니아, 싱가포르, 인도, 이란",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "파키스탄의 국기",
+      "object": "파키스탄",
+      "object_candidates": "스페인, 스웨덴, 싱가포르, 볼리비아, 아이티, 캐나다, 포르투갈, 중화민국, 리투아니아, 파키스탄",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "포르투갈의 국기",
+      "object": "포르투갈",
+      "object_candidates": "독일, 쿠바, 오스트레일리아, 아일랜드, 알바니아, 싱가포르, 핀란드, 이스라엘, 러시아, 포르투갈",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "그리스의 국기",
+      "object": "그리스",
+      "object_candidates": "이라크, 오스트리아, 크로아티아, 이스라엘, 캐나다, 멕시코, 인도, 네덜란드, 벨라루스, 그리스",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "멕시코의 국기",
+      "object": "멕시코",
+      "object_candidates": "러시아, 싱가포르, 스페인, 중화민국, 알바니아, 이라크, 네덜란드, 아일랜드, 이탈리아, 멕시코",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "일본의 국기",
+      "object": "일본",
+      "object_candidates": "인도, 터키, 프랑스, 핀란드, 러시아, 멕시코, 벨라루스, 루마니아, 싱가포르, 일본",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

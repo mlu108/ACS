@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "<subject>의 수도는 어디에 위치합니까? 대답은: <mask>",
+    "<subject>의 수도는 어디에 있습니까? 대답은: <mask>",
+    "<subject>의 수도로 무슨 도시가 있습니까? 대답은: <mask>",
+    "<subject>의 수도 도시를 이름짓으십시오. 대답은: <mask>",
+    "<subject>는 어디에 수도가 있습니까? 대답은: <mask>",
+    " <subject>의 수도는 <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "아제르바이잔",
+      "object": "바쿠",
+      "object_candidates": "과달라하라, 콜롬보, 피어, 조지타운, 베이루트, 알레포, 링컨, 다윈, 바빌론, 바쿠",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "네브래스카주",
+      "object": "링컨",
+      "object_candidates": "암스테르담, 델리, 윈체스터, 덴버, 호바트, 툴루즈, 테살로니키, 소피아, 엑서터, 링컨",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "햄프셔주",
+      "object": "윈체스터",
+      "object_candidates": "아나폴리스, 퍼스, 베네치아, 팔레르모, 니스, 앙카라, 자카르타, 내슈빌, 해밀턴, 윈체스터",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "알렉산드리아주",
+      "object": "알렉산드리아",
+      "object_candidates": "바그다드, 도쿄도, 벨파스트, 베르겐, 리버사이드, 바르셀로나, 칼라일, 오슬로, 교토시, 알렉산드리아",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "이탈리아 왕국",
+      "object": "피렌체",
+      "object_candidates": "아나폴리스, 킹스턴, 위니펙, 덴버, 윈체스터, 링컨, 부쿠레슈티, 웨스트민스터, 톨레도, 피렌체",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "핀란드 대공국",
+      "object": "헬싱키",
+      "object_candidates": "에도, 마드리드, 카잔, 트리폴리, 런던, 크라이스트처치, 마인츠, 빈, 베른, 헬싱키",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "텔랑가나주",
+      "object": "하이데라바드",
+      "object_candidates": "베네치아, 브라티슬라바, 애들레이드, 몽고메리, 뭄바이, 탈린, 오타와, 헬싱키, 니스, 하이데라바드",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "사우스오스트레일리아주",
+      "object": "애들레이드",
+      "object_candidates": "서울특별시, 찰스턴, 로잔, 카디프, 멤피스, 헤리퍼드, 티라나, 에도, 나폴리, 애들레이드",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "스코틀랜드 왕국",
+      "object": "에든버러",
+      "object_candidates": "러크나우, 프로비던스, 티라나, 투르, 바리, 앙카라, 샤이엔, 사라예보, 자그레브, 에든버러",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "폴란드 제2공화국",
+      "object": "바르샤바",
+      "object_candidates": "하트퍼드, 토론토, 바쿠, 콘스탄티노폴리스, 빌뉴스, 다윈, 킹스턴, 마이애미, 옥스퍼드, 바르샤바",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "캔터베리 지방",
+      "object": "크라이스트처치",
+      "object_candidates": "호바트, 제노바, 캔버라, 비즈마크, 브뤼셀 시, 베이징시, 발렌시아, 마인츠, 헤리퍼드, 크라이스트처치",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "프랑스 왕국",
+      "object": "파리",
+      "object_candidates": "리스본, 웨스트민스터, 브뤼셀 시, 오타와, 드레스덴, 하이데라바드, 뮌헨, 첸나이, 베이징시, 파리",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "앨버타주",
+      "object": "에드먼턴",
+      "object_candidates": "코크, 핼리팩스, 보이시, 브레스트, 바그다드, 웨스트민스터, 델리, 탈린, 애들레이드, 에드먼턴",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "독일",
+      "object": "베를린",
+      "object_candidates": "아나폴리스, 류블랴나, 팔레르모, 나폴리, 예루살렘, 오슬로, 베른, 이스탄불, 카잔, 베를린",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "인디애나주",
+      "object": "인디애나폴리스",
+      "object_candidates": "콜카타, 첸나이, 컬럼비아, 오데사, 타이베이시, 아바나, 두바이, 프라하, 케임브리지, 인디애나폴리스",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "프랑스 제2제국",
+      "object": "파리",
+      "object_candidates": "코펜하겐, 랜싱, 볼로냐, 애들레이드, 오클랜드, 베르겐, 오타와, 마닐라, 예루살렘, 파리",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "케임브리지셔주",
+      "object": "케임브리지",
+      "object_candidates": "델리, 링컨, 킬, 부쿠레슈티, 바르셀로나, 키예프, 해밀턴, 난징시, 툴루즈, 케임브리지",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "시칠리아 왕국",
+      "object": "나폴리",
+      "object_candidates": "스톡홀름, 교토시, 피어, 캔버라, 오클랜드, 모스크바, 프라하, 카잔, 더블린, 나폴리",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "앵드르에루아르주",
+      "object": "투르",
+      "object_candidates": "조지타운, 베를린, 이스탄불, 몬테비데오, 카라치, 자카르타, 브뤼셀 시, 빈, 바르셀로나, 투르",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "풀리아주",
+      "object": "바리",
+      "object_candidates": "워터퍼드, 산티아고, 헤리퍼드, 예루살렘, 골웨이, 랜싱, 러크나우, 마이애미, 해리스버그, 바리",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "오스트플란데런주",
+      "object": "헨트",
+      "object_candidates": "마인츠, 잭슨, 시라쿠사, 키예프, 뭄바이, 암스테르담, 투르, 우스터, 새크라멘토, 헨트",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "덴마크",
+      "object": "코펜하겐",
+      "object_candidates": "자카르타, 피렌체, 빌뉴스, 에도, 릴, 마닐라, 톨레도, 나폴리, 멤피스, 코펜하겐",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "미시간주",
+      "object": "랜싱",
+      "object_candidates": "더니딘, 델리, 피렌체, 더블린, 새크라멘토, 리스본, 케임브리지, 에드먼턴, 사가시, 랜싱",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "아이유브 왕조",
+      "object": "카이로",
+      "object_candidates": "캔버라, 글로스터, 로마, 런던, 제노바, 메카, 워터퍼드, 난징시, 메디나, 카이로",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "정통 칼리파국",
+      "object": "메디나",
+      "object_candidates": "세비야, 위니펙, 브라티슬라바, 브뤼셀 시, 뮌헨, 탈린, 파리, 새크라멘토, 투르, 메디나",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "에도 막부",
+      "object": "에도",
+      "object_candidates": "팔마데마요르카, 해리스버그, 헬싱키, 밀라노, 위니펙, 탈린, 레스터, 바빌론, 콩코드, 에도",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "소련",
+      "object": "모스크바",
+      "object_candidates": "바르셀로나, 트리폴리, 바빌론, 베이루트, 웨스트민스터, 바쿠, 보르도, 내슈빌, 호놀룰루, 모스크바",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "루마니아 왕국",
+      "object": "부쿠레슈티",
+      "object_candidates": "아덴, 핼리팩스, 도쿄도, 오클랜드, 산티아고, 킹스턴, 바르셀로나, 예루살렘, 타이베이시, 부쿠레슈티",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "태즈메이니아주",
+      "object": "호바트",
+      "object_candidates": "케임브리지, 빈, 베르겐, 베른, 에드먼턴, 리가, 나폴리, 매디슨, 링컨, 호바트",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "리머릭주",
+      "object": "리머릭",
+      "object_candidates": "테살로니키, 컬럼비아, 레스터, 시애틀, 피렌체, 콜럼버스, 위니펙, 카라카스, 콘스탄티노폴리스, 리머릭",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "파티마 왕조",
+      "object": "카이로",
+      "object_candidates": "런던, 다윈, 오타와, 테살로니키, 리버사이드, 파리, 베를린, 키예프, 히로시마시, 카이로",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "오클랜드 지방",
+      "object": "오클랜드",
+      "object_candidates": "코펜하겐, 레스터, 소피아, 아나폴리스, 로잔, 히로시마시, 알제, 가프, 옥스퍼드, 오클랜드",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "뉴햄프셔주",
+      "object": "콩코드",
+      "object_candidates": "찰스턴, 교토시, 잘츠부르크, 리버사이드, 브리즈번, 토론토, 루블린, 보르도, 에든버러, 콩코드",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "오데사주",
+      "object": "오데사",
+      "object_candidates": "퍼스, 리치먼드, 투르, 알레포, 툴루즈, 메카, 바빌론, 자그레브, 글로스터, 오데사",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "오스트레일리아",
+      "object": "캔버라",
+      "object_candidates": "하노버, 엑서터, 덴버, 헤리퍼드, 맨체스터, 히로시마시, 오타와, 잭슨, 세일럼, 캔버라",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "오스만 제국",
+      "object": "이스탄불",
+      "object_candidates": "타이베이시, 제노바, 볼로냐, 베이루트, 자그레브, 피렌체, 해밀턴, 바르셀로나, 예레반, 이스탄불",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "사우스웨스트잉글랜드",
+      "object": "브리스틀",
+      "object_candidates": "바쿠, 앙카라, 매디슨, 베이루트, 빈, 보스턴, 바리, 교토시, 아우크스부르크, 브리스틀",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "텍사스주",
+      "object": "오스틴",
+      "object_candidates": "베오그라드, 마이애미, 카디프, 류블랴나, 베른, 멤피스, 로마, 콜롬보, 스트라스부르, 오스틴",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "라틴 제국",
+      "object": "콘스탄티노폴리스",
+      "object_candidates": "피어, 파리, 콜럼버스, 워터퍼드, 몬테비데오, 부다페스트, 아바나, 러크나우, 매디슨, 콘스탄티노폴리스",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "헝가리",
+      "object": "부다페스트",
+      "object_candidates": "글로스터, 발렌시아, 나고야시, 칼라일, 옥스퍼드, 바젤, 인디애나폴리스, 킬, 암스테르담, 부다페스트",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "러시아",
+      "object": "모스크바",
+      "object_candidates": "예루살렘, 샤이엔, 히로시마시, 찰스턴, 골웨이, 오스틴, 리마, 사가시, 엑서터, 모스크바",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "베네토주",
+      "object": "베네치아",
+      "object_candidates": "메카, 히로시마시, 에도, 나이로비, 다마스쿠스, 베르겐, 퍼스, 빈, 콜카타, 베네치아",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "우스터셔주",
+      "object": "우스터",
+      "object_candidates": "몬테비데오, 킬, 컬럼비아, 토리노, 에도, 코펜하겐, 발렌시아, 리비우, 트리폴리, 우스터",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "시칠리아 왕국",
+      "object": "팔레르모",
+      "object_candidates": "예레반, 컬럼비아, 프라하, 조지타운, 아테네, 웨스트민스터, 광저우시, 요코하마시, 델리, 팔레르모",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "펜실베이니아주",
+      "object": "해리스버그",
+      "object_candidates": "하노버, 세비야, 앙카라, 킬, 호놀룰루, 카디프, 히로시마시, 프라하, 브레스트, 해리스버그",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "교황령",
+      "object": "로마",
+      "object_candidates": "피렌체, 찰스턴, 오슬로, 알렉산드리아, 매디슨, 과달라하라, 리자이나, 랜싱, 제노바, 로마",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "골웨이주",
+      "object": "골웨이",
+      "object_candidates": "바빌론, 롤리, 트렌턴, 콘스탄티노폴리스, 피닉스, 마드리드, 이스탄불, 과달라하라, 해리스버그, 골웨이",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "오스트리아 제국",
+      "object": "빈",
+      "object_candidates": "해리스버그, 소피아, 해밀턴, 링컨, 오스틴, 툴루즈, 티라나, 리자이나, 내슈빌, 빈",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "네덜란드령 동인도",
+      "object": "자카르타",
+      "object_candidates": "베이루트, 예루살렘, 더니딘, 빌뉴스, 빈, 브리즈번, 사라예보, 바젤, 몽고메리, 자카르타",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "이스라엘",
+      "object": "예루살렘",
+      "object_candidates": "에도, 코크, 뭄바이, 새크라멘토, 보스턴, 베른, 오스틴, 마이애미, 비즈마크, 예루살렘",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "아이치현",
+      "object": "나고야시",
+      "object_candidates": "뮌헨, 킹스턴, 코크, 몽고메리, 마인츠, 오데사, 하트퍼드, 맨체스터, 델리, 나고야시",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "레스터셔주",
+      "object": "레스터",
+      "object_candidates": "마인츠, 산티아고, 매디슨, 크라이스트처치, 엑서터, 자카르타, 헤리퍼드, 바젤, 아우크스부르크, 레스터",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "킹 군",
+      "object": "시애틀",
+      "object_candidates": "밀라노, 마드리드, 엑서터, 첸나이, 카라카스, 키예프, 모스크바, 카디프, 웨스트민스터, 시애틀",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "아테네 공국",
+      "object": "아테네",
+      "object_candidates": "발렌시아, 티라나, 사가시, 로잔, 베오그라드, 브레스트, 니스, 스프링필드, 테헤란, 아테네",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "네덜란드 왕국",
+      "object": "암스테르담",
+      "object_candidates": "베를린, 루블린, 테헤란, 알렉산드리아, 해밀턴, 베이루트, 예루살렘, 윈체스터, 테살로니키, 암스테르담",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "알바니아",
+      "object": "티라나",
+      "object_candidates": "다윈, 교토시, 바르샤바, 해밀턴, 리치먼드, 벵갈루루, 하노버, 탈린, 더니딘, 티라나",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "제노바도",
+      "object": "제노바",
+      "object_candidates": "델리, 워터퍼드, 브뤼셀 시, 프로비던스, 해밀턴, 해리스버그, 맨체스터, 롤리, 베네치아, 제노바",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "중화민국",
+      "object": "타이베이시",
+      "object_candidates": "콜카타, 카이로, 시애틀, 오스틴, 헨트, 가프, 류블랴나, 키예프, 앙카라, 타이베이시",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "체코슬로바키아",
+      "object": "프라하",
+      "object_candidates": "보이시, 워터퍼드, 과달라하라, 몬테비데오, 콜카타, 에도, 테살로니키, 마이애미, 리치먼드, 프라하",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "두바이 토후국",
+      "object": "두바이",
+      "object_candidates": "마인츠, 스프링필드, 리스본, 빅토리아, 킹스턴, 에든버러, 브라티슬라바, 골웨이, 메카, 두바이",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "노스다코타주",
+      "object": "비즈마크",
+      "object_candidates": "메카, 윈체스터, 난징시, 호놀룰루, 트리폴리, 마드리드, 하이데라바드, 베르겐, 바젤, 비즈마크",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "안달루시아 지방",
+      "object": "세비야",
+      "object_candidates": "히로시마시, 카이로, 조지타운, 사라예보, 스트라스부르, 트렌턴, 도쿄도, 바르샤바, 헬싱키, 세비야",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "마하라슈트라주",
+      "object": "뭄바이",
+      "object_candidates": "바르샤바, 헨트, 암스테르담, 뮌헨, 위니펙, 에드먼턴, 잭슨, 랜싱, 워터퍼드, 뭄바이",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "카르나타카주",
+      "object": "벵갈루루",
+      "object_candidates": "드레스덴, 비즈마크, 리치먼드, 랜싱, 에도, 브라티슬라바, 캔버라, 조지타운, 카디프, 벵갈루루",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "인도네시아",
+      "object": "자카르타",
+      "object_candidates": "케르만, 난징시, 인디애나폴리스, 빅토리아, 토리노, 윈체스터, 콜롬보, 토론토, 오타와, 자카르타",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "이탈리아 사회공화국",
+      "object": "로마",
+      "object_candidates": "피닉스, 오슬로, 자그레브, 아나폴리스, 알렉산드리아, 우스터, 리치먼드, 보이시, 오클랜드, 로마",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "합스부르크 군주국",
+      "object": "빈",
+      "object_candidates": "핼리팩스, 로잔, 비즈마크, 덴버, 리마, 델리, 콜럼버스, 콜롬보, 애들레이드, 빈",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "포르투갈",
+      "object": "리스본",
+      "object_candidates": "다마스쿠스, 몽고메리, 엑서터, 토리노, 에드먼턴, 니스, 해밀턴, 아우크스부르크, 아바나, 리스본",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "발레아레스 제도",
+      "object": "팔마데마요르카",
+      "object_candidates": "서울특별시, 베네치아, 애들레이드, 바빌론, 베이루트, 모스크바, 랜싱, 토리노, 크라이스트처치, 팔마데마요르카",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "볼로냐현",
+      "object": "볼로냐",
+      "object_candidates": "위니펙, 카디프, 뭄바이, 윈체스터, 바르샤바, 바르셀로나, 탈린, 베르겐, 팔마데마요르카, 볼로냐",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "쿠바",
+      "object": "아바나",
+      "object_candidates": "몬테비데오, 모스크바, 비즈마크, 스트라스부르, 다윈, 샤이엔, 토론토, 브리즈번, 류블랴나, 아바나",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "톨레도주",
+      "object": "톨레도",
+      "object_candidates": "카라치, 바리, 세일럼, 오스틴, 골웨이, 오슬로, 컬럼비아, 케르만, 바르샤바, 톨레도",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "시에나도",
+      "object": "시에나",
+      "object_candidates": "조지타운, 베이징시, 팔레르모, 브리스틀, 뮌헨, 나고야시, 티라나, 베네치아, 케임브리지, 시에나",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "호놀룰루군",
+      "object": "호놀룰루",
+      "object_candidates": "맨체스터, 베를린, 시라쿠사, 프레스턴, 골웨이, 조지타운, 아우크스부르크, 암스테르담, 루블린, 호놀룰루",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "로마 제국",
+      "object": "콘스탄티노폴리스",
+      "object_candidates": "몬테비데오, 잘츠부르크, 헨트, 시에나, 방콕, 프로비던스, 바리, 밀라노, 베를린, 콘스탄티노폴리스",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "코네티컷주",
+      "object": "하트퍼드",
+      "object_candidates": "인디애나폴리스, 테살로니키, 다마스쿠스, 시애틀, 매디슨, 팔레르모, 엑서터, 빈, 하이데라바드, 하트퍼드",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "스코틀랜드",
+      "object": "에든버러",
+      "object_candidates": "롤리, 알제, 빈, 헬싱키, 더니딘, 스톡홀름, 우스터, 세일럼, 리버사이드, 에든버러",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "앙카라주",
+      "object": "앙카라",
+      "object_candidates": "타이베이시, 스톡홀름, 히로시마시, 암스테르담, 뮌헨, 알레포, 베른, 메디나, 보스턴, 앙카라",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "라치오주",
+      "object": "로마",
+      "object_candidates": "이스탄불, 브레스트, 브뤼셀 시, 코크, 부쿠레슈티, 내슈빌, 산티아고, 알렉산드리아, 메디나, 로마",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "폴란드 인민공화국",
+      "object": "바르샤바",
+      "object_candidates": "교토시, 시드니, 과달라하라, 마인츠, 킬, 빅토리아, 본, 워터퍼드, 위니펙, 바르샤바",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "바젤슈타트주",
+      "object": "바젤",
+      "object_candidates": "팔레르모, 아우크스부르크, 모스크바, 캔버라, 첸나이, 예레반, 우스터, 오데사, 세비야, 바젤",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "캘리포니아주",
+      "object": "새크라멘토",
+      "object_candidates": "티라나, 바르셀로나, 이스탄불, 민스크, 릴, 발렌시아, 부다페스트, 워터퍼드, 다윈, 새크라멘토",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "잘츠부르크주",
+      "object": "잘츠부르크",
+      "object_candidates": "니스, 헤리퍼드, 글로스터, 오데사, 시드니, 랜싱, 테살로니키, 트리폴리, 핼리팩스, 잘츠부르크",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "교토부",
+      "object": "교토시",
+      "object_candidates": "내슈빌, 시라쿠사, 제노바, 헤리퍼드, 조지타운, 세비야, 알제, 마인츠, 랜싱, 교토시",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "피렌체현",
+      "object": "피렌체",
+      "object_candidates": "아나폴리스, 톨레도, 마닐라, 프라하, 빈, 롤리, 카라카스, 에도, 릴, 피렌체",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "이라크",
+      "object": "바그다드",
+      "object_candidates": "도쿄도, 다카, 모스크바, 오스틴, 사가시, 코크, 피닉스, 오슬로, 메카, 바그다드",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "캄파니아주",
+      "object": "나폴리",
+      "object_candidates": "도쿄도, 내슈빌, 카불, 몬테비데오, 카라치, 발렌시아, 빌뉴스, 바그다드, 마드리드, 나폴리",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "일본",
+      "object": "도쿄도",
+      "object_candidates": "팔마데마요르카, 카이로, 로마, 새크라멘토, 하이데라바드, 파리, 툴루즈, 코크, 가프, 도쿄도",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "마이애미데이드 군",
+      "object": "마이애미",
+      "object_candidates": "브레스트, 아우크스부르크, 리가, 바리, 툴루즈, 뮌헨, 나이로비, 마닐라, 메카, 마이애미",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "케르만주",
+      "object": "케르만",
+      "object_candidates": "토리노, 다카, 첸나이, 도쿄도, 마이애미, 칼라일, 스트라스부르, 티라나, 볼로냐, 케르만",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "알프마리팀주",
+      "object": "니스",
+      "object_candidates": "시에나, 리비우, 브라티슬라바, 브리즈번, 도쿄도, 베이징시, 케임브리지, 옥스퍼드, 아바나, 니스",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "에스토니아",
+      "object": "탈린",
+      "object_candidates": "자그레브, 토리노, 다마스쿠스, 루블린, 볼로냐, 트렌턴, 컬럼비아, 빈, 콜카타, 탈린",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "웨스턴오스트레일리아주",
+      "object": "퍼스",
+      "object_candidates": "보스턴, 랜싱, 류블랴나, 리머릭, 카불, 매디슨, 리자이나, 엑서터, 오클랜드, 퍼스",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "리비우주",
+      "object": "리비우",
+      "object_candidates": "케르만, 애들레이드, 바그다드, 팔레르모, 샤이엔, 헨트, 델리, 예루살렘, 더블린, 리비우",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "뉴사우스웨일스주",
+      "object": "시드니",
+      "object_candidates": "브라티슬라바, 바젤, 리스본, 빅토리아, 타이베이시, 프레스턴, 토론토, 소피아, 호놀룰루, 시드니",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "리버사이드 군",
+      "object": "리버사이드",
+      "object_candidates": "바쿠, 하노버, 두바이, 오타와, 마인츠, 팔레르모, 릴, 새크라멘토, 더니딘, 리버사이드",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "베네수엘라",
+      "object": "카라카스",
+      "object_candidates": "밀라노, 찰스턴, 시애틀, 소피아, 호바트, 코크, 빌뉴스, 랜싱, 트리폴리, 카라카스",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "매니토바주",
+      "object": "위니펙",
+      "object_candidates": "알제, 팔마데마요르카, 캔버라, 아바나, 호놀룰루, 옥스퍼드, 리마, 바그다드, 과달라하라, 위니펙",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "이탈리아 왕국",
+      "object": "토리노",
+      "object_candidates": "다카, 하트퍼드, 베른, 콜럼버스, 보이시, 아덴, 오슬로, 베이루트, 보르도, 토리노",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "롬바르디아주",
+      "object": "밀라노",
+      "object_candidates": "바르샤바, 피렌체, 몽고메리, 에도, 트렌턴, 메디나, 하이데라바드, 산티아고, 애들레이드, 밀라노",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "이란",
+      "object": "테헤란",
+      "object_candidates": "트리폴리, 토론토, 에드먼턴, 핼리팩스, 글로스터, 메디나, 이스탄불, 툴루즈, 소피아, 테헤란",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "그레이트브리튼 왕국",
+      "object": "런던",
+      "object_candidates": "뮌헨, 리자이나, 토리노, 잘츠부르크, 자그레브, 헤리퍼드, 바리, 스톡홀름, 리머릭, 런던",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "리비아",
+      "object": "트리폴리",
+      "object_candidates": "요코하마시, 프레스턴, 알렉산드리아, 아나폴리스, 비즈마크, 알레포, 자카르타, 메디나, 애들레이드, 트리폴리",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "모스크바 대공국",
+      "object": "모스크바",
+      "object_candidates": "드레스덴, 메카, 팔마데마요르카, 해리스버그, 가프, 토론토, 리치먼드, 아덴, 보르도, 모스크바",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "오스트레일리아 수도 준주",
+      "object": "캔버라",
+      "object_candidates": "벨파스트, 퍼스, 브리즈번, 교토시, 방콕, 카불, 류블랴나, 베를린, 뭄바이, 캔버라",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "비시 프랑스",
+      "object": "파리",
+      "object_candidates": "루블린, 알제, 나이로비, 비즈마크, 크라이스트처치, 위니펙, 가프, 베르겐, 오스틴, 파리",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "바랭주",
+      "object": "스트라스부르",
+      "object_candidates": "팔마데마요르카, 컬럼비아, 리자이나, 알레포, 뭄바이, 칼라일, 콜럼버스, 벵갈루루, 워터퍼드, 스트라스부르",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "빌뉴스주",
+      "object": "빌뉴스",
+      "object_candidates": "사라예보, 인디애나폴리스, 샤이엔, 콜카타, 에도, 교토시, 멤피스, 나고야시, 토리노, 빌뉴스",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "브뤼셀",
+      "object": "브뤼셀 시",
+      "object_candidates": "매디슨, 티라나, 컬럼비아, 내슈빌, 암스테르담, 아우크스부르크, 에든버러, 호바트, 발렌시아, 브뤼셀 시",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "서스캐처원주",
+      "object": "리자이나",
+      "object_candidates": "토론토, 베르겐, 사라예보, 테헤란, 방콕, 팔마데마요르카, 산티아고, 베네치아, 스프링필드, 리자이나",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "테헤란주",
+      "object": "테헤란",
+      "object_candidates": "베이징시, 파리, 타이베이시, 글로스터, 이스탄불, 새크라멘토, 첸나이, 발렌시아, 키예프, 테헤란",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "에밀리아로마냐주",
+      "object": "볼로냐",
+      "object_candidates": "시에나, 콜롬보, 스프링필드, 오스틴, 시애틀, 오클랜드, 마닐라, 루블린, 부다페스트, 볼로냐",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "아일랜드",
+      "object": "더블린",
+      "object_candidates": "해밀턴, 암스테르담, 헨트, 내슈빌, 브리즈번, 빌뉴스, 잭슨, 조지타운, 세일럼, 더블린",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "우루과이",
+      "object": "몬테비데오",
+      "object_candidates": "베른, 핼리팩스, 도쿄도, 스프링필드, 델리, 베이루트, 자그레브, 우스터, 칼라일, 몬테비데오",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "아케메네스 왕조",
+      "object": "바빌론",
+      "object_candidates": "알제, 피어, 서울특별시, 벵갈루루, 다카, 바르샤바, 비즈마크, 키예프, 하이데라바드, 바빌론",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "페루",
+      "object": "리마",
+      "object_candidates": "콜럼버스, 레스터, 발렌시아, 롤리, 글로스터, 베르겐, 칼라일, 에도, 제노바, 리마",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "스리랑카",
+      "object": "콜롬보",
+      "object_candidates": "워터퍼드, 엑서터, 해밀턴, 조지타운, 위니펙, 케르만, 리스본, 첸나이, 톨레도, 콜롬보",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "이라크 왕국",
+      "object": "바그다드",
+      "object_candidates": "에든버러, 바리, 툴루즈, 베르겐, 톨레도, 헬싱키, 자그레브, 프레스턴, 사가시, 바그다드",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "아메리카 남부 연합",
+      "object": "몽고메리",
+      "object_candidates": "메디나, 세비야, 리비우, 류블랴나, 롤리, 내슈빌, 위니펙, 리치먼드, 보르도, 몽고메리",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "세르비아 왕국",
+      "object": "베오그라드",
+      "object_candidates": "런던, 키예프, 리마, 잘츠부르크, 로마, 빌뉴스, 본, 피닉스, 피렌체, 베오그라드",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "워터퍼드주",
+      "object": "워터퍼드",
+      "object_candidates": "새크라멘토, 콜럼버스, 더블린, 해리스버그, 로마, 발렌시아, 베를린, 오클랜드, 리스본, 워터퍼드",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "세르비아 몬테네그로",
+      "object": "베오그라드",
+      "object_candidates": "바젤, 바르셀로나, 리가, 바쿠, 스톡홀름, 두바이, 발렌시아, 마이애미, 콘스탄티노폴리스, 베오그라드",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "우크라이나",
+      "object": "키예프",
+      "object_candidates": "나고야시, 도쿄도, 리머릭, 발렌시아, 브뤼셀 시, 루블린, 웨스트민스터, 위니펙, 제노바, 키예프",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "보스니아 헤르체고비나",
+      "object": "사라예보",
+      "object_candidates": "하노버, 앙카라, 베이징시, 다마스쿠스, 카라치, 보르도, 인디애나폴리스, 시드니, 빅토리아, 사라예보",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "아르메니아",
+      "object": "예레반",
+      "object_candidates": "뭄바이, 리머릭, 캔버라, 밀라노, 본, 오데사, 헤리퍼드, 멤피스, 시드니, 예레반",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "아바스 왕조",
+      "object": "다마스쿠스",
+      "object_candidates": "멤피스, 브라티슬라바, 컬럼비아, 베른, 보스턴, 킬, 헬싱키, 시에나, 에도, 다마스쿠스",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "할리스코주",
+      "object": "과달라하라",
+      "object_candidates": "메카, 잭슨, 요코하마시, 우스터, 제노바, 자카르타, 모스크바, 사라예보, 앙카라, 과달라하라",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "방글라데시",
+      "object": "다카",
+      "object_candidates": "카라카스, 아테네, 런던, 비즈마크, 나고야시, 로마, 브레스트, 마닐라, 타이베이시, 다카",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "앨라배마주",
+      "object": "몽고메리",
+      "object_candidates": "워터퍼드, 프라하, 케르만, 다윈, 리마, 바쿠, 바빌론, 방콕, 다마스쿠스, 몽고메리",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "일리노이주",
+      "object": "스프링필드",
+      "object_candidates": "비즈마크, 다마스쿠스, 알렉산드리아, 랜싱, 더블린, 부다페스트, 가프, 베오그라드, 툴루즈, 스프링필드",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "링컨셔주",
+      "object": "링컨",
+      "object_candidates": "보이시, 빅토리아, 칼라일, 알제, 우스터, 벵갈루루, 해리스버그, 인디애나폴리스, 파리, 링컨",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "스페인 제국",
+      "object": "마드리드",
+      "object_candidates": "메카, 트렌턴, 이스탄불, 벨파스트, 서울특별시, 아덴, 글로스터, 브라티슬라바, 리스본, 마드리드",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "노르파드칼레",
+      "object": "릴",
+      "object_candidates": "벨파스트, 찰스턴, 제노바, 칼라일, 보르도, 본, 컬럼비아, 퍼스, 가프, 릴",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "위스콘신주",
+      "object": "매디슨",
+      "object_candidates": "카잔, 토론토, 카라치, 과달라하라, 나고야시, 오타와, 헨트, 브뤼셀 시, 바리, 매디슨",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "시칠리아",
+      "object": "팔레르모",
+      "object_candidates": "몬테비데오, 에드먼턴, 바그다드, 나이로비, 바젤, 오슬로, 리자이나, 칼라일, 애들레이드, 팔레르모",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "아일랜드 왕국",
+      "object": "더블린",
+      "object_candidates": "오타와, 브리즈번, 카라카스, 콜럼버스, 류블랴나, 나고야시, 시에나, 광저우시, 프로비던스, 더블린",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "필리핀",
+      "object": "마닐라",
+      "object_candidates": "리마, 마드리드, 랜싱, 아바나, 핼리팩스, 톨레도, 밀라노, 트리폴리, 카디프, 마닐라",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "베네치아 공화국",
+      "object": "베네치아",
+      "object_candidates": "골웨이, 오스틴, 내슈빌, 이스탄불, 빅토리아, 나이로비, 알렉산드리아, 우스터, 애들레이드, 베네치아",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "알레포주",
+      "object": "알레포",
+      "object_candidates": "뭄바이, 베네치아, 베르겐, 카라카스, 사가시, 리마, 오타와, 알제, 브리즈번, 알레포",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "콜로라도주",
+      "object": "덴버",
+      "object_candidates": "스트라스부르, 다마스쿠스, 트리폴리, 델리, 부쿠레슈티, 마이애미, 더블린, 리머릭, 예루살렘, 덴버",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "그리스",
+      "object": "아테네",
+      "object_candidates": "조지타운, 메카, 트렌턴, 덴버, 리스본, 스트라스부르, 광저우시, 알레포, 옥스퍼드, 아테네",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "크로아티아 독립국",
+      "object": "자그레브",
+      "object_candidates": "오스틴, 바리, 퍼스, 핼리팩스, 헬싱키, 밀라노, 툴루즈, 더블린, 스트라스부르, 자그레브",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "네덜란드",
+      "object": "암스테르담",
+      "object_candidates": "아덴, 시라쿠사, 런던, 헨트, 알렉산드리아, 제노바, 툴루즈, 호바트, 바빌론, 암스테르담",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "애리조나주",
+      "object": "피닉스",
+      "object_candidates": "카디프, 아덴, 콜롬보, 헨트, 몬테비데오, 리비우, 콘스탄티노폴리스, 멤피스, 파리, 피닉스",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "이탈리아",
+      "object": "로마",
+      "object_candidates": "잭슨, 크라이스트처치, 오타와, 스트라스부르, 런던, 벨파스트, 애들레이드, 델리, 부쿠레슈티, 로마",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "유고슬라비아 왕국",
+      "object": "베오그라드",
+      "object_candidates": "스트라스부르, 방콕, 서울특별시, 애들레이드, 사가시, 칼라일, 킹스턴, 첸나이, 도쿄도, 베오그라드",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "영국",
+      "object": "런던",
+      "object_candidates": "조지타운, 프레스턴, 칼라일, 예루살렘, 본, 베이루트, 브레스트, 나이로비, 부다페스트, 런던",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "알바니아 사회주의 인민공화국",
+      "object": "티라나",
+      "object_candidates": "본, 바그다드, 톨레도, 리비우, 볼로냐, 오클랜드, 시드니, 도쿄도, 코펜하겐, 티라나",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "세르비아",
+      "object": "베오그라드",
+      "object_candidates": "애들레이드, 콜럼버스, 벵갈루루, 컬럼비아, 예루살렘, 피렌체, 킹스턴, 콘스탄티노폴리스, 마이애미, 베오그라드",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "리비아 왕국",
+      "object": "트리폴리",
+      "object_candidates": "컬럼비아, 툴루즈, 빈, 마인츠, 킹스턴, 몽고메리, 첸나이, 칼라일, 골웨이, 트리폴리",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "캐나다",
+      "object": "오타와",
+      "object_candidates": "덴버, 예루살렘, 가프, 브리스틀, 아우크스부르크, 요코하마시, 스프링필드, 베른, 샤이엔, 오타와",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "가나가와현",
+      "object": "요코하마시",
+      "object_candidates": "예레반, 바리, 옥스퍼드, 세비야, 맨체스터, 빈, 벵갈루루, 프로비던스, 킹스턴, 요코하마시",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "중앙보헤미아주",
+      "object": "프라하",
+      "object_candidates": "마이애미, 더니딘, 세일럼, 자카르타, 델리, 찰스턴, 몬테비데오, 바그다드, 크라이스트처치, 프라하",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "프랑스",
+      "object": "파리",
+      "object_candidates": "모스크바, 맨체스터, 레스터, 퍼스, 릴, 바르샤바, 멤피스, 시드니, 잭슨, 파리",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "불가리아",
+      "object": "소피아",
+      "object_candidates": "워터퍼드, 바젤, 해리스버그, 사가시, 프라하, 더니딘, 알렉산드리아, 코펜하겐, 아테네, 소피아",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "데번주",
+      "object": "엑서터",
+      "object_candidates": "히로시마시, 인디애나폴리스, 러크나우, 탈린, 민스크, 마이애미, 아우크스부르크, 루블린, 파리, 엑서터",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "중앙마케도니아주",
+      "object": "테살로니키",
+      "object_candidates": "메카, 킬, 아덴, 피어, 몬테비데오, 마드리드, 사라예보, 킹스턴, 델리, 테살로니키",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "시칠리아 토후국",
+      "object": "팔레르모",
+      "object_candidates": "윈체스터, 옥스퍼드, 콩코드, 바르샤바, 키예프, 카라카스, 마이애미, 베이징시, 에드먼턴, 팔레르모",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "가이아나",
+      "object": "조지타운",
+      "object_candidates": "알렉산드리아, 바젤, 브레스트, 광저우시, 바그다드, 첸나이, 히로시마시, 릴, 애들레이드, 조지타운",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "헝가리 왕국",
+      "object": "부다페스트",
+      "object_candidates": "난징시, 웨스트민스터, 컬럼비아, 보스턴, 바젤, 로잔, 밀라노, 헬싱키, 시애틀, 부다페스트",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "작센주",
+      "object": "드레스덴",
+      "object_candidates": "카라카스, 프로비던스, 하이데라바드, 컬럼비아, 보스턴, 부다페스트, 팔레르모, 베르겐, 비즈마크, 드레스덴",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "명",
+      "object": "난징시",
+      "object_candidates": "밀라노, 바리, 테헤란, 레스터, 피어, 본, 툴루즈, 빌뉴스, 코펜하겐, 난징시",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "메카주",
+      "object": "메카",
+      "object_candidates": "바그다드, 찰스턴, 에도, 난징시, 다마스쿠스, 피렌체, 베이루트, 바쿠, 해밀턴, 메카",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "이집트 속주",
+      "object": "카이로",
+      "object_candidates": "사가시, 부쿠레슈티, 트리폴리, 아바나, 리마, 롤리, 바르셀로나, 카라치, 카잔, 카이로",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "폴란드 입헌왕국",
+      "object": "바르샤바",
+      "object_candidates": "카잔, 자그레브, 오타와, 몬테비데오, 마이애미, 보르도, 팔레르모, 캔버라, 요코하마시, 바르샤바",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "북아일랜드",
+      "object": "벨파스트",
+      "object_candidates": "드레스덴, 히로시마시, 오스틴, 탈린, 케임브리지, 내슈빌, 브라티슬라바, 민스크, 매디슨, 벨파스트",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "스페인",
+      "object": "마드리드",
+      "object_candidates": "덴버, 오클랜드, 몬테비데오, 아테네, 스프링필드, 바르샤바, 자그레브, 칼라일, 리가, 마드리드",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "프랑스 본토",
+      "object": "파리",
+      "object_candidates": "워터퍼드, 리스본, 메디나, 피렌체, 바빌론, 티라나, 벨파스트, 뭄바이, 키예프, 파리",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "타타르 공화국",
+      "object": "카잔",
+      "object_candidates": "마이애미, 사라예보, 니스, 레스터, 루블린, 바르샤바, 로마, 암스테르담, 찰스턴, 카잔",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "브레스트주",
+      "object": "브레스트",
+      "object_candidates": "엑서터, 크라이스트처치, 레스터, 제노바, 샤이엔, 더니딘, 산티아고, 카불, 타이베이시, 브레스트",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "영국 위임통치령 팔레스타인",
+      "object": "예루살렘",
+      "object_candidates": "타이베이시, 잘츠부르크, 해리스버그, 브리스틀, 브라티슬라바, 테헤란, 볼로냐, 트렌턴, 리비우, 예루살렘",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "팔레르모현",
+      "object": "팔레르모",
+      "object_candidates": "델리, 트렌턴, 새크라멘토, 해밀턴, 다마스쿠스, 오타와, 몽고메리, 과달라하라, 자카르타, 팔레르모",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "바이에른 왕국",
+      "object": "뮌헨",
+      "object_candidates": "캔버라, 에도, 민스크, 카불, 브뤼셀 시, 케임브리지, 매디슨, 로잔, 앙카라, 뮌헨",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "타밀나두주",
+      "object": "첸나이",
+      "object_candidates": "에드먼턴, 교토시, 프라하, 더블린, 찰스턴, 가프, 류블랴나, 리자이나, 팔마데마요르카, 첸나이",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "벨라루스",
+      "object": "민스크",
+      "object_candidates": "해리스버그, 아덴, 메카, 도쿄도, 아테네, 벵갈루루, 로잔, 베이루트, 교토시, 민스크",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "글로스터셔주",
+      "object": "글로스터",
+      "object_candidates": "세비야, 베이루트, 빅토리아, 팔레르모, 리가, 뮌헨, 사가시, 도쿄도, 카이로, 글로스터",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "보주",
+      "object": "로잔",
+      "object_candidates": "오타와, 아우크스부르크, 브뤼셀 시, 바르샤바, 알제, 레스터, 더니딘, 루블린, 프레스턴, 로잔",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "유럽 연합",
+      "object": "스트라스부르",
+      "object_candidates": "첸나이, 아덴, 찰스턴, 마인츠, 메디나, 아테네, 벨파스트, 매디슨, 랜싱, 스트라스부르",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "우타르프라데시주",
+      "object": "러크나우",
+      "object_candidates": "오스틴, 찰스턴, 아바나, 다카, 브레스트, 암스테르담, 세비야, 브라티슬라바, 에든버러, 러크나우",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "스릅스카 공화국",
+      "object": "사라예보",
+      "object_candidates": "빌뉴스, 발렌시아, 벵갈루루, 로잔, 뭄바이, 자카르타, 첸나이, 콜카타, 레스터, 사라예보",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "사라예보 주",
+      "object": "사라예보",
+      "object_candidates": "더니딘, 링컨, 몽고메리, 탈린, 광저우시, 부다페스트, 다카, 보르도, 케르만, 사라예보",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "헝가리 평의회 공화국",
+      "object": "부다페스트",
+      "object_candidates": "러크나우, 보이시, 바그다드, 드레스덴, 히로시마시, 빅토리아, 델리, 더니딘, 콘스탄티노폴리스, 부다페스트",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "아프가니스탄 왕국",
+      "object": "카불",
+      "object_candidates": "레스터, 킬, 러크나우, 뭄바이, 샤이엔, 베르겐, 맨체스터, 토론토, 호바트, 카불",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "루블린주",
+      "object": "루블린",
+      "object_candidates": "몬테비데오, 브리스틀, 콩코드, 사라예보, 빌뉴스, 모스크바, 사가시, 콜카타, 보스턴, 루블린",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "버지니아주",
+      "object": "리치먼드",
+      "object_candidates": "마이애미, 사라예보, 크라이스트처치, 암스테르담, 콜카타, 브리즈번, 사가시, 아바나, 런던, 리치먼드",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "잉글랜드 왕국",
+      "object": "윈체스터",
+      "object_candidates": "마닐라, 세일럼, 우스터, 케임브리지, 콩코드, 시라쿠사, 멤피스, 아테네, 류블랴나, 윈체스터",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "메디나주",
+      "object": "메디나",
+      "object_candidates": "카잔, 새크라멘토, 하이데라바드, 벨파스트, 퍼스, 다카, 베른, 리자이나, 부다페스트, 메디나",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "스톡홀름시",
+      "object": "스톡홀름",
+      "object_candidates": "산티아고, 덴버, 골웨이, 하이데라바드, 빅토리아, 브리스틀, 방콕, 빈, 아바나, 스톡홀름",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "아제르바이잔 소비에트 사회주의 공화국",
+      "object": "바쿠",
+      "object_candidates": "스트라스부르, 브리즈번, 컬럼비아, 베오그라드, 덴버, 난징시, 몬테비데오, 로잔, 뭄바이, 바쿠",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "그리스 왕국",
+      "object": "아테네",
+      "object_candidates": "예레반, 해밀턴, 테살로니키, 글로스터, 아덴, 나고야시, 리버사이드, 브리스틀, 코펜하겐, 아테네",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "대한민국",
+      "object": "서울특별시",
+      "object_candidates": "가프, 콜카타, 웨스트민스터, 베오그라드, 바쿠, 빌뉴스, 하트퍼드, 자카르타, 리스본, 서울특별시",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "몰타 기사단",
+      "object": "로마",
+      "object_candidates": "콜카타, 메카, 옥스퍼드, 핼리팩스, 스프링필드, 드레스덴, 몽고메리, 브리스틀, 두바이, 로마",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "컴브리아주",
+      "object": "칼라일",
+      "object_candidates": "광저우시, 발렌시아, 아우크스부르크, 메디나, 예레반, 베를린, 소피아, 몬테비데오, 사가시, 칼라일",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "니더작센주",
+      "object": "하노버",
+      "object_candidates": "히로시마시, 워터퍼드, 프레스턴, 트렌턴, 다마스쿠스, 키예프, 바쿠, 킹스턴, 앙카라, 하노버",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "잉글랜드 왕국",
+      "object": "웨스트민스터",
+      "object_candidates": "리마, 워터퍼드, 광저우시, 킬, 릴, 해밀턴, 더블린, 오데사, 세일럼, 웨스트민스터",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "토리노현",
+      "object": "토리노",
+      "object_candidates": "테헤란, 코펜하겐, 바르셀로나, 니스, 베네치아, 오클랜드, 알레포, 바빌론, 러크나우, 토리노",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "노스캐롤라이나주",
+      "object": "롤리",
+      "object_candidates": "릴, 오스틴, 시라쿠사, 사가시, 크라이스트처치, 프라하, 콜카타, 보스턴, 광저우시, 롤리",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "노던 준주",
+      "object": "다윈",
+      "object_candidates": "아나폴리스, 보스턴, 소피아, 스프링필드, 오클랜드, 발렌시아, 오타와, 호바트, 빌뉴스, 다윈",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "하노버 왕국",
+      "object": "하노버",
+      "object_candidates": "애들레이드, 테헤란, 잭슨, 피닉스, 첸나이, 바빌론, 매디슨, 티라나, 아우크스부르크, 하노버",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "호르달란주",
+      "object": "베르겐",
+      "object_candidates": "두바이, 서울특별시, 콘스탄티노폴리스, 벨파스트, 다카, 바그다드, 콜롬보, 알제, 롤리, 베르겐",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "사우스다코타주",
+      "object": "피어",
+      "object_candidates": "오데사, 시라쿠사, 벵갈루루, 피닉스, 베네치아, 덴버, 링컨, 팔마데마요르카, 칼라일, 피어",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "알자스",
+      "object": "스트라스부르",
+      "object_candidates": "두바이, 퍼스, 잘츠부르크, 아테네, 민스크, 토리노, 바젤, 핼리팩스, 윈체스터, 스트라스부르",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "온타리오주",
+      "object": "토론토",
+      "object_candidates": "더블린, 아나폴리스, 컬럼비아, 하노버, 로마, 헤리퍼드, 타이베이시, 소피아, 리비우, 토론토",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "매사추세츠주",
+      "object": "보스턴",
+      "object_candidates": "시드니, 류블랴나, 에도, 베오그라드, 해밀턴, 민스크, 우스터, 알레포, 드레스덴, 보스턴",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "불가리아 왕국",
+      "object": "소피아",
+      "object_candidates": "컬럼비아, 가프, 윈체스터, 빌뉴스, 카이로, 위니펙, 찰스턴, 아우크스부르크, 맨체스터, 소피아",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "나폴리도",
+      "object": "나폴리",
+      "object_candidates": "바쿠, 시에나, 코크, 해리스버그, 크라이스트처치, 세비야, 트렌턴, 루블린, 다윈, 나폴리",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "루마니아",
+      "object": "부쿠레슈티",
+      "object_candidates": "우스터, 카불, 맨체스터, 마인츠, 더니딘, 멤피스, 빈, 난징시, 베른, 부쿠레슈티",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "스위스",
+      "object": "베른",
+      "object_candidates": "알제, 마이애미, 보이시, 인디애나폴리스, 리스본, 로마, 난징시, 자카르타, 글로스터, 베른",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "오스트리아",
+      "object": "빈",
+      "object_candidates": "베이루트, 리가, 인디애나폴리스, 나고야시, 에도, 카라카스, 마드리드, 벵갈루루, 바리, 빈",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "슬로바키아",
+      "object": "브라티슬라바",
+      "object_candidates": "부다페스트, 로마, 리마, 리스본, 다카, 제노바, 킬, 바젤, 킹스턴, 브라티슬라바",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "잉글랜드",
+      "object": "런던",
+      "object_candidates": "토리노, 피어, 아바나, 브라티슬라바, 콩코드, 나폴리, 베네치아, 골웨이, 오슬로, 런던",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "이집트",
+      "object": "카이로",
+      "object_candidates": "오타와, 빅토리아, 콘스탄티노폴리스, 과달라하라, 런던, 바쿠, 바르셀로나, 세비야, 프로비던스, 카이로",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "우시마 지역",
+      "object": "헬싱키",
+      "object_candidates": "몬테비데오, 티라나, 오데사, 아테네, 로잔, 샤이엔, 코펜하겐, 해리스버그, 위니펙, 헬싱키",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "랭커셔주",
+      "object": "프레스턴",
+      "object_candidates": "아덴, 멤피스, 조지타운, 로마, 엑서터, 프로비던스, 리버사이드, 애들레이드, 벵갈루루, 프레스턴",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "히로시마현",
+      "object": "히로시마시",
+      "object_candidates": "크라이스트처치, 방콕, 레스터, 보스턴, 드레스덴, 베를린, 본, 부쿠레슈티, 바젤, 히로시마시",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "신성 로마 제국",
+      "object": "빈",
+      "object_candidates": "브뤼셀 시, 베오그라드, 두바이, 스프링필드, 부다페스트, 오클랜드, 파리, 빅토리아, 러크나우, 빈",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "그레이트브리튼 아일랜드 연합왕국",
+      "object": "런던",
+      "object_candidates": "카라치, 밀라노, 테헤란, 스톡홀름, 윈체스터, 토론토, 애들레이드, 피어, 브리스틀, 런던",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "나치 독일",
+      "object": "베를린",
+      "object_candidates": "사라예보, 암스테르담, 핼리팩스, 메카, 오타와, 비즈마크, 부다페스트, 서울특별시, 런던, 베를린",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "시라쿠사도",
+      "object": "시라쿠사",
+      "object_candidates": "찰스턴, 리자이나, 킹스턴, 워터퍼드, 드레스덴, 오타와, 웨스트민스터, 콩코드, 도쿄도, 시라쿠사",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "러시아 소비에트 연방 사회주의 공화국",
+      "object": "모스크바",
+      "object_candidates": "발렌시아, 니스, 본, 맨체스터, 알레포, 에든버러, 오슬로, 콜럼버스, 크라이스트처치, 모스크바",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "와이오밍주",
+      "object": "샤이엔",
+      "object_candidates": "다마스쿠스, 킹스턴, 헬싱키, 브리즈번, 툴루즈, 리치먼드, 로잔, 워터퍼드, 세일럼, 샤이엔",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "우크라이나 소비에트 사회주의 공화국",
+      "object": "키예프",
+      "object_candidates": "베이징시, 프라하, 헨트, 오데사, 릴, 콜럼버스, 메카, 알레포, 베이루트, 키예프",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "비잔티움 제국",
+      "object": "콘스탄티노폴리스",
+      "object_candidates": "케임브리지, 뮌헨, 브레스트, 케르만, 콜롬보, 난징시, 알레포, 리마, 크라이스트처치, 콘스탄티노폴리스",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "우마이야 칼리파조",
+      "object": "다마스쿠스",
+      "object_candidates": "바리, 롤리, 오클랜드, 비즈마크, 류블랴나, 우스터, 서울특별시, 콩코드, 메카, 다마스쿠스",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "태국",
+      "object": "방콕",
+      "object_candidates": "릴, 로잔, 베이징시, 헬싱키, 퍼스, 시드니, 러크나우, 나폴리, 요코하마시, 방콕",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "안드라프라데시주",
+      "object": "하이데라바드",
+      "object_candidates": "시라쿠사, 프레스턴, 보스턴, 알레포, 몬테비데오, 예레반, 빅토리아, 브레스트, 해밀턴, 하이데라바드",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "노르웨이",
+      "object": "오슬로",
+      "object_candidates": "에도, 롤리, 바르샤바, 릴, 케임브리지, 난징시, 에드먼턴, 맨체스터, 토론토, 오슬로",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "라인란트팔츠주",
+      "object": "마인츠",
+      "object_candidates": "랜싱, 리비우, 다마스쿠스, 카불, 메디나, 아테네, 퍼스, 메카, 팔마데마요르카, 마인츠",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "터키",
+      "object": "앙카라",
+      "object_candidates": "찰스턴, 엑서터, 토론토, 샤이엔, 에드먼턴, 멤피스, 해밀턴, 오슬로, 케임브리지, 앙카라",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "리프디마슈크주",
+      "object": "다마스쿠스",
+      "object_candidates": "가프, 콩코드, 바그다드, 케르만, 베른, 자카르타, 광저우시, 리머릭, 리스본, 다마스쿠스",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "슈바벤 현",
+      "object": "아우크스부르크",
+      "object_candidates": "로잔, 더블린, 마닐라, 다마스쿠스, 베이징시, 테헤란, 에든버러, 발렌시아, 카잔, 아우크스부르크",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "일본의 군정기",
+      "object": "도쿄도",
+      "object_candidates": "스트라스부르, 다윈, 하트퍼드, 모스크바, 리자이나, 타이베이시, 헨트, 오타와, 티라나, 도쿄도",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "로드아일랜드주",
+      "object": "프로비던스",
+      "object_candidates": "글로스터, 베르겐, 조지타운, 첸나이, 랜싱, 킬, 리마, 에도, 니스, 프로비던스",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "아이다호주",
+      "object": "보이시",
+      "object_candidates": "멤피스, 바쿠, 엑서터, 매디슨, 시라쿠사, 리가, 메디나, 런던, 베오그라드, 보이시",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "크로아티아",
+      "object": "자그레브",
+      "object_candidates": "티라나, 카잔, 세비야, 핼리팩스, 툴루즈, 에도, 트리폴리, 헬싱키, 골웨이, 자그레브",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "코크주",
+      "object": "코크",
+      "object_candidates": "바그다드, 롤리, 소피아, 탈린, 빅토리아, 리가, 스트라스부르, 웨스트민스터, 시라쿠사, 코크",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "베네치아현",
+      "object": "베네치아",
+      "object_candidates": "스트라스부르, 케임브리지, 러크나우, 히로시마시, 다마스쿠스, 톨레도, 런던, 바르셀로나, 요코하마시, 베네치아",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "웨섹스 왕국",
+      "object": "윈체스터",
+      "object_candidates": "마인츠, 보스턴, 트리폴리, 랜싱, 잘츠부르크, 로마, 베네치아, 카이로, 베이루트, 윈체스터",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "로마 제국",
+      "object": "로마",
+      "object_candidates": "에도, 콜카타, 멤피스, 몽고메리, 킹스턴, 밀라노, 코펜하겐, 빅토리아, 프로비던스, 로마",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "알제리",
+      "object": "알제",
+      "object_candidates": "바그다드, 러크나우, 알레포, 에든버러, 더블린, 해리스버그, 베네치아, 카불, 난징시, 알제",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "브리티시컬럼비아주",
+      "object": "빅토리아",
+      "object_candidates": "파리, 헬싱키, 캔버라, 샤이엔, 리가, 해밀턴, 윈체스터, 브레스트, 오데사, 빅토리아",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "서벵골주",
+      "object": "콜카타",
+      "object_candidates": "스트라스부르, 프라하, 세비야, 오데사, 히로시마시, 루블린, 리자이나, 테살로니키, 팔레르모, 콜카타",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "보헤미아 왕국",
+      "object": "프라하",
+      "object_candidates": "도쿄도, 베르겐, 바젤, 광저우시, 다카, 트리폴리, 브라티슬라바, 아우크스부르크, 콜카타, 프라하",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "모스크바주",
+      "object": "모스크바",
+      "object_candidates": "광저우시, 캔버라, 브레스트, 벵갈루루, 류블랴나, 니스, 피닉스, 사라예보, 히로시마시, 모스크바",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "레바논",
+      "object": "베이루트",
+      "object_candidates": "엑서터, 첸나이, 테살로니키, 브뤼셀 시, 암스테르담, 롤리, 피닉스, 부쿠레슈티, 몬테비데오, 베이루트",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "라트비아",
+      "object": "리가",
+      "object_candidates": "멤피스, 리비우, 보스턴, 나이로비, 애들레이드, 암스테르담, 브리즈번, 파리, 리자이나, 리가",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "일본 제국",
+      "object": "도쿄도",
+      "object_candidates": "새크라멘토, 케임브리지, 티라나, 하이데라바드, 퍼스, 로마, 아덴, 니스, 카라치, 도쿄도",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "웨일스",
+      "object": "카디프",
+      "object_candidates": "해리스버그, 산티아고, 핼리팩스, 벨파스트, 보이시, 시에나, 메카, 마드리드, 랜싱, 카디프",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "델리 술탄 왕조",
+      "object": "델리",
+      "object_candidates": "골웨이, 키예프, 예루살렘, 핼리팩스, 볼로냐, 링컨, 웨스트민스터, 도쿄도, 프레스턴, 델리",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "아프가니스탄 민주공화국",
+      "object": "카불",
+      "object_candidates": "보스턴, 티라나, 세비야, 애들레이드, 다윈, 코크, 퍼스, 리머릭, 위니펙, 카불",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "폴란드",
+      "object": "바르샤바",
+      "object_candidates": "보르도, 헬싱키, 부쿠레슈티, 웨스트민스터, 브리즈번, 탈린, 리가, 오클랜드, 메디나, 바르샤바",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "카자르 왕조",
+      "object": "테헤란",
+      "object_candidates": "비즈마크, 케임브리지, 칼라일, 사가시, 앙카라, 다마스쿠스, 아테네, 알렉산드리아, 바젤, 테헤란",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "아바스 왕조",
+      "object": "바그다드",
+      "object_candidates": "서울특별시, 메카, 우스터, 피렌체, 마드리드, 호바트, 보르도, 잘츠부르크, 드레스덴, 바그다드",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "신드주",
+      "object": "카라치",
+      "object_candidates": "첸나이, 트렌턴, 해리스버그, 헤리퍼드, 베를린, 산티아고, 시에나, 코펜하겐, 프로비던스, 카라치",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "아케르스후스주",
+      "object": "오슬로",
+      "object_candidates": "피어, 비즈마크, 더니딘, 리머릭, 시라쿠사, 베이징시, 알레포, 탈린, 브리즈번, 오슬로",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "남예멘",
+      "object": "아덴",
+      "object_candidates": "바그다드, 트리폴리, 볼로냐, 조지타운, 알레포, 난징시, 케르만, 랜싱, 테살로니키, 아덴",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "누벨아키텐",
+      "object": "보르도",
+      "object_candidates": "브리즈번, 베를린, 오클랜드, 사라예보, 카이로, 벨파스트, 아덴, 트리폴리, 몬테비데오, 보르도",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "노스웨스트잉글랜드",
+      "object": "맨체스터",
+      "object_candidates": "요코하마시, 과달라하라, 서울특별시, 투르, 타이베이시, 멤피스, 워터퍼드, 산티아고, 골웨이, 맨체스터",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "중화인민공화국",
+      "object": "베이징시",
+      "object_candidates": "바젤, 프라하, 보스턴, 캔버라, 바쿠, 예루살렘, 다윈, 칼라일, 릴, 베이징시",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "이집트 고왕국",
+      "object": "멤피스",
+      "object_candidates": "호놀룰루, 나이로비, 프로비던스, 과달라하라, 잘츠부르크, 가프, 마닐라, 찰스턴, 케르만, 멤피스",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "버뮤다",
+      "object": "해밀턴",
+      "object_candidates": "잘츠부르크, 아테네, 해리스버그, 카잔, 비즈마크, 방콕, 잭슨, 나폴리, 니스, 해밀턴",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "오트가론주",
+      "object": "툴루즈",
+      "object_candidates": "티라나, 교토시, 워터퍼드, 골웨이, 몬테비데오, 오스틴, 아테네, 더니딘, 마인츠, 툴루즈",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "아랍 연합 공화국",
+      "object": "카이로",
+      "object_candidates": "리비우, 앙카라, 맨체스터, 밀라노, 베네치아, 가프, 베오그라드, 난징시, 더니딘, 카이로",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "헤리퍼드셔주",
+      "object": "헤리퍼드",
+      "object_candidates": "로잔, 과달라하라, 니스, 맨체스터, 프라하, 티라나, 탈린, 호바트, 헬싱키, 헤리퍼드",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "지롱드주",
+      "object": "보르도",
+      "object_candidates": "뭄바이, 알제, 마인츠, 코크, 에드먼턴, 방콕, 벵갈루루, 몬테비데오, 맨체스터, 보르도",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "밀라노현",
+      "object": "밀라노",
+      "object_candidates": "호바트, 리자이나, 시드니, 비즈마크, 빈, 리버사이드, 더니딘, 예레반, 베른, 밀라노",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "핀란드",
+      "object": "헬싱키",
+      "object_candidates": "에드먼턴, 파리, 다윈, 핼리팩스, 시에나, 과달라하라, 하트퍼드, 오클랜드, 콘스탄티노폴리스, 헬싱키",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "시리아",
+      "object": "다마스쿠스",
+      "object_candidates": "베네치아, 해밀턴, 리비우, 히로시마시, 에도, 매디슨, 시애틀, 크라이스트처치, 다윈, 다마스쿠스",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "발렌시아 지방",
+      "object": "발렌시아",
+      "object_candidates": "하노버, 볼로냐, 예레반, 메카, 토론토, 바그다드, 프레스턴, 시라쿠사, 글로스터, 발렌시아",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "벨로루시 소비에트 사회주의 공화국",
+      "object": "민스크",
+      "object_candidates": "암스테르담, 헬싱키, 멤피스, 트리폴리, 알렉산드리아, 더블린, 밀라노, 다윈, 바리, 민스크",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "제노바 공화국",
+      "object": "제노바",
+      "object_candidates": "파리, 하이데라바드, 오슬로, 브리스틀, 프로비던스, 브라티슬라바, 바그다드, 빈, 코펜하겐, 제노바",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "벨기에",
+      "object": "브뤼셀 시",
+      "object_candidates": "피렌체, 테살로니키, 암스테르담, 사가시, 티라나, 두바이, 툴루즈, 코크, 스트라스부르, 브뤼셀 시",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "티라나 현",
+      "object": "티라나",
+      "object_candidates": "해리스버그, 다윈, 피어, 더니딘, 다카, 토론토, 리버사이드, 드레스덴, 알렉산드리아, 티라나",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "리구리아주",
+      "object": "제노바",
+      "object_candidates": "마이애미, 애들레이드, 헬싱키, 나폴리, 로잔, 프라하, 맨체스터, 비즈마크, 다윈, 제노바",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "아키텐",
+      "object": "보르도",
+      "object_candidates": "콜카타, 아바나, 사라예보, 알렉산드리아, 다윈, 나폴리, 크라이스트처치, 트렌턴, 베이징시, 보르도",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "오스트리아-헝가리 제국",
+      "object": "빈",
+      "object_candidates": "찰스턴, 소피아, 애들레이드, 히로시마시, 프라하, 나이로비, 스프링필드, 자카르타, 마드리드, 빈",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "로마도",
+      "object": "로마",
+      "object_candidates": "새크라멘토, 과달라하라, 케임브리지, 아우크스부르크, 브리스틀, 카라치, 레스터, 나고야시, 메카, 로마",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "스톡홀름주",
+      "object": "스톡홀름",
+      "object_candidates": "로잔, 나폴리, 워터퍼드, 매디슨, 카라카스, 베이징시, 민스크, 리가, 밀라노, 스톡홀름",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "이집트 왕국",
+      "object": "카이로",
+      "object_candidates": "알레포, 크라이스트처치, 리비우, 롤리, 요코하마시, 드레스덴, 위니펙, 테살로니키, 하트퍼드, 카이로",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "테네시주",
+      "object": "내슈빌",
+      "object_candidates": "베오그라드, 나고야시, 해리스버그, 아덴, 카불, 글로스터, 피렌체, 벨파스트, 핼리팩스, 내슈빌",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "사가현",
+      "object": "사가시",
+      "object_candidates": "리버사이드, 에든버러, 오슬로, 새크라멘토, 투르, 톨레도, 카라치, 트리폴리, 아나폴리스, 사가시",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "스웨덴",
+      "object": "스톡홀름",
+      "object_candidates": "브레스트, 보르도, 프라하, 로마, 마인츠, 세비야, 아덴, 밀라노, 베이루트, 스톡홀름",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "프랑스령 알제리",
+      "object": "알제",
+      "object_candidates": "바빌론, 애들레이드, 자카르타, 민스크, 킹스턴, 헨트, 베이루트, 부쿠레슈티, 핼리팩스, 알제",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "오하이오주",
+      "object": "콜럼버스",
+      "object_candidates": "에도, 알제, 빌뉴스, 사가시, 바리, 킬, 가프, 콜롬보, 호바트, 콜럼버스",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "사우스캐롤라이나주",
+      "object": "컬럼비아",
+      "object_candidates": "멤피스, 카라카스, 오스틴, 롤리, 런던, 피닉스, 카잔, 톨레도, 카디프, 컬럼비아",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "자메이카",
+      "object": "킹스턴",
+      "object_candidates": "앙카라, 두바이, 부쿠레슈티, 요코하마시, 오데사, 브라티슬라바, 리가, 바리, 옥스퍼드, 킹스턴",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "키예프 루스",
+      "object": "키예프",
+      "object_candidates": "피어, 러크나우, 워터퍼드, 베이루트, 내슈빌, 킹스턴, 덴버, 아덴, 보이시, 키예프",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "오트잘프주",
+      "object": "가프",
+      "object_candidates": "몽고메리, 투르, 베이징시, 바리, 피렌체, 볼로냐, 오클랜드, 맨체스터, 알레포, 가프",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "잉글랜드 왕국",
+      "object": "런던",
+      "object_candidates": "워터퍼드, 벵갈루루, 소피아, 잭슨, 바르샤바, 호놀룰루, 코크, 퍼스, 교토시, 런던",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "카탈루냐 지방",
+      "object": "바르셀로나",
+      "object_candidates": "브리스틀, 베네치아, 팔마데마요르카, 위니펙, 알레포, 해리스버그, 헬싱키, 하트퍼드, 시애틀, 바르셀로나",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "파리 코뮌",
+      "object": "파리",
+      "object_candidates": "광저우시, 토론토, 보스턴, 아테네, 애들레이드, 나이로비, 크라이스트처치, 브라티슬라바, 릴, 파리",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "피에몬테주",
+      "object": "토리노",
+      "object_candidates": "테살로니키, 몽고메리, 자카르타, 시라쿠사, 광저우시, 덴버, 킬, 마닐라, 로잔, 토리노",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "체코",
+      "object": "프라하",
+      "object_candidates": "베른, 바빌론, 잭슨, 보르도, 뮌헨, 니스, 팔레르모, 톨레도, 코펜하겐, 프라하",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "노바스코샤주",
+      "object": "핼리팩스",
+      "object_candidates": "하노버, 링컨, 벨파스트, 랜싱, 리스본, 오클랜드, 캔버라, 아테네, 콜카타, 핼리팩스",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "옥스퍼드셔주",
+      "object": "옥스퍼드",
+      "object_candidates": "이스탄불, 다카, 우스터, 본, 킹스턴, 크라이스트처치, 캔버라, 킬, 리스본, 옥스퍼드",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "유럽 연합",
+      "object": "브뤼셀 시",
+      "object_candidates": "헤리퍼드, 토론토, 아바나, 시드니, 러크나우, 로마, 크라이스트처치, 니스, 더블린, 브뤼셀 시",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "유고슬라비아 사회주의 연방공화국",
+      "object": "베오그라드",
+      "object_candidates": "테헤란, 브뤼셀 시, 에드먼턴, 헬싱키, 다마스쿠스, 비즈마크, 예레반, 스프링필드, 베이징시, 베오그라드",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "영국령 인도 제국",
+      "object": "콜카타",
+      "object_candidates": "자그레브, 산티아고, 로마, 벨파스트, 리머릭, 파리, 히로시마시, 티라나, 카라치, 콜카타",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "청나라",
+      "object": "베이징시",
+      "object_candidates": "부쿠레슈티, 콜카타, 콜롬보, 시애틀, 토리노, 덴버, 리머릭, 잘츠부르크, 아우크스부르크, 베이징시",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "리투아니아 대공국",
+      "object": "빌뉴스",
+      "object_candidates": "팔마데마요르카, 위니펙, 에드먼턴, 프라하, 브리스틀, 요코하마시, 볼로냐, 내슈빌, 테헤란, 빌뉴스",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "사르데냐 왕국",
+      "object": "토리노",
+      "object_candidates": "테살로니키, 소피아, 가프, 호놀룰루, 엑서터, 난징시, 더니딘, 헤리퍼드, 스트라스부르, 토리노",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "메릴랜드주",
+      "object": "아나폴리스",
+      "object_candidates": "테살로니키, 위니펙, 스톡홀름, 마닐라, 서울특별시, 베른, 토리노, 과달라하라, 예레반, 아나폴리스",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "바이마르 공화국",
+      "object": "베를린",
+      "object_candidates": "오데사, 뮌헨, 서울특별시, 바리, 코펜하겐, 잘츠부르크, 알레포, 투르, 암스테르담, 베를린",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "아메리카 남부 연합",
+      "object": "리치먼드",
+      "object_candidates": "시애틀, 밀라노, 키예프, 로마, 류블랴나, 보스턴, 호바트, 모스크바, 부다페스트, 리치먼드",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "네우스트리아",
+      "object": "파리",
+      "object_candidates": "레스터, 케임브리지, 시에나, 잘츠부르크, 스트라스부르, 헨트, 두바이, 메디나, 광저우시, 파리",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "바이에른주",
+      "object": "뮌헨",
+      "object_candidates": "찰스턴, 더블린, 부다페스트, 키예프, 옥스퍼드, 몽고메리, 토론토, 멤피스, 브라티슬라바, 뮌헨",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "하와이주",
+      "object": "호놀룰루",
+      "object_candidates": "툴루즈, 트리폴리, 빅토리아, 콜롬보, 트렌턴, 해밀턴, 서울특별시, 덴버, 본, 호놀룰루",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "연합군의 독일 점령 지역",
+      "object": "베를린",
+      "object_candidates": "런던, 샤이엔, 웨스트민스터, 킹스턴, 베오그라드, 베른, 난징시, 에도, 마인츠, 베를린",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "퀸즐랜드주",
+      "object": "브리즈번",
+      "object_candidates": "베이루트, 링컨, 시애틀, 베르겐, 자그레브, 발렌시아, 위니펙, 프라하, 브리스틀, 브리즈번",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "보헤미아",
+      "object": "프라하",
+      "object_candidates": "시드니, 도쿄도, 윈체스터, 산티아고, 바쿠, 투르, 서울특별시, 베이징시, 팔마데마요르카, 프라하",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "아프가니스탄 이슬람 에미리트",
+      "object": "카불",
+      "object_candidates": "베네치아, 더니딘, 코크, 스프링필드, 윈체스터, 웨스트민스터, 글로스터, 위니펙, 더블린, 카불",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "홈스주",
+      "object": "다마스쿠스",
+      "object_candidates": "로마, 아덴, 브뤼셀 시, 해리스버그, 빅토리아, 리버사이드, 프레스턴, 예레반, 탈린, 다마스쿠스",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "웨스트버지니아주",
+      "object": "찰스턴",
+      "object_candidates": "인디애나폴리스, 브뤼셀 시, 볼로냐, 웨스트민스터, 도쿄도, 멤피스, 톨레도, 알렉산드리아, 빌뉴스, 찰스턴",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "케냐",
+      "object": "나이로비",
+      "object_candidates": "본, 베이징시, 투르, 카라카스, 아나폴리스, 테헤란, 제노바, 잘츠부르크, 오스틴, 나이로비",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "서독",
+      "object": "본",
+      "object_candidates": "카잔, 부쿠레슈티, 시애틀, 세비야, 나이로비, 브리스틀, 해리스버그, 콜카타, 팔레르모, 본",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "슬로베니아",
+      "object": "류블랴나",
+      "object_candidates": "카라카스, 카불, 하트퍼드, 컬럼비아, 타이베이시, 다윈, 보르도, 콜럼버스, 크라이스트처치, 류블랴나",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "오타고 지방",
+      "object": "더니딘",
+      "object_candidates": "브리즈번, 바젤, 팔마데마요르카, 몬테비데오, 하트퍼드, 덴버, 마드리드, 스트라스부르, 카디프, 더니딘",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "장쑤성",
+      "object": "난징시",
+      "object_candidates": "부쿠레슈티, 글로스터, 코크, 잭슨, 아바나, 오클랜드, 소피아, 카불, 더니딘, 난징시",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "뉴저지주",
+      "object": "트렌턴",
+      "object_candidates": "콩코드, 메디나, 서울특별시, 탈린, 로잔, 루블린, 부쿠레슈티, 나폴리, 모스크바, 트렌턴",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "오리건주",
+      "object": "세일럼",
+      "object_candidates": "방콕, 잘츠부르크, 민스크, 스트라스부르, 자카르타, 아바나, 부다페스트, 베르겐, 서울특별시, 세일럼",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "이탈리아 왕국",
+      "object": "로마",
+      "object_candidates": "랜싱, 프레스턴, 다카, 요코하마시, 아나폴리스, 가프, 컬럼비아, 덴버, 보스턴, 로마",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "슐레스비히홀슈타인주",
+      "object": "킬",
+      "object_candidates": "카잔, 레스터, 교토시, 카라치, 바젤, 아우크스부르크, 메디나, 아나폴리스, 앙카라, 킬",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "리투아니아",
+      "object": "빌뉴스",
+      "object_candidates": "크라이스트처치, 잭슨, 헬싱키, 알렉산드리아, 서울특별시, 헤리퍼드, 케임브리지, 마이애미, 프로비던스, 빌뉴스",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "미시시피주",
+      "object": "잭슨",
+      "object_candidates": "스프링필드, 알제, 부쿠레슈티, 콜카타, 랜싱, 토론토, 카라카스, 키예프, 리치먼드, 잭슨",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "오스트리아-헝가리 제국",
+      "object": "부다페스트",
+      "object_candidates": "베르겐, 스톡홀름, 비즈마크, 난징시, 요코하마시, 마닐라, 킹스턴, 광저우시, 알렉산드리아, 부다페스트",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "민스크주",
+      "object": "민스크",
+      "object_candidates": "베이루트, 카디프, 콜럼버스, 빌뉴스, 헤리퍼드, 나이로비, 스트라스부르, 골웨이, 맨체스터, 민스크",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "광둥성",
+      "object": "광저우시",
+      "object_candidates": "베이징시, 애들레이드, 오슬로, 알렉산드리아, 가프, 마닐라, 피어, 티라나, 브리스틀, 광저우시",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "로마 공화정",
+      "object": "로마",
+      "object_candidates": "도쿄도, 아바나, 히로시마시, 아테네, 바젤, 릴, 킹스턴, 하이데라바드, 탈린, 로마",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "프로이센 왕국",
+      "object": "베를린",
+      "object_candidates": "카라치, 바쿠, 프로비던스, 알레포, 피렌체, 세비야, 파리, 잘츠부르크, 헬싱키, 베를린",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "아프가니스탄",
+      "object": "카불",
+      "object_candidates": "스프링필드, 조지타운, 퍼스, 코펜하겐, 캔버라, 워터퍼드, 이스탄불, 롤리, 자그레브, 카불",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "칠레",
+      "object": "산티아고",
+      "object_candidates": "광저우시, 알렉산드리아, 콜카타, 모스크바, 투르, 다윈, 덴버, 카불, 내슈빌, 산티아고",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "유고슬라비아",
+      "object": "베오그라드",
+      "object_candidates": "런던, 알제, 레스터, 브라티슬라바, 타이베이시, 부쿠레슈티, 케임브리지, 리자이나, 보르도, 베오그라드",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "마요르카섬",
+      "object": "팔마데마요르카",
+      "object_candidates": "난징시, 바쿠, 서울특별시, 리비우, 로잔, 리자이나, 에든버러, 아테네, 윈체스터, 팔마데마요르카",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "노퍽주",
+      "object": "노리치",
+      "object_candidates": "예레반, 마드리드, 캔버라, 벵갈루루, 칼라일, 리버사이드, 위니펙, 나이로비, 바젤, 노리치",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "마조프셰주",
+      "object": "바르샤바",
+      "object_candidates": "오데사, 하노버, 콩코드, 모스크바, 캔버라, 베르겐, 비즈마크, 카잔, 빅토리아, 바르샤바",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "플랑드르",
+      "object": "브뤼셀 시",
+      "object_candidates": "티라나, 바르셀로나, 바르샤바, 다윈, 모스크바, 아테네, 델리, 피렌체, 뭄바이, 브뤼셀 시",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

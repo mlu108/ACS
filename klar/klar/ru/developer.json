@@ -1,0 +1,622 @@
+{
+  "name": "developer",
+  "prompt_templates": [
+    "Какая компания разработчик <subject>? Ответ: <mask>",
+    "Кто разработал <subject>? Ответ: <mask>",
+    "За разработку <subject> отвечает какая компания? Ответ: <mask>",
+    "Кем был разработан <subject>? Ответ: <mask>",
+    "Какая организация заслуживает разработку <subject>? Ответ: <mask>",
+    " Компания"
+  ],
+  "samples": [
+    {
+      "subject": "macOS",
+      "object": "Apple",
+      "object_candidates": "Boeing, IBM, Google, Adobe, Nokia, Intel, Nintendo, Майкрософт, Airbus, Apple",
+      "index": 3674,
+      "subject_en": "macOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iOS",
+      "object": "Apple",
+      "object_candidates": "IBM, Google, Adobe, Nintendo, Boeing, Airbus, Nokia, Intel, Майкрософт, Apple",
+      "index": 3675,
+      "subject_en": "iOS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Safari",
+      "object": "Apple",
+      "object_candidates": "Nokia, Airbus, Boeing, Nintendo, Adobe, Google, Intel, IBM, Майкрософт, Apple",
+      "index": 3676,
+      "subject_en": "Safari",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "PostScript",
+      "object": "Adobe",
+      "object_candidates": "Intel, Airbus, Boeing, Nokia, Google, IBM, Apple, Майкрософт, Nintendo, Adobe",
+      "index": 3677,
+      "subject_en": "PostScript",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Windows Vista",
+      "object": "Майкрософт",
+      "object_candidates": "Nintendo, Nokia, Google, Adobe, Apple, Boeing, Intel, Airbus, IBM, Майкрософт",
+      "index": 3678,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Internet Explorer",
+      "object": "Майкрософт",
+      "object_candidates": "Apple, Google, Boeing, IBM, Nintendo, Airbus, Adobe, Nokia, Intel, Майкрософт",
+      "index": 3679,
+      "subject_en": "Internet Explorer",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Boeing B-17 Flying Fortress",
+      "object": "Boeing",
+      "object_candidates": "Apple, Airbus, Nintendo, Nokia, Google, Intel, Майкрософт, Adobe, IBM, Boeing",
+      "index": 3680,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "DirectX",
+      "object": "Майкрософт",
+      "object_candidates": "Apple, Nintendo, Boeing, Adobe, IBM, Google, Airbus, Nokia, Intel, Майкрософт",
+      "index": 3681,
+      "subject_en": "DirectX",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Windows",
+      "object": "Майкрософт",
+      "object_candidates": "Nintendo, Intel, Adobe, Airbus, Apple, Google, Nokia, IBM, Boeing, Майкрософт",
+      "index": 3682,
+      "subject_en": "Microsoft Windows",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox 360",
+      "object": "Майкрософт",
+      "object_candidates": "Apple, Google, Nintendo, Adobe, Airbus, Nokia, Boeing, IBM, Intel, Майкрософт",
+      "index": 3683,
+      "subject_en": "Xbox 360",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Xbox One",
+      "object": "Майкрософт",
+      "object_candidates": "Airbus, Adobe, Boeing, Nokia, Nintendo, Apple, Intel, Google, IBM, Майкрософт",
+      "index": 3684,
+      "subject_en": "Xbox One",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "MS-DOS",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Nokia, Apple, Google, Boeing, Airbus, Nintendo, IBM, Intel, Майкрософт",
+      "index": 3685,
+      "subject_en": "MS-DOS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Фортран",
+      "object": "IBM",
+      "object_candidates": "Adobe, Airbus, Google, Apple, Intel, Nintendo, Майкрософт, Nokia, Boeing, IBM",
+      "index": 3686,
+      "subject_en": "Fortran",
+      "object_en": "IBM"
+    },
+    {
+      "subject": "Windows 1.0",
+      "object": "Майкрософт",
+      "object_candidates": "Boeing, Nintendo, Nokia, Intel, Google, IBM, Apple, Airbus, Adobe, Майкрософт",
+      "index": 3687,
+      "subject_en": "Windows 1.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Nintendo 3DS",
+      "object": "Nintendo",
+      "object_candidates": "Nokia, Airbus, Boeing, Майкрософт, Intel, Apple, Adobe, IBM, Google, Nintendo",
+      "index": 3688,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "80386",
+      "object": "Intel",
+      "object_candidates": "Apple, IBM, Nokia, Airbus, Nintendo, Google, Майкрософт, Boeing, Adobe, Intel",
+      "index": 3689,
+      "subject_en": "Intel 80386",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Windows 10",
+      "object": "Майкрософт",
+      "object_candidates": "Nokia, Nintendo, IBM, Apple, Intel, Boeing, Airbus, Adobe, Google, Майкрософт",
+      "index": 3690,
+      "subject_en": "Windows 10",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Excel",
+      "object": "Майкрософт",
+      "object_candidates": "Nokia, Intel, Boeing, Apple, Adobe, Nintendo, IBM, Google, Airbus, Майкрософт",
+      "index": 3691,
+      "subject_en": "Microsoft Excel",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Office",
+      "object": "Майкрософт",
+      "object_candidates": "Intel, Apple, Adobe, Google, Nintendo, Boeing, Airbus, Nokia, IBM, Майкрософт",
+      "index": 3692,
+      "subject_en": "Microsoft Office",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Word",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Boeing, Intel, Airbus, IBM, Nintendo, Nokia, Google, Apple, Майкрософт",
+      "index": 3693,
+      "subject_en": "Microsoft Word",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Mac OS",
+      "object": "Apple",
+      "object_candidates": "Nokia, Nintendo, Майкрософт, Airbus, IBM, Adobe, Intel, Boeing, Google, Apple",
+      "index": 3694,
+      "subject_en": "Mac OS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Windows 95",
+      "object": "Майкрософт",
+      "object_candidates": "IBM, Adobe, Intel, Google, Nokia, Airbus, Apple, Nintendo, Boeing, Майкрософт",
+      "index": 3695,
+      "subject_en": "Windows 95",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Visual Studio",
+      "object": "Майкрософт",
+      "object_candidates": "Apple, Adobe, IBM, Boeing, Nintendo, Intel, Google, Airbus, Nokia, Майкрософт",
+      "index": 3696,
+      "subject_en": "Microsoft Visual Studio",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 98",
+      "object": "Майкрософт",
+      "object_candidates": "Boeing, IBM, Apple, Nintendo, Nokia, Airbus, Adobe, Google, Intel, Майкрософт",
+      "index": 3697,
+      "subject_en": "Windows 98",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe Acrobat",
+      "object": "Adobe",
+      "object_candidates": "Nokia, Apple, Майкрософт, Boeing, Airbus, IBM, Google, Intel, Nintendo, Adobe",
+      "index": 3698,
+      "subject_en": "Adobe Acrobat",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "PDF",
+      "object": "Adobe",
+      "object_candidates": "IBM, Nintendo, Intel, Майкрософт, Nokia, Google, Apple, Boeing, Airbus, Adobe",
+      "index": 3699,
+      "subject_en": "Portable Document Format",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Core 2",
+      "object": "Intel",
+      "object_candidates": "Nokia, Boeing, Google, Nintendo, Adobe, Apple, IBM, Airbus, Майкрософт, Intel",
+      "index": 3700,
+      "subject_en": "Core 2",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Adobe Flash",
+      "object": "Adobe",
+      "object_candidates": "Airbus, Apple, Boeing, Nintendo, Nokia, Intel, IBM, Google, Майкрософт, Adobe",
+      "index": 3701,
+      "subject_en": "Adobe Flash",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Symbian OS",
+      "object": "Nokia",
+      "object_candidates": "Airbus, Майкрософт, Apple, IBM, Intel, Google, Nintendo, Boeing, Adobe, Nokia",
+      "index": 3702,
+      "subject_en": "Symbian",
+      "object_en": "Nokia"
+    },
+    {
+      "subject": "Windows Phone",
+      "object": "Майкрософт",
+      "object_candidates": "Google, Airbus, IBM, Nintendo, Boeing, Apple, Intel, Adobe, Nokia, Майкрософт",
+      "index": 3703,
+      "subject_en": "Windows Phone",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Pentium",
+      "object": "Intel",
+      "object_candidates": "Майкрософт, IBM, Boeing, Google, Nintendo, Airbus, Apple, Adobe, Nokia, Intel",
+      "index": 3704,
+      "subject_en": "Pentium",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Фотошоп",
+      "object": "Adobe",
+      "object_candidates": "Apple, Intel, Boeing, Nintendo, Nokia, Майкрософт, Airbus, IBM, Google, Adobe",
+      "index": 3705,
+      "subject_en": "Adobe Photoshop",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "QuickTime",
+      "object": "Apple",
+      "object_candidates": "Boeing, IBM, Intel, Adobe, Google, Airbus, Nintendo, Nokia, Майкрософт, Apple",
+      "index": 3706,
+      "subject_en": "QuickTime",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Wii U",
+      "object": "Nintendo",
+      "object_candidates": "IBM, Apple, Google, Boeing, Intel, Nokia, Майкрософт, Airbus, Adobe, Nintendo",
+      "index": 3707,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "Windows XP",
+      "object": "Майкрософт",
+      "object_candidates": "Nokia, Boeing, Nintendo, Intel, Google, IBM, Apple, Airbus, Adobe, Майкрософт",
+      "index": 3708,
+      "subject_en": "Windows XP",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 2000",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Nintendo, Intel, Airbus, Nokia, Apple, Google, Boeing, IBM, Майкрософт",
+      "index": 3709,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "NTFS",
+      "object": "Майкрософт",
+      "object_candidates": "Intel, Boeing, Apple, Adobe, Nintendo, Airbus, Nokia, Google, IBM, Майкрософт",
+      "index": 3710,
+      "subject_en": "NTFS",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows 8",
+      "object": "Майкрософт",
+      "object_candidates": "Intel, Google, Adobe, Nokia, Nintendo, Airbus, Boeing, Apple, IBM, Майкрософт",
+      "index": 3711,
+      "subject_en": "Windows 8",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "iPod",
+      "object": "Apple",
+      "object_candidates": "Майкрософт, Google, IBM, Intel, Adobe, Airbus, Nokia, Nintendo, Boeing, Apple",
+      "index": 3712,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "Boeing, Airbus, Майкрософт, Nokia, Apple, Intel, IBM, Adobe, Nintendo, Google",
+      "index": 3713,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Карты Google",
+      "object": "Google",
+      "object_candidates": "Apple, Nokia, IBM, Airbus, Nintendo, Майкрософт, Adobe, Boeing, Intel, Google",
+      "index": 3714,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Live Messenger",
+      "object": "Майкрософт",
+      "object_candidates": "Boeing, Intel, Adobe, Apple, IBM, Google, Airbus, Nintendo, Nokia, Майкрософт",
+      "index": 3715,
+      "subject_en": "Windows Live Messenger",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Google Street View",
+      "object": "Google",
+      "object_candidates": "Boeing, Adobe, Nokia, Майкрософт, Airbus, Intel, IBM, Nintendo, Apple, Google",
+      "index": 3716,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Проигрыватель Windows Media",
+      "object": "Майкрософт",
+      "object_candidates": "Intel, Nintendo, Airbus, Adobe, Boeing, IBM, Nokia, Apple, Google, Майкрософт",
+      "index": 3717,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": ".NET Framework",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Intel, Google, Nokia, Airbus, Nintendo, IBM, Boeing, Apple, Майкрософт",
+      "index": 3718,
+      "subject_en": ".NET Framework",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Центр обновления Windows",
+      "object": "Майкрософт",
+      "object_candidates": "Boeing, Adobe, Intel, Apple, Airbus, IBM, Nokia, Nintendo, Google, Майкрософт",
+      "index": 3719,
+      "subject_en": "Windows Update",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Boeing B-52 Stratofortress",
+      "object": "Boeing",
+      "object_candidates": "Airbus, Apple, Nintendo, IBM, Майкрософт, Adobe, Intel, Google, Nokia, Boeing",
+      "index": 3720,
+      "subject_en": "B-52 Stratofortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "iTunes",
+      "object": "Apple",
+      "object_candidates": "Nintendo, Майкрософт, Intel, Google, Nokia, IBM, Airbus, Adobe, Boeing, Apple",
+      "index": 3721,
+      "subject_en": "iTunes",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Windows 2.x",
+      "object": "Майкрософт",
+      "object_candidates": "Apple, Nintendo, Nokia, Boeing, IBM, Intel, Airbus, Adobe, Google, Майкрософт",
+      "index": 3722,
+      "subject_en": "Windows 2.0",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "AdSense",
+      "object": "Google",
+      "object_candidates": "Adobe, Майкрософт, Airbus, Apple, Nokia, IBM, Intel, Nintendo, Boeing, Google",
+      "index": 3723,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows 7",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Nokia, Airbus, Apple, Nintendo, IBM, Google, Boeing, Intel, Майкрософт",
+      "index": 3724,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Airbus A350",
+      "object": "Airbus",
+      "object_candidates": "Apple, Adobe, Nintendo, Intel, Nokia, Google, Boeing, IBM, Майкрософт, Airbus",
+      "index": 3725,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "Picasa",
+      "object": "Google",
+      "object_candidates": "Nokia, Nintendo, Boeing, Airbus, IBM, Adobe, Intel, Майкрософт, Apple, Google",
+      "index": 3726,
+      "subject_en": "Picasa",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Планета Земля",
+      "object": "Google",
+      "object_candidates": "Nintendo, Boeing, Майкрософт, IBM, Airbus, Nokia, Adobe, Intel, Apple, Google",
+      "index": 3727,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Play",
+      "object": "Google",
+      "object_candidates": "Airbus, Intel, IBM, Nokia, Adobe, Apple, Майкрософт, Nintendo, Boeing, Google",
+      "index": 3728,
+      "subject_en": "Google Play",
+      "object_en": "Google"
+    },
+    {
+      "subject": "iCloud",
+      "object": "Apple",
+      "object_candidates": "Nokia, Nintendo, Майкрософт, Google, Adobe, Intel, Airbus, IBM, Boeing, Apple",
+      "index": 3729,
+      "subject_en": "iCloud",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Siri",
+      "object": "Apple",
+      "object_candidates": "Intel, IBM, Nokia, Майкрософт, Adobe, Nintendo, Boeing, Airbus, Google, Apple",
+      "index": 3730,
+      "subject_en": "Siri",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "App Store",
+      "object": "Apple",
+      "object_candidates": "Intel, IBM, Adobe, Boeing, Nintendo, Google, Nokia, Майкрософт, Airbus, Apple",
+      "index": 3731,
+      "subject_en": "App Store",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Microsoft Access",
+      "object": "Майкрософт",
+      "object_candidates": "Intel, Nintendo, Airbus, Apple, Boeing, Adobe, Google, IBM, Nokia, Майкрософт",
+      "index": 3732,
+      "subject_en": "Microsoft Access",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Apple Watch",
+      "object": "Apple",
+      "object_candidates": "Google, Майкрософт, Airbus, Intel, Nokia, Adobe, Nintendo, IBM, Boeing, Apple",
+      "index": 3733,
+      "subject_en": "Apple Watch",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "IBooks",
+      "object": "Apple",
+      "object_candidates": "Майкрософт, Airbus, Boeing, IBM, Nintendo, Adobe, Intel, Google, Nokia, Apple",
+      "index": 3734,
+      "subject_en": "Apple Books",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "Nintendo, IBM, Boeing, Adobe, Nokia, Майкрософт, Apple, Intel, Airbus, Google",
+      "index": 3735,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Hangouts",
+      "object": "Google",
+      "object_candidates": "Airbus, Майкрософт, Adobe, Nokia, IBM, Nintendo, Intel, Apple, Boeing, Google",
+      "index": 3736,
+      "subject_en": "Google Hangouts",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Календарь",
+      "object": "Google",
+      "object_candidates": "Майкрософт, Apple, IBM, Adobe, Nintendo, Nokia, Boeing, Intel, Airbus, Google",
+      "index": 3737,
+      "subject_en": "Google Calendar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Skype",
+      "object": "Майкрософт",
+      "object_candidates": "Google, IBM, Intel, Airbus, Apple, Nintendo, Boeing, Nokia, Adobe, Майкрософт",
+      "index": 3738,
+      "subject_en": "Skype",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Adobe InDesign",
+      "object": "Adobe",
+      "object_candidates": "Google, Apple, IBM, Airbus, Майкрософт, Nintendo, Intel, Boeing, Nokia, Adobe",
+      "index": 3739,
+      "subject_en": "Adobe InDesign",
+      "object_en": "Adobe"
+    },
+    {
+      "subject": "Microsoft Store",
+      "object": "Майкрософт",
+      "object_candidates": "Airbus, Nokia, Google, IBM, Adobe, Nintendo, Boeing, Apple, Intel, Майкрософт",
+      "index": 3740,
+      "subject_en": "Microsoft Store",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Intel 8051",
+      "object": "Intel",
+      "object_candidates": "IBM, Airbus, Nokia, Nintendo, Майкрософт, Apple, Google, Adobe, Boeing, Intel",
+      "index": 3741,
+      "subject_en": "Intel MCS-51",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "Apple, Adobe, Nokia, Boeing, Майкрософт, Intel, Nintendo, Airbus, IBM, Google",
+      "index": 3742,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Chrome",
+      "object": "Google",
+      "object_candidates": "IBM, Майкрософт, Boeing, Nintendo, Apple, Intel, Nokia, Airbus, Adobe, Google",
+      "index": 3743,
+      "subject_en": "Google Chrome",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google Переводчик",
+      "object": "Google",
+      "object_candidates": "Boeing, Adobe, Apple, IBM, Майкрософт, Airbus, Nokia, Intel, Nintendo, Google",
+      "index": 3744,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Project Glass",
+      "object": "Google",
+      "object_candidates": "Майкрософт, Boeing, IBM, Nokia, Adobe, Nintendo, Apple, Intel, Airbus, Google",
+      "index": 3745,
+      "subject_en": "Google Glass",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Windows Mobile",
+      "object": "Майкрософт",
+      "object_candidates": "Airbus, Adobe, Apple, Nintendo, Boeing, Nokia, Intel, IBM, Google, Майкрософт",
+      "index": 3746,
+      "subject_en": "Windows Mobile",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Windows Me",
+      "object": "Майкрософт",
+      "object_candidates": "Nintendo, Intel, Boeing, Apple, Nokia, Airbus, IBM, Adobe, Google, Майкрософт",
+      "index": 3747,
+      "subject_en": "Windows Me",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Minecraft",
+      "object": "Майкрософт",
+      "object_candidates": "Google, Boeing, Nintendo, IBM, Airbus, Nokia, Apple, Intel, Adobe, Майкрософт",
+      "index": 3748,
+      "subject_en": "Minecraft",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Microsoft Security Essentials",
+      "object": "Майкрософт",
+      "object_candidates": "Adobe, Apple, Boeing, IBM, Nokia, Google, Airbus, Nintendo, Intel, Майкрософт",
+      "index": 3749,
+      "subject_en": "Microsoft Security Essentials",
+      "object_en": "Microsoft"
+    }
+  ],
+  "relation_id": "P178"
+}

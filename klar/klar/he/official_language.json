@@ -1,0 +1,4830 @@
+{
+  "name": "official_language",
+  "prompt_templates": [
+    "מה השפה הרשמית של <subject>? התשובה היא: <mask>",
+    "איזו שפה משמשת רשמית ב<subject>? התשובה היא: <mask>",
+    "מה השפה הראשית המדוברת ב<subject>? התשובה היא: <mask>",
+    "איזו שפה מחזיקה במעמד רשמי ב<subject>? התשובה היא: <mask>",
+    "איזו שפה מוכרת כרשמית ב<subject>? התשובה היא: <mask>",
+    " השפה הרשמית של <subject> נקראת <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "פולינזיה הצרפתית",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, בסקית, טורקית, הוואית, רוסית, טמילית, הונגרית, אלבנית, דנית, צרפתית",
+      "index": 235,
+      "subject_en": "French Polynesia",
+      "object_en": "French"
+    },
+    {
+      "subject": "ברוניי",
+      "object": "מלאית",
+      "object_candidates": "איטלקית, אורדו, אלבנית, סיציליאנית, ספרדית, גרמנית, אינדונזית, סומלית, עברית, מלאית",
+      "index": 236,
+      "subject_en": "Brunei",
+      "object_en": "Malay"
+    },
+    {
+      "subject": "אוטר פרדש",
+      "object": "אורדו",
+      "object_candidates": "מקדונית, טורקית, קמרית, הינדי, נפאלית, מלאית, פרסית, מראטהית, אלבנית, אורדו",
+      "index": 237,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "פינית",
+      "object_candidates": "נפאלית, מצרית, איטלקית, סלובנית, מונטנגרית, מקדונית, אירית, ברטונית, ליטאית, פינית",
+      "index": 238,
+      "subject_en": "European Union",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ולוניה",
+      "object": "צרפתית",
+      "object_candidates": "השפה הנורמנית, פנג'אבי, ולשית, קטלאנית, הינדי, מלאיאלאם, וייטנאמית, לטבית, אוקראינית, צרפתית",
+      "index": 239,
+      "subject_en": "Wallonia",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "סלובנית",
+      "object_candidates": "פולנית, סקוטית, גאורגית, ליטאית, יפנית, אנגלית, פורטוגזית, שוודית, מלאיאלאם, סלובנית",
+      "index": 240,
+      "subject_en": "European Union",
+      "object_en": "Slovene"
+    },
+    {
+      "subject": "האיטי",
+      "object": "צרפתית",
+      "object_candidates": "ארמנית, פינית, הולנדית, מראטהית, טלוגו, מלטית, אסטונית, איסלנדית, קטלאנית, צרפתית",
+      "index": 241,
+      "subject_en": "Haiti",
+      "object_en": "French"
+    },
+    {
+      "subject": "איחוד דרום אפריקה",
+      "object": "הולנדית",
+      "object_candidates": "יפנית, מראטהית, סומלית, פנג'אבי, יוונית, הינדי, בסקית, קטלאנית, ולשית, הולנדית",
+      "index": 242,
+      "subject_en": "Union of South Africa",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "ארגון שאנגחאי לשיתוף פעולה",
+      "object": "רוסית",
+      "object_candidates": "סיציליאנית, אנגלית, מונטנגרית, סלובקית, לטינית, מלטית, אינדונזית, ליטאית, מונגולית, רוסית",
+      "index": 243,
+      "subject_en": "Shanghai Cooperation Organisation",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ויומינג",
+      "object": "אנגלית",
+      "object_candidates": "לטבית, שפות סיניות, פולנית, הוואית, סקוטית, נפאלית, טמילית, ברטונית, רומנית, אנגלית",
+      "index": 244,
+      "subject_en": "Wyoming",
+      "object_en": "English"
+    },
+    {
+      "subject": "התאחדות האתלטיקה הבינלאומית",
+      "object": "צרפתית",
+      "object_candidates": "עברית, סקוטית, קמרית, אוקראינית, שפות סיניות, קטלאנית, מלאיאלאם, מצרית, גאורגית, צרפתית",
+      "index": 245,
+      "subject_en": "World Athletics",
+      "object_en": "French"
+    },
+    {
+      "subject": "מחוז אודסה",
+      "object": "רוסית",
+      "object_candidates": "הולנדית, ולשית, מקדונית, רומנית, אלבנית, בנגלית, מלטית, יוונית, קמרית, רוסית",
+      "index": 246,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הכס הקדוש",
+      "object": "לטינית",
+      "object_candidates": "בלארוסית, קוריאנית, מצרית, סלובקית, הולנדית, גרמנית, קטלאנית, שוודית, הוואית, לטינית",
+      "index": 247,
+      "subject_en": "Holy See",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "אורוגוואי",
+      "object": "ספרדית",
+      "object_candidates": "בנגלית, פנג'אבי, פורטוגזית, בסקית, לטבית, סלובנית, תאית, טורקית, הוואית, ספרדית",
+      "index": 248,
+      "subject_en": "Uruguay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ג'אמשדפור",
+      "object": "הינדי",
+      "object_candidates": "סלובנית, סלובקית, נפאלית, יפנית, צרפתית, מונגולית, רוסית, ונטית, פנג'אבי, הינדי",
+      "index": 249,
+      "subject_en": "Jamshedpur",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "דרום אוסטיה",
+      "object": "גאורגית",
+      "object_candidates": "פינית, מלאיאלאם, ולשית, שוודית, יוונית, ספרדית, רוסית, מצרית, עברית, גאורגית",
+      "index": 250,
+      "subject_en": "South Ossetia",
+      "object_en": "Georgian"
+    },
+    {
+      "subject": "קמבודיה",
+      "object": "קמרית",
+      "object_candidates": "בסקית, הינדי, מצרית, השפה הנורמנית, ולשית, סלובקית, בולגרית, שוודית, ארמנית, קמרית",
+      "index": 251,
+      "subject_en": "Cambodia",
+      "object_en": "Khmer"
+    },
+    {
+      "subject": "מחוז קרסנויארסק",
+      "object": "רוסית",
+      "object_candidates": "איטלקית, פינית, אסטונית, שפות סיניות, מראטהית, בנגלית, צ'כית, הונגרית, סקוטית, רוסית",
+      "index": 252,
+      "subject_en": "Krasnoyarsk Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הרפובליקה של קונגו",
+      "object": "צרפתית",
+      "object_candidates": "ונטית, נפאלית, פינית, גרמנית, הינדי, לטינית, טלוגו, שפות סיניות, אינדונזית, צרפתית",
+      "index": 253,
+      "subject_en": "Republic of the Congo",
+      "object_en": "French"
+    },
+    {
+      "subject": "איי שלמה",
+      "object": "אנגלית",
+      "object_candidates": "רוסית, דנית, מלאית, סקוטית, מלטית, הוואית, לטינית, בולגרית, טלוגו, אנגלית",
+      "index": 254,
+      "subject_en": "Solomon Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "מגהלאיה",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, טורקית, רומנית, הוואית, ונטית, ליטאית, בלארוסית, סקוטית, בסקית, אנגלית",
+      "index": 255,
+      "subject_en": "Meghalaya",
+      "object_en": "English"
+    },
+    {
+      "subject": "ראג'סטאן",
+      "object": "הינדי",
+      "object_candidates": "אוקראינית, טמילית, איסלנדית, וייטנאמית, מלטית, קרואטית, מלאיאלאם, פולנית, לטינית, הינדי",
+      "index": 256,
+      "subject_en": "Rajasthan",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "ארגון שאנגחאי לשיתוף פעולה",
+      "object": "שפות סיניות",
+      "object_candidates": "גרמנית, רומנית, אנגלית, לטינית, מלטית, קרואטית, אירית, ארמנית, בלארוסית, שפות סיניות",
+      "index": 257,
+      "subject_en": "Shanghai Cooperation Organisation",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "אי הפסחא",
+      "object": "ספרדית",
+      "object_candidates": "בסקית, השפה הנורמנית, הונגרית, לטבית, צרפתית, גאורגית, תאית, אנגלית, רוסית, ספרדית",
+      "index": 258,
+      "subject_en": "Easter Island",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מיורקה",
+      "object": "קטלאנית",
+      "object_candidates": "אירית, דנית, עברית, צרפתית, ארמנית, מונגולית, יוונית, קרואטית, אורדו, קטלאנית",
+      "index": 259,
+      "subject_en": "Majorca",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "ברזיל",
+      "object": "פורטוגזית",
+      "object_candidates": "בסקית, צ'כית, בולגרית, טמילית, רומנית, מלטית, מונגולית, גאורגית, מצרית, פורטוגזית",
+      "index": 260,
+      "subject_en": "Brazil",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "מקסיקו",
+      "object": "ספרדית",
+      "object_candidates": "טמילית, צ'כית, ונטית, הוואית, ארמנית, עברית, פורטוגזית, בולגרית, סקוטית, ספרדית",
+      "index": 261,
+      "subject_en": "Mexico",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "גמביה",
+      "object": "אנגלית",
+      "object_candidates": "בלארוסית, הוואית, טמילית, מלאיאלאם, טלוגו, אירית, פרסית, פורטוגזית, ונטית, אנגלית",
+      "index": 262,
+      "subject_en": "The Gambia",
+      "object_en": "English"
+    },
+    {
+      "subject": "קיוטו",
+      "object": "יפנית",
+      "object_candidates": "מצרית, רומנית, אנגלית, אורדו, מלאית, פולנית, צ'כית, אזרית, איטלקית, יפנית",
+      "index": 263,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Japanese"
+    },
+    {
+      "subject": "איי ג'ורג'יה הדרומית ואיי סנדוויץ' הדרומיים",
+      "object": "אנגלית",
+      "object_candidates": "ארמנית, אירית, הולנדית, ונטית, סומלית, אינדונזית, מקדונית, רומנית, קטלאנית, אנגלית",
+      "index": 264,
+      "subject_en": "South Georgia and the South Sandwich Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "האי מאן",
+      "object": "אנגלית",
+      "object_candidates": "טלוגו, הוואית, ונטית, ברטונית, ספרדית, אלבנית, גאורגית, לטבית, סקוטית, אנגלית",
+      "index": 265,
+      "subject_en": "Isle of Man",
+      "object_en": "English"
+    },
+    {
+      "subject": "מיסיסיפי",
+      "object": "אנגלית",
+      "object_candidates": "מונגולית, קטלאנית, ספרדית, מלאיאלאם, טמילית, פרסית, פורטוגזית, אוקראינית, נפאלית, אנגלית",
+      "index": 266,
+      "subject_en": "Mississippi",
+      "object_en": "English"
+    },
+    {
+      "subject": "מקאו",
+      "object": "שפות סיניות",
+      "object_candidates": "אינדונזית, רומנית, מלאיאלאם, הונגרית, שוודית, פולנית, מלטית, אלבנית, סומלית, שפות סיניות",
+      "index": 267,
+      "subject_en": "Macau",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "צ'כוסלובקיה",
+      "object": "סלובקית",
+      "object_candidates": "ארמנית, שוודית, גרמנית, סרבית, סיציליאנית, מצרית, לטינית, אירית, עברית, סלובקית",
+      "index": 268,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "מחוז דונצק",
+      "object": "רוסית",
+      "object_candidates": "בסקית, מלטית, מונטנגרית, השפה הנורמנית, קוריאנית, קרואטית, טמילית, בנגלית, דנית, רוסית",
+      "index": 269,
+      "subject_en": "Donetsk Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ישראל",
+      "object": "עברית",
+      "object_candidates": "סומלית, רוסית, יפנית, אורדו, וייטנאמית, גאורגית, קוריאנית, בסקית, פולנית, עברית",
+      "index": 270,
+      "subject_en": "Israel",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "סמואה",
+      "object": "אנגלית",
+      "object_candidates": "נפאלית, סלובנית, וייטנאמית, איסלנדית, אירית, ארמנית, טמילית, קטלאנית, אורדו, אנגלית",
+      "index": 271,
+      "subject_en": "Samoa",
+      "object_en": "English"
+    },
+    {
+      "subject": "טטרסטן",
+      "object": "רוסית",
+      "object_candidates": "השפה הנורמנית, פרסית, וייטנאמית, פינית, לטינית, בנגלית, ליטאית, סקוטית, מלאיאלאם, רוסית",
+      "index": 272,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "בריסל",
+      "object": "הולנדית",
+      "object_candidates": "שוודית, סלובנית, צ'כית, דנית, מראטהית, רומנית, ארמנית, קמרית, מונגולית, הולנדית",
+      "index": 273,
+      "subject_en": "Brussels region",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "הוואי",
+      "object": "הוואית",
+      "object_candidates": "בסקית, קטלאנית, שוודית, אורדו, תאית, סרבית, רומנית, גאורגית, בלארוסית, הוואית",
+      "index": 274,
+      "subject_en": "Hawaii",
+      "object_en": "Hawaiian"
+    },
+    {
+      "subject": "שווייץ",
+      "object": "צרפתית",
+      "object_candidates": "קרואטית, צ'כית, סלובנית, סקוטית, בנגלית, קמרית, פרסית, בולגרית, פינית, צרפתית",
+      "index": 275,
+      "subject_en": "Switzerland",
+      "object_en": "French"
+    },
+    {
+      "subject": "קאיאני",
+      "object": "פינית",
+      "object_candidates": "מלאית, פנג'אבי, מצרית, סומלית, פורטוגזית, קטלאנית, טמילית, הולנדית, וייטנאמית, פינית",
+      "index": 276,
+      "subject_en": "Kajaani",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "בלגיה",
+      "object": "גרמנית",
+      "object_candidates": "קוריאנית, מלאיאלאם, אנגלית, איטלקית, ארמנית, עברית, גאורגית, אסטונית, הינדי, גרמנית",
+      "index": 277,
+      "subject_en": "Belgium",
+      "object_en": "German"
+    },
+    {
+      "subject": "נאורו",
+      "object": "אנגלית",
+      "object_candidates": "אירית, בסקית, יוונית, ברטונית, קוריאנית, קטלאנית, הינדי, מונטנגרית, הונגרית, אנגלית",
+      "index": 278,
+      "subject_en": "Nauru",
+      "object_en": "English"
+    },
+    {
+      "subject": "דלהי",
+      "object": "אנגלית",
+      "object_candidates": "בסקית, מקדונית, סרבית, שפות סיניות, ספרדית, ליטאית, עברית, ונטית, אזרית, אנגלית",
+      "index": 279,
+      "subject_en": "Delhi",
+      "object_en": "English"
+    },
+    {
+      "subject": "נווארה",
+      "object": "ספרדית",
+      "object_candidates": "גרמנית, דנית, הולנדית, גאורגית, קטלאנית, טורקית, אירית, מלאית, קמרית, ספרדית",
+      "index": 280,
+      "subject_en": "Navarre",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "איביזה",
+      "object": "ספרדית",
+      "object_candidates": "אינדונזית, פינית, ברטונית, לטבית, איטלקית, קוריאנית, עברית, פרסית, פורטוגזית, ספרדית",
+      "index": 281,
+      "subject_en": "Ibiza",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "קרלה",
+      "object": "אנגלית",
+      "object_candidates": "פולנית, הוואית, שוודית, צ'כית, צרפתית, אסטונית, ספרדית, ארמנית, איסלנדית, אנגלית",
+      "index": 282,
+      "subject_en": "Kerala",
+      "object_en": "English"
+    },
+    {
+      "subject": "איי פוקלנד",
+      "object": "אנגלית",
+      "object_candidates": "לטינית, ולשית, סרבית, סומלית, מונטנגרית, ונטית, מלאיאלאם, בסקית, סלובנית, אנגלית",
+      "index": 283,
+      "subject_en": "Falkland Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "העיר החופשית דנציג",
+      "object": "פולנית",
+      "object_candidates": "ולשית, מצרית, פורטוגזית, סומלית, ספרדית, טלוגו, רוסית, אזרית, אסטונית, פולנית",
+      "index": 284,
+      "subject_en": "Free City of Danzig",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "אופ\"א",
+      "object": "צרפתית",
+      "object_candidates": "יוונית, מונטנגרית, פרסית, פנג'אבי, שפות סיניות, טורקית, מונגולית, פינית, ברטונית, צרפתית",
+      "index": 285,
+      "subject_en": "Union of European Football Associations",
+      "object_en": "French"
+    },
+    {
+      "subject": "פריסלנד",
+      "object": "הולנדית",
+      "object_candidates": "סלובקית, בולגרית, שוודית, אנגלית, ולשית, מלאיאלאם, בסקית, וייטנאמית, סלובנית, הולנדית",
+      "index": 286,
+      "subject_en": "Friesland",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "גינאה",
+      "object": "צרפתית",
+      "object_candidates": "ברטונית, רוסית, אלבנית, בלארוסית, סקוטית, טלוגו, סלובקית, טמילית, הוואית, צרפתית",
+      "index": 287,
+      "subject_en": "Guinea",
+      "object_en": "French"
+    },
+    {
+      "subject": "קוימבטור",
+      "object": "טמילית",
+      "object_candidates": "דנית, רומנית, הונגרית, אסטונית, ונטית, ולשית, אלבנית, פולנית, סומלית, טמילית",
+      "index": 288,
+      "subject_en": "Coimbatore",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "אוסטרליה",
+      "object": "אנגלית",
+      "object_candidates": "קוריאנית, ולשית, קטלאנית, הולנדית, ונטית, וייטנאמית, צ'כית, סקוטית, מראטהית, אנגלית",
+      "index": 289,
+      "subject_en": "Australia",
+      "object_en": "English"
+    },
+    {
+      "subject": "פרו",
+      "object": "ספרדית",
+      "object_candidates": "אזרית, תאית, מקדונית, פנג'אבי, הולנדית, סקוטית, ונטית, אוקראינית, סומלית, ספרדית",
+      "index": 290,
+      "subject_en": "Peru",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "דלהי",
+      "object": "פנג'אבי",
+      "object_candidates": "ונטית, טורקית, ברטונית, סיציליאנית, מונטנגרית, מלאיאלאם, גאורגית, הולנדית, קוריאנית, פנג'אבי",
+      "index": 291,
+      "subject_en": "Delhi",
+      "object_en": "Punjabi"
+    },
+    {
+      "subject": "לסוטו",
+      "object": "אנגלית",
+      "object_candidates": "רוסית, אורדו, אירית, נפאלית, בסקית, מונגולית, דנית, צ'כית, מקדונית, אנגלית",
+      "index": 292,
+      "subject_en": "Lesotho",
+      "object_en": "English"
+    },
+    {
+      "subject": "הודו",
+      "object": "אנגלית",
+      "object_candidates": "אורדו, אסטונית, רומנית, יפנית, מראטהית, אוקראינית, צרפתית, סרבית, טלוגו, אנגלית",
+      "index": 293,
+      "subject_en": "India",
+      "object_en": "English"
+    },
+    {
+      "subject": "פיטקרן",
+      "object": "אנגלית",
+      "object_candidates": "תאית, קמרית, פינית, טמילית, מלאית, ארמנית, סלובנית, סלובקית, הונגרית, אנגלית",
+      "index": 294,
+      "subject_en": "Pitcairn Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "חנטי ומנסי",
+      "object": "רוסית",
+      "object_candidates": "טמילית, אוקראינית, ליטאית, איסלנדית, אירית, טורקית, ספרדית, סרבית, צ'כית, רוסית",
+      "index": 295,
+      "subject_en": "Khanty-Mansi Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "זימבבואה",
+      "object": "אנגלית",
+      "object_candidates": "אסטונית, צ'כית, מראטהית, סיציליאנית, עברית, איסלנדית, מקדונית, איטלקית, לטבית, אנגלית",
+      "index": 296,
+      "subject_en": "Zimbabwe",
+      "object_en": "English"
+    },
+    {
+      "subject": "לוצרן",
+      "object": "גרמנית",
+      "object_candidates": "פורטוגזית, ספרדית, אלבנית, בנגלית, אינדונזית, לטבית, פולנית, טורקית, צ'כית, גרמנית",
+      "index": 297,
+      "subject_en": "Lucerne",
+      "object_en": "German"
+    },
+    {
+      "subject": "טרנסניסטריה",
+      "object": "אוקראינית",
+      "object_candidates": "אלבנית, קוריאנית, איטלקית, מקדונית, סומלית, תאית, אינדונזית, צרפתית, יפנית, אוקראינית",
+      "index": 298,
+      "subject_en": "Transnistria",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "ג'יבוטי",
+      "object": "צרפתית",
+      "object_candidates": "בולגרית, טמילית, סקוטית, ולשית, בלארוסית, רוסית, ונטית, רומנית, שוודית, צרפתית",
+      "index": 299,
+      "subject_en": "Djibouti",
+      "object_en": "French"
+    },
+    {
+      "subject": "סנט אוסטטיוס",
+      "object": "אנגלית",
+      "object_candidates": "הולנדית, קוריאנית, איטלקית, סלובקית, איסלנדית, פנג'אבי, צרפתית, טלוגו, רומנית, אנגלית",
+      "index": 300,
+      "subject_en": "Sint Eustatius",
+      "object_en": "English"
+    },
+    {
+      "subject": "מונטנה",
+      "object": "אנגלית",
+      "object_candidates": "צרפתית, שוודית, צ'כית, ליטאית, קטלאנית, רומנית, סרבית, יוונית, מצרית, אנגלית",
+      "index": 301,
+      "subject_en": "Montana",
+      "object_en": "English"
+    },
+    {
+      "subject": "איי בהאמה",
+      "object": "אנגלית",
+      "object_candidates": "הינדי, קמרית, מלאית, בסקית, גאורגית, איטלקית, גרמנית, ארמנית, פולנית, אנגלית",
+      "index": 302,
+      "subject_en": "The Bahamas",
+      "object_en": "English"
+    },
+    {
+      "subject": "דאגסטן",
+      "object": "אזרית",
+      "object_candidates": "פינית, בנגלית, קרואטית, גאורגית, סקוטית, אירית, לטבית, טלוגו, יוונית, אזרית",
+      "index": 303,
+      "subject_en": "Republic of Dagestan",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "מקדוניה הצפונית",
+      "object": "מקדונית",
+      "object_candidates": "טורקית, מלטית, סלובקית, הונגרית, בלארוסית, קטלאנית, מונגולית, אוקראינית, רוסית, מקדונית",
+      "index": 304,
+      "subject_en": "North Macedonia",
+      "object_en": "Macedonian"
+    },
+    {
+      "subject": "אונטריו",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, ארמנית, הונגרית, מלאיאלאם, טלוגו, וייטנאמית, רוסית, אינדונזית, שפות סיניות, אנגלית",
+      "index": 305,
+      "subject_en": "Ontario",
+      "object_en": "English"
+    },
+    {
+      "subject": "אלברטה",
+      "object": "אנגלית",
+      "object_candidates": "שוודית, קטלאנית, פולנית, שפות סיניות, פנג'אבי, סרבית, מלטית, לטבית, סלובנית, אנגלית",
+      "index": 306,
+      "subject_en": "Alberta",
+      "object_en": "English"
+    },
+    {
+      "subject": "מונטנגרו",
+      "object": "סרבית",
+      "object_candidates": "סקוטית, השפה הנורמנית, שוודית, פרסית, הוואית, הולנדית, ונטית, רוסית, עברית, סרבית",
+      "index": 307,
+      "subject_en": "Montenegro",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "ג'אמו וקשמיר",
+      "object": "אורדו",
+      "object_candidates": "קמרית, סלובנית, הונגרית, עברית, פרסית, סרבית, סלובקית, איטלקית, אזרית, אורדו",
+      "index": 308,
+      "subject_en": "Jammu and Kashmir",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "אסוואטיני",
+      "object": "אנגלית",
+      "object_candidates": "בלארוסית, השפה הנורמנית, קרואטית, ונטית, פינית, הונגרית, צרפתית, מונטנגרית, אזרית, אנגלית",
+      "index": 309,
+      "subject_en": "Eswatini",
+      "object_en": "English"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "הולנדית",
+      "object_candidates": "הוואית, אזרית, בולגרית, ונטית, ליטאית, מונגולית, קמרית, סלובנית, אירית, הולנדית",
+      "index": 310,
+      "subject_en": "European Union",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "גרנדה",
+      "object": "אנגלית",
+      "object_candidates": "נפאלית, סלובנית, עברית, לטינית, מצרית, פנג'אבי, קמרית, מלאיאלאם, דנית, אנגלית",
+      "index": 311,
+      "subject_en": "Grenada",
+      "object_en": "English"
+    },
+    {
+      "subject": "אולדרני",
+      "object": "אנגלית",
+      "object_candidates": "עברית, יפנית, מלטית, אינדונזית, בסקית, לטבית, גאורגית, ספרדית, השפה הנורמנית, אנגלית",
+      "index": 312,
+      "subject_en": "Alderney",
+      "object_en": "English"
+    },
+    {
+      "subject": "ארגאו",
+      "object": "גרמנית",
+      "object_candidates": "בנגלית, וייטנאמית, אינדונזית, אזרית, מקדונית, סלובנית, מונגולית, רומנית, ארמנית, גרמנית",
+      "index": 313,
+      "subject_en": "Aargau",
+      "object_en": "German"
+    },
+    {
+      "subject": "חקסיה",
+      "object": "רוסית",
+      "object_candidates": "הולנדית, הוואית, אסטונית, הונגרית, אינדונזית, סלובנית, רומנית, איסלנדית, גרמנית, רוסית",
+      "index": 314,
+      "subject_en": "Republic of Khakassia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "צ'צ'ניה",
+      "object": "רוסית",
+      "object_candidates": "ליטאית, שוודית, סיציליאנית, ארמנית, טורקית, אנגלית, מלאיאלאם, לטינית, אלבנית, רוסית",
+      "index": 315,
+      "subject_en": "Chechen Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "מחוז מיקולאייב",
+      "object": "רוסית",
+      "object_candidates": "לטינית, מונטנגרית, בלארוסית, אורדו, לטבית, קמרית, שוודית, אינדונזית, מלטית, רוסית",
+      "index": 316,
+      "subject_en": "Mykolaiv Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פנג'אב",
+      "object": "פנג'אבי",
+      "object_candidates": "נפאלית, פולנית, טמילית, רוסית, יוונית, אזרית, עברית, רומנית, יפנית, פנג'אבי",
+      "index": 317,
+      "subject_en": "Punjab",
+      "object_en": "Punjabi"
+    },
+    {
+      "subject": "רואנדה",
+      "object": "אנגלית",
+      "object_candidates": "אלבנית, טלוגו, מראטהית, אוקראינית, קמרית, טורקית, מלאיאלאם, פינית, שוודית, אנגלית",
+      "index": 318,
+      "subject_en": "Rwanda",
+      "object_en": "English"
+    },
+    {
+      "subject": "פינלנד",
+      "object": "פינית",
+      "object_candidates": "מלאית, מקדונית, יוונית, סלובנית, שוודית, אסטונית, סלובקית, טמילית, קוריאנית, פינית",
+      "index": 319,
+      "subject_en": "Finland",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "נברסקה",
+      "object": "אנגלית",
+      "object_candidates": "נפאלית, טלוגו, ולשית, אורדו, פורטוגזית, ספרדית, תאית, סקוטית, עברית, אנגלית",
+      "index": 320,
+      "subject_en": "Nebraska",
+      "object_en": "English"
+    },
+    {
+      "subject": "פולין",
+      "object": "פולנית",
+      "object_candidates": "לטינית, בסקית, אורדו, קוריאנית, עברית, אירית, הולנדית, מלטית, מצרית, פולנית",
+      "index": 321,
+      "subject_en": "Poland",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האוקראינית",
+      "object": "רוסית",
+      "object_candidates": "ליטאית, הינדי, טמילית, וייטנאמית, סלובקית, מלטית, נפאלית, ולשית, מלאיאלאם, רוסית",
+      "index": 322,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ניון",
+      "object": "צרפתית",
+      "object_candidates": "מלטית, בולגרית, פרסית, פינית, נפאלית, קטלאנית, הינדי, שפות סיניות, אסטונית, צרפתית",
+      "index": 323,
+      "subject_en": "Nyon",
+      "object_en": "French"
+    },
+    {
+      "subject": "בזל",
+      "object": "גרמנית",
+      "object_candidates": "קמרית, לטבית, פרסית, ליטאית, בסקית, איסלנדית, דנית, צ'כית, מצרית, גרמנית",
+      "index": 324,
+      "subject_en": "Basel",
+      "object_en": "German"
+    },
+    {
+      "subject": "ארקנסו",
+      "object": "אנגלית",
+      "object_candidates": "פנג'אבי, יפנית, ולשית, בלארוסית, הוואית, סומלית, רוסית, ארמנית, ברטונית, אנגלית",
+      "index": 325,
+      "subject_en": "Arkansas",
+      "object_en": "English"
+    },
+    {
+      "subject": "רומניה",
+      "object": "רומנית",
+      "object_candidates": "ספרדית, דנית, יוונית, טמילית, בולגרית, וייטנאמית, אנגלית, מלטית, לטבית, רומנית",
+      "index": 326,
+      "subject_en": "Romania",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "סרי לנקה",
+      "object": "טמילית",
+      "object_candidates": "פורטוגזית, אסטונית, בולגרית, אינדונזית, מלאיאלאם, אלבנית, השפה הנורמנית, יפנית, יוונית, טמילית",
+      "index": 327,
+      "subject_en": "Sri Lanka",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "יוונית",
+      "object_candidates": "אירית, פינית, גאורגית, ספרדית, מלאיאלאם, אזרית, מונגולית, מלטית, הונגרית, יוונית",
+      "index": 328,
+      "subject_en": "European Union",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "אירית",
+      "object_candidates": "הוואית, מראטהית, פורטוגזית, מונגולית, רומנית, טלוגו, לטבית, ברטונית, בנגלית, אירית",
+      "index": 329,
+      "subject_en": "European Union",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "קניה",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, רומנית, צרפתית, מראטהית, יוונית, ארמנית, בנגלית, הוואית, מקדונית, אנגלית",
+      "index": 330,
+      "subject_en": "Kenya",
+      "object_en": "English"
+    },
+    {
+      "subject": "הארצות הדרומיות והאנטארקטיות של צרפת",
+      "object": "צרפתית",
+      "object_candidates": "גרמנית, רומנית, ארמנית, בסקית, דנית, אוקראינית, שפות סיניות, מצרית, סלובקית, צרפתית",
+      "index": 331,
+      "subject_en": "French Southern and Antarctic Lands",
+      "object_en": "French"
+    },
+    {
+      "subject": "גאנה",
+      "object": "אנגלית",
+      "object_candidates": "סקוטית, מונטנגרית, בלארוסית, ברטונית, הוואית, מלאיאלאם, טלוגו, יפנית, ולשית, אנגלית",
+      "index": 332,
+      "subject_en": "Ghana",
+      "object_en": "English"
+    },
+    {
+      "subject": "פרובאנס",
+      "object": "צרפתית",
+      "object_candidates": "טמילית, גרמנית, סלובקית, בנגלית, ספרדית, יוונית, יפנית, גאורגית, אסטונית, צרפתית",
+      "index": 333,
+      "subject_en": "Provence",
+      "object_en": "French"
+    },
+    {
+      "subject": "סלובניה",
+      "object": "סלובנית",
+      "object_candidates": "אזרית, סקוטית, לטינית, טלוגו, יפנית, אירית, בסקית, ספרדית, פולנית, סלובנית",
+      "index": 334,
+      "subject_en": "Slovenia",
+      "object_en": "Slovene"
+    },
+    {
+      "subject": "מולדובה",
+      "object": "רומנית",
+      "object_candidates": "אלבנית, מונטנגרית, פינית, אסטונית, קמרית, ונטית, מלאיאלאם, סלובנית, קוריאנית, רומנית",
+      "index": 335,
+      "subject_en": "Moldova",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "הארגון לביטחון ולשיתוף פעולה באירופה",
+      "object": "צרפתית",
+      "object_candidates": "הינדי, פנג'אבי, אינדונזית, השפה הנורמנית, הולנדית, אזרית, רומנית, קטלאנית, בולגרית, צרפתית",
+      "index": 336,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "French"
+    },
+    {
+      "subject": "גיאנה הצרפתית",
+      "object": "צרפתית",
+      "object_candidates": "הונגרית, ולשית, לטינית, ספרדית, אוקראינית, סומלית, אלבנית, קרואטית, קוריאנית, צרפתית",
+      "index": 337,
+      "subject_en": "French Guiana",
+      "object_en": "French"
+    },
+    {
+      "subject": "ליטא",
+      "object": "ליטאית",
+      "object_candidates": "אינדונזית, יפנית, מונגולית, מראטהית, השפה הנורמנית, ארמנית, הונגרית, אוקראינית, אסטונית, ליטאית",
+      "index": 338,
+      "subject_en": "Lithuania",
+      "object_en": "Lithuanian"
+    },
+    {
+      "subject": "רפובליקת קומי",
+      "object": "רוסית",
+      "object_candidates": "בולגרית, קמרית, אוקראינית, טמילית, נפאלית, סקוטית, רומנית, בלארוסית, דנית, רוסית",
+      "index": 339,
+      "subject_en": "Komi Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "אנגווילה",
+      "object": "אנגלית",
+      "object_candidates": "אסטונית, הוואית, מלאיאלאם, בסקית, אירית, הונגרית, פרסית, מלטית, תאית, אנגלית",
+      "index": 340,
+      "subject_en": "Anguilla",
+      "object_en": "English"
+    },
+    {
+      "subject": "בליז",
+      "object": "אנגלית",
+      "object_candidates": "אסטונית, הוואית, יפנית, סלובנית, מלטית, סקוטית, שפות סיניות, אינדונזית, סלובקית, אנגלית",
+      "index": 341,
+      "subject_en": "Belize",
+      "object_en": "English"
+    },
+    {
+      "subject": "ספרד",
+      "object": "קטלאנית",
+      "object_candidates": "אינדונזית, אסטונית, אנגלית, קוריאנית, פרסית, סלובנית, מקדונית, גרמנית, טמילית, קטלאנית",
+      "index": 342,
+      "subject_en": "Spain",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "ברבדוס",
+      "object": "אנגלית",
+      "object_candidates": "טמילית, אורדו, איטלקית, אלבנית, וייטנאמית, מלאית, סיציליאנית, מלאיאלאם, אינדונזית, אנגלית",
+      "index": 343,
+      "subject_en": "Barbados",
+      "object_en": "English"
+    },
+    {
+      "subject": "מליטופול",
+      "object": "אוקראינית",
+      "object_candidates": "ולשית, טורקית, סיציליאנית, בולגרית, איסלנדית, נפאלית, מקדונית, קטלאנית, אורדו, אוקראינית",
+      "index": 344,
+      "subject_en": "Melitopol",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "גרמניה המערבית",
+      "object": "גרמנית",
+      "object_candidates": "סלובנית, צ'כית, ברטונית, וייטנאמית, ונטית, רומנית, הינדי, אירית, בנגלית, גרמנית",
+      "index": 345,
+      "subject_en": "West Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "הניינץ",
+      "object": "רוסית",
+      "object_candidates": "איסלנדית, הינדי, מונטנגרית, מלטית, סיציליאנית, אלבנית, קרואטית, טלוגו, וייטנאמית, רוסית",
+      "index": 346,
+      "subject_en": "Nenets Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הולנד הקריבית",
+      "object": "אנגלית",
+      "object_candidates": "פרסית, סלובקית, הוואית, מצרית, עברית, תאית, יפנית, השפה הנורמנית, סרבית, אנגלית",
+      "index": 347,
+      "subject_en": "Caribbean Netherlands",
+      "object_en": "English"
+    },
+    {
+      "subject": "קולומביה",
+      "object": "ספרדית",
+      "object_candidates": "פנג'אבי, סיציליאנית, השפה הנורמנית, סלובקית, מלאיאלאם, פולנית, אלבנית, אינדונזית, פינית, ספרדית",
+      "index": 348,
+      "subject_en": "Colombia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "באהיה",
+      "object": "פורטוגזית",
+      "object_candidates": "הינדי, בסקית, מלאיאלאם, דנית, שפות סיניות, הוואית, אורדו, סומלית, מקדונית, פורטוגזית",
+      "index": 349,
+      "subject_en": "Bahia",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "ברוניי",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, סקוטית, שוודית, תאית, פינית, קטלאנית, עברית, בולגרית, ארמנית, אנגלית",
+      "index": 350,
+      "subject_en": "Brunei",
+      "object_en": "English"
+    },
+    {
+      "subject": "ממלכת סיציליה הנורמנית",
+      "object": "לטינית",
+      "object_candidates": "אנגלית, תאית, בנגלית, פורטוגזית, אירית, אזרית, מקדונית, פולנית, גרמנית, לטינית",
+      "index": 351,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "מחוז דונצק",
+      "object": "אוקראינית",
+      "object_candidates": "שפות סיניות, רוסית, דנית, מצרית, לטינית, פולנית, קטלאנית, לטבית, סומלית, אוקראינית",
+      "index": 352,
+      "subject_en": "Donetsk Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "פטנה",
+      "object": "הינדי",
+      "object_candidates": "רוסית, טורקית, איטלקית, קטלאנית, פנג'אבי, טמילית, מקדונית, אוקראינית, ספרדית, הינדי",
+      "index": 353,
+      "subject_en": "Patna",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "סבסטופול",
+      "object": "אוקראינית",
+      "object_candidates": "הינדי, סומלית, מצרית, רוסית, מלאית, טמילית, פולנית, תאית, ארמנית, אוקראינית",
+      "index": 354,
+      "subject_en": "Sevastopol",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "פקיסטן",
+      "object": "אורדו",
+      "object_candidates": "גאורגית, קרואטית, השפה הנורמנית, סקוטית, יוונית, פרסית, לטבית, קטלאנית, ליטאית, אורדו",
+      "index": 355,
+      "subject_en": "Pakistan",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "מרייהאמן",
+      "object": "שוודית",
+      "object_candidates": "גרמנית, גאורגית, צרפתית, מראטהית, שפות סיניות, וייטנאמית, יפנית, יוונית, סרבית, שוודית",
+      "index": 356,
+      "subject_en": "Mariehamn",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "ברן",
+      "object": "צרפתית",
+      "object_candidates": "מקדונית, בנגלית, גרמנית, איסלנדית, יפנית, בלארוסית, סלובנית, מלאיאלאם, טמילית, צרפתית",
+      "index": 357,
+      "subject_en": "canton of Bern",
+      "object_en": "French"
+    },
+    {
+      "subject": "הרפובליקה העממית של לוהנסק",
+      "object": "אוקראינית",
+      "object_candidates": "מקדונית, קרואטית, פנג'אבי, גרמנית, מראטהית, בנגלית, תאית, הולנדית, מונגולית, אוקראינית",
+      "index": 358,
+      "subject_en": "Luhansk People's Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "לה שו-דה-פון",
+      "object": "צרפתית",
+      "object_candidates": "ולשית, קוריאנית, אורדו, מראטהית, בולגרית, רומנית, מונטנגרית, מלטית, אזרית, צרפתית",
+      "index": 359,
+      "subject_en": "La Chaux-de-Fonds",
+      "object_en": "French"
+    },
+    {
+      "subject": "נסיכות מוסקבה",
+      "object": "רוסית",
+      "object_candidates": "אירית, השפה הנורמנית, יוונית, לטבית, מראטהית, צרפתית, מונטנגרית, פורטוגזית, טורקית, רוסית",
+      "index": 360,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "צ'כוסלובקיה",
+      "object": "צ'כית",
+      "object_candidates": "אלבנית, סלובנית, שפות סיניות, אינדונזית, מונטנגרית, הולנדית, יוונית, אוקראינית, סיציליאנית, צ'כית",
+      "index": 361,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "סנגל",
+      "object": "צרפתית",
+      "object_candidates": "הונגרית, טמילית, אלבנית, בלארוסית, מונטנגרית, קוריאנית, קמרית, טורקית, תאית, צרפתית",
+      "index": 362,
+      "subject_en": "Senegal",
+      "object_en": "French"
+    },
+    {
+      "subject": "המסדר הריבוני הצבאי של מלטה",
+      "object": "לטינית",
+      "object_candidates": "איסלנדית, אוקראינית, הוואית, צ'כית, רומנית, מלטית, פינית, בולגרית, מצרית, לטינית",
+      "index": 363,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "נונאווט",
+      "object": "אנגלית",
+      "object_candidates": "קרואטית, הינדי, ליטאית, קטלאנית, בלארוסית, סומלית, ולשית, בנגלית, פנג'אבי, אנגלית",
+      "index": 364,
+      "subject_en": "Nunavut",
+      "object_en": "English"
+    },
+    {
+      "subject": "ז'נבה",
+      "object": "צרפתית",
+      "object_candidates": "אלבנית, סקוטית, רוסית, מלטית, אסטונית, טלוגו, שוודית, תאית, הונגרית, צרפתית",
+      "index": 365,
+      "subject_en": "Geneva",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "בולגרית",
+      "object_candidates": "הינדי, פנג'אבי, ארמנית, גרמנית, צ'כית, אוקראינית, מונטנגרית, ספרדית, אורדו, בולגרית",
+      "index": 366,
+      "subject_en": "European Union",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "ברן",
+      "object": "גרמנית",
+      "object_candidates": "אזרית, צ'כית, ספרדית, ונטית, השפה הנורמנית, סלובקית, מקדונית, בנגלית, ולשית, גרמנית",
+      "index": 367,
+      "subject_en": "canton of Bern",
+      "object_en": "German"
+    },
+    {
+      "subject": "ארגון הבריאות העולמי",
+      "object": "אנגלית",
+      "object_candidates": "וייטנאמית, בלארוסית, ארמנית, פולנית, בולגרית, פורטוגזית, סלובקית, עברית, מצרית, אנגלית",
+      "index": 368,
+      "subject_en": "World Health Organization",
+      "object_en": "English"
+    },
+    {
+      "subject": "סנט אוסטטיוס",
+      "object": "הולנדית",
+      "object_candidates": "לטינית, מונטנגרית, מקדונית, אלבנית, טלוגו, סקוטית, צרפתית, סיציליאנית, מלטית, הולנדית",
+      "index": 369,
+      "subject_en": "Sint Eustatius",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "בוסניה והרצגובינה",
+      "object": "סרבית",
+      "object_candidates": "תאית, הולנדית, סומלית, יוונית, לטבית, סיציליאנית, סקוטית, מראטהית, סלובקית, סרבית",
+      "index": 370,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "דרום טירול",
+      "object": "איטלקית",
+      "object_candidates": "רומנית, מונגולית, סלובנית, עברית, אורדו, יוונית, בלארוסית, ולשית, סומלית, איטלקית",
+      "index": 371,
+      "subject_en": "South Tyrol",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "פינלנד",
+      "object": "שוודית",
+      "object_candidates": "מצרית, ונטית, טורקית, אוקראינית, קוריאנית, ארמנית, מראטהית, לטינית, צ'כית, שוודית",
+      "index": 372,
+      "subject_en": "Finland",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "פפואה גינאה החדשה",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, ונטית, בולגרית, מלאית, אסטונית, ארמנית, סרבית, אורדו, קרואטית, אנגלית",
+      "index": 373,
+      "subject_en": "Papua New Guinea",
+      "object_en": "English"
+    },
+    {
+      "subject": "טיצ'ינו",
+      "object": "איטלקית",
+      "object_candidates": "אלבנית, אוקראינית, יוונית, הוואית, בנגלית, סומלית, הונגרית, טורקית, שפות סיניות, איטלקית",
+      "index": 374,
+      "subject_en": "Ticino",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "מלטה",
+      "object": "מלטית",
+      "object_candidates": "טלוגו, גרמנית, אורדו, לטבית, מקדונית, טמילית, אירית, סקוטית, הולנדית, מלטית",
+      "index": 375,
+      "subject_en": "Malta",
+      "object_en": "Maltese"
+    },
+    {
+      "subject": "רואנדה",
+      "object": "צרפתית",
+      "object_candidates": "איסלנדית, לטבית, אינדונזית, קרואטית, יפנית, מלטית, פורטוגזית, מראטהית, הונגרית, צרפתית",
+      "index": 376,
+      "subject_en": "Rwanda",
+      "object_en": "French"
+    },
+    {
+      "subject": "נפאל",
+      "object": "נפאלית",
+      "object_candidates": "פורטוגזית, בלארוסית, מלאית, סלובקית, גרמנית, טמילית, לטבית, בולגרית, הוואית, נפאלית",
+      "index": 377,
+      "subject_en": "Nepal",
+      "object_en": "Nepali"
+    },
+    {
+      "subject": "הרפובליקה של ונציה",
+      "object": "איטלקית",
+      "object_candidates": "ארמנית, מצרית, אזרית, רומנית, מונגולית, ספרדית, גרמנית, לטבית, טמילית, איטלקית",
+      "index": 378,
+      "subject_en": "Republic of Venice",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "צ'אד",
+      "object": "צרפתית",
+      "object_candidates": "קרואטית, אסטונית, ולשית, פינית, תאית, בנגלית, ארמנית, הוואית, מונטנגרית, צרפתית",
+      "index": 379,
+      "subject_en": "Chad",
+      "object_en": "French"
+    },
+    {
+      "subject": "ירוואן",
+      "object": "ארמנית",
+      "object_candidates": "הונגרית, פרסית, שוודית, לטבית, גרמנית, בלארוסית, בנגלית, ברטונית, ונטית, ארמנית",
+      "index": 380,
+      "subject_en": "Yerevan",
+      "object_en": "Armenian"
+    },
+    {
+      "subject": "בוליביה",
+      "object": "ספרדית",
+      "object_candidates": "קטלאנית, רוסית, ליטאית, אסטונית, מלטית, לטינית, מלאית, אירית, הונגרית, ספרדית",
+      "index": 381,
+      "subject_en": "Bolivia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "בנלוקס",
+      "object": "הולנדית",
+      "object_candidates": "תאית, טמילית, פורטוגזית, עברית, הונגרית, אסטונית, איסלנדית, מונטנגרית, אוקראינית, הולנדית",
+      "index": 382,
+      "subject_en": "Benelux",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "מלזיה",
+      "object": "אנגלית",
+      "object_candidates": "פולנית, בלארוסית, מראטהית, רוסית, סלובנית, צרפתית, אסטונית, אזרית, צ'כית, אנגלית",
+      "index": 383,
+      "subject_en": "Malaysia",
+      "object_en": "English"
+    },
+    {
+      "subject": "האימפריה הרוסית",
+      "object": "פינית",
+      "object_candidates": "סרבית, מונטנגרית, מלטית, טלוגו, סקוטית, אורדו, נפאלית, לטבית, שוודית, פינית",
+      "index": 384,
+      "subject_en": "Russian Empire",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "דרום סודאן",
+      "object": "אנגלית",
+      "object_candidates": "שוודית, קרואטית, מונטנגרית, ברטונית, אלבנית, לטינית, ליטאית, פולנית, סלובקית, אנגלית",
+      "index": 385,
+      "subject_en": "South Sudan",
+      "object_en": "English"
+    },
+    {
+      "subject": "גינאה המשוונית",
+      "object": "צרפתית",
+      "object_candidates": "מצרית, פנג'אבי, ונטית, קרואטית, מלטית, גרמנית, שפות סיניות, שוודית, סלובנית, צרפתית",
+      "index": 386,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "הונגרית",
+      "object_candidates": "פנג'אבי, הינדי, שוודית, אירית, השפה הנורמנית, מקדונית, אינדונזית, עברית, ליטאית, הונגרית",
+      "index": 387,
+      "subject_en": "European Union",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "קירגיזסטן",
+      "object": "רוסית",
+      "object_candidates": "פרסית, מצרית, הונגרית, מראטהית, מלאית, מונטנגרית, מלאיאלאם, בסקית, איטלקית, רוסית",
+      "index": 388,
+      "subject_en": "Kyrgyzstan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "בזל-שטאדט",
+      "object": "גרמנית",
+      "object_candidates": "ספרדית, סרבית, קוריאנית, איטלקית, הולנדית, מצרית, ולשית, איסלנדית, יפנית, גרמנית",
+      "index": 389,
+      "subject_en": "Basel-Stadt",
+      "object_en": "German"
+    },
+    {
+      "subject": "יפן",
+      "object": "יפנית",
+      "object_candidates": "וייטנאמית, בולגרית, דנית, מלאיאלאם, גאורגית, טורקית, רוסית, פורטוגזית, אינדונזית, יפנית",
+      "index": 390,
+      "subject_en": "Japan",
+      "object_en": "Japanese"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית הבלארוסית",
+      "object": "רוסית",
+      "object_candidates": "טלוגו, תאית, פולנית, ארמנית, הונגרית, מלטית, סקוטית, איסלנדית, עברית, רוסית",
+      "index": 391,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "איראן",
+      "object": "פרסית",
+      "object_candidates": "מונגולית, סרבית, קמרית, גרמנית, אינדונזית, אסטונית, ולשית, יוונית, אירית, פרסית",
+      "index": 392,
+      "subject_en": "Iran",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "טמפרה",
+      "object": "פינית",
+      "object_candidates": "מלטית, אנגלית, ארמנית, בנגלית, ליטאית, ספרדית, סומלית, צרפתית, ונטית, פינית",
+      "index": 393,
+      "subject_en": "Tampere",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אואולו",
+      "object": "פינית",
+      "object_candidates": "פרסית, ארמנית, הינדי, הולנדית, טורקית, גרמנית, אירית, סיציליאנית, ספרדית, פינית",
+      "index": 394,
+      "subject_en": "Oulu",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "גרמניה הנאצית",
+      "object": "גרמנית",
+      "object_candidates": "סרבית, סקוטית, פורטוגזית, רומנית, שפות סיניות, ברטונית, בלארוסית, סלובקית, בנגלית, גרמנית",
+      "index": 395,
+      "subject_en": "Nazi Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "אספו",
+      "object": "שוודית",
+      "object_candidates": "אורדו, בולגרית, בנגלית, יוונית, מלטית, מונטנגרית, אינדונזית, איטלקית, תאית, שוודית",
+      "index": 396,
+      "subject_en": "Espoo",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "אראגון",
+      "object": "ספרדית",
+      "object_candidates": "אזרית, ברטונית, בסקית, מראטהית, יפנית, אינדונזית, ונטית, ליטאית, קטלאנית, ספרדית",
+      "index": 397,
+      "subject_en": "Aragon",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "פנמה",
+      "object": "ספרדית",
+      "object_candidates": "הוואית, פינית, ארמנית, השפה הנורמנית, אורדו, אזרית, דנית, תאית, שפות סיניות, ספרדית",
+      "index": 398,
+      "subject_en": "Panama",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "קוויבק",
+      "object": "צרפתית",
+      "object_candidates": "הולנדית, קמרית, קטלאנית, סקוטית, בלארוסית, אנגלית, טמילית, פנג'אבי, השפה הנורמנית, צרפתית",
+      "index": 399,
+      "subject_en": "Quebec",
+      "object_en": "French"
+    },
+    {
+      "subject": "האימפריה הרומית",
+      "object": "לטינית",
+      "object_candidates": "פולנית, פורטוגזית, איסלנדית, גאורגית, אנגלית, בסקית, קטלאנית, וייטנאמית, ליטאית, לטינית",
+      "index": 400,
+      "subject_en": "Roman Empire",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "גינאה המשוונית",
+      "object": "ספרדית",
+      "object_candidates": "בנגלית, פינית, סלובנית, טלוגו, תאית, פולנית, איטלקית, טמילית, יפנית, ספרדית",
+      "index": 401,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ניופאונדלנד ולברדור",
+      "object": "אנגלית",
+      "object_candidates": "בנגלית, נפאלית, קרואטית, פורטוגזית, פנג'אבי, סלובקית, ליטאית, סלובנית, בולגרית, אנגלית",
+      "index": 402,
+      "subject_en": "Newfoundland and Labrador",
+      "object_en": "English"
+    },
+    {
+      "subject": "ימלו-ננץ",
+      "object": "רוסית",
+      "object_candidates": "איסלנדית, הוואית, לטבית, פנג'אבי, תאית, לטינית, אורדו, מונגולית, טלוגו, רוסית",
+      "index": 403,
+      "subject_en": "Yamalo-Nenets Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "אסטונית",
+      "object_candidates": "רוסית, מלאיאלאם, תאית, מראטהית, מונטנגרית, סיציליאנית, מלטית, הינדי, מונגולית, אסטונית",
+      "index": 404,
+      "subject_en": "European Union",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "דרום טירול",
+      "object": "גרמנית",
+      "object_candidates": "סיציליאנית, ספרדית, פנג'אבי, פורטוגזית, הינדי, בנגלית, נפאלית, ונטית, טלוגו, גרמנית",
+      "index": 405,
+      "subject_en": "South Tyrol",
+      "object_en": "German"
+    },
+    {
+      "subject": "הרפובליקה של ונציה",
+      "object": "לטינית",
+      "object_candidates": "פרסית, טלוגו, אסטונית, בלארוסית, לטבית, צ'כית, רומנית, תאית, מראטהית, לטינית",
+      "index": 406,
+      "subject_en": "Republic of Venice",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "בנלוקס",
+      "object": "צרפתית",
+      "object_candidates": "ארמנית, נפאלית, אזרית, אלבנית, סלובנית, הינדי, פינית, שפות סיניות, הולנדית, צרפתית",
+      "index": 407,
+      "subject_en": "Benelux",
+      "object_en": "French"
+    },
+    {
+      "subject": "מנורקה",
+      "object": "קטלאנית",
+      "object_candidates": "וייטנאמית, קרואטית, סקוטית, סומלית, אסטונית, קוריאנית, מלאיאלאם, בולגרית, נפאלית, קטלאנית",
+      "index": 408,
+      "subject_en": "Menorca",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "האומות המאוחדות",
+      "object": "ספרדית",
+      "object_candidates": "אינדונזית, ונטית, דנית, סלובנית, אורדו, קרואטית, גאורגית, סקוטית, נפאלית, ספרדית",
+      "index": 409,
+      "subject_en": "United Nations",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "סאבא",
+      "object": "הולנדית",
+      "object_candidates": "בסקית, השפה הנורמנית, שוודית, לטינית, בנגלית, מונגולית, סרבית, סלובנית, סומלית, הולנדית",
+      "index": 410,
+      "subject_en": "Saba",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "מחוז לוהנסק",
+      "object": "אוקראינית",
+      "object_candidates": "בנגלית, הינדי, קמרית, יוונית, רוסית, גרמנית, גאורגית, מראטהית, בולגרית, אוקראינית",
+      "index": 411,
+      "subject_en": "Luhansk Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "ואסה",
+      "object": "שוודית",
+      "object_candidates": "סלובקית, פורטוגזית, ולשית, קטלאנית, נפאלית, טלוגו, אורדו, גאורגית, השפה הנורמנית, שוודית",
+      "index": 412,
+      "subject_en": "Vaasa",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "רפובליקת סאחה-יקוטיה",
+      "object": "רוסית",
+      "object_candidates": "וייטנאמית, לטבית, יוונית, אסטונית, אירית, מצרית, אזרית, פנג'אבי, מונגולית, רוסית",
+      "index": 413,
+      "subject_en": "Sakha Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "דלהי",
+      "object": "הינדי",
+      "object_candidates": "איסלנדית, פינית, פורטוגזית, בלארוסית, אנגלית, לטינית, ארמנית, מונטנגרית, ברטונית, הינדי",
+      "index": 414,
+      "subject_en": "Delhi",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "פולנית",
+      "object_candidates": "מקדונית, מלאיאלאם, ברטונית, אירית, ארמנית, אסטונית, מלאית, סלובקית, פנג'אבי, פולנית",
+      "index": 415,
+      "subject_en": "European Union",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "איי הבתולה של ארצות הברית",
+      "object": "אנגלית",
+      "object_candidates": "הולנדית, איסלנדית, קמרית, לטבית, רומנית, מונגולית, מקדונית, מלטית, בלארוסית, אנגלית",
+      "index": 416,
+      "subject_en": "United States Virgin Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה הדומיניקנית",
+      "object": "ספרדית",
+      "object_candidates": "אורדו, לטבית, נפאלית, מלאיאלאם, לטינית, פרסית, טורקית, בסקית, אלבנית, ספרדית",
+      "index": 417,
+      "subject_en": "Dominican Republic",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ויילס",
+      "object": "ולשית",
+      "object_candidates": "בסקית, גרמנית, פולנית, הינדי, לטינית, בנגלית, טלוגו, מצרית, קוריאנית, ולשית",
+      "index": 418,
+      "subject_en": "Wales",
+      "object_en": "Welsh"
+    },
+    {
+      "subject": "לאקנאו",
+      "object": "אורדו",
+      "object_candidates": "טורקית, סיציליאנית, פולנית, אסטונית, יוונית, בלארוסית, צ'כית, שוודית, סומלית, אורדו",
+      "index": 419,
+      "subject_en": "Lucknow",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "דונצק",
+      "object": "אוקראינית",
+      "object_candidates": "בסקית, ספרדית, פנג'אבי, איטלקית, הינדי, לטבית, מלאיאלאם, לטינית, גאורגית, אוקראינית",
+      "index": 420,
+      "subject_en": "Donetsk",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "פלנדריה",
+      "object": "הולנדית",
+      "object_candidates": "פינית, ארמנית, אוקראינית, קרואטית, טמילית, יפנית, תאית, פורטוגזית, מלאית, הולנדית",
+      "index": 421,
+      "subject_en": "Flanders",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "המחוז היהודי האוטונומי",
+      "object": "רוסית",
+      "object_candidates": "מצרית, סקוטית, הולנדית, ארמנית, פורטוגזית, פרסית, אינדונזית, אסטונית, בסקית, רוסית",
+      "index": 422,
+      "subject_en": "Jewish Autonomous Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קולומביה הבריטית",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, תאית, פינית, ספרדית, מראטהית, צ'כית, שפות סיניות, רומנית, ארמנית, אנגלית",
+      "index": 423,
+      "subject_en": "British Columbia",
+      "object_en": "English"
+    },
+    {
+      "subject": "בלגיה",
+      "object": "הולנדית",
+      "object_candidates": "הוואית, מלאית, שוודית, צרפתית, שפות סיניות, איסלנדית, ליטאית, סקוטית, מלאיאלאם, הולנדית",
+      "index": 424,
+      "subject_en": "Belgium",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "פולין הקונגרסאית",
+      "object": "פולנית",
+      "object_candidates": "נפאלית, מקדונית, אזרית, פורטוגזית, יפנית, צרפתית, פינית, מצרית, גאורגית, פולנית",
+      "index": 425,
+      "subject_en": "Congress Poland",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "קצאלטננגו",
+      "object": "ספרדית",
+      "object_candidates": "טמילית, אירית, מלטית, פרסית, פנג'אבי, אינדונזית, בנגלית, מצרית, ארמנית, ספרדית",
+      "index": 426,
+      "subject_en": "Quetzaltenango",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "האימפריה הביזנטית",
+      "object": "לטינית",
+      "object_candidates": "הונגרית, שפות סיניות, בולגרית, צ'כית, נפאלית, סלובקית, גרמנית, ולשית, ספרדית, לטינית",
+      "index": 427,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "אירלנד",
+      "object": "אנגלית",
+      "object_candidates": "השפה הנורמנית, ליטאית, הולנדית, מראטהית, רומנית, בנגלית, בסקית, מונגולית, איסלנדית, אנגלית",
+      "index": 428,
+      "subject_en": "Ireland",
+      "object_en": "English"
+    },
+    {
+      "subject": "הולנד",
+      "object": "הולנדית",
+      "object_candidates": "הוואית, גאורגית, אירית, טמילית, ברטונית, פולנית, לטבית, רוסית, ולשית, הולנדית",
+      "index": 429,
+      "subject_en": "Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "קנזס",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, אירית, אורדו, מצרית, אלבנית, בסקית, פינית, פולנית, פרסית, אנגלית",
+      "index": 430,
+      "subject_en": "Kansas",
+      "object_en": "English"
+    },
+    {
+      "subject": "ונטה",
+      "object": "פינית",
+      "object_candidates": "סלובקית, סקוטית, בנגלית, אורדו, ולשית, מקדונית, ונטית, ספרדית, צ'כית, פינית",
+      "index": 431,
+      "subject_en": "Vantaa",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "דרום אפריקה",
+      "object": "אנגלית",
+      "object_candidates": "סלובנית, שוודית, בנגלית, ולשית, ברטונית, פרסית, תאית, נפאלית, וייטנאמית, אנגלית",
+      "index": 432,
+      "subject_en": "South Africa",
+      "object_en": "English"
+    },
+    {
+      "subject": "לוקרנו",
+      "object": "איטלקית",
+      "object_candidates": "אנגלית, מונגולית, לטינית, רומנית, דנית, פרסית, פנג'אבי, פינית, מקדונית, איטלקית",
+      "index": 433,
+      "subject_en": "Locarno",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ונואטו",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, קוריאנית, הינדי, פינית, קרואטית, מראטהית, ליטאית, סומלית, גאורגית, אנגלית",
+      "index": 434,
+      "subject_en": "Vanuatu",
+      "object_en": "English"
+    },
+    {
+      "subject": "מונטנגרו",
+      "object": "קרואטית",
+      "object_candidates": "פנג'אבי, מונטנגרית, מראטהית, בלארוסית, אינדונזית, בסקית, גאורגית, השפה הנורמנית, וייטנאמית, קרואטית",
+      "index": 435,
+      "subject_en": "Montenegro",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "סורינאם",
+      "object": "הולנדית",
+      "object_candidates": "בנגלית, ולשית, לטינית, אסטונית, פינית, ונטית, צרפתית, וייטנאמית, איטלקית, הולנדית",
+      "index": 436,
+      "subject_en": "Suriname",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "ג'הרקאנד",
+      "object": "הינדי",
+      "object_candidates": "סלובקית, קמרית, יפנית, קרואטית, שוודית, מלאיאלאם, דנית, מקדונית, מלטית, הינדי",
+      "index": 437,
+      "subject_en": "Jharkhand",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "לוגאנו",
+      "object": "איטלקית",
+      "object_candidates": "בנגלית, דנית, גאורגית, הולנדית, אנגלית, טלוגו, הונגרית, ולשית, לטבית, איטלקית",
+      "index": 438,
+      "subject_en": "Lugano",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "אודמורטיה",
+      "object": "רוסית",
+      "object_candidates": "קוריאנית, מלאית, הינדי, טמילית, תאית, ספרדית, סרבית, מונטנגרית, הולנדית, רוסית",
+      "index": 439,
+      "subject_en": "Udmurt Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קולורדו",
+      "object": "אנגלית",
+      "object_candidates": "מונגולית, צ'כית, צרפתית, בולגרית, פנג'אבי, פולנית, סלובקית, מצרית, רומנית, אנגלית",
+      "index": 440,
+      "subject_en": "Colorado",
+      "object_en": "English"
+    },
+    {
+      "subject": "ואסה",
+      "object": "פינית",
+      "object_candidates": "ספרדית, איטלקית, פורטוגזית, אנגלית, צרפתית, פולנית, מלאית, השפה הנורמנית, פרסית, פינית",
+      "index": 441,
+      "subject_en": "Vaasa",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "קברדינו-בלקריה",
+      "object": "רוסית",
+      "object_candidates": "בולגרית, קוריאנית, אורדו, נפאלית, תאית, מלאית, איטלקית, טמילית, הולנדית, רוסית",
+      "index": 442,
+      "subject_en": "Kabardino-Balkaria",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "טונגה",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, גרמנית, אוקראינית, איסלנדית, מקדונית, דנית, בנגלית, איטלקית, פינית, אנגלית",
+      "index": 443,
+      "subject_en": "Tonga",
+      "object_en": "English"
+    },
+    {
+      "subject": "אנגליה",
+      "object": "אנגלית",
+      "object_candidates": "קרואטית, סלובקית, טורקית, מלאיאלאם, דנית, שפות סיניות, פולנית, בולגרית, קוריאנית, אנגלית",
+      "index": 444,
+      "subject_en": "England",
+      "object_en": "English"
+    },
+    {
+      "subject": "גינאה המשוונית",
+      "object": "פורטוגזית",
+      "object_candidates": "קוריאנית, מלאיאלאם, סומלית, סלובקית, קרואטית, נפאלית, לטינית, מצרית, קמרית, פורטוגזית",
+      "index": 445,
+      "subject_en": "Equatorial Guinea",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "טרנסניסטריה",
+      "object": "רוסית",
+      "object_candidates": "סלובקית, הונגרית, סיציליאנית, קוריאנית, מלאית, מקדונית, קמרית, יוונית, מלאיאלאם, רוסית",
+      "index": 446,
+      "subject_en": "Transnistria",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית הבלארוסית",
+      "object": "בלארוסית",
+      "object_candidates": "בנגלית, צרפתית, טלוגו, אנגלית, קוריאנית, מראטהית, אלבנית, קרואטית, יוונית, בלארוסית",
+      "index": 447,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Belarusian"
+    },
+    {
+      "subject": "מחוז קיוסטנדיל",
+      "object": "בולגרית",
+      "object_candidates": "עברית, אזרית, מלטית, גאורגית, וייטנאמית, קטלאנית, מקדונית, הולנדית, השפה הנורמנית, בולגרית",
+      "index": 448,
+      "subject_en": "Kyustendil Province",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "אירלנד",
+      "object": "אירית",
+      "object_candidates": "גרמנית, רומנית, איטלקית, סלובנית, הינדי, מלאית, תאית, יוונית, טלוגו, אירית",
+      "index": 449,
+      "subject_en": "Ireland",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "גינאה ביסאו",
+      "object": "פורטוגזית",
+      "object_candidates": "מלאית, גרמנית, איסלנדית, יפנית, אסטונית, יוונית, סקוטית, מונגולית, סרבית, פורטוגזית",
+      "index": 450,
+      "subject_en": "Guinea-Bissau",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "בוסניה והרצגובינה",
+      "object": "קרואטית",
+      "object_candidates": "רומנית, הולנדית, אנגלית, קוריאנית, השפה הנורמנית, ברטונית, מונגולית, אירית, שפות סיניות, קרואטית",
+      "index": 451,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "אינדיאנה",
+      "object": "אנגלית",
+      "object_candidates": "שפות סיניות, ולשית, שוודית, רוסית, אזרית, בולגרית, צרפתית, השפה הנורמנית, סומלית, אנגלית",
+      "index": 452,
+      "subject_en": "Indiana",
+      "object_en": "English"
+    },
+    {
+      "subject": "קוריאה הצפונית",
+      "object": "קוריאנית",
+      "object_candidates": "רוסית, הונגרית, סרבית, בנגלית, אירית, רומנית, ונטית, נפאלית, בסקית, קוריאנית",
+      "index": 453,
+      "subject_en": "North Korea",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "הרפובליקה העממית של דונצק",
+      "object": "אוקראינית",
+      "object_candidates": "מלאיאלאם, טמילית, שוודית, אסטונית, קרואטית, סיציליאנית, ברטונית, הולנדית, אלבנית, אוקראינית",
+      "index": 454,
+      "subject_en": "Donetsk People's Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "סינגפור",
+      "object": "טמילית",
+      "object_candidates": "מלטית, רומנית, מלאיאלאם, בולגרית, וייטנאמית, אזרית, ונטית, יפנית, אנגלית, טמילית",
+      "index": 455,
+      "subject_en": "Singapore",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "רוסיה",
+      "object": "אוקראינית",
+      "object_candidates": "סלובנית, מצרית, ספרדית, מראטהית, איסלנדית, קרואטית, הולנדית, עברית, השפה הנורמנית, אוקראינית",
+      "index": 456,
+      "subject_en": "Russia",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "ממלכת סיציליה הנורמנית",
+      "object": "סיציליאנית",
+      "object_candidates": "סלובקית, הינדי, מלאית, פולנית, וייטנאמית, מקדונית, קרואטית, צרפתית, הונגרית, סיציליאנית",
+      "index": 457,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Sicilian"
+    },
+    {
+      "subject": "ארגון האמנה לביטחון משותף",
+      "object": "רוסית",
+      "object_candidates": "ארמנית, תאית, סיציליאנית, לטינית, הוואית, בסקית, שפות סיניות, ולשית, וייטנאמית, רוסית",
+      "index": 458,
+      "subject_en": "Collective Security Treaty Organisation",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קופיו",
+      "object": "פינית",
+      "object_candidates": "סלובקית, פרסית, איסלנדית, סרבית, קרואטית, מראטהית, וייטנאמית, טורקית, עברית, פינית",
+      "index": 459,
+      "subject_en": "Kuopio",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ארגנטינה",
+      "object": "ספרדית",
+      "object_candidates": "פורטוגזית, שפות סיניות, גאורגית, השפה הנורמנית, הוואית, מצרית, סרבית, אוקראינית, טלוגו, ספרדית",
+      "index": 460,
+      "subject_en": "Argentina",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מיקלי",
+      "object": "פינית",
+      "object_candidates": "אזרית, מקדונית, מצרית, מונטנגרית, השפה הנורמנית, מראטהית, טמילית, בלארוסית, אורדו, פינית",
+      "index": 461,
+      "subject_en": "Mikkeli",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "דוכסות נורמנדיה",
+      "object": "השפה הנורמנית",
+      "object_candidates": "סומלית, מצרית, מקדונית, בלארוסית, סלובקית, מלאיאלאם, אסטונית, דנית, מונגולית, השפה הנורמנית",
+      "index": 462,
+      "subject_en": "Duchy of Normandy",
+      "object_en": "Norman"
+    },
+    {
+      "subject": "האנטילים ההולנדיים",
+      "object": "אנגלית",
+      "object_candidates": "טורקית, אוקראינית, הוואית, סרבית, מלטית, בנגלית, סיציליאנית, ברטונית, מונגולית, אנגלית",
+      "index": 463,
+      "subject_en": "Netherlands Antilles",
+      "object_en": "English"
+    },
+    {
+      "subject": "אספו",
+      "object": "פינית",
+      "object_candidates": "איסלנדית, קטלאנית, קוריאנית, הונגרית, סלובקית, ספרדית, סלובנית, פרסית, ונטית, פינית",
+      "index": 464,
+      "subject_en": "Espoo",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אראו",
+      "object": "גרמנית",
+      "object_candidates": "ארמנית, טורקית, גאורגית, מונטנגרית, ספרדית, קוריאנית, מקדונית, בלארוסית, סקוטית, גרמנית",
+      "index": 465,
+      "subject_en": "Aarau",
+      "object_en": "German"
+    },
+    {
+      "subject": "יאלטה",
+      "object": "רוסית",
+      "object_candidates": "אוקראינית, מקדונית, בולגרית, טלוגו, גרמנית, פינית, אנגלית, שוודית, לטבית, רוסית",
+      "index": 466,
+      "subject_en": "Yalta",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "נובה סקוטיה",
+      "object": "אנגלית",
+      "object_candidates": "לטבית, מקדונית, פולנית, פינית, פרסית, אוקראינית, קמרית, מלטית, שוודית, אנגלית",
+      "index": 467,
+      "subject_en": "Nova Scotia",
+      "object_en": "English"
+    },
+    {
+      "subject": "הארגון לשיתוף פעולה ולפיתוח כלכלי",
+      "object": "אנגלית",
+      "object_candidates": "צ'כית, אלבנית, השפה הנורמנית, תאית, איטלקית, פולנית, בנגלית, נפאלית, אזרית, אנגלית",
+      "index": 468,
+      "subject_en": "Organisation for Economic Cooperation and Development",
+      "object_en": "English"
+    },
+    {
+      "subject": "הוואי",
+      "object": "אנגלית",
+      "object_candidates": "יפנית, צ'כית, לטבית, סקוטית, ולשית, אורדו, אזרית, פנג'אבי, תאית, אנגלית",
+      "index": 469,
+      "subject_en": "Hawaii",
+      "object_en": "English"
+    },
+    {
+      "subject": "קמפיונה ד'איטליה",
+      "object": "איטלקית",
+      "object_candidates": "שוודית, בנגלית, בולגרית, ספרדית, אירית, אורדו, יוונית, הולנדית, מראטהית, איטלקית",
+      "index": 470,
+      "subject_en": "Campione d'Italia",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "ונטה",
+      "object": "שוודית",
+      "object_candidates": "צ'כית, קוריאנית, טמילית, סלובקית, מלטית, בלארוסית, אינדונזית, שפות סיניות, מקדונית, שוודית",
+      "index": 471,
+      "subject_en": "Vantaa",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "רוסיה הצארית",
+      "object": "רוסית",
+      "object_candidates": "ברטונית, מונגולית, ליטאית, בנגלית, הולנדית, סלובקית, אלבנית, טמילית, צ'כית, רוסית",
+      "index": 472,
+      "subject_en": "Tsardom of Russia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קרוז'",
+      "object": "צרפתית",
+      "object_candidates": "פנג'אבי, ונטית, פורטוגזית, בנגלית, קמרית, בלארוסית, קטלאנית, שוודית, גרמנית, צרפתית",
+      "index": 473,
+      "subject_en": "Carouge",
+      "object_en": "French"
+    },
+    {
+      "subject": "ארגון הבריאות העולמי",
+      "object": "רוסית",
+      "object_candidates": "צרפתית, פולנית, אורדו, גאורגית, ליטאית, בסקית, טורקית, פינית, יפנית, רוסית",
+      "index": 474,
+      "subject_en": "World Health Organization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פלאו",
+      "object": "אנגלית",
+      "object_candidates": "ספרדית, אלבנית, קרואטית, אסטונית, וייטנאמית, מקדונית, תאית, קטלאנית, טלוגו, אנגלית",
+      "index": 475,
+      "subject_en": "Palau",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז קורק",
+      "object": "אירית",
+      "object_candidates": "ברטונית, נפאלית, מונגולית, צ'כית, פורטוגזית, טמילית, יפנית, מלאית, בולגרית, אירית",
+      "index": 476,
+      "subject_en": "County Cork",
+      "object_en": "Irish"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האזרית",
+      "object": "אזרית",
+      "object_candidates": "פורטוגזית, איסלנדית, אירית, שוודית, בנגלית, גאורגית, סקוטית, סיציליאנית, אורדו, אזרית",
+      "index": 477,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "רובניימי",
+      "object": "פינית",
+      "object_candidates": "סרבית, בולגרית, ארמנית, אלבנית, סיציליאנית, אסטונית, קוריאנית, פולנית, נפאלית, פינית",
+      "index": 478,
+      "subject_en": "Rovaniemi",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "ניואה",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, אינדונזית, הונגרית, סלובקית, שפות סיניות, סומלית, לטבית, וייטנאמית, טמילית, אנגלית",
+      "index": 479,
+      "subject_en": "Niue",
+      "object_en": "English"
+    },
+    {
+      "subject": "הממלכה הישנה של מצרים",
+      "object": "מצרית",
+      "object_candidates": "גרמנית, ארמנית, קטלאנית, אזרית, טלוגו, סקוטית, מלאיאלאם, אוקראינית, תאית, מצרית",
+      "index": 480,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Egyptian"
+    },
+    {
+      "subject": "חוף השנהב",
+      "object": "צרפתית",
+      "object_candidates": "ולשית, תאית, ברטונית, סרבית, פורטוגזית, אזרית, סומלית, רוסית, צ'כית, צרפתית",
+      "index": 481,
+      "subject_en": "Ivory Coast",
+      "object_en": "French"
+    },
+    {
+      "subject": "הונדורס",
+      "object": "ספרדית",
+      "object_candidates": "לטבית, מראטהית, מקדונית, אלבנית, רומנית, לטינית, טלוגו, וייטנאמית, ולשית, ספרדית",
+      "index": 482,
+      "subject_en": "Honduras",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ניו המפשייר",
+      "object": "אנגלית",
+      "object_candidates": "בולגרית, טמילית, ארמנית, הוואית, צ'כית, רוסית, יוונית, אירית, אורדו, אנגלית",
+      "index": 483,
+      "subject_en": "New Hampshire",
+      "object_en": "English"
+    },
+    {
+      "subject": "איי קיימן",
+      "object": "אנגלית",
+      "object_candidates": "מונגולית, שוודית, פנג'אבי, הונגרית, רומנית, עברית, צ'כית, יפנית, קטלאנית, אנגלית",
+      "index": 484,
+      "subject_en": "Cayman Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "בורונדי",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, מלאיאלאם, פורטוגזית, פנג'אבי, ברטונית, תאית, אלבנית, קמרית, צרפתית, אנגלית",
+      "index": 485,
+      "subject_en": "Burundi",
+      "object_en": "English"
+    },
+    {
+      "subject": "קמרון",
+      "object": "אנגלית",
+      "object_candidates": "סלובקית, סיציליאנית, טורקית, וייטנאמית, יוונית, גאורגית, השפה הנורמנית, בולגרית, גרמנית, אנגלית",
+      "index": 486,
+      "subject_en": "Cameroon",
+      "object_en": "English"
+    },
+    {
+      "subject": "אלסקה",
+      "object": "אנגלית",
+      "object_candidates": "קוריאנית, ספרדית, אינדונזית, מונגולית, יוונית, בנגלית, מצרית, ברטונית, הינדי, אנגלית",
+      "index": 487,
+      "subject_en": "Alaska",
+      "object_en": "English"
+    },
+    {
+      "subject": "קריית הוותיקן",
+      "object": "איטלקית",
+      "object_candidates": "דנית, יוונית, אסטונית, בולגרית, קוריאנית, תאית, מצרית, ספרדית, סיציליאנית, איטלקית",
+      "index": 488,
+      "subject_en": "Vatican City",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "דונצק",
+      "object": "רוסית",
+      "object_candidates": "מלטית, הוואית, אזרית, אנגלית, תאית, רומנית, קוריאנית, מראטהית, ברטונית, רוסית",
+      "index": 489,
+      "subject_en": "Donetsk",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "מוזמביק",
+      "object": "פורטוגזית",
+      "object_candidates": "בלארוסית, דנית, לטבית, קרואטית, גאורגית, מלטית, מלאיאלאם, ברטונית, הולנדית, פורטוגזית",
+      "index": 490,
+      "subject_en": "Mozambique",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "מזרח טימור",
+      "object": "פורטוגזית",
+      "object_candidates": "בולגרית, טלוגו, לטבית, רומנית, טמילית, יוונית, מלאית, קטלאנית, מלטית, פורטוגזית",
+      "index": 491,
+      "subject_en": "East Timor",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "אקרוטירי ודקליה",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, שוודית, ליטאית, הוואית, דנית, הונגרית, מונגולית, מראטהית, גרמנית, אנגלית",
+      "index": 492,
+      "subject_en": "Akrotiri and Dhekelia",
+      "object_en": "English"
+    },
+    {
+      "subject": "הטריטוריה הבריטית באנטארקטיקה",
+      "object": "אנגלית",
+      "object_candidates": "גאורגית, וייטנאמית, אירית, פורטוגזית, מלאיאלאם, מלטית, מלאית, מונטנגרית, בלארוסית, אנגלית",
+      "index": 493,
+      "subject_en": "British Antarctic Territory",
+      "object_en": "English"
+    },
+    {
+      "subject": "האימפריה הרוסית",
+      "object": "רוסית",
+      "object_candidates": "הולנדית, מונטנגרית, שפות סיניות, פנג'אבי, אנגלית, רומנית, ספרדית, פינית, הוואית, רוסית",
+      "index": 494,
+      "subject_en": "Russian Empire",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ניגריה",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, לטבית, ספרדית, פרסית, אלבנית, שפות סיניות, פינית, קטלאנית, ליטאית, אנגלית",
+      "index": 495,
+      "subject_en": "Nigeria",
+      "object_en": "English"
+    },
+    {
+      "subject": "ממלכת ארצות השפלה",
+      "object": "הולנדית",
+      "object_candidates": "סלובנית, הינדי, צרפתית, מלאית, השפה הנורמנית, לטינית, הוואית, אזרית, שפות סיניות, הולנדית",
+      "index": 496,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "אבחזיה",
+      "object": "רוסית",
+      "object_candidates": "מלאית, אסטונית, שפות סיניות, אינדונזית, הינדי, אוקראינית, דנית, טלוגו, בנגלית, רוסית",
+      "index": 497,
+      "subject_en": "Abkhazia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "מיורקה",
+      "object": "ספרדית",
+      "object_candidates": "אירית, ולשית, טורקית, ונטית, סומלית, סקוטית, השפה הנורמנית, אוקראינית, מצרית, ספרדית",
+      "index": 498,
+      "subject_en": "Majorca",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "פורטוגל",
+      "object": "פורטוגזית",
+      "object_candidates": "יוונית, וייטנאמית, לטבית, סומלית, נפאלית, סיציליאנית, אלבנית, קרואטית, קמרית, פורטוגזית",
+      "index": 499,
+      "subject_en": "Portugal",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "מניטובה",
+      "object": "אנגלית",
+      "object_candidates": "וייטנאמית, השפה הנורמנית, פולנית, בסקית, אוקראינית, מלאית, מקדונית, ברטונית, סלובקית, אנגלית",
+      "index": 500,
+      "subject_en": "Manitoba",
+      "object_en": "English"
+    },
+    {
+      "subject": "סוכנות החלל האירופית",
+      "object": "צרפתית",
+      "object_candidates": "בולגרית, בסקית, אסטונית, תאית, פורטוגזית, קוריאנית, פרסית, אורדו, בנגלית, צרפתית",
+      "index": 501,
+      "subject_en": "European Space Agency",
+      "object_en": "French"
+    },
+    {
+      "subject": "מלאבו",
+      "object": "ספרדית",
+      "object_candidates": "פולנית, מלטית, יפנית, גרמנית, אוקראינית, אנגלית, בולגרית, סומלית, פורטוגזית, ספרדית",
+      "index": 502,
+      "subject_en": "Malabo",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "ספרדית",
+      "object_candidates": "איסלנדית, מונטנגרית, גרמנית, שפות סיניות, מצרית, ולשית, טמילית, הולנדית, פינית, ספרדית",
+      "index": 503,
+      "subject_en": "European Union",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מארי אל",
+      "object": "רוסית",
+      "object_candidates": "פולנית, צרפתית, טלוגו, קרואטית, קמרית, קוריאנית, פורטוגזית, מראטהית, ברטונית, רוסית",
+      "index": 504,
+      "subject_en": "Mari El Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הלסינקי",
+      "object": "פינית",
+      "object_candidates": "מצרית, סרבית, יפנית, סלובנית, אנגלית, ארמנית, לטינית, מונטנגרית, קרואטית, פינית",
+      "index": 505,
+      "subject_en": "Helsinki",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "קטלוניה",
+      "object": "ספרדית",
+      "object_candidates": "קטלאנית, בלארוסית, טמילית, ליטאית, טורקית, הונגרית, סיציליאנית, מלטית, פורטוגזית, ספרדית",
+      "index": 506,
+      "subject_en": "Catalonia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "האימפריה הרוסית",
+      "object": "פולנית",
+      "object_candidates": "תאית, מקדונית, ארמנית, וייטנאמית, מלאית, מונטנגרית, פינית, אזרית, איטלקית, פולנית",
+      "index": 507,
+      "subject_en": "Russian Empire",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "צ'האטיסגאר",
+      "object": "הינדי",
+      "object_candidates": "טורקית, אינדונזית, פרסית, קמרית, פולנית, לטינית, בנגלית, גרמנית, אורדו, הינדי",
+      "index": 508,
+      "subject_en": "Chhattisgarh",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "הרפובליקה האוטונומית של קרים",
+      "object": "אוקראינית",
+      "object_candidates": "לטינית, ספרדית, סלובנית, סרבית, אירית, איטלקית, טמילית, אסטונית, גרמנית, אוקראינית",
+      "index": 509,
+      "subject_en": "Autonomous Republic of Crimea",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "סיישל",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, קמרית, בסקית, ארמנית, שפות סיניות, לטינית, סרבית, מלאית, נפאלית, אנגלית",
+      "index": 510,
+      "subject_en": "Seychelles",
+      "object_en": "English"
+    },
+    {
+      "subject": "נווארה",
+      "object": "בסקית",
+      "object_candidates": "מלאיאלאם, לטבית, גרמנית, צ'כית, אנגלית, בולגרית, אירית, הוואית, טלוגו, בסקית",
+      "index": 511,
+      "subject_en": "Navarre",
+      "object_en": "Basque"
+    },
+    {
+      "subject": "האימפריה הספרדית",
+      "object": "ספרדית",
+      "object_candidates": "אנגלית, ולשית, איטלקית, נפאלית, סרבית, לטינית, סיציליאנית, קוריאנית, סומלית, ספרדית",
+      "index": 512,
+      "subject_en": "Spanish Empire",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ססקצ'ואן",
+      "object": "אנגלית",
+      "object_candidates": "טורקית, אוקראינית, לטבית, אורדו, בנגלית, ונטית, גאורגית, מצרית, אלבנית, אנגלית",
+      "index": 513,
+      "subject_en": "Saskatchewan",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האוקראינית",
+      "object": "אוקראינית",
+      "object_candidates": "לטינית, קוריאנית, יפנית, עברית, סרבית, בסקית, גרמנית, רומנית, קמרית, אוקראינית",
+      "index": 514,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "אסטוריאס",
+      "object": "ספרדית",
+      "object_candidates": "אינדונזית, מונגולית, מראטהית, אלבנית, בסקית, סיציליאנית, בולגרית, גאורגית, גרמנית, ספרדית",
+      "index": 515,
+      "subject_en": "Asturias",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "וייטנאם",
+      "object": "וייטנאמית",
+      "object_candidates": "לטינית, פינית, אזרית, בלארוסית, הונגרית, ברטונית, איסלנדית, ליטאית, ארמנית, וייטנאמית",
+      "index": 516,
+      "subject_en": "Vietnam",
+      "object_en": "Vietnamese"
+    },
+    {
+      "subject": "קוסובו",
+      "object": "אלבנית",
+      "object_candidates": "עברית, מראטהית, מלאיאלאם, ונטית, יפנית, אוקראינית, לטבית, הונגרית, פנג'אבי, אלבנית",
+      "index": 517,
+      "subject_en": "Kosovo",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "ארגון הסחר העולמי",
+      "object": "צרפתית",
+      "object_candidates": "עברית, אנגלית, אזרית, לטינית, תאית, מראטהית, איטלקית, שפות סיניות, נפאלית, צרפתית",
+      "index": 518,
+      "subject_en": "World Trade Organization",
+      "object_en": "French"
+    },
+    {
+      "subject": "לאפנראנטה",
+      "object": "פינית",
+      "object_candidates": "בנגלית, צרפתית, מקדונית, מונטנגרית, סלובנית, בסקית, סרבית, מונגולית, הינדי, פינית",
+      "index": 519,
+      "subject_en": "Lappeenranta",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אקוודור",
+      "object": "ספרדית",
+      "object_candidates": "איטלקית, מלטית, פנג'אבי, שוודית, אירית, רוסית, סומלית, יפנית, מלאית, ספרדית",
+      "index": 520,
+      "subject_en": "Ecuador",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מחוז לוהנסק",
+      "object": "רוסית",
+      "object_candidates": "טלוגו, פרסית, מצרית, אזרית, בסקית, טמילית, רומנית, אורדו, מלאית, רוסית",
+      "index": 521,
+      "subject_en": "Luhansk Oblast",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "היידראבאד",
+      "object": "טלוגו",
+      "object_candidates": "ספרדית, מלאיאלאם, קמרית, הוואית, אוקראינית, השפה הנורמנית, פרסית, איסלנדית, הינדי, טלוגו",
+      "index": 522,
+      "subject_en": "Hyderabad",
+      "object_en": "Telugu"
+    },
+    {
+      "subject": "האומות המאוחדות",
+      "object": "אנגלית",
+      "object_candidates": "אוקראינית, מונטנגרית, מונגולית, בסקית, וייטנאמית, קמרית, מלאיאלאם, יוונית, לטינית, אנגלית",
+      "index": 523,
+      "subject_en": "United Nations",
+      "object_en": "English"
+    },
+    {
+      "subject": "ג'רזי",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, טלוגו, איסלנדית, לטינית, הונגרית, מלטית, יוונית, קוריאנית, בלארוסית, אנגלית",
+      "index": 524,
+      "subject_en": "Jersey",
+      "object_en": "English"
+    },
+    {
+      "subject": "שושלת צ'ינג",
+      "object": "מונגולית",
+      "object_candidates": "אנגלית, רוסית, ליטאית, קוריאנית, לטינית, סיציליאנית, אלבנית, טלוגו, מראטהית, מונגולית",
+      "index": 525,
+      "subject_en": "Qing dynasty",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "גיאנה",
+      "object": "אנגלית",
+      "object_candidates": "לטינית, בנגלית, הונגרית, פנג'אבי, סלובקית, בלארוסית, טמילית, מלאיאלאם, עברית, אנגלית",
+      "index": 526,
+      "subject_en": "Guyana",
+      "object_en": "English"
+    },
+    {
+      "subject": "אוסטריה",
+      "object": "גרמנית",
+      "object_candidates": "טלוגו, אינדונזית, צרפתית, בלארוסית, מלאית, טורקית, שוודית, איטלקית, יוונית, גרמנית",
+      "index": 527,
+      "subject_en": "Austria",
+      "object_en": "German"
+    },
+    {
+      "subject": "סינגפור",
+      "object": "מלאית",
+      "object_candidates": "שוודית, טלוגו, סלובקית, ברטונית, ארמנית, קטלאנית, פרסית, קמרית, איסלנדית, מלאית",
+      "index": 528,
+      "subject_en": "Singapore",
+      "object_en": "Malay"
+    },
+    {
+      "subject": "טורקיה",
+      "object": "טורקית",
+      "object_candidates": "איסלנדית, אירית, בלארוסית, אזרית, סיציליאנית, יפנית, סרבית, רוסית, ליטאית, טורקית",
+      "index": 529,
+      "subject_en": "Turkey",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "צ'ילה",
+      "object": "ספרדית",
+      "object_candidates": "ליטאית, יפנית, מונגולית, לטבית, מלאיאלאם, ונטית, טמילית, תאית, הינדי, ספרדית",
+      "index": 530,
+      "subject_en": "Chile",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "סנט מארטן",
+      "object": "הולנדית",
+      "object_candidates": "אנגלית, פינית, השפה הנורמנית, סומלית, קוריאנית, עברית, מראטהית, ברטונית, אוקראינית, הולנדית",
+      "index": 531,
+      "subject_en": "Sint Maarten (Dutch part)",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "ארגון התקינה הבינלאומי",
+      "object": "צרפתית",
+      "object_candidates": "סומלית, טורקית, בולגרית, בלארוסית, הונגרית, גרמנית, טמילית, רומנית, מראטהית, צרפתית",
+      "index": 532,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "אנגלית",
+      "object_candidates": "טלוגו, קמרית, מצרית, ליטאית, יוונית, הוואית, וייטנאמית, אסטונית, צרפתית, אנגלית",
+      "index": 533,
+      "subject_en": "European Union",
+      "object_en": "English"
+    },
+    {
+      "subject": "בריסל",
+      "object": "צרפתית",
+      "object_candidates": "ספרדית, יפנית, סלובנית, עברית, הולנדית, אינדונזית, הונגרית, וייטנאמית, ליטאית, צרפתית",
+      "index": 534,
+      "subject_en": "Brussels region",
+      "object_en": "French"
+    },
+    {
+      "subject": "ואלה",
+      "object": "צרפתית",
+      "object_candidates": "סומלית, אירית, יוונית, השפה הנורמנית, מלטית, ונטית, קרואטית, סרבית, רומנית, צרפתית",
+      "index": 535,
+      "subject_en": "canton of Valais",
+      "object_en": "French"
+    },
+    {
+      "subject": "דלהי",
+      "object": "אורדו",
+      "object_candidates": "צרפתית, בולגרית, גאורגית, אוקראינית, וייטנאמית, רוסית, ברטונית, קטלאנית, ארמנית, אורדו",
+      "index": 536,
+      "subject_en": "Delhi",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "דקוטה הדרומית",
+      "object": "אנגלית",
+      "object_candidates": "מלטית, יוונית, מקדונית, פרסית, איטלקית, סומלית, אסטונית, הונגרית, ספרדית, אנגלית",
+      "index": 537,
+      "subject_en": "South Dakota",
+      "object_en": "English"
+    },
+    {
+      "subject": "אלבמה",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, ארמנית, דנית, גאורגית, יפנית, לטינית, עברית, ברטונית, בסקית, אנגלית",
+      "index": 538,
+      "subject_en": "Alabama",
+      "object_en": "English"
+    },
+    {
+      "subject": "מיס תבל",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, רוסית, ארמנית, הולנדית, שוודית, השפה הנורמנית, טלוגו, מלאית, תאית, אנגלית",
+      "index": 539,
+      "subject_en": "Miss Universe",
+      "object_en": "English"
+    },
+    {
+      "subject": "קליפורניה",
+      "object": "אנגלית",
+      "object_candidates": "קרואטית, וייטנאמית, צ'כית, השפה הנורמנית, לטינית, צרפתית, פולנית, ונטית, הונגרית, אנגלית",
+      "index": 540,
+      "subject_en": "California",
+      "object_en": "English"
+    },
+    {
+      "subject": "שווייץ",
+      "object": "איטלקית",
+      "object_candidates": "ונטית, עברית, יוונית, לטינית, הוואית, הונגרית, שוודית, סלובנית, פרסית, איטלקית",
+      "index": 541,
+      "subject_en": "Switzerland",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "טובה",
+      "object": "רוסית",
+      "object_candidates": "יוונית, סלובנית, ארמנית, סלובקית, סיציליאנית, פנג'אבי, השפה הנורמנית, מצרית, איטלקית, רוסית",
+      "index": 542,
+      "subject_en": "Tuva Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "רוסיה",
+      "object": "רוסית",
+      "object_candidates": "אזרית, ברטונית, הונגרית, וייטנאמית, סומלית, גרמנית, מונגולית, ולשית, פורטוגזית, רוסית",
+      "index": 543,
+      "subject_en": "Russia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "יוקון",
+      "object": "אנגלית",
+      "object_candidates": "אזרית, מצרית, ארמנית, סרבית, לטבית, פינית, שוודית, מלאיאלאם, פולנית, אנגלית",
+      "index": 544,
+      "subject_en": "Yukon",
+      "object_en": "English"
+    },
+    {
+      "subject": "בורקינה פאסו",
+      "object": "צרפתית",
+      "object_candidates": "קמרית, קוריאנית, פרסית, בולגרית, רומנית, מלאיאלאם, רוסית, אורדו, שפות סיניות, צרפתית",
+      "index": 545,
+      "subject_en": "Burkina Faso",
+      "object_en": "French"
+    },
+    {
+      "subject": "ג'רזי",
+      "object": "צרפתית",
+      "object_candidates": "פורטוגזית, מונטנגרית, בולגרית, יפנית, סיציליאנית, אוקראינית, השפה הנורמנית, יוונית, מלאיאלאם, צרפתית",
+      "index": 546,
+      "subject_en": "Jersey",
+      "object_en": "French"
+    },
+    {
+      "subject": "רוסיה",
+      "object": "אזרית",
+      "object_candidates": "קרואטית, ונטית, רוסית, בולגרית, ברטונית, פורטוגזית, אסטונית, הוואית, סלובנית, אזרית",
+      "index": 547,
+      "subject_en": "Russia",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "נונאווט",
+      "object": "צרפתית",
+      "object_candidates": "גרמנית, מלאית, קמרית, טלוגו, הוואית, יוונית, אסטונית, איסלנדית, יפנית, צרפתית",
+      "index": 548,
+      "subject_en": "Nunavut",
+      "object_en": "French"
+    },
+    {
+      "subject": "קוטקה",
+      "object": "פינית",
+      "object_candidates": "מקדונית, צרפתית, אסטונית, קמרית, ליטאית, גאורגית, לטבית, אירית, תאית, פינית",
+      "index": 549,
+      "subject_en": "Kotka",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "איטליה",
+      "object": "איטלקית",
+      "object_candidates": "לטבית, יוונית, אזרית, אורדו, יפנית, רוסית, ארמנית, אינדונזית, סומלית, איטלקית",
+      "index": 550,
+      "subject_en": "Italy",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "שושלת צ'ינג",
+      "object": "שפות סיניות",
+      "object_candidates": "אסטונית, פולנית, ולשית, לטינית, איטלקית, מלטית, טמילית, איסלנדית, קרואטית, שפות סיניות",
+      "index": 551,
+      "subject_en": "Qing dynasty",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "קרוליינה הצפונית",
+      "object": "אנגלית",
+      "object_candidates": "תאית, מראטהית, אינדונזית, מונטנגרית, פינית, בנגלית, ונטית, גרמנית, טלוגו, אנגלית",
+      "index": 552,
+      "subject_en": "North Carolina",
+      "object_en": "English"
+    },
+    {
+      "subject": "הפיליפינים",
+      "object": "אנגלית",
+      "object_candidates": "טמילית, סומלית, פרסית, נפאלית, סיציליאנית, עברית, הינדי, קמרית, אלבנית, אנגלית",
+      "index": 553,
+      "subject_en": "Philippines",
+      "object_en": "English"
+    },
+    {
+      "subject": "שוודיה",
+      "object": "פינית",
+      "object_candidates": "ונטית, מונטנגרית, פרסית, קוריאנית, פורטוגזית, סקוטית, סלובקית, גרמנית, ארמנית, פינית",
+      "index": 554,
+      "subject_en": "Sweden",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "איידהו",
+      "object": "אנגלית",
+      "object_candidates": "סומלית, קמרית, מלאית, צ'כית, ארמנית, טורקית, פולנית, קוריאנית, הולנדית, אנגלית",
+      "index": 555,
+      "subject_en": "Idaho",
+      "object_en": "English"
+    },
+    {
+      "subject": "מהאראשטרה",
+      "object": "מראטהית",
+      "object_candidates": "מלטית, טמילית, הולנדית, טורקית, רומנית, רוסית, ונטית, פולנית, פנג'אבי, מראטהית",
+      "index": 556,
+      "subject_en": "Maharashtra",
+      "object_en": "Marathi"
+    },
+    {
+      "subject": "בוריאטיה",
+      "object": "רוסית",
+      "object_candidates": "לטינית, מלאיאלאם, תאית, השפה הנורמנית, מלאית, אורדו, קמרית, טורקית, אלבנית, רוסית",
+      "index": 557,
+      "subject_en": "Republic of Buryatia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ניז'ר",
+      "object": "צרפתית",
+      "object_candidates": "עברית, שוודית, מלטית, גאורגית, פינית, קרואטית, פורטוגזית, הולנדית, תאית, צרפתית",
+      "index": 558,
+      "subject_en": "Niger",
+      "object_en": "French"
+    },
+    {
+      "subject": "עיריית סולנה",
+      "object": "שוודית",
+      "object_candidates": "עברית, גאורגית, טמילית, פינית, אירית, יפנית, סרבית, לטבית, נפאלית, שוודית",
+      "index": 559,
+      "subject_en": "Solna Municipality",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "לאקנאו",
+      "object": "אנגלית",
+      "object_candidates": "אוקראינית, שפות סיניות, אזרית, מלאיאלאם, לטבית, מלאית, לטינית, מראטהית, הונגרית, אנגלית",
+      "index": 560,
+      "subject_en": "Lucknow",
+      "object_en": "English"
+    },
+    {
+      "subject": "רוסיה הסובייטית",
+      "object": "רוסית",
+      "object_candidates": "יוונית, יפנית, מלטית, טלוגו, פרסית, בולגרית, מלאית, אנגלית, פולנית, רוסית",
+      "index": 561,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פלשתינה (א״י)",
+      "object": "עברית",
+      "object_candidates": "קוריאנית, פולנית, וייטנאמית, רוסית, הינדי, צרפתית, טורקית, נפאלית, דנית, עברית",
+      "index": 562,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Hebrew"
+    },
+    {
+      "subject": "איגוד מדינות דרום-מזרח אסיה",
+      "object": "אינדונזית",
+      "object_candidates": "עברית, אורדו, פולנית, פנג'אבי, בלארוסית, מלטית, טורקית, הונגרית, צרפתית, אינדונזית",
+      "index": 563,
+      "subject_en": "ASEAN",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "סרביה ומונטנגרו",
+      "object": "סרבית",
+      "object_candidates": "פינית, סלובנית, הונגרית, שוודית, אינדונזית, תאית, סיציליאנית, פורטוגזית, ארמנית, סרבית",
+      "index": 564,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "ארגון התקינה הבינלאומי",
+      "object": "אנגלית",
+      "object_candidates": "אוקראינית, בולגרית, עברית, פינית, תאית, סרבית, הינדי, קמרית, יוונית, אנגלית",
+      "index": 565,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "English"
+    },
+    {
+      "subject": "קרואטיה",
+      "object": "קרואטית",
+      "object_candidates": "פינית, יפנית, ברטונית, מקדונית, סיציליאנית, אזרית, הונגרית, הוואית, אינדונזית, קרואטית",
+      "index": 566,
+      "subject_en": "Croatia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "משהד",
+      "object": "פרסית",
+      "object_candidates": "מראטהית, מונגולית, וייטנאמית, סרבית, הונגרית, סומלית, אלבנית, בלארוסית, קטלאנית, פרסית",
+      "index": 567,
+      "subject_en": "Mashhad",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "סמואה האמריקנית",
+      "object": "אנגלית",
+      "object_candidates": "בולגרית, טמילית, טלוגו, פורטוגזית, אורדו, סלובנית, צ'כית, יוונית, מקדונית, אנגלית",
+      "index": 568,
+      "subject_en": "American Samoa",
+      "object_en": "English"
+    },
+    {
+      "subject": "צ'כיה",
+      "object": "צ'כית",
+      "object_candidates": "לטינית, צרפתית, אנגלית, ברטונית, הונגרית, פנג'אבי, סקוטית, הינדי, טורקית, צ'כית",
+      "index": 569,
+      "subject_en": "Czech Republic",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "סנט לוסיה",
+      "object": "אנגלית",
+      "object_candidates": "השפה הנורמנית, קוריאנית, בנגלית, מלאית, מלאיאלאם, מונגולית, מלטית, ונטית, הולנדית, אנגלית",
+      "index": 570,
+      "subject_en": "Saint Lucia",
+      "object_en": "English"
+    },
+    {
+      "subject": "הסכם הסחר החופשי של צפון אמריקה",
+      "object": "ספרדית",
+      "object_candidates": "צרפתית, סיציליאנית, איטלקית, אזרית, לטבית, סלובנית, מונטנגרית, יפנית, אורדו, ספרדית",
+      "index": 571,
+      "subject_en": "North American Free Trade Agreement",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "ליכטנשטיין",
+      "object": "גרמנית",
+      "object_candidates": "שפות סיניות, פרסית, ארמנית, וייטנאמית, גאורגית, שוודית, סקוטית, הינדי, רומנית, גרמנית",
+      "index": 572,
+      "subject_en": "Liechtenstein",
+      "object_en": "German"
+    },
+    {
+      "subject": "אוגנדה",
+      "object": "אנגלית",
+      "object_candidates": "פינית, עברית, יוונית, הונגרית, אלבנית, צרפתית, טמילית, סרבית, הינדי, אנגלית",
+      "index": 573,
+      "subject_en": "Uganda",
+      "object_en": "English"
+    },
+    {
+      "subject": "אדיגיה",
+      "object": "רוסית",
+      "object_candidates": "וייטנאמית, טורקית, איסלנדית, אינדונזית, ארמנית, הונגרית, מונגולית, רומנית, קטלאנית, רוסית",
+      "index": 574,
+      "subject_en": "Republic of Adygea",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "צ'ובשיה",
+      "object": "רוסית",
+      "object_candidates": "הולנדית, קרואטית, קוריאנית, אסטונית, וייטנאמית, ליטאית, אלבנית, פינית, בולגרית, רוסית",
+      "index": 575,
+      "subject_en": "Chuvash Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "סיישל",
+      "object": "צרפתית",
+      "object_candidates": "סלובקית, קמרית, מונגולית, ולשית, סרבית, נפאלית, הונגרית, מלטית, שוודית, צרפתית",
+      "index": 576,
+      "subject_en": "Seychelles",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "צ'כית",
+      "object_candidates": "בסקית, מקדונית, עברית, גרמנית, טמילית, טורקית, אסטונית, נפאלית, סומלית, צ'כית",
+      "index": 577,
+      "subject_en": "European Union",
+      "object_en": "Czech"
+    },
+    {
+      "subject": "אריתריאה",
+      "object": "אנגלית",
+      "object_candidates": "אזרית, בלארוסית, רומנית, דנית, יוונית, בנגלית, ונטית, תאית, מלאיאלאם, אנגלית",
+      "index": 578,
+      "subject_en": "Eritrea",
+      "object_en": "English"
+    },
+    {
+      "subject": "מאוריציוס",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, צ'כית, מונגולית, פינית, מצרית, סלובנית, איסלנדית, השפה הנורמנית, קוריאנית, צרפתית",
+      "index": 579,
+      "subject_en": "Mauritius",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "ליטאית",
+      "object_candidates": "קמרית, ונטית, פרסית, ברטונית, קטלאנית, סרבית, מראטהית, פינית, ספרדית, ליטאית",
+      "index": 580,
+      "subject_en": "European Union",
+      "object_en": "Lithuanian"
+    },
+    {
+      "subject": "צפון אוסטיה - אלניה",
+      "object": "רוסית",
+      "object_candidates": "סלובקית, מלאית, איסלנדית, מונגולית, הונגרית, קוריאנית, טמילית, פרסית, דנית, רוסית",
+      "index": 581,
+      "subject_en": "Republic of North Ossetia-Alania",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "צרפת",
+      "object": "צרפתית",
+      "object_candidates": "סיציליאנית, איסלנדית, לטבית, איטלקית, דנית, מקדונית, הונגרית, קרואטית, רוסית, צרפתית",
+      "index": 582,
+      "subject_en": "France",
+      "object_en": "French"
+    },
+    {
+      "subject": "קרלה",
+      "object": "מלאיאלאם",
+      "object_candidates": "סרבית, הינדי, לטבית, מלאית, קוריאנית, סקוטית, וייטנאמית, סיציליאנית, יפנית, מלאיאלאם",
+      "index": 583,
+      "subject_en": "Kerala",
+      "object_en": "Malayalam"
+    },
+    {
+      "subject": "קמרון",
+      "object": "צרפתית",
+      "object_candidates": "פינית, מונגולית, עברית, ספרדית, אנגלית, סקוטית, בולגרית, פולנית, תאית, צרפתית",
+      "index": 584,
+      "subject_en": "Cameroon",
+      "object_en": "French"
+    },
+    {
+      "subject": "קוויבק סיטי",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, הונגרית, איטלקית, גרמנית, מונגולית, פורטוגזית, יוונית, סלובקית, ברטונית, צרפתית",
+      "index": 585,
+      "subject_en": "Quebec City",
+      "object_en": "French"
+    },
+    {
+      "subject": "ולנסיה",
+      "object": "ספרדית",
+      "object_candidates": "רוסית, אירית, אורדו, סומלית, לטבית, לטינית, נפאלית, הינדי, קרואטית, ספרדית",
+      "index": 586,
+      "subject_en": "Community of Valencia",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "תאילנד",
+      "object": "תאית",
+      "object_candidates": "הולנדית, צ'כית, בולגרית, אזרית, רוסית, לטבית, ולשית, מונגולית, שוודית, תאית",
+      "index": 587,
+      "subject_en": "Thailand",
+      "object_en": "Thai"
+    },
+    {
+      "subject": "הארגון לביטחון ולשיתוף פעולה באירופה",
+      "object": "איטלקית",
+      "object_candidates": "בלארוסית, איסלנדית, אירית, מלטית, מונטנגרית, פולנית, טורקית, ספרדית, לטינית, איטלקית",
+      "index": 588,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "הרפובליקה הדמוקרטית של קונגו",
+      "object": "צרפתית",
+      "object_candidates": "סלובנית, פינית, מלאיאלאם, אינדונזית, טורקית, וייטנאמית, סומלית, פולנית, הינדי, צרפתית",
+      "index": 589,
+      "subject_en": "Democratic Republic of the Congo",
+      "object_en": "French"
+    },
+    {
+      "subject": "הונגריה",
+      "object": "הונגרית",
+      "object_candidates": "סיציליאנית, אסטונית, סומלית, פנג'אבי, איטלקית, פינית, אירית, מקדונית, ונטית, הונגרית",
+      "index": 590,
+      "subject_en": "Hungary",
+      "object_en": "Hungarian"
+    },
+    {
+      "subject": "הרפובליקה העממית של דונצק",
+      "object": "רוסית",
+      "object_candidates": "וייטנאמית, קוריאנית, הונגרית, אינדונזית, סומלית, צרפתית, מלטית, קטלאנית, רומנית, רוסית",
+      "index": 591,
+      "subject_en": "Donetsk People's Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ונואטו",
+      "object": "צרפתית",
+      "object_candidates": "מראטהית, טלוגו, אינדונזית, דנית, בסקית, מקדונית, יוונית, רומנית, ספרדית, צרפתית",
+      "index": 592,
+      "subject_en": "Vanuatu",
+      "object_en": "French"
+    },
+    {
+      "subject": "אסטוניה",
+      "object": "אסטונית",
+      "object_candidates": "הונגרית, מקדונית, אירית, יוונית, גרמנית, בסקית, פנג'אבי, פינית, גאורגית, אסטונית",
+      "index": 593,
+      "subject_en": "Estonia",
+      "object_en": "Estonian"
+    },
+    {
+      "subject": "קנטקי",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, סקוטית, טורקית, טלוגו, עברית, קרואטית, מונטנגרית, אוקראינית, ונטית, אנגלית",
+      "index": 594,
+      "subject_en": "Kentucky",
+      "object_en": "English"
+    },
+    {
+      "subject": "לאקנאו",
+      "object": "הינדי",
+      "object_candidates": "הונגרית, סקוטית, שוודית, קוריאנית, סלובנית, מראטהית, טורקית, סלובקית, אורדו, הינדי",
+      "index": 595,
+      "subject_en": "Lucknow",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "באלי",
+      "object": "אינדונזית",
+      "object_candidates": "פינית, ולשית, סומלית, הולנדית, רומנית, אלבנית, נפאלית, בסקית, לטינית, אינדונזית",
+      "index": 596,
+      "subject_en": "Bali",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "דקוטה הצפונית",
+      "object": "אנגלית",
+      "object_candidates": "צ'כית, יוונית, גאורגית, מראטהית, שוודית, פינית, דנית, גרמנית, מקדונית, אנגלית",
+      "index": 597,
+      "subject_en": "North Dakota",
+      "object_en": "English"
+    },
+    {
+      "subject": "ספרד",
+      "object": "בסקית",
+      "object_candidates": "קרואטית, סיציליאנית, אוקראינית, טמילית, ארמנית, הינדי, בנגלית, סלובקית, איסלנדית, בסקית",
+      "index": 598,
+      "subject_en": "Spain",
+      "object_en": "Basque"
+    },
+    {
+      "subject": "מלטה",
+      "object": "אנגלית",
+      "object_candidates": "דנית, שפות סיניות, מלאית, ליטאית, איטלקית, פרסית, וייטנאמית, רומנית, ארמנית, אנגלית",
+      "index": 599,
+      "subject_en": "Malta",
+      "object_en": "English"
+    },
+    {
+      "subject": "קלמיקיה",
+      "object": "רוסית",
+      "object_candidates": "מראטהית, אוקראינית, קטלאנית, ספרדית, וייטנאמית, קוריאנית, פנג'אבי, אינדונזית, איטלקית, רוסית",
+      "index": 600,
+      "subject_en": "Republic of Kalmykia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פריבור",
+      "object": "צרפתית",
+      "object_candidates": "לטינית, ונטית, בלארוסית, הולנדית, איטלקית, אירית, סרבית, קמרית, פינית, צרפתית",
+      "index": 601,
+      "subject_en": "Canton of Fribourg",
+      "object_en": "French"
+    },
+    {
+      "subject": "הטריטוריות הצפון-מערביות",
+      "object": "אנגלית",
+      "object_candidates": "איסלנדית, שוודית, קוריאנית, סיציליאנית, קרואטית, הוואית, פינית, בלארוסית, אזרית, אנגלית",
+      "index": 602,
+      "subject_en": "Northwest Territories",
+      "object_en": "English"
+    },
+    {
+      "subject": "ניו ברנזוויק",
+      "object": "אנגלית",
+      "object_candidates": "ארמנית, אלבנית, ונטית, יוונית, מלטית, ליטאית, צרפתית, אזרית, יפנית, אנגלית",
+      "index": 603,
+      "subject_en": "New Brunswick",
+      "object_en": "English"
+    },
+    {
+      "subject": "ויילס",
+      "object": "אנגלית",
+      "object_candidates": "אלבנית, סרבית, אוקראינית, יוונית, קמרית, רוסית, מלטית, קרואטית, ולשית, אנגלית",
+      "index": 604,
+      "subject_en": "Wales",
+      "object_en": "English"
+    },
+    {
+      "subject": "קומורו",
+      "object": "צרפתית",
+      "object_candidates": "הינדי, מונטנגרית, סקוטית, בלארוסית, ונטית, מלאית, בולגרית, שפות סיניות, סלובנית, צרפתית",
+      "index": 605,
+      "subject_en": "Comoros",
+      "object_en": "French"
+    },
+    {
+      "subject": "ממלכת סיציליה הנורמנית",
+      "object": "יוונית",
+      "object_candidates": "מראטהית, מלאית, מונגולית, ארמנית, מקדונית, פולנית, דנית, בלארוסית, שוודית, יוונית",
+      "index": 606,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "ארגון הבריאות העולמי",
+      "object": "צרפתית",
+      "object_candidates": "פרסית, אוקראינית, השפה הנורמנית, הולנדית, נפאלית, אלבנית, ונטית, מונטנגרית, אורדו, צרפתית",
+      "index": 607,
+      "subject_en": "World Health Organization",
+      "object_en": "French"
+    },
+    {
+      "subject": "פריבור",
+      "object": "גרמנית",
+      "object_candidates": "קמרית, עברית, קטלאנית, מלטית, שוודית, בולגרית, אלבנית, הונגרית, טורקית, גרמנית",
+      "index": 608,
+      "subject_en": "Canton of Fribourg",
+      "object_en": "German"
+    },
+    {
+      "subject": "הארגון הבינלאומי לתעופה אזרחית",
+      "object": "רוסית",
+      "object_candidates": "מונגולית, אנגלית, גרמנית, נפאלית, ונטית, אוקראינית, סרבית, השפה הנורמנית, תאית, רוסית",
+      "index": 609,
+      "subject_en": "International Civil Aviation Organization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "האומות המאוחדות",
+      "object": "צרפתית",
+      "object_candidates": "עברית, מצרית, אורדו, מלאיאלאם, סרבית, טמילית, אזרית, סלובנית, אוקראינית, צרפתית",
+      "index": 610,
+      "subject_en": "United Nations",
+      "object_en": "French"
+    },
+    {
+      "subject": "האימפריה הרומית",
+      "object": "יוונית",
+      "object_candidates": "קטלאנית, אוקראינית, סלובקית, מקדונית, רומנית, אנגלית, הינדי, אלבנית, קמרית, יוונית",
+      "index": 611,
+      "subject_en": "Roman Empire",
+      "object_en": "Greek"
+    },
+    {
+      "subject": "אינדור",
+      "object": "הינדי",
+      "object_candidates": "יוונית, בנגלית, סלובקית, מלאית, קמרית, אינדונזית, בלארוסית, אזרית, תאית, הינדי",
+      "index": 612,
+      "subject_en": "Indore",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "גיברלטר",
+      "object": "אנגלית",
+      "object_candidates": "הינדי, קמרית, השפה הנורמנית, פרסית, עברית, שוודית, מראטהית, ונטית, בסקית, אנגלית",
+      "index": 613,
+      "subject_en": "Gibraltar",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית הבלארוסית",
+      "object": "פולנית",
+      "object_candidates": "סקוטית, אסטונית, לטבית, דנית, מלטית, אינדונזית, סיציליאנית, מונטנגרית, אנגלית, פולנית",
+      "index": 614,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Polish"
+    },
+    {
+      "subject": "ספרד",
+      "object": "ספרדית",
+      "object_candidates": "סומלית, ארמנית, קרואטית, פורטוגזית, טמילית, לטבית, מלטית, אירית, שוודית, ספרדית",
+      "index": 615,
+      "subject_en": "Spain",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "טאמיל נאדו",
+      "object": "טמילית",
+      "object_candidates": "הונגרית, צרפתית, סרבית, פרסית, דנית, מקדונית, אסטונית, אלבנית, בלארוסית, טמילית",
+      "index": 616,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "מחוז אלטאי",
+      "object": "רוסית",
+      "object_candidates": "צרפתית, מקדונית, אוקראינית, רומנית, יוונית, לטבית, ארמנית, בלארוסית, טלוגו, רוסית",
+      "index": 617,
+      "subject_en": "Altai Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "לוקסמבורג",
+      "object": "צרפתית",
+      "object_candidates": "קטלאנית, מלטית, מצרית, עברית, פורטוגזית, סומלית, השפה הנורמנית, בנגלית, רומנית, צרפתית",
+      "index": 618,
+      "subject_en": "Luxembourg",
+      "object_en": "French"
+    },
+    {
+      "subject": "אצ'ה",
+      "object": "אינדונזית",
+      "object_candidates": "מונטנגרית, מצרית, פנג'אבי, ספרדית, אזרית, סקוטית, לטבית, ונטית, קרואטית, אינדונזית",
+      "index": 619,
+      "subject_en": "Aceh",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "אל סלוודור",
+      "object": "ספרדית",
+      "object_candidates": "יוונית, הולנדית, עברית, טורקית, מצרית, מלאיאלאם, לטבית, ארמנית, טמילית, ספרדית",
+      "index": 620,
+      "subject_en": "El Salvador",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "צרפתית",
+      "object_candidates": "אינדונזית, ספרדית, ליטאית, פורטוגזית, אנגלית, ארמנית, שוודית, מלאית, טמילית, צרפתית",
+      "index": 621,
+      "subject_en": "European Union",
+      "object_en": "French"
+    },
+    {
+      "subject": "הממלכה המאוחדת",
+      "object": "ולשית",
+      "object_candidates": "קמרית, פולנית, מלטית, ארמנית, רומנית, טורקית, אלבנית, גרמנית, סקוטית, ולשית",
+      "index": 622,
+      "subject_en": "United Kingdom",
+      "object_en": "Welsh"
+    },
+    {
+      "subject": "דנמרק",
+      "object": "דנית",
+      "object_candidates": "בולגרית, פרסית, מונטנגרית, מלאית, יפנית, תאית, צ'כית, שוודית, קוריאנית, דנית",
+      "index": 623,
+      "subject_en": "Denmark",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "ארגון התקינה הבינלאומי",
+      "object": "רוסית",
+      "object_candidates": "אסטונית, סיציליאנית, ונטית, מקדונית, אוקראינית, טמילית, איטלקית, קרואטית, בלארוסית, רוסית",
+      "index": 624,
+      "subject_en": "International Organization for Standardization",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קנדה",
+      "object": "צרפתית",
+      "object_candidates": "פרסית, טמילית, סרבית, נפאלית, לטבית, ברטונית, בולגרית, איסלנדית, גאורגית, צרפתית",
+      "index": 625,
+      "subject_en": "Canada",
+      "object_en": "French"
+    },
+    {
+      "subject": "מחוז קורק",
+      "object": "אנגלית",
+      "object_candidates": "מקדונית, גרמנית, אורדו, קמרית, בלארוסית, רוסית, יפנית, אסטונית, סיציליאנית, אנגלית",
+      "index": 626,
+      "subject_en": "County Cork",
+      "object_en": "English"
+    },
+    {
+      "subject": "סן מרינו",
+      "object": "איטלקית",
+      "object_candidates": "מקדונית, ארמנית, צרפתית, גאורגית, מלאית, אזרית, בסקית, הוואית, וייטנאמית, איטלקית",
+      "index": 627,
+      "subject_en": "San Marino",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "פקיסטן",
+      "object": "אנגלית",
+      "object_candidates": "פולנית, צרפתית, מראטהית, וייטנאמית, גרמנית, יפנית, שפות סיניות, ספרדית, אירית, אנגלית",
+      "index": 628,
+      "subject_en": "Pakistan",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה הדמוקרטית של אזרבייג'ן",
+      "object": "אזרית",
+      "object_candidates": "מלאיאלאם, השפה הנורמנית, אורדו, בולגרית, נפאלית, רומנית, קוריאנית, פנג'אבי, שוודית, אזרית",
+      "index": 629,
+      "subject_en": "Azerbaijan Democratic Republic",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "פורטוגזית",
+      "object_candidates": "ארמנית, ברטונית, מונטנגרית, יוונית, ולשית, עברית, וייטנאמית, פולנית, אינדונזית, פורטוגזית",
+      "index": 630,
+      "subject_en": "European Union",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "גרנזי",
+      "object": "אנגלית",
+      "object_candidates": "ברטונית, קרואטית, עברית, סיציליאנית, מונגולית, מראטהית, פולנית, ליטאית, סרבית, אנגלית",
+      "index": 631,
+      "subject_en": "Guernsey",
+      "object_en": "English"
+    },
+    {
+      "subject": "הארגון לביטחון ולשיתוף פעולה באירופה",
+      "object": "רוסית",
+      "object_candidates": "השפה הנורמנית, פרסית, לטבית, מונטנגרית, בלארוסית, בולגרית, פורטוגזית, מקדונית, גרמנית, רוסית",
+      "index": 632,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הרפובליקה של ונציה",
+      "object": "ונטית",
+      "object_candidates": "פינית, לטינית, אסטונית, הוואית, שוודית, סקוטית, הולנדית, סלובנית, גרמנית, ונטית",
+      "index": 633,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venetian"
+    },
+    {
+      "subject": "דומיניקה",
+      "object": "אנגלית",
+      "object_candidates": "בנגלית, אסטונית, תאית, יוונית, נפאלית, מונטנגרית, דנית, מונגולית, עברית, אנגלית",
+      "index": 634,
+      "subject_en": "Dominica",
+      "object_en": "English"
+    },
+    {
+      "subject": "התאחדות האתלטיקה הבינלאומית",
+      "object": "אנגלית",
+      "object_candidates": "אלבנית, קוריאנית, הינדי, סרבית, ספרדית, סומלית, יפנית, אירית, צ'כית, אנגלית",
+      "index": 635,
+      "subject_en": "World Athletics",
+      "object_en": "English"
+    },
+    {
+      "subject": "הסוכנות הבינלאומית לאנרגיה אטומית",
+      "object": "רוסית",
+      "object_candidates": "מלאיאלאם, צרפתית, וייטנאמית, ספרדית, גאורגית, ברטונית, סלובקית, פולנית, סיציליאנית, רוסית",
+      "index": 636,
+      "subject_en": "International Atomic Energy Agency",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "גואטמלה",
+      "object": "ספרדית",
+      "object_candidates": "סלובקית, מצרית, אינדונזית, הונגרית, עברית, מלאיאלאם, גרמנית, מונגולית, גאורגית, ספרדית",
+      "index": 637,
+      "subject_en": "Guatemala",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "בלארוס",
+      "object": "רוסית",
+      "object_candidates": "מונטנגרית, מלטית, רומנית, אסטונית, בולגרית, צרפתית, גאורגית, מצרית, טורקית, רוסית",
+      "index": 638,
+      "subject_en": "Belarus",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קרוליינה הדרומית",
+      "object": "אנגלית",
+      "object_candidates": "מונטנגרית, צ'כית, קוריאנית, סיציליאנית, ספרדית, קטלאנית, טלוגו, ברטונית, קרואטית, אנגלית",
+      "index": 639,
+      "subject_en": "South Carolina",
+      "object_en": "English"
+    },
+    {
+      "subject": "סנט וינסנט והגרנדינים",
+      "object": "אנגלית",
+      "object_candidates": "לטבית, צרפתית, יפנית, פולנית, דנית, רומנית, אינדונזית, קוריאנית, ברטונית, אנגלית",
+      "index": 640,
+      "subject_en": "Saint Vincent and the Grenadines",
+      "object_en": "English"
+    },
+    {
+      "subject": "מאוריציוס",
+      "object": "אנגלית",
+      "object_candidates": "שוודית, גאורגית, ולשית, פרסית, טורקית, הולנדית, שפות סיניות, טמילית, פולנית, אנגלית",
+      "index": 641,
+      "subject_en": "Mauritius",
+      "object_en": "English"
+    },
+    {
+      "subject": "השושלת הטימורית",
+      "object": "פרסית",
+      "object_candidates": "פנג'אבי, עברית, צ'כית, הולנדית, פולנית, בולגרית, צרפתית, מלאיאלאם, ארמנית, פרסית",
+      "index": 642,
+      "subject_en": "Timurid Empire",
+      "object_en": "Persian"
+    },
+    {
+      "subject": "ניקרגואה",
+      "object": "ספרדית",
+      "object_candidates": "ברטונית, קטלאנית, מלאיאלאם, מונטנגרית, סלובנית, צרפתית, קרואטית, דנית, בסקית, ספרדית",
+      "index": 643,
+      "subject_en": "Nicaragua",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "סרביה",
+      "object": "סרבית",
+      "object_candidates": "סומלית, אנגלית, הונגרית, מלטית, לטבית, פינית, טלוגו, מצרית, הינדי, סרבית",
+      "index": 644,
+      "subject_en": "Serbia",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "פרוסיה",
+      "object": "גרמנית",
+      "object_candidates": "אנגלית, וייטנאמית, ספרדית, השפה הנורמנית, איטלקית, אסטונית, איסלנדית, סלובקית, אזרית, גרמנית",
+      "index": 645,
+      "subject_en": "Prussia",
+      "object_en": "German"
+    },
+    {
+      "subject": "איי פארו",
+      "object": "דנית",
+      "object_candidates": "קוריאנית, פרסית, קטלאנית, רוסית, ונטית, מראטהית, יוונית, נפאלית, וייטנאמית, דנית",
+      "index": 646,
+      "subject_en": "Faroe Islands",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "איסלנד",
+      "object": "איסלנדית",
+      "object_candidates": "מלאית, סלובקית, הולנדית, סיציליאנית, מצרית, מונגולית, עברית, יוונית, אסטונית, איסלנדית",
+      "index": 647,
+      "subject_en": "Iceland",
+      "object_en": "Icelandic"
+    },
+    {
+      "subject": "מונטנגרו",
+      "object": "מונטנגרית",
+      "object_candidates": "סומלית, אלבנית, גרמנית, ברטונית, גאורגית, מראטהית, איסלנדית, פולנית, קמרית, מונטנגרית",
+      "index": 648,
+      "subject_en": "Montenegro",
+      "object_en": "Montenegrin"
+    },
+    {
+      "subject": "עיריית סטוקהולם",
+      "object": "שוודית",
+      "object_candidates": "טלוגו, פרסית, בנגלית, הולנדית, עברית, קטלאנית, תאית, לטינית, אלבנית, שוודית",
+      "index": 649,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "צרפת של וישי",
+      "object": "צרפתית",
+      "object_candidates": "בולגרית, קרואטית, ספרדית, לטבית, סלובקית, בלארוסית, פינית, סרבית, סומלית, צרפתית",
+      "index": 650,
+      "subject_en": "Vichy France",
+      "object_en": "French"
+    },
+    {
+      "subject": "מליטופול",
+      "object": "רוסית",
+      "object_candidates": "בסקית, פורטוגזית, סלובקית, אירית, דנית, ברטונית, טורקית, קוריאנית, אסטונית, רוסית",
+      "index": 651,
+      "subject_en": "Melitopol",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "לוצרן",
+      "object": "גרמנית",
+      "object_candidates": "סומלית, ליטאית, השפה הנורמנית, שפות סיניות, קמרית, טלוגו, הונגרית, מונגולית, איטלקית, גרמנית",
+      "index": 652,
+      "subject_en": "Canton of Lucerne",
+      "object_en": "German"
+    },
+    {
+      "subject": "הונג קונג",
+      "object": "אנגלית",
+      "object_candidates": "שפות סיניות, קטלאנית, סרבית, קרואטית, מראטהית, צ'כית, ברטונית, איטלקית, רוסית, אנגלית",
+      "index": 653,
+      "subject_en": "Hong Kong",
+      "object_en": "English"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "רומנית",
+      "object_candidates": "סיציליאנית, אירית, יפנית, ארמנית, הולנדית, עברית, נפאלית, בסקית, פולנית, רומנית",
+      "index": 654,
+      "subject_en": "European Union",
+      "object_en": "Romanian"
+    },
+    {
+      "subject": "שושלת סווי",
+      "object": "שפות סיניות",
+      "object_candidates": "איטלקית, לטינית, גאורגית, הולנדית, אנגלית, אסטונית, פינית, ברטונית, עברית, שפות סיניות",
+      "index": 655,
+      "subject_en": "Sui dynasty",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "היידראבאד",
+      "object": "אורדו",
+      "object_candidates": "תאית, ברטונית, גאורגית, אירית, הונגרית, עברית, סרבית, פנג'אבי, סיציליאנית, אורדו",
+      "index": 656,
+      "subject_en": "Hyderabad",
+      "object_en": "Urdu"
+    },
+    {
+      "subject": "דרום אוסטיה",
+      "object": "רוסית",
+      "object_candidates": "פינית, בולגרית, תאית, בלארוסית, נפאלית, איסלנדית, סקוטית, מונגולית, סרבית, רוסית",
+      "index": 657,
+      "subject_en": "South Ossetia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ניו ג'רזי",
+      "object": "אנגלית",
+      "object_candidates": "סרבית, בנגלית, שוודית, מונטנגרית, קוריאנית, עברית, אוקראינית, פרסית, איטלקית, אנגלית",
+      "index": 658,
+      "subject_en": "New Jersey",
+      "object_en": "English"
+    },
+    {
+      "subject": "נמיביה",
+      "object": "אנגלית",
+      "object_candidates": "טורקית, אינדונזית, גאורגית, דנית, ליטאית, פינית, טלוגו, ולשית, איטלקית, אנגלית",
+      "index": 659,
+      "subject_en": "Namibia",
+      "object_en": "English"
+    },
+    {
+      "subject": "האנטילים ההולנדיים",
+      "object": "הולנדית",
+      "object_candidates": "בסקית, קמרית, בלארוסית, רוסית, קרואטית, פורטוגזית, אוקראינית, מראטהית, סלובנית, הולנדית",
+      "index": 660,
+      "subject_en": "Netherlands Antilles",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "סלובקית",
+      "object_candidates": "אזרית, לטבית, סקוטית, השפה הנורמנית, הוואית, פרסית, בולגרית, תאית, ולשית, סלובקית",
+      "index": 661,
+      "subject_en": "European Union",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "בנגלדש",
+      "object": "בנגלית",
+      "object_candidates": "אסטונית, רוסית, אוקראינית, ונטית, טלוגו, ליטאית, קטלאנית, מקדונית, איסלנדית, בנגלית",
+      "index": 662,
+      "subject_en": "Bangladesh",
+      "object_en": "Bengali"
+    },
+    {
+      "subject": "אנדורה",
+      "object": "קטלאנית",
+      "object_candidates": "גאורגית, פרסית, ארמנית, בולגרית, סלובנית, רומנית, סרבית, סומלית, אנגלית, קטלאנית",
+      "index": 663,
+      "subject_en": "Andorra",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "טרינידד וטובגו",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, מונטנגרית, שוודית, השפה הנורמנית, סלובנית, סומלית, דנית, וייטנאמית, פורטוגזית, אנגלית",
+      "index": 664,
+      "subject_en": "Trinidad and Tobago",
+      "object_en": "English"
+    },
+    {
+      "subject": "הממלכה המאוחדת",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, וייטנאמית, מלאית, סרבית, קטלאנית, ולשית, מלטית, סלובנית, השפה הנורמנית, אנגלית",
+      "index": 665,
+      "subject_en": "United Kingdom",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז קמצ'טקה",
+      "object": "רוסית",
+      "object_candidates": "הוואית, סרבית, גרמנית, תאית, מלאית, בולגרית, הינדי, אירית, מונגולית, רוסית",
+      "index": 666,
+      "subject_en": "Kamchatka Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "גרמניה",
+      "object": "גרמנית",
+      "object_candidates": "אירית, יפנית, פנג'אבי, מלטית, סלובנית, סקוטית, קוריאנית, בולגרית, סומלית, גרמנית",
+      "index": 667,
+      "subject_en": "Germany",
+      "object_en": "German"
+    },
+    {
+      "subject": "לוזאן",
+      "object": "צרפתית",
+      "object_candidates": "קטלאנית, שוודית, מצרית, ולשית, קוריאנית, ארמנית, הוואית, יפנית, ברטונית, צרפתית",
+      "index": 668,
+      "subject_en": "Lausanne",
+      "object_en": "French"
+    },
+    {
+      "subject": "בוטסואנה",
+      "object": "אנגלית",
+      "object_candidates": "הוואית, מונטנגרית, סלובקית, השפה הנורמנית, גאורגית, מראטהית, שפות סיניות, לטינית, הינדי, אנגלית",
+      "index": 669,
+      "subject_en": "Botswana",
+      "object_en": "English"
+    },
+    {
+      "subject": "סנט מארטן",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, ונטית, לטינית, פינית, מלטית, גרמנית, הוואית, תאית, מצרית, אנגלית",
+      "index": 670,
+      "subject_en": "Sint Maarten (Dutch part)",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז סטברופול",
+      "object": "רוסית",
+      "object_candidates": "פורטוגזית, לטינית, סלובנית, מצרית, מונגולית, איטלקית, צ'כית, אסטונית, ונטית, רוסית",
+      "index": 671,
+      "subject_en": "Stavropol Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הרפובליקה המרכז-אפריקאית",
+      "object": "צרפתית",
+      "object_candidates": "טמילית, סקוטית, סיציליאנית, מלאית, שפות סיניות, הוואית, מלאיאלאם, לטינית, אזרית, צרפתית",
+      "index": 672,
+      "subject_en": "Central African Republic",
+      "object_en": "French"
+    },
+    {
+      "subject": "גגאוזיה",
+      "object": "רוסית",
+      "object_candidates": "וייטנאמית, אירית, אסטונית, אנגלית, השפה הנורמנית, עברית, איטלקית, מלטית, הינדי, רוסית",
+      "index": 673,
+      "subject_en": "Gagauzia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "נאט\"ו",
+      "object": "אנגלית",
+      "object_candidates": "פנג'אבי, פינית, עברית, יוונית, ספרדית, פורטוגזית, אוקראינית, סלובנית, קמרית, אנגלית",
+      "index": 674,
+      "subject_en": "NATO",
+      "object_en": "English"
+    },
+    {
+      "subject": "טוליאטי",
+      "object": "רוסית",
+      "object_candidates": "אסטונית, מלטית, ונטית, השפה הנורמנית, מקדונית, אוקראינית, מלאיאלאם, ספרדית, הינדי, רוסית",
+      "index": 675,
+      "subject_en": "Tolyatti",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ממלכת מרסיה",
+      "object": "לטינית",
+      "object_candidates": "בנגלית, דנית, ולשית, מקדונית, צרפתית, אורדו, אזרית, יפנית, אסטונית, לטינית",
+      "index": 676,
+      "subject_en": "Kingdom of Mercia",
+      "object_en": "Latin"
+    },
+    {
+      "subject": "יוטה",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, הינדי, בלארוסית, יפנית, רומנית, שפות סיניות, צרפתית, אלבנית, דנית, אנגלית",
+      "index": 677,
+      "subject_en": "Utah",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה הדרום-אפריקאית",
+      "object": "הולנדית",
+      "object_candidates": "בולגרית, סלובקית, ארמנית, הונגרית, צרפתית, שוודית, הינדי, יפנית, בלארוסית, הולנדית",
+      "index": 678,
+      "subject_en": "South African Republic",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "דנדי",
+      "object": "סקוטית",
+      "object_candidates": "מלטית, סלובנית, מונטנגרית, השפה הנורמנית, אינדונזית, בולגרית, קרואטית, יוונית, ספרדית, סקוטית",
+      "index": 679,
+      "subject_en": "Dundee",
+      "object_en": "Scots"
+    },
+    {
+      "subject": "קובולה",
+      "object": "פינית",
+      "object_candidates": "איסלנדית, שפות סיניות, סקוטית, אלבנית, עברית, הוואית, גרמנית, רומנית, צרפתית, פינית",
+      "index": 680,
+      "subject_en": "Kouvola",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "פלשתינה (א״י)",
+      "object": "אנגלית",
+      "object_candidates": "מלטית, פינית, פרסית, קטלאנית, ולשית, סרבית, אזרית, פולנית, פורטוגזית, אנגלית",
+      "index": 681,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז קרסנודאר",
+      "object": "רוסית",
+      "object_candidates": "סקוטית, אזרית, ליטאית, קמרית, מראטהית, השפה הנורמנית, דנית, מלאיאלאם, יפנית, רוסית",
+      "index": 682,
+      "subject_en": "Krasnodar Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "טוגו",
+      "object": "צרפתית",
+      "object_candidates": "אירית, סיציליאנית, מונטנגרית, אוקראינית, יפנית, לטינית, ונטית, בולגרית, הולנדית, צרפתית",
+      "index": 683,
+      "subject_en": "Togo",
+      "object_en": "French"
+    },
+    {
+      "subject": "בזל-לנדשאפט",
+      "object": "גרמנית",
+      "object_candidates": "רומנית, סומלית, ולשית, ברטונית, צרפתית, מראטהית, סקוטית, הונגרית, אוקראינית, גרמנית",
+      "index": 684,
+      "subject_en": "Basel-Landschaft",
+      "object_en": "German"
+    },
+    {
+      "subject": "זמביה",
+      "object": "אנגלית",
+      "object_candidates": "אירית, טמילית, ולשית, אורדו, מצרית, שפות סיניות, מונגולית, קוריאנית, איסלנדית, אנגלית",
+      "index": 685,
+      "subject_en": "Zambia",
+      "object_en": "English"
+    },
+    {
+      "subject": "ליבריה",
+      "object": "אנגלית",
+      "object_candidates": "גרמנית, מראטהית, סומלית, הינדי, סרבית, אלבנית, מלטית, תאית, הונגרית, אנגלית",
+      "index": 686,
+      "subject_en": "Liberia",
+      "object_en": "English"
+    },
+    {
+      "subject": "אי הנסיך אדוארד",
+      "object": "אנגלית",
+      "object_candidates": "בלארוסית, מלאית, אינדונזית, בנגלית, אוקראינית, מראטהית, קמרית, קטלאנית, טלוגו, אנגלית",
+      "index": 687,
+      "subject_en": "Prince Edward Island",
+      "object_en": "English"
+    },
+    {
+      "subject": "קוסובו",
+      "object": "סרבית",
+      "object_candidates": "ברטונית, מקדונית, הינדי, בלארוסית, ארמנית, סקוטית, אוקראינית, סלובקית, לטינית, סרבית",
+      "index": 688,
+      "subject_en": "Kosovo",
+      "object_en": "Serbian"
+    },
+    {
+      "subject": "מחוז מיקולאייב",
+      "object": "אוקראינית",
+      "object_candidates": "איטלקית, ספרדית, פרסית, הינדי, אורדו, מלטית, ונטית, אסטונית, דנית, אוקראינית",
+      "index": 689,
+      "subject_en": "Mykolaiv Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "מלאווי",
+      "object": "אנגלית",
+      "object_candidates": "סלובנית, גאורגית, הולנדית, מונטנגרית, הינדי, בלארוסית, צ'כית, סלובקית, טורקית, אנגלית",
+      "index": 690,
+      "subject_en": "Malawi",
+      "object_en": "English"
+    },
+    {
+      "subject": "טורקו",
+      "object": "פינית",
+      "object_candidates": "איטלקית, עברית, מראטהית, בולגרית, אסטונית, מונגולית, סומלית, לטינית, לטבית, פינית",
+      "index": 691,
+      "subject_en": "Turku",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "הוועד האולימפי הבינלאומי",
+      "object": "צרפתית",
+      "object_candidates": "הוואית, איטלקית, תאית, רומנית, בולגרית, קמרית, טמילית, לטבית, שוודית, צרפתית",
+      "index": 692,
+      "subject_en": "International Olympic Committee",
+      "object_en": "French"
+    },
+    {
+      "subject": "אנגולה",
+      "object": "פורטוגזית",
+      "object_candidates": "לטינית, סקוטית, פולנית, אזרית, צ'כית, מונטנגרית, מונגולית, ספרדית, לטבית, פורטוגזית",
+      "index": 693,
+      "subject_en": "Angola",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "טורקו",
+      "object": "שוודית",
+      "object_candidates": "בנגלית, מלטית, בסקית, שפות סיניות, לטינית, טלוגו, מקדונית, מונטנגרית, סלובנית, שוודית",
+      "index": 694,
+      "subject_en": "Turku",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "ג'אמשדפור",
+      "object": "אנגלית",
+      "object_candidates": "הולנדית, פנג'אבי, סיציליאנית, עברית, ליטאית, וייטנאמית, סומלית, טורקית, ברטונית, אנגלית",
+      "index": 695,
+      "subject_en": "Jamshedpur",
+      "object_en": "English"
+    },
+    {
+      "subject": "ברמודה",
+      "object": "אנגלית",
+      "object_candidates": "פורטוגזית, פנג'אבי, מלאית, הוואית, מלאיאלאם, קמרית, רוסית, אורדו, צ'כית, אנגלית",
+      "index": 696,
+      "subject_en": "Bermuda",
+      "object_en": "English"
+    },
+    {
+      "subject": "פורמנטרה",
+      "object": "קטלאנית",
+      "object_candidates": "השפה הנורמנית, איסלנדית, פורטוגזית, קרואטית, גאורגית, הינדי, יוונית, מונטנגרית, ליטאית, קטלאנית",
+      "index": 697,
+      "subject_en": "Formentera",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "בונייר",
+      "object": "הולנדית",
+      "object_candidates": "רוסית, סלובקית, ליטאית, דנית, אסטונית, סקוטית, פרסית, פינית, בנגלית, הולנדית",
+      "index": 698,
+      "subject_en": "Bonaire",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "סודאן",
+      "object": "אנגלית",
+      "object_candidates": "בלארוסית, מקדונית, קרואטית, בנגלית, מלאיאלאם, יפנית, מלאית, נפאלית, טלוגו, אנגלית",
+      "index": 699,
+      "subject_en": "Sudan",
+      "object_en": "English"
+    },
+    {
+      "subject": "ברית המועצות",
+      "object": "רוסית",
+      "object_candidates": "קרואטית, השפה הנורמנית, איטלקית, קטלאנית, בסקית, בולגרית, ברטונית, הולנדית, סקוטית, רוסית",
+      "index": 700,
+      "subject_en": "Soviet Union",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ססקצ'ואן",
+      "object": "צרפתית",
+      "object_candidates": "הינדי, איסלנדית, תאית, מונגולית, צ'כית, טורקית, מונטנגרית, פולנית, קטלאנית, צרפתית",
+      "index": 701,
+      "subject_en": "Saskatchewan",
+      "object_en": "French"
+    },
+    {
+      "subject": "ארובה",
+      "object": "הולנדית",
+      "object_candidates": "מלטית, סיציליאנית, לטבית, ולשית, טלוגו, סרבית, מצרית, סלובנית, סומלית, הולנדית",
+      "index": 702,
+      "subject_en": "Aruba",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "מונטסראט",
+      "object": "אנגלית",
+      "object_candidates": "תאית, דנית, קמרית, לטבית, סלובקית, יוונית, קטלאנית, סומלית, מונגולית, אנגלית",
+      "index": 703,
+      "subject_en": "Montserrat",
+      "object_en": "English"
+    },
+    {
+      "subject": "סומליה",
+      "object": "סומלית",
+      "object_candidates": "אינדונזית, צרפתית, שוודית, גרמנית, מצרית, אנגלית, ולשית, יוונית, נפאלית, סומלית",
+      "index": 704,
+      "subject_en": "Somalia",
+      "object_en": "Somali"
+    },
+    {
+      "subject": "הארגון לביטחון ולשיתוף פעולה באירופה",
+      "object": "ספרדית",
+      "object_candidates": "מונטנגרית, קטלאנית, סרבית, אירית, גרמנית, רומנית, בלארוסית, אורדו, בסקית, ספרדית",
+      "index": 705,
+      "subject_en": "Organization for Security and Co-operation in Europe",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "קאראצ'אי-צ'רקסיה",
+      "object": "רוסית",
+      "object_candidates": "ונטית, בסקית, פרסית, אלבנית, אוקראינית, מלטית, מלאיאלאם, קרואטית, גרמנית, רוסית",
+      "index": 706,
+      "subject_en": "Karachay-Cherkess Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "הלסינקי",
+      "object": "שוודית",
+      "object_candidates": "איסלנדית, סלובקית, גאורגית, בנגלית, דנית, פולנית, טלוגו, הונגרית, שפות סיניות, שוודית",
+      "index": 707,
+      "subject_en": "Helsinki",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "סוכנות החלל האירופית",
+      "object": "אנגלית",
+      "object_candidates": "אוקראינית, סרבית, ליטאית, אזרית, סקוטית, עברית, גרמנית, יוונית, הוואית, אנגלית",
+      "index": 708,
+      "subject_en": "European Space Agency",
+      "object_en": "English"
+    },
+    {
+      "subject": "אריזונה",
+      "object": "אנגלית",
+      "object_candidates": "פולנית, לטבית, מונגולית, גאורגית, ליטאית, אוקראינית, שפות סיניות, סיציליאנית, פרסית, אנגלית",
+      "index": 709,
+      "subject_en": "Arizona",
+      "object_en": "English"
+    },
+    {
+      "subject": "קזווין",
+      "object": "אזרית",
+      "object_candidates": "בסקית, אסטונית, בנגלית, גאורגית, בלארוסית, סלובקית, נפאלית, סקוטית, רוסית, אזרית",
+      "index": 710,
+      "subject_en": "Qazvin Province",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "מונגוליה",
+      "object": "מונגולית",
+      "object_candidates": "ונטית, מצרית, שפות סיניות, וייטנאמית, ליטאית, קמרית, שוודית, פינית, אלבנית, מונגולית",
+      "index": 711,
+      "subject_en": "Mongolia",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "לטבית",
+      "object_candidates": "מונגולית, אירית, רוסית, מלאית, הינדי, השפה הנורמנית, אנגלית, אוקראינית, וייטנאמית, לטבית",
+      "index": 712,
+      "subject_en": "European Union",
+      "object_en": "Latvian"
+    },
+    {
+      "subject": "סיירה לאון",
+      "object": "אנגלית",
+      "object_candidates": "בלארוסית, בסקית, איסלנדית, ארמנית, דנית, בנגלית, הוואית, קרואטית, קוריאנית, אנגלית",
+      "index": 713,
+      "subject_en": "Sierra Leone",
+      "object_en": "English"
+    },
+    {
+      "subject": "איביזה",
+      "object": "קטלאנית",
+      "object_candidates": "לטבית, פולנית, סיציליאנית, גרמנית, תאית, אנגלית, ונטית, שפות סיניות, מצרית, קטלאנית",
+      "index": 714,
+      "subject_en": "Ibiza",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "פרגוואי",
+      "object": "ספרדית",
+      "object_candidates": "סלובקית, פנג'אבי, צרפתית, גאורגית, עברית, אירית, איסלנדית, אנגלית, גרמנית, ספרדית",
+      "index": 715,
+      "subject_en": "Paraguay",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "בשקורטוסטן",
+      "object": "רוסית",
+      "object_candidates": "אינדונזית, פנג'אבי, לטבית, צרפתית, יוונית, טורקית, אסטונית, טמילית, מלאית, רוסית",
+      "index": 716,
+      "subject_en": "Republic of Bashkortostan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "אינדונזיה",
+      "object": "אינדונזית",
+      "object_candidates": "ברטונית, סלובנית, סלובקית, דנית, סיציליאנית, ארמנית, רומנית, מלאית, ונטית, אינדונזית",
+      "index": 717,
+      "subject_en": "Indonesia",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "מונקו",
+      "object": "צרפתית",
+      "object_candidates": "גרמנית, פינית, אירית, מונגולית, ליטאית, אנגלית, סיציליאנית, ונטית, נפאלית, צרפתית",
+      "index": 718,
+      "subject_en": "Monaco",
+      "object_en": "French"
+    },
+    {
+      "subject": "מחוז עבר הבאיקל",
+      "object": "רוסית",
+      "object_candidates": "שפות סיניות, לטינית, טלוגו, מלטית, דנית, וייטנאמית, מונגולית, מראטהית, נפאלית, רוסית",
+      "index": 719,
+      "subject_en": "Zabaykalsky Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "איי מריאנה הצפוניים",
+      "object": "אנגלית",
+      "object_candidates": "אסטונית, קמרית, צ'כית, פרסית, איסלנדית, סרבית, גאורגית, צרפתית, סיציליאנית, אנגלית",
+      "index": 720,
+      "subject_en": "Northern Mariana Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "אזרבייג'ן",
+      "object": "אזרית",
+      "object_candidates": "נפאלית, לטינית, טלוגו, השפה הנורמנית, גרמנית, פנג'אבי, אורדו, מלאית, ונטית, אזרית",
+      "index": 721,
+      "subject_en": "Azerbaijan",
+      "object_en": "Azerbaijani"
+    },
+    {
+      "subject": "וו",
+      "object": "צרפתית",
+      "object_candidates": "סלובקית, סומלית, פינית, סרבית, נפאלית, לטבית, ארמנית, דנית, טורקית, צרפתית",
+      "index": 722,
+      "subject_en": "Canton of Vaud",
+      "object_en": "French"
+    },
+    {
+      "subject": "סינגפור",
+      "object": "אנגלית",
+      "object_candidates": "סרבית, הוואית, איטלקית, ליטאית, נפאלית, קרואטית, ספרדית, השפה הנורמנית, קטלאנית, אנגלית",
+      "index": 723,
+      "subject_en": "Singapore",
+      "object_en": "English"
+    },
+    {
+      "subject": "הארגון לשיתוף פעולה ולפיתוח כלכלי",
+      "object": "צרפתית",
+      "object_candidates": "אינדונזית, ולשית, שפות סיניות, הולנדית, סקוטית, מונטנגרית, סלובקית, פינית, סלובנית, צרפתית",
+      "index": 724,
+      "subject_en": "Organisation for Economic Cooperation and Development",
+      "object_en": "French"
+    },
+    {
+      "subject": "ברן",
+      "object": "גרמנית",
+      "object_candidates": "לטינית, אוקראינית, צרפתית, הינדי, אינדונזית, טורקית, טלוגו, פרסית, לטבית, גרמנית",
+      "index": 725,
+      "subject_en": "Bern",
+      "object_en": "German"
+    },
+    {
+      "subject": "צ'נאי",
+      "object": "טמילית",
+      "object_candidates": "רומנית, טלוגו, סיציליאנית, יוונית, אוקראינית, עברית, סרבית, ארמנית, סומלית, טמילית",
+      "index": 726,
+      "subject_en": "Chennai",
+      "object_en": "Tamil"
+    },
+    {
+      "subject": "פיג'י",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, גאורגית, מונגולית, מונטנגרית, איסלנדית, צ'כית, רוסית, יפנית, פינית, אנגלית",
+      "index": 727,
+      "subject_en": "Fiji",
+      "object_en": "English"
+    },
+    {
+      "subject": "הודו",
+      "object": "הינדי",
+      "object_candidates": "אלבנית, גאורגית, לטינית, סקוטית, מצרית, מקדונית, דנית, איטלקית, איסלנדית, הינדי",
+      "index": 728,
+      "subject_en": "India",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "קנדה",
+      "object": "אנגלית",
+      "object_candidates": "איטלקית, תאית, מצרית, שוודית, דנית, אורדו, מלטית, מראטהית, רומנית, אנגלית",
+      "index": 729,
+      "subject_en": "Canada",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה העממית של מונגוליה",
+      "object": "מונגולית",
+      "object_candidates": "אינדונזית, בסקית, אורדו, ברטונית, שפות סיניות, יפנית, רוסית, מצרית, מלאית, מונגולית",
+      "index": 730,
+      "subject_en": "Mongolian People's Republic",
+      "object_en": "Mongolian"
+    },
+    {
+      "subject": "האומות המאוחדות",
+      "object": "רוסית",
+      "object_candidates": "שפות סיניות, סרבית, קטלאנית, בסקית, גרמנית, טלוגו, ולשית, גאורגית, יפנית, רוסית",
+      "index": 731,
+      "subject_en": "United Nations",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "בורונדי",
+      "object": "צרפתית",
+      "object_candidates": "קרואטית, סלובנית, מלאיאלאם, ולשית, פינית, ליטאית, הוואית, ברטונית, פורטוגזית, צרפתית",
+      "index": 732,
+      "subject_en": "Burundi",
+      "object_en": "French"
+    },
+    {
+      "subject": "טריוונדרום",
+      "object": "מלאיאלאם",
+      "object_candidates": "צרפתית, גאורגית, קרואטית, לטינית, פרסית, טורקית, אנגלית, נפאלית, ונטית, מלאיאלאם",
+      "index": 733,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Malayalam"
+    },
+    {
+      "subject": "הוועד האולימפי הבינלאומי",
+      "object": "אנגלית",
+      "object_candidates": "איסלנדית, איטלקית, פנג'אבי, גאורגית, הינדי, יוונית, פולנית, טלוגו, בלארוסית, אנגלית",
+      "index": 734,
+      "subject_en": "International Olympic Committee",
+      "object_en": "English"
+    },
+    {
+      "subject": "זאיר",
+      "object": "צרפתית",
+      "object_candidates": "אזרית, הונגרית, לטבית, ליטאית, סקוטית, דנית, תאית, סומלית, מלאית, צרפתית",
+      "index": 735,
+      "subject_en": "Zaire",
+      "object_en": "French"
+    },
+    {
+      "subject": "צפון אירלנד",
+      "object": "אנגלית",
+      "object_candidates": "סיציליאנית, טמילית, הונגרית, פולנית, איסלנדית, גאורגית, וייטנאמית, צרפתית, אינדונזית, אנגלית",
+      "index": 736,
+      "subject_en": "Northern Ireland",
+      "object_en": "English"
+    },
+    {
+      "subject": "מאלי",
+      "object": "צרפתית",
+      "object_candidates": "אלבנית, ארמנית, פנג'אבי, בולגרית, סרבית, יפנית, מלאיאלאם, מונגולית, מלטית, צרפתית",
+      "index": 737,
+      "subject_en": "Mali",
+      "object_en": "French"
+    },
+    {
+      "subject": "סנט קיטס ונוויס",
+      "object": "אנגלית",
+      "object_candidates": "קמרית, השפה הנורמנית, מלטית, אירית, שוודית, פולנית, שפות סיניות, אסטונית, ספרדית, אנגלית",
+      "index": 738,
+      "subject_en": "Saint Kitts and Nevis",
+      "object_en": "English"
+    },
+    {
+      "subject": "פורמנטרה",
+      "object": "ספרדית",
+      "object_candidates": "אירית, סומלית, קוריאנית, פרסית, מלטית, עברית, הינדי, יפנית, פורטוגזית, ספרדית",
+      "index": 739,
+      "subject_en": "Formentera",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "סאבא",
+      "object": "אנגלית",
+      "object_candidates": "שוודית, וייטנאמית, פנג'אבי, מונגולית, סלובקית, מלטית, קרואטית, פרסית, הולנדית, אנגלית",
+      "index": 740,
+      "subject_en": "Saba",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז אודסה",
+      "object": "אוקראינית",
+      "object_candidates": "קטלאנית, גרמנית, פינית, סיציליאנית, ברטונית, בולגרית, מונטנגרית, פולנית, אירית, אוקראינית",
+      "index": 741,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "לוקסמבורג",
+      "object": "גרמנית",
+      "object_candidates": "מלאיאלאם, מלטית, סומלית, בולגרית, בלארוסית, טורקית, מלאית, ספרדית, מקדונית, גרמנית",
+      "index": 742,
+      "subject_en": "Luxembourg",
+      "object_en": "German"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "דנית",
+      "object_candidates": "מלאית, בלארוסית, טלוגו, איסלנדית, וייטנאמית, עברית, אלבנית, סומלית, קמרית, דנית",
+      "index": 743,
+      "subject_en": "European Union",
+      "object_en": "Danish"
+    },
+    {
+      "subject": "ז'ורה",
+      "object": "צרפתית",
+      "object_candidates": "אסטונית, הונגרית, בנגלית, אירית, סרבית, טורקית, סיציליאנית, סומלית, פולנית, צרפתית",
+      "index": 744,
+      "subject_en": "Canton of Jura",
+      "object_en": "French"
+    },
+    {
+      "subject": "אלבניה",
+      "object": "אלבנית",
+      "object_candidates": "וייטנאמית, מונגולית, רוסית, קמרית, טורקית, ונטית, מצרית, יוונית, בולגרית, אלבנית",
+      "index": 745,
+      "subject_en": "Albania",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "קפריסין",
+      "object": "טורקית",
+      "object_candidates": "סומלית, בסקית, אורדו, סלובנית, הונגרית, אירית, ליטאית, קרואטית, מונטנגרית, טורקית",
+      "index": 746,
+      "subject_en": "Cyprus",
+      "object_en": "Turkish"
+    },
+    {
+      "subject": "לטביה",
+      "object": "לטבית",
+      "object_candidates": "שוודית, קרואטית, הולנדית, הונגרית, טורקית, איסלנדית, נפאלית, יפנית, אסטונית, לטבית",
+      "index": 747,
+      "subject_en": "Latvia",
+      "object_en": "Latvian"
+    },
+    {
+      "subject": "דאגסטן",
+      "object": "רוסית",
+      "object_candidates": "מצרית, טורקית, עברית, סלובקית, קרואטית, גרמנית, צ'כית, סומלית, אורדו, רוסית",
+      "index": 748,
+      "subject_en": "Republic of Dagestan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "חבר המדינות",
+      "object": "רוסית",
+      "object_candidates": "הינדי, עברית, הוואית, קטלאנית, מונטנגרית, ונטית, אלבנית, קרואטית, בולגרית, רוסית",
+      "index": 749,
+      "subject_en": "Commonwealth of Independent States",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "נאט\"ו",
+      "object": "צרפתית",
+      "object_candidates": "פולנית, ולשית, קטלאנית, איסלנדית, בנגלית, לטבית, מלאית, ליטאית, הולנדית, צרפתית",
+      "index": 750,
+      "subject_en": "NATO",
+      "object_en": "French"
+    },
+    {
+      "subject": "סן-פייר ומיקלון",
+      "object": "צרפתית",
+      "object_candidates": "סומלית, רוסית, טלוגו, מצרית, שפות סיניות, לטינית, ולשית, איסלנדית, אלבנית, צרפתית",
+      "index": 751,
+      "subject_en": "Saint Pierre and Miquelon",
+      "object_en": "French"
+    },
+    {
+      "subject": "בופאל",
+      "object": "הינדי",
+      "object_candidates": "ונטית, גרמנית, רוסית, ספרדית, סומלית, ארמנית, נפאלית, מלאיאלאם, בלארוסית, הינדי",
+      "index": 752,
+      "subject_en": "Bhopal",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "ארמניה",
+      "object": "ארמנית",
+      "object_candidates": "סיציליאנית, סומלית, סלובנית, אוקראינית, בסקית, אינדונזית, קטלאנית, מצרית, מונגולית, ארמנית",
+      "index": 753,
+      "subject_en": "Armenia",
+      "object_en": "Armenian"
+    },
+    {
+      "subject": "הכף המערבי",
+      "object": "אנגלית",
+      "object_candidates": "פרסית, תאית, סרבית, רוסית, מצרית, אזרית, מלאית, פולנית, לטבית, אנגלית",
+      "index": 754,
+      "subject_en": "Western Cape",
+      "object_en": "English"
+    },
+    {
+      "subject": "ממלכת בולגריה",
+      "object": "בולגרית",
+      "object_candidates": "פנג'אבי, סלובקית, ולשית, אסטונית, קטלאנית, לטינית, תאית, סרבית, ונטית, בולגרית",
+      "index": 755,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "גבון",
+      "object": "צרפתית",
+      "object_candidates": "שפות סיניות, מלאית, ספרדית, הינדי, סיציליאנית, מונטנגרית, לטינית, קטלאנית, קוריאנית, צרפתית",
+      "index": 756,
+      "subject_en": "Gabon",
+      "object_en": "French"
+    },
+    {
+      "subject": "פוארטו ריקו",
+      "object": "ספרדית",
+      "object_candidates": "אנגלית, איטלקית, שפות סיניות, ולשית, צ'כית, לטבית, דנית, אינדונזית, טורקית, ספרדית",
+      "index": 757,
+      "subject_en": "Puerto Rico",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "פוארטו ריקו",
+      "object": "אנגלית",
+      "object_candidates": "גאורגית, אירית, השפה הנורמנית, סלובנית, פינית, מראטהית, הינדי, מלטית, הוואית, אנגלית",
+      "index": 758,
+      "subject_en": "Puerto Rico",
+      "object_en": "English"
+    },
+    {
+      "subject": "טובאלו",
+      "object": "אנגלית",
+      "object_candidates": "סרבית, מונגולית, ליטאית, סומלית, צ'כית, איטלקית, ברטונית, ונטית, פינית, אנגלית",
+      "index": 759,
+      "subject_en": "Tuvalu",
+      "object_en": "English"
+    },
+    {
+      "subject": "איווה",
+      "object": "אנגלית",
+      "object_candidates": "רומנית, ליטאית, בולגרית, צרפתית, פנג'אבי, אורדו, יפנית, יוונית, שוודית, אנגלית",
+      "index": 760,
+      "subject_en": "Iowa",
+      "object_en": "English"
+    },
+    {
+      "subject": "שוודיה",
+      "object": "שוודית",
+      "object_candidates": "הוואית, בולגרית, אנגלית, הינדי, קרואטית, קטלאנית, מראטהית, וייטנאמית, אסטונית, שוודית",
+      "index": 761,
+      "subject_en": "Sweden",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "אראגון",
+      "object": "קטלאנית",
+      "object_candidates": "אירית, סומלית, לטבית, איסלנדית, מקדונית, השפה הנורמנית, בסקית, הינדי, מלאית, קטלאנית",
+      "index": 762,
+      "subject_en": "Aragon",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "גואם",
+      "object": "אנגלית",
+      "object_candidates": "קרואטית, יוונית, דנית, טורקית, רומנית, סלובקית, איסלנדית, קטלאנית, יפנית, אנגלית",
+      "index": 763,
+      "subject_en": "Guam",
+      "object_en": "English"
+    },
+    {
+      "subject": "הרפובליקה האוטונומית של קרים",
+      "object": "רוסית",
+      "object_candidates": "ונטית, דנית, מקדונית, סלובקית, גאורגית, אורדו, קטלאנית, יפנית, בולגרית, רוסית",
+      "index": 764,
+      "subject_en": "Autonomous Republic of Crimea",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "בנין",
+      "object": "צרפתית",
+      "object_candidates": "נפאלית, קטלאנית, מלטית, איטלקית, יפנית, מקדונית, מלאיאלאם, קמרית, מראטהית, צרפתית",
+      "index": 765,
+      "subject_en": "Benin",
+      "object_en": "French"
+    },
+    {
+      "subject": "פלורידה",
+      "object": "אנגלית",
+      "object_candidates": "פינית, בנגלית, ונטית, מונגולית, גרמנית, הונגרית, אלבנית, קוריאנית, יוונית, אנגלית",
+      "index": 766,
+      "subject_en": "Florida",
+      "object_en": "English"
+    },
+    {
+      "subject": "וירג'יניה",
+      "object": "אנגלית",
+      "object_candidates": "פרסית, בלארוסית, אלבנית, בולגרית, אזרית, הוואית, דנית, ארמנית, סרבית, אנגלית",
+      "index": 767,
+      "subject_en": "Virginia",
+      "object_en": "English"
+    },
+    {
+      "subject": "יואנסואו",
+      "object": "פינית",
+      "object_candidates": "סרבית, סלובקית, אסטונית, תאית, סקוטית, ליטאית, בסקית, שוודית, צ'כית, פינית",
+      "index": 768,
+      "subject_en": "Joensuu",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אנטיגואה וברבודה",
+      "object": "אנגלית",
+      "object_candidates": "תאית, איסלנדית, פרסית, הינדי, פינית, מונטנגרית, ליטאית, ונטית, ספרדית, אנגלית",
+      "index": 769,
+      "subject_en": "Antigua and Barbuda",
+      "object_en": "English"
+    },
+    {
+      "subject": "איגוד מדינות דרום-מזרח אסיה",
+      "object": "שפות סיניות",
+      "object_candidates": "גרמנית, קמרית, לטבית, ספרדית, סומלית, תאית, דנית, בולגרית, סלובנית, שפות סיניות",
+      "index": 770,
+      "subject_en": "ASEAN",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "בלגיה",
+      "object": "צרפתית",
+      "object_candidates": "הוואית, שפות סיניות, קוריאנית, גאורגית, ונטית, סיציליאנית, סלובקית, דנית, בנגלית, צרפתית",
+      "index": 771,
+      "subject_en": "Belgium",
+      "object_en": "French"
+    },
+    {
+      "subject": "המדינה העצמאית של קרואטיה",
+      "object": "קרואטית",
+      "object_candidates": "יפנית, ברטונית, טמילית, איטלקית, הונגרית, ולשית, מצרית, בסקית, גרמנית, קרואטית",
+      "index": 772,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Croatian"
+    },
+    {
+      "subject": "קטלוניה",
+      "object": "קטלאנית",
+      "object_candidates": "סומלית, הונגרית, אנגלית, בסקית, בלארוסית, מצרית, אוקראינית, בנגלית, אורדו, קטלאנית",
+      "index": 773,
+      "subject_en": "Catalonia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "פטרוזבודסק",
+      "object": "רוסית",
+      "object_candidates": "סלובנית, לטבית, טלוגו, ונטית, מלאית, נפאלית, פורטוגזית, הולנדית, השפה הנורמנית, רוסית",
+      "index": 774,
+      "subject_en": "Petrozavodsk",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "צ'וקוטקה",
+      "object": "רוסית",
+      "object_candidates": "לטינית, ארמנית, אנגלית, איסלנדית, טלוגו, אסטונית, הינדי, רומנית, וייטנאמית, רוסית",
+      "index": 775,
+      "subject_en": "Chukotka Autonomous Okrug",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פיי דה לה לואר",
+      "object": "ברטונית",
+      "object_candidates": "טורקית, צרפתית, מלאית, רומנית, ספרדית, ולשית, קמרית, תאית, איסלנדית, ברטונית",
+      "index": 776,
+      "subject_en": "Pays de la Loire",
+      "object_en": "Breton"
+    },
+    {
+      "subject": "דנדי",
+      "object": "אנגלית",
+      "object_candidates": "פרסית, מצרית, פינית, אזרית, גאורגית, מלאית, סרבית, בלארוסית, דנית, אנגלית",
+      "index": 777,
+      "subject_en": "Dundee",
+      "object_en": "English"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "מלטית",
+      "object_candidates": "אורדו, טמילית, סיציליאנית, סלובקית, אירית, הינדי, ולשית, מלאית, דנית, מלטית",
+      "index": 778,
+      "subject_en": "European Union",
+      "object_en": "Maltese"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האזרית",
+      "object": "רוסית",
+      "object_candidates": "עברית, הולנדית, וייטנאמית, מצרית, ולשית, שפות סיניות, צ'כית, פרסית, דנית, רוסית",
+      "index": 779,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "נורפוק",
+      "object": "אנגלית",
+      "object_candidates": "מצרית, אוקראינית, הונגרית, פרסית, בנגלית, ספרדית, דנית, ליטאית, לטבית, אנגלית",
+      "index": 780,
+      "subject_en": "Norfolk Island",
+      "object_en": "English"
+    },
+    {
+      "subject": "סקוטלנד",
+      "object": "אנגלית",
+      "object_candidates": "טלוגו, דנית, אסטונית, אלבנית, בלארוסית, ונטית, סרבית, קרואטית, איטלקית, אנגלית",
+      "index": 781,
+      "subject_en": "Scotland",
+      "object_en": "English"
+    },
+    {
+      "subject": "קובה",
+      "object": "ספרדית",
+      "object_candidates": "לטינית, סקוטית, רוסית, ברטונית, אזרית, הוואית, אינדונזית, יפנית, גאורגית, ספרדית",
+      "index": 782,
+      "subject_en": "Cuba",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מיקרונזיה",
+      "object": "אנגלית",
+      "object_candidates": "אסטונית, אזרית, אינדונזית, טמילית, מקדונית, הולנדית, בנגלית, קטלאנית, וייטנאמית, אנגלית",
+      "index": 783,
+      "subject_en": "Federated States of Micronesia",
+      "object_en": "English"
+    },
+    {
+      "subject": "מחוז פרם",
+      "object": "רוסית",
+      "object_candidates": "יפנית, איטלקית, מלאית, פורטוגזית, גרמנית, צרפתית, פינית, סומלית, דנית, רוסית",
+      "index": 784,
+      "subject_en": "Perm Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "פולין הקונגרסאית",
+      "object": "רוסית",
+      "object_candidates": "מונגולית, מלאית, אורדו, מראטהית, לטינית, תאית, ארמנית, ולשית, פולנית, רוסית",
+      "index": 785,
+      "subject_en": "Congress Poland",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "בולגריה",
+      "object": "בולגרית",
+      "object_candidates": "גאורגית, ספרדית, אזרית, שפות סיניות, תאית, פולנית, איסלנדית, אוקראינית, סרבית, בולגרית",
+      "index": 786,
+      "subject_en": "Bulgaria",
+      "object_en": "Bulgarian"
+    },
+    {
+      "subject": "ארצות הברית",
+      "object": "אנגלית",
+      "object_candidates": "מונגולית, קוריאנית, טמילית, לטבית, גרמנית, גאורגית, פנג'אבי, תאית, מראטהית, אנגלית",
+      "index": 787,
+      "subject_en": "United States of America",
+      "object_en": "English"
+    },
+    {
+      "subject": "אילינוי",
+      "object": "אנגלית",
+      "object_candidates": "מראטהית, בסקית, אורדו, פינית, אזרית, שוודית, ולשית, לטבית, דנית, אנגלית",
+      "index": 788,
+      "subject_en": "Illinois",
+      "object_en": "English"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "איטלקית",
+      "object_candidates": "השפה הנורמנית, סומלית, טמילית, מלטית, פינית, ונטית, הונגרית, איסלנדית, פורטוגזית, איטלקית",
+      "index": 789,
+      "subject_en": "European Union",
+      "object_en": "Italian"
+    },
+    {
+      "subject": "צפון סומטרה",
+      "object": "אינדונזית",
+      "object_candidates": "ולשית, שפות סיניות, פינית, סרבית, מונגולית, עברית, ליטאית, בנגלית, גאורגית, אינדונזית",
+      "index": 790,
+      "subject_en": "North Sumatra",
+      "object_en": "Indonesian"
+    },
+    {
+      "subject": "איגוד מדינות דרום-מזרח אסיה",
+      "object": "תאית",
+      "object_candidates": "לטבית, אינדונזית, וייטנאמית, טלוגו, אזרית, מלאיאלאם, מצרית, הוואית, מונגולית, תאית",
+      "index": 791,
+      "subject_en": "ASEAN",
+      "object_en": "Thai"
+    },
+    {
+      "subject": "הונג קונג הבריטית",
+      "object": "שפות סיניות",
+      "object_candidates": "סרבית, פרסית, גרמנית, אירית, דנית, טמילית, מלאיאלאם, מצרית, ונטית, שפות סיניות",
+      "index": 792,
+      "subject_en": "British Hong Kong",
+      "object_en": "Chinese"
+    },
+    {
+      "subject": "טנסי",
+      "object": "אנגלית",
+      "object_candidates": "איסלנדית, אוקראינית, מקדונית, יוונית, אסטונית, הולנדית, ארמנית, קמרית, שוודית, אנגלית",
+      "index": 793,
+      "subject_en": "Tennessee",
+      "object_en": "English"
+    },
+    {
+      "subject": "אוסיקאופונקי",
+      "object": "פינית",
+      "object_candidates": "מלאית, בלארוסית, צ'כית, הונגרית, טורקית, ספרדית, השפה הנורמנית, סיציליאנית, פרסית, פינית",
+      "index": 794,
+      "subject_en": "Uusikaupunki",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "האימפריה הרוסית",
+      "object": "שוודית",
+      "object_candidates": "הולנדית, מונטנגרית, אוקראינית, ארמנית, קטלאנית, מלטית, ונטית, בלארוסית, פנג'אבי, שוודית",
+      "index": 795,
+      "subject_en": "Russian Empire",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "שוודית",
+      "object_candidates": "איסלנדית, עברית, פינית, קמרית, דנית, סרבית, לטבית, ליטאית, מלאיאלאם, שוודית",
+      "index": 796,
+      "subject_en": "European Union",
+      "object_en": "Swedish"
+    },
+    {
+      "subject": "אנדרה פרדש",
+      "object": "טלוגו",
+      "object_candidates": "אסטונית, פנג'אבי, אירית, עברית, מקדונית, ולשית, וייטנאמית, ליטאית, טמילית, טלוגו",
+      "index": 797,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Telugu"
+    },
+    {
+      "subject": "גרנזי",
+      "object": "צרפתית",
+      "object_candidates": "פרסית, ליטאית, אלבנית, מונגולית, גרמנית, אוקראינית, ברטונית, רומנית, גאורגית, צרפתית",
+      "index": 798,
+      "subject_en": "Guernsey",
+      "object_en": "French"
+    },
+    {
+      "subject": "האיים הקנריים",
+      "object": "ספרדית",
+      "object_candidates": "הולנדית, סלובקית, פולנית, אסטונית, מלטית, מלאית, עברית, אורדו, אינדונזית, ספרדית",
+      "index": 799,
+      "subject_en": "Canary Islands",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מורדוביה",
+      "object": "רוסית",
+      "object_candidates": "שוודית, מראטהית, לטינית, קמרית, פנג'אבי, אורדו, בלארוסית, הונגרית, צ'כית, רוסית",
+      "index": 800,
+      "subject_en": "Republic of Mordovia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "מקאו",
+      "object": "פורטוגזית",
+      "object_candidates": "גרמנית, אירית, אסטונית, מונגולית, סומלית, מראטהית, גאורגית, פנג'אבי, טלוגו, פורטוגזית",
+      "index": 801,
+      "subject_en": "Macau",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "אלטאי",
+      "object": "רוסית",
+      "object_candidates": "אינדונזית, וייטנאמית, מלאיאלאם, אסטונית, עברית, ברטונית, צרפתית, יפנית, קטלאנית, רוסית",
+      "index": 802,
+      "subject_en": "Altai Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "קוסטה ריקה",
+      "object": "ספרדית",
+      "object_candidates": "איסלנדית, מונטנגרית, יוונית, אורדו, הונגרית, רומנית, אסטונית, ארמנית, צרפתית, ספרדית",
+      "index": 803,
+      "subject_en": "Costa Rica",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "סנט וינסנט והגרנדינים",
+      "object": "ספרדית",
+      "object_candidates": "צ'כית, שפות סיניות, פולנית, מראטהית, סלובקית, מלאיאלאם, מקדונית, אסטונית, לטינית, ספרדית",
+      "index": 804,
+      "subject_en": "Saint Vincent and the Grenadines",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "גרמנית",
+      "object_candidates": "הוואית, הונגרית, פרסית, בולגרית, ונטית, איטלקית, אסטונית, אלבנית, ליטאית, גרמנית",
+      "index": 805,
+      "subject_en": "European Union",
+      "object_en": "German"
+    },
+    {
+      "subject": "בית הדין הפלילי הבינלאומי",
+      "object": "צרפתית",
+      "object_candidates": "השפה הנורמנית, גאורגית, דנית, רוסית, טורקית, מונגולית, לטבית, פולנית, מראטהית, צרפתית",
+      "index": 806,
+      "subject_en": "International Criminal Court",
+      "object_en": "French"
+    },
+    {
+      "subject": "פורי",
+      "object": "פינית",
+      "object_candidates": "לטינית, טלוגו, מונגולית, בסקית, מקדונית, מלאית, אנגלית, הונגרית, אורדו, פינית",
+      "index": 807,
+      "subject_en": "Pori",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "מנורקה",
+      "object": "ספרדית",
+      "object_candidates": "דנית, מראטהית, עברית, מקדונית, בולגרית, פולנית, מלטית, פנג'אבי, פורטוגזית, ספרדית",
+      "index": 808,
+      "subject_en": "Menorca",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "מונטנגרו",
+      "object": "אלבנית",
+      "object_candidates": "הוואית, פולנית, מקדונית, סלובנית, בולגרית, לטינית, צרפתית, הונגרית, אזרית, אלבנית",
+      "index": 809,
+      "subject_en": "Montenegro",
+      "object_en": "Albanian"
+    },
+    {
+      "subject": "הקומונה הפריזאית",
+      "object": "צרפתית",
+      "object_candidates": "ליטאית, אנגלית, סיציליאנית, טלוגו, טמילית, אורדו, רומנית, הולנדית, פולנית, צרפתית",
+      "index": 810,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "French"
+    },
+    {
+      "subject": "ונצואלה",
+      "object": "ספרדית",
+      "object_candidates": "תאית, אזרית, קטלאנית, מונגולית, דנית, טמילית, וייטנאמית, הוואית, ולשית, ספרדית",
+      "index": 811,
+      "subject_en": "Venezuela",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "איי מרשל",
+      "object": "אנגלית",
+      "object_candidates": "טורקית, קרואטית, איטלקית, טמילית, מונטנגרית, טלוגו, מלטית, סיציליאנית, אזרית, אנגלית",
+      "index": 812,
+      "subject_en": "Marshall Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "קרליה",
+      "object": "רוסית",
+      "object_candidates": "אינדונזית, בנגלית, מצרית, הונגרית, נפאלית, פינית, טלוגו, אזרית, ברטונית, רוסית",
+      "index": 813,
+      "subject_en": "Karelia",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "ולנסיה",
+      "object": "קטלאנית",
+      "object_candidates": "קמרית, אלבנית, פנג'אבי, ארמנית, טלוגו, מלאית, גרמנית, פרסית, מונגולית, קטלאנית",
+      "index": 814,
+      "subject_en": "Community of Valencia",
+      "object_en": "Catalan"
+    },
+    {
+      "subject": "סלובקיה",
+      "object": "סלובקית",
+      "object_candidates": "ברטונית, גאורגית, לטבית, פנג'אבי, הולנדית, צרפתית, מלאיאלאם, עברית, קוריאנית, סלובקית",
+      "index": 815,
+      "subject_en": "Slovakia",
+      "object_en": "Slovak"
+    },
+    {
+      "subject": "הריאנה",
+      "object": "הינדי",
+      "object_candidates": "שוודית, הונגרית, פרסית, מונטנגרית, סלובקית, תאית, אירית, פנג'אבי, קוריאנית, הינדי",
+      "index": 816,
+      "subject_en": "Haryana",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "קוריאה הדרומית",
+      "object": "קוריאנית",
+      "object_candidates": "מקדונית, ונטית, אסטונית, לטבית, מלטית, יפנית, טורקית, ליטאית, ולשית, קוריאנית",
+      "index": 817,
+      "subject_en": "South Korea",
+      "object_en": "Korean"
+    },
+    {
+      "subject": "כף ורדה",
+      "object": "פורטוגזית",
+      "object_candidates": "סיציליאנית, סלובקית, פנג'אבי, מראטהית, ולשית, סומלית, טורקית, ארמנית, בסקית, פורטוגזית",
+      "index": 818,
+      "subject_en": "Cape Verde",
+      "object_en": "Portuguese"
+    },
+    {
+      "subject": "שימלה",
+      "object": "הינדי",
+      "object_candidates": "פולנית, לטינית, טורקית, ברטונית, סלובנית, סיציליאנית, טמילית, יפנית, ונטית, הינדי",
+      "index": 819,
+      "subject_en": "Shimla",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "הולנד הקריבית",
+      "object": "הולנדית",
+      "object_candidates": "סיציליאנית, השפה הנורמנית, מלאית, מלאיאלאם, ליטאית, הונגרית, קמרית, וייטנאמית, פנג'אבי, הולנדית",
+      "index": 820,
+      "subject_en": "Caribbean Netherlands",
+      "object_en": "Dutch"
+    },
+    {
+      "subject": "אוקלהומה",
+      "object": "אנגלית",
+      "object_candidates": "לטבית, פורטוגזית, איסלנדית, אינדונזית, פרסית, הוואית, מקדונית, מלאית, ליטאית, אנגלית",
+      "index": 821,
+      "subject_en": "Oklahoma",
+      "object_en": "English"
+    },
+    {
+      "subject": "אוקראינה",
+      "object": "אוקראינית",
+      "object_candidates": "איסלנדית, סרבית, בלארוסית, גרמנית, טורקית, טמילית, מלטית, ולשית, הוואית, אוקראינית",
+      "index": 822,
+      "subject_en": "Ukraine",
+      "object_en": "Ukrainian"
+    },
+    {
+      "subject": "איי קוק",
+      "object": "אנגלית",
+      "object_candidates": "טורקית, ספרדית, צ'כית, ונטית, גרמנית, ברטונית, בולגרית, ליטאית, הולנדית, אנגלית",
+      "index": 823,
+      "subject_en": "Cook Islands",
+      "object_en": "English"
+    },
+    {
+      "subject": "אופ\"א",
+      "object": "אנגלית",
+      "object_candidates": "אורדו, איסלנדית, סומלית, בלארוסית, יפנית, סרבית, וייטנאמית, הולנדית, מראטהית, אנגלית",
+      "index": 824,
+      "subject_en": "Union of European Football Associations",
+      "object_en": "English"
+    },
+    {
+      "subject": "טנזניה",
+      "object": "אנגלית",
+      "object_candidates": "הונגרית, בלארוסית, לטבית, אוקראינית, השפה הנורמנית, ספרדית, איטלקית, יפנית, הולנדית, אנגלית",
+      "index": 825,
+      "subject_en": "Tanzania",
+      "object_en": "English"
+    },
+    {
+      "subject": "טורקמניסטן",
+      "object": "רוסית",
+      "object_candidates": "בלארוסית, ארמנית, קוריאנית, וייטנאמית, אנגלית, טמילית, סלובנית, יוונית, קטלאנית, רוסית",
+      "index": 826,
+      "subject_en": "Turkmenistan",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "סומלילנד",
+      "object": "סומלית",
+      "object_candidates": "איסלנדית, סקוטית, רוסית, קטלאנית, אסטונית, טורקית, מצרית, תאית, דנית, סומלית",
+      "index": 827,
+      "subject_en": "Somaliland",
+      "object_en": "Somali"
+    },
+    {
+      "subject": "שווייץ",
+      "object": "גרמנית",
+      "object_candidates": "אירית, עברית, פינית, קטלאנית, רוסית, צרפתית, איטלקית, צ'כית, מקדונית, גרמנית",
+      "index": 828,
+      "subject_en": "Switzerland",
+      "object_en": "German"
+    },
+    {
+      "subject": "מחוז חברובסק",
+      "object": "רוסית",
+      "object_candidates": "צ'כית, מראטהית, יוונית, הוואית, אסטונית, ברטונית, ונטית, אוקראינית, לטינית, רוסית",
+      "index": 829,
+      "subject_en": "Khabarovsk Krai",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "לאהטי",
+      "object": "פינית",
+      "object_candidates": "יוונית, הוואית, אסטונית, פרסית, סלובקית, פורטוגזית, מקדונית, מונטנגרית, דנית, פינית",
+      "index": 830,
+      "subject_en": "Lahti",
+      "object_en": "Finnish"
+    },
+    {
+      "subject": "אליקנטה",
+      "object": "ספרדית",
+      "object_candidates": "שפות סיניות, דנית, מלאיאלאם, קרואטית, מלטית, סלובנית, וייטנאמית, סיציליאנית, לטבית, ספרדית",
+      "index": 831,
+      "subject_en": "Alicante",
+      "object_en": "Spanish"
+    },
+    {
+      "subject": "בלארוס",
+      "object": "בלארוסית",
+      "object_candidates": "וייטנאמית, ארמנית, סיציליאנית, אלבנית, אינדונזית, ליטאית, סומלית, ולשית, מלאיאלאם, בלארוסית",
+      "index": 832,
+      "subject_en": "Belarus",
+      "object_en": "Belarusian"
+    },
+    {
+      "subject": "אוטר פרדש",
+      "object": "הינדי",
+      "object_candidates": "הוואית, סיציליאנית, הונגרית, מלאית, אירית, הולנדית, אלבנית, טלוגו, פינית, הינדי",
+      "index": 833,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Hindi"
+    },
+    {
+      "subject": "הרפובליקה העממית של לוהנסק",
+      "object": "רוסית",
+      "object_candidates": "בולגרית, צרפתית, אירית, סרבית, מקדונית, אוקראינית, בסקית, איטלקית, הולנדית, רוסית",
+      "index": 834,
+      "subject_en": "Luhansk People's Republic",
+      "object_en": "Russian"
+    },
+    {
+      "subject": "לאוס",
+      "object": "לאית",
+      "object_candidates": "הונגרית, יוונית, מצרית, שוודית, אלבנית, אירית, הולנדית, מלאית, פנג'אבי, לאית",
+      "index": 835,
+      "subject_en": "Laos",
+      "object_en": "Lao"
+    },
+    {
+      "subject": "אינגושטיה",
+      "object": "רוסית",
+      "object_candidates": "סקוטית, קרואטית, פנג'אבי, ספרדית, מצרית, תאית, גרמנית, גאורגית, השפה הנורמנית, רוסית",
+      "index": 836,
+      "subject_en": "Republic of Ingushetia",
+      "object_en": "Russian"
+    }
+  ],
+  "relation_id": "P37"
+}

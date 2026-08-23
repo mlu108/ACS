@@ -1,0 +1,294 @@
+{
+  "name": "manufacturer",
+  "prompt_templates": [
+    "哪家公司制造<subject>？答案是：<mask>。",
+    "谁生产<subject>？答案是：<mask>。",
+    "谁是<subject>的生产商？答案是：<mask>。",
+    "谁制造<subject>？答案是：<mask>。",
+    "哪家制造商负责<subject>？答案是：<mask>。",
+    "<subject>的制造商名叫<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "法拉利恩佐",
+      "object": "法拉利汽车",
+      "object_candidates": "微软, 一神教中的神, 丰田汽车, 空中客车, 本田技研工业, BMW, 英特尔, 苹果公司, 任天堂, 法拉利汽车",
+      "index": 3284,
+      "subject_en": "Enzo Ferrari",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "视窗2000",
+      "object": "微软",
+      "object_candidates": "任天堂, 英特尔, 本田技研工业, 法拉利汽车, 波音, BMW, 一神教中的神, 苹果公司, 丰田汽车, 微软",
+      "index": 3285,
+      "subject_en": "Windows 2000",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "空中客车A330",
+      "object": "空中客车",
+      "object_candidates": "微软, BMW, 法拉利汽车, 苹果公司, 丰田汽车, 任天堂, 波音, 英特尔, 本田技研工业, 空中客车",
+      "index": 3286,
+      "subject_en": "Airbus A330",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "本田思域",
+      "object": "本田技研工业",
+      "object_candidates": "波音, 空中客车, 一神教中的神, 苹果公司, 微软, BMW, 任天堂, 英特尔, 法拉利汽车, 本田技研工业",
+      "index": 3287,
+      "subject_en": "Honda Civic",
+      "object_en": "Honda"
+    },
+    {
+      "subject": "法拉利458 Italia",
+      "object": "法拉利汽车",
+      "object_candidates": "BMW, 丰田汽车, 英特尔, 微软, 苹果公司, 一神教中的神, 空中客车, 本田技研工业, 任天堂, 法拉利汽车",
+      "index": 3288,
+      "subject_en": "Ferrari 458",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "波音777",
+      "object": "波音",
+      "object_candidates": "本田技研工业, 空中客车, 法拉利汽车, 一神教中的神, BMW, 英特尔, 苹果公司, 丰田汽车, 任天堂, 波音",
+      "index": 3289,
+      "subject_en": "Boeing 777",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "视窗7",
+      "object": "微软",
+      "object_candidates": "一神教中的神, 英特尔, 本田技研工业, 波音, 丰田汽车, 苹果公司, 空中客车, 任天堂, 法拉利汽车, 微软",
+      "index": 3290,
+      "subject_en": "Windows 7",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "任天堂3DS",
+      "object": "任天堂",
+      "object_candidates": "英特尔, BMW, 空中客车, 一神教中的神, 丰田汽车, 法拉利汽车, 波音, 本田技研工业, 微软, 任天堂",
+      "index": 3291,
+      "subject_en": "Nintendo 3DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "本田雅阁",
+      "object": "本田技研工业",
+      "object_candidates": "法拉利汽车, 微软, BMW, 一神教中的神, 波音, 任天堂, 丰田汽车, 英特尔, 苹果公司, 本田技研工业",
+      "index": 3292,
+      "subject_en": "Honda Accord",
+      "object_en": "Honda"
+    },
+    {
+      "subject": "iPhone",
+      "object": "苹果公司",
+      "object_candidates": "任天堂, 一神教中的神, 丰田汽车, BMW, 本田技研工业, 空中客车, 微软, 法拉利汽车, 波音, 苹果公司",
+      "index": 3293,
+      "subject_en": "iPhone",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Intel 8008",
+      "object": "英特尔",
+      "object_candidates": "任天堂, 波音, 空中客车, 法拉利汽车, 苹果公司, BMW, 本田技研工业, 微软, 丰田汽车, 英特尔",
+      "index": 3294,
+      "subject_en": "Intel 8008",
+      "object_en": "Intel"
+    },
+    {
+      "subject": "丰田凯美瑞",
+      "object": "丰田汽车",
+      "object_candidates": "空中客车, 英特尔, 苹果公司, 本田技研工业, BMW, 波音, 法拉利汽车, 一神教中的神, 微软, 丰田汽车",
+      "index": 3295,
+      "subject_en": "Toyota Camry",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "空中客车A380",
+      "object": "空中客车",
+      "object_candidates": "任天堂, 波音, BMW, 一神教中的神, 苹果公司, 法拉利汽车, 微软, 丰田汽车, 英特尔, 空中客车",
+      "index": 3296,
+      "subject_en": "Airbus A380",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "iPhone 4S",
+      "object": "苹果公司",
+      "object_candidates": "微软, 英特尔, 任天堂, 丰田汽车, 法拉利汽车, 一神教中的神, 空中客车, BMW, 本田技研工业, 苹果公司",
+      "index": 3297,
+      "subject_en": "iPhone 4S",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "任天堂DS",
+      "object": "任天堂",
+      "object_candidates": "一神教中的神, 苹果公司, 波音, BMW, 本田技研工业, 微软, 丰田汽车, 英特尔, 空中客车, 任天堂",
+      "index": 3298,
+      "subject_en": "Nintendo DS",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "B-17轰炸机",
+      "object": "波音",
+      "object_candidates": "英特尔, 一神教中的神, 丰田汽车, 微软, 法拉利汽车, 本田技研工业, 空中客车, BMW, 任天堂, 波音",
+      "index": 3299,
+      "subject_en": "B-17 Flying Fortress",
+      "object_en": "Boeing"
+    },
+    {
+      "subject": "Apple I",
+      "object": "苹果公司",
+      "object_candidates": "波音, 一神教中的神, BMW, 空中客车, 任天堂, 本田技研工业, 丰田汽车, 微软, 英特尔, 苹果公司",
+      "index": 3300,
+      "subject_en": "Apple I",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "Xbox",
+      "object": "微软",
+      "object_candidates": "苹果公司, 一神教中的神, 任天堂, 丰田汽车, 波音, 空中客车, 法拉利汽车, BMW, 英特尔, 微软",
+      "index": 3301,
+      "subject_en": "Xbox",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "丰田卡罗拉",
+      "object": "丰田汽车",
+      "object_candidates": "微软, 空中客车, 本田技研工业, 波音, BMW, 法拉利汽车, 英特尔, 一神教中的神, 苹果公司, 丰田汽车",
+      "index": 3302,
+      "subject_en": "Toyota Corolla",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "iPhone 3GS",
+      "object": "苹果公司",
+      "object_candidates": "英特尔, 空中客车, 任天堂, 法拉利汽车, BMW, 波音, 一神教中的神, 丰田汽车, 微软, 苹果公司",
+      "index": 3303,
+      "subject_en": "iPhone 3GS",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "iPod",
+      "object": "苹果公司",
+      "object_candidates": "一神教中的神, 空中客车, 本田技研工业, 任天堂, 微软, BMW, 英特尔, 法拉利汽车, 波音, 苹果公司",
+      "index": 3304,
+      "subject_en": "iPod",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "BMW X3",
+      "object": "BMW",
+      "object_candidates": "丰田汽车, 一神教中的神, 空中客车, 苹果公司, 法拉利汽车, 英特尔, 本田技研工业, 微软, 任天堂, BMW",
+      "index": 3305,
+      "subject_en": "BMW X3",
+      "object_en": "BMW"
+    },
+    {
+      "subject": "红白机",
+      "object": "任天堂",
+      "object_candidates": "一神教中的神, 微软, 本田技研工业, BMW, 波音, 空中客车, 英特尔, 丰田汽车, 法拉利汽车, 任天堂",
+      "index": 3306,
+      "subject_en": "Nintendo Entertainment System",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "iPad",
+      "object": "苹果公司",
+      "object_candidates": "BMW, 微软, 英特尔, 任天堂, 本田技研工业, 波音, 法拉利汽车, 丰田汽车, 一神教中的神, 苹果公司",
+      "index": 3307,
+      "subject_en": "iPad",
+      "object_en": "Apple Inc."
+    },
+    {
+      "subject": "空中客车A300",
+      "object": "空中客车",
+      "object_candidates": "任天堂, 波音, 一神教中的神, 本田技研工业, 英特尔, 丰田汽车, BMW, 苹果公司, 法拉利汽车, 空中客车",
+      "index": 3308,
+      "subject_en": "A300",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "法拉利LaFerrari",
+      "object": "法拉利汽车",
+      "object_candidates": "BMW, 波音, 微软, 任天堂, 丰田汽车, 本田技研工业, 英特尔, 空中客车, 一神教中的神, 法拉利汽车",
+      "index": 3309,
+      "subject_en": "LaFerrari",
+      "object_en": "Ferrari"
+    },
+    {
+      "subject": "Game Boy Advance",
+      "object": "任天堂",
+      "object_candidates": "空中客车, 英特尔, 本田技研工业, 丰田汽车, 微软, 苹果公司, 一神教中的神, 波音, BMW, 任天堂",
+      "index": 3310,
+      "subject_en": "Game Boy Advance",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "空中客车A320系列",
+      "object": "空中客车",
+      "object_candidates": "一神教中的神, 丰田汽车, BMW, 微软, 法拉利汽车, 波音, 苹果公司, 本田技研工业, 任天堂, 空中客车",
+      "index": 3311,
+      "subject_en": "A320 family",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "Windows Vista",
+      "object": "微软",
+      "object_candidates": "波音, 空中客车, BMW, 苹果公司, 任天堂, 一神教中的神, 本田技研工业, 英特尔, 法拉利汽车, 微软",
+      "index": 3312,
+      "subject_en": "Windows Vista",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "天使",
+      "object": "一神教中的神",
+      "object_candidates": "英特尔, 波音, 法拉利汽车, 本田技研工业, 任天堂, 空中客车, 丰田汽车, 苹果公司, BMW, 一神教中的神",
+      "index": 3313,
+      "subject_en": "angel",
+      "object_en": "God"
+    },
+    {
+      "subject": "超级任天堂",
+      "object": "任天堂",
+      "object_candidates": "苹果公司, BMW, 空中客车, 法拉利汽车, 英特尔, 微软, 波音, 丰田汽车, 本田技研工业, 任天堂",
+      "index": 3314,
+      "subject_en": "Super Nintendo Entertainment System",
+      "object_en": "Nintendo"
+    },
+    {
+      "subject": "空中客车A350",
+      "object": "空中客车",
+      "object_candidates": "一神教中的神, BMW, 法拉利汽车, 微软, 任天堂, 丰田汽车, 苹果公司, 英特尔, 本田技研工业, 空中客车",
+      "index": 3315,
+      "subject_en": "Airbus A350",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "空中客车A310",
+      "object": "空中客车",
+      "object_candidates": "苹果公司, 本田技研工业, 任天堂, 一神教中的神, 波音, 微软, BMW, 英特尔, 丰田汽车, 空中客车",
+      "index": 3316,
+      "subject_en": "A310",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "空中客车A340",
+      "object": "空中客车",
+      "object_candidates": "英特尔, 微软, 波音, 本田技研工业, 苹果公司, 法拉利汽车, 一神教中的神, BMW, 丰田汽车, 空中客车",
+      "index": 3317,
+      "subject_en": "Airbus A340",
+      "object_en": "Airbus basic"
+    },
+    {
+      "subject": "Wii U",
+      "object": "任天堂",
+      "object_candidates": "丰田汽车, 苹果公司, 微软, 法拉利汽车, 波音, 英特尔, BMW, 一神教中的神, 空中客车, 任天堂",
+      "index": 3318,
+      "subject_en": "Wii U",
+      "object_en": "Nintendo"
+    }
+  ],
+  "relation_id": "P176"
+}

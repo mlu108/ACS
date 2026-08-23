@@ -1,0 +1,1710 @@
+{
+  "name": "capital_of",
+  "prompt_templates": [
+    "<subject> başkenti olan ülke veya eyalet nedir? Cevap: <mask>",
+    "<subject>’ın başkenti neresidir? Cevap: <mask>",
+    "<subject>’ı başkenti olarak hangi ülke veya eyalet kabul eder? Cevap: <mask>",
+    "<subject>’ın başkenti olarak hangi yer kabul edilir? Cevap: <mask>",
+    "<subject> hangi yerde başkent olarak hizmet vermektedir? Cevap: <mask>",
+    " <subject> adındaki ülkenin başkenti <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Edmonton",
+      "object": "Alberta",
+      "object_candidates": "Çekoslovakya, Laos, Gucerat, Bavyera, Saravak, Bangladeş, Teksas, Katar, Provence, Alberta",
+      "index": 3750,
+      "subject_en": "Edmonton",
+      "object_en": "Alberta"
+    },
+    {
+      "subject": "Ankara",
+      "object": "Türkiye",
+      "object_candidates": "Zambiya, Almanya, Senegal, Polonya, Filipinler, Letonya, Libya, Arkansas, Grönland, Türkiye",
+      "index": 3751,
+      "subject_en": "Ankara",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "Amsterdam",
+      "object": "Hollanda",
+      "object_candidates": "Letonya, Ain, Kansas, Bavyera, Nepal, Slovenya, Mali, Connecticut, Rodezya, Hollanda",
+      "index": 3752,
+      "subject_en": "Amsterdam",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "Bakü",
+      "object": "Azerbaycan",
+      "object_candidates": "Hollanda, Belçika, Botsvana, Maharaştra, Danimarka, Nijer, Ukrayna, Somali, Yemen, Azerbaycan",
+      "index": 3753,
+      "subject_en": "Baku",
+      "object_en": "Azerbaijan"
+    },
+    {
+      "subject": "Kahire",
+      "object": "Mısır",
+      "object_candidates": "Umman, Bolivya, Navarra, Kazakistan, Maryland, Connecticut, İngiltere, Mozambik, Yehuda Krallığı, Mısır",
+      "index": 3754,
+      "subject_en": "Cairo",
+      "object_en": "Egypt"
+    },
+    {
+      "subject": "Kopenhag",
+      "object": "Danimarka",
+      "object_candidates": "Massachusetts, Slovakya, Venezuela, İsrail, Irak, Flandre, Idaho, Bangladeş, Guatemala, Danimarka",
+      "index": 3755,
+      "subject_en": "Copenhagen",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "Barselona",
+      "object": "Katalonya",
+      "object_candidates": "Lüksemburg, Colorado, Toskana, Bahreyn, Belize, Siçuan, Dubai Emirliği, Ürdün, Laos, Katalonya",
+      "index": 3756,
+      "subject_en": "Barcelona",
+      "object_en": "Catalonia"
+    },
+    {
+      "subject": "Buenos Aires",
+      "object": "Arjantin",
+      "object_candidates": "Katar, Aragon, Almanya, Karadağ, Utah, Rusya, Bolivya, Portekiz, Saravak, Arjantin",
+      "index": 3757,
+      "subject_en": "Buenos Aires",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "Münih",
+      "object": "Bavyera",
+      "object_candidates": "Queensland, Portekiz, Indiana, Brunei, Polonya, Connecticut, Flandre, Özbekistan, Yehuda Krallığı, Bavyera",
+      "index": 3758,
+      "subject_en": "Munich",
+      "object_en": "Bavaria"
+    },
+    {
+      "subject": "Floransa",
+      "object": "Toskana",
+      "object_candidates": "Liberya, Karadağ, Guangdong, Sırbistan, İrlanda, Louisiana, Beyaz Rusya, Hindistan, Norveç, Toskana",
+      "index": 3759,
+      "subject_en": "Florence",
+      "object_en": "Tuscany"
+    },
+    {
+      "subject": "Roma",
+      "object": "İtalya",
+      "object_candidates": "Afganistan, Endonezya, Brezilya, Massachusetts, Malta, Zimbabve, Almanya, Venezuela, Bhutan, İtalya",
+      "index": 3760,
+      "subject_en": "Rome",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "Cezayir",
+      "object": "Cezayir",
+      "object_candidates": "Haiti, Belçika, Gürcistan, Malavi, Gine, Pakistan, Zimbabve, Senegal, Saravak, Cezayir",
+      "index": 3761,
+      "subject_en": "Algiers",
+      "object_en": "Algeria"
+    },
+    {
+      "subject": "Trablus",
+      "object": "Libya",
+      "object_candidates": "Uruguay, Provence, Katar, Tacikistan, Macaristan, Kırgızistan, Pakistan, Kenya, Polonya, Libya",
+      "index": 3762,
+      "subject_en": "Tripoli",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "Canberra",
+      "object": "Avustralya",
+      "object_candidates": "Alaska, Minnesota, Grönland, Haryana, Queensland, Hırvatistan, Fas, Bulgaristan, Türkiye, Avustralya",
+      "index": 3763,
+      "subject_en": "Canberra",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "Windhoek",
+      "object": "Namibya",
+      "object_candidates": "Belçika, Kuveyt, Suriye, Nepal, Japonya, Gine, İrlanda, Filipinler, Toskana, Namibya",
+      "index": 3764,
+      "subject_en": "Windhoek",
+      "object_en": "Namibia"
+    },
+    {
+      "subject": "Kandiye",
+      "object": "Girit",
+      "object_candidates": "Portekiz, Ürdün, Etiyopya, Çin Cumhuriyeti, Pencap, Alaska, Almanya, Ain, Indiana, Girit",
+      "index": 3765,
+      "subject_en": "Heraklion",
+      "object_en": "Crete"
+    },
+    {
+      "subject": "Bağdat",
+      "object": "Irak",
+      "object_candidates": "Rodezya, Afganistan, Rusya, Hollanda, Brezilya, Kuveyt, Beyaz Rusya, Fas, Bulgaristan, Irak",
+      "index": 3766,
+      "subject_en": "Baghdad",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "Edinburgh",
+      "object": "İskoçya",
+      "object_candidates": "Telangana, Bihar, Louisiana, Nikaragua, Hollanda, Arkansas, Brezilya, Utah, Oklahoma, İskoçya",
+      "index": 3767,
+      "subject_en": "Edinburgh",
+      "object_en": "Scotland"
+    },
+    {
+      "subject": "Kâbil",
+      "object": "Afganistan",
+      "object_candidates": "Galler, Özbekistan, Karnataka, Yemen, Siçuan, Alaska, Katar, Wyoming, Pakistan, Afganistan",
+      "index": 3768,
+      "subject_en": "Kabul",
+      "object_en": "Afghanistan"
+    },
+    {
+      "subject": "Bonn",
+      "object": "Almanya",
+      "object_candidates": "Beyaz Rusya, Teksas, Nepal, Filipinler, Aragon, Bavyera, Michigan, Arkansas, Liberya, Almanya",
+      "index": 3769,
+      "subject_en": "Bonn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Berlin",
+      "object": "Almanya",
+      "object_candidates": "Grönland, Piyemonte, Umman, Venezuela, Fiji, Letonya, Çin Cumhuriyeti, Norveç, Romanya, Almanya",
+      "index": 3770,
+      "subject_en": "Berlin",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "Porto-Novo",
+      "object": "Benin",
+      "object_candidates": "Utah, Kırgızistan, İspanya, Slovenya, Aragon, Teksas, Uruguay, Bolivya, Uganda, Benin",
+      "index": 3771,
+      "subject_en": "Porto-Novo",
+      "object_en": "Benin"
+    },
+    {
+      "subject": "Gaborone",
+      "object": "Botsvana",
+      "object_candidates": "Romanya, Kaliforniya, Sardinya, Tayland, Estonya, Sırbistan, Uruguay, Manitoba, Haryana, Botsvana",
+      "index": 3772,
+      "subject_en": "Gaborone",
+      "object_en": "Botswana"
+    },
+    {
+      "subject": "Paris",
+      "object": "Fransa",
+      "object_candidates": "Haiti, Pakistan, Bihar, Brezilya, Kuveyt, Namibya, Florida, Kerala, Kazakistan, Fransa",
+      "index": 3773,
+      "subject_en": "Paris",
+      "object_en": "France"
+    },
+    {
+      "subject": "Mumbai",
+      "object": "Maharaştra",
+      "object_candidates": "Küba, Manitoba, Nord, Samoa, Michigan, Siçuan, Nijer, Tennessee, Lüksemburg, Maharaştra",
+      "index": 3774,
+      "subject_en": "Mumbai",
+      "object_en": "Maharashtra"
+    },
+    {
+      "subject": "Oslo",
+      "object": "Norveç",
+      "object_candidates": "Madagaskar, Fransa, Ontario, Türkiye, Kuveyt, Piyemonte, Bulgaristan, Tanzanya, Connecticut, Norveç",
+      "index": 3775,
+      "subject_en": "Oslo",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "Kudüs",
+      "object": "Yehuda Krallığı",
+      "object_candidates": "Burgonya, Suriye, İsviçre, Grönland, Brezilya, Malavi, Mısır, Tayland, Wyoming, Yehuda Krallığı",
+      "index": 3776,
+      "subject_en": "Jerusalem",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "Bişkek",
+      "object": "Kırgızistan",
+      "object_candidates": "Bihar, Siçuan, Ermenistan, Pencap, Çad, Umman, Karnataka, Telangana, Tasmanya, Kırgızistan",
+      "index": 3777,
+      "subject_en": "Bishkek",
+      "object_en": "Kyrgyzstan"
+    },
+    {
+      "subject": "Bükreș",
+      "object": "Romanya",
+      "object_candidates": "İngiltere, Navarra, Zimbabve, Idaho, Liberya, Tayland, Alba ili, Letonya, Mısır, Romanya",
+      "index": 3778,
+      "subject_en": "Bucharest",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "Melbourne",
+      "object": "Victoria",
+      "object_candidates": "Saravak, Ain, Cezayir, Oxfordshire, Ekvador, Hessen, Colorado, Alberta, Mauritius, Victoria",
+      "index": 3779,
+      "subject_en": "Melbourne",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "Pekin",
+      "object": "Çin Cumhuriyeti",
+      "object_candidates": "Fas, Bangladeş, İsveç, İrlanda, Yünnan, Alaska, Kerala, Mısır, Slovakya, Çin Cumhuriyeti",
+      "index": 3780,
+      "subject_en": "Beijing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Çongçing",
+      "object": "Çin Cumhuriyeti",
+      "object_candidates": "Wyoming, Hawaii, Letonya, Ain, Malta, Tacikistan, Grönland, Tasmanya, Özbekistan, Çin Cumhuriyeti",
+      "index": 3781,
+      "subject_en": "Chongqing",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Havana",
+      "object": "Küba",
+      "object_candidates": "Malezya, Provence, Malta, Louisiana, Yünnan, Katalonya, Leicestershire, Tunus, Guatemala, Küba",
+      "index": 3782,
+      "subject_en": "Havana",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "Denver",
+      "object": "Colorado",
+      "object_candidates": "Aragon, Angola, Suriye, Somali, Libya, Finlandiya, Salzburg, Ontario, Provence, Colorado",
+      "index": 3783,
+      "subject_en": "Denver",
+      "object_en": "Colorado"
+    },
+    {
+      "subject": "Mogadişu",
+      "object": "Somali",
+      "object_candidates": "Hollanda, Litvanya, Samoa, Fransa, Uruguay, Çin Cumhuriyeti, Gana, İran, Yünnan, Somali",
+      "index": 3784,
+      "subject_en": "Mogadishu",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "Cardiff",
+      "object": "Galler",
+      "object_candidates": "Katar, Maryland, Flandre, Peru, Beyaz Rusya, Norveç, Uganda, İtalya, Hindistan, Galler",
+      "index": 3785,
+      "subject_en": "Cardiff",
+      "object_en": "Wales"
+    },
+    {
+      "subject": "Dublin",
+      "object": "İrlanda",
+      "object_candidates": "Mauritius, Vietnam, Arnavutluk, Endonezya, Meksika, Minnesota, Gine, Fransa, Azerbaycan, İrlanda",
+      "index": 3786,
+      "subject_en": "Dublin",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "Tunus",
+      "object": "Tunus",
+      "object_candidates": "Arkansas, Avustralya, Pencap, Bhutan, Laos, Kaliforniya, Benin, Alberta, Tayland, Tunus",
+      "index": 3787,
+      "subject_en": "Tunis",
+      "object_en": "Tunisia"
+    },
+    {
+      "subject": "Rio de Janeiro",
+      "object": "Brezilya",
+      "object_candidates": "Siçuan, Louisiana, Oklahoma, İngiltere Krallığı, Victoria, Utah, Kıbrıs Cumhuriyeti, Sudan, Saravak, Brezilya",
+      "index": 3788,
+      "subject_en": "Rio de Janeiro",
+      "object_en": "Brazil"
+    },
+    {
+      "subject": "Valletta",
+      "object": "Malta",
+      "object_candidates": "Gabon, Gana, Fiji, İsviçre, Fas, Kamboçya, Maryland, Kansas, Yunanistan, Malta",
+      "index": 3789,
+      "subject_en": "Valletta",
+      "object_en": "Malta"
+    },
+    {
+      "subject": "Londra",
+      "object": "İngiltere",
+      "object_candidates": "Filipinler, Normandiya, Kazakistan, Sabah, Kıbrıs Cumhuriyeti, İsveç, Gucerat, Alberta, Angola, İngiltere",
+      "index": 3790,
+      "subject_en": "London",
+      "object_en": "England"
+    },
+    {
+      "subject": "Rabat",
+      "object": "Fas",
+      "object_candidates": "Venezuela, Kıbrıs Cumhuriyeti, Kanada, Kırgızistan, Tacikistan, Sırbistan, Bolivya, Queensland, Malta, Fas",
+      "index": 3791,
+      "subject_en": "Rabat",
+      "object_en": "Morocco"
+    },
+    {
+      "subject": "Riga",
+      "object": "Letonya",
+      "object_candidates": "Tayland, Teksas, Liberya, Mauritius, Malta, Saravak, Brandenburg, Siçuan, Salzburg, Letonya",
+      "index": 3792,
+      "subject_en": "Riga",
+      "object_en": "Latvia"
+    },
+    {
+      "subject": "Şam",
+      "object": "Suriye",
+      "object_candidates": "Sabah, Tayland, Manitoba, Tacikistan, Yemen, Uganda, Irak, Alberta, Massachusetts, Suriye",
+      "index": 3793,
+      "subject_en": "Damascus",
+      "object_en": "Syria"
+    },
+    {
+      "subject": "Darüsselam",
+      "object": "Tanzanya",
+      "object_candidates": "Piyemonte, Beyaz Rusya, Bahreyn, Şili, Siçuan, Guatemala, Danimarka, Botsvana, Kırgızistan, Tanzanya",
+      "index": 3794,
+      "subject_en": "Dar es Salaam",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "Londra",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Guangdong, Rusya, Slovakya, Ukrayna, Ruanda, Katar, Ekvador, Indiana, Teksas, İngiltere Krallığı",
+      "index": 3795,
+      "subject_en": "London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Stockholm",
+      "object": "İsveç",
+      "object_candidates": "Bolivya, Toskana, Kazakistan, Zimbabve, Mısır, Salzburg, Peru, Hawaii, Ukrayna, İsveç",
+      "index": 3796,
+      "subject_en": "Stockholm",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "Helsinki",
+      "object": "Finlandiya",
+      "object_candidates": "Nepal, Alba ili, Liberya, Arkansas, Lüksemburg, Maryland, Fas, Belize, Rodezya, Finlandiya",
+      "index": 3797,
+      "subject_en": "Helsinki",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "Prag",
+      "object": "Bohemya",
+      "object_candidates": "Salzburg, Küba, Beyaz Rusya, Cezayir, Arnavutluk, Hessen, Aragon, Tennessee, Azerbaycan, Bohemya",
+      "index": 3798,
+      "subject_en": "Prague",
+      "object_en": "Bohemia"
+    },
+    {
+      "subject": "Indianapolis",
+      "object": "Indiana",
+      "object_candidates": "Tayland, Florida, Connecticut, Hindistan, Panama, Angola, Nikaragua, Bulgaristan, Meksika, Indiana",
+      "index": 3799,
+      "subject_en": "Indianapolis",
+      "object_en": "Indiana"
+    },
+    {
+      "subject": "Madrid",
+      "object": "İspanya",
+      "object_candidates": "Ruanda, Florida, Libya, Polonya, Kaliforniya, Fransa, Ekvador, Racasthan, Rodezya, İspanya",
+      "index": 3800,
+      "subject_en": "Madrid",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "Guatemala",
+      "object": "Guatemala",
+      "object_candidates": "Çad, İrlanda, Kanada, Teksas, Barbados, Angola, Bihar, Arnavutluk, Letonya, Guatemala",
+      "index": 3801,
+      "subject_en": "Guatemala City",
+      "object_en": "Guatemala"
+    },
+    {
+      "subject": "Varşova",
+      "object": "Polonya",
+      "object_candidates": "Haiti, Türkiye, İngiltere Krallığı, Bavyera, Malta, Dubai Emirliği, İtalya, Goa, Kansas, Polonya",
+      "index": 3802,
+      "subject_en": "Warsaw",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "Guangzhou",
+      "object": "Guangdong",
+      "object_candidates": "Zambiya, Suriye, Bavyera, Brunei, Brezilya, Siçuan, Ukrayna, Saksonya, Alba ili, Guangdong",
+      "index": 3803,
+      "subject_en": "Guangzhou",
+      "object_en": "Guangdong"
+    },
+    {
+      "subject": "Dresden",
+      "object": "Saksonya",
+      "object_candidates": "Arkansas, Tayland, Guatemala, Provence, Ürdün, Salzburg, Malezya, Hawaii, Kanada, Saksonya",
+      "index": 3804,
+      "subject_en": "Dresden",
+      "object_en": "Saxony"
+    },
+    {
+      "subject": "Port-au-Prince",
+      "object": "Haiti",
+      "object_candidates": "Japonya, Angola, Çekoslovakya, Arjantin, Karnataka, Bahreyn, Gine, Fransa, Maharaştra, Haiti",
+      "index": 3805,
+      "subject_en": "Port-au-Prince",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "Atina",
+      "object": "Yunanistan",
+      "object_candidates": "Mısır, Connecticut, Mali, Macaristan, Oklahoma, Honduras, Ermenistan, Angola, Salzburg, Yunanistan",
+      "index": 3806,
+      "subject_en": "Athens",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Hobart",
+      "object": "Tasmanya",
+      "object_candidates": "Ürdün, Sırbistan, Gürcistan, Brezilya, Lüksemburg, Iowa, Pakistan, Oklahoma, Bihar, Tasmanya",
+      "index": 3807,
+      "subject_en": "Hobart",
+      "object_en": "Tasmania"
+    },
+    {
+      "subject": "Tallinn",
+      "object": "Estonya",
+      "object_candidates": "Pencap, Navarra, Portekiz, Pensilvanya, Filipinler, Brandenburg, Fiji, Mozambik, Hırvatistan, Estonya",
+      "index": 3808,
+      "subject_en": "Tallinn",
+      "object_en": "Estonia"
+    },
+    {
+      "subject": "Tokyo",
+      "object": "Japonya",
+      "object_candidates": "Victoria, Uganda, Mısır, Macaristan, Lübnan, Ruanda, Afganistan, Çin Cumhuriyeti, Sardinya, Japonya",
+      "index": 3809,
+      "subject_en": "Tokyo",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "Viyana",
+      "object": "Avusturya",
+      "object_candidates": "Çekoslovakya, Gucerat, İsrail, Türkiye, İngiltere, Kazakistan, Utah, Angola, Yemen, Avusturya",
+      "index": 3810,
+      "subject_en": "Vienna",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "Ljubljana",
+      "object": "Slovenya",
+      "object_candidates": "İsrail, Senegal, Karadağ, Sicilya, Finlandiya, Nijerya, Tacikistan, Afganistan, Gine, Slovenya",
+      "index": 3811,
+      "subject_en": "Ljubljana",
+      "object_en": "Slovenia"
+    },
+    {
+      "subject": "Kudüs",
+      "object": "İsrail",
+      "object_candidates": "Senegal, Venezuela, Telangana, Azerbaycan, Brunei, Macaristan, Maharaştra, Oxfordshire, Teksas, İsrail",
+      "index": 3812,
+      "subject_en": "Jerusalem",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "Cakarta",
+      "object": "Endonezya",
+      "object_candidates": "Mozambik, Ürdün, Kaliforniya, Şili, Guangdong, Oklahoma, Brunei, Karnataka, Racasthan, Endonezya",
+      "index": 3813,
+      "subject_en": "Jakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "Torino",
+      "object": "Piyemonte",
+      "object_candidates": "Senegal, İtalya, Yugoslavya, Queensland, Karadağ, Goa, Gine, Alaska, Ontario, Piyemonte",
+      "index": 3814,
+      "subject_en": "Turin",
+      "object_en": "Piedmont"
+    },
+    {
+      "subject": "Nairobi",
+      "object": "Kenya",
+      "object_candidates": "Belize, Letonya, Liberya, İngiltere, Bhutan, Pencap, Özbekistan, Çin Cumhuriyeti, Connecticut, Kenya",
+      "index": 3815,
+      "subject_en": "Nairobi",
+      "object_en": "Kenya"
+    },
+    {
+      "subject": "Kuala Lumpur",
+      "object": "Malezya",
+      "object_candidates": "Indiana, Rodezya, Yugoslavya, Kanada, Çin Cumhuriyeti, İsveç, Türkiye, Michigan, Gucerat, Malezya",
+      "index": 3816,
+      "subject_en": "Kuala Lumpur",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "İslamabad",
+      "object": "Pakistan",
+      "object_candidates": "Malta, Gucerat, Madagaskar, Litvanya, Gürcistan, Libya, Tayland, Kenya, Belize, Pakistan",
+      "index": 3817,
+      "subject_en": "Islamabad",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "Katmandu",
+      "object": "Nepal",
+      "object_candidates": "Rodezya, Alba ili, İtalya, Estonya, Özbekistan, Brandenburg, Provence, Nijer, Cezayir, Nepal",
+      "index": 3818,
+      "subject_en": "Kathmandu",
+      "object_en": "Nepal"
+    },
+    {
+      "subject": "Hartum",
+      "object": "Sudan",
+      "object_candidates": "Ukrayna, Alaska, Québec, Provence, Liberya, Victoria, Peru, Küba, Kerala, Sudan",
+      "index": 3819,
+      "subject_en": "Khartoum",
+      "object_en": "Sudan"
+    },
+    {
+      "subject": "Vilnius",
+      "object": "Litvanya",
+      "object_candidates": "Navarra, Benin, Alba ili, Colorado, Nijer, Nijerya, Botsvana, Haryana, Hessen, Litvanya",
+      "index": 3820,
+      "subject_en": "Vilnius",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "Beyrut",
+      "object": "Lübnan",
+      "object_candidates": "Filipinler, Küba, Kenya, Guangdong, Katalonya, Bhutan, Kanada, Vietnam, Massachusetts, Lübnan",
+      "index": 3821,
+      "subject_en": "Beirut",
+      "object_en": "Lebanon"
+    },
+    {
+      "subject": "Lizbon",
+      "object": "Portekiz",
+      "object_candidates": "Norveç, Zimbabve, Meksika, Saksonya, Sicilya, Galler, Letonya, Avustralya, Liberya, Portekiz",
+      "index": 3822,
+      "subject_en": "Lisbon",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "Luanda",
+      "object": "Angola",
+      "object_candidates": "Hindistan, Haiti, Letonya, Japonya, Hırvatistan, Pakistan, Yugoslavya, Manitoba, Tayland, Angola",
+      "index": 3823,
+      "subject_en": "Luanda",
+      "object_en": "Angola"
+    },
+    {
+      "subject": "Moskova",
+      "object": "Rusya",
+      "object_candidates": "Tayland, Madagaskar, Kenya, Iowa, Queensland, Bahreyn, Afganistan, Ruanda, Alaska, Rusya",
+      "index": 3824,
+      "subject_en": "Moscow",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "Winnipeg",
+      "object": "Manitoba",
+      "object_candidates": "Polonya, Alberta, Zambiya, Aragon, Haiti, Filipinler, Alba ili, Çin Cumhuriyeti, Macaristan, Manitoba",
+      "index": 3825,
+      "subject_en": "Winnipeg",
+      "object_en": "Manitoba"
+    },
+    {
+      "subject": "Lilongwe",
+      "object": "Malavi",
+      "object_candidates": "Wyoming, Afganistan, Queensland, Çad, Québec, Tanzanya, Polonya, Kenya, Bohemya, Malavi",
+      "index": 3826,
+      "subject_en": "Lilongwe",
+      "object_en": "Malawi"
+    },
+    {
+      "subject": "Meksiko",
+      "object": "Meksika",
+      "object_candidates": "Ontario, Liberya, Azerbaycan, Florida, Gucerat, İspanya, Ermenistan, Sardinya, Bihar, Meksika",
+      "index": 3827,
+      "subject_en": "Mexico City",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "Maputo",
+      "object": "Mozambik",
+      "object_candidates": "Pakistan, Gana, Bangladeş, Endonezya, Arkansas, Angola, Kanada, Nijer, Laos, Mozambik",
+      "index": 3828,
+      "subject_en": "Maputo",
+      "object_en": "Mozambique"
+    },
+    {
+      "subject": "Boston",
+      "object": "Massachusetts",
+      "object_candidates": "Michigan, Macaristan, Barbados, Alba ili, Bhutan, Arnavutluk, İspanya, Katalonya, Kırgızistan, Massachusetts",
+      "index": 3829,
+      "subject_en": "Boston",
+      "object_en": "Massachusetts"
+    },
+    {
+      "subject": "Ottawa",
+      "object": "Kanada",
+      "object_candidates": "Massachusetts, Saravak, Avusturya, Tasmanya, Kaliforniya, Alaska, Queensland, Gürcistan, Gine, Kanada",
+      "index": 3830,
+      "subject_en": "Ottawa",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "Montevideo",
+      "object": "Uruguay",
+      "object_candidates": "Minnesota, Haiti, Rodezya, Honduras, Arkansas, Florida, Pencap, Romanya, Katar, Uruguay",
+      "index": 3831,
+      "subject_en": "Montevideo",
+      "object_en": "Uruguay"
+    },
+    {
+      "subject": "Manama",
+      "object": "Bahreyn",
+      "object_candidates": "Portekiz, Piyemonte, Arjantin, Teksas, Connecticut, Nijer, Laos, Gana, Uganda, Bahreyn",
+      "index": 3832,
+      "subject_en": "Manama",
+      "object_en": "Bahrain"
+    },
+    {
+      "subject": "Bangalore",
+      "object": "Karnataka",
+      "object_candidates": "Arjantin, Kazakistan, Malavi, Grönland, Kamboçya, Özbekistan, Hollanda, Samoa, Bulgaristan, Karnataka",
+      "index": 3833,
+      "subject_en": "Bengaluru",
+      "object_en": "Karnataka"
+    },
+    {
+      "subject": "Budapeşte",
+      "object": "Macaristan",
+      "object_candidates": "Alba ili, Provence, Normandiya, Ermenistan, Irak, Pencap, Liberya, Manitoba, Hollanda, Macaristan",
+      "index": 3834,
+      "subject_en": "Budapest",
+      "object_en": "Hungary"
+    },
+    {
+      "subject": "Tegucigalpa",
+      "object": "Honduras",
+      "object_candidates": "Tunus, Kuveyt, Racasthan, Burgonya, Oxfordshire, Alba ili, Arkansas, Tasmanya, Normandiya, Honduras",
+      "index": 3835,
+      "subject_en": "Tegucigalpa",
+      "object_en": "Honduras"
+    },
+    {
+      "subject": "Gandhinagar",
+      "object": "Gucerat",
+      "object_candidates": "Utah, Hırvatistan, Katalonya, Malavi, Sardinya, Fransa, Haiti, Çin Cumhuriyeti, Burgonya, Gucerat",
+      "index": 3836,
+      "subject_en": "Gandhinagar",
+      "object_en": "Gujarat"
+    },
+    {
+      "subject": "Podgorica",
+      "object": "Karadağ",
+      "object_candidates": "Benin, Victoria, Tennessee, Yemen, Romanya, Ekvador, Siçuan, Haiti, Salzburg, Karadağ",
+      "index": 3837,
+      "subject_en": "Podgorica",
+      "object_en": "Montenegro"
+    },
+    {
+      "subject": "Toronto",
+      "object": "Ontario",
+      "object_candidates": "Samoa, Bahreyn, Bohemya, Bulgaristan, Racasthan, Fiji, Kuveyt, Sicilya, Sırbistan, Ontario",
+      "index": 3838,
+      "subject_en": "Toronto",
+      "object_en": "Ontario"
+    },
+    {
+      "subject": "Panama",
+      "object": "Panama",
+      "object_candidates": "Pensilvanya, Arjantin, Victoria, Kanada, Lübnan, Saksonya, Kosova, Kenya, İspanya, Panama",
+      "index": 3839,
+      "subject_en": "Panama City",
+      "object_en": "Panama"
+    },
+    {
+      "subject": "Dakar",
+      "object": "Senegal",
+      "object_candidates": "Gabon, Letonya, Michigan, Botsvana, Utah, Belçika, Litvanya, Telangana, Wyoming, Senegal",
+      "index": 3840,
+      "subject_en": "Dakar",
+      "object_en": "Senegal"
+    },
+    {
+      "subject": "Lagos",
+      "object": "Nijerya",
+      "object_candidates": "Québec, Kosova, Oxfordshire, Mısır, Yünnan, İskoçya, Ukrayna, Benin, Tanzanya, Nijerya",
+      "index": 3841,
+      "subject_en": "Lagos",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "Bangkok",
+      "object": "Tayland",
+      "object_candidates": "Portekiz, Hırvatistan, Macaristan, Yugoslavya, Ürdün, Karnataka, Iowa, Kıbrıs Cumhuriyeti, Liberya, Tayland",
+      "index": 3842,
+      "subject_en": "Bangkok",
+      "object_en": "Thailand"
+    },
+    {
+      "subject": "Santiago",
+      "object": "Şili",
+      "object_candidates": "Norveç, Uganda, Rodezya, Kuveyt, Kaliforniya, Fas, Indiana, Portekiz, Bangladeş, Şili",
+      "index": 3843,
+      "subject_en": "Santiago",
+      "object_en": "Chile"
+    },
+    {
+      "subject": "Yeni Delhi",
+      "object": "Hindistan",
+      "object_candidates": "Connecticut, Kerala, Umman, İngiltere, Hessen, Racasthan, Ekvador, Fiji, Finlandiya, Hindistan",
+      "index": 3844,
+      "subject_en": "New Delhi",
+      "object_en": "India"
+    },
+    {
+      "subject": "Belgrad",
+      "object": "Sırbistan",
+      "object_candidates": "Florida, Tunus, İngiltere, Maharaştra, Hırvatistan, Bihar, Navarra, Alba ili, Guatemala, Sırbistan",
+      "index": 3845,
+      "subject_en": "Belgrade",
+      "object_en": "Serbia"
+    },
+    {
+      "subject": "Cagliari",
+      "object": "Sardinya",
+      "object_candidates": "Saksonya, Piyemonte, Tasmanya, Haiti, Navarra, Slovenya, Kuveyt, Québec, Belçika, Sardinya",
+      "index": 3846,
+      "subject_en": "Cagliari",
+      "object_en": "Sardinia"
+    },
+    {
+      "subject": "Caracas",
+      "object": "Venezuela",
+      "object_candidates": "Türkiye, Guangdong, Yugoslavya, Nepal, Nord, Ukrayna, Beyaz Rusya, Suriye, Siçuan, Venezuela",
+      "index": 3847,
+      "subject_en": "Caracas",
+      "object_en": "Venezuela"
+    },
+    {
+      "subject": "Lefkoşa",
+      "object": "Kıbrıs Cumhuriyeti",
+      "object_candidates": "Connecticut, Yunanistan, Yugoslavya, Hawaii, Meksika, Madagaskar, Racasthan, Küba, Afganistan, Kıbrıs Cumhuriyeti",
+      "index": 3848,
+      "subject_en": "Nicosia",
+      "object_en": "Cyprus"
+    },
+    {
+      "subject": "Kiev",
+      "object": "Ukrayna",
+      "object_candidates": "Alba ili, Endonezya, Somali, Litvanya, Salzburg, Gana, Etiyopya, Brezilya, Laos, Ukrayna",
+      "index": 3849,
+      "subject_en": "Kiev",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "Taipei",
+      "object": "Çin Cumhuriyeti",
+      "object_candidates": "Toskana, İsviçre, Cezayir, Meksika, Saksonya, Queensland, Suriye, Barbados, Zambiya, Çin Cumhuriyeti",
+      "index": 3850,
+      "subject_en": "Taipei",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "Abuja",
+      "object": "Nijerya",
+      "object_candidates": "Provence, Şili, Ukrayna, Barbados, Arnavutluk, Gabon, Sardinya, Grönland, Haiti, Nijerya",
+      "index": 3851,
+      "subject_en": "Abuja",
+      "object_en": "Nigeria"
+    },
+    {
+      "subject": "Sofya",
+      "object": "Bulgaristan",
+      "object_candidates": "Malta, Oklahoma, Barbados, Teksas, Toskana, Liberya, Beyaz Rusya, Girit, Gabon, Bulgaristan",
+      "index": 3852,
+      "subject_en": "Sofia",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "Salt Lake City",
+      "object": "Utah",
+      "object_candidates": "Nikaragua, Türkiye, Katar, Çad, Yünnan, Danimarka, Manitoba, Victoria, Venezuela, Utah",
+      "index": 3853,
+      "subject_en": "Salt Lake City",
+      "object_en": "Utah"
+    },
+    {
+      "subject": "Palermo",
+      "object": "Sicilya",
+      "object_candidates": "Kamboçya, Burgonya, Brunei, İskoçya, Katalonya, Provence, Fas, Brezilya, Goa, Sicilya",
+      "index": 3854,
+      "subject_en": "Palermo",
+      "object_en": "Sicily"
+    },
+    {
+      "subject": "Tahran",
+      "object": "İran",
+      "object_candidates": "Beyaz Rusya, Arkansas, Rodezya, Victoria, Yugoslavya, Saksonya, Tanzanya, Sırbistan, Malezya, İran",
+      "index": 3855,
+      "subject_en": "Tehran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "Québec",
+      "object": "Québec",
+      "object_candidates": "Nijerya, Belçika, Telangana, Botsvana, Dubai Emirliği, Azerbaycan, Brezilya, İran, İsrail, Québec",
+      "index": 3856,
+      "subject_en": "Quebec City",
+      "object_en": "Quebec"
+    },
+    {
+      "subject": "Prag",
+      "object": "Çekoslovakya",
+      "object_candidates": "Belize, Irak, Toskana, Çin Cumhuriyeti, Etiyopya, Kuveyt, Provence, Sudan, Cezayir, Çekoslovakya",
+      "index": 3857,
+      "subject_en": "Prague",
+      "object_en": "Czechoslovakia"
+    },
+    {
+      "subject": "Dakka",
+      "object": "Bangladeş",
+      "object_candidates": "Alba ili, Kırgızistan, Wyoming, Slovenya, Afganistan, Bavyera, Kanada, Ruanda, Gana, Bangladeş",
+      "index": 3858,
+      "subject_en": "Dhaka",
+      "object_en": "Bangladesh"
+    },
+    {
+      "subject": "Brisbane",
+      "object": "Queensland",
+      "object_candidates": "Endonezya, Massachusetts, Salzburg, Slovakya, Sırbistan, Kuveyt, İran, Alba ili, Maharaştra, Queensland",
+      "index": 3859,
+      "subject_en": "Brisbane",
+      "object_en": "Queensland"
+    },
+    {
+      "subject": "Harare",
+      "object": "Zimbabve",
+      "object_candidates": "Fas, Almanya, Nijerya, Tasmanya, Karnataka, Avustralya, Hessen, Beyaz Rusya, Bohemya, Zimbabve",
+      "index": 3860,
+      "subject_en": "Harare",
+      "object_en": "Zimbabwe"
+    },
+    {
+      "subject": "Aix-en-Provence",
+      "object": "Provence",
+      "object_candidates": "Haiti, Kerala, Kamboçya, Uruguay, Panama, Türkiye, Çad, Toskana, Iowa, Provence",
+      "index": 3861,
+      "subject_en": "Aix-en-Provence",
+      "object_en": "Provence"
+    },
+    {
+      "subject": "Monrovia",
+      "object": "Liberya",
+      "object_candidates": "Gucerat, İngiltere, Tanzanya, Belize, Azerbaycan, Nord, Sudan, Kıbrıs Cumhuriyeti, Fransa, Liberya",
+      "index": 3862,
+      "subject_en": "Monrovia",
+      "object_en": "Liberia"
+    },
+    {
+      "subject": "Bern",
+      "object": "İsviçre",
+      "object_candidates": "Danimarka, Meksika, Fransa, Bhutan, İngiltere, Endonezya, Ontario, Alaska, İsveç, İsviçre",
+      "index": 3863,
+      "subject_en": "Bern",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "Addis Ababa",
+      "object": "Etiyopya",
+      "object_candidates": "Mauritius, Polonya, Salzburg, Nepal, Macaristan, Senegal, Bhutan, Afganistan, Umman, Etiyopya",
+      "index": 3864,
+      "subject_en": "Addis Ababa",
+      "object_en": "Ethiopia"
+    },
+    {
+      "subject": "Zagreb",
+      "object": "Hırvatistan",
+      "object_candidates": "Portekiz, Nepal, Bahreyn, Iowa, Bihar, Beyaz Rusya, Guangdong, Tasmanya, Tayland, Hırvatistan",
+      "index": 3865,
+      "subject_en": "Zagreb",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "Phnom Penh",
+      "object": "Kamboçya",
+      "object_candidates": "Bolivya, Çekoslovakya, Japonya, Kosova, Leicestershire, Özbekistan, Alaska, Brunei, Bangladeş, Kamboçya",
+      "index": 3866,
+      "subject_en": "Phnom Penh",
+      "object_en": "Cambodia"
+    },
+    {
+      "subject": "Duşanbe",
+      "object": "Tacikistan",
+      "object_candidates": "Bangladeş, Telangana, Filipinler, Küba, Hessen, Bavyera, Sabah, Arkansas, Toskana, Tacikistan",
+      "index": 3867,
+      "subject_en": "Dushanbe",
+      "object_en": "Tajikistan"
+    },
+    {
+      "subject": "Lansing",
+      "object": "Michigan",
+      "object_candidates": "Sicilya, Galler, Hindistan, Bohemya, Uganda, Kıbrıs Cumhuriyeti, Brunei, Letonya, Filipinler, Michigan",
+      "index": 3868,
+      "subject_en": "Lansing",
+      "object_en": "Michigan"
+    },
+    {
+      "subject": "Kuching",
+      "object": "Saravak",
+      "object_candidates": "İngiltere Krallığı, Libya, Bolivya, Nepal, Ain, Fransa, Idaho, Tasmanya, Slovakya, Saravak",
+      "index": 3869,
+      "subject_en": "Kuching",
+      "object_en": "Sarawak"
+    },
+    {
+      "subject": "Manila",
+      "object": "Filipinler",
+      "object_candidates": "Şili, Gana, Massachusetts, Meksika, Dubai Emirliği, İskoçya, Venezuela, Maryland, Ukrayna, Filipinler",
+      "index": 3870,
+      "subject_en": "Manila",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": "Westminster",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Litvanya, Şili, Sicilya, Tasmanya, Finlandiya, Guatemala, Nijerya, Kenya, Aragon, İngiltere Krallığı",
+      "index": 3871,
+      "subject_en": "Westminster",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Quito",
+      "object": "Ekvador",
+      "object_candidates": "Belize, Tayland, Sabah, Hırvatistan, Karnataka, Çin Cumhuriyeti, Kaliforniya, Brezilya, Kazakistan, Ekvador",
+      "index": 3872,
+      "subject_en": "Quito",
+      "object_en": "Ecuador"
+    },
+    {
+      "subject": "Leicester",
+      "object": "Leicestershire",
+      "object_candidates": "Québec, Slovenya, Arjantin, Iowa, Arnavutluk, Beyaz Rusya, Çekoslovakya, Saravak, Finlandiya, Leicestershire",
+      "index": 3873,
+      "subject_en": "Leicester",
+      "object_en": "Leicestershire"
+    },
+    {
+      "subject": "Kunming",
+      "object": "Yünnan",
+      "object_candidates": "Bihar, İskoçya, Kerala, Alba ili, Norveç, Honduras, Kaliforniya, Victoria, Minnesota, Yünnan",
+      "index": 3874,
+      "subject_en": "Kunming",
+      "object_en": "Yunnan"
+    },
+    {
+      "subject": "Managua",
+      "object": "Nikaragua",
+      "object_candidates": "Girit, Kanada, Hawaii, Meksika, Guangdong, Macaristan, Arkansas, Fiji, Zambiya, Nikaragua",
+      "index": 3875,
+      "subject_en": "Managua",
+      "object_en": "Nicaragua"
+    },
+    {
+      "subject": "Sucre",
+      "object": "Bolivya",
+      "object_candidates": "Pensilvanya, Sırbistan, Libya, Alba ili, Zimbabve, Tunus, Mısır, Uruguay, Tayland, Bolivya",
+      "index": 3876,
+      "subject_en": "Sucre",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "Honolulu",
+      "object": "Hawaii",
+      "object_candidates": "Belize, Slovenya, Kerala, Fransa, Victoria, Alberta, Manitoba, Kaliforniya, Senegal, Hawaii",
+      "index": 3877,
+      "subject_en": "Honolulu",
+      "object_en": "Hawaii"
+    },
+    {
+      "subject": "Vientiane",
+      "object": "Laos",
+      "object_candidates": "Gine, Massachusetts, Gürcistan, Provence, Sardinya, Çad, Libya, Colorado, Yunanistan, Laos",
+      "index": 3878,
+      "subject_en": "Vientiane",
+      "object_en": "Laos"
+    },
+    {
+      "subject": "Çengdu",
+      "object": "Siçuan",
+      "object_candidates": "Yehuda Krallığı, Alba ili, Benin, Ruanda, Uganda, Goa, Polonya, Michigan, Kanada, Siçuan",
+      "index": 3879,
+      "subject_en": "Chengdu",
+      "object_en": "Sichuan"
+    },
+    {
+      "subject": "Zaragoza",
+      "object": "Aragon",
+      "object_candidates": "Telangana, Karadağ, Türkiye, Utah, Kansas, Lüksemburg, Bhutan, Meksika, Ukrayna, Aragon",
+      "index": 3880,
+      "subject_en": "Zaragoza",
+      "object_en": "Aragon"
+    },
+    {
+      "subject": "Oxford",
+      "object": "Oxfordshire",
+      "object_candidates": "Finlandiya, Leicestershire, Haiti, Alba ili, Polonya, Namibya, İsrail, Bangladeş, Alaska, Oxfordshire",
+      "index": 3881,
+      "subject_en": "Oxford",
+      "object_en": "Oxfordshire"
+    },
+    {
+      "subject": "Çhandigarh",
+      "object": "Haryana",
+      "object_candidates": "İran, Brezilya, Manitoba, Piyemonte, Malavi, Kırgızistan, Zambiya, Ermenistan, Kamboçya, Haryana",
+      "index": 3882,
+      "subject_en": "Chandigarh",
+      "object_en": "Haryana"
+    },
+    {
+      "subject": "Niamey",
+      "object": "Nijer",
+      "object_candidates": "Aragon, Gabon, Venezuela, Piyemonte, Belize, İran, Gine, Kazakistan, Rusya, Nijer",
+      "index": 3883,
+      "subject_en": "Niamey",
+      "object_en": "Niger"
+    },
+    {
+      "subject": "Doha",
+      "object": "Katar",
+      "object_candidates": "Özbekistan, Malta, Bhutan, Indiana, Slovakya, Girit, Japonya, Pencap, İngiltere, Katar",
+      "index": 3885,
+      "subject_en": "Doha",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "Harare",
+      "object": "Rodezya",
+      "object_candidates": "Romanya, Guangdong, Fiji, Karadağ, Malezya, Kansas, Irak, Fas, Hırvatistan, Rodezya",
+      "index": 3886,
+      "subject_en": "Harare",
+      "object_en": "Rhodesia"
+    },
+    {
+      "subject": "Apia",
+      "object": "Samoa",
+      "object_candidates": "İngiltere Krallığı, Bangladeş, Idaho, Finlandiya, Kamboçya, Fas, Bolivya, Gine, Beyaz Rusya, Samoa",
+      "index": 3887,
+      "subject_en": "Apia",
+      "object_en": "Samoa"
+    },
+    {
+      "subject": "Bratislava",
+      "object": "Slovakya",
+      "object_candidates": "Navarra, Tanzanya, Idaho, Çad, Michigan, İrlanda, Endonezya, Alba ili, Japonya, Slovakya",
+      "index": 3888,
+      "subject_en": "Bratislava",
+      "object_en": "Slovakia"
+    },
+    {
+      "subject": "Kota Kinabalu",
+      "object": "Sabah",
+      "object_candidates": "Tasmanya, Oklahoma, Flandre, Fas, Nord, Gabon, Azerbaycan, Senegal, Hırvatistan, Sabah",
+      "index": 3889,
+      "subject_en": "Kota Kinabalu",
+      "object_en": "Sabah"
+    },
+    {
+      "subject": "Taşkent",
+      "object": "Özbekistan",
+      "object_candidates": "Yugoslavya, Fransa, Haiti, Michigan, Norveç, Afganistan, Pensilvanya, Alberta, Litvanya, Özbekistan",
+      "index": 3890,
+      "subject_en": "Tashkent",
+      "object_en": "Uzbekistan"
+    },
+    {
+      "subject": "Dodoma",
+      "object": "Tanzanya",
+      "object_candidates": "Kansas, Bangladeş, Nord, Hırvatistan, Colorado, Québec, Ruanda, Ürdün, Azerbaycan, Tanzanya",
+      "index": 3891,
+      "subject_en": "Dodoma",
+      "object_en": "Tanzania"
+    },
+    {
+      "subject": "Tiran",
+      "object": "Arnavutluk",
+      "object_candidates": "Kerala, Provence, Nijerya, Libya, Flandre, Zambiya, Siçuan, Beyaz Rusya, Sırbistan, Arnavutluk",
+      "index": 3892,
+      "subject_en": "Tirana",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "Kampala",
+      "object": "Uganda",
+      "object_candidates": "Letonya, Suriye, Rusya, İsviçre, Tennessee, Tayland, Slovakya, Haryana, Botsvana, Uganda",
+      "index": 3893,
+      "subject_en": "Kampala",
+      "object_en": "Uganda"
+    },
+    {
+      "subject": "Hanoi",
+      "object": "Vietnam",
+      "object_candidates": "Avusturya, Umman, Guatemala, Yemen, Benin, Özbekistan, Danimarka, Normandiya, Katalonya, Vietnam",
+      "index": 3894,
+      "subject_en": "Hanoi",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "Aden",
+      "object": "Yemen",
+      "object_candidates": "Peru, Laos, Alba ili, Normandiya, Rusya, Samoa, İsrail, Nikaragua, Bohemya, Yemen",
+      "index": 3895,
+      "subject_en": "Aden",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "Lusaka",
+      "object": "Zambiya",
+      "object_candidates": "Lüksemburg, Tasmanya, Azerbaycan, Yemen, Estonya, Portekiz, Kenya, Goa, Endonezya, Zambiya",
+      "index": 3896,
+      "subject_en": "Lusaka",
+      "object_en": "Zambia"
+    },
+    {
+      "subject": "Erivan",
+      "object": "Ermenistan",
+      "object_candidates": "Malta, Oxfordshire, Colorado, Irak, Mısır, Samoa, Toskana, Suriye, Leicestershire, Ermenistan",
+      "index": 3897,
+      "subject_en": "Yerevan",
+      "object_en": "Armenia"
+    },
+    {
+      "subject": "Kuveyt",
+      "object": "Kuveyt",
+      "object_candidates": "Ermenistan, Flandre, Saksonya, Brezilya, Yemen, Malezya, Japonya, Guatemala, Özbekistan, Kuveyt",
+      "index": 3898,
+      "subject_en": "Kuwait City",
+      "object_en": "Kuwait"
+    },
+    {
+      "subject": "Port Louis",
+      "object": "Mauritius",
+      "object_candidates": "Toskana, Tennessee, Guatemala, Ürdün, Slovakya, Haryana, Saksonya, Gabon, Colorado, Mauritius",
+      "index": 3899,
+      "subject_en": "Port Louis",
+      "object_en": "Mauritius"
+    },
+    {
+      "subject": "Akra",
+      "object": "Gana",
+      "object_candidates": "Wyoming, Kaliforniya, Benin, Hollanda, Saravak, İran, Kansas, Bangladeş, İsveç, Gana",
+      "index": 3900,
+      "subject_en": "Accra",
+      "object_en": "Ghana"
+    },
+    {
+      "subject": "Jaipur",
+      "object": "Racasthan",
+      "object_candidates": "İngiltere, Nepal, Kuveyt, Laos, Litvanya, Tayland, Ermenistan, Benin, Rusya, Racasthan",
+      "index": 3901,
+      "subject_en": "Jaipur",
+      "object_en": "Rajasthan"
+    },
+    {
+      "subject": "Minsk",
+      "object": "Beyaz Rusya",
+      "object_candidates": "Finlandiya, Letonya, Grönland, Slovenya, Alberta, Brunei, Almanya, Normandiya, Québec, Beyaz Rusya",
+      "index": 3902,
+      "subject_en": "Minsk",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "Des Moines",
+      "object": "Iowa",
+      "object_candidates": "Pencap, Yugoslavya, Madagaskar, Sardinya, Leicestershire, Estonya, Bahreyn, Malavi, Arnavutluk, Iowa",
+      "index": 3903,
+      "subject_en": "Des Moines",
+      "object_en": "Iowa"
+    },
+    {
+      "subject": "Patna",
+      "object": "Bihar",
+      "object_candidates": "Kanada, Colorado, Litvanya, Umman, Panama, Brezilya, Karnataka, Brandenburg, Afganistan, Bihar",
+      "index": 3904,
+      "subject_en": "Patna",
+      "object_en": "Bihar"
+    },
+    {
+      "subject": "Baton Rouge",
+      "object": "Louisiana",
+      "object_candidates": "Yehuda Krallığı, Yemen, Danimarka, Hırvatistan, Letonya, İsviçre, Ontario, Brandenburg, Bolivya, Louisiana",
+      "index": 3905,
+      "subject_en": "Baton Rouge",
+      "object_en": "Louisiana"
+    },
+    {
+      "subject": "Yogyakarta",
+      "object": "Endonezya",
+      "object_candidates": "Indiana, Honduras, Bahreyn, Tanzanya, Bohemya, Uruguay, Ruanda, Queensland, Namibya, Endonezya",
+      "index": 3906,
+      "subject_en": "Yogyakarta",
+      "object_en": "Indonesia"
+    },
+    {
+      "subject": "Nursultan",
+      "object": "Kazakistan",
+      "object_candidates": "Sabah, Etiyopya, Panama, Minnesota, İsveç, Hırvatistan, Portekiz, Ermenistan, Gabon, Kazakistan",
+      "index": 3907,
+      "subject_en": "Nur-Sultan",
+      "object_en": "Kazakhstan"
+    },
+    {
+      "subject": "Wiesbaden",
+      "object": "Hessen",
+      "object_candidates": "Karnataka, Azerbaycan, Malezya, Laos, Burgonya, Pensilvanya, Beyaz Rusya, Piyemonte, Victoria, Hessen",
+      "index": 3908,
+      "subject_en": "Wiesbaden",
+      "object_en": "Hesse"
+    },
+    {
+      "subject": "Dijon",
+      "object": "Burgonya",
+      "object_candidates": "Provence, Hırvatistan, Minnesota, Lüksemburg, Arnavutluk, Nijerya, Kenya, Hawaii, Piyemonte, Burgonya",
+      "index": 3909,
+      "subject_en": "Dijon",
+      "object_en": "Burgundy"
+    },
+    {
+      "subject": "Rouen",
+      "object": "Normandiya",
+      "object_candidates": "İsviçre, Letonya, Yünnan, Michigan, Alberta, Küba, Tunus, Endonezya, Belçika, Normandiya",
+      "index": 3910,
+      "subject_en": "Rouen",
+      "object_en": "Normandy"
+    },
+    {
+      "subject": "Oklahoma City",
+      "object": "Oklahoma",
+      "object_candidates": "Colorado, Zimbabve, Kazakistan, Massachusetts, Estonya, Kanada, Meksika, Leicestershire, Oxfordshire, Oklahoma",
+      "index": 3911,
+      "subject_en": "Oklahoma City",
+      "object_en": "Oklahoma"
+    },
+    {
+      "subject": "Little Rock, Arkansas",
+      "object": "Arkansas",
+      "object_candidates": "Çin Cumhuriyeti, Bavyera, Vietnam, Hawaii, Cezayir, Bolivya, Angola, Litvanya, Alaska, Arkansas",
+      "index": 3912,
+      "subject_en": "Little Rock",
+      "object_en": "Arkansas"
+    },
+    {
+      "subject": "N'Djamena",
+      "object": "Çad",
+      "object_candidates": "Ruanda, Senegal, Somali, Slovakya, Ontario, Finlandiya, Namibya, Haiti, Normandiya, Çad",
+      "index": 3913,
+      "subject_en": "N'Djamena",
+      "object_en": "Chad"
+    },
+    {
+      "subject": "Amman",
+      "object": "Ürdün",
+      "object_candidates": "Avustralya, Provence, Danimarka, Guatemala, Honduras, Namibya, Teksas, Suriye, Bohemya, Ürdün",
+      "index": 3914,
+      "subject_en": "Amman",
+      "object_en": "Jordan"
+    },
+    {
+      "subject": "Thiruvananthapuram",
+      "object": "Kerala",
+      "object_candidates": "Ürdün, Manitoba, Somali, Hırvatistan, Florida, İskoçya, Çad, Massachusetts, Lüksemburg, Kerala",
+      "index": 3915,
+      "subject_en": "Thiruvananthapuram",
+      "object_en": "Kerala"
+    },
+    {
+      "subject": "Bridgetown",
+      "object": "Barbados",
+      "object_candidates": "Tennessee, İtalya, Gana, Alaska, İngiltere Krallığı, Sabah, Tacikistan, Kanada, Oxfordshire, Barbados",
+      "index": 3916,
+      "subject_en": "Bridgetown",
+      "object_en": "Barbados"
+    },
+    {
+      "subject": "Dubai",
+      "object": "Dubai Emirliği",
+      "object_candidates": "Lüksemburg, Galler, Tunus, Avustralya, Pencap, Ermenistan, Portekiz, Malta, Telangana, Dubai Emirliği",
+      "index": 3917,
+      "subject_en": "Dubai",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Potsdam",
+      "object": "Brandenburg",
+      "object_candidates": "Ekvador, Navarra, Küba, Connecticut, Venezuela, Flandre, Danimarka, Utah, Aragon, Brandenburg",
+      "index": 3918,
+      "subject_en": "Potsdam",
+      "object_en": "Brandenburg"
+    },
+    {
+      "subject": "Antananarivo",
+      "object": "Madagaskar",
+      "object_candidates": "Florida, Iowa, İngiltere Krallığı, Umman, Fransa, Gana, Tayland, İsviçre, Ukrayna, Madagaskar",
+      "index": 3919,
+      "subject_en": "Antananarivo",
+      "object_en": "Madagascar"
+    },
+    {
+      "subject": "Bamako",
+      "object": "Mali",
+      "object_candidates": "Aragon, Massachusetts, Burgonya, Fiji, Estonya, Malavi, Şili, Flandre, Piyemonte, Mali",
+      "index": 3920,
+      "subject_en": "Bamako",
+      "object_en": "Mali"
+    },
+    {
+      "subject": "Annapolis",
+      "object": "Maryland",
+      "object_candidates": "Slovakya, Tunus, Slovenya, Teksas, Namibya, Florida, Norveç, Hindistan, Estonya, Maryland",
+      "index": 3921,
+      "subject_en": "Annapolis",
+      "object_en": "Maryland"
+    },
+    {
+      "subject": "Haydarabad, Hindistan",
+      "object": "Telangana",
+      "object_candidates": "Beyaz Rusya, Cezayir, Navarra, İngiltere, Laos, Litvanya, Kerala, Lübnan, Haryana, Telangana",
+      "index": 3922,
+      "subject_en": "Hyderabad",
+      "object_en": "Telangana"
+    },
+    {
+      "subject": "Çhandigarh",
+      "object": "Pencap",
+      "object_candidates": "Gucerat, Samoa, Maharaştra, Irak, Portekiz, Malavi, Flandre, Bavyera, Endonezya, Pencap",
+      "index": 3923,
+      "subject_en": "Chandigarh",
+      "object_en": "Punjab"
+    },
+    {
+      "subject": "Bourg-en-Bresse",
+      "object": "Ain",
+      "object_candidates": "Avusturya, Maryland, Slovakya, Bhutan, Goa, Vietnam, Polonya, Honduras, Alaska, Ain",
+      "index": 3924,
+      "subject_en": "Bourg-en-Bresse",
+      "object_en": "Ain"
+    },
+    {
+      "subject": "Suva",
+      "object": "Fiji",
+      "object_candidates": "Iowa, Victoria, Arjantin, Bavyera, Guangdong, Hindistan, Toskana, Provence, Racasthan, Fiji",
+      "index": 3925,
+      "subject_en": "Suva",
+      "object_en": "Fiji"
+    },
+    {
+      "subject": "Harrisburg, Pensilvanya",
+      "object": "Pensilvanya",
+      "object_candidates": "Kansas, Venezuela, İtalya, Bihar, Racasthan, Laos, Libya, Slovenya, Manitoba, Pensilvanya",
+      "index": 3926,
+      "subject_en": "Harrisburg",
+      "object_en": "Pennsylvania"
+    },
+    {
+      "subject": "San'a",
+      "object": "Yemen",
+      "object_candidates": "Sicilya, Bihar, Norveç, Alberta, Yunanistan, Lübnan, Fiji, Benin, Haryana, Yemen",
+      "index": 3927,
+      "subject_en": "Sana'a",
+      "object_en": "Yemen"
+    },
+    {
+      "subject": "Panaji",
+      "object": "Goa",
+      "object_candidates": "Libya, Ruanda, Irak, Oklahoma, Peru, Grönland, Yunanistan, Kırgızistan, Romanya, Goa",
+      "index": 3928,
+      "subject_en": "Panjim",
+      "object_en": "Goa"
+    },
+    {
+      "subject": "Bandar Seri Begavan",
+      "object": "Brunei",
+      "object_candidates": "Samoa, Oxfordshire, Libya, Malta, Hessen, Hırvatistan, Hollanda, Idaho, Gabon, Brunei",
+      "index": 3929,
+      "subject_en": "Bandar Seri Begawan",
+      "object_en": "Brunei"
+    },
+    {
+      "subject": "Cheyenne",
+      "object": "Wyoming",
+      "object_candidates": "Kıbrıs Cumhuriyeti, Samoa, Gine, Almanya, Manitoba, Racasthan, Macaristan, Angola, Ukrayna, Wyoming",
+      "index": 3930,
+      "subject_en": "Cheyenne",
+      "object_en": "Wyoming"
+    },
+    {
+      "subject": "Pamplona",
+      "object": "Navarra",
+      "object_candidates": "Ürdün, Honduras, Beyaz Rusya, Guatemala, Burgonya, Şili, Girit, Kerala, Goa, Navarra",
+      "index": 3931,
+      "subject_en": "Pamplona",
+      "object_en": "Navarre"
+    },
+    {
+      "subject": "Libreville",
+      "object": "Gabon",
+      "object_candidates": "Bolivya, Ukrayna, Gürcistan, Telangana, Flandre, Salzburg, İngiltere, Kansas, Vietnam, Gabon",
+      "index": 3932,
+      "subject_en": "Libreville",
+      "object_en": "Gabon"
+    },
+    {
+      "subject": "Priştine",
+      "object": "Kosova",
+      "object_candidates": "Nijer, İspanya, Macaristan, Florida, Beyaz Rusya, Kerala, Filipinler, Botsvana, Senegal, Kosova",
+      "index": 3933,
+      "subject_en": "Pristina",
+      "object_en": "Kosovo"
+    },
+    {
+      "subject": "Nuuk",
+      "object": "Grönland",
+      "object_candidates": "Yünnan, Angola, Connecticut, Dubai Emirliği, Romanya, Québec, Venezuela, Çad, Almanya, Grönland",
+      "index": 3934,
+      "subject_en": "Nuuk",
+      "object_en": "Greenland"
+    },
+    {
+      "subject": "Winchester",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Yunanistan, Japonya, Pakistan, Hindistan, Gana, Çekoslovakya, Kaliforniya, Galler, Katalonya, İngiltere Krallığı",
+      "index": 3935,
+      "subject_en": "Winchester",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Belgrad",
+      "object": "Yugoslavya",
+      "object_candidates": "Bhutan, İtalya, Kosova, Bavyera, Navarra, Girit, Zambiya, Avustralya, Litvanya, Yugoslavya",
+      "index": 3936,
+      "subject_en": "Belgrade",
+      "object_en": "Yugoslavia"
+    },
+    {
+      "subject": "Hartford, Connecticut",
+      "object": "Connecticut",
+      "object_candidates": "Ukrayna, Sabah, Çin Cumhuriyeti, Hollanda, Colorado, Norveç, Malavi, Manitoba, Kuveyt, Connecticut",
+      "index": 3937,
+      "subject_en": "Hartford",
+      "object_en": "Connecticut"
+    },
+    {
+      "subject": "Lima",
+      "object": "Peru",
+      "object_candidates": "Venezuela, Özbekistan, Wyoming, Sabah, İsviçre, Mauritius, Katalonya, Yemen, Massachusetts, Peru",
+      "index": 3938,
+      "subject_en": "Lima",
+      "object_en": "Peru"
+    },
+    {
+      "subject": "Konakri",
+      "object": "Gine",
+      "object_candidates": "Umman, Fransa, Haiti, Kanada, Namibya, Ruanda, Gabon, Iowa, Brezilya, Gine",
+      "index": 3939,
+      "subject_en": "Conakry",
+      "object_en": "Guinea"
+    },
+    {
+      "subject": "Juneau, Alaska",
+      "object": "Alaska",
+      "object_candidates": "İskoçya, Nord, Oxfordshire, Avustralya, Bihar, Tanzanya, Hindistan, Pencap, Hessen, Alaska",
+      "index": 3940,
+      "subject_en": "Juneau",
+      "object_en": "Alaska"
+    },
+    {
+      "subject": "Belmopán",
+      "object": "Belize",
+      "object_candidates": "Hindistan, Çin Cumhuriyeti, İngiltere, Ekvador, Normandiya, Polonya, Michigan, Gine, Madagaskar, Belize",
+      "index": 3941,
+      "subject_en": "Belmopan",
+      "object_en": "Belize"
+    },
+    {
+      "subject": "Sacramento",
+      "object": "Kaliforniya",
+      "object_candidates": "Brunei, Mozambik, Slovakya, Québec, Avustralya, İsrail, Pencap, Şili, İsveç, Kaliforniya",
+      "index": 3942,
+      "subject_en": "Sacramento",
+      "object_en": "California"
+    },
+    {
+      "subject": "Londra Şehri",
+      "object": "İngiltere Krallığı",
+      "object_candidates": "Tayland, Belize, Iowa, Katar, Florida, Macaristan, Gana, Sardinya, Yehuda Krallığı, İngiltere Krallığı",
+      "index": 3943,
+      "subject_en": "City of London",
+      "object_en": "Kingdom of England"
+    },
+    {
+      "subject": "Kigali",
+      "object": "Ruanda",
+      "object_candidates": "Pensilvanya, Arjantin, Kansas, Gabon, Bihar, Navarra, Bhutan, Normandiya, Tasmanya, Ruanda",
+      "index": 3944,
+      "subject_en": "Kigali",
+      "object_en": "Rwanda"
+    },
+    {
+      "subject": "Brüksel",
+      "object": "Belçika",
+      "object_candidates": "Laos, Oklahoma, Çin Cumhuriyeti, Nepal, İtalya, Navarra, Fransa, Guatemala, Goa, Belçika",
+      "index": 3945,
+      "subject_en": "Brussels",
+      "object_en": "Belgium"
+    },
+    {
+      "subject": "Thimphu",
+      "object": "Bhutan",
+      "object_candidates": "Hindistan, Danimarka, Vietnam, Macaristan, Hessen, Malavi, Çekoslovakya, Tasmanya, Lüksemburg, Bhutan",
+      "index": 3946,
+      "subject_en": "Thimphu",
+      "object_en": "Bhutan"
+    },
+    {
+      "subject": "Nafplion",
+      "object": "Yunanistan",
+      "object_candidates": "Türkiye, Telangana, Liberya, İngiltere, Tasmanya, Gana, Brezilya, Nijerya, İspanya, Yunanistan",
+      "index": 3947,
+      "subject_en": "Nauplion",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "Alba Iulia",
+      "object": "Alba ili",
+      "object_candidates": "Somali, Hessen, İsveç, Endonezya, Umman, Ukrayna, Tasmanya, Yunanistan, Polonya, Alba ili",
+      "index": 3948,
+      "subject_en": "Alba Iulia",
+      "object_en": "Alba"
+    },
+    {
+      "subject": "Boise",
+      "object": "Idaho",
+      "object_candidates": "Ruanda, Lüksemburg, Rodezya, Oxfordshire, Beyaz Rusya, Ukrayna, Irak, Panama, Florida, Idaho",
+      "index": 3949,
+      "subject_en": "Boise",
+      "object_en": "Idaho"
+    },
+    {
+      "subject": "Nashville",
+      "object": "Tennessee",
+      "object_candidates": "Nijerya, Bavyera, Québec, Bangladeş, Hollanda, İngiltere Krallığı, Pencap, Etiyopya, Lübnan, Tennessee",
+      "index": 3950,
+      "subject_en": "Nashville",
+      "object_en": "Tennessee"
+    },
+    {
+      "subject": "Arlon",
+      "object": "Lüksemburg",
+      "object_candidates": "Yunanistan, Botsvana, Oklahoma, Normandiya, Katalonya, Yehuda Krallığı, Barbados, Karnataka, Pakistan, Lüksemburg",
+      "index": 3951,
+      "subject_en": "Arlon",
+      "object_en": "Luxembourg"
+    },
+    {
+      "subject": "Salzburg",
+      "object": "Salzburg",
+      "object_candidates": "Katalonya, Kaliforniya, Gana, Tanzanya, Nijerya, Galler, Nord, Telangana, Gucerat, Salzburg",
+      "index": 3952,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "Austin",
+      "object": "Teksas",
+      "object_candidates": "Zimbabve, Afganistan, Bihar, Tacikistan, Arjantin, Québec, Louisiana, Ukrayna, Indiana, Teksas",
+      "index": 3953,
+      "subject_en": "Austin",
+      "object_en": "Texas"
+    },
+    {
+      "subject": "St. Paul",
+      "object": "Minnesota",
+      "object_candidates": "Saksonya, Hessen, Panama, Utah, Liberya, Yugoslavya, Slovakya, Danimarka, Çekoslovakya, Minnesota",
+      "index": 3954,
+      "subject_en": "Saint Paul",
+      "object_en": "Minnesota"
+    },
+    {
+      "subject": "Maskat",
+      "object": "Umman",
+      "object_candidates": "Bulgaristan, Norveç, Tanzanya, Kaliforniya, İngiltere, Bahreyn, Uganda, Brunei, Navarra, Umman",
+      "index": 3955,
+      "subject_en": "Muscat",
+      "object_en": "Oman"
+    },
+    {
+      "subject": "Tallahassee",
+      "object": "Florida",
+      "object_candidates": "Irak, Sabah, Macaristan, Azerbaycan, Kanada, Letonya, Bahreyn, Kerala, Sırbistan, Florida",
+      "index": 3956,
+      "subject_en": "Tallahassee",
+      "object_en": "Florida"
+    },
+    {
+      "subject": "Tiflis",
+      "object": "Gürcistan",
+      "object_candidates": "Kenya, Hindistan, Tayland, Çekoslovakya, Indiana, Bahreyn, Suriye, Alberta, Fiji, Gürcistan",
+      "index": 3957,
+      "subject_en": "Tbilisi",
+      "object_en": "Georgia"
+    },
+    {
+      "subject": "Brüksel",
+      "object": "Flandre",
+      "object_candidates": "Kerala, Angola, Hırvatistan, Yünnan, Cezayir, Kanada, Québec, Peru, Massachusetts, Flandre",
+      "index": 3958,
+      "subject_en": "Brussels",
+      "object_en": "Flanders"
+    },
+    {
+      "subject": "El Halil",
+      "object": "Yehuda Krallığı",
+      "object_candidates": "Sardinya, Şili, Guatemala, Bavyera, Toskana, Saksonya, Bolivya, Hawaii, Ontario, Yehuda Krallığı",
+      "index": 3959,
+      "subject_en": "Hebron",
+      "object_en": "Judah"
+    },
+    {
+      "subject": "Lille",
+      "object": "Nord",
+      "object_candidates": "Haryana, Estonya, Avusturya, Colorado, Barbados, Zimbabve, Mauritius, Saksonya, Belize, Nord",
+      "index": 3960,
+      "subject_en": "Lille",
+      "object_en": "Nord"
+    },
+    {
+      "subject": "Topeka",
+      "object": "Kansas",
+      "object_candidates": "Ermenistan, Yugoslavya, İspanya, Avusturya, Küba, Angola, Gabon, Kamboçya, Afganistan, Kansas",
+      "index": 3961,
+      "subject_en": "Topeka",
+      "object_en": "Kansas"
+    },
+    {
+      "subject": "Santiago de Compostela",
+      "object": "Galiçya",
+      "object_candidates": "Libya, Salzburg, Norveç, Tunus, Telangana, Alaska, Racasthan, Belize, Toskana, Galiçya",
+      "index": 3962,
+      "subject_en": "Santiago de Compostela",
+      "object_en": "Galicia"
+    }
+  ],
+  "relation_id": "P1376"
+}

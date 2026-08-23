@@ -1,0 +1,794 @@
+{
+  "name": "native_language",
+  "prompt_templates": [
+    "What is the native language of <subject>? The answer is: <mask>",
+    "Which language does <subject> speak natively? The answer is: <mask>",
+    "What is the first language of <subject>? The answer is: <mask>",
+    "In which language is <subject> most fluent? The answer is: <mask>",
+    "Which is the primary language of <subject>? The answer is: <mask>",
+    " The native language of <subject> is <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Russians",
+      "object": "Russian",
+      "object_candidates": "Tamil, Italian, Spanish, Japanese, Danish, Polish, English, Dutch, French, Russian",
+      "index": 4853
+    },
+    {
+      "subject": "Sophie Marceau",
+      "object": "French",
+      "object_candidates": "Serbian, Japanese, Italian, Polish, Swedish, Spanish, Dutch, Hebrew, Latin, French",
+      "index": 4854
+    },
+    {
+      "subject": "Lionel Jospin",
+      "object": "French",
+      "object_candidates": "Danish, Russian, English, Japanese, Spanish, Tamil, Italian, Hebrew, Polish, French",
+      "index": 4855
+    },
+    {
+      "subject": "William Henry Harrison",
+      "object": "English",
+      "object_candidates": "Spanish, Tamil, Hebrew, Russian, Italian, Japanese, Latin, Danish, Polish, English",
+      "index": 4856
+    },
+    {
+      "subject": "Alain Delon",
+      "object": "French",
+      "object_candidates": "Danish, Russian, Dutch, Swedish, Latin, German, Polish, English, Japanese, French",
+      "index": 4857
+    },
+    {
+      "subject": "Michel de Montaigne",
+      "object": "Latin",
+      "object_candidates": "Spanish, Polish, Swedish, French, English, Tamil, Serbian, Danish, Dutch, Latin",
+      "index": 4858
+    },
+    {
+      "subject": "Yevgeny Yevtushenko",
+      "object": "Russian",
+      "object_candidates": "German, Polish, Italian, English, Swedish, Tamil, Danish, French, Latin, Russian",
+      "index": 4859
+    },
+    {
+      "subject": "John Paul II",
+      "object": "Polish",
+      "object_candidates": "Japanese, English, Danish, Latin, Tamil, Italian, Russian, Swedish, Hebrew, Polish",
+      "index": 4860
+    },
+    {
+      "subject": "Nikolai Bukharin",
+      "object": "Russian",
+      "object_candidates": "Swedish, Latin, Italian, German, Dutch, Japanese, French, Serbian, Polish, Russian",
+      "index": 4861
+    },
+    {
+      "subject": "Lionel Messi",
+      "object": "Spanish",
+      "object_candidates": "Italian, Swedish, German, Hebrew, Dutch, Tamil, Polish, Latin, Danish, Spanish",
+      "index": 4862
+    },
+    {
+      "subject": "Franz Kafka",
+      "object": "German",
+      "object_candidates": "Danish, Polish, English, Latin, Russian, Serbian, Spanish, Dutch, Tamil, German",
+      "index": 4863
+    },
+    {
+      "subject": "Anatole France",
+      "object": "French",
+      "object_candidates": "Russian, Serbian, Latin, Dutch, Spanish, Danish, Japanese, Italian, Tamil, French",
+      "index": 4864
+    },
+    {
+      "subject": "Jean-Paul Sartre",
+      "object": "French",
+      "object_candidates": "Hebrew, English, Italian, Spanish, Danish, Swedish, Japanese, Russian, Polish, French",
+      "index": 4865
+    },
+    {
+      "subject": "Seamus Heaney",
+      "object": "English",
+      "object_candidates": "Italian, Tamil, Russian, Spanish, Polish, German, Dutch, French, Serbian, English",
+      "index": 4866
+    },
+    {
+      "subject": "Alexander Pushkin",
+      "object": "Russian",
+      "object_candidates": "Latin, Danish, Spanish, Japanese, Italian, Swedish, German, French, Polish, Russian",
+      "index": 4867
+    },
+    {
+      "subject": "Andy Murray",
+      "object": "English",
+      "object_candidates": "Latin, French, Tamil, Swedish, Serbian, Spanish, Dutch, Danish, Polish, English",
+      "index": 4868
+    },
+    {
+      "subject": "Claude Henri de Rouvroy, comte de Saint-Simon",
+      "object": "French",
+      "object_candidates": "Dutch, Serbian, Tamil, Spanish, Swedish, Italian, Hebrew, Russian, Polish, French",
+      "index": 4869
+    },
+    {
+      "subject": "John Calvin",
+      "object": "French",
+      "object_candidates": "Italian, Tamil, Latin, Serbian, Polish, Dutch, Russian, Spanish, Japanese, French",
+      "index": 4870
+    },
+    {
+      "subject": "William-Adolphe Bouguereau",
+      "object": "French",
+      "object_candidates": "Japanese, Serbian, Spanish, Polish, Tamil, Russian, Hebrew, Swedish, English, French",
+      "index": 4871
+    },
+    {
+      "subject": "Jean Reno",
+      "object": "French",
+      "object_candidates": "Tamil, Latin, Hebrew, Spanish, Polish, German, Swedish, Italian, Dutch, French",
+      "index": 4872
+    },
+    {
+      "subject": "Audrey Tautou",
+      "object": "French",
+      "object_candidates": "Spanish, Serbian, Hebrew, Polish, English, Italian, Russian, Swedish, Japanese, French",
+      "index": 4873
+    },
+    {
+      "subject": "J. Robert Oppenheimer",
+      "object": "English",
+      "object_candidates": "Russian, Polish, Danish, Swedish, German, Italian, French, Japanese, Serbian, English",
+      "index": 4874
+    },
+    {
+      "subject": "Gwen Stefani",
+      "object": "English",
+      "object_candidates": "Russian, Dutch, Danish, Polish, Serbian, Spanish, Hebrew, Swedish, Japanese, English",
+      "index": 4875
+    },
+    {
+      "subject": "David Beckham",
+      "object": "English",
+      "object_candidates": "Hebrew, Dutch, Swedish, Polish, Latin, Danish, Tamil, Japanese, Russian, English",
+      "index": 4876
+    },
+    {
+      "subject": "Blaise Pascal",
+      "object": "French",
+      "object_candidates": "Latin, Polish, Serbian, English, German, Italian, Dutch, Hebrew, Russian, French",
+      "index": 4877
+    },
+    {
+      "subject": "Jenson Button",
+      "object": "English",
+      "object_candidates": "Polish, Tamil, Spanish, Serbian, French, Hebrew, Dutch, Danish, Swedish, English",
+      "index": 4878
+    },
+    {
+      "subject": "Jean Giraudoux",
+      "object": "French",
+      "object_candidates": "English, Swedish, Danish, German, Spanish, Italian, Latin, Dutch, Tamil, French",
+      "index": 4879
+    },
+    {
+      "subject": "Pierre Bayle",
+      "object": "French",
+      "object_candidates": "Japanese, English, Italian, Spanish, Dutch, Latin, Danish, Polish, German, French",
+      "index": 4880
+    },
+    {
+      "subject": "Gennady Zyuganov",
+      "object": "Russian",
+      "object_candidates": "Japanese, German, Italian, Polish, Dutch, Serbian, French, English, Latin, Russian",
+      "index": 4881
+    },
+    {
+      "subject": "Olivier Messiaen",
+      "object": "French",
+      "object_candidates": "Swedish, Spanish, Tamil, German, Japanese, Serbian, Dutch, Russian, Danish, French",
+      "index": 4882
+    },
+    {
+      "subject": "Miguel de Cervantes",
+      "object": "Spanish",
+      "object_candidates": "Italian, German, Swedish, Hebrew, Danish, Polish, Russian, Dutch, Japanese, Spanish",
+      "index": 4883
+    },
+    {
+      "subject": "Woodrow Wilson",
+      "object": "English",
+      "object_candidates": "Russian, Danish, Serbian, Italian, Latin, Dutch, Tamil, French, Japanese, English",
+      "index": 4884
+    },
+    {
+      "subject": "Anna Kournikova",
+      "object": "Russian",
+      "object_candidates": "Tamil, English, German, Serbian, French, Italian, Dutch, Latin, Swedish, Russian",
+      "index": 4885
+    },
+    {
+      "subject": "Isabelle Caro",
+      "object": "French",
+      "object_candidates": "Spanish, Italian, Serbian, Japanese, Russian, Latin, English, Dutch, German, French",
+      "index": 4886
+    },
+    {
+      "subject": "Tina Turner",
+      "object": "English",
+      "object_candidates": "Hebrew, Latin, Russian, Serbian, Spanish, Tamil, Japanese, German, Italian, English",
+      "index": 4887
+    },
+    {
+      "subject": "Rainer Maria Rilke",
+      "object": "German",
+      "object_candidates": "Spanish, English, Latin, Japanese, French, Danish, Dutch, Tamil, Russian, German",
+      "index": 4888
+    },
+    {
+      "subject": "Lev Landau",
+      "object": "Russian",
+      "object_candidates": "German, Polish, English, Spanish, Danish, Italian, French, Dutch, Serbian, Russian",
+      "index": 4889
+    },
+    {
+      "subject": "Alex Ferguson",
+      "object": "English",
+      "object_candidates": "Italian, Tamil, German, Serbian, Russian, French, Japanese, Polish, Hebrew, English",
+      "index": 4890
+    },
+    {
+      "subject": "Edward Bulwer-Lytton",
+      "object": "English",
+      "object_candidates": "Japanese, Russian, Swedish, German, Hebrew, Tamil, Dutch, French, Spanish, English",
+      "index": 4891
+    },
+    {
+      "subject": "Joseph Bonaparte",
+      "object": "French",
+      "object_candidates": "Hebrew, Swedish, German, Italian, Polish, Latin, Japanese, Spanish, Dutch, French",
+      "index": 4892
+    },
+    {
+      "subject": "Boris Vian",
+      "object": "French",
+      "object_candidates": "English, Spanish, Japanese, Tamil, Hebrew, Swedish, German, Danish, Italian, French",
+      "index": 4893
+    },
+    {
+      "subject": "Jean-Marie Le Pen",
+      "object": "French",
+      "object_candidates": "German, Dutch, English, Spanish, Japanese, Swedish, Russian, Polish, Tamil, French",
+      "index": 4894
+    },
+    {
+      "subject": "Novak Djokovic",
+      "object": "Serbian",
+      "object_candidates": "Dutch, Latin, English, Hebrew, Spanish, German, Italian, Polish, Tamil, Serbian",
+      "index": 4895
+    },
+    {
+      "subject": "Irina Shayk",
+      "object": "Russian",
+      "object_candidates": "German, Danish, Italian, Tamil, French, Spanish, Latin, English, Hebrew, Russian",
+      "index": 4896
+    },
+    {
+      "subject": "John Dalton",
+      "object": "English",
+      "object_candidates": "French, Russian, Swedish, German, Italian, Serbian, Dutch, Spanish, Japanese, English",
+      "index": 4897
+    },
+    {
+      "subject": "Theodore Roosevelt",
+      "object": "English",
+      "object_candidates": "Japanese, Serbian, Danish, Latin, Swedish, French, Polish, Russian, Italian, English",
+      "index": 4898
+    },
+    {
+      "subject": "Julie Delpy",
+      "object": "French",
+      "object_candidates": "Hebrew, Swedish, Serbian, Italian, Spanish, Latin, Dutch, Russian, English, French",
+      "index": 4899
+    },
+    {
+      "subject": "Manuel Valls",
+      "object": "Spanish",
+      "object_candidates": "Swedish, Polish, Russian, Hebrew, Serbian, French, Latin, Dutch, German, Spanish",
+      "index": 4900
+    },
+    {
+      "subject": "George Sand",
+      "object": "French",
+      "object_candidates": "Spanish, Serbian, Danish, German, English, Russian, Italian, Latin, Japanese, French",
+      "index": 4901
+    },
+    {
+      "subject": "Fanny Ardant",
+      "object": "French",
+      "object_candidates": "Swedish, Spanish, Polish, Serbian, Latin, Tamil, Japanese, Russian, Hebrew, French",
+      "index": 4902
+    },
+    {
+      "subject": "Leo Tolstoy",
+      "object": "Russian",
+      "object_candidates": "Dutch, Polish, Latin, French, Japanese, Danish, Serbian, Tamil, Spanish, Russian",
+      "index": 4903
+    },
+    {
+      "subject": "Al Gore",
+      "object": "English",
+      "object_candidates": "Latin, Serbian, Dutch, Russian, German, Spanish, Polish, Japanese, French, English",
+      "index": 4904
+    },
+    {
+      "subject": "Edsger W. Dijkstra",
+      "object": "Dutch",
+      "object_candidates": "Danish, German, Japanese, Serbian, Latin, Russian, Spanish, Tamil, English, Dutch",
+      "index": 4905
+    },
+    {
+      "subject": "Pierre Bourdieu",
+      "object": "French",
+      "object_candidates": "Danish, Swedish, Italian, Japanese, Polish, Latin, Dutch, Serbian, Spanish, French",
+      "index": 4906
+    },
+    {
+      "subject": "Vitruvius",
+      "object": "Latin",
+      "object_candidates": "Japanese, Polish, Serbian, German, Italian, Hebrew, Spanish, Tamil, French, Latin",
+      "index": 4907
+    },
+    {
+      "subject": "Johnny Hallyday",
+      "object": "French",
+      "object_candidates": "Hebrew, Japanese, Dutch, Russian, English, German, Tamil, Spanish, Swedish, French",
+      "index": 4908
+    },
+    {
+      "subject": "Shakira",
+      "object": "Spanish",
+      "object_candidates": "Latin, Swedish, Polish, English, Dutch, Italian, French, Tamil, Hebrew, Spanish",
+      "index": 4909
+    },
+    {
+      "subject": "Joseph Brodsky",
+      "object": "Russian",
+      "object_candidates": "Hebrew, Japanese, Latin, French, Danish, English, Polish, Dutch, Italian, Russian",
+      "index": 4910
+    },
+    {
+      "subject": "Alberto Giacometti",
+      "object": "Italian",
+      "object_candidates": "Japanese, Spanish, Swedish, Serbian, Danish, English, Dutch, Tamil, German, Italian",
+      "index": 4911
+    },
+    {
+      "subject": "Marie Curie",
+      "object": "Polish",
+      "object_candidates": "Serbian, Japanese, Italian, Dutch, Tamil, Spanish, Russian, Hebrew, French, Polish",
+      "index": 4912
+    },
+    {
+      "subject": "Marguerite Yourcenar",
+      "object": "French",
+      "object_candidates": "Japanese, Italian, Hebrew, Tamil, Polish, Spanish, Dutch, German, Russian, French",
+      "index": 4913
+    },
+    {
+      "subject": "Hans Christian Andersen",
+      "object": "Danish",
+      "object_candidates": "Spanish, Tamil, Hebrew, Dutch, Japanese, Italian, German, Swedish, French, Danish",
+      "index": 4914
+    },
+    {
+      "subject": "Swedes",
+      "object": "Swedish",
+      "object_candidates": "Danish, Italian, German, English, Polish, Russian, Spanish, French, Dutch, Swedish",
+      "index": 4915
+    },
+    {
+      "subject": "Christian Clavier",
+      "object": "French",
+      "object_candidates": "Italian, Latin, Polish, Tamil, German, Danish, Dutch, Japanese, English, French",
+      "index": 4916
+    },
+    {
+      "subject": "Andrew Jackson",
+      "object": "English",
+      "object_candidates": "Russian, German, Italian, Swedish, Dutch, Serbian, Spanish, Latin, French, English",
+      "index": 4917
+    },
+    {
+      "subject": "Georges Pompidou",
+      "object": "French",
+      "object_candidates": "Danish, Latin, German, Japanese, Dutch, Swedish, Russian, Italian, Serbian, French",
+      "index": 4918
+    },
+    {
+      "subject": "Jean-Baptiste Say",
+      "object": "French",
+      "object_candidates": "Italian, Latin, Serbian, Danish, Hebrew, Russian, Tamil, Swedish, English, French",
+      "index": 4919
+    },
+    {
+      "subject": "Gad Elmaleh",
+      "object": "French",
+      "object_candidates": "Swedish, Latin, Italian, Hebrew, Dutch, Danish, Polish, Spanish, Japanese, French",
+      "index": 4920
+    },
+    {
+      "subject": "Louis Aragon",
+      "object": "French",
+      "object_candidates": "Spanish, Swedish, Danish, Tamil, Polish, Russian, Serbian, Hebrew, Italian, French",
+      "index": 4921
+    },
+    {
+      "subject": "Nadezhda Krupskaya",
+      "object": "Russian",
+      "object_candidates": "Danish, Serbian, German, Spanish, Polish, Latin, Tamil, English, Dutch, Russian",
+      "index": 4922
+    },
+    {
+      "subject": "Claude Simon",
+      "object": "French",
+      "object_candidates": "German, Tamil, Japanese, Italian, Danish, Dutch, Swedish, Polish, Spanish, French",
+      "index": 4923
+    },
+    {
+      "subject": "Felix Dzerzhinsky",
+      "object": "Russian",
+      "object_candidates": "Japanese, French, Polish, English, Spanish, Swedish, Dutch, Latin, Danish, Russian",
+      "index": 4924
+    },
+    {
+      "subject": "Paul Doumer",
+      "object": "French",
+      "object_candidates": "Serbian, Hebrew, Russian, Swedish, German, Spanish, English, Polish, Japanese, French",
+      "index": 4925
+    },
+    {
+      "subject": "Beatrix of the Netherlands",
+      "object": "Dutch",
+      "object_candidates": "Tamil, Japanese, Russian, Danish, French, Latin, Polish, Italian, Hebrew, Dutch",
+      "index": 4926
+    },
+    {
+      "subject": "Vladimir Mayakovsky",
+      "object": "Russian",
+      "object_candidates": "Japanese, English, Hebrew, Serbian, Danish, French, Dutch, Tamil, Swedish, Russian",
+      "index": 4927
+    },
+    {
+      "subject": "Luc Besson",
+      "object": "French",
+      "object_candidates": "Spanish, Italian, Hebrew, German, Japanese, Polish, Swedish, Danish, Serbian, French",
+      "index": 4928
+    },
+    {
+      "subject": "Mario Vargas Llosa",
+      "object": "Spanish",
+      "object_candidates": "Italian, Swedish, English, Tamil, Dutch, Polish, Japanese, Russian, German, Spanish",
+      "index": 4929
+    },
+    {
+      "subject": "John Quincy Adams",
+      "object": "English",
+      "object_candidates": "Italian, German, Hebrew, Latin, Russian, Japanese, Spanish, Swedish, Danish, English",
+      "index": 4930
+    },
+    {
+      "subject": "Bertrand Russell",
+      "object": "English",
+      "object_candidates": "Latin, Tamil, Spanish, Italian, Russian, Swedish, Polish, Japanese, Serbian, English",
+      "index": 4931
+    },
+    {
+      "subject": "Akira Kurosawa",
+      "object": "Japanese",
+      "object_candidates": "Tamil, Polish, Dutch, Russian, Spanish, Danish, German, Italian, English, Japanese",
+      "index": 4932
+    },
+    {
+      "subject": "Sully Prudhomme",
+      "object": "French",
+      "object_candidates": "Japanese, Russian, Swedish, Danish, English, Polish, Spanish, Dutch, Serbian, French",
+      "index": 4933
+    },
+    {
+      "subject": "Frantz Fanon",
+      "object": "French",
+      "object_candidates": "Spanish, Polish, German, Russian, Italian, Tamil, Latin, Swedish, Serbian, French",
+      "index": 4934
+    },
+    {
+      "subject": "Virginia Woolf",
+      "object": "English",
+      "object_candidates": "Swedish, Italian, French, Tamil, Japanese, Spanish, Dutch, Polish, Serbian, English",
+      "index": 4935
+    },
+    {
+      "subject": "Catherine Deneuve",
+      "object": "French",
+      "object_candidates": "German, English, Italian, Polish, Latin, Spanish, Swedish, Russian, Danish, French",
+      "index": 4936
+    },
+    {
+      "subject": "John Stuart Mill",
+      "object": "English",
+      "object_candidates": "Russian, Italian, Swedish, Dutch, Hebrew, German, Serbian, Japanese, Danish, English",
+      "index": 4937
+    },
+    {
+      "subject": "Laurent Fabius",
+      "object": "French",
+      "object_candidates": "Japanese, Polish, Tamil, Russian, Latin, Serbian, Italian, Dutch, Swedish, French",
+      "index": 4938
+    },
+    {
+      "subject": "Pablo Picasso",
+      "object": "Spanish",
+      "object_candidates": "Danish, Tamil, Swedish, Japanese, Dutch, Polish, Italian, French, Hebrew, Spanish",
+      "index": 4939
+    },
+    {
+      "subject": "Alphonse Daudet",
+      "object": "French",
+      "object_candidates": "Latin, Danish, Hebrew, Russian, Spanish, Serbian, Swedish, Dutch, Polish, French",
+      "index": 4940
+    },
+    {
+      "subject": "Alexandre Dumas fils",
+      "object": "French",
+      "object_candidates": "Polish, Tamil, Russian, Latin, Spanish, Italian, Swedish, German, Serbian, French",
+      "index": 4941
+    },
+    {
+      "subject": "Brian May",
+      "object": "English",
+      "object_candidates": "Russian, Hebrew, Italian, Swedish, Polish, Danish, Tamil, Spanish, Latin, English",
+      "index": 4942
+    },
+    {
+      "subject": "Georges-Louis Leclerc, Comte de Buffon",
+      "object": "French",
+      "object_candidates": "Tamil, Latin, Serbian, Japanese, Italian, Hebrew, Dutch, Swedish, Danish, French",
+      "index": 4943
+    },
+    {
+      "subject": "Rafael Alberti",
+      "object": "Spanish",
+      "object_candidates": "French, Japanese, Serbian, Swedish, Latin, Dutch, Tamil, Danish, Italian, Spanish",
+      "index": 4944
+    },
+    {
+      "subject": "Nikolay Nekrasov",
+      "object": "Russian",
+      "object_candidates": "French, Serbian, Danish, Italian, English, Dutch, Swedish, Hebrew, Spanish, Russian",
+      "index": 4945
+    },
+    {
+      "subject": "Zachary Taylor",
+      "object": "English",
+      "object_candidates": "Italian, Swedish, Tamil, Latin, Danish, Japanese, Hebrew, German, Polish, English",
+      "index": 4946
+    },
+    {
+      "subject": "Adam Sandler",
+      "object": "English",
+      "object_candidates": "Tamil, Swedish, Danish, Italian, Japanese, Serbian, Hebrew, German, Dutch, English",
+      "index": 4947
+    },
+    {
+      "subject": "Vera Lynn",
+      "object": "English",
+      "object_candidates": "Spanish, Danish, Italian, French, Japanese, Russian, Polish, German, Tamil, English",
+      "index": 4948
+    },
+    {
+      "subject": "James A. Garfield",
+      "object": "English",
+      "object_candidates": "German, Latin, Hebrew, French, Serbian, Danish, Spanish, Russian, Tamil, English",
+      "index": 4949
+    },
+    {
+      "subject": "Jean Anouilh",
+      "object": "French",
+      "object_candidates": "Latin, Italian, Spanish, German, Dutch, Danish, Russian, Polish, Hebrew, French",
+      "index": 4950
+    },
+    {
+      "subject": "Brigitte Bardot",
+      "object": "French",
+      "object_candidates": "Dutch, Russian, Latin, English, Swedish, Hebrew, Danish, Polish, Serbian, French",
+      "index": 4951
+    },
+    {
+      "subject": "Jacobus Henricus van 't Hoff",
+      "object": "Dutch",
+      "object_candidates": "Latin, Spanish, Swedish, Danish, Serbian, French, Italian, Tamil, German, Dutch",
+      "index": 4952
+    },
+    {
+      "subject": "Leslie Caron",
+      "object": "French",
+      "object_candidates": "Spanish, Dutch, Polish, Japanese, Tamil, Hebrew, Italian, English, Latin, French",
+      "index": 4953
+    },
+    {
+      "subject": "Jan Peter Balkenende",
+      "object": "Dutch",
+      "object_candidates": "Serbian, Japanese, Polish, Swedish, French, Danish, Hebrew, Spanish, Tamil, Dutch",
+      "index": 4954
+    },
+    {
+      "subject": "Giovanni Boccaccio",
+      "object": "Italian",
+      "object_candidates": "French, Dutch, Hebrew, Swedish, Spanish, Danish, Japanese, Latin, Serbian, Italian",
+      "index": 4955
+    },
+    {
+      "subject": "Sergey Lavrov",
+      "object": "Russian",
+      "object_candidates": "French, Danish, German, English, Japanese, Hebrew, Polish, Latin, Dutch, Russian",
+      "index": 4956
+    },
+    {
+      "subject": "Peter Kropotkin",
+      "object": "Russian",
+      "object_candidates": "German, Swedish, Italian, Spanish, Polish, French, Tamil, Latin, Japanese, Russian",
+      "index": 4957
+    },
+    {
+      "subject": "Jean de La Fontaine",
+      "object": "French",
+      "object_candidates": "Polish, Serbian, Swedish, Hebrew, German, Tamil, Russian, Dutch, Spanish, French",
+      "index": 4958
+    },
+    {
+      "subject": "Patrice Leconte",
+      "object": "French",
+      "object_candidates": "Hebrew, Japanese, Tamil, Spanish, Latin, Italian, English, Danish, Serbian, French",
+      "index": 4959
+    },
+    {
+      "subject": "Dmitry Medvedev",
+      "object": "Russian",
+      "object_candidates": "Dutch, Serbian, Danish, Japanese, Spanish, French, Polish, German, Latin, Russian",
+      "index": 4960
+    },
+    {
+      "subject": "Hendrik Lorentz",
+      "object": "Dutch",
+      "object_candidates": "Italian, French, German, Japanese, Spanish, Polish, Hebrew, English, Danish, Dutch",
+      "index": 4961
+    },
+    {
+      "subject": "Mikhail Khodorkovsky",
+      "object": "Russian",
+      "object_candidates": "Danish, Swedish, Polish, Spanish, English, Serbian, Tamil, Japanese, Hebrew, Russian",
+      "index": 4962
+    },
+    {
+      "subject": "Ovid",
+      "object": "Latin",
+      "object_candidates": "Danish, English, Serbian, Russian, German, Polish, Swedish, Hebrew, Spanish, Latin",
+      "index": 4963
+    },
+    {
+      "subject": "Vladimir Putin",
+      "object": "Russian",
+      "object_candidates": "Japanese, Hebrew, Latin, Dutch, Serbian, Swedish, Spanish, Polish, Danish, Russian",
+      "index": 4964
+    },
+    {
+      "subject": "Gustave Flaubert",
+      "object": "French",
+      "object_candidates": "Hebrew, English, Italian, Dutch, Serbian, Spanish, German, Latin, Danish, French",
+      "index": 4965
+    },
+    {
+      "subject": "Jean-Paul Belmondo",
+      "object": "French",
+      "object_candidates": "Italian, German, Dutch, Tamil, Polish, Hebrew, Japanese, Danish, Swedish, French",
+      "index": 4966
+    },
+    {
+      "subject": "Marc Chagall",
+      "object": "Russian",
+      "object_candidates": "English, Tamil, German, Latin, Italian, Polish, French, Hebrew, Danish, Russian",
+      "index": 4967
+    },
+    {
+      "subject": "Claude Bernard",
+      "object": "French",
+      "object_candidates": "Hebrew, Danish, Russian, Serbian, Spanish, Japanese, Latin, German, Italian, French",
+      "index": 4968
+    },
+    {
+      "subject": "Virginie Ledoyen",
+      "object": "French",
+      "object_candidates": "Japanese, Spanish, Dutch, Polish, Tamil, Hebrew, Russian, Latin, Serbian, French",
+      "index": 4969
+    },
+    {
+      "subject": "Douglas Adams",
+      "object": "English",
+      "object_candidates": "Swedish, German, Italian, Serbian, Latin, Spanish, Polish, Hebrew, Danish, English",
+      "index": 4970
+    },
+    {
+      "subject": "Ehud Olmert",
+      "object": "Hebrew",
+      "object_candidates": "English, Japanese, Tamil, Serbian, Swedish, Italian, Danish, Polish, French, Hebrew",
+      "index": 4971
+    },
+    {
+      "subject": "Charles Perrault",
+      "object": "French",
+      "object_candidates": "Tamil, Serbian, Swedish, Hebrew, Russian, German, Japanese, English, Italian, French",
+      "index": 4972
+    },
+    {
+      "subject": "Marcel Marceau",
+      "object": "French",
+      "object_candidates": "English, Spanish, Latin, Japanese, Serbian, German, Hebrew, Tamil, Swedish, French",
+      "index": 4973
+    },
+    {
+      "subject": "Virgil",
+      "object": "Latin",
+      "object_candidates": "French, Hebrew, Polish, Japanese, Swedish, Dutch, Russian, Italian, Danish, Latin",
+      "index": 4974
+    },
+    {
+      "subject": "Jeanne Moreau",
+      "object": "French",
+      "object_candidates": "Swedish, Polish, Dutch, Italian, Russian, Danish, Serbian, German, Spanish, French",
+      "index": 4975
+    },
+    {
+      "subject": "Jean Dujardin",
+      "object": "French",
+      "object_candidates": "Swedish, Japanese, Dutch, Hebrew, English, Spanish, Tamil, Danish, German, French",
+      "index": 4976
+    },
+    {
+      "subject": "Emmanuel Macron",
+      "object": "French",
+      "object_candidates": "Polish, Spanish, Swedish, German, Russian, Dutch, Italian, Latin, Danish, French",
+      "index": 4977
+    },
+    {
+      "subject": "A. P. J. Abdul Kalam",
+      "object": "Tamil",
+      "object_candidates": "English, Italian, Polish, German, Japanese, Spanish, Danish, Latin, Swedish, Tamil",
+      "index": 4978
+    },
+    {
+      "subject": "Barack Obama",
+      "object": "English",
+      "object_candidates": "Tamil, Dutch, Japanese, Russian, Hebrew, Latin, Serbian, German, Spanish, English",
+      "index": 4979
+    },
+    {
+      "subject": "Basshunter",
+      "object": "Swedish",
+      "object_candidates": "English, Latin, German, Polish, Danish, Italian, Spanish, French, Dutch, Swedish",
+      "index": 4980
+    },
+    {
+      "subject": "William Butler Yeats",
+      "object": "English",
+      "object_candidates": "German, Dutch, Danish, Serbian, Tamil, Russian, Polish, French, Spanish, English",
+      "index": 4981
+    },
+    {
+      "subject": "Arthur Conan Doyle",
+      "object": "English",
+      "object_candidates": "Serbian, Spanish, Swedish, French, German, Polish, Danish, Tamil, Dutch, English",
+      "index": 4982
+    }
+  ],
+  "relation_id": "P103"
+}

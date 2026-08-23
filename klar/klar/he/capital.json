@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "איפה ממוקמת הבירה של <subject>? התשובה היא: <mask>",
+    "מהי הבירה של <subject>? התשובה היא: <mask>",
+    "איזו עיר משמשת כבירה של <subject>? התשובה היא: <mask>",
+    "ציין את עיר הבירה של <subject>. התשובה היא: <mask>",
+    "איפה יש ל<subject> את הבירה שלה? התשובה היא: <mask>",
+    " עיר הבירה של <subject> נקראת <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "אזרבייג'ן",
+      "object": "באקו",
+      "object_candidates": "גוודלחרה, קולומבו, פיר, ג'ורג'טאון, ביירות, חלב, לינקולן, דרווין, בבל, באקו",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "נברסקה",
+      "object": "לינקולן",
+      "object_candidates": "אמסטרדם, דלהי, וינצ'סטר, דנוור, הובארט, טולוז, סלוניקי, סופיה, אקסטר, לינקולן",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "המפשייר",
+      "object": "וינצ'סטר",
+      "object_candidates": "אנאפוליס, פרת', ונציה, פלרמו, ניס, אנקרה, ג'קרטה, נאשוויל, המילטון, וינצ'סטר",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "מחוז אלכסנדריה",
+      "object": "אלכסנדריה",
+      "object_candidates": "בגדאד, טוקיו, בלפסט, ברגן, ריברסייד, ברצלונה, קרליסל, אוסלו, קיוטו, אלכסנדריה",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "ממלכת איטליה",
+      "object": "פירנצה",
+      "object_candidates": "אנאפוליס, קינגסטון, ויניפג, דנוור, וינצ'סטר, לינקולן, בוקרשט, וסטמינסטר, טולדו, פירנצה",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "הדוכסות הגדולה של פינלנד",
+      "object": "הלסינקי",
+      "object_candidates": "אדו, מדריד, קאזאן, טריפולי, לונדון, כרייסטצ'רץ', מיינץ, וינה, ברן, הלסינקי",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "טלנגאנה",
+      "object": "היידראבאד",
+      "object_candidates": "ונציה, ברטיסלאבה, אדלייד, מונטגומרי, מומבאי, טאלין, אוטווה, הלסינקי, ניס, היידראבאד",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "אוסטרליה הדרומית",
+      "object": "אדלייד",
+      "object_candidates": "סיאול, צ'ארלסטון, לוזאן, קארדיף, ממפיס, הרפורד, טירנה, אדו, נאפולי, אדלייד",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "ממלכת סקוטלנד",
+      "object": "אדינבורו",
+      "object_candidates": "לאקנאו, פרובידנס, טירנה, טור, בארי, אנקרה, שאיין, סרייבו, זאגרב, אדינבורו",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "הרפובליקה הפולנית השנייה",
+      "object": "ורשה",
+      "object_candidates": "הרטפורד, טורונטו, באקו, קונסטנטינופול, וילנה, דרווין, קינגסטון, מיאמי, אוקספורד, ורשה",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "קנטרברי",
+      "object": "כרייסטצ'רץ'",
+      "object_candidates": "הובארט, ג'נובה, קנברה, ביסמרק, בריסל, בייג'ינג, ולנסיה, מיינץ, הרפורד, כרייסטצ'רץ'",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "ממלכת צרפת",
+      "object": "פריז",
+      "object_candidates": "ליסבון, וסטמינסטר, בריסל, אוטווה, דרזדן, היידראבאד, מינכן, צ'נאי, בייג'ינג, פריז",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "אלברטה",
+      "object": "אדמונטון",
+      "object_candidates": "קורק, הליפקס, בויסי, ברסט, בגדאד, וסטמינסטר, דלהי, טאלין, אדלייד, אדמונטון",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "גרמניה",
+      "object": "ברלין",
+      "object_candidates": "אנאפוליס, ליובליאנה, פלרמו, נאפולי, ירושלים, אוסלו, ברן, איסטנבול, קאזאן, ברלין",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "אינדיאנה",
+      "object": "אינדיאנפוליס",
+      "object_candidates": "קולקטה, צ'נאי, קולומביה, אודסה, טאיפיי, הוואנה, דובאי, פראג, קיימברידג', אינדיאנפוליס",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "הקיסרות השנייה",
+      "object": "פריז",
+      "object_candidates": "קופנהגן, לאנסינג, בולוניה, אדלייד, אוקלנד, ברגן, אוטווה, מנילה, ירושלים, פריז",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "קיימברידג'שייר",
+      "object": "קיימברידג'",
+      "object_candidates": "דלהי, לינקולן, קיל, בוקרשט, ברצלונה, קייב, המילטון, נאנג'ינג, טולוז, קיימברידג'",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "ממלכת סיציליה הנורמנית",
+      "object": "נאפולי",
+      "object_candidates": "סטוקהולם, קיוטו, פיר, קנברה, אוקלנד, מוסקבה, פראג, קאזאן, דבלין, נאפולי",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "אנדר ולואר",
+      "object": "טור",
+      "object_candidates": "ג'ורג'טאון, ברלין, איסטנבול, מונטווידאו, קראצ'י, ג'קרטה, בריסל, וינה, ברצלונה, טור",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "פוליה",
+      "object": "בארי",
+      "object_candidates": "ווטרפורד, סנטיאגו דה צ'ילה, הרפורד, ירושלים, גולוויי, לאנסינג, לאקנאו, מיאמי, האריסברג, בארי",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "פלנדריה המזרחית",
+      "object": "גנט",
+      "object_candidates": "מיינץ, ג'קסון, סירקוזה, קייב, מומבאי, אמסטרדם, טור, ווסטר, סקרמנטו, גנט",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "דנמרק",
+      "object": "קופנהגן",
+      "object_candidates": "ג'קרטה, פירנצה, וילנה, אדו, ליל, מנילה, טולדו, נאפולי, ממפיס, קופנהגן",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "מישיגן",
+      "object": "לאנסינג",
+      "object_candidates": "דנידין, דלהי, פירנצה, דבלין, סקרמנטו, ליסבון, קיימברידג', אדמונטון, סאגה, לאנסינג",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "השושלת האיובית",
+      "object": "קהיר",
+      "object_candidates": "קנברה, גלוסטר, רומא, לונדון, ג'נובה, מכה, ווטרפורד, נאנג'ינג, אל-מדינה, קהיר",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "חליפות ראשידון",
+      "object": "אל-מדינה",
+      "object_candidates": "סביליה, ויניפג, ברטיסלאבה, בריסל, מינכן, טאלין, פריז, סקרמנטו, טור, אל-מדינה",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "שוגונות טוקוגאווה",
+      "object": "אדו",
+      "object_candidates": "פלמה דה מיורקה, האריסברג, הלסינקי, מילאנו, ויניפג, טאלין, לסטר, בבל, קונקורד, אדו",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "ברית המועצות",
+      "object": "מוסקבה",
+      "object_candidates": "ברצלונה, טריפולי, בבל, ביירות, וסטמינסטר, באקו, בורדו, נאשוויל, הונולולו, מוסקבה",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ממלכת רומניה",
+      "object": "בוקרשט",
+      "object_candidates": "עדן, הליפקס, טוקיו, אוקלנד, סנטיאגו דה צ'ילה, קינגסטון, ברצלונה, ירושלים, טאיפיי, בוקרשט",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "טסמניה",
+      "object": "הובארט",
+      "object_candidates": "קיימברידג', וינה, ברגן, ברן, אדמונטון, ריגה, נאפולי, מדיסון, לינקולן, הובארט",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "מחוז לימריק",
+      "object": "לימריק",
+      "object_candidates": "סלוניקי, קולומביה, לסטר, סיאטל, פירנצה, קולומבוס, ויניפג, קראקס, קונסטנטינופול, לימריק",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "השושלת הפאטמית",
+      "object": "קהיר",
+      "object_candidates": "לונדון, דרווין, אוטווה, סלוניקי, ריברסייד, פריז, ברלין, קייב, הירושימה, קהיר",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "אוקלנד",
+      "object": "אוקלנד",
+      "object_candidates": "קופנהגן, לסטר, סופיה, אנאפוליס, לוזאן, הירושימה, אלג'יר, גפ, אוקספורד, אוקלנד",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "ניו המפשייר",
+      "object": "קונקורד",
+      "object_candidates": "צ'ארלסטון, קיוטו, זלצבורג, ריברסייד, בריזבן, טורונטו, לובלין, בורדו, אדינבורו, קונקורד",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "מחוז אודסה",
+      "object": "אודסה",
+      "object_candidates": "פרת', ריצ'מונד, טור, חלב, טולוז, מכה, בבל, זאגרב, גלוסטר, אודסה",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "אוסטרליה",
+      "object": "קנברה",
+      "object_candidates": "הנובר, אקסטר, דנוור, הרפורד, מנצ'סטר, הירושימה, אוטווה, ג'קסון, סאלם, קנברה",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "האימפריה העות'מאנית",
+      "object": "איסטנבול",
+      "object_candidates": "טאיפיי, ג'נובה, בולוניה, ביירות, זאגרב, פירנצה, המילטון, ברצלונה, ירוואן, איסטנבול",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "דרום-מערב אנגליה",
+      "object": "בריסטול",
+      "object_candidates": "באקו, אנקרה, מדיסון, ביירות, וינה, בוסטון, בארי, קיוטו, אאוגסבורג, בריסטול",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "טקסס",
+      "object": "אוסטין",
+      "object_candidates": "בלגרד, מיאמי, קארדיף, ליובליאנה, ברן, ממפיס, רומא, קולומבו, שטרסבורג, אוסטין",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "האימפריה הלטינית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "פיר, פריז, קולומבוס, ווטרפורד, מונטווידאו, בודפשט, הוואנה, לאקנאו, מדיסון, קונסטנטינופול",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "הונגריה",
+      "object": "בודפשט",
+      "object_candidates": "גלוסטר, ולנסיה, נגויה, קרליסל, אוקספורד, בזל, אינדיאנפוליס, קיל, אמסטרדם, בודפשט",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "רוסיה",
+      "object": "מוסקבה",
+      "object_candidates": "ירושלים, שאיין, הירושימה, צ'ארלסטון, גולוויי, אוסטין, לימה, סאגה, אקסטר, מוסקבה",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ונטו",
+      "object": "ונציה",
+      "object_candidates": "מכה, הירושימה, אדו, ניירובי, דמשק, ברגן, פרת', וינה, קולקטה, ונציה",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "ווסטרשייר",
+      "object": "ווסטר",
+      "object_candidates": "מונטווידאו, קיל, קולומביה, טורינו, אדו, קופנהגן, ולנסיה, לבוב, טריפולי, ווסטר",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "ממלכת סיציליה הנורמנית",
+      "object": "פלרמו",
+      "object_candidates": "ירוואן, קולומביה, פראג, ג'ורג'טאון, אתונה, וסטמינסטר, גואנגג'ואו, יוקוהמה, דלהי, פלרמו",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "פנסילבניה",
+      "object": "האריסברג",
+      "object_candidates": "הנובר, סביליה, אנקרה, קיל, הונולולו, קארדיף, הירושימה, פראג, ברסט, האריסברג",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "מדינת האפיפיור",
+      "object": "רומא",
+      "object_candidates": "פירנצה, צ'ארלסטון, אוסלו, אלכסנדריה, מדיסון, גוודלחרה, רג'יינה, לאנסינג, ג'נובה, רומא",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "מחוז גולוויי",
+      "object": "גולוויי",
+      "object_candidates": "בבל, ראלי, טרנטון, קונסטנטינופול, פיניקס, מדריד, איסטנבול, גוודלחרה, האריסברג, גולוויי",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "האימפריה האוסטרית",
+      "object": "וינה",
+      "object_candidates": "האריסברג, סופיה, המילטון, לינקולן, אוסטין, טולוז, טירנה, רג'יינה, נאשוויל, וינה",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "איי הודו המזרחיים ההולנדים",
+      "object": "ג'קרטה",
+      "object_candidates": "ביירות, ירושלים, דנידין, וילנה, וינה, בריזבן, סרייבו, בזל, מונטגומרי, ג'קרטה",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "ישראל",
+      "object": "ירושלים",
+      "object_candidates": "אדו, קורק, מומבאי, סקרמנטו, בוסטון, ברן, אוסטין, מיאמי, ביסמרק, ירושלים",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "אאיצ'י",
+      "object": "נגויה",
+      "object_candidates": "מינכן, קינגסטון, קורק, מונטגומרי, מיינץ, אודסה, הרטפורד, מנצ'סטר, דלהי, נגויה",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "לסטרשייר",
+      "object": "לסטר",
+      "object_candidates": "מיינץ, סנטיאגו דה צ'ילה, מדיסון, כרייסטצ'רץ', אקסטר, ג'קרטה, הרפורד, בזל, אאוגסבורג, לסטר",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "מחוז קינג",
+      "object": "סיאטל",
+      "object_candidates": "מילאנו, מדריד, אקסטר, צ'נאי, קראקס, קייב, מוסקבה, קארדיף, וסטמינסטר, סיאטל",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "דוכסות אתונה",
+      "object": "אתונה",
+      "object_candidates": "ולנסיה, טירנה, סאגה, לוזאן, בלגרד, ברסט, ניס, ספרינגפילד, טהראן, אתונה",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "ממלכת ארצות השפלה",
+      "object": "אמסטרדם",
+      "object_candidates": "ברלין, לובלין, טהראן, אלכסנדריה, המילטון, ביירות, ירושלים, וינצ'סטר, סלוניקי, אמסטרדם",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "אלבניה",
+      "object": "טירנה",
+      "object_candidates": "דרווין, קיוטו, ורשה, המילטון, ריצ'מונד, בנגלור, הנובר, טאלין, דנידין, טירנה",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "ג'נובה",
+      "object": "ג'נובה",
+      "object_candidates": "דלהי, ווטרפורד, בריסל, פרובידנס, המילטון, האריסברג, מנצ'סטר, ראלי, ונציה, ג'נובה",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "טאיוואן",
+      "object": "טאיפיי",
+      "object_candidates": "קולקטה, קהיר, סיאטל, אוסטין, גנט, גפ, ליובליאנה, קייב, אנקרה, טאיפיי",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "צ'כוסלובקיה",
+      "object": "פראג",
+      "object_candidates": "בויסי, ווטרפורד, גוודלחרה, מונטווידאו, קולקטה, אדו, סלוניקי, מיאמי, ריצ'מונד, פראג",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "דובאי",
+      "object": "דובאי",
+      "object_candidates": "מיינץ, ספרינגפילד, ליסבון, ויקטוריה, קינגסטון, אדינבורו, ברטיסלאבה, גולוויי, מכה, דובאי",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "דקוטה הצפונית",
+      "object": "ביסמרק",
+      "object_candidates": "מכה, וינצ'סטר, נאנג'ינג, הונולולו, טריפולי, מדריד, היידראבאד, ברגן, בזל, ביסמרק",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "אנדלוסיה",
+      "object": "סביליה",
+      "object_candidates": "הירושימה, קהיר, ג'ורג'טאון, סרייבו, שטרסבורג, טרנטון, טוקיו, ורשה, הלסינקי, סביליה",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "מהאראשטרה",
+      "object": "מומבאי",
+      "object_candidates": "ורשה, גנט, אמסטרדם, מינכן, ויניפג, אדמונטון, ג'קסון, לאנסינג, ווטרפורד, מומבאי",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "קרנאטקה",
+      "object": "בנגלור",
+      "object_candidates": "דרזדן, ביסמרק, ריצ'מונד, לאנסינג, אדו, ברטיסלאבה, קנברה, ג'ורג'טאון, קארדיף, בנגלור",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "אינדונזיה",
+      "object": "ג'קרטה",
+      "object_candidates": "כרמאן, נאנג'ינג, אינדיאנפוליס, ויקטוריה, טורינו, וינצ'סטר, קולומבו, טורונטו, אוטווה, ג'קרטה",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "הרפובליקה הסוציאלית האיטלקית",
+      "object": "רומא",
+      "object_candidates": "פיניקס, אוסלו, זאגרב, אנאפוליס, אלכסנדריה, ווסטר, ריצ'מונד, בויסי, אוקלנד, רומא",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ממלכת הבסבורג",
+      "object": "וינה",
+      "object_candidates": "הליפקס, לוזאן, ביסמרק, דנוור, לימה, דלהי, קולומבוס, קולומבו, אדלייד, וינה",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "פורטוגל",
+      "object": "ליסבון",
+      "object_candidates": "דמשק, מונטגומרי, אקסטר, טורינו, אדמונטון, ניס, המילטון, אאוגסבורג, הוואנה, ליסבון",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "האיים הבלאריים",
+      "object": "פלמה דה מיורקה",
+      "object_candidates": "סיאול, ונציה, אדלייד, בבל, ביירות, מוסקבה, לאנסינג, טורינו, כרייסטצ'רץ', פלמה דה מיורקה",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "בולוניה",
+      "object": "בולוניה",
+      "object_candidates": "ויניפג, קארדיף, מומבאי, וינצ'סטר, ורשה, ברצלונה, טאלין, ברגן, פלמה דה מיורקה, בולוניה",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "קובה",
+      "object": "הוואנה",
+      "object_candidates": "מונטווידאו, מוסקבה, ביסמרק, שטרסבורג, דרווין, שאיין, טורונטו, בריזבן, ליובליאנה, הוואנה",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "פרובינציית טולדו",
+      "object": "טולדו",
+      "object_candidates": "קראצ'י, בארי, סאלם, אוסטין, גולוויי, אוסלו, קולומביה, כרמאן, ורשה, טולדו",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "סיינה",
+      "object": "סיינה",
+      "object_candidates": "ג'ורג'טאון, בייג'ינג, פלרמו, בריסטול, מינכן, נגויה, טירנה, ונציה, קיימברידג', סיינה",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "מחוז הונולולו",
+      "object": "הונולולו",
+      "object_candidates": "מנצ'סטר, ברלין, סירקוזה, פרסטון, גולוויי, ג'ורג'טאון, אאוגסבורג, אמסטרדם, לובלין, הונולולו",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "האימפריה הרומית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "מונטווידאו, זלצבורג, גנט, סיינה, בנגקוק, פרובידנס, בארי, מילאנו, ברלין, קונסטנטינופול",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "קונטיקט",
+      "object": "הרטפורד",
+      "object_candidates": "אינדיאנפוליס, סלוניקי, דמשק, סיאטל, מדיסון, פלרמו, אקסטר, וינה, היידראבאד, הרטפורד",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "סקוטלנד",
+      "object": "אדינבורו",
+      "object_candidates": "ראלי, אלג'יר, וינה, הלסינקי, דנידין, סטוקהולם, ווסטר, סאלם, ריברסייד, אדינבורו",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "אנקרה",
+      "object": "אנקרה",
+      "object_candidates": "טאיפיי, סטוקהולם, הירושימה, אמסטרדם, מינכן, חלב, ברן, אל-מדינה, בוסטון, אנקרה",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "לאציו",
+      "object": "רומא",
+      "object_candidates": "איסטנבול, ברסט, בריסל, קורק, בוקרשט, נאשוויל, סנטיאגו דה צ'ילה, אלכסנדריה, אל-מדינה, רומא",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "הרפובליקה העממית הפולנית",
+      "object": "ורשה",
+      "object_candidates": "קיוטו, סידני, גוודלחרה, מיינץ, קיל, ויקטוריה, בון, ווטרפורד, ויניפג, ורשה",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "בזל-שטאדט",
+      "object": "בזל",
+      "object_candidates": "פלרמו, אאוגסבורג, מוסקבה, קנברה, צ'נאי, ירוואן, ווסטר, אודסה, סביליה, בזל",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "קליפורניה",
+      "object": "סקרמנטו",
+      "object_candidates": "טירנה, ברצלונה, איסטנבול, מינסק, ליל, ולנסיה, בודפשט, ווטרפורד, דרווין, סקרמנטו",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "זלצבורג",
+      "object": "זלצבורג",
+      "object_candidates": "ניס, הרפורד, גלוסטר, אודסה, סידני, לאנסינג, סלוניקי, טריפולי, הליפקס, זלצבורג",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "קיוטו",
+      "object": "קיוטו",
+      "object_candidates": "נאשוויל, סירקוזה, ג'נובה, הרפורד, ג'ורג'טאון, סביליה, אלג'יר, מיינץ, לאנסינג, קיוטו",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "פירנצה",
+      "object": "פירנצה",
+      "object_candidates": "אנאפוליס, טולדו, מנילה, פראג, וינה, ראלי, קראקס, אדו, ליל, פירנצה",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "עיראק",
+      "object": "בגדאד",
+      "object_candidates": "טוקיו, דאקה, מוסקבה, אוסטין, סאגה, קורק, פיניקס, אוסלו, מכה, בגדאד",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "קמפניה",
+      "object": "נאפולי",
+      "object_candidates": "טוקיו, נאשוויל, קאבול, מונטווידאו, קראצ'י, ולנסיה, וילנה, בגדאד, מדריד, נאפולי",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "יפן",
+      "object": "טוקיו",
+      "object_candidates": "פלמה דה מיורקה, קהיר, רומא, סקרמנטו, היידראבאד, פריז, טולוז, קורק, גפ, טוקיו",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "מחוז מיאמי-דייד",
+      "object": "מיאמי",
+      "object_candidates": "ברסט, אאוגסבורג, ריגה, בארי, טולוז, מינכן, ניירובי, מנילה, מכה, מיאמי",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "מחוז כרמאן",
+      "object": "כרמאן",
+      "object_candidates": "טורינו, דאקה, צ'נאי, טוקיו, מיאמי, קרליסל, שטרסבורג, טירנה, בולוניה, כרמאן",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "האלפים הימיים",
+      "object": "ניס",
+      "object_candidates": "סיינה, לבוב, ברטיסלאבה, בריזבן, טוקיו, בייג'ינג, קיימברידג', אוקספורד, הוואנה, ניס",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "אסטוניה",
+      "object": "טאלין",
+      "object_candidates": "זאגרב, טורינו, דמשק, לובלין, בולוניה, טרנטון, קולומביה, וינה, קולקטה, טאלין",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "אוסטרליה המערבית",
+      "object": "פרת'",
+      "object_candidates": "בוסטון, לאנסינג, ליובליאנה, לימריק, קאבול, מדיסון, רג'יינה, אקסטר, אוקלנד, פרת'",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "מחוז לבוב",
+      "object": "לבוב",
+      "object_candidates": "כרמאן, אדלייד, בגדאד, פלרמו, שאיין, גנט, דלהי, ירושלים, דבלין, לבוב",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "ניו סאות' ויילס",
+      "object": "סידני",
+      "object_candidates": "ברטיסלאבה, בזל, ליסבון, ויקטוריה, טאיפיי, פרסטון, טורונטו, סופיה, הונולולו, סידני",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "מחוז ריברסייד",
+      "object": "ריברסייד",
+      "object_candidates": "באקו, הנובר, דובאי, אוטווה, מיינץ, פלרמו, ליל, סקרמנטו, דנידין, ריברסייד",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "ונצואלה",
+      "object": "קראקס",
+      "object_candidates": "מילאנו, צ'ארלסטון, סיאטל, סופיה, הובארט, קורק, וילנה, לאנסינג, טריפולי, קראקס",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "מניטובה",
+      "object": "ויניפג",
+      "object_candidates": "אלג'יר, פלמה דה מיורקה, קנברה, הוואנה, הונולולו, אוקספורד, לימה, בגדאד, גוודלחרה, ויניפג",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "ממלכת איטליה",
+      "object": "טורינו",
+      "object_candidates": "דאקה, הרטפורד, ברן, קולומבוס, בויסי, עדן, אוסלו, ביירות, בורדו, טורינו",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "לומברדיה",
+      "object": "מילאנו",
+      "object_candidates": "ורשה, פירנצה, מונטגומרי, אדו, טרנטון, אל-מדינה, היידראבאד, סנטיאגו דה צ'ילה, אדלייד, מילאנו",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "איראן",
+      "object": "טהראן",
+      "object_candidates": "טריפולי, טורונטו, אדמונטון, הליפקס, גלוסטר, אל-מדינה, איסטנבול, טולוז, סופיה, טהראן",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "ממלכת בריטניה הגדולה",
+      "object": "לונדון",
+      "object_candidates": "מינכן, רג'יינה, טורינו, זלצבורג, זאגרב, הרפורד, בארי, סטוקהולם, לימריק, לונדון",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "לוב",
+      "object": "טריפולי",
+      "object_candidates": "יוקוהמה, פרסטון, אלכסנדריה, אנאפוליס, ביסמרק, חלב, ג'קרטה, אל-מדינה, אדלייד, טריפולי",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "נסיכות מוסקבה",
+      "object": "מוסקבה",
+      "object_candidates": "דרזדן, מכה, פלמה דה מיורקה, האריסברג, גפ, טורונטו, ריצ'מונד, עדן, בורדו, מוסקבה",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "טריטוריית הבירה האוסטרלית",
+      "object": "קנברה",
+      "object_candidates": "בלפסט, פרת', בריזבן, קיוטו, בנגקוק, קאבול, ליובליאנה, ברלין, מומבאי, קנברה",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "צרפת של וישי",
+      "object": "פריז",
+      "object_candidates": "לובלין, אלג'יר, ניירובי, ביסמרק, כרייסטצ'רץ', ויניפג, גפ, ברגן, אוסטין, פריז",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ריין תחתון",
+      "object": "שטרסבורג",
+      "object_candidates": "פלמה דה מיורקה, קולומביה, רג'יינה, חלב, מומבאי, קרליסל, קולומבוס, בנגלור, ווטרפורד, שטרסבורג",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "מחוז וילנה",
+      "object": "וילנה",
+      "object_candidates": "סרייבו, אינדיאנפוליס, שאיין, קולקטה, אדו, קיוטו, ממפיס, נגויה, טורינו, וילנה",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "בריסל",
+      "object": "בריסל",
+      "object_candidates": "מדיסון, טירנה, קולומביה, נאשוויל, אמסטרדם, אאוגסבורג, אדינבורו, הובארט, ולנסיה, בריסל",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "ססקצ'ואן",
+      "object": "רג'יינה",
+      "object_candidates": "טורונטו, ברגן, סרייבו, טהראן, בנגקוק, פלמה דה מיורקה, סנטיאגו דה צ'ילה, ונציה, ספרינגפילד, רג'יינה",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "מחוז טהראן",
+      "object": "טהראן",
+      "object_candidates": "בייג'ינג, פריז, טאיפיי, גלוסטר, איסטנבול, סקרמנטו, צ'נאי, ולנסיה, קייב, טהראן",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "אמיליה-רומאניה",
+      "object": "בולוניה",
+      "object_candidates": "סיינה, קולומבו, ספרינגפילד, אוסטין, סיאטל, אוקלנד, מנילה, לובלין, בודפשט, בולוניה",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "אירלנד",
+      "object": "דבלין",
+      "object_candidates": "המילטון, אמסטרדם, גנט, נאשוויל, בריזבן, וילנה, ג'קסון, ג'ורג'טאון, סאלם, דבלין",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "אורוגוואי",
+      "object": "מונטווידאו",
+      "object_candidates": "ברן, הליפקס, טוקיו, ספרינגפילד, דלהי, ביירות, זאגרב, ווסטר, קרליסל, מונטווידאו",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "הממלכה האחמנית",
+      "object": "בבל",
+      "object_candidates": "אלג'יר, פיר, סיאול, בנגלור, דאקה, ורשה, ביסמרק, קייב, היידראבאד, בבל",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "פרו",
+      "object": "לימה",
+      "object_candidates": "קולומבוס, לסטר, ולנסיה, ראלי, גלוסטר, ברגן, קרליסל, אדו, ג'נובה, לימה",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "סרי לנקה",
+      "object": "קולומבו",
+      "object_candidates": "ווטרפורד, אקסטר, המילטון, ג'ורג'טאון, ויניפג, כרמאן, ליסבון, צ'נאי, טולדו, קולומבו",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "בית המלוכה העיראקי",
+      "object": "בגדאד",
+      "object_candidates": "אדינבורו, בארי, טולוז, ברגן, טולדו, הלסינקי, זאגרב, פרסטון, סאגה, בגדאד",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "קונפדרציית המדינות של אמריקה",
+      "object": "מונטגומרי",
+      "object_candidates": "אל-מדינה, סביליה, לבוב, ליובליאנה, ראלי, נאשוויל, ויניפג, ריצ'מונד, בורדו, מונטגומרי",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "ממלכת סרביה",
+      "object": "בלגרד",
+      "object_candidates": "לונדון, קייב, לימה, זלצבורג, רומא, וילנה, בון, פיניקס, פירנצה, בלגרד",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "מחוז ווטרפורד",
+      "object": "ווטרפורד",
+      "object_candidates": "סקרמנטו, קולומבוס, דבלין, האריסברג, רומא, ולנסיה, ברלין, אוקלנד, ליסבון, ווטרפורד",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "סרביה ומונטנגרו",
+      "object": "בלגרד",
+      "object_candidates": "בזל, ברצלונה, ריגה, באקו, סטוקהולם, דובאי, ולנסיה, מיאמי, קונסטנטינופול, בלגרד",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "אוקראינה",
+      "object": "קייב",
+      "object_candidates": "נגויה, טוקיו, לימריק, ולנסיה, בריסל, לובלין, וסטמינסטר, ויניפג, ג'נובה, קייב",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "בוסניה והרצגובינה",
+      "object": "סרייבו",
+      "object_candidates": "הנובר, אנקרה, בייג'ינג, דמשק, קראצ'י, בורדו, אינדיאנפוליס, סידני, ויקטוריה, סרייבו",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "ארמניה",
+      "object": "ירוואן",
+      "object_candidates": "מומבאי, לימריק, קנברה, מילאנו, בון, אודסה, הרפורד, ממפיס, סידני, ירוואן",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "בית עבאס",
+      "object": "דמשק",
+      "object_candidates": "ממפיס, ברטיסלאבה, קולומביה, ברן, בוסטון, קיל, הלסינקי, סיינה, אדו, דמשק",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "חליסקו",
+      "object": "גוודלחרה",
+      "object_candidates": "מכה, ג'קסון, יוקוהמה, ווסטר, ג'נובה, ג'קרטה, מוסקבה, סרייבו, אנקרה, גוודלחרה",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "בנגלדש",
+      "object": "דאקה",
+      "object_candidates": "קראקס, אתונה, לונדון, ביסמרק, נגויה, רומא, ברסט, מנילה, טאיפיי, דאקה",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "אלבמה",
+      "object": "מונטגומרי",
+      "object_candidates": "ווטרפורד, פראג, כרמאן, דרווין, לימה, באקו, בבל, בנגקוק, דמשק, מונטגומרי",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "אילינוי",
+      "object": "ספרינגפילד",
+      "object_candidates": "ביסמרק, דמשק, אלכסנדריה, לאנסינג, דבלין, בודפשט, גפ, בלגרד, טולוז, ספרינגפילד",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "לינקולנשייר",
+      "object": "לינקולן",
+      "object_candidates": "בויסי, ויקטוריה, קרליסל, אלג'יר, ווסטר, בנגלור, האריסברג, אינדיאנפוליס, פריז, לינקולן",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "האימפריה הספרדית",
+      "object": "מדריד",
+      "object_candidates": "מכה, טרנטון, איסטנבול, בלפסט, סיאול, עדן, גלוסטר, ברטיסלאבה, ליסבון, מדריד",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "נור-פה דה קאלה",
+      "object": "ליל",
+      "object_candidates": "בלפסט, צ'ארלסטון, ג'נובה, קרליסל, בורדו, בון, קולומביה, פרת', גפ, ליל",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "ויסקונסין",
+      "object": "מדיסון",
+      "object_candidates": "קאזאן, טורונטו, קראצ'י, גוודלחרה, נגויה, אוטווה, גנט, בריסל, בארי, מדיסון",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "סיציליה",
+      "object": "פלרמו",
+      "object_candidates": "מונטווידאו, אדמונטון, בגדאד, ניירובי, בזל, אוסלו, רג'יינה, קרליסל, אדלייד, פלרמו",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "ממלכת אירלנד",
+      "object": "דבלין",
+      "object_candidates": "אוטווה, בריזבן, קראקס, קולומבוס, ליובליאנה, נגויה, סיינה, גואנגג'ואו, פרובידנס, דבלין",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "הפיליפינים",
+      "object": "מנילה",
+      "object_candidates": "לימה, מדריד, לאנסינג, הוואנה, הליפקס, טולדו, מילאנו, טריפולי, קארדיף, מנילה",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "הרפובליקה של ונציה",
+      "object": "ונציה",
+      "object_candidates": "גולוויי, אוסטין, נאשוויל, איסטנבול, ויקטוריה, ניירובי, אלכסנדריה, ווסטר, אדלייד, ונציה",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "מחוז חלב",
+      "object": "חלב",
+      "object_candidates": "מומבאי, ונציה, ברגן, קראקס, סאגה, לימה, אוטווה, אלג'יר, בריזבן, חלב",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "קולורדו",
+      "object": "דנוור",
+      "object_candidates": "שטרסבורג, דמשק, טריפולי, דלהי, בוקרשט, מיאמי, דבלין, לימריק, ירושלים, דנוור",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "יוון",
+      "object": "אתונה",
+      "object_candidates": "ג'ורג'טאון, מכה, טרנטון, דנוור, ליסבון, שטרסבורג, גואנגג'ואו, חלב, אוקספורד, אתונה",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "המדינה העצמאית של קרואטיה",
+      "object": "זאגרב",
+      "object_candidates": "אוסטין, בארי, פרת', הליפקס, הלסינקי, מילאנו, טולוז, דבלין, שטרסבורג, זאגרב",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "הולנד",
+      "object": "אמסטרדם",
+      "object_candidates": "עדן, סירקוזה, לונדון, גנט, אלכסנדריה, ג'נובה, טולוז, הובארט, בבל, אמסטרדם",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "אריזונה",
+      "object": "פיניקס",
+      "object_candidates": "קארדיף, עדן, קולומבו, גנט, מונטווידאו, לבוב, קונסטנטינופול, ממפיס, פריז, פיניקס",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "איטליה",
+      "object": "רומא",
+      "object_candidates": "ג'קסון, כרייסטצ'רץ', אוטווה, שטרסבורג, לונדון, בלפסט, אדלייד, דלהי, בוקרשט, רומא",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ממלכת יוגוסלביה",
+      "object": "בלגרד",
+      "object_candidates": "שטרסבורג, בנגקוק, סיאול, אדלייד, סאגה, קרליסל, קינגסטון, צ'נאי, טוקיו, בלגרד",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "הממלכה המאוחדת",
+      "object": "לונדון",
+      "object_candidates": "ג'ורג'טאון, פרסטון, קרליסל, ירושלים, בון, ביירות, ברסט, ניירובי, בודפשט, לונדון",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "הרפובליקה העממית הסוציאליסטית של אלבניה",
+      "object": "טירנה",
+      "object_candidates": "בון, בגדאד, טולדו, לבוב, בולוניה, אוקלנד, סידני, טוקיו, קופנהגן, טירנה",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "סרביה",
+      "object": "בלגרד",
+      "object_candidates": "אדלייד, קולומבוס, בנגלור, קולומביה, ירושלים, פירנצה, קינגסטון, קונסטנטינופול, מיאמי, בלגרד",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "ממלכת לוב",
+      "object": "טריפולי",
+      "object_candidates": "קולומביה, טולוז, וינה, מיינץ, קינגסטון, מונטגומרי, צ'נאי, קרליסל, גולוויי, טריפולי",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "קנדה",
+      "object": "אוטווה",
+      "object_candidates": "דנוור, ירושלים, גפ, בריסטול, אאוגסבורג, יוקוהמה, ספרינגפילד, ברן, שאיין, אוטווה",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "קנאגווה",
+      "object": "יוקוהמה",
+      "object_candidates": "ירוואן, בארי, אוקספורד, סביליה, מנצ'סטר, וינה, בנגלור, פרובידנס, קינגסטון, יוקוהמה",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "מחוז מרכז בוהמיה",
+      "object": "פראג",
+      "object_candidates": "מיאמי, דנידין, סאלם, ג'קרטה, דלהי, צ'ארלסטון, מונטווידאו, בגדאד, כרייסטצ'רץ', פראג",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "צרפת",
+      "object": "פריז",
+      "object_candidates": "מוסקבה, מנצ'סטר, לסטר, פרת', ליל, ורשה, ממפיס, סידני, ג'קסון, פריז",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "בולגריה",
+      "object": "סופיה",
+      "object_candidates": "ווטרפורד, בזל, האריסברג, סאגה, פראג, דנידין, אלכסנדריה, קופנהגן, אתונה, סופיה",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "דבון",
+      "object": "אקסטר",
+      "object_candidates": "הירושימה, אינדיאנפוליס, לאקנאו, טאלין, מינסק, מיאמי, אאוגסבורג, לובלין, פריז, אקסטר",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "מרכז מקדוניה",
+      "object": "סלוניקי",
+      "object_candidates": "מכה, קיל, עדן, פיר, מונטווידאו, מדריד, סרייבו, קינגסטון, דלהי, סלוניקי",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "אמירות סיציליה",
+      "object": "פלרמו",
+      "object_candidates": "וינצ'סטר, אוקספורד, קונקורד, ורשה, קייב, קראקס, מיאמי, בייג'ינג, אדמונטון, פלרמו",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "גיאנה",
+      "object": "ג'ורג'טאון",
+      "object_candidates": "אלכסנדריה, בזל, ברסט, גואנגג'ואו, בגדאד, צ'נאי, הירושימה, ליל, אדלייד, ג'ורג'טאון",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "ממלכת הונגריה",
+      "object": "בודפשט",
+      "object_candidates": "נאנג'ינג, וסטמינסטר, קולומביה, בוסטון, בזל, לוזאן, מילאנו, הלסינקי, סיאטל, בודפשט",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "סקסוניה",
+      "object": "דרזדן",
+      "object_candidates": "קראקס, פרובידנס, היידראבאד, קולומביה, בוסטון, בודפשט, פלרמו, ברגן, ביסמרק, דרזדן",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "שושלת מינג",
+      "object": "נאנג'ינג",
+      "object_candidates": "מילאנו, בארי, טהראן, לסטר, פיר, בון, טולוז, וילנה, קופנהגן, נאנג'ינג",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "מחוז מכה",
+      "object": "מכה",
+      "object_candidates": "בגדאד, צ'ארלסטון, אדו, נאנג'ינג, דמשק, פירנצה, ביירות, באקו, המילטון, מכה",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "איילט מצרים",
+      "object": "קהיר",
+      "object_candidates": "סאגה, בוקרשט, טריפולי, הוואנה, לימה, ראלי, ברצלונה, קראצ'י, קאזאן, קהיר",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "פולין הקונגרסאית",
+      "object": "ורשה",
+      "object_candidates": "קאזאן, זאגרב, אוטווה, מונטווידאו, מיאמי, בורדו, פלרמו, קנברה, יוקוהמה, ורשה",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "צפון אירלנד",
+      "object": "בלפסט",
+      "object_candidates": "דרזדן, הירושימה, אוסטין, טאלין, קיימברידג', נאשוויל, ברטיסלאבה, מינסק, מדיסון, בלפסט",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "ספרד",
+      "object": "מדריד",
+      "object_candidates": "דנוור, אוקלנד, מונטווידאו, אתונה, ספרינגפילד, ורשה, זאגרב, קרליסל, ריגה, מדריד",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "צרפת המטרופוליטנית",
+      "object": "פריז",
+      "object_candidates": "ווטרפורד, ליסבון, אל-מדינה, פירנצה, בבל, טירנה, בלפסט, מומבאי, קייב, פריז",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "טטרסטן",
+      "object": "קאזאן",
+      "object_candidates": "מיאמי, סרייבו, ניס, לסטר, לובלין, ורשה, רומא, אמסטרדם, צ'ארלסטון, קאזאן",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "ברסט",
+      "object": "ברסט",
+      "object_candidates": "אקסטר, כרייסטצ'רץ', לסטר, ג'נובה, שאיין, דנידין, סנטיאגו דה צ'ילה, קאבול, טאיפיי, ברסט",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "פלשתינה (א״י)",
+      "object": "ירושלים",
+      "object_candidates": "טאיפיי, זלצבורג, האריסברג, בריסטול, ברטיסלאבה, טהראן, בולוניה, טרנטון, לבוב, ירושלים",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "פלרמו",
+      "object": "פלרמו",
+      "object_candidates": "דלהי, טרנטון, סקרמנטו, המילטון, דמשק, אוטווה, מונטגומרי, גוודלחרה, ג'קרטה, פלרמו",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "ממלכת בוואריה",
+      "object": "מינכן",
+      "object_candidates": "קנברה, אדו, מינסק, קאבול, בריסל, קיימברידג', מדיסון, לוזאן, אנקרה, מינכן",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "טאמיל נאדו",
+      "object": "צ'נאי",
+      "object_candidates": "אדמונטון, קיוטו, פראג, דבלין, צ'ארלסטון, גפ, ליובליאנה, רג'יינה, פלמה דה מיורקה, צ'נאי",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "בלארוס",
+      "object": "מינסק",
+      "object_candidates": "האריסברג, עדן, מכה, טוקיו, אתונה, בנגלור, לוזאן, ביירות, קיוטו, מינסק",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "גלוסטרשייר",
+      "object": "גלוסטר",
+      "object_candidates": "סביליה, ביירות, ויקטוריה, פלרמו, ריגה, מינכן, סאגה, טוקיו, קהיר, גלוסטר",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "וו",
+      "object": "לוזאן",
+      "object_candidates": "אוטווה, אאוגסבורג, בריסל, ורשה, אלג'יר, לסטר, דנידין, לובלין, פרסטון, לוזאן",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "שטרסבורג",
+      "object_candidates": "צ'נאי, עדן, צ'ארלסטון, מיינץ, אל-מדינה, אתונה, בלפסט, מדיסון, לאנסינג, שטרסבורג",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "אוטר פרדש",
+      "object": "לאקנאו",
+      "object_candidates": "אוסטין, צ'ארלסטון, הוואנה, דאקה, ברסט, אמסטרדם, סביליה, ברטיסלאבה, אדינבורו, לאקנאו",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "רפובליקה סרפסקה",
+      "object": "סרייבו",
+      "object_candidates": "וילנה, ולנסיה, בנגלור, לוזאן, מומבאי, ג'קרטה, צ'נאי, קולקטה, לסטר, סרייבו",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "סרייבו",
+      "object": "סרייבו",
+      "object_candidates": "דנידין, לינקולן, מונטגומרי, טאלין, גואנגג'ואו, בודפשט, דאקה, בורדו, כרמאן, סרייבו",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית ההונגרית",
+      "object": "בודפשט",
+      "object_candidates": "לאקנאו, בויסי, בגדאד, דרזדן, הירושימה, ויקטוריה, דלהי, דנידין, קונסטנטינופול, בודפשט",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "ממלכת אפגניסטן",
+      "object": "קאבול",
+      "object_candidates": "לסטר, קיל, לאקנאו, מומבאי, שאיין, ברגן, מנצ'סטר, טורונטו, הובארט, קאבול",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "לובלסקי",
+      "object": "לובלין",
+      "object_candidates": "מונטווידאו, בריסטול, קונקורד, סרייבו, וילנה, מוסקבה, סאגה, קולקטה, בוסטון, לובלין",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "וירג'יניה",
+      "object": "ריצ'מונד",
+      "object_candidates": "מיאמי, סרייבו, כרייסטצ'רץ', אמסטרדם, קולקטה, בריזבן, סאגה, הוואנה, לונדון, ריצ'מונד",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "ממלכת אנגליה",
+      "object": "וינצ'סטר",
+      "object_candidates": "מנילה, סאלם, ווסטר, קיימברידג', קונקורד, סירקוזה, ממפיס, אתונה, ליובליאנה, וינצ'סטר",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "מחוז אל-מדינה",
+      "object": "אל-מדינה",
+      "object_candidates": "קאזאן, סקרמנטו, היידראבאד, בלפסט, פרת', דאקה, ברן, רג'יינה, בודפשט, אל-מדינה",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "עיריית סטוקהולם",
+      "object": "סטוקהולם",
+      "object_candidates": "סנטיאגו דה צ'ילה, דנוור, גולוויי, היידראבאד, ויקטוריה, בריסטול, בנגקוק, וינה, הוואנה, סטוקהולם",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האזרית",
+      "object": "באקו",
+      "object_candidates": "שטרסבורג, בריזבן, קולומביה, בלגרד, דנוור, נאנג'ינג, מונטווידאו, לוזאן, מומבאי, באקו",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "ממלכת יוון",
+      "object": "אתונה",
+      "object_candidates": "ירוואן, המילטון, סלוניקי, גלוסטר, עדן, נגויה, ריברסייד, בריסטול, קופנהגן, אתונה",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "קוריאה הדרומית",
+      "object": "סיאול",
+      "object_candidates": "גפ, קולקטה, וסטמינסטר, בלגרד, באקו, וילנה, הרטפורד, ג'קרטה, ליסבון, סיאול",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "המסדר הריבוני הצבאי של מלטה",
+      "object": "רומא",
+      "object_candidates": "קולקטה, מכה, אוקספורד, הליפקס, ספרינגפילד, דרזדן, מונטגומרי, בריסטול, דובאי, רומא",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "קאמבריה",
+      "object": "קרליסל",
+      "object_candidates": "גואנגג'ואו, ולנסיה, אאוגסבורג, אל-מדינה, ירוואן, ברלין, סופיה, מונטווידאו, סאגה, קרליסל",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "סקסוניה התחתונה",
+      "object": "הנובר",
+      "object_candidates": "הירושימה, ווטרפורד, פרסטון, טרנטון, דמשק, קייב, באקו, קינגסטון, אנקרה, הנובר",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "ממלכת אנגליה",
+      "object": "וסטמינסטר",
+      "object_candidates": "לימה, ווטרפורד, גואנגג'ואו, קיל, ליל, המילטון, דבלין, אודסה, סאלם, וסטמינסטר",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "טורינו",
+      "object": "טורינו",
+      "object_candidates": "טהראן, קופנהגן, ברצלונה, ניס, ונציה, אוקלנד, חלב, בבל, לאקנאו, טורינו",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "קרוליינה הצפונית",
+      "object": "ראלי",
+      "object_candidates": "ליל, אוסטין, סירקוזה, סאגה, כרייסטצ'רץ', פראג, קולקטה, בוסטון, גואנגג'ואו, ראלי",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "הטריטוריה הצפונית",
+      "object": "דרווין",
+      "object_candidates": "אנאפוליס, בוסטון, סופיה, ספרינגפילד, אוקלנד, ולנסיה, אוטווה, הובארט, וילנה, דרווין",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "ממלכת הנובר",
+      "object": "הנובר",
+      "object_candidates": "אדלייד, טהראן, ג'קסון, פיניקס, צ'נאי, בבל, מדיסון, טירנה, אאוגסבורג, הנובר",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "הורדלנד",
+      "object": "ברגן",
+      "object_candidates": "דובאי, סיאול, קונסטנטינופול, בלפסט, דאקה, בגדאד, קולומבו, אלג'יר, ראלי, ברגן",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "דקוטה הדרומית",
+      "object": "פיר",
+      "object_candidates": "אודסה, סירקוזה, בנגלור, פיניקס, ונציה, דנוור, לינקולן, פלמה דה מיורקה, קרליסל, פיר",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "אלזס",
+      "object": "שטרסבורג",
+      "object_candidates": "דובאי, פרת', זלצבורג, אתונה, מינסק, טורינו, בזל, הליפקס, וינצ'סטר, שטרסבורג",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "אונטריו",
+      "object": "טורונטו",
+      "object_candidates": "דבלין, אנאפוליס, קולומביה, הנובר, רומא, הרפורד, טאיפיי, סופיה, לבוב, טורונטו",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "מסצ'וסטס",
+      "object": "בוסטון",
+      "object_candidates": "סידני, ליובליאנה, אדו, בלגרד, המילטון, מינסק, ווסטר, חלב, דרזדן, בוסטון",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "ממלכת בולגריה",
+      "object": "סופיה",
+      "object_candidates": "קולומביה, גפ, וינצ'סטר, וילנה, קהיר, ויניפג, צ'ארלסטון, אאוגסבורג, מנצ'סטר, סופיה",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "נאפולי",
+      "object": "נאפולי",
+      "object_candidates": "באקו, סיינה, קורק, האריסברג, כרייסטצ'רץ', סביליה, טרנטון, לובלין, דרווין, נאפולי",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "רומניה",
+      "object": "בוקרשט",
+      "object_candidates": "ווסטר, קאבול, מנצ'סטר, מיינץ, דנידין, ממפיס, וינה, נאנג'ינג, ברן, בוקרשט",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "שווייץ",
+      "object": "ברן",
+      "object_candidates": "אלג'יר, מיאמי, בויסי, אינדיאנפוליס, ליסבון, רומא, נאנג'ינג, ג'קרטה, גלוסטר, ברן",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "אוסטריה",
+      "object": "וינה",
+      "object_candidates": "ביירות, ריגה, אינדיאנפוליס, נגויה, אדו, קראקס, מדריד, בנגלור, בארי, וינה",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "סלובקיה",
+      "object": "ברטיסלאבה",
+      "object_candidates": "בודפשט, רומא, לימה, ליסבון, דאקה, ג'נובה, קיל, בזל, קינגסטון, ברטיסלאבה",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "אנגליה",
+      "object": "לונדון",
+      "object_candidates": "טורינו, פיר, הוואנה, ברטיסלאבה, קונקורד, נאפולי, ונציה, גולוויי, אוסלו, לונדון",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "מצרים",
+      "object": "קהיר",
+      "object_candidates": "אוטווה, ויקטוריה, קונסטנטינופול, גוודלחרה, לונדון, באקו, ברצלונה, סביליה, פרובידנס, קהיר",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "אוסימה",
+      "object": "הלסינקי",
+      "object_candidates": "מונטווידאו, טירנה, אודסה, אתונה, לוזאן, שאיין, קופנהגן, האריסברג, ויניפג, הלסינקי",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "לנקשייר",
+      "object": "פרסטון",
+      "object_candidates": "עדן, ממפיס, ג'ורג'טאון, רומא, אקסטר, פרובידנס, ריברסייד, אדלייד, בנגלור, פרסטון",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "הירושימה",
+      "object": "הירושימה",
+      "object_candidates": "כרייסטצ'רץ', בנגקוק, לסטר, בוסטון, דרזדן, ברלין, בון, בוקרשט, בזל, הירושימה",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "האימפריה הרומית הקדושה",
+      "object": "וינה",
+      "object_candidates": "בריסל, בלגרד, דובאי, ספרינגפילד, בודפשט, אוקלנד, פריז, ויקטוריה, לאקנאו, וינה",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "הממלכה המאוחדת של בריטניה הגדולה ואירלנד",
+      "object": "לונדון",
+      "object_candidates": "קראצ'י, מילאנו, טהראן, סטוקהולם, וינצ'סטר, טורונטו, אדלייד, פיר, בריסטול, לונדון",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "גרמניה הנאצית",
+      "object": "ברלין",
+      "object_candidates": "סרייבו, אמסטרדם, הליפקס, מכה, אוטווה, ביסמרק, בודפשט, סיאול, לונדון, ברלין",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "סירקוזה",
+      "object": "סירקוזה",
+      "object_candidates": "צ'ארלסטון, רג'יינה, קינגסטון, ווטרפורד, דרזדן, אוטווה, וסטמינסטר, קונקורד, טוקיו, סירקוזה",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "רוסיה הסובייטית",
+      "object": "מוסקבה",
+      "object_candidates": "ולנסיה, ניס, בון, מנצ'סטר, חלב, אדינבורו, אוסלו, קולומבוס, כרייסטצ'רץ', מוסקבה",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ויומינג",
+      "object": "שאיין",
+      "object_candidates": "דמשק, קינגסטון, הלסינקי, בריזבן, טולוז, ריצ'מונד, לוזאן, ווטרפורד, סאלם, שאיין",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית האוקראינית",
+      "object": "קייב",
+      "object_candidates": "בייג'ינג, פראג, גנט, אודסה, ליל, קולומבוס, מכה, חלב, ביירות, קייב",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "האימפריה הביזנטית",
+      "object": "קונסטנטינופול",
+      "object_candidates": "קיימברידג', מינכן, ברסט, כרמאן, קולומבו, נאנג'ינג, חלב, לימה, כרייסטצ'רץ', קונסטנטינופול",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "בית אומיה",
+      "object": "דמשק",
+      "object_candidates": "בארי, ראלי, אוקלנד, ביסמרק, ליובליאנה, ווסטר, סיאול, קונקורד, מכה, דמשק",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "תאילנד",
+      "object": "בנגקוק",
+      "object_candidates": "ליל, לוזאן, בייג'ינג, הלסינקי, פרת', סידני, לאקנאו, נאפולי, יוקוהמה, בנגקוק",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "אנדרה פרדש",
+      "object": "היידראבאד",
+      "object_candidates": "סירקוזה, פרסטון, בוסטון, חלב, מונטווידאו, ירוואן, ויקטוריה, ברסט, המילטון, היידראבאד",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "נורווגיה",
+      "object": "אוסלו",
+      "object_candidates": "אדו, ראלי, ורשה, ליל, קיימברידג', נאנג'ינג, אדמונטון, מנצ'סטר, טורונטו, אוסלו",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "ריינלנד-פפאלץ",
+      "object": "מיינץ",
+      "object_candidates": "לאנסינג, לבוב, דמשק, קאבול, אל-מדינה, אתונה, פרת', מכה, פלמה דה מיורקה, מיינץ",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "טורקיה",
+      "object": "אנקרה",
+      "object_candidates": "צ'ארלסטון, אקסטר, טורונטו, שאיין, אדמונטון, ממפיס, המילטון, אוסלו, קיימברידג', אנקרה",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "ריף דמשק",
+      "object": "דמשק",
+      "object_candidates": "גפ, קונקורד, בגדאד, כרמאן, ברן, ג'קרטה, גואנגג'ואו, לימריק, ליסבון, דמשק",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "שוואביה",
+      "object": "אאוגסבורג",
+      "object_candidates": "לוזאן, דבלין, מנילה, דמשק, בייג'ינג, טהראן, אדינבורו, ולנסיה, קאזאן, אאוגסבורג",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "יפן בתקופת הכיבוש האמריקאי",
+      "object": "טוקיו",
+      "object_candidates": "שטרסבורג, דרווין, הרטפורד, מוסקבה, רג'יינה, טאיפיי, גנט, אוטווה, טירנה, טוקיו",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "רוד איילנד",
+      "object": "פרובידנס",
+      "object_candidates": "גלוסטר, ברגן, ג'ורג'טאון, צ'נאי, לאנסינג, קיל, לימה, אדו, ניס, פרובידנס",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "איידהו",
+      "object": "בויסי",
+      "object_candidates": "ממפיס, באקו, אקסטר, מדיסון, סירקוזה, ריגה, אל-מדינה, לונדון, בלגרד, בויסי",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "קרואטיה",
+      "object": "זאגרב",
+      "object_candidates": "טירנה, קאזאן, סביליה, הליפקס, טולוז, אדו, טריפולי, הלסינקי, גולוויי, זאגרב",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "מחוז קורק",
+      "object": "קורק",
+      "object_candidates": "בגדאד, ראלי, סופיה, טאלין, ויקטוריה, ריגה, שטרסבורג, וסטמינסטר, סירקוזה, קורק",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "ונציה",
+      "object": "ונציה",
+      "object_candidates": "שטרסבורג, קיימברידג', לאקנאו, הירושימה, דמשק, טולדו, לונדון, ברצלונה, יוקוהמה, ונציה",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "ממלכת וסקס",
+      "object": "וינצ'סטר",
+      "object_candidates": "מיינץ, בוסטון, טריפולי, לאנסינג, זלצבורג, רומא, ונציה, קהיר, ביירות, וינצ'סטר",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "האימפריה הרומית",
+      "object": "רומא",
+      "object_candidates": "אדו, קולקטה, ממפיס, מונטגומרי, קינגסטון, מילאנו, קופנהגן, ויקטוריה, פרובידנס, רומא",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "אלג'יריה",
+      "object": "אלג'יר",
+      "object_candidates": "בגדאד, לאקנאו, חלב, אדינבורו, דבלין, האריסברג, ונציה, קאבול, נאנג'ינג, אלג'יר",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "קולומביה הבריטית",
+      "object": "ויקטוריה",
+      "object_candidates": "פריז, הלסינקי, קנברה, שאיין, ריגה, המילטון, וינצ'סטר, ברסט, אודסה, ויקטוריה",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "מערב בנגל",
+      "object": "קולקטה",
+      "object_candidates": "שטרסבורג, פראג, סביליה, אודסה, הירושימה, לובלין, רג'יינה, סלוניקי, פלרמו, קולקטה",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "ממלכת בוהמיה",
+      "object": "פראג",
+      "object_candidates": "טוקיו, ברגן, בזל, גואנגג'ואו, דאקה, טריפולי, ברטיסלאבה, אאוגסבורג, קולקטה, פראג",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "מחוז מוסקבה",
+      "object": "מוסקבה",
+      "object_candidates": "גואנגג'ואו, קנברה, ברסט, בנגלור, ליובליאנה, ניס, פיניקס, סרייבו, הירושימה, מוסקבה",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "לבנון",
+      "object": "ביירות",
+      "object_candidates": "אקסטר, צ'נאי, סלוניקי, בריסל, אמסטרדם, ראלי, פיניקס, בוקרשט, מונטווידאו, ביירות",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "לטביה",
+      "object": "ריגה",
+      "object_candidates": "ממפיס, לבוב, בוסטון, ניירובי, אדלייד, אמסטרדם, בריזבן, פריז, רג'יינה, ריגה",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "האימפריה היפנית",
+      "object": "טוקיו",
+      "object_candidates": "סקרמנטו, קיימברידג', טירנה, היידראבאד, פרת', רומא, עדן, ניס, קראצ'י, טוקיו",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "ויילס",
+      "object": "קארדיף",
+      "object_candidates": "האריסברג, סנטיאגו דה צ'ילה, הליפקס, בלפסט, בויסי, סיינה, מכה, מדריד, לאנסינג, קארדיף",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "סולטנות דלהי",
+      "object": "דלהי",
+      "object_candidates": "גולוויי, קייב, ירושלים, הליפקס, בולוניה, לינקולן, וסטמינסטר, טוקיו, פרסטון, דלהי",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "הרפובליקה הדמוקרטית של אפגניסטן",
+      "object": "קאבול",
+      "object_candidates": "בוסטון, טירנה, סביליה, אדלייד, דרווין, קורק, פרת', לימריק, ויניפג, קאבול",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "פולין",
+      "object": "ורשה",
+      "object_candidates": "בורדו, הלסינקי, בוקרשט, וסטמינסטר, בריזבן, טאלין, ריגה, אוקלנד, אל-מדינה, ורשה",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "השושלת הקאג'ארית",
+      "object": "טהראן",
+      "object_candidates": "ביסמרק, קיימברידג', קרליסל, סאגה, אנקרה, דמשק, אתונה, אלכסנדריה, בזל, טהראן",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "בית עבאס",
+      "object": "בגדאד",
+      "object_candidates": "סיאול, מכה, ווסטר, פירנצה, מדריד, הובארט, בורדו, זלצבורג, דרזדן, בגדאד",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "סינד",
+      "object": "קראצ'י",
+      "object_candidates": "צ'נאי, טרנטון, האריסברג, הרפורד, ברלין, סנטיאגו דה צ'ילה, סיינה, קופנהגן, פרובידנס, קראצ'י",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "אקרסהוס",
+      "object": "אוסלו",
+      "object_candidates": "פיר, ביסמרק, דנידין, לימריק, סירקוזה, בייג'ינג, חלב, טאלין, בריזבן, אוסלו",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "דרום תימן",
+      "object": "עדן",
+      "object_candidates": "בגדאד, טריפולי, בולוניה, ג'ורג'טאון, חלב, נאנג'ינג, כרמאן, לאנסינג, סלוניקי, עדן",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "אקיטן החדשה",
+      "object": "בורדו",
+      "object_candidates": "בריזבן, ברלין, אוקלנד, סרייבו, קהיר, בלפסט, עדן, טריפולי, מונטווידאו, בורדו",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "צפון-מערב אנגליה",
+      "object": "מנצ'סטר",
+      "object_candidates": "יוקוהמה, גוודלחרה, סיאול, טור, טאיפיי, ממפיס, ווטרפורד, סנטיאגו דה צ'ילה, גולוויי, מנצ'סטר",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "הרפובליקה העממית של סין",
+      "object": "בייג'ינג",
+      "object_candidates": "בזל, פראג, בוסטון, קנברה, באקו, ירושלים, דרווין, קרליסל, ליל, בייג'ינג",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "הממלכה הישנה של מצרים",
+      "object": "ממפיס",
+      "object_candidates": "הונולולו, ניירובי, פרובידנס, גוודלחרה, זלצבורג, גפ, מנילה, צ'ארלסטון, כרמאן, ממפיס",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "ברמודה",
+      "object": "המילטון",
+      "object_candidates": "זלצבורג, אתונה, האריסברג, קאזאן, ביסמרק, בנגקוק, ג'קסון, נאפולי, ניס, המילטון",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "גארון עילית",
+      "object": "טולוז",
+      "object_candidates": "טירנה, קיוטו, ווטרפורד, גולוויי, מונטווידאו, אוסטין, אתונה, דנידין, מיינץ, טולוז",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "הרפובליקה הערבית המאוחדת",
+      "object": "קהיר",
+      "object_candidates": "לבוב, אנקרה, מנצ'סטר, מילאנו, ונציה, גפ, בלגרד, נאנג'ינג, דנידין, קהיר",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "הרפורדשייר",
+      "object": "הרפורד",
+      "object_candidates": "לוזאן, גוודלחרה, ניס, מנצ'סטר, פראג, טירנה, טאלין, הובארט, הלסינקי, הרפורד",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "ז'ירונד",
+      "object": "בורדו",
+      "object_candidates": "מומבאי, אלג'יר, מיינץ, קורק, אדמונטון, בנגקוק, בנגלור, מונטווידאו, מנצ'סטר, בורדו",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "מילאנו",
+      "object": "מילאנו",
+      "object_candidates": "הובארט, רג'יינה, סידני, ביסמרק, וינה, ריברסייד, דנידין, ירוואן, ברן, מילאנו",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "פינלנד",
+      "object": "הלסינקי",
+      "object_candidates": "אדמונטון, פריז, דרווין, הליפקס, סיינה, גוודלחרה, הרטפורד, אוקלנד, קונסטנטינופול, הלסינקי",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "סוריה",
+      "object": "דמשק",
+      "object_candidates": "ונציה, המילטון, לבוב, הירושימה, אדו, מדיסון, סיאטל, כרייסטצ'רץ', דרווין, דמשק",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "ולנסיה",
+      "object": "ולנסיה",
+      "object_candidates": "הנובר, בולוניה, ירוואן, מכה, טורונטו, בגדאד, פרסטון, סירקוזה, גלוסטר, ולנסיה",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "הרפובליקה הסובייטית הסוציאליסטית הבלארוסית",
+      "object": "מינסק",
+      "object_candidates": "אמסטרדם, הלסינקי, ממפיס, טריפולי, אלכסנדריה, דבלין, מילאנו, דרווין, בארי, מינסק",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "הרפובליקה של ג'נובה",
+      "object": "ג'נובה",
+      "object_candidates": "פריז, היידראבאד, אוסלו, בריסטול, פרובידנס, ברטיסלאבה, בגדאד, וינה, קופנהגן, ג'נובה",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "בלגיה",
+      "object": "בריסל",
+      "object_candidates": "פירנצה, סלוניקי, אמסטרדם, סאגה, טירנה, דובאי, טולוז, קורק, שטרסבורג, בריסל",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "מחוז טירנה",
+      "object": "טירנה",
+      "object_candidates": "האריסברג, דרווין, פיר, דנידין, דאקה, טורונטו, ריברסייד, דרזדן, אלכסנדריה, טירנה",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "ליגוריה",
+      "object": "ג'נובה",
+      "object_candidates": "מיאמי, אדלייד, הלסינקי, נאפולי, לוזאן, פראג, מנצ'סטר, ביסמרק, דרווין, ג'נובה",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "אקיטן",
+      "object": "בורדו",
+      "object_candidates": "קולקטה, הוואנה, סרייבו, אלכסנדריה, דרווין, נאפולי, כרייסטצ'רץ', טרנטון, בייג'ינג, בורדו",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "האימפריה האוסטרו-הונגרית",
+      "object": "וינה",
+      "object_candidates": "צ'ארלסטון, סופיה, אדלייד, הירושימה, פראג, ניירובי, ספרינגפילד, ג'קרטה, מדריד, וינה",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "רומא",
+      "object": "רומא",
+      "object_candidates": "סקרמנטו, גוודלחרה, קיימברידג', אאוגסבורג, בריסטול, קראצ'י, לסטר, נגויה, מכה, רומא",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "מחוז סטוקהולם",
+      "object": "סטוקהולם",
+      "object_candidates": "לוזאן, נאפולי, ווטרפורד, מדיסון, קראקס, בייג'ינג, מינסק, ריגה, מילאנו, סטוקהולם",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "ממלכת מצרים",
+      "object": "קהיר",
+      "object_candidates": "חלב, כרייסטצ'רץ', לבוב, ראלי, יוקוהמה, דרזדן, ויניפג, סלוניקי, הרטפורד, קהיר",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "טנסי",
+      "object": "נאשוויל",
+      "object_candidates": "בלגרד, נגויה, האריסברג, עדן, קאבול, גלוסטר, פירנצה, בלפסט, הליפקס, נאשוויל",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "סאגה",
+      "object": "סאגה",
+      "object_candidates": "ריברסייד, אדינבורו, אוסלו, סקרמנטו, טור, טולדו, קראצ'י, טריפולי, אנאפוליס, סאגה",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "שוודיה",
+      "object": "סטוקהולם",
+      "object_candidates": "ברסט, בורדו, פראג, רומא, מיינץ, סביליה, עדן, מילאנו, ביירות, סטוקהולם",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "אלג'יריה הצרפתית",
+      "object": "אלג'יר",
+      "object_candidates": "בבל, אדלייד, ג'קרטה, מינסק, קינגסטון, גנט, ביירות, בוקרשט, הליפקס, אלג'יר",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "אוהיו",
+      "object": "קולומבוס",
+      "object_candidates": "אדו, אלג'יר, וילנה, סאגה, בארי, קיל, גפ, קולומבו, הובארט, קולומבוס",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "קרוליינה הדרומית",
+      "object": "קולומביה",
+      "object_candidates": "ממפיס, קראקס, אוסטין, ראלי, לונדון, פיניקס, קאזאן, טולדו, קארדיף, קולומביה",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "ג'מייקה",
+      "object": "קינגסטון",
+      "object_candidates": "אנקרה, דובאי, בוקרשט, יוקוהמה, אודסה, ברטיסלאבה, ריגה, בארי, אוקספורד, קינגסטון",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "רוס של קייב",
+      "object": "קייב",
+      "object_candidates": "פיר, לאקנאו, ווטרפורד, ביירות, נאשוויל, קינגסטון, דנוור, עדן, בויסי, קייב",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "האלפים העליונים",
+      "object": "גפ",
+      "object_candidates": "מונטגומרי, טור, בייג'ינג, בארי, פירנצה, בולוניה, אוקלנד, מנצ'סטר, חלב, גפ",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "ממלכת אנגליה",
+      "object": "לונדון",
+      "object_candidates": "ווטרפורד, בנגלור, סופיה, ג'קסון, ורשה, הונולולו, קורק, פרת', קיוטו, לונדון",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "קטלוניה",
+      "object": "ברצלונה",
+      "object_candidates": "בריסטול, ונציה, פלמה דה מיורקה, ויניפג, חלב, האריסברג, הלסינקי, הרטפורד, סיאטל, ברצלונה",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "הקומונה הפריזאית",
+      "object": "פריז",
+      "object_candidates": "גואנגג'ואו, טורונטו, בוסטון, אתונה, אדלייד, ניירובי, כרייסטצ'רץ', ברטיסלאבה, ליל, פריז",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "פיימונטה",
+      "object": "טורינו",
+      "object_candidates": "סלוניקי, מונטגומרי, ג'קרטה, סירקוזה, גואנגג'ואו, דנוור, קיל, מנילה, לוזאן, טורינו",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "צ'כיה",
+      "object": "פראג",
+      "object_candidates": "ברן, בבל, ג'קסון, בורדו, מינכן, ניס, פלרמו, טולדו, קופנהגן, פראג",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "נובה סקוטיה",
+      "object": "הליפקס",
+      "object_candidates": "הנובר, לינקולן, בלפסט, לאנסינג, ליסבון, אוקלנד, קנברה, אתונה, קולקטה, הליפקס",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "אוקספורדשייר",
+      "object": "אוקספורד",
+      "object_candidates": "איסטנבול, דאקה, ווסטר, בון, קינגסטון, כרייסטצ'רץ', קנברה, קיל, ליסבון, אוקספורד",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "האיחוד האירופי",
+      "object": "בריסל",
+      "object_candidates": "הרפורד, טורונטו, הוואנה, סידני, לאקנאו, רומא, כרייסטצ'רץ', ניס, דבלין, בריסל",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "הרפובליקה הפדרלית הסוציאליסטית של יוגוסלביה",
+      "object": "בלגרד",
+      "object_candidates": "טהראן, בריסל, אדמונטון, הלסינקי, דמשק, ביסמרק, ירוואן, ספרינגפילד, בייג'ינג, בלגרד",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "הראג' הבריטי",
+      "object": "קולקטה",
+      "object_candidates": "זאגרב, סנטיאגו דה צ'ילה, רומא, בלפסט, לימריק, פריז, הירושימה, טירנה, קראצ'י, קולקטה",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "שושלת צ'ינג",
+      "object": "בייג'ינג",
+      "object_candidates": "בוקרשט, קולקטה, קולומבו, סיאטל, טורינו, דנוור, לימריק, זלצבורג, אאוגסבורג, בייג'ינג",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "הדוכסות הגדולה של ליטא",
+      "object": "וילנה",
+      "object_candidates": "פלמה דה מיורקה, ויניפג, אדמונטון, פראג, בריסטול, יוקוהמה, בולוניה, נאשוויל, טהראן, וילנה",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "ממלכת סרדיניה",
+      "object": "טורינו",
+      "object_candidates": "סלוניקי, סופיה, גפ, הונולולו, אקסטר, נאנג'ינג, דנידין, הרפורד, שטרסבורג, טורינו",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "מרילנד",
+      "object": "אנאפוליס",
+      "object_candidates": "סלוניקי, ויניפג, סטוקהולם, מנילה, סיאול, ברן, טורינו, גוודלחרה, ירוואן, אנאפוליס",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "רפובליקת ויימאר",
+      "object": "ברלין",
+      "object_candidates": "אודסה, מינכן, סיאול, בארי, קופנהגן, זלצבורג, חלב, טור, אמסטרדם, ברלין",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "קונפדרציית המדינות של אמריקה",
+      "object": "ריצ'מונד",
+      "object_candidates": "סיאטל, מילאנו, קייב, רומא, ליובליאנה, בוסטון, הובארט, מוסקבה, בודפשט, ריצ'מונד",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "נויסטריה",
+      "object": "פריז",
+      "object_candidates": "לסטר, קיימברידג', סיינה, זלצבורג, שטרסבורג, גנט, דובאי, אל-מדינה, גואנגג'ואו, פריז",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "בוואריה",
+      "object": "מינכן",
+      "object_candidates": "צ'ארלסטון, דבלין, בודפשט, קייב, אוקספורד, מונטגומרי, טורונטו, ממפיס, ברטיסלאבה, מינכן",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "הוואי",
+      "object": "הונולולו",
+      "object_candidates": "טולוז, טריפולי, ויקטוריה, קולומבו, טרנטון, המילטון, סיאול, דנוור, בון, הונולולו",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "אזורי הכיבוש בגרמניה",
+      "object": "ברלין",
+      "object_candidates": "לונדון, שאיין, וסטמינסטר, קינגסטון, בלגרד, ברן, נאנג'ינג, אדו, מיינץ, ברלין",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "קווינסלנד",
+      "object": "בריזבן",
+      "object_candidates": "ביירות, לינקולן, סיאטל, ברגן, זאגרב, ולנסיה, ויניפג, פראג, בריסטול, בריזבן",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "בוהמיה",
+      "object": "פראג",
+      "object_candidates": "סידני, טוקיו, וינצ'סטר, סנטיאגו דה צ'ילה, באקו, טור, סיאול, בייג'ינג, פלמה דה מיורקה, פראג",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "אמירות האסלאמית של אפגניסטן",
+      "object": "קאבול",
+      "object_candidates": "ונציה, דנידין, קורק, ספרינגפילד, וינצ'סטר, וסטמינסטר, גלוסטר, ויניפג, דבלין, קאבול",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "מחוז חומס",
+      "object": "דמשק",
+      "object_candidates": "רומא, עדן, בריסל, האריסברג, ויקטוריה, ריברסייד, פרסטון, ירוואן, טאלין, דמשק",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "וירג'יניה המערבית",
+      "object": "צ'ארלסטון",
+      "object_candidates": "אינדיאנפוליס, בריסל, בולוניה, וסטמינסטר, טוקיו, ממפיס, טולדו, אלכסנדריה, וילנה, צ'ארלסטון",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "קניה",
+      "object": "ניירובי",
+      "object_candidates": "בון, בייג'ינג, טור, קראקס, אנאפוליס, טהראן, ג'נובה, זלצבורג, אוסטין, ניירובי",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "גרמניה המערבית",
+      "object": "בון",
+      "object_candidates": "קאזאן, בוקרשט, סיאטל, סביליה, ניירובי, בריסטול, האריסברג, קולקטה, פלרמו, בון",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "סלובניה",
+      "object": "ליובליאנה",
+      "object_candidates": "קראקס, קאבול, הרטפורד, קולומביה, טאיפיי, דרווין, בורדו, קולומבוס, כרייסטצ'רץ', ליובליאנה",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "אוטגו",
+      "object": "דנידין",
+      "object_candidates": "בריזבן, בזל, פלמה דה מיורקה, מונטווידאו, הרטפורד, דנוור, מדריד, שטרסבורג, קארדיף, דנידין",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "ג'יאנגסו",
+      "object": "נאנג'ינג",
+      "object_candidates": "בוקרשט, גלוסטר, קורק, ג'קסון, הוואנה, אוקלנד, סופיה, קאבול, דנידין, נאנג'ינג",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "ניו ג'רזי",
+      "object": "טרנטון",
+      "object_candidates": "קונקורד, אל-מדינה, סיאול, טאלין, לוזאן, לובלין, בוקרשט, נאפולי, מוסקבה, טרנטון",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "אורגון",
+      "object": "סאלם",
+      "object_candidates": "בנגקוק, זלצבורג, מינסק, שטרסבורג, ג'קרטה, הוואנה, בודפשט, ברגן, סיאול, סאלם",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "ממלכת איטליה",
+      "object": "רומא",
+      "object_candidates": "לאנסינג, פרסטון, דאקה, יוקוהמה, אנאפוליס, גפ, קולומביה, דנוור, בוסטון, רומא",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "שלזוויג-הולשטיין",
+      "object": "קיל",
+      "object_candidates": "קאזאן, לסטר, קיוטו, קראצ'י, בזל, אאוגסבורג, אל-מדינה, אנאפוליס, אנקרה, קיל",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "ליטא",
+      "object": "וילנה",
+      "object_candidates": "כרייסטצ'רץ', ג'קסון, הלסינקי, אלכסנדריה, סיאול, הרפורד, קיימברידג', מיאמי, פרובידנס, וילנה",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "מיסיסיפי",
+      "object": "ג'קסון",
+      "object_candidates": "ספרינגפילד, אלג'יר, בוקרשט, קולקטה, לאנסינג, טורונטו, קראקס, קייב, ריצ'מונד, ג'קסון",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "האימפריה האוסטרו-הונגרית",
+      "object": "בודפשט",
+      "object_candidates": "ברגן, סטוקהולם, ביסמרק, נאנג'ינג, יוקוהמה, מנילה, קינגסטון, גואנגג'ואו, אלכסנדריה, בודפשט",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "מינסק",
+      "object": "מינסק",
+      "object_candidates": "ביירות, קארדיף, קולומבוס, וילנה, הרפורד, ניירובי, שטרסבורג, גולוויי, מנצ'סטר, מינסק",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "גואנגדונג",
+      "object": "גואנגג'ואו",
+      "object_candidates": "בייג'ינג, אדלייד, אוסלו, אלכסנדריה, גפ, מנילה, פיר, טירנה, בריסטול, גואנגג'ואו",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "הרפובליקה הרומית",
+      "object": "רומא",
+      "object_candidates": "טוקיו, הוואנה, הירושימה, אתונה, בזל, ליל, קינגסטון, היידראבאד, טאלין, רומא",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "ממלכת פרוסיה",
+      "object": "ברלין",
+      "object_candidates": "קראצ'י, באקו, פרובידנס, חלב, פירנצה, סביליה, פריז, זלצבורג, הלסינקי, ברלין",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "אפגניסטן",
+      "object": "קאבול",
+      "object_candidates": "ספרינגפילד, ג'ורג'טאון, פרת', קופנהגן, קנברה, ווטרפורד, איסטנבול, ראלי, זאגרב, קאבול",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "צ'ילה",
+      "object": "סנטיאגו דה צ'ילה",
+      "object_candidates": "גואנגג'ואו, אלכסנדריה, קולקטה, מוסקבה, טור, דרווין, דנוור, קאבול, נאשוויל, סנטיאגו דה צ'ילה",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "יוגוסלביה",
+      "object": "בלגרד",
+      "object_candidates": "לונדון, אלג'יר, לסטר, ברטיסלאבה, טאיפיי, בוקרשט, קיימברידג', רג'יינה, בורדו, בלגרד",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "מיורקה",
+      "object": "פלמה דה מיורקה",
+      "object_candidates": "נאנג'ינג, באקו, סיאול, לבוב, לוזאן, רג'יינה, אדינבורו, אתונה, וינצ'סטר, פלמה דה מיורקה",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "נורפוק",
+      "object": "נוריץ'",
+      "object_candidates": "ירוואן, מדריד, קנברה, בנגלור, קרליסל, ריברסייד, ויניפג, ניירובי, בזל, נוריץ'",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "מזוביה",
+      "object": "ורשה",
+      "object_candidates": "אודסה, הנובר, קונקורד, מוסקבה, קנברה, ברגן, ביסמרק, קאזאן, ויקטוריה, ורשה",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "פלנדריה",
+      "object": "בריסל",
+      "object_candidates": "טירנה, ברצלונה, ורשה, דרווין, מוסקבה, אתונה, דלהי, פירנצה, מומבאי, בריסל",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

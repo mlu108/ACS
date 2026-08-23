@@ -1,0 +1,1350 @@
+{
+  "name": "field_of_work",
+  "prompt_templates": [
+    "¿En qué campo trabaja <subject>? La Respuesta es: <mask>",
+    "¿En qué campo se sabe que <subject> ha trabajado? La Respuesta es: <mask>",
+    "¿Con qué área de estudio se asocia <subject>? La Respuesta es: <mask>",
+    "¿Por qué disciplina es famoso <subject> por trabajar? La Respuesta es: <mask>",
+    "¿Cuál es el área principal de experiencia para <subject>? La Respuesta es: <mask>",
+    " El campo de trabajo de <subject> es <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Alan Turing",
+      "object": "lógica",
+      "object_candidates": "fisiología, psicología, apartheid, novelista, ave, club nocturno, medicina, músico, budismo, lógica",
+      "index": 1792,
+      "subject_en": "Alan Turing",
+      "object_en": "logic"
+    },
+    {
+      "subject": "Anaxágoras",
+      "object": "filosofía",
+      "object_candidates": "geometría, astronomía, biología, lingüística, psicología, ópera, lógica, terrorismo, genética, filosofía",
+      "index": 1793,
+      "subject_en": "Anaxagoras",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Robert Bunsen",
+      "object": "química",
+      "object_candidates": "budismo, física, dramaturgo, astrónomo, lingüística, anatomía, ópera, novelista, biología, química",
+      "index": 1794,
+      "subject_en": "Robert Bunsen",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Juan Calvino",
+      "object": "teología",
+      "object_candidates": "historia, anatomía, lógica, física, psicología, geografía, matemáticas, geología, geometría, teología",
+      "index": 1795,
+      "subject_en": "John Calvin",
+      "object_en": "theology"
+    },
+    {
+      "subject": "sistema físico",
+      "object": "física",
+      "object_candidates": "terrorismo, psicología, historia, topología, músico, astrónomo, ópera, geografía, economía, física",
+      "index": 1796,
+      "subject_en": "physical system",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Carl Rogers",
+      "object": "psicología",
+      "object_candidates": "lingüística, lógica, apartheid, topología, genética, fisiología, budismo, ciencia, astrónomo, psicología",
+      "index": 1797,
+      "subject_en": "Carl Rogers",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "David Hilbert",
+      "object": "geometría",
+      "object_candidates": "economista, geografía, topología, matemáticas, sociología, sitio web, dramaturgo, ecología, apartheid, geometría",
+      "index": 1798,
+      "subject_en": "David Hilbert",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Richard Wagner",
+      "object": "ópera",
+      "object_candidates": "sitio web, matemático, ave, matemáticas, filosofía, economía, budismo, club nocturno, física, ópera",
+      "index": 1799,
+      "subject_en": "Richard Wagner",
+      "object_en": "opera"
+    },
+    {
+      "subject": "Euclides",
+      "object": "geometría",
+      "object_candidates": "sitio web, genética, terrorismo, lingüística, club nocturno, economía, astrónomo, geología, lógica, geometría",
+      "index": 1800,
+      "subject_en": "Euclid",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "sociología",
+      "object_candidates": "economía, química, músico, geología, terrorismo, matemáticas, astronomía, topología, ciencia, sociología",
+      "index": 1801,
+      "subject_en": "Max Weber",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Hans Eysenck",
+      "object": "psicología",
+      "object_candidates": "química, fisiología, músico, sitio web, economista, novelista, anatomía, física, astrónomo, psicología",
+      "index": 1802,
+      "subject_en": "Hans Eysenck",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Eugene Paul Wigner",
+      "object": "física",
+      "object_candidates": "dramaturgo, economista, geografía, apartheid, lingüística, medicina, química, geometría, terrorismo, física",
+      "index": 1803,
+      "subject_en": "Eugene Wigner",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Fred Hoyle",
+      "object": "astronomía",
+      "object_candidates": "topología, apartheid, terrorismo, biología, filosofía, medicina, economía, anatomía, matemático, astronomía",
+      "index": 1804,
+      "subject_en": "Fred Hoyle",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Galeno",
+      "object": "anatomía",
+      "object_candidates": "ópera, matemáticas, economista, psicología, fisiología, física, sitio web, medicina, astrónomo, anatomía",
+      "index": 1805,
+      "subject_en": "Galen",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "William Harvey",
+      "object": "fisiología",
+      "object_candidates": "biología, medicina, genética, músico, lingüística, anatomía, lógica, química, economista, fisiología",
+      "index": 1806,
+      "subject_en": "William Harvey",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Howard Carter",
+      "object": "arqueología",
+      "object_candidates": "lingüística, geometría, teología, geografía, fisiología, terrorismo, matemático, matemáticas, economía, arqueología",
+      "index": 1807,
+      "subject_en": "Howard Carter",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Heinrich Schliemann",
+      "object": "arqueología",
+      "object_candidates": "músico, economía, lógica, dramaturgo, biología, jazz, ópera, física, astronomía, arqueología",
+      "index": 1808,
+      "subject_en": "Heinrich Schliemann",
+      "object_en": "archaeology"
+    },
+    {
+      "subject": "Claude Bernard",
+      "object": "fisiología",
+      "object_candidates": "medicina, biología, historia, economista, química, economía, apartheid, topología, geometría, fisiología",
+      "index": 1809,
+      "subject_en": "Claude Bernard",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "matemáticas",
+      "object_candidates": "ópera, geología, fisiología, geometría, física, ave, psicología, arqueología, historia, matemáticas",
+      "index": 1810,
+      "subject_en": "Isaac Newton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Justus von Liebig",
+      "object": "química",
+      "object_candidates": "ópera, dramaturgo, ave, filosofía, club nocturno, genética, ecología, arqueología, sitio web, química",
+      "index": 1811,
+      "subject_en": "Justus von Liebig",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Frederick Grant Banting",
+      "object": "fisiología",
+      "object_candidates": "matemático, músico, geometría, matemáticas, novelista, terrorismo, lógica, ópera, budismo, fisiología",
+      "index": 1812,
+      "subject_en": "Frederick Banting",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "sociología",
+      "object_candidates": "ecología, terrorismo, topología, matemático, medicina, astrónomo, teología, lógica, jazz, sociología",
+      "index": 1813,
+      "subject_en": "Karl Marx",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "Hans Bethe",
+      "object": "física",
+      "object_candidates": "apartheid, budismo, ciencia, anatomía, sitio web, geología, biología, astronomía, lingüística, física",
+      "index": 1814,
+      "subject_en": "Hans Bethe",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Jack Ruby",
+      "object": "club nocturno",
+      "object_candidates": "geología, química, astronomía, matemáticas, jazz, fisiología, física, psicología, sociología, club nocturno",
+      "index": 1815,
+      "subject_en": "Jack Ruby",
+      "object_en": "nightclub"
+    },
+    {
+      "subject": "Percy Williams Bridgman",
+      "object": "física",
+      "object_candidates": "geología, ave, medicina, geografía, novelista, filosofía, fisiología, club nocturno, matemático, física",
+      "index": 1816,
+      "subject_en": "Percy Williams Bridgman",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gerolamo Cardano",
+      "object": "matemáticas",
+      "object_candidates": "ciencia, sociología, economista, ave, sitio web, astronomía, novelista, topología, anatomía, matemáticas",
+      "index": 1817,
+      "subject_en": "Gerolamo Cardano",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "economía",
+      "object_candidates": "medicina, músico, física, topología, economista, astrónomo, budismo, geometría, terrorismo, economía",
+      "index": 1818,
+      "subject_en": "Max Weber",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Michael Faraday",
+      "object": "química",
+      "object_candidates": "músico, topología, terrorismo, física, genética, ópera, geología, geografía, biología, química",
+      "index": 1819,
+      "subject_en": "Michael Faraday",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "ornitología",
+      "object": "ave",
+      "object_candidates": "dramaturgo, historia, budismo, teología, topología, filosofía, novelista, fisiología, matemático, ave",
+      "index": 1820,
+      "subject_en": "ornithology",
+      "object_en": "bird"
+    },
+    {
+      "subject": "Bonaventura Cavalieri",
+      "object": "matemáticas",
+      "object_candidates": "matemático, sociología, economista, geografía, club nocturno, ecología, músico, ópera, biología, matemáticas",
+      "index": 1821,
+      "subject_en": "Bonaventura Cavalieri",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "matemáticas",
+      "object_candidates": "novelista, teología, economista, dramaturgo, genética, sociología, psicología, arqueología, club nocturno, matemáticas",
+      "index": 1822,
+      "subject_en": "Galileo Galilei",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Hipatia",
+      "object": "matemáticas",
+      "object_candidates": "física, lingüística, novelista, medicina, matemático, geometría, fisiología, economista, astronomía, matemáticas",
+      "index": 1823,
+      "subject_en": "Hypatia",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Miguel Servet",
+      "object": "teología",
+      "object_candidates": "ecología, economista, geometría, lingüística, psicología, jazz, física, anatomía, economía, teología",
+      "index": 1824,
+      "subject_en": "Michael Servetus",
+      "object_en": "theology"
+    },
+    {
+      "subject": "Edwin Hubble",
+      "object": "astronomía",
+      "object_candidates": "topología, filosofía, sociología, matemático, sitio web, matemáticas, apartheid, budismo, anatomía, astronomía",
+      "index": 1825,
+      "subject_en": "Edwin Hubble",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "física",
+      "object_candidates": "psicología, medicina, teología, matemático, astronomía, anatomía, dramaturgo, ópera, ecología, física",
+      "index": 1826,
+      "subject_en": "Isaac Newton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Ilya Prigogine",
+      "object": "física",
+      "object_candidates": "medicina, músico, ópera, topología, filosofía, matemático, psicología, terrorismo, historia, física",
+      "index": 1827,
+      "subject_en": "Ilya Prigogine",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hipótesis de Sapir-Whorf",
+      "object": "lingüística",
+      "object_candidates": "ciencia, ecología, matemático, economista, anatomía, apartheid, genética, fisiología, terrorismo, lingüística",
+      "index": 1828,
+      "subject_en": "Sapir-Whorf hypothesis",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "método científico",
+      "object": "ciencia",
+      "object_candidates": "anatomía, filosofía, dramaturgo, historia, sitio web, novelista, ecología, economía, geología, ciencia",
+      "index": 1829,
+      "subject_en": "scientific method",
+      "object_en": "science"
+    },
+    {
+      "subject": "William Crookes",
+      "object": "química",
+      "object_candidates": "geología, músico, teología, economista, geografía, anatomía, topología, ópera, ecología, química",
+      "index": 1830,
+      "subject_en": "William Crookes",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Steve Biko",
+      "object": "apartheid",
+      "object_candidates": "lingüística, matemáticas, psicología, matemático, sitio web, músico, geografía, teología, historia, apartheid",
+      "index": 1831,
+      "subject_en": "Steve Biko",
+      "object_en": "apartheid"
+    },
+    {
+      "subject": "Charles Darwin",
+      "object": "biología",
+      "object_candidates": "club nocturno, sociología, ópera, terrorismo, budismo, física, geografía, ciencia, teología, biología",
+      "index": 1832,
+      "subject_en": "Charles Darwin",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Tycho Brahe",
+      "object": "astronomía",
+      "object_candidates": "budismo, club nocturno, física, biología, medicina, matemático, psicología, filosofía, músico, astronomía",
+      "index": 1833,
+      "subject_en": "Tycho Brahe",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "John Stuart Mill",
+      "object": "filosofía",
+      "object_candidates": "astrónomo, astronomía, ave, sociología, ecología, jazz, genética, lógica, geología, filosofía",
+      "index": 1834,
+      "subject_en": "John Stuart Mill",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Alan Turing",
+      "object": "matemáticas",
+      "object_candidates": "sitio web, teología, astrónomo, genética, anatomía, física, músico, ave, matemático, matemáticas",
+      "index": 1835,
+      "subject_en": "Alan Turing",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Vilfredo Pareto",
+      "object": "sociología",
+      "object_candidates": "psicología, ópera, lingüística, matemáticas, biología, jazz, astrónomo, topología, anatomía, sociología",
+      "index": 1836,
+      "subject_en": "Vilfredo Pareto",
+      "object_en": "sociology"
+    },
+    {
+      "subject": "William Somerset Maugham",
+      "object": "dramaturgo",
+      "object_candidates": "geología, genética, astrónomo, astronomía, sociología, ecología, arqueología, terrorismo, fisiología, dramaturgo",
+      "index": 1837,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "playwright"
+    },
+    {
+      "subject": "William Somerset Maugham",
+      "object": "novelista",
+      "object_candidates": "economía, fisiología, lógica, arqueología, geometría, economista, ciencia, ópera, química, novelista",
+      "index": 1838,
+      "subject_en": "William Somerset Maugham",
+      "object_en": "novelist"
+    },
+    {
+      "subject": "Enrico Fermi",
+      "object": "física",
+      "object_candidates": "psicología, terrorismo, ave, química, fisiología, músico, sitio web, filosofía, medicina, física",
+      "index": 1839,
+      "subject_en": "Enrico Fermi",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Giovanni Domenico Cassini",
+      "object": "astronomía",
+      "object_candidates": "anatomía, budismo, geometría, novelista, filosofía, lógica, geología, matemático, astrónomo, astronomía",
+      "index": 1840,
+      "subject_en": "Giovanni Domenico Cassini",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Johann Wolfgang von Goethe",
+      "object": "anatomía",
+      "object_candidates": "psicología, matemáticas, filosofía, músico, terrorismo, economista, sitio web, budismo, ave, anatomía",
+      "index": 1841,
+      "subject_en": "Johann Wolfgang von Goethe",
+      "object_en": "anatomy"
+    },
+    {
+      "subject": "Theophrastus Bombastus von Hohenheim",
+      "object": "medicina",
+      "object_candidates": "matemático, budismo, ópera, ciencia, economista, terrorismo, astrónomo, dramaturgo, economía, medicina",
+      "index": 1842,
+      "subject_en": "Paracelsus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "John Coltrane",
+      "object": "jazz",
+      "object_candidates": "novelista, anatomía, astronomía, geografía, fisiología, lingüística, ópera, psicología, biología, jazz",
+      "index": 1843,
+      "subject_en": "John Coltrane",
+      "object_en": "jazz"
+    },
+    {
+      "subject": "Hermann von Helmholtz",
+      "object": "física",
+      "object_candidates": "historia, geografía, medicina, sitio web, ciencia, apartheid, economista, ave, geometría, física",
+      "index": 1844,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Galeno",
+      "object": "medicina",
+      "object_candidates": "lógica, biología, matemático, lingüística, genética, astrónomo, sociología, apartheid, terrorismo, medicina",
+      "index": 1845,
+      "subject_en": "Galen",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Abraham Maslow",
+      "object": "psicología",
+      "object_candidates": "novelista, anatomía, geología, astrónomo, química, matemático, club nocturno, músico, ecología, psicología",
+      "index": 1846,
+      "subject_en": "Abraham Maslow",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Louis Pasteur",
+      "object": "química",
+      "object_candidates": "ciencia, budismo, fisiología, sociología, filosofía, arqueología, apartheid, ave, topología, química",
+      "index": 1847,
+      "subject_en": "Louis Pasteur",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Henry Cavendish",
+      "object": "física",
+      "object_candidates": "ave, arqueología, sitio web, historia, matemáticas, genética, músico, geología, anatomía, física",
+      "index": 1848,
+      "subject_en": "Henry Cavendish",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "economía",
+      "object_candidates": "arqueología, budismo, astrónomo, topología, apartheid, teología, anatomía, fisiología, medicina, economía",
+      "index": 1849,
+      "subject_en": "Karl Marx",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Ulf von Euler",
+      "object": "fisiología",
+      "object_candidates": "topología, medicina, sociología, dramaturgo, teología, física, matemáticas, ópera, geometría, fisiología",
+      "index": 1850,
+      "subject_en": "Ulf von Euler",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "astronomía",
+      "object_candidates": "química, club nocturno, ciencia, lógica, budismo, ópera, geometría, medicina, biología, astronomía",
+      "index": 1851,
+      "subject_en": "Galileo Galilei",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Nikolái Lobachevski",
+      "object": "geometría",
+      "object_candidates": "teología, budismo, lógica, novelista, sociología, geografía, apartheid, psicología, geología, geometría",
+      "index": 1852,
+      "subject_en": "Nikolai Ivanovich Lobachevsky",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Christiaan",
+      "object": "matemáticas",
+      "object_candidates": "jazz, historia, economista, terrorismo, química, lógica, física, astronomía, ave, matemáticas",
+      "index": 1853,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "aplicación web",
+      "object": "sitio web",
+      "object_candidates": "historia, geometría, biología, geología, budismo, ópera, psicología, fisiología, química, sitio web",
+      "index": 1854,
+      "subject_en": "web application",
+      "object_en": "website"
+    },
+    {
+      "subject": "Nāgārjuna",
+      "object": "budismo",
+      "object_candidates": "lógica, matemático, física, ave, ecología, jazz, anatomía, novelista, sitio web, budismo",
+      "index": 1855,
+      "subject_en": "Nagarjuna",
+      "object_en": "Buddhism"
+    },
+    {
+      "subject": "William Rowan Hamilton",
+      "object": "matemáticas",
+      "object_candidates": "ciencia, economista, geometría, arqueología, astrónomo, geografía, sitio web, lingüística, química, matemáticas",
+      "index": 1856,
+      "subject_en": "William Rowan Hamilton",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Ernest Rutherford",
+      "object": "física",
+      "object_candidates": "terrorismo, historia, economista, lingüística, arqueología, topología, anatomía, ecología, matemático, física",
+      "index": 1857,
+      "subject_en": "Ernest Rutherford",
+      "object_en": "physics"
+    },
+    {
+      "subject": "William Herschel",
+      "object": "astronomía",
+      "object_candidates": "ciencia, geología, teología, ópera, filosofía, historia, biología, arqueología, budismo, astronomía",
+      "index": 1858,
+      "subject_en": "William Herschel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Iván Pávlov",
+      "object": "fisiología",
+      "object_candidates": "apartheid, psicología, astrónomo, club nocturno, biología, economista, física, geografía, sociología, fisiología",
+      "index": 1859,
+      "subject_en": "Ivan Pavlov",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Hermann Minkowski",
+      "object": "geometría",
+      "object_candidates": "terrorismo, sitio web, teología, medicina, física, topología, club nocturno, genética, matemáticas, geometría",
+      "index": 1860,
+      "subject_en": "Hermann Minkowski",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "física",
+      "object_candidates": "geometría, club nocturno, ecología, topología, ave, lógica, terrorismo, músico, dramaturgo, física",
+      "index": 1861,
+      "subject_en": "Galileo Galilei",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Julian Schwinger",
+      "object": "física",
+      "object_candidates": "lingüística, fisiología, topología, anatomía, ciencia, sociología, geografía, química, teología, física",
+      "index": 1862,
+      "subject_en": "Julian Schwinger",
+      "object_en": "physics"
+    },
+    {
+      "subject": "ataque suicida",
+      "object": "terrorismo",
+      "object_candidates": "topología, psicología, filosofía, geografía, arqueología, lingüística, teología, geometría, ave, terrorismo",
+      "index": 1863,
+      "subject_en": "suicide attack",
+      "object_en": "terrorism"
+    },
+    {
+      "subject": "Lev Vygotsky",
+      "object": "psicología",
+      "object_candidates": "medicina, jazz, lógica, geografía, genética, matemáticas, club nocturno, economista, dramaturgo, psicología",
+      "index": 1864,
+      "subject_en": "Lev Vygotsky",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Karl Marx",
+      "object": "filosofía",
+      "object_candidates": "psicología, terrorismo, física, club nocturno, ecología, geología, ciencia, astrónomo, músico, filosofía",
+      "index": 1865,
+      "subject_en": "Karl Marx",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "matemáticas",
+      "object_candidates": "club nocturno, lingüística, teología, topología, fisiología, biología, ópera, geología, lógica, matemáticas",
+      "index": 1866,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Joseph Alois Schumpeter",
+      "object": "economía",
+      "object_candidates": "arqueología, club nocturno, medicina, sociología, filosofía, jazz, matemático, lógica, teología, economía",
+      "index": 1867,
+      "subject_en": "Joseph Schumpeter",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Max Weber",
+      "object": "historia",
+      "object_candidates": "ave, geografía, anatomía, ciencia, astrónomo, biología, genética, club nocturno, ecología, historia",
+      "index": 1868,
+      "subject_en": "Max Weber",
+      "object_en": "history"
+    },
+    {
+      "subject": "Edward Gibbon",
+      "object": "historia",
+      "object_candidates": "lingüística, terrorismo, geografía, filosofía, teología, sociología, apartheid, dramaturgo, fisiología, historia",
+      "index": 1869,
+      "subject_en": "Edward Gibbon",
+      "object_en": "history"
+    },
+    {
+      "subject": "John Archibald Wheeler",
+      "object": "física",
+      "object_candidates": "sociología, terrorismo, club nocturno, biología, sitio web, apartheid, geografía, psicología, anatomía, física",
+      "index": 1870,
+      "subject_en": "John Archibald Wheeler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Leonhard Euler",
+      "object": "física",
+      "object_candidates": "budismo, geografía, matemáticas, psicología, matemático, jazz, geología, apartheid, lingüística, física",
+      "index": 1871,
+      "subject_en": "Leonhard Euler",
+      "object_en": "physics"
+    },
+    {
+      "subject": "August Krogh",
+      "object": "fisiología",
+      "object_candidates": "biología, arqueología, lógica, club nocturno, budismo, geología, anatomía, sitio web, economía, fisiología",
+      "index": 1872,
+      "subject_en": "August Krogh",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Felix Bloch",
+      "object": "física",
+      "object_candidates": "apartheid, ciencia, matemático, psicología, matemáticas, geografía, novelista, ópera, fisiología, física",
+      "index": 1873,
+      "subject_en": "Felix Bloch",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Anders Celsius",
+      "object": "astronomía",
+      "object_candidates": "economista, química, biología, astrónomo, fisiología, anatomía, ave, sitio web, geometría, astronomía",
+      "index": 1874,
+      "subject_en": "Anders Celsius",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Willem Einthoven",
+      "object": "fisiología",
+      "object_candidates": "apartheid, teología, club nocturno, astronomía, geografía, budismo, lingüística, lógica, ecología, fisiología",
+      "index": 1875,
+      "subject_en": "Willem Einthoven",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Joseph von Fraunhofer",
+      "object": "física",
+      "object_candidates": "medicina, músico, ciencia, ecología, matemáticas, jazz, química, matemático, arqueología, física",
+      "index": 1876,
+      "subject_en": "Joseph von Fraunhofer",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Shin'ichirō Tomonaga",
+      "object": "física",
+      "object_candidates": "lógica, geología, filosofía, teología, astrónomo, economista, budismo, ciencia, psicología, física",
+      "index": 1877,
+      "subject_en": "Sin-Itiro Tomonaga",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann Schwarz",
+      "object": "matemáticas",
+      "object_candidates": "astrónomo, psicología, dramaturgo, física, club nocturno, músico, geometría, astronomía, fisiología, matemáticas",
+      "index": 1878,
+      "subject_en": "Hermann Schwarz",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Jean Le Rond d'Alembert",
+      "object": "matemáticas",
+      "object_candidates": "química, novelista, fisiología, genética, filosofía, biología, medicina, arqueología, músico, matemáticas",
+      "index": 1879,
+      "subject_en": "Jean Le Rond d'Alembert",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Luca Pacioli",
+      "object": "matemáticas",
+      "object_candidates": "medicina, astrónomo, lingüística, psicología, astronomía, ave, filosofía, budismo, biología, matemáticas",
+      "index": 1880,
+      "subject_en": "Luca Pacioli",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Vitali Gínzburg",
+      "object": "física",
+      "object_candidates": "geografía, jazz, arqueología, dramaturgo, topología, astronomía, ave, filosofía, química, física",
+      "index": 1881,
+      "subject_en": "Vitaly Ginzburg",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Sima Qian",
+      "object": "historia",
+      "object_candidates": "medicina, geología, club nocturno, ave, anatomía, sitio web, ecología, dramaturgo, terrorismo, historia",
+      "index": 1882,
+      "subject_en": "Sima Qian",
+      "object_en": "history"
+    },
+    {
+      "subject": "Claudio Ptolomeo",
+      "object": "matemático",
+      "object_candidates": "dramaturgo, ave, terrorismo, topología, medicina, astrónomo, geometría, ciencia, músico, matemático",
+      "index": 1883,
+      "subject_en": "Ptolemy",
+      "object_en": "mathematician"
+    },
+    {
+      "subject": "Jean Piaget",
+      "object": "psicología",
+      "object_candidates": "ópera, lógica, sociología, budismo, teología, química, sitio web, anatomía, arqueología, psicología",
+      "index": 1884,
+      "subject_en": "Jean Piaget",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Stefan Banach",
+      "object": "matemáticas",
+      "object_candidates": "lógica, astronomía, biología, arqueología, fisiología, ciencia, sociología, terrorismo, topología, matemáticas",
+      "index": 1885,
+      "subject_en": "Stefan Banach",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Joseph Priestley",
+      "object": "filosofía",
+      "object_candidates": "física, psicología, economía, anatomía, medicina, terrorismo, dramaturgo, geometría, matemáticas, filosofía",
+      "index": 1886,
+      "subject_en": "Joseph Priestley",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Kurt Lewin",
+      "object": "psicología",
+      "object_candidates": "química, dramaturgo, anatomía, economía, astronomía, economista, lógica, ópera, budismo, psicología",
+      "index": 1887,
+      "subject_en": "Kurt Lewin",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "James Clerk Maxwell",
+      "object": "física",
+      "object_candidates": "medicina, geografía, psicología, economía, ópera, astronomía, terrorismo, budismo, biología, física",
+      "index": 1888,
+      "subject_en": "James Clerk Maxwell",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Alfred Marshall",
+      "object": "economía",
+      "object_candidates": "física, geografía, biología, budismo, ciencia, geometría, astronomía, matemático, lógica, economía",
+      "index": 1889,
+      "subject_en": "Alfred Marshall",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Nicolás Copérnico",
+      "object": "astronomía",
+      "object_candidates": "lógica, topología, arqueología, ciencia, ave, geografía, terrorismo, club nocturno, biología, astronomía",
+      "index": 1890,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Eric Maskin",
+      "object": "economista",
+      "object_candidates": "budismo, novelista, astronomía, ciencia, ecología, sociología, anatomía, astrónomo, medicina, economista",
+      "index": 1891,
+      "subject_en": "Eric Maskin",
+      "object_en": "economist"
+    },
+    {
+      "subject": "Jared Diamond",
+      "object": "ecología",
+      "object_candidates": "química, arqueología, geología, lógica, física, sitio web, ciencia, astrónomo, apartheid, ecología",
+      "index": 1892,
+      "subject_en": "Jared Diamond",
+      "object_en": "ecology"
+    },
+    {
+      "subject": "Andréi Kolmogórov",
+      "object": "geometría",
+      "object_candidates": "biología, física, lingüística, dramaturgo, matemáticas, sitio web, sociología, novelista, jazz, geometría",
+      "index": 1893,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Joseph Louis Gay-Lussac",
+      "object": "química",
+      "object_candidates": "astronomía, ave, historia, geografía, músico, lógica, dramaturgo, economía, novelista, química",
+      "index": 1894,
+      "subject_en": "Joseph Louis Gay-Lussac",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "octano",
+      "object": "química",
+      "object_candidates": "lingüística, topología, sitio web, lógica, apartheid, ópera, ciencia, historia, novelista, química",
+      "index": 1895,
+      "subject_en": "octane",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Daniel Bernoully",
+      "object": "física",
+      "object_candidates": "medicina, arqueología, ave, teología, dramaturgo, psicología, ópera, astrónomo, filosofía, física",
+      "index": 1896,
+      "subject_en": "Daniel Bernoulli",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Michael Faraday",
+      "object": "física",
+      "object_candidates": "ave, biología, ópera, budismo, economía, topología, historia, medicina, psicología, física",
+      "index": 1897,
+      "subject_en": "Michael Faraday",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Humphry Davy",
+      "object": "química",
+      "object_candidates": "dramaturgo, economista, psicología, sociología, filosofía, lógica, jazz, novelista, geografía, química",
+      "index": 1898,
+      "subject_en": "Humphry Davy",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Henri Moissan",
+      "object": "química",
+      "object_candidates": "sitio web, lógica, novelista, matemáticas, topología, economía, astrónomo, terrorismo, club nocturno, química",
+      "index": 1899,
+      "subject_en": "Henri Moissan",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Pierre Curie",
+      "object": "física",
+      "object_candidates": "economía, teología, dramaturgo, geometría, arqueología, filosofía, novelista, psicología, jazz, física",
+      "index": 1900,
+      "subject_en": "Pierre Curie",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gustav Kirchhoff",
+      "object": "física",
+      "object_candidates": "topología, matemático, teología, ciencia, filosofía, matemáticas, lingüística, apartheid, medicina, física",
+      "index": 1901,
+      "subject_en": "Gustav Kirchhoff",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Norbert Wiener",
+      "object": "matemáticas",
+      "object_candidates": "lógica, budismo, ópera, química, ecología, sociología, teología, filosofía, geografía, matemáticas",
+      "index": 1902,
+      "subject_en": "Norbert Wiener",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Urbain Le Verrier",
+      "object": "astronomía",
+      "object_candidates": "teología, fisiología, club nocturno, budismo, geografía, anatomía, biología, sitio web, geología, astronomía",
+      "index": 1903,
+      "subject_en": "Urbain Le Verrier",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Johan Huizinga",
+      "object": "historia",
+      "object_candidates": "matemático, jazz, física, novelista, lingüística, matemáticas, geografía, medicina, ave, historia",
+      "index": 1904,
+      "subject_en": "Johan Huizinga",
+      "object_en": "history"
+    },
+    {
+      "subject": "Science",
+      "object": "ciencia",
+      "object_candidates": "músico, geometría, teología, ave, lógica, psicología, jazz, ecología, astrónomo, ciencia",
+      "index": 1905,
+      "subject_en": "Science",
+      "object_en": "science"
+    },
+    {
+      "subject": "Edward Teller",
+      "object": "física",
+      "object_candidates": "genética, budismo, matemáticas, economía, lógica, astrónomo, anatomía, sociología, jazz, física",
+      "index": 1906,
+      "subject_en": "Edward Teller",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Led Zeppelin",
+      "object": "músico",
+      "object_candidates": "arqueología, economía, biología, lógica, lingüística, psicología, geología, anatomía, genética, músico",
+      "index": 1907,
+      "subject_en": "Led Zeppelin",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Ernest Lawrence",
+      "object": "física",
+      "object_candidates": "ciencia, ave, anatomía, historia, astronomía, topología, lógica, medicina, club nocturno, física",
+      "index": 1908,
+      "subject_en": "Ernest Lawrence",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Marie Curie",
+      "object": "química",
+      "object_candidates": "economía, astrónomo, ciencia, budismo, ecología, sitio web, jazz, matemático, matemáticas, química",
+      "index": 1909,
+      "subject_en": "Marie Curie",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "John Napier",
+      "object": "matemáticas",
+      "object_candidates": "lingüística, teología, astrónomo, ópera, músico, matemático, medicina, novelista, genética, matemáticas",
+      "index": 1910,
+      "subject_en": "John Napier",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Isaac Newton",
+      "object": "astronomía",
+      "object_candidates": "teología, ecología, economía, apartheid, genética, geografía, anatomía, matemático, ópera, astronomía",
+      "index": 1911,
+      "subject_en": "Isaac Newton",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Larry Sanger",
+      "object": "filosofía",
+      "object_candidates": "ciencia, física, fisiología, arqueología, ecología, astronomía, medicina, química, astrónomo, filosofía",
+      "index": 1912,
+      "subject_en": "Larry Sanger",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Philipp Lenard",
+      "object": "física",
+      "object_candidates": "terrorismo, geología, economista, lógica, novelista, ave, dramaturgo, ópera, sociología, física",
+      "index": 1913,
+      "subject_en": "Philipp Lenard",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann von Helmholtz",
+      "object": "fisiología",
+      "object_candidates": "economía, ave, matemáticas, genética, física, sitio web, ecología, matemático, dramaturgo, fisiología",
+      "index": 1914,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "physiology"
+    },
+    {
+      "subject": "Friedrich Bessel",
+      "object": "astronomía",
+      "object_candidates": "apartheid, psicología, sitio web, lógica, geometría, filosofía, músico, genética, ópera, astronomía",
+      "index": 1915,
+      "subject_en": "Friedrich Bessel",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Alfred C. Kinsey",
+      "object": "biología",
+      "object_candidates": "dramaturgo, química, sociología, budismo, ecología, geología, genética, historia, ópera, biología",
+      "index": 1916,
+      "subject_en": "Alfred Kinsey",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Mesrob Mashtots",
+      "object": "lingüística",
+      "object_candidates": "geología, genética, club nocturno, química, medicina, ciencia, apartheid, física, topología, lingüística",
+      "index": 1917,
+      "subject_en": "Mesrop Mashtots",
+      "object_en": "linguistics"
+    },
+    {
+      "subject": "James Franck",
+      "object": "física",
+      "object_candidates": "astronomía, sitio web, sociología, ecología, economía, ciencia, ave, club nocturno, apartheid, física",
+      "index": 1918,
+      "subject_en": "James Franck",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Elinor Ostrom",
+      "object": "economía",
+      "object_candidates": "astrónomo, fisiología, matemático, apartheid, ave, lógica, novelista, medicina, psicología, economía",
+      "index": 1919,
+      "subject_en": "Elinor Ostrom",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Edward Victor Appleton",
+      "object": "física",
+      "object_candidates": "matemáticas, psicología, astrónomo, ave, apartheid, jazz, astronomía, ecología, teología, física",
+      "index": 1920,
+      "subject_en": "Edward Victor Appleton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "John Dalton",
+      "object": "química",
+      "object_candidates": "lingüística, matemático, dramaturgo, historia, economía, biología, budismo, geografía, filosofía, química",
+      "index": 1921,
+      "subject_en": "John Dalton",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "John Dalton",
+      "object": "física",
+      "object_candidates": "matemático, terrorismo, geometría, topología, astrónomo, química, fisiología, geografía, anatomía, física",
+      "index": 1922,
+      "subject_en": "John Dalton",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Dmitri Mendeléyev",
+      "object": "química",
+      "object_candidates": "física, astrónomo, sitio web, arqueología, ópera, biología, club nocturno, historia, ecología, química",
+      "index": 1923,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Dmitri Mendeléyev",
+      "object": "física",
+      "object_candidates": "dramaturgo, ópera, sociología, geografía, medicina, matemático, jazz, matemáticas, terrorismo, física",
+      "index": 1924,
+      "subject_en": "Dmitri Mendeleev",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Paul McCartney",
+      "object": "músico",
+      "object_candidates": "geometría, astronomía, teología, budismo, dramaturgo, terrorismo, ecología, anatomía, novelista, músico",
+      "index": 1925,
+      "subject_en": "Paul McCartney",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Charles Babbage",
+      "object": "matemáticas",
+      "object_candidates": "astronomía, club nocturno, anatomía, budismo, psicología, biología, filosofía, dramaturgo, sitio web, matemáticas",
+      "index": 1926,
+      "subject_en": "Charles Babbage",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Nicolás Copérnico",
+      "object": "matemáticas",
+      "object_candidates": "anatomía, sitio web, ave, fisiología, astronomía, astrónomo, biología, física, geografía, matemáticas",
+      "index": 1927,
+      "subject_en": "Nicolaus Copernicus",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Aryabhata",
+      "object": "astronomía",
+      "object_candidates": "sociología, lógica, economista, economía, biología, matemático, historia, apartheid, geografía, astronomía",
+      "index": 1928,
+      "subject_en": "Aryabhata",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Clyde Tombaugh",
+      "object": "astrónomo",
+      "object_candidates": "terrorismo, novelista, lógica, geografía, teología, budismo, lingüística, club nocturno, química, astrónomo",
+      "index": 1929,
+      "subject_en": "Clyde Tombaugh",
+      "object_en": "astronomer"
+    },
+    {
+      "subject": "Willis Eugene Lamb",
+      "object": "física",
+      "object_candidates": "economía, anatomía, arqueología, ave, medicina, geometría, lingüística, astronomía, lógica, física",
+      "index": 1930,
+      "subject_en": "Willis Lamb",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Arquímedes",
+      "object": "geometría",
+      "object_candidates": "fisiología, jazz, topología, geografía, sitio web, geología, filosofía, ecología, biología, geometría",
+      "index": 1931,
+      "subject_en": "Archimedes",
+      "object_en": "geometry"
+    },
+    {
+      "subject": "Anaxágoras",
+      "object": "astronomía",
+      "object_candidates": "apartheid, historia, topología, astrónomo, genética, anatomía, filosofía, lógica, sociología, astronomía",
+      "index": 1932,
+      "subject_en": "Anaxagoras",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Christiaan",
+      "object": "física",
+      "object_candidates": "terrorismo, ópera, economía, club nocturno, lógica, músico, matemáticas, geometría, anatomía, física",
+      "index": 1933,
+      "subject_en": "Christiaan Huygens",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Michael Jackson",
+      "object": "músico",
+      "object_candidates": "física, economista, geología, arqueología, astrónomo, matemáticas, ave, economía, budismo, músico",
+      "index": 1934,
+      "subject_en": "Michael Jackson",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Adam Smith",
+      "object": "economía",
+      "object_candidates": "lógica, topología, genética, jazz, matemáticas, biología, geología, ave, geografía, economía",
+      "index": 1935,
+      "subject_en": "Adam Smith",
+      "object_en": "economics"
+    },
+    {
+      "subject": "Robert Andrews Millikan",
+      "object": "física",
+      "object_candidates": "ecología, geología, medicina, dramaturgo, club nocturno, jazz, geografía, química, apartheid, física",
+      "index": 1936,
+      "subject_en": "Robert A. Millikan",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Gerardo Mercator",
+      "object": "geografía",
+      "object_candidates": "anatomía, ecología, dramaturgo, músico, astrónomo, ciencia, lógica, ópera, economista, geografía",
+      "index": 1937,
+      "subject_en": "Gerardus Mercator",
+      "object_en": "geography"
+    },
+    {
+      "subject": "Carlos Linneo",
+      "object": "medicina",
+      "object_candidates": "lógica, filosofía, club nocturno, teología, matemáticas, dramaturgo, economía, geología, geometría, medicina",
+      "index": 1938,
+      "subject_en": "Carl Linnaeus",
+      "object_en": "medicine"
+    },
+    {
+      "subject": "Charles Darwin",
+      "object": "geología",
+      "object_candidates": "psicología, lógica, ciencia, arqueología, astrónomo, club nocturno, ópera, teología, geografía, geología",
+      "index": 1939,
+      "subject_en": "Charles Darwin",
+      "object_en": "geology"
+    },
+    {
+      "subject": "Frank Wilczek",
+      "object": "física",
+      "object_candidates": "filosofía, geometría, ciencia, psicología, anatomía, ecología, genética, astronomía, ave, física",
+      "index": 1940,
+      "subject_en": "Frank Wilczek",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Andréi Kolmogórov",
+      "object": "topología",
+      "object_candidates": "arqueología, ciencia, geometría, genética, matemático, lógica, matemáticas, ave, novelista, topología",
+      "index": 1941,
+      "subject_en": "Andrey Kolmogorov",
+      "object_en": "topology"
+    },
+    {
+      "subject": "Johann Heinrich Lambert",
+      "object": "física",
+      "object_candidates": "astronomía, músico, jazz, biología, medicina, dramaturgo, arqueología, novelista, lingüística, física",
+      "index": 1942,
+      "subject_en": "Johann Heinrich Lambert",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Brahmagupta",
+      "object": "matemáticas",
+      "object_candidates": "economía, anatomía, músico, sitio web, club nocturno, novelista, ave, jazz, geografía, matemáticas",
+      "index": 1943,
+      "subject_en": "Brahmagupta",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Wilhelm Wien",
+      "object": "física",
+      "object_candidates": "fisiología, sitio web, genética, ave, medicina, economía, lógica, budismo, sociología, física",
+      "index": 1944,
+      "subject_en": "Wilhelm Wien",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Hermann von Helmholtz",
+      "object": "psicología",
+      "object_candidates": "astronomía, matemáticas, biología, jazz, astrónomo, ópera, medicina, terrorismo, filosofía, psicología",
+      "index": 1945,
+      "subject_en": "Hermann von Helmholtz",
+      "object_en": "psychology"
+    },
+    {
+      "subject": "Leonhard Euler",
+      "object": "astronomía",
+      "object_candidates": "budismo, sociología, apartheid, física, dramaturgo, matemático, geometría, arqueología, músico, astronomía",
+      "index": 1946,
+      "subject_en": "Leonhard Euler",
+      "object_en": "astronomy"
+    },
+    {
+      "subject": "Galileo Galilei",
+      "object": "filosofía",
+      "object_candidates": "psicología, física, matemático, arqueología, sitio web, biología, astronomía, jazz, lógica, filosofía",
+      "index": 1947,
+      "subject_en": "Galileo Galilei",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Gregor Mendel",
+      "object": "genética",
+      "object_candidates": "anatomía, lingüística, terrorismo, astronomía, topología, economía, psicología, geografía, teología, genética",
+      "index": 1948,
+      "subject_en": "Gregor Mendel",
+      "object_en": "genetics"
+    },
+    {
+      "subject": "Bruce Springsteen",
+      "object": "músico",
+      "object_candidates": "geología, economista, jazz, fisiología, lingüística, astrónomo, ciencia, geografía, terrorismo, músico",
+      "index": 1949,
+      "subject_en": "Bruce Springsteen",
+      "object_en": "musician"
+    },
+    {
+      "subject": "Sofia Kovalévskaya",
+      "object": "matemáticas",
+      "object_candidates": "biología, química, matemático, jazz, genética, dramaturgo, sociología, geología, lingüística, matemáticas",
+      "index": 1950,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "mathematics"
+    },
+    {
+      "subject": "Giordano Bruno",
+      "object": "filosofía",
+      "object_candidates": "novelista, matemático, jazz, budismo, ave, geología, geometría, economía, biología, filosofía",
+      "index": 1951,
+      "subject_en": "Giordano Bruno",
+      "object_en": "philosophy"
+    },
+    {
+      "subject": "Henri Becquerel",
+      "object": "física",
+      "object_candidates": "terrorismo, lógica, ave, astronomía, geografía, teología, lingüística, astrónomo, geología, física",
+      "index": 1952,
+      "subject_en": "Henri Becquerel",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Kip S. Thorne",
+      "object": "física",
+      "object_candidates": "fisiología, jazz, terrorismo, apartheid, geometría, biología, novelista, sitio web, topología, física",
+      "index": 1953,
+      "subject_en": "Kip S. Thorne",
+      "object_en": "physics"
+    },
+    {
+      "subject": "August Weismann",
+      "object": "biología",
+      "object_candidates": "geología, ecología, fisiología, topología, genética, terrorismo, lógica, anatomía, medicina, biología",
+      "index": 1954,
+      "subject_en": "August Weismann",
+      "object_en": "biology"
+    },
+    {
+      "subject": "Paul Langevin",
+      "object": "física",
+      "object_candidates": "astrónomo, psicología, topología, fisiología, filosofía, geometría, dramaturgo, biología, astronomía, física",
+      "index": 1955,
+      "subject_en": "Paul Langevin",
+      "object_en": "physics"
+    },
+    {
+      "subject": "John Douglas Cockcroft",
+      "object": "física",
+      "object_candidates": "ave, geometría, geología, matemático, ciencia, lógica, jazz, economista, sociología, física",
+      "index": 1956,
+      "subject_en": "John Cockcroft",
+      "object_en": "physics"
+    },
+    {
+      "subject": "Svante August Arrhenius",
+      "object": "química",
+      "object_candidates": "jazz, anatomía, sociología, músico, ave, topología, psicología, economista, sitio web, química",
+      "index": 1957,
+      "subject_en": "Svante August Arrhenius",
+      "object_en": "chemistry"
+    },
+    {
+      "subject": "Rococó",
+      "object": "arquitectura",
+      "object_candidates": "química, geografía, astrónomo, lógica, fisiología, topología, medicina, terrorismo, matemático, arquitectura",
+      "index": 1958,
+      "subject_en": "Rococo",
+      "object_en": "architecture"
+    }
+  ],
+  "relation_id": "P101"
+}

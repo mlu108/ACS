@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "Где умер <subject>? Ответ: <mask>",
+    "В каком городе умер <subject>? Ответ: <mask>",
+    "Где было местом смерти <subject>? Ответ: <mask>",
+    "Каково было местоположение смерти <subject>? Ответ: <mask>",
+    "Какое место отмечает смерть <subject>? Ответ: <mask>",
+    " Место смерти <subject> — это <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "Микеланджело",
+      "object": "Рим",
+      "object_candidates": "Прага, Варшава, Суррей, Флоренция, Белград, Стамбул, Лион, Хельсинки, Карфаген, Рим",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Коко Шанель",
+      "object": "Париж",
+      "object_candidates": "Суррей, Рим, Медина, Лондон, Токио, Дамаск, Стокгольм, Варшава, Белград, Париж",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Климент XIV",
+      "object": "Рим",
+      "object_candidates": "Нюрнберг, Лион, Хельсинки, Кабул, Мадисон, Лондон, Париж, Каир, Москва, Рим",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Умар ибн аль-Хаттаб",
+      "object": "Медина",
+      "object_candidates": "Москва, Белград, Карфаген, Варшава, Суррей, Стокгольм, Флоренция, Венеция, Лондон, Медина",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "Климент III",
+      "object": "Рим",
+      "object_candidates": "Стокгольм, Медина, Лондон, Багдад, Варшава, Белград, Венеция, Дамаск, Суррей, Рим",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Бальбин",
+      "object": "Рим",
+      "object_candidates": "Стамбул, Стокгольм, Прага, Берлин, Каир, Мадрид, Кабул, Нюрнберг, Мадисон, Рим",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Грант Динк",
+      "object": "Стамбул",
+      "object_candidates": "Иерусалим, Токио, Москва, Хельсинки, Рим, Лондон, Кабул, Флоренция, Мадрид, Стамбул",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "Никифор III Вотаниат",
+      "object": "Константинополь",
+      "object_candidates": "Тайбэй, Москва, Стокгольм, Афины, Кабул, Нюрнберг, Дамаск, Париж, Суррей, Константинополь",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Иоганн Пахельбель",
+      "object": "Нюрнберг",
+      "object_candidates": "Детройт, Афины, Мадрид, Токио, Белград, Кабул, Рим, Прага, Москва, Нюрнберг",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "Нижинский, Вацлав Фомич",
+      "object": "Лондон",
+      "object_candidates": "Рим, Токио, Мадисон, Стамбул, Медина, Константинополь, Венеция, Суррей, Багдад, Лондон",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "Лев X",
+      "object": "Рим",
+      "object_candidates": "Белград, Карфаген, Суррей, Каир, Мадисон, Париж, Иерусалим, Венеция, Тайбэй, Рим",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Донателло",
+      "object": "Флоренция",
+      "object_candidates": "Детройт, Стокгольм, Афины, Варшава, Кабул, Багдад, Лондон, Иерусалим, Медина, Флоренция",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Цзян Цзинго",
+      "object": "Тайбэй",
+      "object_candidates": "Багдад, Дамаск, Афины, Берлин, Хельсинки, Лион, Детройт, Нюрнберг, Мадрид, Тайбэй",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "Роберт Гук",
+      "object": "Лондон",
+      "object_candidates": "Стамбул, Каир, Константинополь, Берлин, Токио, Мадрид, Суррей, Лион, Тайбэй, Лондон",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "Роза Паркс",
+      "object": "Детройт",
+      "object_candidates": "Париж, Стамбул, Мадрид, Багдад, Берлин, Стокгольм, Мадисон, Каир, Афины, Детройт",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "Иоанн VIII Палеолог",
+      "object": "Константинополь",
+      "object_candidates": "Стокгольм, Варшава, Москва, Афины, Багдад, Тайбэй, Каир, Флоренция, Стамбул, Константинополь",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Джон Ди",
+      "object": "Суррей",
+      "object_candidates": "Рим, Варшава, Багдад, Константинополь, Токио, Флоренция, Лион, Детройт, Прага, Суррей",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "Фернандель",
+      "object": "Париж",
+      "object_candidates": "Варшава, Суррей, Каир, Афины, Иерусалим, Прага, Венеция, Лион, Хельсинки, Париж",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Михаил II Травл",
+      "object": "Константинополь",
+      "object_candidates": "Варшава, Стамбул, Токио, Нюрнберг, Москва, Каир, Венеция, Лион, Суррей, Константинополь",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Карл Либкнехт",
+      "object": "Берлин",
+      "object_candidates": "Хельсинки, Каир, Тайбэй, Лондон, Париж, Варшава, Стамбул, Мадрид, Дамаск, Берлин",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Рихард Вагнер",
+      "object": "Венеция",
+      "object_candidates": "Москва, Белград, Иерусалим, Варшава, Суррей, Париж, Детройт, Багдад, Дамаск, Венеция",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Антисфен",
+      "object": "Афины",
+      "object_candidates": "Москва, Каир, Медина, Константинополь, Хельсинки, Суррей, Кабул, Париж, Флоренция, Афины",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "Макс Эрнст",
+      "object": "Париж",
+      "object_candidates": "Лондон, Стокгольм, Токио, Нюрнберг, Рим, Афины, Венеция, Москва, Белград, Париж",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Мартин Бубер",
+      "object": "Иерусалим",
+      "object_candidates": "Кабул, Багдад, Стокгольм, Москва, Стамбул, Суррей, Лион, Нюрнберг, Белград, Иерусалим",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "Йозеф Геббельс",
+      "object": "Берлин",
+      "object_candidates": "Лондон, Карфаген, Прага, Афины, Константинополь, Медина, Рим, Кабул, Мадисон, Берлин",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Шарль де Монтескьё",
+      "object": "Париж",
+      "object_candidates": "Стокгольм, Кабул, Каир, Багдад, Нюрнберг, Константинополь, Дамаск, Медина, Лион, Париж",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Николай V",
+      "object": "Рим",
+      "object_candidates": "Москва, Суррей, Лион, Детройт, Нюрнберг, Багдад, Каир, Мадисон, Дамаск, Рим",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Шарлотта Корде",
+      "object": "Париж",
+      "object_candidates": "Багдад, Варшава, Иерусалим, Кабул, Стамбул, Каир, Токио, Медина, Тайбэй, Париж",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Захир-Шах",
+      "object": "Кабул",
+      "object_candidates": "Медина, Иерусалим, Дамаск, Венеция, Мадисон, Детройт, Москва, Флоренция, Суррей, Кабул",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "Иннокентий XI",
+      "object": "Рим",
+      "object_candidates": "Лондон, Берлин, Каир, Венеция, Дамаск, Мадисон, Карфаген, Флоренция, Афины, Рим",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Гордиан II",
+      "object": "Карфаген",
+      "object_candidates": "Мадисон, Лион, Прага, Рим, Белград, Иерусалим, Багдад, Дамаск, Детройт, Карфаген",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "Мстислав Леопольдович Ростропович",
+      "object": "Москва",
+      "object_candidates": "Лион, Стамбул, Афины, Нюрнберг, Мадисон, Берлин, Мадрид, Токио, Медина, Москва",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Пий III",
+      "object": "Рим",
+      "object_candidates": "Стамбул, Лондон, Прага, Лион, Париж, Варшава, Белград, Кабул, Мадрид, Рим",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Касем, Абдель Керим",
+      "object": "Багдад",
+      "object_candidates": "Токио, Рим, Флоренция, Лондон, Париж, Каир, Тайбэй, Лион, Дамаск, Багдад",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "Григорий XVI",
+      "object": "Рим",
+      "object_candidates": "Константинополь, Варшава, Тайбэй, Багдад, Кабул, Лондон, Мадрид, Карфаген, Дамаск, Рим",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Арам Хачатурян",
+      "object": "Москва",
+      "object_candidates": "Иерусалим, Багдад, Нюрнберг, Афины, Лондон, Хельсинки, Детройт, Токио, Карфаген, Москва",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Генрих фон Клейст",
+      "object": "Берлин",
+      "object_candidates": "Рим, Лондон, Москва, Лион, Багдад, Кабул, Флоренция, Варшава, Суррей, Берлин",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Абдул-Хамид I",
+      "object": "Константинополь",
+      "object_candidates": "Стамбул, Кабул, Венеция, Каир, Медина, Токио, Детройт, Белград, Париж, Константинополь",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "Александр VIII",
+      "object": "Рим",
+      "object_candidates": "Лион, Тайбэй, Карфаген, Мадисон, Стамбул, Варшава, Константинополь, Лондон, Мадрид, Рим",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Иоганн Христиан Бах",
+      "object": "Лондон",
+      "object_candidates": "Афины, Берлин, Париж, Кабул, Хельсинки, Иерусалим, Дамаск, Мадрид, Лион, Лондон",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "Сэмюэл Джонсон",
+      "object": "Лондон",
+      "object_candidates": "Карфаген, Стамбул, Медина, Стокгольм, Берлин, Варшава, Москва, Каир, Афины, Лондон",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "Жак-Ив Кусто",
+      "object": "Париж",
+      "object_candidates": "Афины, Берлин, Венеция, Белград, Нюрнберг, Рим, Константинополь, Иерусалим, Багдад, Париж",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Софья Васильевна Ковалевская",
+      "object": "Стокгольм",
+      "object_candidates": "Париж, Хельсинки, Берлин, Мадисон, Афины, Флоренция, Детройт, Прага, Кабул, Стокгольм",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Георг Вильгельм Фридрих Гегель",
+      "object": "Берлин",
+      "object_candidates": "Афины, Мадисон, Кабул, Мадрид, Багдад, Прага, Стокгольм, Стамбул, Медина, Берлин",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Сандро Боттичелли",
+      "object": "Флоренция",
+      "object_candidates": "Белград, Медина, Стамбул, Мадисон, Нюрнберг, Детройт, Стокгольм, Кабул, Иерусалим, Флоренция",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "Сэмюэл Тейлор Кольридж",
+      "object": "Лондон",
+      "object_candidates": "Стокгольм, Варшава, Медина, Детройт, Иерусалим, Белград, Лион, Москва, Карфаген, Лондон",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "Ибн Хальдун",
+      "object": "Каир",
+      "object_candidates": "Лион, Берлин, Нюрнберг, Иерусалим, Венеция, Москва, Стамбул, Тайбэй, Дамаск, Каир",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Генрих IV",
+      "object": "Лондон",
+      "object_candidates": "Стамбул, Афины, Каир, Рим, Нюрнберг, Дамаск, Мадрид, Венеция, Берлин, Лондон",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "Томазо Джованни Альбинони",
+      "object": "Венеция",
+      "object_candidates": "Париж, Иерусалим, Медина, Лион, Флоренция, Детройт, Хельсинки, Белград, Тайбэй, Венеция",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Нурми, Пааво",
+      "object": "Хельсинки",
+      "object_candidates": "Тайбэй, Суррей, Стокгольм, Флоренция, Кабул, Париж, Лондон, Белград, Лион, Хельсинки",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "Климент I",
+      "object": "Рим",
+      "object_candidates": "Лондон, Багдад, Хельсинки, Стамбул, Белград, Париж, Карфаген, Константинополь, Варшава, Рим",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Людовик XVII",
+      "object": "Париж",
+      "object_candidates": "Мадрид, Венеция, Константинополь, Стокгольм, Москва, Флоренция, Медина, Дамаск, Нюрнберг, Париж",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Курокава, Кисё",
+      "object": "Токио",
+      "object_candidates": "Флоренция, Афины, Карфаген, Москва, Варшава, Каир, Венеция, Париж, Рим, Токио",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "Максимилиан Робеспьер",
+      "object": "Париж",
+      "object_candidates": "Флоренция, Москва, Медина, Дамаск, Рим, Токио, Нюрнберг, Стокгольм, Багдад, Париж",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Джорджоне",
+      "object": "Венеция",
+      "object_candidates": "Париж, Рим, Афины, Москва, Хельсинки, Лондон, Константинополь, Медина, Лион, Венеция",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "Пётр I Карагеоргиевич",
+      "object": "Белград",
+      "object_candidates": "Токио, Багдад, Лондон, Париж, Тайбэй, Кабул, Хельсинки, Афины, Нюрнберг, Белград",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "Людвик Лазарь Заменгоф",
+      "object": "Варшава",
+      "object_candidates": "Лондон, Нюрнберг, Афины, Белград, Лион, Хельсинки, Багдад, Константинополь, Париж, Варшава",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "Ибрагим-паша",
+      "object": "Каир",
+      "object_candidates": "Париж, Мадисон, Суррей, Прага, Белград, Варшава, Афины, Дамаск, Стамбул, Каир",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Климент XII",
+      "object": "Рим",
+      "object_candidates": "Берлин, Стамбул, Каир, Токио, Константинополь, Белград, Тайбэй, Кабул, Париж, Рим",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ириней Лионский",
+      "object": "Лион",
+      "object_candidates": "Детройт, Хельсинки, Суррей, Медина, Нюрнберг, Лондон, Флоренция, Константинополь, Москва, Лион",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "Жак Деррида",
+      "object": "Париж",
+      "object_candidates": "Карфаген, Берлин, Детройт, Афины, Рим, Белград, Дамаск, Каир, Лион, Париж",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Карл IV",
+      "object": "Рим",
+      "object_candidates": "Прага, Мадрид, Афины, Венеция, Варшава, Токио, Хельсинки, Москва, Иерусалим, Рим",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Ральф Воан-Уильямс",
+      "object": "Лондон",
+      "object_candidates": "Рим, Мадрид, Афины, Берлин, Медина, Париж, Детройт, Лион, Каир, Лондон",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "Андрей Андреевич Громыко",
+      "object": "Москва",
+      "object_candidates": "Мадрид, Тайбэй, Детройт, Афины, Венеция, Дамаск, Карфаген, Лондон, Нюрнберг, Москва",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Ульрика Элеонора Шведская",
+      "object": "Стокгольм",
+      "object_candidates": "Афины, Тайбэй, Суррей, Варшава, Иерусалим, Флоренция, Мадрид, Дамаск, Париж, Стокгольм",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "Реддинг, Отис",
+      "object": "Мадисон",
+      "object_candidates": "Париж, Венеция, Рим, Карфаген, Флоренция, Стамбул, Кабул, Багдад, Стокгольм, Мадисон",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "Анри Руссо",
+      "object": "Париж",
+      "object_candidates": "Суррей, Флоренция, Карфаген, Хельсинки, Венеция, Багдад, Нюрнберг, Дамаск, Белград, Париж",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Муавия I",
+      "object": "Дамаск",
+      "object_candidates": "Стокгольм, Токио, Детройт, Константинополь, Мадисон, Мадрид, Суррей, Прага, Париж, Дамаск",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Луи Арагон",
+      "object": "Париж",
+      "object_candidates": "Каир, Мадрид, Медина, Суррей, Иерусалим, Варшава, Мадисон, Багдад, Дамаск, Париж",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Бейбарс I",
+      "object": "Дамаск",
+      "object_candidates": "Москва, Суррей, Париж, Иерусалим, Лондон, Медина, Афины, Мадрид, Белград, Дамаск",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "Штауффенберг, Клаус Шенк фон",
+      "object": "Берлин",
+      "object_candidates": "Лондон, Прага, Варшава, Кабул, Париж, Лион, Тайбэй, Белград, Детройт, Берлин",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "Донато Браманте",
+      "object": "Рим",
+      "object_candidates": "Иерусалим, Хельсинки, Лион, Стокгольм, Берлин, Москва, Кабул, Багдад, Варшава, Рим",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "Франсиско Франко",
+      "object": "Мадрид",
+      "object_candidates": "Рим, Лион, Афины, Москва, Иерусалим, Прага, Константинополь, Берлин, Детройт, Мадрид",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "Клод Бернар",
+      "object": "Париж",
+      "object_candidates": "Медина, Константинополь, Детройт, Дамаск, Лион, Суррей, Стокгольм, Мадисон, Берлин, Париж",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Гамаль Абдель Насер",
+      "object": "Каир",
+      "object_candidates": "Медина, Стамбул, Нюрнберг, Стокгольм, Детройт, Тайбэй, Флоренция, Венеция, Варшава, Каир",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "Яков Михайлович Свердлов",
+      "object": "Москва",
+      "object_candidates": "Тайбэй, Багдад, Детройт, Нюрнберг, Дамаск, Лондон, Берлин, Венеция, Константинополь, Москва",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "Шарль Луи Альфонс Лаверан",
+      "object": "Париж",
+      "object_candidates": "Мадрид, Лондон, Берлин, Иерусалим, Рим, Варшава, Багдад, Афины, Белград, Париж",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Тихо Браге",
+      "object": "Прага",
+      "object_candidates": "Карфаген, Хельсинки, Медина, Токио, Рим, Стокгольм, Флоренция, Стамбул, Багдад, Прага",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "Хит, Эдвард",
+      "object": "Солсбери",
+      "object_candidates": "Суррей, Париж, Тайбэй, Константинополь, Мадисон, Варшава, Берлин, Лондон, Карфаген, Солсбери",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

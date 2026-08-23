@@ -1,0 +1,2702 @@
+{
+  "name": "capital",
+  "prompt_templates": [
+    "<subject> 的首都在哪里？答案是：<mask>",
+    "<subject> 的首都是哪里？答案是：<mask>",
+    "哪个城市是 <subject> 的首都？答案是：<mask>",
+    "说出 <subject> 的首都城市。答案是：<mask>",
+    "<subject> 的首都位于哪里？答案是：<mask>",
+    "<subject>的首都叫做<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "阿塞拜疆",
+      "object": "巴库",
+      "object_candidates": "瓜达拉哈拉, 科伦坡, 皮尔, 乔治敦, 贝鲁特, 阿勒颇, 林肯, 达尔文, 巴比伦, 巴库",
+      "index": 6152,
+      "subject_en": "Azerbaijan",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "内布拉斯加州",
+      "object": "林肯",
+      "object_candidates": "阿姆斯特丹, 德里, 温彻斯特, 丹佛, 荷巴特, 图卢兹, 塞萨洛尼基, 索菲亚, 埃克塞特, 林肯",
+      "index": 6153,
+      "subject_en": "Nebraska",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "汉普郡",
+      "object": "温彻斯特",
+      "object_candidates": "安那波利斯, 珀斯, 威尼斯, 巴勒莫, 尼斯, 安卡拉, 雅加达, 纳什维尔, 哈密尔顿, 温彻斯特",
+      "index": 6154,
+      "subject_en": "Hampshire",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "亚历山大省",
+      "object": "亚历山大港",
+      "object_candidates": "巴格达, 东京都, 贝尔法斯特, 卑尔根, 里弗赛德, 巴塞罗那, 卡莱尔, 奥斯陆, 京都市, 亚历山大港",
+      "index": 6155,
+      "subject_en": "Alexandria Governorate",
+      "object_en": "Alexandria"
+    },
+    {
+      "subject": "意大利王国",
+      "object": "佛罗伦萨",
+      "object_candidates": "安那波利斯, 京斯敦, 温尼伯, 丹佛, 温彻斯特, 林肯, 布加勒斯特, 西敏, 托莱多, 佛罗伦萨",
+      "index": 6156,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "芬兰大公国",
+      "object": "赫尔辛基",
+      "object_candidates": "江户, 马德里, 喀山, 的黎波里, 伦敦, 基督城, 美因茨, 维也纳, 伯尔尼, 赫尔辛基",
+      "index": 6157,
+      "subject_en": "Grand Duchy of Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "特伦甘纳邦",
+      "object": "海得拉巴",
+      "object_candidates": "威尼斯, 布拉迪斯拉发, 阿德莱德, 蒙哥马利, 孟买, 塔林, 渥太华, 赫尔辛基, 尼斯, 海得拉巴",
+      "index": 6158,
+      "subject_en": "Telangana",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "南澳大利亚州",
+      "object": "阿德莱德",
+      "object_candidates": "首尔, 查尔斯顿, 洛桑, 加迪夫, 孟菲斯, 赫里福德, 地拉那, 江户, 那不勒斯, 阿德莱德",
+      "index": 6159,
+      "subject_en": "South Australia",
+      "object_en": "Adelaide"
+    },
+    {
+      "subject": "苏格兰王国",
+      "object": "爱丁堡",
+      "object_candidates": "勒克瑙, 普罗维登斯, 地拉那, 图尔, 巴里, 安卡拉, 夏延, 塞拉耶佛, 萨格勒布, 爱丁堡",
+      "index": 6160,
+      "subject_en": "Kingdom of Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "波兰第二共和国",
+      "object": "华沙",
+      "object_candidates": "哈特福, 多伦多, 巴库, 君士坦丁堡, 维尔纽斯, 达尔文, 京斯敦, 迈阿密, 牛津, 华沙",
+      "index": 6161,
+      "subject_en": "Second Polish Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "坎特伯雷",
+      "object": "基督城",
+      "object_candidates": "荷巴特, 热那亚, 堪培拉, 俾斯麦, 布鲁塞尔市, 北京市, 巴伦西亚, 美因茨, 赫里福德, 基督城",
+      "index": 6162,
+      "subject_en": "Canterbury Region",
+      "object_en": "Christchurch"
+    },
+    {
+      "subject": "法兰西王国",
+      "object": "巴黎",
+      "object_candidates": "里斯本, 西敏, 布鲁塞尔市, 渥太华, 德累斯顿, 海得拉巴, 慕尼黑, 金奈, 北京市, 巴黎",
+      "index": 6163,
+      "subject_en": "Kingdom of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "艾伯塔省",
+      "object": "埃德蒙顿",
+      "object_candidates": "科克, 哈利法克斯, 博伊西, 布列斯特, 巴格达, 西敏, 德里, 塔林, 阿德莱德, 埃德蒙顿",
+      "index": 6164,
+      "subject_en": "Alberta",
+      "object_en": "Edmonton"
+    },
+    {
+      "subject": "德国",
+      "object": "柏林",
+      "object_candidates": "安那波利斯, 卢布尔雅那, 巴勒莫, 那不勒斯, 耶路撒冷, 奥斯陆, 伯尔尼, 伊斯坦堡, 喀山, 柏林",
+      "index": 6165,
+      "subject_en": "Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "印第安纳州",
+      "object": "印第安纳波利斯",
+      "object_candidates": "加尔各答, 金奈, 哥伦比亚, 敖德萨, 台北市, 哈瓦那, 杜拜, 布拉格, 剑桥, 印第安纳波利斯",
+      "index": 6166,
+      "subject_en": "Indiana",
+      "object_en": "Indianapolis"
+    },
+    {
+      "subject": "法兰西第二帝国",
+      "object": "巴黎",
+      "object_candidates": "哥本哈根, 兰辛, 博洛尼亚, 阿德莱德, 奥克兰都会区, 卑尔根, 渥太华, 马尼拉市, 耶路撒冷, 巴黎",
+      "index": 6167,
+      "subject_en": "Second French Empire",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "剑桥郡",
+      "object": "剑桥",
+      "object_candidates": "德里, 林肯, 基尔, 布加勒斯特, 巴塞罗那, 基辅, 哈密尔顿, 南京市, 图卢兹, 剑桥",
+      "index": 6168,
+      "subject_en": "Cambridgeshire",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "西西里王国",
+      "object": "那不勒斯",
+      "object_candidates": "斯德哥尔摩, 京都市, 皮尔, 堪培拉, 奥克兰都会区, 莫斯科, 布拉格, 喀山, 都柏林, 那不勒斯",
+      "index": 6169,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "安德尔-卢瓦尔省",
+      "object": "图尔",
+      "object_candidates": "乔治敦, 柏林, 伊斯坦堡, 蒙得维的亚, 卡拉奇, 雅加达, 布鲁塞尔市, 维也纳, 巴塞罗那, 图尔",
+      "index": 6170,
+      "subject_en": "Indre-et-Loire",
+      "object_en": "Tours"
+    },
+    {
+      "subject": "普利亚",
+      "object": "巴里",
+      "object_candidates": "沃特福德, 圣地亚哥, 赫里福德, 耶路撒冷, 戈尔韦, 兰辛, 勒克瑙, 迈阿密, 哈里斯堡, 巴里",
+      "index": 6171,
+      "subject_en": "Apulia",
+      "object_en": "Bari"
+    },
+    {
+      "subject": "东弗兰德省",
+      "object": "根特",
+      "object_candidates": "美因茨, 杰克逊, 锡拉库萨, 基辅, 孟买, 阿姆斯特丹, 图尔, 伍斯特, 沙加缅度, 根特",
+      "index": 6172,
+      "subject_en": "East Flanders",
+      "object_en": "Ghent"
+    },
+    {
+      "subject": "丹麦",
+      "object": "哥本哈根",
+      "object_candidates": "雅加达, 佛罗伦萨, 维尔纽斯, 江户, 里尔, 马尼拉市, 托莱多, 那不勒斯, 孟菲斯, 哥本哈根",
+      "index": 6173,
+      "subject_en": "Denmark",
+      "object_en": "Copenhagen"
+    },
+    {
+      "subject": "密歇根州",
+      "object": "兰辛",
+      "object_candidates": "但尼丁, 德里, 佛罗伦萨, 都柏林, 沙加缅度, 里斯本, 剑桥, 埃德蒙顿, 佐贺市, 兰辛",
+      "index": 6174,
+      "subject_en": "Michigan",
+      "object_en": "Lansing"
+    },
+    {
+      "subject": "阿尤布王朝",
+      "object": "开罗",
+      "object_candidates": "堪培拉, 格洛斯特, 罗马, 伦敦, 热那亚, 麦加, 沃特福德, 南京市, 麦地那, 开罗",
+      "index": 6175,
+      "subject_en": "Ayyubid dynasty",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "四大哈里发的伊斯兰国",
+      "object": "麦地那",
+      "object_candidates": "塞维利亚, 温尼伯, 布拉迪斯拉发, 布鲁塞尔市, 慕尼黑, 塔林, 巴黎, 沙加缅度, 图尔, 麦地那",
+      "index": 6176,
+      "subject_en": "Rashidun Caliphates",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "江户幕府",
+      "object": "江户",
+      "object_candidates": "帕尔马, 哈里斯堡, 赫尔辛基, 米兰, 温尼伯, 塔林, 莱斯特, 巴比伦, 康科德, 江户",
+      "index": 6177,
+      "subject_en": "Tokugawa Shogunate",
+      "object_en": "Edo"
+    },
+    {
+      "subject": "苏联",
+      "object": "莫斯科",
+      "object_candidates": "巴塞罗那, 的黎波里, 巴比伦, 贝鲁特, 西敏, 巴库, 波尔多, 纳什维尔, 檀香山, 莫斯科",
+      "index": 6178,
+      "subject_en": "Soviet Union",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "罗马尼亚王国",
+      "object": "布加勒斯特",
+      "object_candidates": "亚丁, 哈利法克斯, 东京都, 奥克兰都会区, 圣地亚哥, 京斯敦, 巴塞罗那, 耶路撒冷, 台北市, 布加勒斯特",
+      "index": 6179,
+      "subject_en": "Kingdom of Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "塔斯马尼亚州",
+      "object": "荷巴特",
+      "object_candidates": "剑桥, 维也纳, 卑尔根, 伯尔尼, 埃德蒙顿, 里加, 那不勒斯, 麦迪逊, 林肯, 荷巴特",
+      "index": 6180,
+      "subject_en": "Tasmania",
+      "object_en": "Hobart"
+    },
+    {
+      "subject": "利默里克郡",
+      "object": "利默里克",
+      "object_candidates": "塞萨洛尼基, 哥伦比亚, 莱斯特, 西雅图, 佛罗伦萨, 哥伦布, 温尼伯, 加拉加斯, 君士坦丁堡, 利默里克",
+      "index": 6181,
+      "subject_en": "County Limerick",
+      "object_en": "Limerick"
+    },
+    {
+      "subject": "法蒂玛王朝",
+      "object": "开罗",
+      "object_candidates": "伦敦, 达尔文, 渥太华, 塞萨洛尼基, 里弗赛德, 巴黎, 柏林, 基辅, 广岛市, 开罗",
+      "index": 6182,
+      "subject_en": "Fatimid caliphate",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "奥克兰大区",
+      "object": "奥克兰都会区",
+      "object_candidates": "哥本哈根, 莱斯特, 索菲亚, 安那波利斯, 洛桑, 广岛市, 阿尔及尔, 加普, 牛津, 奥克兰都会区",
+      "index": 6183,
+      "subject_en": "Auckland Region",
+      "object_en": "Auckland"
+    },
+    {
+      "subject": "新罕布什尔州",
+      "object": "康科德",
+      "object_candidates": "查尔斯顿, 京都市, 萨尔茨堡, 里弗赛德, 布里斯班, 多伦多, 卢布林, 波尔多, 爱丁堡, 康科德",
+      "index": 6184,
+      "subject_en": "New Hampshire",
+      "object_en": "Concord"
+    },
+    {
+      "subject": "敖德萨州",
+      "object": "敖德萨",
+      "object_candidates": "珀斯, 里士满, 图尔, 阿勒颇, 图卢兹, 麦加, 巴比伦, 萨格勒布, 格洛斯特, 敖德萨",
+      "index": 6185,
+      "subject_en": "Odessa Oblast",
+      "object_en": "Odessa"
+    },
+    {
+      "subject": "澳大利亚",
+      "object": "堪培拉",
+      "object_candidates": "汉诺威, 埃克塞特, 丹佛, 赫里福德, 曼彻斯特, 广岛市, 渥太华, 杰克逊, 塞勒姆, 堪培拉",
+      "index": 6186,
+      "subject_en": "Australia",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "奥斯曼帝国",
+      "object": "伊斯坦堡",
+      "object_candidates": "台北市, 热那亚, 博洛尼亚, 贝鲁特, 萨格勒布, 佛罗伦萨, 哈密尔顿, 巴塞罗那, 叶里温, 伊斯坦堡",
+      "index": 6187,
+      "subject_en": "Ottoman Empire",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "西南英格兰",
+      "object": "布里斯托尔",
+      "object_candidates": "巴库, 安卡拉, 麦迪逊, 贝鲁特, 维也纳, 波士顿, 巴里, 京都市, 奥格斯堡, 布里斯托尔",
+      "index": 6188,
+      "subject_en": "South West England",
+      "object_en": "Bristol"
+    },
+    {
+      "subject": "得克萨斯州",
+      "object": "奥斯汀",
+      "object_candidates": "贝尔格莱德, 迈阿密, 加迪夫, 卢布尔雅那, 伯尔尼, 孟菲斯, 罗马, 科伦坡, 斯特拉斯堡, 奥斯汀",
+      "index": 6189,
+      "subject_en": "Texas",
+      "object_en": "Austin"
+    },
+    {
+      "subject": "拉丁帝国",
+      "object": "君士坦丁堡",
+      "object_candidates": "皮尔, 巴黎, 哥伦布, 沃特福德, 蒙得维的亚, 布达佩斯, 哈瓦那, 勒克瑙, 麦迪逊, 君士坦丁堡",
+      "index": 6190,
+      "subject_en": "Latin Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "匈牙利",
+      "object": "布达佩斯",
+      "object_candidates": "格洛斯特, 巴伦西亚, 名古屋市, 卡莱尔, 牛津, 巴塞尔, 印第安纳波利斯, 基尔, 阿姆斯特丹, 布达佩斯",
+      "index": 6191,
+      "subject_en": "Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "俄罗斯",
+      "object": "莫斯科",
+      "object_candidates": "耶路撒冷, 夏延, 广岛市, 查尔斯顿, 戈尔韦, 奥斯汀, 利马, 佐贺市, 埃克塞特, 莫斯科",
+      "index": 6192,
+      "subject_en": "Russia",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "威尼托",
+      "object": "威尼斯",
+      "object_candidates": "麦加, 广岛市, 江户, 奈洛比, 大马士革, 卑尔根, 珀斯, 维也纳, 加尔各答, 威尼斯",
+      "index": 6193,
+      "subject_en": "Veneto",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "伍斯特郡",
+      "object": "伍斯特",
+      "object_candidates": "蒙得维的亚, 基尔, 哥伦比亚, 都灵, 江户, 哥本哈根, 巴伦西亚, 利沃夫, 的黎波里, 伍斯特",
+      "index": 6194,
+      "subject_en": "Worcestershire",
+      "object_en": "Worcester"
+    },
+    {
+      "subject": "西西里王国",
+      "object": "巴勒莫",
+      "object_candidates": "叶里温, 哥伦比亚, 布拉格, 乔治敦, 雅典, 西敏, 广州市, 横滨市, 德里, 巴勒莫",
+      "index": 6195,
+      "subject_en": "Kingdom of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "宾夕法尼亚州",
+      "object": "哈里斯堡",
+      "object_candidates": "汉诺威, 塞维利亚, 安卡拉, 基尔, 檀香山, 加迪夫, 广岛市, 布拉格, 布列斯特, 哈里斯堡",
+      "index": 6196,
+      "subject_en": "Pennsylvania",
+      "object_en": "Harrisburg"
+    },
+    {
+      "subject": "教皇国",
+      "object": "罗马",
+      "object_candidates": "佛罗伦萨, 查尔斯顿, 奥斯陆, 亚历山大港, 麦迪逊, 瓜达拉哈拉, 里贾纳, 兰辛, 热那亚, 罗马",
+      "index": 6197,
+      "subject_en": "Papal States",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "戈尔韦郡",
+      "object": "戈尔韦",
+      "object_candidates": "巴比伦, 罗利, 特伦顿, 君士坦丁堡, 凤凰城, 马德里, 伊斯坦堡, 瓜达拉哈拉, 哈里斯堡, 戈尔韦",
+      "index": 6198,
+      "subject_en": "County Galway",
+      "object_en": "Galway"
+    },
+    {
+      "subject": "奥地利帝国",
+      "object": "维也纳",
+      "object_candidates": "哈里斯堡, 索菲亚, 哈密尔顿, 林肯, 奥斯汀, 图卢兹, 地拉那, 里贾纳, 纳什维尔, 维也纳",
+      "index": 6199,
+      "subject_en": "Austrian Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "荷属东印度",
+      "object": "雅加达",
+      "object_candidates": "贝鲁特, 耶路撒冷, 但尼丁, 维尔纽斯, 维也纳, 布里斯班, 塞拉耶佛, 巴塞尔, 蒙哥马利, 雅加达",
+      "index": 6200,
+      "subject_en": "Dutch East Indies",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "以色列",
+      "object": "耶路撒冷",
+      "object_candidates": "江户, 科克, 孟买, 沙加缅度, 波士顿, 伯尔尼, 奥斯汀, 迈阿密, 俾斯麦, 耶路撒冷",
+      "index": 6201,
+      "subject_en": "Israel",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "爱知县",
+      "object": "名古屋市",
+      "object_candidates": "慕尼黑, 京斯敦, 科克, 蒙哥马利, 美因茨, 敖德萨, 哈特福, 曼彻斯特, 德里, 名古屋市",
+      "index": 6202,
+      "subject_en": "Aichi Prefecture",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "莱斯特郡",
+      "object": "莱斯特",
+      "object_candidates": "美因茨, 圣地亚哥, 麦迪逊, 基督城, 埃克塞特, 雅加达, 赫里福德, 巴塞尔, 奥格斯堡, 莱斯特",
+      "index": 6203,
+      "subject_en": "Leicestershire",
+      "object_en": "Leicester"
+    },
+    {
+      "subject": "金县",
+      "object": "西雅图",
+      "object_candidates": "米兰, 马德里, 埃克塞特, 金奈, 加拉加斯, 基辅, 莫斯科, 加迪夫, 西敏, 西雅图",
+      "index": 6204,
+      "subject_en": "King County",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "雅典公国",
+      "object": "雅典",
+      "object_candidates": "巴伦西亚, 地拉那, 佐贺市, 洛桑, 贝尔格莱德, 布列斯特, 尼斯, 斯普林菲尔德, 德黑兰, 雅典",
+      "index": 6205,
+      "subject_en": "Duchy of Athens",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "荷兰王国",
+      "object": "阿姆斯特丹",
+      "object_candidates": "柏林, 卢布林, 德黑兰, 亚历山大港, 哈密尔顿, 贝鲁特, 耶路撒冷, 温彻斯特, 塞萨洛尼基, 阿姆斯特丹",
+      "index": 6206,
+      "subject_en": "Kingdom of the Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "阿尔巴尼亚",
+      "object": "地拉那",
+      "object_candidates": "达尔文, 京都市, 华沙, 哈密尔顿, 里士满, 班加罗尔, 汉诺威, 塔林, 但尼丁, 地拉那",
+      "index": 6207,
+      "subject_en": "Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "热那亚省",
+      "object": "热那亚",
+      "object_candidates": "德里, 沃特福德, 布鲁塞尔市, 普罗维登斯, 哈密尔顿, 哈里斯堡, 曼彻斯特, 罗利, 威尼斯, 热那亚",
+      "index": 6208,
+      "subject_en": "Province of Genoa",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "中华民国",
+      "object": "台北市",
+      "object_candidates": "加尔各答, 开罗, 西雅图, 奥斯汀, 根特, 加普, 卢布尔雅那, 基辅, 安卡拉, 台北市",
+      "index": 6209,
+      "subject_en": "Taiwan",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "捷克斯洛伐克",
+      "object": "布拉格",
+      "object_candidates": "博伊西, 沃特福德, 瓜达拉哈拉, 蒙得维的亚, 加尔各答, 江户, 塞萨洛尼基, 迈阿密, 里士满, 布拉格",
+      "index": 6210,
+      "subject_en": "Czechoslovakia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "迪拜酋长国",
+      "object": "杜拜",
+      "object_candidates": "美因茨, 斯普林菲尔德, 里斯本, 维多利亚, 京斯敦, 爱丁堡, 布拉迪斯拉发, 戈尔韦, 麦加, 杜拜",
+      "index": 6211,
+      "subject_en": "Emirates of Dubai",
+      "object_en": "Dubai"
+    },
+    {
+      "subject": "北达科他州",
+      "object": "俾斯麦",
+      "object_candidates": "麦加, 温彻斯特, 南京市, 檀香山, 的黎波里, 马德里, 海得拉巴, 卑尔根, 巴塞尔, 俾斯麦",
+      "index": 6212,
+      "subject_en": "North Dakota",
+      "object_en": "Bismarck"
+    },
+    {
+      "subject": "安达卢西亚",
+      "object": "塞维利亚",
+      "object_candidates": "广岛市, 开罗, 乔治敦, 塞拉耶佛, 斯特拉斯堡, 特伦顿, 东京都, 华沙, 赫尔辛基, 塞维利亚",
+      "index": 6213,
+      "subject_en": "Andalusia",
+      "object_en": "Seville"
+    },
+    {
+      "subject": "马哈拉施特拉邦",
+      "object": "孟买",
+      "object_candidates": "华沙, 根特, 阿姆斯特丹, 慕尼黑, 温尼伯, 埃德蒙顿, 杰克逊, 兰辛, 沃特福德, 孟买",
+      "index": 6214,
+      "subject_en": "Maharashtra",
+      "object_en": "Mumbai"
+    },
+    {
+      "subject": "卡纳塔克邦",
+      "object": "班加罗尔",
+      "object_candidates": "德累斯顿, 俾斯麦, 里士满, 兰辛, 江户, 布拉迪斯拉发, 堪培拉, 乔治敦, 加迪夫, 班加罗尔",
+      "index": 6215,
+      "subject_en": "Karnataka",
+      "object_en": "Bengaluru"
+    },
+    {
+      "subject": "印度尼西亚",
+      "object": "雅加达",
+      "object_candidates": "克尔曼, 南京市, 印第安纳波利斯, 维多利亚, 都灵, 温彻斯特, 科伦坡, 多伦多, 渥太华, 雅加达",
+      "index": 6216,
+      "subject_en": "Indonesia",
+      "object_en": "Jakarta"
+    },
+    {
+      "subject": "意大利社会共和国",
+      "object": "罗马",
+      "object_candidates": "凤凰城, 奥斯陆, 萨格勒布, 安那波利斯, 亚历山大港, 伍斯特, 里士满, 博伊西, 奥克兰都会区, 罗马",
+      "index": 6217,
+      "subject_en": "Italian Social Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "哈布斯堡君主国",
+      "object": "维也纳",
+      "object_candidates": "哈利法克斯, 洛桑, 俾斯麦, 丹佛, 利马, 德里, 哥伦布, 科伦坡, 阿德莱德, 维也纳",
+      "index": 6218,
+      "subject_en": "Habsburg Monarchy",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "葡萄牙",
+      "object": "里斯本",
+      "object_candidates": "大马士革, 蒙哥马利, 埃克塞特, 都灵, 埃德蒙顿, 尼斯, 哈密尔顿, 奥格斯堡, 哈瓦那, 里斯本",
+      "index": 6219,
+      "subject_en": "Portugal",
+      "object_en": "Lisbon"
+    },
+    {
+      "subject": "巴利阿里群岛",
+      "object": "帕尔马",
+      "object_candidates": "首尔, 威尼斯, 阿德莱德, 巴比伦, 贝鲁特, 莫斯科, 兰辛, 都灵, 基督城, 帕尔马",
+      "index": 6220,
+      "subject_en": "Balearic Islands",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "博洛尼亚省",
+      "object": "博洛尼亚",
+      "object_candidates": "温尼伯, 加迪夫, 孟买, 温彻斯特, 华沙, 巴塞罗那, 塔林, 卑尔根, 帕尔马, 博洛尼亚",
+      "index": 6221,
+      "subject_en": "Province of Bologna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "古巴",
+      "object": "哈瓦那",
+      "object_candidates": "蒙得维的亚, 莫斯科, 俾斯麦, 斯特拉斯堡, 达尔文, 夏延, 多伦多, 布里斯班, 卢布尔雅那, 哈瓦那",
+      "index": 6222,
+      "subject_en": "Cuba",
+      "object_en": "Havana"
+    },
+    {
+      "subject": "托莱多省",
+      "object": "托莱多",
+      "object_candidates": "卡拉奇, 巴里, 塞勒姆, 奥斯汀, 戈尔韦, 奥斯陆, 哥伦比亚, 克尔曼, 华沙, 托莱多",
+      "index": 6223,
+      "subject_en": "Toledo Province",
+      "object_en": "Toledo"
+    },
+    {
+      "subject": "钖耶纳省",
+      "object": "锡耶纳",
+      "object_candidates": "乔治敦, 北京市, 巴勒莫, 布里斯托尔, 慕尼黑, 名古屋市, 地拉那, 威尼斯, 剑桥, 锡耶纳",
+      "index": 6224,
+      "subject_en": "Province of Siena",
+      "object_en": "Siena"
+    },
+    {
+      "subject": "檀香山市县",
+      "object": "檀香山",
+      "object_candidates": "曼彻斯特, 柏林, 锡拉库萨, 普雷斯顿, 戈尔韦, 乔治敦, 奥格斯堡, 阿姆斯特丹, 卢布林, 檀香山",
+      "index": 6225,
+      "subject_en": "Honolulu County",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "罗马帝国",
+      "object": "君士坦丁堡",
+      "object_candidates": "蒙得维的亚, 萨尔茨堡, 根特, 锡耶纳, 曼谷, 普罗维登斯, 巴里, 米兰, 柏林, 君士坦丁堡",
+      "index": 6226,
+      "subject_en": "Roman Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "康乃狄克州",
+      "object": "哈特福",
+      "object_candidates": "印第安纳波利斯, 塞萨洛尼基, 大马士革, 西雅图, 麦迪逊, 巴勒莫, 埃克塞特, 维也纳, 海得拉巴, 哈特福",
+      "index": 6227,
+      "subject_en": "Connecticut",
+      "object_en": "Hartford"
+    },
+    {
+      "subject": "苏格兰",
+      "object": "爱丁堡",
+      "object_candidates": "罗利, 阿尔及尔, 维也纳, 赫尔辛基, 但尼丁, 斯德哥尔摩, 伍斯特, 塞勒姆, 里弗赛德, 爱丁堡",
+      "index": 6228,
+      "subject_en": "Scotland",
+      "object_en": "Edinburgh"
+    },
+    {
+      "subject": "安卡拉省",
+      "object": "安卡拉",
+      "object_candidates": "台北市, 斯德哥尔摩, 广岛市, 阿姆斯特丹, 慕尼黑, 阿勒颇, 伯尔尼, 麦地那, 波士顿, 安卡拉",
+      "index": 6229,
+      "subject_en": "Ankara Province",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "拉齐奥",
+      "object": "罗马",
+      "object_candidates": "伊斯坦堡, 布列斯特, 布鲁塞尔市, 科克, 布加勒斯特, 纳什维尔, 圣地亚哥, 亚历山大港, 麦地那, 罗马",
+      "index": 6230,
+      "subject_en": "Lazio",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "波兰人民共和国",
+      "object": "华沙",
+      "object_candidates": "京都市, 悉尼, 瓜达拉哈拉, 美因茨, 基尔, 维多利亚, 波恩, 沃特福德, 温尼伯, 华沙",
+      "index": 6231,
+      "subject_en": "Polish People's Republic",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "巴塞尔城市州",
+      "object": "巴塞尔",
+      "object_candidates": "巴勒莫, 奥格斯堡, 莫斯科, 堪培拉, 金奈, 叶里温, 伍斯特, 敖德萨, 塞维利亚, 巴塞尔",
+      "index": 6232,
+      "subject_en": "Basel-Stadt",
+      "object_en": "Basel"
+    },
+    {
+      "subject": "加利福尼亚州",
+      "object": "沙加缅度",
+      "object_candidates": "地拉那, 巴塞罗那, 伊斯坦堡, 明斯克, 里尔, 巴伦西亚, 布达佩斯, 沃特福德, 达尔文, 沙加缅度",
+      "index": 6233,
+      "subject_en": "California",
+      "object_en": "Sacramento"
+    },
+    {
+      "subject": "萨尔茨堡州",
+      "object": "萨尔茨堡",
+      "object_candidates": "尼斯, 赫里福德, 格洛斯特, 敖德萨, 悉尼, 兰辛, 塞萨洛尼基, 的黎波里, 哈利法克斯, 萨尔茨堡",
+      "index": 6234,
+      "subject_en": "Salzburg",
+      "object_en": "Salzburg"
+    },
+    {
+      "subject": "京都府",
+      "object": "京都市",
+      "object_candidates": "纳什维尔, 锡拉库萨, 热那亚, 赫里福德, 乔治敦, 塞维利亚, 阿尔及尔, 美因茨, 兰辛, 京都市",
+      "index": 6235,
+      "subject_en": "Kyōto Prefecture",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "佛罗伦斯省",
+      "object": "佛罗伦萨",
+      "object_candidates": "安那波利斯, 托莱多, 马尼拉市, 布拉格, 维也纳, 罗利, 加拉加斯, 江户, 里尔, 佛罗伦萨",
+      "index": 6236,
+      "subject_en": "Province of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "伊拉克",
+      "object": "巴格达",
+      "object_candidates": "东京都, 达卡市, 莫斯科, 奥斯汀, 佐贺市, 科克, 凤凰城, 奥斯陆, 麦加, 巴格达",
+      "index": 6237,
+      "subject_en": "Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "坎帕尼亚",
+      "object": "那不勒斯",
+      "object_candidates": "东京都, 纳什维尔, 喀布尔, 蒙得维的亚, 卡拉奇, 巴伦西亚, 维尔纽斯, 巴格达, 马德里, 那不勒斯",
+      "index": 6238,
+      "subject_en": "Campania",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "日本",
+      "object": "东京都",
+      "object_candidates": "帕尔马, 开罗, 罗马, 沙加缅度, 海得拉巴, 巴黎, 图卢兹, 科克, 加普, 东京都",
+      "index": 6239,
+      "subject_en": "Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "迈阿密-戴德县",
+      "object": "迈阿密",
+      "object_candidates": "布列斯特, 奥格斯堡, 里加, 巴里, 图卢兹, 慕尼黑, 奈洛比, 马尼拉市, 麦加, 迈阿密",
+      "index": 6240,
+      "subject_en": "Miami-Dade County",
+      "object_en": "Miami"
+    },
+    {
+      "subject": "克尔曼省",
+      "object": "克尔曼",
+      "object_candidates": "都灵, 达卡市, 金奈, 东京都, 迈阿密, 卡莱尔, 斯特拉斯堡, 地拉那, 博洛尼亚, 克尔曼",
+      "index": 6241,
+      "subject_en": "Kerman Province",
+      "object_en": "Kerman"
+    },
+    {
+      "subject": "滨海阿尔卑斯省",
+      "object": "尼斯",
+      "object_candidates": "锡耶纳, 利沃夫, 布拉迪斯拉发, 布里斯班, 东京都, 北京市, 剑桥, 牛津, 哈瓦那, 尼斯",
+      "index": 6242,
+      "subject_en": "Alpes-Maritimes",
+      "object_en": "Nice"
+    },
+    {
+      "subject": "爱沙尼亚",
+      "object": "塔林",
+      "object_candidates": "萨格勒布, 都灵, 大马士革, 卢布林, 博洛尼亚, 特伦顿, 哥伦比亚, 维也纳, 加尔各答, 塔林",
+      "index": 6243,
+      "subject_en": "Estonia",
+      "object_en": "Tallinn"
+    },
+    {
+      "subject": "西澳大利亚州",
+      "object": "珀斯",
+      "object_candidates": "波士顿, 兰辛, 卢布尔雅那, 利默里克, 喀布尔, 麦迪逊, 里贾纳, 埃克塞特, 奥克兰都会区, 珀斯",
+      "index": 6244,
+      "subject_en": "Western Australia",
+      "object_en": "Perth"
+    },
+    {
+      "subject": "利沃夫州",
+      "object": "利沃夫",
+      "object_candidates": "克尔曼, 阿德莱德, 巴格达, 巴勒莫, 夏延, 根特, 德里, 耶路撒冷, 都柏林, 利沃夫",
+      "index": 6245,
+      "subject_en": "Lviv Oblast",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "新南威尔士州",
+      "object": "悉尼",
+      "object_candidates": "布拉迪斯拉发, 巴塞尔, 里斯本, 维多利亚, 台北市, 普雷斯顿, 多伦多, 索菲亚, 檀香山, 悉尼",
+      "index": 6246,
+      "subject_en": "New South Wales",
+      "object_en": "Sydney"
+    },
+    {
+      "subject": "河滨县",
+      "object": "里弗赛德",
+      "object_candidates": "巴库, 汉诺威, 杜拜, 渥太华, 美因茨, 巴勒莫, 里尔, 沙加缅度, 但尼丁, 里弗赛德",
+      "index": 6247,
+      "subject_en": "Riverside County",
+      "object_en": "Riverside"
+    },
+    {
+      "subject": "委内瑞拉",
+      "object": "加拉加斯",
+      "object_candidates": "米兰, 查尔斯顿, 西雅图, 索菲亚, 荷巴特, 科克, 维尔纽斯, 兰辛, 的黎波里, 加拉加斯",
+      "index": 6248,
+      "subject_en": "Venezuela",
+      "object_en": "Caracas"
+    },
+    {
+      "subject": "曼尼托巴",
+      "object": "温尼伯",
+      "object_candidates": "阿尔及尔, 帕尔马, 堪培拉, 哈瓦那, 檀香山, 牛津, 利马, 巴格达, 瓜达拉哈拉, 温尼伯",
+      "index": 6249,
+      "subject_en": "Manitoba",
+      "object_en": "Winnipeg"
+    },
+    {
+      "subject": "意大利王国",
+      "object": "都灵",
+      "object_candidates": "达卡市, 哈特福, 伯尔尼, 哥伦布, 博伊西, 亚丁, 奥斯陆, 贝鲁特, 波尔多, 都灵",
+      "index": 6250,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "伦巴第",
+      "object": "米兰",
+      "object_candidates": "华沙, 佛罗伦萨, 蒙哥马利, 江户, 特伦顿, 麦地那, 海得拉巴, 圣地亚哥, 阿德莱德, 米兰",
+      "index": 6251,
+      "subject_en": "Lombardy",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "伊朗",
+      "object": "德黑兰",
+      "object_candidates": "的黎波里, 多伦多, 埃德蒙顿, 哈利法克斯, 格洛斯特, 麦地那, 伊斯坦堡, 图卢兹, 索菲亚, 德黑兰",
+      "index": 6252,
+      "subject_en": "Iran",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "大不列颠王国",
+      "object": "伦敦",
+      "object_candidates": "慕尼黑, 里贾纳, 都灵, 萨尔茨堡, 萨格勒布, 赫里福德, 巴里, 斯德哥尔摩, 利默里克, 伦敦",
+      "index": 6253,
+      "subject_en": "Great Britain",
+      "object_en": "London"
+    },
+    {
+      "subject": "利比亚",
+      "object": "的黎波里",
+      "object_candidates": "横滨市, 普雷斯顿, 亚历山大港, 安那波利斯, 俾斯麦, 阿勒颇, 雅加达, 麦地那, 阿德莱德, 的黎波里",
+      "index": 6254,
+      "subject_en": "Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "莫斯科公国",
+      "object": "莫斯科",
+      "object_candidates": "德累斯顿, 麦加, 帕尔马, 哈里斯堡, 加普, 多伦多, 里士满, 亚丁, 波尔多, 莫斯科",
+      "index": 6255,
+      "subject_en": "Grand Duchy of Moscow",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "澳大利亚首都特区",
+      "object": "堪培拉",
+      "object_candidates": "贝尔法斯特, 珀斯, 布里斯班, 京都市, 曼谷, 喀布尔, 卢布尔雅那, 柏林, 孟买, 堪培拉",
+      "index": 6256,
+      "subject_en": "Australian Capital Territory",
+      "object_en": "Canberra"
+    },
+    {
+      "subject": "维希法国",
+      "object": "巴黎",
+      "object_candidates": "卢布林, 阿尔及尔, 奈洛比, 俾斯麦, 基督城, 温尼伯, 加普, 卑尔根, 奥斯汀, 巴黎",
+      "index": 6257,
+      "subject_en": "Vichy France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "下莱茵省",
+      "object": "斯特拉斯堡",
+      "object_candidates": "帕尔马, 哥伦比亚, 里贾纳, 阿勒颇, 孟买, 卡莱尔, 哥伦布, 班加罗尔, 沃特福德, 斯特拉斯堡",
+      "index": 6258,
+      "subject_en": "Bas-Rhin",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "维尔纽斯县",
+      "object": "维尔纽斯",
+      "object_candidates": "塞拉耶佛, 印第安纳波利斯, 夏延, 加尔各答, 江户, 京都市, 孟菲斯, 名古屋市, 都灵, 维尔纽斯",
+      "index": 6259,
+      "subject_en": "Vilnius County",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "布鲁塞尔-首都大区",
+      "object": "布鲁塞尔市",
+      "object_candidates": "麦迪逊, 地拉那, 哥伦比亚, 纳什维尔, 阿姆斯特丹, 奥格斯堡, 爱丁堡, 荷巴特, 巴伦西亚, 布鲁塞尔市",
+      "index": 6260,
+      "subject_en": "Brussels region",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "萨斯喀彻温",
+      "object": "里贾纳",
+      "object_candidates": "多伦多, 卑尔根, 塞拉耶佛, 德黑兰, 曼谷, 帕尔马, 圣地亚哥, 威尼斯, 斯普林菲尔德, 里贾纳",
+      "index": 6261,
+      "subject_en": "Saskatchewan",
+      "object_en": "Regina"
+    },
+    {
+      "subject": "德黑兰省",
+      "object": "德黑兰",
+      "object_candidates": "北京市, 巴黎, 台北市, 格洛斯特, 伊斯坦堡, 沙加缅度, 金奈, 巴伦西亚, 基辅, 德黑兰",
+      "index": 6262,
+      "subject_en": "Tehran Province",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "艾米利亚-罗马涅",
+      "object": "博洛尼亚",
+      "object_candidates": "锡耶纳, 科伦坡, 斯普林菲尔德, 奥斯汀, 西雅图, 奥克兰都会区, 马尼拉市, 卢布林, 布达佩斯, 博洛尼亚",
+      "index": 6263,
+      "subject_en": "Emilia-Romagna",
+      "object_en": "Bologna"
+    },
+    {
+      "subject": "爱尔兰共和国",
+      "object": "都柏林",
+      "object_candidates": "哈密尔顿, 阿姆斯特丹, 根特, 纳什维尔, 布里斯班, 维尔纽斯, 杰克逊, 乔治敦, 塞勒姆, 都柏林",
+      "index": 6264,
+      "subject_en": "Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "乌拉圭",
+      "object": "蒙得维的亚",
+      "object_candidates": "伯尔尼, 哈利法克斯, 东京都, 斯普林菲尔德, 德里, 贝鲁特, 萨格勒布, 伍斯特, 卡莱尔, 蒙得维的亚",
+      "index": 6265,
+      "subject_en": "Uruguay",
+      "object_en": "Montevideo"
+    },
+    {
+      "subject": "阿契美尼德王朝",
+      "object": "巴比伦",
+      "object_candidates": "阿尔及尔, 皮尔, 首尔, 班加罗尔, 达卡市, 华沙, 俾斯麦, 基辅, 海得拉巴, 巴比伦",
+      "index": 6266,
+      "subject_en": "Achaemenid Empire",
+      "object_en": "Babylon"
+    },
+    {
+      "subject": "秘鲁",
+      "object": "利马",
+      "object_candidates": "哥伦布, 莱斯特, 巴伦西亚, 罗利, 格洛斯特, 卑尔根, 卡莱尔, 江户, 热那亚, 利马",
+      "index": 6267,
+      "subject_en": "Peru",
+      "object_en": "Lima"
+    },
+    {
+      "subject": "斯里兰卡",
+      "object": "科伦坡",
+      "object_candidates": "沃特福德, 埃克塞特, 哈密尔顿, 乔治敦, 温尼伯, 克尔曼, 里斯本, 金奈, 托莱多, 科伦坡",
+      "index": 6268,
+      "subject_en": "Sri Lanka",
+      "object_en": "Colombo"
+    },
+    {
+      "subject": "伊拉克王国",
+      "object": "巴格达",
+      "object_candidates": "爱丁堡, 巴里, 图卢兹, 卑尔根, 托莱多, 赫尔辛基, 萨格勒布, 普雷斯顿, 佐贺市, 巴格达",
+      "index": 6269,
+      "subject_en": "Kingdom of Iraq",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "美利坚联盟国",
+      "object": "蒙哥马利",
+      "object_candidates": "麦地那, 塞维利亚, 利沃夫, 卢布尔雅那, 罗利, 纳什维尔, 温尼伯, 里士满, 波尔多, 蒙哥马利",
+      "index": 6270,
+      "subject_en": "Confederate States of America",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "塞尔维亚王国",
+      "object": "贝尔格莱德",
+      "object_candidates": "伦敦, 基辅, 利马, 萨尔茨堡, 罗马, 维尔纽斯, 波恩, 凤凰城, 佛罗伦萨, 贝尔格莱德",
+      "index": 6271,
+      "subject_en": "Kingdom of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "沃特福德郡",
+      "object": "沃特福德",
+      "object_candidates": "沙加缅度, 哥伦布, 都柏林, 哈里斯堡, 罗马, 巴伦西亚, 柏林, 奥克兰都会区, 里斯本, 沃特福德",
+      "index": 6272,
+      "subject_en": "County Waterford",
+      "object_en": "Waterford"
+    },
+    {
+      "subject": "塞尔维亚与蒙特内哥罗",
+      "object": "贝尔格莱德",
+      "object_candidates": "巴塞尔, 巴塞罗那, 里加, 巴库, 斯德哥尔摩, 杜拜, 巴伦西亚, 迈阿密, 君士坦丁堡, 贝尔格莱德",
+      "index": 6273,
+      "subject_en": "Serbia and Montenegro",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "乌克兰",
+      "object": "基辅",
+      "object_candidates": "名古屋市, 东京都, 利默里克, 巴伦西亚, 布鲁塞尔市, 卢布林, 西敏, 温尼伯, 热那亚, 基辅",
+      "index": 6274,
+      "subject_en": "Ukraine",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "波斯尼亚和黑塞哥维那",
+      "object": "塞拉耶佛",
+      "object_candidates": "汉诺威, 安卡拉, 北京市, 大马士革, 卡拉奇, 波尔多, 印第安纳波利斯, 悉尼, 维多利亚, 塞拉耶佛",
+      "index": 6275,
+      "subject_en": "Bosnia and Herzegovina",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "亚美尼亚",
+      "object": "叶里温",
+      "object_candidates": "孟买, 利默里克, 堪培拉, 米兰, 波恩, 敖德萨, 赫里福德, 孟菲斯, 悉尼, 叶里温",
+      "index": 6276,
+      "subject_en": "Armenia",
+      "object_en": "Yerevan"
+    },
+    {
+      "subject": "阿拔斯王朝",
+      "object": "大马士革",
+      "object_candidates": "孟菲斯, 布拉迪斯拉发, 哥伦比亚, 伯尔尼, 波士顿, 基尔, 赫尔辛基, 锡耶纳, 江户, 大马士革",
+      "index": 6277,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "哈利斯科州",
+      "object": "瓜达拉哈拉",
+      "object_candidates": "麦加, 杰克逊, 横滨市, 伍斯特, 热那亚, 雅加达, 莫斯科, 塞拉耶佛, 安卡拉, 瓜达拉哈拉",
+      "index": 6278,
+      "subject_en": "Jalisco",
+      "object_en": "Guadalajara"
+    },
+    {
+      "subject": "孟加拉国",
+      "object": "达卡市",
+      "object_candidates": "加拉加斯, 雅典, 伦敦, 俾斯麦, 名古屋市, 罗马, 布列斯特, 马尼拉市, 台北市, 达卡市",
+      "index": 6279,
+      "subject_en": "Bangladesh",
+      "object_en": "Dhaka"
+    },
+    {
+      "subject": "亚拉巴马州",
+      "object": "蒙哥马利",
+      "object_candidates": "沃特福德, 布拉格, 克尔曼, 达尔文, 利马, 巴库, 巴比伦, 曼谷, 大马士革, 蒙哥马利",
+      "index": 6280,
+      "subject_en": "Alabama",
+      "object_en": "Montgomery"
+    },
+    {
+      "subject": "伊利诺伊州",
+      "object": "斯普林菲尔德",
+      "object_candidates": "俾斯麦, 大马士革, 亚历山大港, 兰辛, 都柏林, 布达佩斯, 加普, 贝尔格莱德, 图卢兹, 斯普林菲尔德",
+      "index": 6281,
+      "subject_en": "Illinois",
+      "object_en": "Springfield"
+    },
+    {
+      "subject": "林肯郡",
+      "object": "林肯",
+      "object_candidates": "博伊西, 维多利亚, 卡莱尔, 阿尔及尔, 伍斯特, 班加罗尔, 哈里斯堡, 印第安纳波利斯, 巴黎, 林肯",
+      "index": 6282,
+      "subject_en": "Lincolnshire",
+      "object_en": "Lincoln"
+    },
+    {
+      "subject": "西班牙帝国",
+      "object": "马德里",
+      "object_candidates": "麦加, 特伦顿, 伊斯坦堡, 贝尔法斯特, 首尔, 亚丁, 格洛斯特, 布拉迪斯拉发, 里斯本, 马德里",
+      "index": 6283,
+      "subject_en": "Spanish Empire",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "北部-加来海峡",
+      "object": "里尔",
+      "object_candidates": "贝尔法斯特, 查尔斯顿, 热那亚, 卡莱尔, 波尔多, 波恩, 哥伦比亚, 珀斯, 加普, 里尔",
+      "index": 6284,
+      "subject_en": "Nord-Pas-de-Calais",
+      "object_en": "Lille"
+    },
+    {
+      "subject": "威斯康辛州",
+      "object": "麦迪逊",
+      "object_candidates": "喀山, 多伦多, 卡拉奇, 瓜达拉哈拉, 名古屋市, 渥太华, 根特, 布鲁塞尔市, 巴里, 麦迪逊",
+      "index": 6285,
+      "subject_en": "Wisconsin",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "西西里岛",
+      "object": "巴勒莫",
+      "object_candidates": "蒙得维的亚, 埃德蒙顿, 巴格达, 奈洛比, 巴塞尔, 奥斯陆, 里贾纳, 卡莱尔, 阿德莱德, 巴勒莫",
+      "index": 6286,
+      "subject_en": "Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "爱尔兰王国",
+      "object": "都柏林",
+      "object_candidates": "渥太华, 布里斯班, 加拉加斯, 哥伦布, 卢布尔雅那, 名古屋市, 锡耶纳, 广州市, 普罗维登斯, 都柏林",
+      "index": 6287,
+      "subject_en": "Kingdom of Ireland",
+      "object_en": "Dublin"
+    },
+    {
+      "subject": "菲律宾",
+      "object": "马尼拉市",
+      "object_candidates": "利马, 马德里, 兰辛, 哈瓦那, 哈利法克斯, 托莱多, 米兰, 的黎波里, 加迪夫, 马尼拉市",
+      "index": 6288,
+      "subject_en": "Philippines",
+      "object_en": "Manila"
+    },
+    {
+      "subject": "威尼斯共和国",
+      "object": "威尼斯",
+      "object_candidates": "戈尔韦, 奥斯汀, 纳什维尔, 伊斯坦堡, 维多利亚, 奈洛比, 亚历山大港, 伍斯特, 阿德莱德, 威尼斯",
+      "index": 6289,
+      "subject_en": "Republic of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "阿勒颇省",
+      "object": "阿勒颇",
+      "object_candidates": "孟买, 威尼斯, 卑尔根, 加拉加斯, 佐贺市, 利马, 渥太华, 阿尔及尔, 布里斯班, 阿勒颇",
+      "index": 6290,
+      "subject_en": "Aleppo Governorate",
+      "object_en": "Aleppo"
+    },
+    {
+      "subject": "科罗拉多州",
+      "object": "丹佛",
+      "object_candidates": "斯特拉斯堡, 大马士革, 的黎波里, 德里, 布加勒斯特, 迈阿密, 都柏林, 利默里克, 耶路撒冷, 丹佛",
+      "index": 6291,
+      "subject_en": "Colorado",
+      "object_en": "Denver"
+    },
+    {
+      "subject": "希腊",
+      "object": "雅典",
+      "object_candidates": "乔治敦, 麦加, 特伦顿, 丹佛, 里斯本, 斯特拉斯堡, 广州市, 阿勒颇, 牛津, 雅典",
+      "index": 6292,
+      "subject_en": "Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "克罗埃西亚独立国",
+      "object": "萨格勒布",
+      "object_candidates": "奥斯汀, 巴里, 珀斯, 哈利法克斯, 赫尔辛基, 米兰, 图卢兹, 都柏林, 斯特拉斯堡, 萨格勒布",
+      "index": 6293,
+      "subject_en": "Independent State of Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "荷兰",
+      "object": "阿姆斯特丹",
+      "object_candidates": "亚丁, 锡拉库萨, 伦敦, 根特, 亚历山大港, 热那亚, 图卢兹, 荷巴特, 巴比伦, 阿姆斯特丹",
+      "index": 6294,
+      "subject_en": "Netherlands",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "亚利桑那州",
+      "object": "凤凰城",
+      "object_candidates": "加迪夫, 亚丁, 科伦坡, 根特, 蒙得维的亚, 利沃夫, 君士坦丁堡, 孟菲斯, 巴黎, 凤凰城",
+      "index": 6295,
+      "subject_en": "Arizona",
+      "object_en": "Phoenix"
+    },
+    {
+      "subject": "意大利",
+      "object": "罗马",
+      "object_candidates": "杰克逊, 基督城, 渥太华, 斯特拉斯堡, 伦敦, 贝尔法斯特, 阿德莱德, 德里, 布加勒斯特, 罗马",
+      "index": 6296,
+      "subject_en": "Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "南斯拉夫王国",
+      "object": "贝尔格莱德",
+      "object_candidates": "斯特拉斯堡, 曼谷, 首尔, 阿德莱德, 佐贺市, 卡莱尔, 京斯敦, 金奈, 东京都, 贝尔格莱德",
+      "index": 6297,
+      "subject_en": "Kingdom of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "英国",
+      "object": "伦敦",
+      "object_candidates": "乔治敦, 普雷斯顿, 卡莱尔, 耶路撒冷, 波恩, 贝鲁特, 布列斯特, 奈洛比, 布达佩斯, 伦敦",
+      "index": 6298,
+      "subject_en": "United Kingdom",
+      "object_en": "London"
+    },
+    {
+      "subject": "阿尔巴尼亚社会主义人民共和国",
+      "object": "地拉那",
+      "object_candidates": "波恩, 巴格达, 托莱多, 利沃夫, 博洛尼亚, 奥克兰都会区, 悉尼, 东京都, 哥本哈根, 地拉那",
+      "index": 6299,
+      "subject_en": "People's Socialist Republic of Albania",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "塞尔维亚",
+      "object": "贝尔格莱德",
+      "object_candidates": "阿德莱德, 哥伦布, 班加罗尔, 哥伦比亚, 耶路撒冷, 佛罗伦萨, 京斯敦, 君士坦丁堡, 迈阿密, 贝尔格莱德",
+      "index": 6300,
+      "subject_en": "Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "利比亚王国",
+      "object": "的黎波里",
+      "object_candidates": "哥伦比亚, 图卢兹, 维也纳, 美因茨, 京斯敦, 蒙哥马利, 金奈, 卡莱尔, 戈尔韦, 的黎波里",
+      "index": 6301,
+      "subject_en": "Kingdom of Libya",
+      "object_en": "Tripoli"
+    },
+    {
+      "subject": "加拿大",
+      "object": "渥太华",
+      "object_candidates": "丹佛, 耶路撒冷, 加普, 布里斯托尔, 奥格斯堡, 横滨市, 斯普林菲尔德, 伯尔尼, 夏延, 渥太华",
+      "index": 6302,
+      "subject_en": "Canada",
+      "object_en": "Ottawa"
+    },
+    {
+      "subject": "神奈川县",
+      "object": "横滨市",
+      "object_candidates": "叶里温, 巴里, 牛津, 塞维利亚, 曼彻斯特, 维也纳, 班加罗尔, 普罗维登斯, 京斯敦, 横滨市",
+      "index": 6303,
+      "subject_en": "Kanagawa Prefecture",
+      "object_en": "Yokohama"
+    },
+    {
+      "subject": "中波希米亚州",
+      "object": "布拉格",
+      "object_candidates": "迈阿密, 但尼丁, 塞勒姆, 雅加达, 德里, 查尔斯顿, 蒙得维的亚, 巴格达, 基督城, 布拉格",
+      "index": 6304,
+      "subject_en": "Central Bohemian Region",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "法国",
+      "object": "巴黎",
+      "object_candidates": "莫斯科, 曼彻斯特, 莱斯特, 珀斯, 里尔, 华沙, 孟菲斯, 悉尼, 杰克逊, 巴黎",
+      "index": 6305,
+      "subject_en": "France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "保加利亚",
+      "object": "索菲亚",
+      "object_candidates": "沃特福德, 巴塞尔, 哈里斯堡, 佐贺市, 布拉格, 但尼丁, 亚历山大港, 哥本哈根, 雅典, 索菲亚",
+      "index": 6306,
+      "subject_en": "Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "德文郡",
+      "object": "埃克塞特",
+      "object_candidates": "广岛市, 印第安纳波利斯, 勒克瑙, 塔林, 明斯克, 迈阿密, 奥格斯堡, 卢布林, 巴黎, 埃克塞特",
+      "index": 6307,
+      "subject_en": "Devon",
+      "object_en": "Exeter"
+    },
+    {
+      "subject": "中马其顿",
+      "object": "塞萨洛尼基",
+      "object_candidates": "麦加, 基尔, 亚丁, 皮尔, 蒙得维的亚, 马德里, 塞拉耶佛, 京斯敦, 德里, 塞萨洛尼基",
+      "index": 6308,
+      "subject_en": "Central Macedonia",
+      "object_en": "Thessaloniki"
+    },
+    {
+      "subject": "西西里埃米尔国",
+      "object": "巴勒莫",
+      "object_candidates": "温彻斯特, 牛津, 康科德, 华沙, 基辅, 加拉加斯, 迈阿密, 北京市, 埃德蒙顿, 巴勒莫",
+      "index": 6309,
+      "subject_en": "Emirate of Sicily",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "圭亚那",
+      "object": "乔治敦",
+      "object_candidates": "亚历山大港, 巴塞尔, 布列斯特, 广州市, 巴格达, 金奈, 广岛市, 里尔, 阿德莱德, 乔治敦",
+      "index": 6310,
+      "subject_en": "Guyana",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "匈牙利王国",
+      "object": "布达佩斯",
+      "object_candidates": "南京市, 西敏, 哥伦比亚, 波士顿, 巴塞尔, 洛桑, 米兰, 赫尔辛基, 西雅图, 布达佩斯",
+      "index": 6311,
+      "subject_en": "Kingdom of Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "萨克森自由州",
+      "object": "德累斯顿",
+      "object_candidates": "加拉加斯, 普罗维登斯, 海得拉巴, 哥伦比亚, 波士顿, 布达佩斯, 巴勒莫, 卑尔根, 俾斯麦, 德累斯顿",
+      "index": 6312,
+      "subject_en": "Saxony",
+      "object_en": "Dresden"
+    },
+    {
+      "subject": "明朝",
+      "object": "南京市",
+      "object_candidates": "米兰, 巴里, 德黑兰, 莱斯特, 皮尔, 波恩, 图卢兹, 维尔纽斯, 哥本哈根, 南京市",
+      "index": 6313,
+      "subject_en": "Ming dynasty",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "麦加省",
+      "object": "麦加",
+      "object_candidates": "巴格达, 查尔斯顿, 江户, 南京市, 大马士革, 佛罗伦萨, 贝鲁特, 巴库, 哈密尔顿, 麦加",
+      "index": 6314,
+      "subject_en": "Makkah Region",
+      "object_en": "Mecca"
+    },
+    {
+      "subject": "埃及省",
+      "object": "开罗",
+      "object_candidates": "佐贺市, 布加勒斯特, 的黎波里, 哈瓦那, 利马, 罗利, 巴塞罗那, 卡拉奇, 喀山, 开罗",
+      "index": 6315,
+      "subject_en": "Egypt Eyalet",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "波兰会议王国",
+      "object": "华沙",
+      "object_candidates": "喀山, 萨格勒布, 渥太华, 蒙得维的亚, 迈阿密, 波尔多, 巴勒莫, 堪培拉, 横滨市, 华沙",
+      "index": 6316,
+      "subject_en": "Congress Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "北爱尔兰",
+      "object": "贝尔法斯特",
+      "object_candidates": "德累斯顿, 广岛市, 奥斯汀, 塔林, 剑桥, 纳什维尔, 布拉迪斯拉发, 明斯克, 麦迪逊, 贝尔法斯特",
+      "index": 6317,
+      "subject_en": "Northern Ireland",
+      "object_en": "Belfast"
+    },
+    {
+      "subject": "西班牙",
+      "object": "马德里",
+      "object_candidates": "丹佛, 奥克兰都会区, 蒙得维的亚, 雅典, 斯普林菲尔德, 华沙, 萨格勒布, 卡莱尔, 里加, 马德里",
+      "index": 6318,
+      "subject_en": "Spain",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "法国本土",
+      "object": "巴黎",
+      "object_candidates": "沃特福德, 里斯本, 麦地那, 佛罗伦萨, 巴比伦, 地拉那, 贝尔法斯特, 孟买, 基辅, 巴黎",
+      "index": 6319,
+      "subject_en": "Metropolitan France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "鞑靼斯坦共和国",
+      "object": "喀山",
+      "object_candidates": "迈阿密, 塞拉耶佛, 尼斯, 莱斯特, 卢布林, 华沙, 罗马, 阿姆斯特丹, 查尔斯顿, 喀山",
+      "index": 6320,
+      "subject_en": "Republic of Tatarstan",
+      "object_en": "Kazan"
+    },
+    {
+      "subject": "布列斯特州",
+      "object": "布列斯特",
+      "object_candidates": "埃克塞特, 基督城, 莱斯特, 热那亚, 夏延, 但尼丁, 圣地亚哥, 喀布尔, 台北市, 布列斯特",
+      "index": 6321,
+      "subject_en": "Brest Region",
+      "object_en": "Brest"
+    },
+    {
+      "subject": "巴勒斯坦託管地",
+      "object": "耶路撒冷",
+      "object_candidates": "台北市, 萨尔茨堡, 哈里斯堡, 布里斯托尔, 布拉迪斯拉发, 德黑兰, 博洛尼亚, 特伦顿, 利沃夫, 耶路撒冷",
+      "index": 6322,
+      "subject_en": "Mandatory Palestine",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "巴勒莫省",
+      "object": "巴勒莫",
+      "object_candidates": "德里, 特伦顿, 沙加缅度, 哈密尔顿, 大马士革, 渥太华, 蒙哥马利, 瓜达拉哈拉, 雅加达, 巴勒莫",
+      "index": 6323,
+      "subject_en": "Province of Palermo",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "巴伐利亚王国",
+      "object": "慕尼黑",
+      "object_candidates": "堪培拉, 江户, 明斯克, 喀布尔, 布鲁塞尔市, 剑桥, 麦迪逊, 洛桑, 安卡拉, 慕尼黑",
+      "index": 6324,
+      "subject_en": "Kingdom of Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "泰米尔纳德邦",
+      "object": "金奈",
+      "object_candidates": "埃德蒙顿, 京都市, 布拉格, 都柏林, 查尔斯顿, 加普, 卢布尔雅那, 里贾纳, 帕尔马, 金奈",
+      "index": 6325,
+      "subject_en": "Tamil Nadu",
+      "object_en": "Chennai"
+    },
+    {
+      "subject": "白俄罗斯",
+      "object": "明斯克",
+      "object_candidates": "哈里斯堡, 亚丁, 麦加, 东京都, 雅典, 班加罗尔, 洛桑, 贝鲁特, 京都市, 明斯克",
+      "index": 6326,
+      "subject_en": "Belarus",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "格洛斯特郡",
+      "object": "格洛斯特",
+      "object_candidates": "塞维利亚, 贝鲁特, 维多利亚, 巴勒莫, 里加, 慕尼黑, 佐贺市, 东京都, 开罗, 格洛斯特",
+      "index": 6327,
+      "subject_en": "Gloucestershire",
+      "object_en": "Gloucester"
+    },
+    {
+      "subject": "沃州",
+      "object": "洛桑",
+      "object_candidates": "渥太华, 奥格斯堡, 布鲁塞尔市, 华沙, 阿尔及尔, 莱斯特, 但尼丁, 卢布林, 普雷斯顿, 洛桑",
+      "index": 6328,
+      "subject_en": "Canton of Vaud",
+      "object_en": "Lausanne"
+    },
+    {
+      "subject": "欧洲联盟",
+      "object": "斯特拉斯堡",
+      "object_candidates": "金奈, 亚丁, 查尔斯顿, 美因茨, 麦地那, 雅典, 贝尔法斯特, 麦迪逊, 兰辛, 斯特拉斯堡",
+      "index": 6329,
+      "subject_en": "European Union",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "北方邦",
+      "object": "勒克瑙",
+      "object_candidates": "奥斯汀, 查尔斯顿, 哈瓦那, 达卡市, 布列斯特, 阿姆斯特丹, 塞维利亚, 布拉迪斯拉发, 爱丁堡, 勒克瑙",
+      "index": 6330,
+      "subject_en": "Uttar Pradesh",
+      "object_en": "Lucknow"
+    },
+    {
+      "subject": "塞族共和国",
+      "object": "塞拉耶佛",
+      "object_candidates": "维尔纽斯, 巴伦西亚, 班加罗尔, 洛桑, 孟买, 雅加达, 金奈, 加尔各答, 莱斯特, 塞拉耶佛",
+      "index": 6331,
+      "subject_en": "Republika Srpska",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "萨拉热窝州",
+      "object": "塞拉耶佛",
+      "object_candidates": "但尼丁, 林肯, 蒙哥马利, 塔林, 广州市, 布达佩斯, 达卡市, 波尔多, 克尔曼, 塞拉耶佛",
+      "index": 6332,
+      "subject_en": "Sarajevo Canton",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "匈牙利苏维埃共和国",
+      "object": "布达佩斯",
+      "object_candidates": "勒克瑙, 博伊西, 巴格达, 德累斯顿, 广岛市, 维多利亚, 德里, 但尼丁, 君士坦丁堡, 布达佩斯",
+      "index": 6333,
+      "subject_en": "Hungarian Soviet Republic",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "阿富汗王国",
+      "object": "喀布尔",
+      "object_candidates": "莱斯特, 基尔, 勒克瑙, 孟买, 夏延, 卑尔根, 曼彻斯特, 多伦多, 荷巴特, 喀布尔",
+      "index": 6334,
+      "subject_en": "Kingdom of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "卢布林省",
+      "object": "卢布林",
+      "object_candidates": "蒙得维的亚, 布里斯托尔, 康科德, 塞拉耶佛, 维尔纽斯, 莫斯科, 佐贺市, 加尔各答, 波士顿, 卢布林",
+      "index": 6335,
+      "subject_en": "Lublin province",
+      "object_en": "Lublin"
+    },
+    {
+      "subject": "弗吉尼亚州",
+      "object": "里士满",
+      "object_candidates": "迈阿密, 塞拉耶佛, 基督城, 阿姆斯特丹, 加尔各答, 布里斯班, 佐贺市, 哈瓦那, 伦敦, 里士满",
+      "index": 6336,
+      "subject_en": "Virginia",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "英格兰王国",
+      "object": "温彻斯特",
+      "object_candidates": "马尼拉市, 塞勒姆, 伍斯特, 剑桥, 康科德, 锡拉库萨, 孟菲斯, 雅典, 卢布尔雅那, 温彻斯特",
+      "index": 6337,
+      "subject_en": "Kingdom of England",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "麦地那省",
+      "object": "麦地那",
+      "object_candidates": "喀山, 沙加缅度, 海得拉巴, 贝尔法斯特, 珀斯, 达卡市, 伯尔尼, 里贾纳, 布达佩斯, 麦地那",
+      "index": 6338,
+      "subject_en": "Al Madinah Region",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "斯德哥尔摩市",
+      "object": "斯德哥尔摩",
+      "object_candidates": "圣地亚哥, 丹佛, 戈尔韦, 海得拉巴, 维多利亚, 布里斯托尔, 曼谷, 维也纳, 哈瓦那, 斯德哥尔摩",
+      "index": 6339,
+      "subject_en": "Stockholm Municipality",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "阿塞拜疆苏维埃社会主义共和国",
+      "object": "巴库",
+      "object_candidates": "斯特拉斯堡, 布里斯班, 哥伦比亚, 贝尔格莱德, 丹佛, 南京市, 蒙得维的亚, 洛桑, 孟买, 巴库",
+      "index": 6340,
+      "subject_en": "Azerbaijan Soviet Socialist Republic",
+      "object_en": "Baku"
+    },
+    {
+      "subject": "希腊王国",
+      "object": "雅典",
+      "object_candidates": "叶里温, 哈密尔顿, 塞萨洛尼基, 格洛斯特, 亚丁, 名古屋市, 里弗赛德, 布里斯托尔, 哥本哈根, 雅典",
+      "index": 6341,
+      "subject_en": "Kingdom of Greece",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "大韩民国",
+      "object": "首尔",
+      "object_candidates": "加普, 加尔各答, 西敏, 贝尔格莱德, 巴库, 维尔纽斯, 哈特福, 雅加达, 里斯本, 首尔",
+      "index": 6342,
+      "subject_en": "South Korea",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "马尔他骑士团",
+      "object": "罗马",
+      "object_candidates": "加尔各答, 麦加, 牛津, 哈利法克斯, 斯普林菲尔德, 德累斯顿, 蒙哥马利, 布里斯托尔, 杜拜, 罗马",
+      "index": 6343,
+      "subject_en": "Sovereign Military Order of Malta",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "坎布里亚郡",
+      "object": "卡莱尔",
+      "object_candidates": "广州市, 巴伦西亚, 奥格斯堡, 麦地那, 叶里温, 柏林, 索菲亚, 蒙得维的亚, 佐贺市, 卡莱尔",
+      "index": 6344,
+      "subject_en": "Cumbria",
+      "object_en": "Carlisle"
+    },
+    {
+      "subject": "下萨克森",
+      "object": "汉诺威",
+      "object_candidates": "广岛市, 沃特福德, 普雷斯顿, 特伦顿, 大马士革, 基辅, 巴库, 京斯敦, 安卡拉, 汉诺威",
+      "index": 6345,
+      "subject_en": "Lower Saxony",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "英格兰王国",
+      "object": "西敏",
+      "object_candidates": "利马, 沃特福德, 广州市, 基尔, 里尔, 哈密尔顿, 都柏林, 敖德萨, 塞勒姆, 西敏",
+      "index": 6346,
+      "subject_en": "Kingdom of England",
+      "object_en": "Westminster"
+    },
+    {
+      "subject": "都灵省",
+      "object": "都灵",
+      "object_candidates": "德黑兰, 哥本哈根, 巴塞罗那, 尼斯, 威尼斯, 奥克兰都会区, 阿勒颇, 巴比伦, 勒克瑙, 都灵",
+      "index": 6347,
+      "subject_en": "Province of Turin",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "北卡罗来纳州",
+      "object": "罗利",
+      "object_candidates": "里尔, 奥斯汀, 锡拉库萨, 佐贺市, 基督城, 布拉格, 加尔各答, 波士顿, 广州市, 罗利",
+      "index": 6348,
+      "subject_en": "North Carolina",
+      "object_en": "Raleigh"
+    },
+    {
+      "subject": "北领地",
+      "object": "达尔文",
+      "object_candidates": "安那波利斯, 波士顿, 索菲亚, 斯普林菲尔德, 奥克兰都会区, 巴伦西亚, 渥太华, 荷巴特, 维尔纽斯, 达尔文",
+      "index": 6349,
+      "subject_en": "Northern Territory",
+      "object_en": "Darwin"
+    },
+    {
+      "subject": "汉诺威王国",
+      "object": "汉诺威",
+      "object_candidates": "阿德莱德, 德黑兰, 杰克逊, 凤凰城, 金奈, 巴比伦, 麦迪逊, 地拉那, 奥格斯堡, 汉诺威",
+      "index": 6350,
+      "subject_en": "Kingdom of Hanover",
+      "object_en": "Hanover"
+    },
+    {
+      "subject": "霍达兰",
+      "object": "卑尔根",
+      "object_candidates": "杜拜, 首尔, 君士坦丁堡, 贝尔法斯特, 达卡市, 巴格达, 科伦坡, 阿尔及尔, 罗利, 卑尔根",
+      "index": 6351,
+      "subject_en": "Hordaland",
+      "object_en": "Bergen"
+    },
+    {
+      "subject": "南达科他州",
+      "object": "皮尔",
+      "object_candidates": "敖德萨, 锡拉库萨, 班加罗尔, 凤凰城, 威尼斯, 丹佛, 林肯, 帕尔马, 卡莱尔, 皮尔",
+      "index": 6352,
+      "subject_en": "South Dakota",
+      "object_en": "Pierre"
+    },
+    {
+      "subject": "阿尔萨斯",
+      "object": "斯特拉斯堡",
+      "object_candidates": "杜拜, 珀斯, 萨尔茨堡, 雅典, 明斯克, 都灵, 巴塞尔, 哈利法克斯, 温彻斯特, 斯特拉斯堡",
+      "index": 6353,
+      "subject_en": "Alsace",
+      "object_en": "Strasbourg"
+    },
+    {
+      "subject": "安大略省",
+      "object": "多伦多",
+      "object_candidates": "都柏林, 安那波利斯, 哥伦比亚, 汉诺威, 罗马, 赫里福德, 台北市, 索菲亚, 利沃夫, 多伦多",
+      "index": 6354,
+      "subject_en": "Ontario",
+      "object_en": "Toronto"
+    },
+    {
+      "subject": "麻萨诸塞州",
+      "object": "波士顿",
+      "object_candidates": "悉尼, 卢布尔雅那, 江户, 贝尔格莱德, 哈密尔顿, 明斯克, 伍斯特, 阿勒颇, 德累斯顿, 波士顿",
+      "index": 6355,
+      "subject_en": "Massachusetts",
+      "object_en": "Boston"
+    },
+    {
+      "subject": "保加利亚王国",
+      "object": "索菲亚",
+      "object_candidates": "哥伦比亚, 加普, 温彻斯特, 维尔纽斯, 开罗, 温尼伯, 查尔斯顿, 奥格斯堡, 曼彻斯特, 索菲亚",
+      "index": 6356,
+      "subject_en": "Kingdom of Bulgaria",
+      "object_en": "Sofia"
+    },
+    {
+      "subject": "那不勒斯省",
+      "object": "那不勒斯",
+      "object_candidates": "巴库, 锡耶纳, 科克, 哈里斯堡, 基督城, 塞维利亚, 特伦顿, 卢布林, 达尔文, 那不勒斯",
+      "index": 6357,
+      "subject_en": "Province of Naples",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "罗马尼亚",
+      "object": "布加勒斯特",
+      "object_candidates": "伍斯特, 喀布尔, 曼彻斯特, 美因茨, 但尼丁, 孟菲斯, 维也纳, 南京市, 伯尔尼, 布加勒斯特",
+      "index": 6358,
+      "subject_en": "Romania",
+      "object_en": "Bucharest"
+    },
+    {
+      "subject": "瑞士",
+      "object": "伯尔尼",
+      "object_candidates": "阿尔及尔, 迈阿密, 博伊西, 印第安纳波利斯, 里斯本, 罗马, 南京市, 雅加达, 格洛斯特, 伯尔尼",
+      "index": 6359,
+      "subject_en": "Switzerland",
+      "object_en": "Bern"
+    },
+    {
+      "subject": "奥地利",
+      "object": "维也纳",
+      "object_candidates": "贝鲁特, 里加, 印第安纳波利斯, 名古屋市, 江户, 加拉加斯, 马德里, 班加罗尔, 巴里, 维也纳",
+      "index": 6360,
+      "subject_en": "Austria",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "斯洛伐克",
+      "object": "布拉迪斯拉发",
+      "object_candidates": "布达佩斯, 罗马, 利马, 里斯本, 达卡市, 热那亚, 基尔, 巴塞尔, 京斯敦, 布拉迪斯拉发",
+      "index": 6361,
+      "subject_en": "Slovakia",
+      "object_en": "Bratislava"
+    },
+    {
+      "subject": "英格兰",
+      "object": "伦敦",
+      "object_candidates": "都灵, 皮尔, 哈瓦那, 布拉迪斯拉发, 康科德, 那不勒斯, 威尼斯, 戈尔韦, 奥斯陆, 伦敦",
+      "index": 6362,
+      "subject_en": "England",
+      "object_en": "London"
+    },
+    {
+      "subject": "埃及",
+      "object": "开罗",
+      "object_candidates": "渥太华, 维多利亚, 君士坦丁堡, 瓜达拉哈拉, 伦敦, 巴库, 巴塞罗那, 塞维利亚, 普罗维登斯, 开罗",
+      "index": 6363,
+      "subject_en": "Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "新地区",
+      "object": "赫尔辛基",
+      "object_candidates": "蒙得维的亚, 地拉那, 敖德萨, 雅典, 洛桑, 夏延, 哥本哈根, 哈里斯堡, 温尼伯, 赫尔辛基",
+      "index": 6364,
+      "subject_en": "Uusimaa",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "兰开夏郡",
+      "object": "普雷斯顿",
+      "object_candidates": "亚丁, 孟菲斯, 乔治敦, 罗马, 埃克塞特, 普罗维登斯, 里弗赛德, 阿德莱德, 班加罗尔, 普雷斯顿",
+      "index": 6365,
+      "subject_en": "Lancashire",
+      "object_en": "Preston"
+    },
+    {
+      "subject": "广岛县",
+      "object": "广岛市",
+      "object_candidates": "基督城, 曼谷, 莱斯特, 波士顿, 德累斯顿, 柏林, 波恩, 布加勒斯特, 巴塞尔, 广岛市",
+      "index": 6366,
+      "subject_en": "Hiroshima Prefecture",
+      "object_en": "Hiroshima"
+    },
+    {
+      "subject": "神圣罗马帝国",
+      "object": "维也纳",
+      "object_candidates": "布鲁塞尔市, 贝尔格莱德, 杜拜, 斯普林菲尔德, 布达佩斯, 奥克兰都会区, 巴黎, 维多利亚, 勒克瑙, 维也纳",
+      "index": 6367,
+      "subject_en": "Holy Roman Empire",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "大不列颠及爱尔兰联合王国",
+      "object": "伦敦",
+      "object_candidates": "卡拉奇, 米兰, 德黑兰, 斯德哥尔摩, 温彻斯特, 多伦多, 阿德莱德, 皮尔, 布里斯托尔, 伦敦",
+      "index": 6368,
+      "subject_en": "United Kingdom of Great Britain and Ireland",
+      "object_en": "London"
+    },
+    {
+      "subject": "纳粹德国",
+      "object": "柏林",
+      "object_candidates": "塞拉耶佛, 阿姆斯特丹, 哈利法克斯, 麦加, 渥太华, 俾斯麦, 布达佩斯, 首尔, 伦敦, 柏林",
+      "index": 6369,
+      "subject_en": "Nazi Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "钖拉库萨省",
+      "object": "锡拉库萨",
+      "object_candidates": "查尔斯顿, 里贾纳, 京斯敦, 沃特福德, 德累斯顿, 渥太华, 西敏, 康科德, 东京都, 锡拉库萨",
+      "index": 6370,
+      "subject_en": "Province of Syracuse",
+      "object_en": "Syracuse"
+    },
+    {
+      "subject": "俄罗斯苏维埃联邦社会主义共和国",
+      "object": "莫斯科",
+      "object_candidates": "巴伦西亚, 尼斯, 波恩, 曼彻斯特, 阿勒颇, 爱丁堡, 奥斯陆, 哥伦布, 基督城, 莫斯科",
+      "index": 6371,
+      "subject_en": "Russian Soviet Federative Socialist Republic",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "怀俄明州",
+      "object": "夏延",
+      "object_candidates": "大马士革, 京斯敦, 赫尔辛基, 布里斯班, 图卢兹, 里士满, 洛桑, 沃特福德, 塞勒姆, 夏延",
+      "index": 6372,
+      "subject_en": "Wyoming",
+      "object_en": "Cheyenne"
+    },
+    {
+      "subject": "乌克兰苏维埃社会主义共和国",
+      "object": "基辅",
+      "object_candidates": "北京市, 布拉格, 根特, 敖德萨, 里尔, 哥伦布, 麦加, 阿勒颇, 贝鲁特, 基辅",
+      "index": 6373,
+      "subject_en": "Ukrainian Soviet Socialist Republic",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "拜占庭帝国",
+      "object": "君士坦丁堡",
+      "object_candidates": "剑桥, 慕尼黑, 布列斯特, 克尔曼, 科伦坡, 南京市, 阿勒颇, 利马, 基督城, 君士坦丁堡",
+      "index": 6374,
+      "subject_en": "Byzantine Empire",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "倭马亚王朝",
+      "object": "大马士革",
+      "object_candidates": "巴里, 罗利, 奥克兰都会区, 俾斯麦, 卢布尔雅那, 伍斯特, 首尔, 康科德, 麦加, 大马士革",
+      "index": 6375,
+      "subject_en": "Umayyad Caliphate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "泰国",
+      "object": "曼谷",
+      "object_candidates": "里尔, 洛桑, 北京市, 赫尔辛基, 珀斯, 悉尼, 勒克瑙, 那不勒斯, 横滨市, 曼谷",
+      "index": 6376,
+      "subject_en": "Thailand",
+      "object_en": "Bangkok"
+    },
+    {
+      "subject": "安得拉邦",
+      "object": "海得拉巴",
+      "object_candidates": "锡拉库萨, 普雷斯顿, 波士顿, 阿勒颇, 蒙得维的亚, 叶里温, 维多利亚, 布列斯特, 哈密尔顿, 海得拉巴",
+      "index": 6377,
+      "subject_en": "Andhra Pradesh",
+      "object_en": "Hyderabad"
+    },
+    {
+      "subject": "挪威",
+      "object": "奥斯陆",
+      "object_candidates": "江户, 罗利, 华沙, 里尔, 剑桥, 南京市, 埃德蒙顿, 曼彻斯特, 多伦多, 奥斯陆",
+      "index": 6378,
+      "subject_en": "Norway",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "莱茵兰－普法尔茨",
+      "object": "美因茨",
+      "object_candidates": "兰辛, 利沃夫, 大马士革, 喀布尔, 麦地那, 雅典, 珀斯, 麦加, 帕尔马, 美因茨",
+      "index": 6379,
+      "subject_en": "Rhineland-Palatinate",
+      "object_en": "Mainz"
+    },
+    {
+      "subject": "土耳其",
+      "object": "安卡拉",
+      "object_candidates": "查尔斯顿, 埃克塞特, 多伦多, 夏延, 埃德蒙顿, 孟菲斯, 哈密尔顿, 奥斯陆, 剑桥, 安卡拉",
+      "index": 6380,
+      "subject_en": "Turkey",
+      "object_en": "Ankara"
+    },
+    {
+      "subject": "大马士革农村省",
+      "object": "大马士革",
+      "object_candidates": "加普, 康科德, 巴格达, 克尔曼, 伯尔尼, 雅加达, 广州市, 利默里克, 里斯本, 大马士革",
+      "index": 6381,
+      "subject_en": "Rif Dimashq Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "施瓦本行政区",
+      "object": "奥格斯堡",
+      "object_candidates": "洛桑, 都柏林, 马尼拉市, 大马士革, 北京市, 德黑兰, 爱丁堡, 巴伦西亚, 喀山, 奥格斯堡",
+      "index": 6382,
+      "subject_en": "Swabia",
+      "object_en": "Augsburg"
+    },
+    {
+      "subject": "同盟国军事佔领日本",
+      "object": "东京都",
+      "object_candidates": "斯特拉斯堡, 达尔文, 哈特福, 莫斯科, 里贾纳, 台北市, 根特, 渥太华, 地拉那, 东京都",
+      "index": 6383,
+      "subject_en": "occupation of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "罗德岛州",
+      "object": "普罗维登斯",
+      "object_candidates": "格洛斯特, 卑尔根, 乔治敦, 金奈, 兰辛, 基尔, 利马, 江户, 尼斯, 普罗维登斯",
+      "index": 6384,
+      "subject_en": "Rhode Island",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "爱达荷州",
+      "object": "博伊西",
+      "object_candidates": "孟菲斯, 巴库, 埃克塞特, 麦迪逊, 锡拉库萨, 里加, 麦地那, 伦敦, 贝尔格莱德, 博伊西",
+      "index": 6385,
+      "subject_en": "Idaho",
+      "object_en": "Boise"
+    },
+    {
+      "subject": "克罗地亚",
+      "object": "萨格勒布",
+      "object_candidates": "地拉那, 喀山, 塞维利亚, 哈利法克斯, 图卢兹, 江户, 的黎波里, 赫尔辛基, 戈尔韦, 萨格勒布",
+      "index": 6386,
+      "subject_en": "Croatia",
+      "object_en": "Zagreb"
+    },
+    {
+      "subject": "科克郡",
+      "object": "科克",
+      "object_candidates": "巴格达, 罗利, 索菲亚, 塔林, 维多利亚, 里加, 斯特拉斯堡, 西敏, 锡拉库萨, 科克",
+      "index": 6387,
+      "subject_en": "County Cork",
+      "object_en": "Cork"
+    },
+    {
+      "subject": "威尼斯省",
+      "object": "威尼斯",
+      "object_candidates": "斯特拉斯堡, 剑桥, 勒克瑙, 广岛市, 大马士革, 托莱多, 伦敦, 巴塞罗那, 横滨市, 威尼斯",
+      "index": 6388,
+      "subject_en": "Province of Venice",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "西撒克逊王国",
+      "object": "温彻斯特",
+      "object_candidates": "美因茨, 波士顿, 的黎波里, 兰辛, 萨尔茨堡, 罗马, 威尼斯, 开罗, 贝鲁特, 温彻斯特",
+      "index": 6389,
+      "subject_en": "Kingdom of Wessex",
+      "object_en": "Winchester"
+    },
+    {
+      "subject": "罗马帝国",
+      "object": "罗马",
+      "object_candidates": "江户, 加尔各答, 孟菲斯, 蒙哥马利, 京斯敦, 米兰, 哥本哈根, 维多利亚, 普罗维登斯, 罗马",
+      "index": 6390,
+      "subject_en": "Roman Empire",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "阿尔及利亚",
+      "object": "阿尔及尔",
+      "object_candidates": "巴格达, 勒克瑙, 阿勒颇, 爱丁堡, 都柏林, 哈里斯堡, 威尼斯, 喀布尔, 南京市, 阿尔及尔",
+      "index": 6391,
+      "subject_en": "Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "不列颠哥伦比亚",
+      "object": "维多利亚",
+      "object_candidates": "巴黎, 赫尔辛基, 堪培拉, 夏延, 里加, 哈密尔顿, 温彻斯特, 布列斯特, 敖德萨, 维多利亚",
+      "index": 6392,
+      "subject_en": "British Columbia",
+      "object_en": "Victoria"
+    },
+    {
+      "subject": "西孟加拉邦",
+      "object": "加尔各答",
+      "object_candidates": "斯特拉斯堡, 布拉格, 塞维利亚, 敖德萨, 广岛市, 卢布林, 里贾纳, 塞萨洛尼基, 巴勒莫, 加尔各答",
+      "index": 6393,
+      "subject_en": "West Bengal",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "波希米亚王国",
+      "object": "布拉格",
+      "object_candidates": "东京都, 卑尔根, 巴塞尔, 广州市, 达卡市, 的黎波里, 布拉迪斯拉发, 奥格斯堡, 加尔各答, 布拉格",
+      "index": 6394,
+      "subject_en": "Kingdom of Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "莫斯科州",
+      "object": "莫斯科",
+      "object_candidates": "广州市, 堪培拉, 布列斯特, 班加罗尔, 卢布尔雅那, 尼斯, 凤凰城, 塞拉耶佛, 广岛市, 莫斯科",
+      "index": 6395,
+      "subject_en": "Moscow Oblast",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "黎巴嫩",
+      "object": "贝鲁特",
+      "object_candidates": "埃克塞特, 金奈, 塞萨洛尼基, 布鲁塞尔市, 阿姆斯特丹, 罗利, 凤凰城, 布加勒斯特, 蒙得维的亚, 贝鲁特",
+      "index": 6396,
+      "subject_en": "Lebanon",
+      "object_en": "Beirut"
+    },
+    {
+      "subject": "拉脱维亚",
+      "object": "里加",
+      "object_candidates": "孟菲斯, 利沃夫, 波士顿, 奈洛比, 阿德莱德, 阿姆斯特丹, 布里斯班, 巴黎, 里贾纳, 里加",
+      "index": 6397,
+      "subject_en": "Latvia",
+      "object_en": "Riga"
+    },
+    {
+      "subject": "大日本帝国",
+      "object": "东京都",
+      "object_candidates": "沙加缅度, 剑桥, 地拉那, 海得拉巴, 珀斯, 罗马, 亚丁, 尼斯, 卡拉奇, 东京都",
+      "index": 6398,
+      "subject_en": "Empire of Japan",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "威尔斯",
+      "object": "加迪夫",
+      "object_candidates": "哈里斯堡, 圣地亚哥, 哈利法克斯, 贝尔法斯特, 博伊西, 锡耶纳, 麦加, 马德里, 兰辛, 加迪夫",
+      "index": 6399,
+      "subject_en": "Wales",
+      "object_en": "Cardiff"
+    },
+    {
+      "subject": "德里苏丹国",
+      "object": "德里",
+      "object_candidates": "戈尔韦, 基辅, 耶路撒冷, 哈利法克斯, 博洛尼亚, 林肯, 西敏, 东京都, 普雷斯顿, 德里",
+      "index": 6400,
+      "subject_en": "Delhi Sultanate",
+      "object_en": "Delhi"
+    },
+    {
+      "subject": "阿富汗民主共和国",
+      "object": "喀布尔",
+      "object_candidates": "波士顿, 地拉那, 塞维利亚, 阿德莱德, 达尔文, 科克, 珀斯, 利默里克, 温尼伯, 喀布尔",
+      "index": 6401,
+      "subject_en": "Democratic Republic of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "波兰",
+      "object": "华沙",
+      "object_candidates": "波尔多, 赫尔辛基, 布加勒斯特, 西敏, 布里斯班, 塔林, 里加, 奥克兰都会区, 麦地那, 华沙",
+      "index": 6402,
+      "subject_en": "Poland",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "卡扎尔王朝",
+      "object": "德黑兰",
+      "object_candidates": "俾斯麦, 剑桥, 卡莱尔, 佐贺市, 安卡拉, 大马士革, 雅典, 亚历山大港, 巴塞尔, 德黑兰",
+      "index": 6403,
+      "subject_en": "Qajar dynasty",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "阿拔斯王朝",
+      "object": "巴格达",
+      "object_candidates": "首尔, 麦加, 伍斯特, 佛罗伦萨, 马德里, 荷巴特, 波尔多, 萨尔茨堡, 德累斯顿, 巴格达",
+      "index": 6404,
+      "subject_en": "Abbasid Caliphate",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "信德省",
+      "object": "卡拉奇",
+      "object_candidates": "金奈, 特伦顿, 哈里斯堡, 赫里福德, 柏林, 圣地亚哥, 锡耶纳, 哥本哈根, 普罗维登斯, 卡拉奇",
+      "index": 6405,
+      "subject_en": "Sindh",
+      "object_en": "Karachi"
+    },
+    {
+      "subject": "阿克什胡斯",
+      "object": "奥斯陆",
+      "object_candidates": "皮尔, 俾斯麦, 但尼丁, 利默里克, 锡拉库萨, 北京市, 阿勒颇, 塔林, 布里斯班, 奥斯陆",
+      "index": 6406,
+      "subject_en": "Akershus",
+      "object_en": "Oslo"
+    },
+    {
+      "subject": "也门民主人民共和国",
+      "object": "亚丁",
+      "object_candidates": "巴格达, 的黎波里, 博洛尼亚, 乔治敦, 阿勒颇, 南京市, 克尔曼, 兰辛, 塞萨洛尼基, 亚丁",
+      "index": 6407,
+      "subject_en": "South Yemen",
+      "object_en": "Aden"
+    },
+    {
+      "subject": "新阿基坦大区",
+      "object": "波尔多",
+      "object_candidates": "布里斯班, 柏林, 奥克兰都会区, 塞拉耶佛, 开罗, 贝尔法斯特, 亚丁, 的黎波里, 蒙得维的亚, 波尔多",
+      "index": 6408,
+      "subject_en": "Nouvelle-Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "西北英格兰",
+      "object": "曼彻斯特",
+      "object_candidates": "横滨市, 瓜达拉哈拉, 首尔, 图尔, 台北市, 孟菲斯, 沃特福德, 圣地亚哥, 戈尔韦, 曼彻斯特",
+      "index": 6409,
+      "subject_en": "North West England",
+      "object_en": "Manchester"
+    },
+    {
+      "subject": "中华人民共和国",
+      "object": "北京市",
+      "object_candidates": "巴塞尔, 布拉格, 波士顿, 堪培拉, 巴库, 耶路撒冷, 达尔文, 卡莱尔, 里尔, 北京市",
+      "index": 6410,
+      "subject_en": "People's Republic of China",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "古王国时期",
+      "object": "孟菲斯",
+      "object_candidates": "檀香山, 奈洛比, 普罗维登斯, 瓜达拉哈拉, 萨尔茨堡, 加普, 马尼拉市, 查尔斯顿, 克尔曼, 孟菲斯",
+      "index": 6411,
+      "subject_en": "Old Kingdom of Egypt",
+      "object_en": "Memphis"
+    },
+    {
+      "subject": "百慕大",
+      "object": "哈密尔顿",
+      "object_candidates": "萨尔茨堡, 雅典, 哈里斯堡, 喀山, 俾斯麦, 曼谷, 杰克逊, 那不勒斯, 尼斯, 哈密尔顿",
+      "index": 6412,
+      "subject_en": "Bermuda",
+      "object_en": "Hamilton"
+    },
+    {
+      "subject": "上加龙省",
+      "object": "图卢兹",
+      "object_candidates": "地拉那, 京都市, 沃特福德, 戈尔韦, 蒙得维的亚, 奥斯汀, 雅典, 但尼丁, 美因茨, 图卢兹",
+      "index": 6413,
+      "subject_en": "Haute-Garonne",
+      "object_en": "Toulouse"
+    },
+    {
+      "subject": "阿拉伯联合共和国",
+      "object": "开罗",
+      "object_candidates": "利沃夫, 安卡拉, 曼彻斯特, 米兰, 威尼斯, 加普, 贝尔格莱德, 南京市, 但尼丁, 开罗",
+      "index": 6414,
+      "subject_en": "United Arab Republic",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "赫里福德郡",
+      "object": "赫里福德",
+      "object_candidates": "洛桑, 瓜达拉哈拉, 尼斯, 曼彻斯特, 布拉格, 地拉那, 塔林, 荷巴特, 赫尔辛基, 赫里福德",
+      "index": 6415,
+      "subject_en": "Herefordshire",
+      "object_en": "Hereford"
+    },
+    {
+      "subject": "吉伦特省",
+      "object": "波尔多",
+      "object_candidates": "孟买, 阿尔及尔, 美因茨, 科克, 埃德蒙顿, 曼谷, 班加罗尔, 蒙得维的亚, 曼彻斯特, 波尔多",
+      "index": 6416,
+      "subject_en": "Gironde",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "米兰省",
+      "object": "米兰",
+      "object_candidates": "荷巴特, 里贾纳, 悉尼, 俾斯麦, 维也纳, 里弗赛德, 但尼丁, 叶里温, 伯尔尼, 米兰",
+      "index": 6417,
+      "subject_en": "province of Milan",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "芬兰",
+      "object": "赫尔辛基",
+      "object_candidates": "埃德蒙顿, 巴黎, 达尔文, 哈利法克斯, 锡耶纳, 瓜达拉哈拉, 哈特福, 奥克兰都会区, 君士坦丁堡, 赫尔辛基",
+      "index": 6418,
+      "subject_en": "Finland",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "叙利亚",
+      "object": "大马士革",
+      "object_candidates": "威尼斯, 哈密尔顿, 利沃夫, 广岛市, 江户, 麦迪逊, 西雅图, 基督城, 达尔文, 大马士革",
+      "index": 6419,
+      "subject_en": "Syria",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "巴伦西亚自治区",
+      "object": "巴伦西亚",
+      "object_candidates": "汉诺威, 博洛尼亚, 叶里温, 麦加, 多伦多, 巴格达, 普雷斯顿, 锡拉库萨, 格洛斯特, 巴伦西亚",
+      "index": 6420,
+      "subject_en": "Community of Valencia",
+      "object_en": "Valencia"
+    },
+    {
+      "subject": "白俄罗斯苏维埃社会主义共和国",
+      "object": "明斯克",
+      "object_candidates": "阿姆斯特丹, 赫尔辛基, 孟菲斯, 的黎波里, 亚历山大港, 都柏林, 米兰, 达尔文, 巴里, 明斯克",
+      "index": 6421,
+      "subject_en": "Byelorussian Soviet Socialist Republic",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "热那亚共和国",
+      "object": "热那亚",
+      "object_candidates": "巴黎, 海得拉巴, 奥斯陆, 布里斯托尔, 普罗维登斯, 布拉迪斯拉发, 巴格达, 维也纳, 哥本哈根, 热那亚",
+      "index": 6422,
+      "subject_en": "Republic of Genova",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "比利时",
+      "object": "布鲁塞尔市",
+      "object_candidates": "佛罗伦萨, 塞萨洛尼基, 阿姆斯特丹, 佐贺市, 地拉那, 杜拜, 图卢兹, 科克, 斯特拉斯堡, 布鲁塞尔市",
+      "index": 6423,
+      "subject_en": "Belgium",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "地拉那区",
+      "object": "地拉那",
+      "object_candidates": "哈里斯堡, 达尔文, 皮尔, 但尼丁, 达卡市, 多伦多, 里弗赛德, 德累斯顿, 亚历山大港, 地拉那",
+      "index": 6424,
+      "subject_en": "Tirana District",
+      "object_en": "Tirana"
+    },
+    {
+      "subject": "利古里亚",
+      "object": "热那亚",
+      "object_candidates": "迈阿密, 阿德莱德, 赫尔辛基, 那不勒斯, 洛桑, 布拉格, 曼彻斯特, 俾斯麦, 达尔文, 热那亚",
+      "index": 6425,
+      "subject_en": "Liguria",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "阿基坦",
+      "object": "波尔多",
+      "object_candidates": "加尔各答, 哈瓦那, 塞拉耶佛, 亚历山大港, 达尔文, 那不勒斯, 基督城, 特伦顿, 北京市, 波尔多",
+      "index": 6426,
+      "subject_en": "Aquitaine",
+      "object_en": "Bordeaux"
+    },
+    {
+      "subject": "奥匈帝国",
+      "object": "维也纳",
+      "object_candidates": "查尔斯顿, 索菲亚, 阿德莱德, 广岛市, 布拉格, 奈洛比, 斯普林菲尔德, 雅加达, 马德里, 维也纳",
+      "index": 6427,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Vienna"
+    },
+    {
+      "subject": "罗马省",
+      "object": "罗马",
+      "object_candidates": "沙加缅度, 瓜达拉哈拉, 剑桥, 奥格斯堡, 布里斯托尔, 卡拉奇, 莱斯特, 名古屋市, 麦加, 罗马",
+      "index": 6428,
+      "subject_en": "Province of Rome",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "斯德哥尔摩省",
+      "object": "斯德哥尔摩",
+      "object_candidates": "洛桑, 那不勒斯, 沃特福德, 麦迪逊, 加拉加斯, 北京市, 明斯克, 里加, 米兰, 斯德哥尔摩",
+      "index": 6429,
+      "subject_en": "Stockholm County",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "埃及王国",
+      "object": "开罗",
+      "object_candidates": "阿勒颇, 基督城, 利沃夫, 罗利, 横滨市, 德累斯顿, 温尼伯, 塞萨洛尼基, 哈特福, 开罗",
+      "index": 6430,
+      "subject_en": "Kingdom of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "田纳西州",
+      "object": "纳什维尔",
+      "object_candidates": "贝尔格莱德, 名古屋市, 哈里斯堡, 亚丁, 喀布尔, 格洛斯特, 佛罗伦萨, 贝尔法斯特, 哈利法克斯, 纳什维尔",
+      "index": 6431,
+      "subject_en": "Tennessee",
+      "object_en": "Nashville"
+    },
+    {
+      "subject": "佐贺县",
+      "object": "佐贺市",
+      "object_candidates": "里弗赛德, 爱丁堡, 奥斯陆, 沙加缅度, 图尔, 托莱多, 卡拉奇, 的黎波里, 安那波利斯, 佐贺市",
+      "index": 6432,
+      "subject_en": "Saga Prefecture",
+      "object_en": "Saga"
+    },
+    {
+      "subject": "瑞典",
+      "object": "斯德哥尔摩",
+      "object_candidates": "布列斯特, 波尔多, 布拉格, 罗马, 美因茨, 塞维利亚, 亚丁, 米兰, 贝鲁特, 斯德哥尔摩",
+      "index": 6433,
+      "subject_en": "Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "法属阿尔及利亚",
+      "object": "阿尔及尔",
+      "object_candidates": "巴比伦, 阿德莱德, 雅加达, 明斯克, 京斯敦, 根特, 贝鲁特, 布加勒斯特, 哈利法克斯, 阿尔及尔",
+      "index": 6434,
+      "subject_en": "French Algeria",
+      "object_en": "Algiers"
+    },
+    {
+      "subject": "俄亥俄州",
+      "object": "哥伦布",
+      "object_candidates": "江户, 阿尔及尔, 维尔纽斯, 佐贺市, 巴里, 基尔, 加普, 科伦坡, 荷巴特, 哥伦布",
+      "index": 6435,
+      "subject_en": "Ohio",
+      "object_en": "Columbus"
+    },
+    {
+      "subject": "南卡罗来纳州",
+      "object": "哥伦比亚",
+      "object_candidates": "孟菲斯, 加拉加斯, 奥斯汀, 罗利, 伦敦, 凤凰城, 喀山, 托莱多, 加迪夫, 哥伦比亚",
+      "index": 6436,
+      "subject_en": "South Carolina",
+      "object_en": "Columbia"
+    },
+    {
+      "subject": "牙买加",
+      "object": "京斯敦",
+      "object_candidates": "安卡拉, 杜拜, 布加勒斯特, 横滨市, 敖德萨, 布拉迪斯拉发, 里加, 巴里, 牛津, 京斯敦",
+      "index": 6437,
+      "subject_en": "Jamaica",
+      "object_en": "Kingston"
+    },
+    {
+      "subject": "基辅罗斯",
+      "object": "基辅",
+      "object_candidates": "皮尔, 勒克瑙, 沃特福德, 贝鲁特, 纳什维尔, 京斯敦, 丹佛, 亚丁, 博伊西, 基辅",
+      "index": 6438,
+      "subject_en": "Kyivska Rus'",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "上阿尔卑斯省",
+      "object": "加普",
+      "object_candidates": "蒙哥马利, 图尔, 北京市, 巴里, 佛罗伦萨, 博洛尼亚, 奥克兰都会区, 曼彻斯特, 阿勒颇, 加普",
+      "index": 6439,
+      "subject_en": "Hautes-Alpes",
+      "object_en": "Gap"
+    },
+    {
+      "subject": "英格兰王国",
+      "object": "伦敦",
+      "object_candidates": "沃特福德, 班加罗尔, 索菲亚, 杰克逊, 华沙, 檀香山, 科克, 珀斯, 京都市, 伦敦",
+      "index": 6440,
+      "subject_en": "Kingdom of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "加泰罗尼亚",
+      "object": "巴塞罗那",
+      "object_candidates": "布里斯托尔, 威尼斯, 帕尔马, 温尼伯, 阿勒颇, 哈里斯堡, 赫尔辛基, 哈特福, 西雅图, 巴塞罗那",
+      "index": 6441,
+      "subject_en": "Catalonia",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "巴黎公社",
+      "object": "巴黎",
+      "object_candidates": "广州市, 多伦多, 波士顿, 雅典, 阿德莱德, 奈洛比, 基督城, 布拉迪斯拉发, 里尔, 巴黎",
+      "index": 6442,
+      "subject_en": "Revolucion Francesa",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "皮埃蒙特",
+      "object": "都灵",
+      "object_candidates": "塞萨洛尼基, 蒙哥马利, 雅加达, 锡拉库萨, 广州市, 丹佛, 基尔, 马尼拉市, 洛桑, 都灵",
+      "index": 6443,
+      "subject_en": "Piedmont",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "捷克",
+      "object": "布拉格",
+      "object_candidates": "伯尔尼, 巴比伦, 杰克逊, 波尔多, 慕尼黑, 尼斯, 巴勒莫, 托莱多, 哥本哈根, 布拉格",
+      "index": 6444,
+      "subject_en": "Czech Republic",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "新斯科舍",
+      "object": "哈利法克斯",
+      "object_candidates": "汉诺威, 林肯, 贝尔法斯特, 兰辛, 里斯本, 奥克兰都会区, 堪培拉, 雅典, 加尔各答, 哈利法克斯",
+      "index": 6445,
+      "subject_en": "Nova Scotia",
+      "object_en": "Halifax"
+    },
+    {
+      "subject": "牛津郡",
+      "object": "牛津",
+      "object_candidates": "伊斯坦堡, 达卡市, 伍斯特, 波恩, 京斯敦, 基督城, 堪培拉, 基尔, 里斯本, 牛津",
+      "index": 6446,
+      "subject_en": "Oxfordshire",
+      "object_en": "Oxford"
+    },
+    {
+      "subject": "欧洲联盟",
+      "object": "布鲁塞尔市",
+      "object_candidates": "赫里福德, 多伦多, 哈瓦那, 悉尼, 勒克瑙, 罗马, 基督城, 尼斯, 都柏林, 布鲁塞尔市",
+      "index": 6447,
+      "subject_en": "European Union",
+      "object_en": "Brussels"
+    },
+    {
+      "subject": "南斯拉夫社会主义联邦共和国",
+      "object": "贝尔格莱德",
+      "object_candidates": "德黑兰, 布鲁塞尔市, 埃德蒙顿, 赫尔辛基, 大马士革, 俾斯麦, 叶里温, 斯普林菲尔德, 北京市, 贝尔格莱德",
+      "index": 6448,
+      "subject_en": "Socialist Federal Republic of Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "英属印度",
+      "object": "加尔各答",
+      "object_candidates": "萨格勒布, 圣地亚哥, 罗马, 贝尔法斯特, 利默里克, 巴黎, 广岛市, 地拉那, 卡拉奇, 加尔各答",
+      "index": 6449,
+      "subject_en": "British India",
+      "object_en": "Kolkata"
+    },
+    {
+      "subject": "清朝",
+      "object": "北京市",
+      "object_candidates": "布加勒斯特, 加尔各答, 科伦坡, 西雅图, 都灵, 丹佛, 利默里克, 萨尔茨堡, 奥格斯堡, 北京市",
+      "index": 6450,
+      "subject_en": "Qing dynasty",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "立陶宛大公国",
+      "object": "维尔纽斯",
+      "object_candidates": "帕尔马, 温尼伯, 埃德蒙顿, 布拉格, 布里斯托尔, 横滨市, 博洛尼亚, 纳什维尔, 德黑兰, 维尔纽斯",
+      "index": 6451,
+      "subject_en": "Grand Duchy of Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "萨丁尼亚王国",
+      "object": "都灵",
+      "object_candidates": "塞萨洛尼基, 索菲亚, 加普, 檀香山, 埃克塞特, 南京市, 但尼丁, 赫里福德, 斯特拉斯堡, 都灵",
+      "index": 6452,
+      "subject_en": "Kingdom of Sardinia",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "马里兰州",
+      "object": "安那波利斯",
+      "object_candidates": "塞萨洛尼基, 温尼伯, 斯德哥尔摩, 马尼拉市, 首尔, 伯尔尼, 都灵, 瓜达拉哈拉, 叶里温, 安那波利斯",
+      "index": 6453,
+      "subject_en": "Maryland",
+      "object_en": "Annapolis"
+    },
+    {
+      "subject": "魏玛共和国",
+      "object": "柏林",
+      "object_candidates": "敖德萨, 慕尼黑, 首尔, 巴里, 哥本哈根, 萨尔茨堡, 阿勒颇, 图尔, 阿姆斯特丹, 柏林",
+      "index": 6454,
+      "subject_en": "Weimar Republic",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "美利坚联盟国",
+      "object": "里士满",
+      "object_candidates": "西雅图, 米兰, 基辅, 罗马, 卢布尔雅那, 波士顿, 荷巴特, 莫斯科, 布达佩斯, 里士满",
+      "index": 6455,
+      "subject_en": "Confederate States of America",
+      "object_en": "Richmond"
+    },
+    {
+      "subject": "纽斯特利亚",
+      "object": "巴黎",
+      "object_candidates": "莱斯特, 剑桥, 锡耶纳, 萨尔茨堡, 斯特拉斯堡, 根特, 杜拜, 麦地那, 广州市, 巴黎",
+      "index": 6456,
+      "subject_en": "Neustria",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "巴伐利亚",
+      "object": "慕尼黑",
+      "object_candidates": "查尔斯顿, 都柏林, 布达佩斯, 基辅, 牛津, 蒙哥马利, 多伦多, 孟菲斯, 布拉迪斯拉发, 慕尼黑",
+      "index": 6457,
+      "subject_en": "Bavaria",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "夏威夷州",
+      "object": "檀香山",
+      "object_candidates": "图卢兹, 的黎波里, 维多利亚, 科伦坡, 特伦顿, 哈密尔顿, 首尔, 丹佛, 波恩, 檀香山",
+      "index": 6458,
+      "subject_en": "Hawaii",
+      "object_en": "Honolulu"
+    },
+    {
+      "subject": "同盟国军事占领德国",
+      "object": "柏林",
+      "object_candidates": "伦敦, 夏延, 西敏, 京斯敦, 贝尔格莱德, 伯尔尼, 南京市, 江户, 美因茨, 柏林",
+      "index": 6459,
+      "subject_en": "Allied-occupied Germany",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "昆士兰州",
+      "object": "布里斯班",
+      "object_candidates": "贝鲁特, 林肯, 西雅图, 卑尔根, 萨格勒布, 巴伦西亚, 温尼伯, 布拉格, 布里斯托尔, 布里斯班",
+      "index": 6460,
+      "subject_en": "Queensland",
+      "object_en": "Brisbane"
+    },
+    {
+      "subject": "波希米亚",
+      "object": "布拉格",
+      "object_candidates": "悉尼, 东京都, 温彻斯特, 圣地亚哥, 巴库, 图尔, 首尔, 北京市, 帕尔马, 布拉格",
+      "index": 6461,
+      "subject_en": "Bohemia",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "阿富汗伊斯兰酋长国",
+      "object": "喀布尔",
+      "object_candidates": "威尼斯, 但尼丁, 科克, 斯普林菲尔德, 温彻斯特, 西敏, 格洛斯特, 温尼伯, 都柏林, 喀布尔",
+      "index": 6462,
+      "subject_en": "Islamic Emirate of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "霍姆斯省",
+      "object": "大马士革",
+      "object_candidates": "罗马, 亚丁, 布鲁塞尔市, 哈里斯堡, 维多利亚, 里弗赛德, 普雷斯顿, 叶里温, 塔林, 大马士革",
+      "index": 6463,
+      "subject_en": "Homs Governorate",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "西维吉尼亚州",
+      "object": "查尔斯顿",
+      "object_candidates": "印第安纳波利斯, 布鲁塞尔市, 博洛尼亚, 西敏, 东京都, 孟菲斯, 托莱多, 亚历山大港, 维尔纽斯, 查尔斯顿",
+      "index": 6464,
+      "subject_en": "West Virginia",
+      "object_en": "Charleston"
+    },
+    {
+      "subject": "肯尼亚",
+      "object": "奈洛比",
+      "object_candidates": "波恩, 北京市, 图尔, 加拉加斯, 安那波利斯, 德黑兰, 热那亚, 萨尔茨堡, 奥斯汀, 奈洛比",
+      "index": 6465,
+      "subject_en": "Kenya",
+      "object_en": "Nairobi"
+    },
+    {
+      "subject": "西德",
+      "object": "波恩",
+      "object_candidates": "喀山, 布加勒斯特, 西雅图, 塞维利亚, 奈洛比, 布里斯托尔, 哈里斯堡, 加尔各答, 巴勒莫, 波恩",
+      "index": 6466,
+      "subject_en": "West Germany",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "斯洛文尼亚",
+      "object": "卢布尔雅那",
+      "object_candidates": "加拉加斯, 喀布尔, 哈特福, 哥伦比亚, 台北市, 达尔文, 波尔多, 哥伦布, 基督城, 卢布尔雅那",
+      "index": 6467,
+      "subject_en": "Slovenia",
+      "object_en": "Ljubljana"
+    },
+    {
+      "subject": "奥塔哥大区",
+      "object": "但尼丁",
+      "object_candidates": "布里斯班, 巴塞尔, 帕尔马, 蒙得维的亚, 哈特福, 丹佛, 马德里, 斯特拉斯堡, 加迪夫, 但尼丁",
+      "index": 6468,
+      "subject_en": "Otago Region",
+      "object_en": "Dunedin"
+    },
+    {
+      "subject": "江苏省",
+      "object": "南京市",
+      "object_candidates": "布加勒斯特, 格洛斯特, 科克, 杰克逊, 哈瓦那, 奥克兰都会区, 索菲亚, 喀布尔, 但尼丁, 南京市",
+      "index": 6469,
+      "subject_en": "Jiangsu",
+      "object_en": "Nanjing"
+    },
+    {
+      "subject": "新泽西州",
+      "object": "特伦顿",
+      "object_candidates": "康科德, 麦地那, 首尔, 塔林, 洛桑, 卢布林, 布加勒斯特, 那不勒斯, 莫斯科, 特伦顿",
+      "index": 6470,
+      "subject_en": "New Jersey",
+      "object_en": "Trenton"
+    },
+    {
+      "subject": "俄勒冈州",
+      "object": "塞勒姆",
+      "object_candidates": "曼谷, 萨尔茨堡, 明斯克, 斯特拉斯堡, 雅加达, 哈瓦那, 布达佩斯, 卑尔根, 首尔, 塞勒姆",
+      "index": 6471,
+      "subject_en": "Oregon",
+      "object_en": "Salem"
+    },
+    {
+      "subject": "意大利王国",
+      "object": "罗马",
+      "object_candidates": "兰辛, 普雷斯顿, 达卡市, 横滨市, 安那波利斯, 加普, 哥伦比亚, 丹佛, 波士顿, 罗马",
+      "index": 6472,
+      "subject_en": "Kingdom of Italy",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "石勒苏益格-荷尔斯泰因",
+      "object": "基尔",
+      "object_candidates": "喀山, 莱斯特, 京都市, 卡拉奇, 巴塞尔, 奥格斯堡, 麦地那, 安那波利斯, 安卡拉, 基尔",
+      "index": 6473,
+      "subject_en": "Schleswig-Holstein",
+      "object_en": "Kiel"
+    },
+    {
+      "subject": "立陶宛",
+      "object": "维尔纽斯",
+      "object_candidates": "基督城, 杰克逊, 赫尔辛基, 亚历山大港, 首尔, 赫里福德, 剑桥, 迈阿密, 普罗维登斯, 维尔纽斯",
+      "index": 6474,
+      "subject_en": "Lithuania",
+      "object_en": "Vilnius"
+    },
+    {
+      "subject": "密西西比州",
+      "object": "杰克逊",
+      "object_candidates": "斯普林菲尔德, 阿尔及尔, 布加勒斯特, 加尔各答, 兰辛, 多伦多, 加拉加斯, 基辅, 里士满, 杰克逊",
+      "index": 6475,
+      "subject_en": "Mississippi",
+      "object_en": "Jackson"
+    },
+    {
+      "subject": "奥匈帝国",
+      "object": "布达佩斯",
+      "object_candidates": "卑尔根, 斯德哥尔摩, 俾斯麦, 南京市, 横滨市, 马尼拉市, 京斯敦, 广州市, 亚历山大港, 布达佩斯",
+      "index": 6476,
+      "subject_en": "Austria-Hungary",
+      "object_en": "Budapest"
+    },
+    {
+      "subject": "明斯克州",
+      "object": "明斯克",
+      "object_candidates": "贝鲁特, 加迪夫, 哥伦布, 维尔纽斯, 赫里福德, 奈洛比, 斯特拉斯堡, 戈尔韦, 曼彻斯特, 明斯克",
+      "index": 6477,
+      "subject_en": "Minsk Region",
+      "object_en": "Minsk"
+    },
+    {
+      "subject": "广东省",
+      "object": "广州市",
+      "object_candidates": "北京市, 阿德莱德, 奥斯陆, 亚历山大港, 加普, 马尼拉市, 皮尔, 地拉那, 布里斯托尔, 广州市",
+      "index": 6478,
+      "subject_en": "Guangdong",
+      "object_en": "Guangzhou"
+    },
+    {
+      "subject": "罗马共和国",
+      "object": "罗马",
+      "object_candidates": "东京都, 哈瓦那, 广岛市, 雅典, 巴塞尔, 里尔, 京斯敦, 海得拉巴, 塔林, 罗马",
+      "index": 6479,
+      "subject_en": "Roman Republic",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "普鲁士王国",
+      "object": "柏林",
+      "object_candidates": "卡拉奇, 巴库, 普罗维登斯, 阿勒颇, 佛罗伦萨, 塞维利亚, 巴黎, 萨尔茨堡, 赫尔辛基, 柏林",
+      "index": 6480,
+      "subject_en": "Kingdom of Prussia",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "阿富汗",
+      "object": "喀布尔",
+      "object_candidates": "斯普林菲尔德, 乔治敦, 珀斯, 哥本哈根, 堪培拉, 沃特福德, 伊斯坦堡, 罗利, 萨格勒布, 喀布尔",
+      "index": 6481,
+      "subject_en": "Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "智利",
+      "object": "圣地亚哥",
+      "object_candidates": "广州市, 亚历山大港, 加尔各答, 莫斯科, 图尔, 达尔文, 丹佛, 喀布尔, 纳什维尔, 圣地亚哥",
+      "index": 6482,
+      "subject_en": "Chile",
+      "object_en": "Santiago"
+    },
+    {
+      "subject": "南斯拉夫",
+      "object": "贝尔格莱德",
+      "object_candidates": "伦敦, 阿尔及尔, 莱斯特, 布拉迪斯拉发, 台北市, 布加勒斯特, 剑桥, 里贾纳, 波尔多, 贝尔格莱德",
+      "index": 6483,
+      "subject_en": "Yugoslavia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "马略卡岛",
+      "object": "帕尔马",
+      "object_candidates": "南京市, 巴库, 首尔, 利沃夫, 洛桑, 里贾纳, 爱丁堡, 雅典, 温彻斯特, 帕尔马",
+      "index": 6484,
+      "subject_en": "Majorca",
+      "object_en": "Palma de Mallorca"
+    },
+    {
+      "subject": "诺福克郡",
+      "object": "诺里奇",
+      "object_candidates": "叶里温, 马德里, 堪培拉, 班加罗尔, 卡莱尔, 里弗赛德, 温尼伯, 奈洛比, 巴塞尔, 诺里奇",
+      "index": 6485,
+      "subject_en": "Norfolk",
+      "object_en": "Norwich"
+    },
+    {
+      "subject": "马佐夫舍省",
+      "object": "华沙",
+      "object_candidates": "敖德萨, 汉诺威, 康科德, 莫斯科, 堪培拉, 卑尔根, 俾斯麦, 喀山, 维多利亚, 华沙",
+      "index": 6486,
+      "subject_en": "Masovian Voivodeship",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "法兰德斯",
+      "object": "布鲁塞尔市",
+      "object_candidates": "地拉那, 巴塞罗那, 华沙, 达尔文, 莫斯科, 雅典, 德里, 佛罗伦萨, 孟买, 布鲁塞尔市",
+      "index": 6487,
+      "subject_en": "Flanders",
+      "object_en": "Brussels"
+    }
+  ],
+  "relation_id": "P36"
+}

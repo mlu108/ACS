@@ -1,0 +1,414 @@
+{
+  "name": "owned_by",
+  "prompt_templates": [
+    "<subject> 由谁拥有？答案是：<mask>",
+    "哪个公司或个人拥有 <subject>? 答案是：<mask>",
+    "<subject> 的现任所有者是谁？答案是：<mask>",
+    "<subject> 属于谁？答案是：<mask>",
+    "哪个实体拥有 <subject>? 答案是：<mask>",
+    "<subject>的拥有者是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "杜卡迪",
+      "object": "奥迪",
+      "object_candidates": "雅虎, 柏林, 巴黎, 丰田汽车, 索尼, 米兰, 法国, 英国广播公司, 波兰, 奥迪",
+      "index": 4803,
+      "subject_en": "Ducati Motor Holding S.p.A.",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "蓝宝坚尼",
+      "object": "奥迪",
+      "object_candidates": "巴黎, 雅虎, 热那亚, 米兰, 亚马逊公司, 波兰, 微软, 丰田汽车, 法国, 奥迪",
+      "index": 4804,
+      "subject_en": "Lamborghini",
+      "object_en": "Audi"
+    },
+    {
+      "subject": "艾菲尔铁塔",
+      "object": "巴黎",
+      "object_candidates": "利沃夫, 卡塔尔, 雅虎, 米兰, 法国, 微软, 索尼, 波兰, 都灵, 巴黎",
+      "index": 4805,
+      "subject_en": "Eiffel Tower",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "德国铁路",
+      "object": "德国",
+      "object_candidates": "都灵, 索尼, 巴黎, 柏林, 热那亚, 波兰, 卡塔尔, 丰田汽车, 芝加哥, 德国",
+      "index": 4806,
+      "subject_en": "Deutsche Bahn",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "谷歌搜索",
+      "object": "Google",
+      "object_candidates": "都灵, 索尼, 德国, 热那亚, 波兰, 卡塔尔, 雅虎, 芝加哥, 米兰, Google",
+      "index": 4807,
+      "subject_en": "Google",
+      "object_en": "Google"
+    },
+    {
+      "subject": "凌志",
+      "object": "丰田汽车",
+      "object_candidates": "利沃夫, Google, 法国, 芝加哥, 英国广播公司, 巴勒莫, 波兰, 热那亚, 德国, 丰田汽车",
+      "index": 4808,
+      "subject_en": "Lexus",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "YouTube",
+      "object": "Google",
+      "object_candidates": "芝加哥, 米兰, 利沃夫, 巴黎, 那不勒斯, 法国, 德国, 都灵, 英国广播公司, Google",
+      "index": 4809,
+      "subject_en": "YouTube",
+      "object_en": "Google"
+    },
+    {
+      "subject": "雷射唱片",
+      "object": "索尼",
+      "object_candidates": "丰田汽车, 利沃夫, 英国广播公司, 米兰, Google, 雅虎, 那不勒斯, 热那亚, 巴黎, 索尼",
+      "index": 4810,
+      "subject_en": "Compact Disc",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "奥黑尔国际机场",
+      "object": "芝加哥",
+      "object_candidates": "英国广播公司, 热那亚, 法国, 卡塔尔, 奥迪, 丰田汽车, 阿姆斯特丹, 亚马逊公司, 利沃夫, 芝加哥",
+      "index": 4811,
+      "subject_en": "O'Hare International Airport",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "英国广播公司第一台",
+      "object": "英国广播公司",
+      "object_candidates": "法国, 利沃夫, 热那亚, 奥迪, 雅虎, 那不勒斯, 巴勒莫, 巴黎, 阿姆斯特丹, 英国广播公司",
+      "index": 4812,
+      "subject_en": "BBC One",
+      "object_en": "British Broadcasting Corporation"
+    },
+    {
+      "subject": "索尼互动娱乐",
+      "object": "索尼",
+      "object_candidates": "都灵, Google, 雅虎, 亚马逊公司, 利沃夫, 微软, 奥迪, 丰田汽车, 德国, 索尼",
+      "index": 4813,
+      "subject_en": "Sony Interactive Entertainment",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "索尼影视娱乐",
+      "object": "索尼",
+      "object_candidates": "德国, 芝加哥, 微软, 那不勒斯, 利沃夫, 亚马逊公司, 奥迪, 英国广播公司, 卡塔尔, 索尼",
+      "index": 4814,
+      "subject_en": "Sony Pictures",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "Gmail",
+      "object": "Google",
+      "object_candidates": "奥迪, 那不勒斯, 巴黎, 索尼, 利沃夫, 丰田汽车, 巴勒莫, 卡塔尔, 雅虎, Google",
+      "index": 4815,
+      "subject_en": "Gmail",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google地图",
+      "object": "Google",
+      "object_candidates": "索尼, 巴勒莫, 法国, 都灵, 那不勒斯, 米兰, 丰田汽车, 柏林, 利沃夫, Google",
+      "index": 4816,
+      "subject_en": "Google Maps",
+      "object_en": "Google"
+    },
+    {
+      "subject": "数码多功能影音光碟",
+      "object": "索尼",
+      "object_candidates": "卡塔尔, 热那亚, Google, 都灵, 巴黎, 米兰, 英国广播公司, 丰田汽车, 微软, 索尼",
+      "index": 4817,
+      "subject_en": "DVD",
+      "object_en": "Sony"
+    },
+    {
+      "subject": "王子公园体育场",
+      "object": "巴黎",
+      "object_candidates": "利沃夫, 波兰, 丰田汽车, 德国, 柏林, 雅虎, 英国广播公司, 微软, Google, 巴黎",
+      "index": 4818,
+      "subject_en": "Parc des Princes",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "Google街景",
+      "object": "Google",
+      "object_candidates": "奥迪, 微软, 阿姆斯特丹, 那不勒斯, 柏林, 索尼, 巴勒莫, 利沃夫, 波兰, Google",
+      "index": 4819,
+      "subject_en": "Google Street View",
+      "object_en": "Google"
+    },
+    {
+      "subject": "视窗媒体播放器",
+      "object": "微软",
+      "object_candidates": "柏林, 芝加哥, 米兰, 雅虎, 巴黎, 丰田汽车, Google, 索尼, 都灵, 微软",
+      "index": 4820,
+      "subject_en": "Windows Media Player",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "圣西路球场",
+      "object": "米兰",
+      "object_candidates": "热那亚, 索尼, 德国, 亚马逊公司, 卡塔尔, 波兰, 巴黎, 奥迪, 芝加哥, 米兰",
+      "index": 4821,
+      "subject_en": "San Siro Stadium",
+      "object_en": "Milan"
+    },
+    {
+      "subject": "互联网电影数据库",
+      "object": "亚马逊公司",
+      "object_candidates": "法国, 芝加哥, 奥迪, 波兰, 巴黎, Google, 索尼, 卡塔尔, 巴勒莫, 亚马逊公司",
+      "index": 4822,
+      "subject_en": "Internet Movie Database",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "Google AdSense",
+      "object": "Google",
+      "object_candidates": "那不勒斯, 波兰, 巴勒莫, 奥迪, 微软, 利沃夫, 阿姆斯特丹, 卡塔尔, 热那亚, Google",
+      "index": 4823,
+      "subject_en": "Google AdSense",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Amazon Kindle",
+      "object": "亚马逊公司",
+      "object_candidates": "米兰, 那不勒斯, 法国, 德国, 阿姆斯特丹, 利沃夫, 微软, 热那亚, 巴勒莫, 亚马逊公司",
+      "index": 4824,
+      "subject_en": "Amazon Kindle",
+      "object_en": "Amazon"
+    },
+    {
+      "subject": "巴尔贝拉球场",
+      "object": "巴勒莫",
+      "object_candidates": "索尼, 卡塔尔, 德国, 阿姆斯特丹, 法国, 奥迪, Google, 柏林, 英国广播公司, 巴勒莫",
+      "index": 4825,
+      "subject_en": "Stadio Renzo Barbera",
+      "object_en": "Palermo"
+    },
+    {
+      "subject": "Flickr",
+      "object": "雅虎",
+      "object_candidates": "芝加哥, 德国, 英国广播公司, 微软, 卡塔尔, 法国, 都灵, 波兰, 丰田汽车, 雅虎",
+      "index": 4826,
+      "subject_en": "Flickr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "Googleplex",
+      "object": "Google",
+      "object_candidates": "波兰, 米兰, 微软, 巴勒莫, 法国, 阿姆斯特丹, 热那亚, 利沃夫, 英国广播公司, Google",
+      "index": 4827,
+      "subject_en": "Googleplex",
+      "object_en": "Google"
+    },
+    {
+      "subject": "谷歌地球",
+      "object": "Google",
+      "object_candidates": "阿姆斯特丹, 微软, 雅虎, 亚马逊公司, 丰田汽车, 奥迪, 芝加哥, 利沃夫, 热那亚, Google",
+      "index": 4828,
+      "subject_en": "Google Earth",
+      "object_en": "Google"
+    },
+    {
+      "subject": "大发工业株式会社",
+      "object": "丰田汽车",
+      "object_candidates": "巴黎, 柏林, 微软, 德国, 索尼, 英国广播公司, 那不勒斯, 法国, 热那亚, 丰田汽车",
+      "index": 4829,
+      "subject_en": "Daihatsu",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "巴黎凯旋门",
+      "object": "法国",
+      "object_candidates": "那不勒斯, 奥迪, 阿姆斯特丹, 柏林, 卡塔尔, Google, 巴黎, 德国, 微软, 法国",
+      "index": 4830,
+      "subject_en": "Arc de Triomphe",
+      "object_en": "France"
+    },
+    {
+      "subject": "枫丹白露宫",
+      "object": "法国",
+      "object_candidates": "丰田汽车, 索尼, 阿姆斯特丹, 亚马逊公司, 波兰, 米兰, 巴勒莫, 奥迪, 热那亚, 法国",
+      "index": 4831,
+      "subject_en": "Palace of Fontainebleau",
+      "object_en": "France"
+    },
+    {
+      "subject": "Google Drive",
+      "object": "Google",
+      "object_candidates": "热那亚, 奥迪, 亚马逊公司, 索尼, 巴黎, 卡塔尔, 波兰, 利沃夫, 柏林, Google",
+      "index": 4832,
+      "subject_en": "Google Drive",
+      "object_en": "Google"
+    },
+    {
+      "subject": "Google图书",
+      "object": "Google",
+      "object_candidates": "德国, 米兰, 奥迪, 雅虎, 卡塔尔, 都灵, 那不勒斯, 索尼, 巴黎, Google",
+      "index": 4833,
+      "subject_en": "Google Books",
+      "object_en": "Google"
+    },
+    {
+      "subject": "都灵奥林匹克体育场",
+      "object": "都灵",
+      "object_candidates": "Google, 阿姆斯特丹, 法国, 米兰, 热那亚, 微软, 柏林, 巴勒莫, 索尼, 都灵",
+      "index": 4834,
+      "subject_en": "Stadio Olimpico Grande Torino",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "卡塔尔航空",
+      "object": "卡塔尔",
+      "object_candidates": "雅虎, 米兰, 亚马逊公司, 法国, 巴黎, 那不勒斯, 丰田汽车, 索尼, 利沃夫, 卡塔尔",
+      "index": 4835,
+      "subject_en": "Qatar Airways",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "夜巡",
+      "object": "阿姆斯特丹",
+      "object_candidates": "米兰, 利沃夫, 奥迪, 法国, 都灵, 英国广播公司, 丰田汽车, 那不勒斯, 波兰, 阿姆斯特丹",
+      "index": 4836,
+      "subject_en": "The Night Watch",
+      "object_en": "Amsterdam"
+    },
+    {
+      "subject": "Blogger",
+      "object": "Google",
+      "object_candidates": "索尼, 丰田汽车, 波兰, 奥迪, 巴黎, 利沃夫, 微软, 亚马逊公司, 米兰, Google",
+      "index": 4837,
+      "subject_en": "Blogger",
+      "object_en": "Google"
+    },
+    {
+      "subject": "柏林奥林匹克体育场",
+      "object": "柏林",
+      "object_candidates": "卡塔尔, 巴黎, 米兰, 微软, 阿姆斯特丹, 英国广播公司, 芝加哥, 奥迪, 都灵, 柏林",
+      "index": 4838,
+      "subject_en": "Olympiastadion Berlin",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "LOT波兰航空",
+      "object": "波兰",
+      "object_candidates": "利沃夫, 巴黎, 芝加哥, 亚马逊公司, 雅虎, 阿姆斯特丹, Google, 索尼, 德国, 波兰",
+      "index": 4839,
+      "subject_en": "LOT Polish Airlines",
+      "object_en": "Poland"
+    },
+    {
+      "subject": "费拉里斯球场",
+      "object": "热那亚",
+      "object_candidates": "卡塔尔, 索尼, 微软, 波兰, 柏林, 那不勒斯, 德国, 丰田汽车, 英国广播公司, 热那亚",
+      "index": 4840,
+      "subject_en": "Stadio Luigi Ferraris",
+      "object_en": "Genoa"
+    },
+    {
+      "subject": "谷歌翻译",
+      "object": "Google",
+      "object_candidates": "那不勒斯, 卡塔尔, 阿姆斯特丹, 波兰, 雅虎, 微软, 芝加哥, 米兰, 法国, Google",
+      "index": 4841,
+      "subject_en": "Google Translate",
+      "object_en": "Google"
+    },
+    {
+      "subject": "碎片大厦",
+      "object": "卡塔尔",
+      "object_candidates": "利沃夫, 阿姆斯特丹, 那不勒斯, 亚马逊公司, 索尼, 热那亚, 英国广播公司, 微软, 芝加哥, 卡塔尔",
+      "index": 4842,
+      "subject_en": "The Shard",
+      "object_en": "Qatar"
+    },
+    {
+      "subject": "法兰西体育场",
+      "object": "法国",
+      "object_candidates": "热那亚, 利沃夫, 雅虎, 丰田汽车, Google, 微软, 都灵, 芝加哥, 亚马逊公司, 法国",
+      "index": 4843,
+      "subject_en": "Stade de France",
+      "object_en": "France"
+    },
+    {
+      "subject": "利维夫球场",
+      "object": "利沃夫",
+      "object_candidates": "那不勒斯, 亚马逊公司, 芝加哥, 都灵, 法国, 德国, 奥迪, 丰田汽车, 卡塔尔, 利沃夫",
+      "index": 4844,
+      "subject_en": "Arena Lviv",
+      "object_en": "Lviv"
+    },
+    {
+      "subject": "领英",
+      "object": "微软",
+      "object_candidates": "丰田汽车, 卡塔尔, 芝加哥, 那不勒斯, 巴勒莫, 索尼, 阿姆斯特丹, 奥迪, 巴黎, 微软",
+      "index": 4845,
+      "subject_en": "LinkedIn",
+      "object_en": "Microsoft"
+    },
+    {
+      "subject": "Tumblr",
+      "object": "雅虎",
+      "object_candidates": "Google, 微软, 波兰, 米兰, 都灵, 德国, 热那亚, 芝加哥, 阿姆斯特丹, 雅虎",
+      "index": 4846,
+      "subject_en": "Tumblr",
+      "object_en": "Yahoo"
+    },
+    {
+      "subject": "圣保罗球场",
+      "object": "那不勒斯",
+      "object_candidates": "柏林, 微软, Google, 热那亚, 阿姆斯特丹, 雅虎, 巴黎, 巴勒莫, 利沃夫, 那不勒斯",
+      "index": 4847,
+      "subject_en": "Stadio San Paolo",
+      "object_en": "Naples"
+    },
+    {
+      "subject": "迪尔艾比球场",
+      "object": "都灵",
+      "object_candidates": "丰田汽车, 索尼, 利沃夫, 德国, Google, 阿姆斯特丹, 芝加哥, 巴黎, 雅虎, 都灵",
+      "index": 4848,
+      "subject_en": "Stadio delle Alpi",
+      "object_en": "Turin"
+    },
+    {
+      "subject": "迪拜国际机场",
+      "object": "迪拜酋长国",
+      "object_candidates": "雅虎, 热那亚, 卡塔尔, 亚马逊公司, 巴勒莫, Google, 英国广播公司, 都灵, 巴黎, 迪拜酋长国",
+      "index": 4849,
+      "subject_en": "Dubai International Airport",
+      "object_en": "Emirates of Dubai"
+    },
+    {
+      "subject": "Google学术搜索",
+      "object": "Google",
+      "object_candidates": "微软, 都灵, 热那亚, 波兰, 巴勒莫, 奥迪, 巴黎, 丰田汽车, 芝加哥, Google",
+      "index": 4850,
+      "subject_en": "Google Scholar",
+      "object_en": "Google"
+    },
+    {
+      "subject": "蒙娜丽莎",
+      "object": "法国",
+      "object_candidates": "巴黎, 都灵, 微软, 米兰, 雅虎, 巴勒莫, 那不勒斯, 柏林, 热那亚, 法国",
+      "index": 4851,
+      "subject_en": "Mona Lisa",
+      "object_en": "France"
+    },
+    {
+      "subject": "Box Office Mojo",
+      "object": "亚马逊公司",
+      "object_candidates": "卡塔尔, 丰田汽车, 雅虎, 阿姆斯特丹, 德国, 奥迪, 法国, 微软, 热那亚, 亚马逊公司",
+      "index": 4852,
+      "subject_en": "Box Office Mojo",
+      "object_en": "Amazon"
+    }
+  ],
+  "relation_id": "P127"
+}

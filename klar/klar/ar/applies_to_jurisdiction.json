@@ -1,0 +1,646 @@
+{
+  "name": "applies_to_jurisdiction",
+  "prompt_templates": [
+    "في أي بلد يكون لدى <subject> مصطلحًا قانونيًا؟ الجواب هو: <mask>.",
+    "في أي اختصاص تكون لدى <subject> مصطلح قانوني؟ الجواب هو: <mask>.",
+    "أين يتم تطبيق المصطلح القانوني <subject>؟ الجواب هو: <mask>.",
+    "أي كيان قانوني يستخدم <subject>؟ الجواب هو: <mask>.",
+    "في أي منطقة يعتبر <subject> مصطلحًا قانونيًا معترفًا به؟ الجواب هو: <mask>.",
+    " الولاية القضائية التي يُطبق فيها <subject> هي <mask>"
+  ],
+  "samples": [
+    {
+      "subject": "رئيس الجمهورية الفرنسية",
+      "object": "فرنسا",
+      "object_candidates": "الصومال, سويسرا, رومانيا, سنغافورة, النرويج, كوبا, ليتوانيا, تايوان, موناكو, فرنسا",
+      "index": 5960,
+      "subject_en": "President of the French Republic",
+      "object_en": "France"
+    },
+    {
+      "subject": "رئيس وزراء كندا",
+      "object": "كندا",
+      "object_candidates": "أوكرانيا, المكسيك, الصومال, موناكو, تركيا, جمهورية أيرلندا, اليابان, العراق, هولندا, كندا",
+      "index": 5961,
+      "subject_en": "Prime Minister of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "حزب العمال الأسترالي",
+      "object": "أستراليا",
+      "object_candidates": "البرتغال, كندا, النمسا, ليبيا, النرويج, موناكو, إيطاليا, فنلندا, كوبا, أستراليا",
+      "index": 5962,
+      "subject_en": "Australian Labor Party",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "رئيس المكسيك",
+      "object": "المكسيك",
+      "object_candidates": "جامايكا, كوبا, ماليزيا, سويسرا, بلغاريا, إيطاليا, الدنمارك, كندا, فرنسا, المكسيك",
+      "index": 5963,
+      "subject_en": "President of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "مستشار ألماني",
+      "object": "ألمانيا",
+      "object_candidates": "بلغاريا, النرويج, ليبيا, كرواتيا, البرتغال, إيران, الدنمارك, روسيا البيضاء, الفلبين, ألمانيا",
+      "index": 5964,
+      "subject_en": "Chancellor of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "القانون الأساسي لجمهورية ألمانيا الاتحادية",
+      "object": "ألمانيا",
+      "object_candidates": "سويسرا, فيتنام, ألبانيا, البرتغال, رومانيا, أستراليا, النمسا, ليتوانيا, العراق, ألمانيا",
+      "index": 5965,
+      "subject_en": "Basic Law for the Federal Republic of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "البرلمان الكندي",
+      "object": "كندا",
+      "object_candidates": "بلغاريا, النرويج, إيطاليا, اليابان, كوبا, البرتغال, هايتي, فيتنام, روسيا البيضاء, كندا",
+      "index": 5966,
+      "subject_en": "Parliament of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "لوك سابها",
+      "object": "الهند",
+      "object_candidates": "فرنسا, النمسا, اليابان, سنغافورة, باكستان, أوكرانيا, جامايكا, روسيا, الأرجنتين, الهند",
+      "index": 5967,
+      "subject_en": "Lok Sabha",
+      "object_en": "India"
+    },
+    {
+      "subject": "كنيست",
+      "object": "إسرائيل",
+      "object_candidates": "فيتنام, ألبانيا, ليبيا, الفلبين, ألمانيا, كرواتيا, السويد, ماكاو, العراق, إسرائيل",
+      "index": 5968,
+      "subject_en": "Knesset",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "رئيس وزراء اليابان",
+      "object": "اليابان",
+      "object_candidates": "الدنمارك, تركيا, المكسيك, السويد, كرواتيا, إيطاليا, هولندا, تايوان, ماكاو, اليابان",
+      "index": 5969,
+      "subject_en": "Prime Minister of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "رئيس أيرلندا",
+      "object": "جمهورية أيرلندا",
+      "object_candidates": "كندا, روسيا البيضاء, هولندا, ليتوانيا, المكسيك, السويد, الهند, باكستان, ليبيا, جمهورية أيرلندا",
+      "index": 5970,
+      "subject_en": "President of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "دولار أسترالي",
+      "object": "أستراليا",
+      "object_candidates": "هايتي, تايوان, هولندا, ماكاو, رومانيا, ليتوانيا, ماليزيا, الدنمارك, جامايكا, أستراليا",
+      "index": 5971,
+      "subject_en": "Australian dollar",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "رئيس باكستان",
+      "object": "باكستان",
+      "object_candidates": "فيتنام, السويد, بوليفيا, سنغافورة, تركيا, الدنمارك, البرتغال, كندا, إيران, باكستان",
+      "index": 5972,
+      "subject_en": "President of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "رئيس روسيا",
+      "object": "روسيا",
+      "object_candidates": "فيتنام, الهند, كوبا, فرنسا, رومانيا, فنلندا, كندا, سنغافورة, باكستان, روسيا",
+      "index": 5973,
+      "subject_en": "President of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "مستشار النمسا",
+      "object": "النمسا",
+      "object_candidates": "إسبانيا, الفلبين, البرتغال, بوليفيا, الهند, روسيا البيضاء, رومانيا, كندا, اليابان, النمسا",
+      "index": 5974,
+      "subject_en": "Federal Chancellor of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "البرلمان السويدي",
+      "object": "السويد",
+      "object_candidates": "ألبانيا, سنغافورة, أوكرانيا, فيتنام, هولندا, ماليزيا, فرنسا, موناكو, فنلندا, السويد",
+      "index": 5975,
+      "subject_en": "Parliament of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "علم إسبانيا",
+      "object": "إسبانيا",
+      "object_candidates": "بوليفيا, المكسيك, النرويج, العراق, فنلندا, الأرجنتين, كندا, هولندا, فيتنام, إسبانيا",
+      "index": 5976,
+      "subject_en": "flag of Spain",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "علم فرنسا",
+      "object": "فرنسا",
+      "object_candidates": "باكستان, هايتي, النمسا, سنغافورة, روسيا, ليتوانيا, روسيا البيضاء, فيتنام, ألمانيا, فرنسا",
+      "index": 5977,
+      "subject_en": "flag of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "رئيس أوكرانيا",
+      "object": "أوكرانيا",
+      "object_candidates": "هولندا, المكسيك, إسرائيل, روسيا البيضاء, تركيا, إسبانيا, ليتوانيا, أستراليا, النرويج, أوكرانيا",
+      "index": 5978,
+      "subject_en": "President of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "رئيس وزراء فرنسا",
+      "object": "فرنسا",
+      "object_candidates": "العراق, باكستان, البرتغال, تركيا, الفلبين, كرواتيا, هولندا, سنغافورة, الهند, فرنسا",
+      "index": 5979,
+      "subject_en": "Prime Minister of France",
+      "object_en": "France"
+    },
+    {
+      "subject": "علم الدنمارك",
+      "object": "الدنمارك",
+      "object_candidates": "إسبانيا, اليابان, العراق, النرويج, البرتغال, إسرائيل, سنغافورة, تركيا, كندا, الدنمارك",
+      "index": 5980,
+      "subject_en": "flag of Denmark",
+      "object_en": "Denmark"
+    },
+    {
+      "subject": "بوندستاغ",
+      "object": "ألمانيا",
+      "object_candidates": "الصومال, جمهورية أيرلندا, المكسيك, السويد, اليابان, ليبيا, كندا, الهند, إسرائيل, ألمانيا",
+      "index": 5981,
+      "subject_en": "Bundestag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "علم جمهورية أيرلندا",
+      "object": "جمهورية أيرلندا",
+      "object_candidates": "ليتوانيا, الفلبين, البرتغال, كوبا, فرنسا, بوليفيا, موناكو, إيران, باكستان, جمهورية أيرلندا",
+      "index": 5982,
+      "subject_en": "flag of Ireland",
+      "object_en": "Ireland"
+    },
+    {
+      "subject": "رئيس النمسا",
+      "object": "النمسا",
+      "object_candidates": "روسيا, أستراليا, فيتنام, ليتوانيا, إسرائيل, باكستان, جامايكا, تركيا, فنلندا, النمسا",
+      "index": 5983,
+      "subject_en": "President of Austria",
+      "object_en": "Austria"
+    },
+    {
+      "subject": "رئيس وزراء باكستان",
+      "object": "باكستان",
+      "object_candidates": "ماليزيا, الأرجنتين, أستراليا, النرويج, فيتنام, جامايكا, سنغافورة, إسرائيل, إيران, باكستان",
+      "index": 5984,
+      "subject_en": "Prime Minister of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "رئيس ألمانيا",
+      "object": "ألمانيا",
+      "object_candidates": "بوليفيا, ليتوانيا, ماكاو, كوبا, النرويج, موناكو, روسيا البيضاء, بلغاريا, روسيا, ألمانيا",
+      "index": 5985,
+      "subject_en": "president of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "رئيس وزراء السويد",
+      "object": "السويد",
+      "object_candidates": "سنغافورة, جمهورية أيرلندا, كندا, ألمانيا, هولندا, سويسرا, فنلندا, إسبانيا, الدنمارك, السويد",
+      "index": 5986,
+      "subject_en": "Prime Minister of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "الجمعية الوطنية الفرنسية",
+      "object": "فرنسا",
+      "object_candidates": "تركيا, سويسرا, كوبا, المكسيك, الدنمارك, ماليزيا, النرويج, تايوان, النمسا, فرنسا",
+      "index": 5987,
+      "subject_en": "French National Assembly",
+      "object_en": "France"
+    },
+    {
+      "subject": "علم سويسرا",
+      "object": "سويسرا",
+      "object_candidates": "الفلبين, بوليفيا, روسيا, جامايكا, النمسا, البرتغال, جمهورية أيرلندا, إيران, روسيا البيضاء, سويسرا",
+      "index": 5988,
+      "subject_en": "flag of Switzerland",
+      "object_en": "Switzerland"
+    },
+    {
+      "subject": "رئيس وزراء روسيا",
+      "object": "روسيا",
+      "object_candidates": "هايتي, أوكرانيا, ماليزيا, سويسرا, إسبانيا, البرتغال, إيطاليا, جامايكا, كوبا, روسيا",
+      "index": 5989,
+      "subject_en": "Prime Minister of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "علم سنغافورة",
+      "object": "سنغافورة",
+      "object_candidates": "البرتغال, بوليفيا, ألمانيا, ماكاو, الصومال, فيتنام, النمسا, الدنمارك, بلغاريا, سنغافورة",
+      "index": 5990,
+      "subject_en": "flag of Singapore",
+      "object_en": "Singapore"
+    },
+    {
+      "subject": "مجلس الشيوخ الفرنسي",
+      "object": "فرنسا",
+      "object_candidates": "فنلندا, الدنمارك, البرتغال, الصومال, باكستان, ماليزيا, كوبا, إيران, تايوان, فرنسا",
+      "index": 5991,
+      "subject_en": "Senate",
+      "object_en": "France"
+    },
+    {
+      "subject": "رئيس وزراء أوكرانيا",
+      "object": "أوكرانيا",
+      "object_candidates": "إسرائيل, روسيا, كوبا, فنلندا, تركيا, فرنسا, الصومال, موناكو, فيتنام, أوكرانيا",
+      "index": 5992,
+      "subject_en": "Prime Minister of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "علم روسيا",
+      "object": "روسيا",
+      "object_candidates": "فرنسا, ماكاو, روسيا البيضاء, بلغاريا, الهند, أستراليا, جمهورية أيرلندا, سويسرا, إيطاليا, روسيا",
+      "index": 5993,
+      "subject_en": "flag of Russia",
+      "object_en": "Russia"
+    },
+    {
+      "subject": "علم كندا",
+      "object": "كندا",
+      "object_candidates": "بوليفيا, ماكاو, فنلندا, ليبيا, هايتي, الهند, روسيا البيضاء, أستراليا, إيران, كندا",
+      "index": 5994,
+      "subject_en": "flag of Canada",
+      "object_en": "Canada"
+    },
+    {
+      "subject": "رئيس رومانيا",
+      "object": "رومانيا",
+      "object_candidates": "إيران, فرنسا, المكسيك, إيطاليا, تايوان, ماليزيا, كوبا, هايتي, جمهورية أيرلندا, رومانيا",
+      "index": 5995,
+      "subject_en": "President of Romania",
+      "object_en": "Romania"
+    },
+    {
+      "subject": "علم هولندا",
+      "object": "هولندا",
+      "object_candidates": "السويد, الصومال, سنغافورة, النمسا, بوليفيا, البرتغال, روسيا البيضاء, العراق, أستراليا, هولندا",
+      "index": 5996,
+      "subject_en": "flag of the Netherlands",
+      "object_en": "Netherlands"
+    },
+    {
+      "subject": "رئيس وزراء ماليزيا",
+      "object": "ماليزيا",
+      "object_candidates": "إسبانيا, فيتنام, إيران, إسرائيل, ليتوانيا, فنلندا, بلغاريا, البرتغال, الدنمارك, ماليزيا",
+      "index": 5997,
+      "subject_en": "Prime Minister of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "علم جمهورية جامايكا",
+      "object": "جامايكا",
+      "object_candidates": "كرواتيا, ماليزيا, ألمانيا, إيطاليا, سويسرا, أستراليا, بلغاريا, إسبانيا, موناكو, جامايكا",
+      "index": 5998,
+      "subject_en": "flag of Jamaica",
+      "object_en": "Jamaica"
+    },
+    {
+      "subject": "علم الأرجنتين",
+      "object": "الأرجنتين",
+      "object_candidates": "جامايكا, النرويج, هولندا, فرنسا, ليتوانيا, إسرائيل, أستراليا, الهند, بلغاريا, الأرجنتين",
+      "index": 5999,
+      "subject_en": "flag of Argentina",
+      "object_en": "Argentina"
+    },
+    {
+      "subject": "علم النرويج",
+      "object": "النرويج",
+      "object_candidates": "ليتوانيا, كندا, موناكو, إيران, ألمانيا, أستراليا, السويد, النمسا, تايوان, النرويج",
+      "index": 6000,
+      "subject_en": "flag of Norway",
+      "object_en": "Norway"
+    },
+    {
+      "subject": "مجلس النواب الإسباني",
+      "object": "إسبانيا",
+      "object_candidates": "إسرائيل, العراق, روسيا, ليتوانيا, الفلبين, الدنمارك, باكستان, بوليفيا, أوكرانيا, إسبانيا",
+      "index": 6001,
+      "subject_en": "Congress of Deputies",
+      "object_en": "Spain"
+    },
+    {
+      "subject": "إمبراطور اليابان",
+      "object": "اليابان",
+      "object_candidates": "السويد, باكستان, كرواتيا, ليتوانيا, تركيا, الفلبين, جمهورية أيرلندا, رومانيا, موناكو, اليابان",
+      "index": 6002,
+      "subject_en": "Emperor of Japan",
+      "object_en": "Japan"
+    },
+    {
+      "subject": "علم ليتوانيا",
+      "object": "ليتوانيا",
+      "object_candidates": "هايتي, سويسرا, روسيا, إسرائيل, ماليزيا, بوليفيا, هولندا, إسبانيا, اليابان, ليتوانيا",
+      "index": 6003,
+      "subject_en": "flag of Lithuania",
+      "object_en": "Lithuania"
+    },
+    {
+      "subject": "علم بلغاريا",
+      "object": "بلغاريا",
+      "object_candidates": "موناكو, روسيا البيضاء, المكسيك, ألبانيا, السويد, أوكرانيا, فرنسا, تركيا, هولندا, بلغاريا",
+      "index": 6004,
+      "subject_en": "flag of Bulgaria",
+      "object_en": "Bulgaria"
+    },
+    {
+      "subject": "رئيس جمهورية العراق",
+      "object": "العراق",
+      "object_candidates": "إيران, تركيا, هايتي, سنغافورة, كرواتيا, ماليزيا, فنلندا, الفلبين, فيتنام, العراق",
+      "index": 6005,
+      "subject_en": "President of Iraq",
+      "object_en": "Iraq"
+    },
+    {
+      "subject": "علم تركيا",
+      "object": "تركيا",
+      "object_candidates": "كندا, سنغافورة, ماكاو, اليابان, العراق, ماليزيا, الأرجنتين, السويد, بوليفيا, تركيا",
+      "index": 6006,
+      "subject_en": "flag of Turkey",
+      "object_en": "Turkey"
+    },
+    {
+      "subject": "علم ماليزيا",
+      "object": "ماليزيا",
+      "object_candidates": "ماكاو, بوليفيا, سويسرا, روسيا البيضاء, رومانيا, روسيا, هايتي, جامايكا, النرويج, ماليزيا",
+      "index": 6007,
+      "subject_en": "flag of Malaysia",
+      "object_en": "Malaysia"
+    },
+    {
+      "subject": "علم بيلاروسيا",
+      "object": "روسيا البيضاء",
+      "object_candidates": "الدنمارك, ألمانيا, روسيا, المكسيك, سويسرا, الهند, السويد, بلغاريا, ماكاو, روسيا البيضاء",
+      "index": 6008,
+      "subject_en": "flag of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "علم كوبا",
+      "object": "كوبا",
+      "object_candidates": "رومانيا, جمهورية أيرلندا, المكسيك, تايوان, النمسا, ماليزيا, باكستان, فرنسا, ماكاو, كوبا",
+      "index": 6009,
+      "subject_en": "flag of Cuba",
+      "object_en": "Cuba"
+    },
+    {
+      "subject": "علم فيتنام",
+      "object": "فيتنام",
+      "object_candidates": "فنلندا, باكستان, الهند, سنغافورة, أستراليا, رومانيا, روسيا البيضاء, تايوان, موناكو, فيتنام",
+      "index": 6010,
+      "subject_en": "flag of Vietnam",
+      "object_en": "Vietnam"
+    },
+    {
+      "subject": "علم بوليفيا",
+      "object": "بوليفيا",
+      "object_candidates": "سويسرا, الهند, إسرائيل, أستراليا, تايوان, رومانيا, روسيا, باكستان, فنلندا, بوليفيا",
+      "index": 6011,
+      "subject_en": "flag of Bolivia",
+      "object_en": "Bolivia"
+    },
+    {
+      "subject": "علم الهند",
+      "object": "الهند",
+      "object_candidates": "موناكو, تايوان, هولندا, السويد, ليبيا, كرواتيا, ماكاو, الصومال, ليتوانيا, الهند",
+      "index": 6012,
+      "subject_en": "flag of India",
+      "object_en": "India"
+    },
+    {
+      "subject": "باتاكا ماكاوية",
+      "object": "ماكاو",
+      "object_candidates": "هايتي, المكسيك, أستراليا, هولندا, بلغاريا, النرويج, سنغافورة, ألبانيا, النمسا, ماكاو",
+      "index": 6014,
+      "subject_en": "Macanese pataca",
+      "object_en": "Macau"
+    },
+    {
+      "subject": "علم موناكو",
+      "object": "موناكو",
+      "object_candidates": "تركيا, تايوان, إيران, فنلندا, الهند, الدنمارك, روسيا البيضاء, العراق, ليبيا, موناكو",
+      "index": 6015,
+      "subject_en": "flag of Monaco",
+      "object_en": "Monaco"
+    },
+    {
+      "subject": "علم الصومال",
+      "object": "الصومال",
+      "object_candidates": "كرواتيا, إسبانيا, تركيا, ماليزيا, بلغاريا, هولندا, فرنسا, النرويج, ليبيا, الصومال",
+      "index": 6016,
+      "subject_en": "flag of Somalia",
+      "object_en": "Somalia"
+    },
+    {
+      "subject": "رئيس إسرائيل",
+      "object": "إسرائيل",
+      "object_candidates": "ألمانيا, البرتغال, ليتوانيا, بلغاريا, جامايكا, اليابان, تركيا, رومانيا, تايوان, إسرائيل",
+      "index": 6017,
+      "subject_en": "President of Israel",
+      "object_en": "Israel"
+    },
+    {
+      "subject": "علم السويد",
+      "object": "السويد",
+      "object_candidates": "كندا, النرويج, روسيا البيضاء, ليتوانيا, فيتنام, إسبانيا, رومانيا, ألبانيا, تايوان, السويد",
+      "index": 6018,
+      "subject_en": "flag of Sweden",
+      "object_en": "Sweden"
+    },
+    {
+      "subject": "علم تايوان",
+      "object": "تايوان",
+      "object_candidates": "سويسرا, اليابان, روسيا البيضاء, ليتوانيا, فيتنام, ماكاو, الهند, هايتي, جمهورية أيرلندا, تايوان",
+      "index": 6019,
+      "subject_en": "flag of Taiwan",
+      "object_en": "Taiwan"
+    },
+    {
+      "subject": "علم أستراليا",
+      "object": "أستراليا",
+      "object_candidates": "الفلبين, العراق, الأرجنتين, الهند, البرتغال, كندا, إسرائيل, ألمانيا, موناكو, أستراليا",
+      "index": 6020,
+      "subject_en": "flag of Australia",
+      "object_en": "Australia"
+    },
+    {
+      "subject": "علم أوكرانيا",
+      "object": "أوكرانيا",
+      "object_candidates": "فنلندا, تركيا, الدنمارك, الهند, ألمانيا, النمسا, جمهورية أيرلندا, إسرائيل, البرتغال, أوكرانيا",
+      "index": 6021,
+      "subject_en": "flag of Ukraine",
+      "object_en": "Ukraine"
+    },
+    {
+      "subject": "رئيس بيلاروسيا",
+      "object": "روسيا البيضاء",
+      "object_candidates": "الصومال, إسرائيل, الهند, بلغاريا, سويسرا, اليابان, الأرجنتين, الدنمارك, فرنسا, روسيا البيضاء",
+      "index": 6022,
+      "subject_en": "President of Belarus",
+      "object_en": "Belarus"
+    },
+    {
+      "subject": "علم هايتي",
+      "object": "هايتي",
+      "object_candidates": "جمهورية أيرلندا, موناكو, رومانيا, النمسا, الأرجنتين, فيتنام, اليابان, الصومال, بوليفيا, هايتي",
+      "index": 6023,
+      "subject_en": "flag of Haiti",
+      "object_en": "Haiti"
+    },
+    {
+      "subject": "شعار المكسيك",
+      "object": "المكسيك",
+      "object_candidates": "ليتوانيا, كوبا, إسرائيل, ليبيا, النرويج, النمسا, إيران, ماكاو, السويد, المكسيك",
+      "index": 6024,
+      "subject_en": "Mexican coat of arms",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "علم فنلندا",
+      "object": "فنلندا",
+      "object_candidates": "فرنسا, كندا, بلغاريا, إسبانيا, الفلبين, ألمانيا, روسيا البيضاء, روسيا, الصومال, فنلندا",
+      "index": 6025,
+      "subject_en": "flag of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "علم كرواتيا",
+      "object": "كرواتيا",
+      "object_candidates": "ألمانيا, البرتغال, جامايكا, الأرجنتين, ماليزيا, النرويج, كندا, الصومال, هايتي, كرواتيا",
+      "index": 6026,
+      "subject_en": "flag of Croatia",
+      "object_en": "Croatia"
+    },
+    {
+      "subject": "رئيس فنلندا",
+      "object": "فنلندا",
+      "object_candidates": "بلغاريا, العراق, سنغافورة, إيطاليا, تايوان, كرواتيا, كندا, ماليزيا, ليتوانيا, فنلندا",
+      "index": 6027,
+      "subject_en": "President of Finland",
+      "object_en": "Finland"
+    },
+    {
+      "subject": "علم ألبانيا",
+      "object": "ألبانيا",
+      "object_candidates": "إسرائيل, باكستان, روسيا البيضاء, الصومال, هايتي, تركيا, السويد, سويسرا, الدنمارك, ألبانيا",
+      "index": 6028,
+      "subject_en": "flag of Albania",
+      "object_en": "Albania"
+    },
+    {
+      "subject": "علم إيطاليا",
+      "object": "إيطاليا",
+      "object_candidates": "إسرائيل, إيران, اليابان, فيتنام, السويد, تايوان, بوليفيا, الفلبين, فنلندا, إيطاليا",
+      "index": 6029,
+      "subject_en": "national flag of Italy",
+      "object_en": "Italy"
+    },
+    {
+      "subject": "علم ألمانيا",
+      "object": "ألمانيا",
+      "object_candidates": "روسيا, السويد, الفلبين, ليبيا, إسبانيا, جمهورية أيرلندا, الهند, سويسرا, سنغافورة, ألمانيا",
+      "index": 6030,
+      "subject_en": "flag of Germany",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "علم ليبيا",
+      "object": "ليبيا",
+      "object_candidates": "أستراليا, بلغاريا, موناكو, باكستان, ماليزيا, هايتي, إسرائيل, سنغافورة, رومانيا, ليبيا",
+      "index": 6031,
+      "subject_en": "flag of Libya",
+      "object_en": "Libya"
+    },
+    {
+      "subject": "علم الفلبين",
+      "object": "الفلبين",
+      "object_candidates": "هولندا, ليبيا, إسرائيل, روسيا البيضاء, الأرجنتين, كوبا, تايوان, النمسا, السويد, الفلبين",
+      "index": 6032,
+      "subject_en": "flag of the Philippines",
+      "object_en": "Philippines"
+    },
+    {
+      "subject": ".de",
+      "object": "ألمانيا",
+      "object_candidates": "كندا, باكستان, اليابان, إيطاليا, الصومال, هايتي, أوكرانيا, فنلندا, فرنسا, ألمانيا",
+      "index": 6033,
+      "subject_en": ".de",
+      "object_en": "Germany"
+    },
+    {
+      "subject": "رئيس الجمهورية الإسلامية الإيرانية",
+      "object": "إيران",
+      "object_candidates": "روسيا, إيطاليا, سويسرا, أستراليا, كرواتيا, إسبانيا, ألبانيا, سنغافورة, الهند, إيران",
+      "index": 6034,
+      "subject_en": "President of Iran",
+      "object_en": "Iran"
+    },
+    {
+      "subject": "علم باكستان",
+      "object": "باكستان",
+      "object_candidates": "إسبانيا, السويد, سنغافورة, بوليفيا, هايتي, كندا, البرتغال, تايوان, ليتوانيا, باكستان",
+      "index": 6035,
+      "subject_en": "flag of Pakistan",
+      "object_en": "Pakistan"
+    },
+    {
+      "subject": "علم البرتغال",
+      "object": "البرتغال",
+      "object_candidates": "ألمانيا, كوبا, أستراليا, جمهورية أيرلندا, ألبانيا, سنغافورة, فنلندا, إسرائيل, روسيا, البرتغال",
+      "index": 6036,
+      "subject_en": "flag of Portugal",
+      "object_en": "Portugal"
+    },
+    {
+      "subject": "علم اليونان",
+      "object": "اليونان",
+      "object_candidates": "العراق, النمسا, كرواتيا, إسرائيل, كندا, المكسيك, الهند, هولندا, روسيا البيضاء, اليونان",
+      "index": 6037,
+      "subject_en": "flag of Greece",
+      "object_en": "Greece"
+    },
+    {
+      "subject": "علم المكسيك",
+      "object": "المكسيك",
+      "object_candidates": "روسيا, سنغافورة, إسبانيا, تايوان, ألبانيا, العراق, هولندا, جمهورية أيرلندا, إيطاليا, المكسيك",
+      "index": 6038,
+      "subject_en": "flag of Mexico",
+      "object_en": "Mexico"
+    },
+    {
+      "subject": "علم اليابان",
+      "object": "اليابان",
+      "object_candidates": "الهند, تركيا, فرنسا, فنلندا, روسيا, المكسيك, روسيا البيضاء, رومانيا, سنغافورة, اليابان",
+      "index": 6039,
+      "subject_en": "flag of Japan",
+      "object_en": "Japan"
+    }
+  ],
+  "relation_id": "P1001"
+}

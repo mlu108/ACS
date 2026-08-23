@@ -1,0 +1,646 @@
+{
+  "name": "place_of_death",
+  "prompt_templates": [
+    "哪里是 <subject> 去世的地方？答案是：<mask>",
+    "<subject> 在哪个城市去世？答案是：<mask>",
+    "<subject> 的死亡地点是哪里？答案是：<mask>",
+    "<subject> 的去世地点是哪里？答案是：<mask>",
+    "哪个地方标志着 <subject> 的去世？答案是：<mask>",
+    "<subject>去世地点是<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "米开朗基罗",
+      "object": "罗马",
+      "object_candidates": "布拉格, 华沙, 萨里郡, 佛罗伦萨, 贝尔格莱德, 伊斯坦堡, 里昂, 赫尔辛基, 迦太基, 罗马",
+      "index": 35,
+      "subject_en": "Michelangelo",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "可可·香奈尔",
+      "object": "巴黎",
+      "object_candidates": "萨里郡, 罗马, 麦地那, 伦敦, 东京都, 大马士革, 斯德哥尔摩, 华沙, 贝尔格莱德, 巴黎",
+      "index": 36,
+      "subject_en": "Coco Chanel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "克勉十四世",
+      "object": "罗马",
+      "object_candidates": "纽伦堡, 里昂, 赫尔辛基, 喀布尔, 麦迪逊, 伦敦, 巴黎, 开罗, 莫斯科, 罗马",
+      "index": 37,
+      "subject_en": "Clement XIV",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "欧麦尔·本·赫塔卜",
+      "object": "麦地那",
+      "object_candidates": "莫斯科, 贝尔格莱德, 迦太基, 华沙, 萨里郡, 斯德哥尔摩, 佛罗伦萨, 威尼斯, 伦敦, 麦地那",
+      "index": 38,
+      "subject_en": "Umar ibn Al-Khattāb",
+      "object_en": "Medina"
+    },
+    {
+      "subject": "克勉三世",
+      "object": "罗马",
+      "object_candidates": "斯德哥尔摩, 麦地那, 伦敦, 巴格达, 华沙, 贝尔格莱德, 威尼斯, 大马士革, 萨里郡, 罗马",
+      "index": 39,
+      "subject_en": "Clement III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "巴尔比努斯",
+      "object": "罗马",
+      "object_candidates": "伊斯坦堡, 斯德哥尔摩, 布拉格, 柏林, 开罗, 马德里, 喀布尔, 纽伦堡, 麦迪逊, 罗马",
+      "index": 40,
+      "subject_en": "Balbinus",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "赫兰特·丁克",
+      "object": "伊斯坦堡",
+      "object_candidates": "耶路撒冷, 东京都, 莫斯科, 赫尔辛基, 罗马, 伦敦, 喀布尔, 佛罗伦萨, 马德里, 伊斯坦堡",
+      "index": 41,
+      "subject_en": "Hrant Dink",
+      "object_en": "Istanbul"
+    },
+    {
+      "subject": "尼基弗鲁斯三世",
+      "object": "君士坦丁堡",
+      "object_candidates": "台北市, 莫斯科, 斯德哥尔摩, 雅典, 喀布尔, 纽伦堡, 大马士革, 巴黎, 萨里郡, 君士坦丁堡",
+      "index": 42,
+      "subject_en": "Nikephoros III Botaneiates",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "约翰·帕赫贝尔",
+      "object": "纽伦堡",
+      "object_candidates": "底特律, 雅典, 马德里, 东京都, 贝尔格莱德, 喀布尔, 罗马, 布拉格, 莫斯科, 纽伦堡",
+      "index": 43,
+      "subject_en": "Johann Pachelbel",
+      "object_en": "Nuremberg"
+    },
+    {
+      "subject": "瓦斯拉夫·弗米契·尼金斯基",
+      "object": "伦敦",
+      "object_candidates": "罗马, 东京都, 麦迪逊, 伊斯坦堡, 麦地那, 君士坦丁堡, 威尼斯, 萨里郡, 巴格达, 伦敦",
+      "index": 44,
+      "subject_en": "Vaslav Nijinsky",
+      "object_en": "London"
+    },
+    {
+      "subject": "利奥十世",
+      "object": "罗马",
+      "object_candidates": "贝尔格莱德, 迦太基, 萨里郡, 开罗, 麦迪逊, 巴黎, 耶路撒冷, 威尼斯, 台北市, 罗马",
+      "index": 45,
+      "subject_en": "Leo X",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "多那太罗",
+      "object": "佛罗伦萨",
+      "object_candidates": "底特律, 斯德哥尔摩, 雅典, 华沙, 喀布尔, 巴格达, 伦敦, 耶路撒冷, 麦地那, 佛罗伦萨",
+      "index": 46,
+      "subject_en": "Donatello",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "蒋经国",
+      "object": "台北市",
+      "object_candidates": "巴格达, 大马士革, 雅典, 柏林, 赫尔辛基, 里昂, 底特律, 纽伦堡, 马德里, 台北市",
+      "index": 47,
+      "subject_en": "Chiang Ching-kuo",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "罗伯特·胡克",
+      "object": "伦敦",
+      "object_candidates": "伊斯坦堡, 开罗, 君士坦丁堡, 柏林, 东京都, 马德里, 萨里郡, 里昂, 台北市, 伦敦",
+      "index": 48,
+      "subject_en": "Robert Hooke",
+      "object_en": "London"
+    },
+    {
+      "subject": "罗莎·帕克斯",
+      "object": "底特律",
+      "object_candidates": "巴黎, 伊斯坦堡, 马德里, 巴格达, 柏林, 斯德哥尔摩, 麦迪逊, 开罗, 雅典, 底特律",
+      "index": 49,
+      "subject_en": "Rosa Parks",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "约翰八世",
+      "object": "君士坦丁堡",
+      "object_candidates": "斯德哥尔摩, 华沙, 莫斯科, 雅典, 巴格达, 台北市, 开罗, 佛罗伦萨, 伊斯坦堡, 君士坦丁堡",
+      "index": 50,
+      "subject_en": "John VIII Palaiologos",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "约翰·迪伊",
+      "object": "萨里郡",
+      "object_candidates": "罗马, 华沙, 巴格达, 君士坦丁堡, 东京都, 佛罗伦萨, 里昂, 底特律, 布拉格, 萨里郡",
+      "index": 51,
+      "subject_en": "John Dee",
+      "object_en": "Surrey"
+    },
+    {
+      "subject": "费南代尔",
+      "object": "巴黎",
+      "object_candidates": "华沙, 萨里郡, 开罗, 雅典, 耶路撒冷, 布拉格, 威尼斯, 里昂, 赫尔辛基, 巴黎",
+      "index": 52,
+      "subject_en": "Fernandel",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "米海尔二世",
+      "object": "君士坦丁堡",
+      "object_candidates": "华沙, 伊斯坦堡, 东京都, 纽伦堡, 莫斯科, 开罗, 威尼斯, 里昂, 萨里郡, 君士坦丁堡",
+      "index": 53,
+      "subject_en": "Michael II",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "卡尔·李卜克内西",
+      "object": "柏林",
+      "object_candidates": "赫尔辛基, 开罗, 台北市, 伦敦, 巴黎, 华沙, 伊斯坦堡, 马德里, 大马士革, 柏林",
+      "index": 54,
+      "subject_en": "Karl Liebknecht",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "理查德·瓦格纳",
+      "object": "威尼斯",
+      "object_candidates": "莫斯科, 贝尔格莱德, 耶路撒冷, 华沙, 萨里郡, 巴黎, 底特律, 巴格达, 大马士革, 威尼斯",
+      "index": 55,
+      "subject_en": "Richard Wagner",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "安提西尼",
+      "object": "雅典",
+      "object_candidates": "莫斯科, 开罗, 麦地那, 君士坦丁堡, 赫尔辛基, 萨里郡, 喀布尔, 巴黎, 佛罗伦萨, 雅典",
+      "index": 56,
+      "subject_en": "Antisthenes",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "马克斯·恩斯特",
+      "object": "巴黎",
+      "object_candidates": "伦敦, 斯德哥尔摩, 东京都, 纽伦堡, 罗马, 雅典, 威尼斯, 莫斯科, 贝尔格莱德, 巴黎",
+      "index": 57,
+      "subject_en": "Max Ernst",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "马丁·布伯",
+      "object": "耶路撒冷",
+      "object_candidates": "喀布尔, 巴格达, 斯德哥尔摩, 莫斯科, 伊斯坦堡, 萨里郡, 里昂, 纽伦堡, 贝尔格莱德, 耶路撒冷",
+      "index": 58,
+      "subject_en": "Martin Buber",
+      "object_en": "Jerusalem"
+    },
+    {
+      "subject": "约瑟夫·戈培尔",
+      "object": "柏林",
+      "object_candidates": "伦敦, 迦太基, 布拉格, 雅典, 君士坦丁堡, 麦地那, 罗马, 喀布尔, 麦迪逊, 柏林",
+      "index": 59,
+      "subject_en": "Joseph Goebbels",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "孟德斯鸠",
+      "object": "巴黎",
+      "object_candidates": "斯德哥尔摩, 喀布尔, 开罗, 巴格达, 纽伦堡, 君士坦丁堡, 大马士革, 麦地那, 里昂, 巴黎",
+      "index": 60,
+      "subject_en": "Montesquieu",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "尼各老五世",
+      "object": "罗马",
+      "object_candidates": "莫斯科, 萨里郡, 里昂, 底特律, 纽伦堡, 巴格达, 开罗, 麦迪逊, 大马士革, 罗马",
+      "index": 61,
+      "subject_en": "Nicholas V",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "夏绿蒂·科黛",
+      "object": "巴黎",
+      "object_candidates": "巴格达, 华沙, 耶路撒冷, 喀布尔, 伊斯坦堡, 开罗, 东京都, 麦地那, 台北市, 巴黎",
+      "index": 62,
+      "subject_en": "Charlotte Corday",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "穆罕默德·查希尔沙",
+      "object": "喀布尔",
+      "object_candidates": "麦地那, 耶路撒冷, 大马士革, 威尼斯, 麦迪逊, 底特律, 莫斯科, 佛罗伦萨, 萨里郡, 喀布尔",
+      "index": 63,
+      "subject_en": "Mohammed Zahir Shah",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "诺森十一世",
+      "object": "罗马",
+      "object_candidates": "伦敦, 柏林, 开罗, 威尼斯, 大马士革, 麦迪逊, 迦太基, 佛罗伦萨, 雅典, 罗马",
+      "index": 64,
+      "subject_en": "Innocent XI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "戈尔迪安二世",
+      "object": "迦太基",
+      "object_candidates": "麦迪逊, 里昂, 布拉格, 罗马, 贝尔格莱德, 耶路撒冷, 巴格达, 大马士革, 底特律, 迦太基",
+      "index": 65,
+      "subject_en": "Gordian II",
+      "object_en": "Carthage"
+    },
+    {
+      "subject": "姆斯蒂斯拉夫·列奥波尔多维奇·罗斯特罗波维奇",
+      "object": "莫斯科",
+      "object_candidates": "里昂, 伊斯坦堡, 雅典, 纽伦堡, 麦迪逊, 柏林, 马德里, 东京都, 麦地那, 莫斯科",
+      "index": 66,
+      "subject_en": "Mstislav Rostropovich",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "庇护三世",
+      "object": "罗马",
+      "object_candidates": "伊斯坦堡, 伦敦, 布拉格, 里昂, 巴黎, 华沙, 贝尔格莱德, 喀布尔, 马德里, 罗马",
+      "index": 67,
+      "subject_en": "Pius III",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "阿卜杜勒-卡里姆·卡塞姆",
+      "object": "巴格达",
+      "object_candidates": "东京都, 罗马, 佛罗伦萨, 伦敦, 巴黎, 开罗, 台北市, 里昂, 大马士革, 巴格达",
+      "index": 68,
+      "subject_en": "Abd al-Karim Qasim",
+      "object_en": "Baghdad"
+    },
+    {
+      "subject": "额我略十六世",
+      "object": "罗马",
+      "object_candidates": "君士坦丁堡, 华沙, 台北市, 巴格达, 喀布尔, 伦敦, 马德里, 迦太基, 大马士革, 罗马",
+      "index": 69,
+      "subject_en": "Gregory XVI",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "阿拉姆·哈恰图良",
+      "object": "莫斯科",
+      "object_candidates": "耶路撒冷, 巴格达, 纽伦堡, 雅典, 伦敦, 赫尔辛基, 底特律, 东京都, 迦太基, 莫斯科",
+      "index": 70,
+      "subject_en": "Aram Khachaturian",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "海因里希·冯·克莱斯特",
+      "object": "柏林",
+      "object_candidates": "罗马, 伦敦, 莫斯科, 里昂, 巴格达, 喀布尔, 佛罗伦萨, 华沙, 萨里郡, 柏林",
+      "index": 71,
+      "subject_en": "Heinrich von Kleist",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "阿卜杜勒-哈米德一世",
+      "object": "君士坦丁堡",
+      "object_candidates": "伊斯坦堡, 喀布尔, 威尼斯, 开罗, 麦地那, 东京都, 底特律, 贝尔格莱德, 巴黎, 君士坦丁堡",
+      "index": 72,
+      "subject_en": "Abdul Hamid I",
+      "object_en": "Constantinople"
+    },
+    {
+      "subject": "历山八世",
+      "object": "罗马",
+      "object_candidates": "里昂, 台北市, 迦太基, 麦迪逊, 伊斯坦堡, 华沙, 君士坦丁堡, 伦敦, 马德里, 罗马",
+      "index": 73,
+      "subject_en": "Alexander VIII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "约翰·克里斯蒂安·巴赫",
+      "object": "伦敦",
+      "object_candidates": "雅典, 柏林, 巴黎, 喀布尔, 赫尔辛基, 耶路撒冷, 大马士革, 马德里, 里昂, 伦敦",
+      "index": 74,
+      "subject_en": "Johann Christian Bach",
+      "object_en": "London"
+    },
+    {
+      "subject": "塞缪尔·约翰逊",
+      "object": "伦敦",
+      "object_candidates": "迦太基, 伊斯坦堡, 麦地那, 斯德哥尔摩, 柏林, 华沙, 莫斯科, 开罗, 雅典, 伦敦",
+      "index": 75,
+      "subject_en": "Samuel Johnson",
+      "object_en": "London"
+    },
+    {
+      "subject": "雅克-伊夫·库斯托",
+      "object": "巴黎",
+      "object_candidates": "雅典, 柏林, 威尼斯, 贝尔格莱德, 纽伦堡, 罗马, 君士坦丁堡, 耶路撒冷, 巴格达, 巴黎",
+      "index": 76,
+      "subject_en": "Jacques Cousteau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "索菲娅·瓦西里耶夫娜·柯瓦列夫斯卡娅",
+      "object": "斯德哥尔摩",
+      "object_candidates": "巴黎, 赫尔辛基, 柏林, 麦迪逊, 雅典, 佛罗伦萨, 底特律, 布拉格, 喀布尔, 斯德哥尔摩",
+      "index": 77,
+      "subject_en": "Sofia Kovalevskaya",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "格奥尔格·威廉·弗里德里希·黑格尔",
+      "object": "柏林",
+      "object_candidates": "雅典, 麦迪逊, 喀布尔, 马德里, 巴格达, 布拉格, 斯德哥尔摩, 伊斯坦堡, 麦地那, 柏林",
+      "index": 78,
+      "subject_en": "Georg Wilhelm Friedrich Hegel",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "桑德罗·波提切利",
+      "object": "佛罗伦萨",
+      "object_candidates": "贝尔格莱德, 麦地那, 伊斯坦堡, 麦迪逊, 纽伦堡, 底特律, 斯德哥尔摩, 喀布尔, 耶路撒冷, 佛罗伦萨",
+      "index": 79,
+      "subject_en": "Sandro Botticelli",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "塞缪尔·泰勒·柯勒律治",
+      "object": "伦敦",
+      "object_candidates": "斯德哥尔摩, 华沙, 麦地那, 底特律, 耶路撒冷, 贝尔格莱德, 里昂, 莫斯科, 迦太基, 伦敦",
+      "index": 80,
+      "subject_en": "Samuel Taylor Coleridge",
+      "object_en": "London"
+    },
+    {
+      "subject": "伊本·赫勒敦",
+      "object": "开罗",
+      "object_candidates": "里昂, 柏林, 纽伦堡, 耶路撒冷, 威尼斯, 莫斯科, 伊斯坦堡, 台北市, 大马士革, 开罗",
+      "index": 81,
+      "subject_en": "Ibn Khaldun",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "亨利四世",
+      "object": "伦敦",
+      "object_candidates": "伊斯坦堡, 雅典, 开罗, 罗马, 纽伦堡, 大马士革, 马德里, 威尼斯, 柏林, 伦敦",
+      "index": 82,
+      "subject_en": "Henry IV of England",
+      "object_en": "London"
+    },
+    {
+      "subject": "托马索·阿尔比诺尼",
+      "object": "威尼斯",
+      "object_candidates": "巴黎, 耶路撒冷, 麦地那, 里昂, 佛罗伦萨, 底特律, 赫尔辛基, 贝尔格莱德, 台北市, 威尼斯",
+      "index": 83,
+      "subject_en": "Tomaso Albinoni",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "帕沃·努尔米",
+      "object": "赫尔辛基",
+      "object_candidates": "台北市, 萨里郡, 斯德哥尔摩, 佛罗伦萨, 喀布尔, 巴黎, 伦敦, 贝尔格莱德, 里昂, 赫尔辛基",
+      "index": 84,
+      "subject_en": "Paavo Nurmi",
+      "object_en": "Helsinki"
+    },
+    {
+      "subject": "教宗克肋孟一世",
+      "object": "罗马",
+      "object_candidates": "伦敦, 巴格达, 赫尔辛基, 伊斯坦堡, 贝尔格莱德, 巴黎, 迦太基, 君士坦丁堡, 华沙, 罗马",
+      "index": 85,
+      "subject_en": "Clement I",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "路易十七",
+      "object": "巴黎",
+      "object_candidates": "马德里, 威尼斯, 君士坦丁堡, 斯德哥尔摩, 莫斯科, 佛罗伦萨, 麦地那, 大马士革, 纽伦堡, 巴黎",
+      "index": 86,
+      "subject_en": "Louis XVII of France",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "黑川纪章",
+      "object": "东京都",
+      "object_candidates": "佛罗伦萨, 雅典, 迦太基, 莫斯科, 华沙, 开罗, 威尼斯, 巴黎, 罗马, 东京都",
+      "index": 87,
+      "subject_en": "Kisho Kurokawa",
+      "object_en": "Tokyo"
+    },
+    {
+      "subject": "马克西米连·罗伯斯庇尔",
+      "object": "巴黎",
+      "object_candidates": "佛罗伦萨, 莫斯科, 麦地那, 大马士革, 罗马, 东京都, 纽伦堡, 斯德哥尔摩, 巴格达, 巴黎",
+      "index": 88,
+      "subject_en": "Maximilien Robespierre",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "乔尔乔内",
+      "object": "威尼斯",
+      "object_candidates": "巴黎, 罗马, 雅典, 莫斯科, 赫尔辛基, 伦敦, 君士坦丁堡, 麦地那, 里昂, 威尼斯",
+      "index": 89,
+      "subject_en": "Giorgione",
+      "object_en": "Venice"
+    },
+    {
+      "subject": "彼得一世",
+      "object": "贝尔格莱德",
+      "object_candidates": "东京都, 巴格达, 伦敦, 巴黎, 台北市, 喀布尔, 赫尔辛基, 雅典, 纽伦堡, 贝尔格莱德",
+      "index": 90,
+      "subject_en": "Peter I of Serbia",
+      "object_en": "Belgrade"
+    },
+    {
+      "subject": "柴门霍夫",
+      "object": "华沙",
+      "object_candidates": "伦敦, 纽伦堡, 雅典, 贝尔格莱德, 里昂, 赫尔辛基, 巴格达, 君士坦丁堡, 巴黎, 华沙",
+      "index": 91,
+      "subject_en": "L. L. Zamenhof",
+      "object_en": "Warsaw"
+    },
+    {
+      "subject": "易卜拉欣帕夏",
+      "object": "开罗",
+      "object_candidates": "巴黎, 麦迪逊, 萨里郡, 布拉格, 贝尔格莱德, 华沙, 雅典, 大马士革, 伊斯坦堡, 开罗",
+      "index": 92,
+      "subject_en": "Ibrahim Pasha of Egypt",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "克勉十二世",
+      "object": "罗马",
+      "object_candidates": "柏林, 伊斯坦堡, 开罗, 东京都, 君士坦丁堡, 贝尔格莱德, 台北市, 喀布尔, 巴黎, 罗马",
+      "index": 93,
+      "subject_en": "Clement XII",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "爱任纽",
+      "object": "里昂",
+      "object_candidates": "底特律, 赫尔辛基, 萨里郡, 麦地那, 纽伦堡, 伦敦, 佛罗伦萨, 君士坦丁堡, 莫斯科, 里昂",
+      "index": 94,
+      "subject_en": "Irenaeus",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "雅克·德里达",
+      "object": "巴黎",
+      "object_candidates": "迦太基, 柏林, 底特律, 雅典, 罗马, 贝尔格莱德, 大马士革, 开罗, 里昂, 巴黎",
+      "index": 95,
+      "subject_en": "Jacques Derrida",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "卡洛斯四世",
+      "object": "罗马",
+      "object_candidates": "布拉格, 马德里, 雅典, 威尼斯, 华沙, 东京都, 赫尔辛基, 莫斯科, 耶路撒冷, 罗马",
+      "index": 96,
+      "subject_en": "Charles IV of Spain",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "雷夫·佛汉·威廉斯",
+      "object": "伦敦",
+      "object_candidates": "罗马, 马德里, 雅典, 柏林, 麦地那, 巴黎, 底特律, 里昂, 开罗, 伦敦",
+      "index": 97,
+      "subject_en": "Ralph Vaughan Williams",
+      "object_en": "London"
+    },
+    {
+      "subject": "安德烈·安德烈耶维奇·葛罗米柯",
+      "object": "莫斯科",
+      "object_candidates": "马德里, 台北市, 底特律, 雅典, 威尼斯, 大马士革, 迦太基, 伦敦, 纽伦堡, 莫斯科",
+      "index": 98,
+      "subject_en": "Andrei Gromyko",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "乌尔丽卡·埃利诺拉",
+      "object": "斯德哥尔摩",
+      "object_candidates": "雅典, 台北市, 萨里郡, 华沙, 耶路撒冷, 佛罗伦萨, 马德里, 大马士革, 巴黎, 斯德哥尔摩",
+      "index": 99,
+      "subject_en": "Ulrika Eleonora, Queen of Sweden",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "奥蒂斯·雷丁",
+      "object": "麦迪逊",
+      "object_candidates": "巴黎, 威尼斯, 罗马, 迦太基, 佛罗伦萨, 伊斯坦堡, 喀布尔, 巴格达, 斯德哥尔摩, 麦迪逊",
+      "index": 100,
+      "subject_en": "Otis Redding",
+      "object_en": "Madison"
+    },
+    {
+      "subject": "亨利·卢梭",
+      "object": "巴黎",
+      "object_candidates": "萨里郡, 佛罗伦萨, 迦太基, 赫尔辛基, 威尼斯, 巴格达, 纽伦堡, 大马士革, 贝尔格莱德, 巴黎",
+      "index": 101,
+      "subject_en": "Henri Rousseau",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "穆阿威叶一世",
+      "object": "大马士革",
+      "object_candidates": "斯德哥尔摩, 东京都, 底特律, 君士坦丁堡, 麦迪逊, 马德里, 萨里郡, 布拉格, 巴黎, 大马士革",
+      "index": 102,
+      "subject_en": "Muawiyah I",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "路易·阿拉贡",
+      "object": "巴黎",
+      "object_candidates": "开罗, 马德里, 麦地那, 萨里郡, 耶路撒冷, 华沙, 麦迪逊, 巴格达, 大马士革, 巴黎",
+      "index": 103,
+      "subject_en": "Louis Aragon",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "拜巴尔一世",
+      "object": "大马士革",
+      "object_candidates": "莫斯科, 萨里郡, 巴黎, 耶路撒冷, 伦敦, 麦地那, 雅典, 马德里, 贝尔格莱德, 大马士革",
+      "index": 104,
+      "subject_en": "Baibars",
+      "object_en": "Damascus"
+    },
+    {
+      "subject": "克劳斯·冯·施陶芬贝格",
+      "object": "柏林",
+      "object_candidates": "伦敦, 布拉格, 华沙, 喀布尔, 巴黎, 里昂, 台北市, 贝尔格莱德, 底特律, 柏林",
+      "index": 105,
+      "subject_en": "Claus Schenk Graf von Stauffenberg",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "多纳托·伯拉孟特",
+      "object": "罗马",
+      "object_candidates": "耶路撒冷, 赫尔辛基, 里昂, 斯德哥尔摩, 柏林, 莫斯科, 喀布尔, 巴格达, 华沙, 罗马",
+      "index": 106,
+      "subject_en": "Donato Bramante",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "弗朗西斯科·佛朗哥",
+      "object": "马德里",
+      "object_candidates": "罗马, 里昂, 雅典, 莫斯科, 耶路撒冷, 布拉格, 君士坦丁堡, 柏林, 底特律, 马德里",
+      "index": 107,
+      "subject_en": "Francisco Franco",
+      "object_en": "Madrid"
+    },
+    {
+      "subject": "克洛德·贝尔纳",
+      "object": "巴黎",
+      "object_candidates": "麦地那, 君士坦丁堡, 底特律, 大马士革, 里昂, 萨里郡, 斯德哥尔摩, 麦迪逊, 柏林, 巴黎",
+      "index": 108,
+      "subject_en": "Claude Bernard",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "贾迈勒·阿卜杜－纳赛尔",
+      "object": "开罗",
+      "object_candidates": "麦地那, 伊斯坦堡, 纽伦堡, 斯德哥尔摩, 底特律, 台北市, 佛罗伦萨, 威尼斯, 华沙, 开罗",
+      "index": 109,
+      "subject_en": "Gamal Abdel Nasser",
+      "object_en": "Cairo"
+    },
+    {
+      "subject": "亚科夫·斯维尔德洛夫",
+      "object": "莫斯科",
+      "object_candidates": "台北市, 巴格达, 底特律, 纽伦堡, 大马士革, 伦敦, 柏林, 威尼斯, 君士坦丁堡, 莫斯科",
+      "index": 110,
+      "subject_en": "Yakov Sverdlov",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "夏尔·路易·阿方斯·拉韦朗",
+      "object": "巴黎",
+      "object_candidates": "马德里, 伦敦, 柏林, 耶路撒冷, 罗马, 华沙, 巴格达, 雅典, 贝尔格莱德, 巴黎",
+      "index": 111,
+      "subject_en": "Charles Louis Alphonse Laveran",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "第谷·布拉赫",
+      "object": "布拉格",
+      "object_candidates": "迦太基, 赫尔辛基, 麦地那, 东京都, 罗马, 斯德哥尔摩, 佛罗伦萨, 伊斯坦堡, 巴格达, 布拉格",
+      "index": 112,
+      "subject_en": "Tycho Brahe",
+      "object_en": "Prague"
+    },
+    {
+      "subject": "爱德华·希思",
+      "object": "索尔兹伯里",
+      "object_candidates": "萨里郡, 巴黎, 台北市, 君士坦丁堡, 麦迪逊, 华沙, 柏林, 伦敦, 迦太基, 索尔兹伯里",
+      "index": 113,
+      "subject_en": "Edward Heath",
+      "object_en": "Salisbury"
+    }
+  ],
+  "relation_id": "P20"
+}

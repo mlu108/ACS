@@ -1,0 +1,422 @@
+{
+  "name": "headquarters_location",
+  "prompt_templates": [
+    "<subject>の本部はどこですか？ 答えは：<mask>",
+    "<subject>の本部はどの都市にありますか？ 答えは：<mask>",
+    "<subject>の本部の場所はどこですか？ 答えは：<mask>",
+    "<subject>の本部はどこにありますか？ 答えは：<mask>",
+    "<subject>の本部はどこにありますか？ 答えは：<mask>",
+    " <subject>の本社所在地は<mask>"
+  ],
+  "samples": [
+    {
+      "subject": "パリ・サンジェルマン",
+      "object": "パリ",
+      "object_candidates": "北京市, カーブル, ナンシー, ストックホルム, リヨン, ベルリン, ミュンヘン, フィレンツェ, ライプツィヒ, パリ",
+      "index": 6101,
+      "subject_en": "Paris Saint-Germain F.C.",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "フィレンツェ大学",
+      "object": "フィレンツェ",
+      "object_candidates": "ローマ, シカゴ, ソウル特別市, 北京市, 京都市, 豊田市, バルセロナ, モントリオール, ベルリン, フィレンツェ",
+      "index": 6102,
+      "subject_en": "University of Florence",
+      "object_en": "Florence"
+    },
+    {
+      "subject": "国家社会主義ドイツ労働者党",
+      "object": "ミュンヘン",
+      "object_candidates": "スタンフォード, 台北市, キエフ, 京都市, ロンドン, ローマ, 豊田市, モントリオール, カーブル, ミュンヘン",
+      "index": 6103,
+      "subject_en": "Nazi Party",
+      "object_en": "Munich"
+    },
+    {
+      "subject": "地中海連合",
+      "object": "バルセロナ",
+      "object_candidates": "ジュネーヴ, 北京市, サラエヴォ, プロビデンス, キエフ, アテネ, スタンフォード, ケンブリッジ, シェフィールド, バルセロナ",
+      "index": 6104,
+      "subject_en": "Union for the Mediterranean",
+      "object_en": "Barcelona"
+    },
+    {
+      "subject": "国際刑事警察機構",
+      "object": "リヨン",
+      "object_candidates": "ジョージタウン, サラエヴォ, フランクフルト・アム・マイン, ベルリン, バルセロナ, テヘラン, モスクワ, スタンフォード, カーブル, リヨン",
+      "index": 6105,
+      "subject_en": "Interpol",
+      "object_en": "Lyon"
+    },
+    {
+      "subject": "民主進歩党",
+      "object": "台北市",
+      "object_candidates": "ロンドン, シアトル, サラエヴォ, ボン, ストックホルム, 京都市, バルセロナ, デトロイト, リヨン, 台北市",
+      "index": 6106,
+      "subject_en": "Democratic Progressive Party",
+      "object_en": "Taipei"
+    },
+    {
+      "subject": "EMI",
+      "object": "ロンドン",
+      "object_candidates": "モスクワ, パリ, カーブル, ライプツィヒ, リヨン, デトロイト, 豊田市, テヘラン, シェフィールド, ロンドン",
+      "index": 6107,
+      "subject_en": "EMI",
+      "object_en": "London"
+    },
+    {
+      "subject": "ASナンシー",
+      "object": "ナンシー",
+      "object_candidates": "アテネ, ケルン, ソウル特別市, ロンドン, ベルリン, サラエヴォ, キエフ, ローマ, プロビデンス, ナンシー",
+      "index": 6108,
+      "subject_en": "A.S. Nancy-Lorraine",
+      "object_en": "Nancy"
+    },
+    {
+      "subject": "SoundCloud",
+      "object": "ベルリン",
+      "object_candidates": "ジュネーヴ, シアトル, ケンブリッジ, フィレンツェ, ケルン, ジョージタウン, プロビデンス, カーブル, パリ, ベルリン",
+      "index": 6109,
+      "subject_en": "SoundCloud",
+      "object_en": "Berlin"
+    },
+    {
+      "subject": "キャデラック",
+      "object": "デトロイト",
+      "object_candidates": "ミュンヘン, シカゴ, ケンブリッジ, パリ, カーブル, フランクフルト・アム・マイン, モントリオール, モスクワ, ナンシー, デトロイト",
+      "index": 6110,
+      "subject_en": "Cadillac",
+      "object_en": "Detroit"
+    },
+    {
+      "subject": "ポリドール・レコード",
+      "object": "ロンドン",
+      "object_candidates": "リヨン, モスクワ, ストックホルム, フィレンツェ, ローマ, ジョージタウン, テヘラン, ライプツィヒ, デトロイト, ロンドン",
+      "index": 6111,
+      "subject_en": "Polydor Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "任天堂",
+      "object": "京都市",
+      "object_candidates": "シカゴ, ケンブリッジ, フランクフルト・アム・マイン, ジュネーヴ, ストックホルム, ケルン, シアトル, 台北市, バルセロナ, 京都市",
+      "index": 6112,
+      "subject_en": "Nintendo",
+      "object_en": "Kyoto"
+    },
+    {
+      "subject": "ケンブリッジ大学",
+      "object": "ケンブリッジ",
+      "object_candidates": "ボン, デトロイト, ナンシー, シカゴ, リヨン, サラエヴォ, スタンフォード, ソウル特別市, ジョージタウン, ケンブリッジ",
+      "index": 6113,
+      "subject_en": "University of Cambridge",
+      "object_en": "Cambridge"
+    },
+    {
+      "subject": "ジャーマンウイングス",
+      "object": "ケルン",
+      "object_candidates": "ケンブリッジ, ベルリン, 豊田市, リヨン, 北京市, スタンフォード, モントリオール, シアトル, ナンシー, ケルン",
+      "index": 6114,
+      "subject_en": "Germanwings",
+      "object_en": "Cologne"
+    },
+    {
+      "subject": "ワシントン大学",
+      "object": "シアトル",
+      "object_candidates": "スタンフォード, プロビデンス, カーブル, ストックホルム, ケンブリッジ, モントリオール, サラエヴォ, ベルリン, 台北市, シアトル",
+      "index": 6115,
+      "subject_en": "University of Washington",
+      "object_en": "Seattle"
+    },
+    {
+      "subject": "エリクソン",
+      "object": "ストックホルム",
+      "object_candidates": "豊田市, ローマ, リヨン, フィレンツェ, 京都市, ベルリン, テヘラン, キエフ, プロビデンス, ストックホルム",
+      "index": 6116,
+      "subject_en": "Ericsson",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "ブレントフォードFC",
+      "object": "ロンドン",
+      "object_candidates": "京都市, プロビデンス, ジョージタウン, パリ, ストックホルム, キエフ, ミュンヘン, シアトル, モスクワ, ロンドン",
+      "index": 6117,
+      "subject_en": "Brentford F.C.",
+      "object_en": "London"
+    },
+    {
+      "subject": "アフガニスタン人民民主党",
+      "object": "カーブル",
+      "object_candidates": "ミュンヘン, ライプツィヒ, ケンブリッジ, 京都市, サラエヴォ, ロンドン, フランクフルト・アム・マイン, ストックホルム, シェフィールド, カーブル",
+      "index": 6118,
+      "subject_en": "People's Democratic Party of Afghanistan",
+      "object_en": "Kabul"
+    },
+    {
+      "subject": "サムスングループ",
+      "object": "ソウル特別市",
+      "object_candidates": "フィレンツェ, ボン, シェフィールド, アテネ, ジョージタウン, フランクフルト・アム・マイン, モントリオール, モスクワ, デトロイト, ソウル特別市",
+      "index": 6119,
+      "subject_en": "Samsung",
+      "object_en": "Seoul"
+    },
+    {
+      "subject": "北京国安足球倶楽部",
+      "object": "北京市",
+      "object_candidates": "バルセロナ, ロンドン, ソウル特別市, シカゴ, ライプツィヒ, デトロイト, ケンブリッジ, アテネ, ローマ, 北京市",
+      "index": 6120,
+      "subject_en": "Beijing Guoan F.C.",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "コミンテルン",
+      "object": "モスクワ",
+      "object_candidates": "シェフィールド, ライプツィヒ, 台北市, 京都市, ローマ, モントリオール, テヘラン, ジョージタウン, ナンシー, モスクワ",
+      "index": 6121,
+      "subject_en": "Comintern",
+      "object_en": "Moscow"
+    },
+    {
+      "subject": "ギネス世界記録",
+      "object": "ロンドン",
+      "object_candidates": "キエフ, シアトル, プロビデンス, シェフィールド, モントリオール, ミュンヘン, ケンブリッジ, ベルリン, フィレンツェ, ロンドン",
+      "index": 6122,
+      "subject_en": "Guinness World Records",
+      "object_en": "London"
+    },
+    {
+      "subject": "国際チェス連盟",
+      "object": "アテネ",
+      "object_candidates": "ジョージタウン, バルセロナ, ナンシー, キエフ, テヘラン, シカゴ, カーブル, フランクフルト・アム・マイン, サラエヴォ, アテネ",
+      "index": 6123,
+      "subject_en": "FIDE",
+      "object_en": "Athens"
+    },
+    {
+      "subject": "ロレックス",
+      "object": "ジュネーヴ",
+      "object_candidates": "ナンシー, リヨン, スタンフォード, モントリオール, ベルリン, ロンドン, モスクワ, 台北市, シェフィールド, ジュネーヴ",
+      "index": 6124,
+      "subject_en": "Rolex",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "アッシリア東方教会",
+      "object": "シカゴ",
+      "object_candidates": "ジョージタウン, ケンブリッジ, ローマ, 京都市, ナンシー, ストックホルム, 豊田市, ベルリン, ケルン, シカゴ",
+      "index": 6125,
+      "subject_en": "Assyrian Church of the East",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "パリ大学",
+      "object": "パリ",
+      "object_candidates": "ライプツィヒ, ボン, シェフィールド, リヨン, テヘラン, 北京市, ソウル特別市, デトロイト, ナンシー, パリ",
+      "index": 6126,
+      "subject_en": "University of Paris",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "国際テニス連盟",
+      "object": "ロンドン",
+      "object_candidates": "豊田市, シェフィールド, ジョージタウン, プロビデンス, モントリオール, バルセロナ, キエフ, サラエヴォ, ケンブリッジ, ロンドン",
+      "index": 6127,
+      "subject_en": "International Tennis Federation",
+      "object_en": "London"
+    },
+    {
+      "subject": "ドイチェ・ヴェレ",
+      "object": "ボン",
+      "object_candidates": "豊田市, サラエヴォ, シカゴ, シェフィールド, ソウル特別市, パリ, テヘラン, モントリオール, カーブル, ボン",
+      "index": 6128,
+      "subject_en": "Deutsche Welle",
+      "object_en": "Bonn"
+    },
+    {
+      "subject": "シェフィールド・ウェンズデイFC",
+      "object": "シェフィールド",
+      "object_candidates": "プロビデンス, ケルン, フィレンツェ, デトロイト, ストックホルム, ケンブリッジ, ロンドン, カーブル, キエフ, シェフィールド",
+      "index": 6129,
+      "subject_en": "Sheffield Wednesday F.C.",
+      "object_en": "Sheffield"
+    },
+    {
+      "subject": "世界貿易機関",
+      "object": "ジュネーヴ",
+      "object_candidates": "カーブル, フィレンツェ, ライプツィヒ, ベルリン, ソウル特別市, アテネ, シェフィールド, モントリオール, テヘラン, ジュネーヴ",
+      "index": 6130,
+      "subject_en": "World Trade Organization",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "RBライプツィヒ",
+      "object": "ライプツィヒ",
+      "object_candidates": "ケンブリッジ, リヨン, プロビデンス, アテネ, ミュンヘン, スタンフォード, 台北市, モスクワ, 京都市, ライプツィヒ",
+      "index": 6131,
+      "subject_en": "RB Leipzig",
+      "object_en": "Leipzig"
+    },
+    {
+      "subject": "アメリカ合衆国サッカー連盟",
+      "object": "シカゴ",
+      "object_candidates": "北京市, 豊田市, サラエヴォ, モスクワ, フィレンツェ, フランクフルト・アム・マイン, デトロイト, プロビデンス, ソウル特別市, シカゴ",
+      "index": 6132,
+      "subject_en": "United States Soccer Federation",
+      "object_en": "Chicago"
+    },
+    {
+      "subject": "BP",
+      "object": "ロンドン",
+      "object_candidates": "アテネ, ケルン, ジュネーヴ, ストックホルム, バルセロナ, モントリオール, デトロイト, ベルリン, ボン, ロンドン",
+      "index": 6133,
+      "subject_en": "BP",
+      "object_en": "London"
+    },
+    {
+      "subject": "レノボ",
+      "object": "北京市",
+      "object_candidates": "ケンブリッジ, ストックホルム, テヘラン, バルセロナ, フランクフルト・アム・マイン, モントリオール, モスクワ, パリ, ローマ, 北京市",
+      "index": 6134,
+      "subject_en": "Lenovo",
+      "object_en": "Beijing"
+    },
+    {
+      "subject": "トヨタ自動車",
+      "object": "豊田市",
+      "object_candidates": "ケンブリッジ, モントリオール, ロンドン, ローマ, アテネ, ライプツィヒ, シカゴ, ナンシー, テヘラン, 豊田市",
+      "index": 6135,
+      "subject_en": "Toyota",
+      "object_en": "Toyota"
+    },
+    {
+      "subject": "科学アカデミー",
+      "object": "パリ",
+      "object_candidates": "ミュンヘン, ソウル特別市, ケルン, フランクフルト・アム・マイン, ライプツィヒ, 京都市, ジュネーヴ, デトロイト, フィレンツェ, パリ",
+      "index": 6136,
+      "subject_en": "French Academy of Sciences",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ドイツサッカー連盟",
+      "object": "フランクフルト・アム・マイン",
+      "object_candidates": "リヨン, アテネ, 北京市, ジュネーヴ, サラエヴォ, ソウル特別市, ミュンヘン, シアトル, ストックホルム, フランクフルト・アム・マイン",
+      "index": 6137,
+      "subject_en": "German Football Association",
+      "object_en": "Frankfurt am Main"
+    },
+    {
+      "subject": "カロリンスカ研究所",
+      "object": "ストックホルム",
+      "object_candidates": "ボン, ナンシー, ソウル特別市, パリ, フランクフルト・アム・マイン, ミュンヘン, フィレンツェ, 京都市, デトロイト, ストックホルム",
+      "index": 6138,
+      "subject_en": "Karolinska Institute",
+      "object_en": "Stockholm"
+    },
+    {
+      "subject": "イスラム革命防衛隊",
+      "object": "テヘラン",
+      "object_candidates": "プロビデンス, アテネ, ミュンヘン, ケンブリッジ, シアトル, スタンフォード, フランクフルト・アム・マイン, デトロイト, ローマ, テヘラン",
+      "index": 6139,
+      "subject_en": "Army of the Guardians of the Islamic Revolution",
+      "object_en": "Tehran"
+    },
+    {
+      "subject": "パリ政治学院",
+      "object": "パリ",
+      "object_candidates": "キエフ, バルセロナ, ナンシー, 北京市, フィレンツェ, ジョージタウン, スタンフォード, ライプツィヒ, ジュネーヴ, パリ",
+      "index": 6140,
+      "subject_en": "Sciences Po",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "FCディナモ・キエフ",
+      "object": "キエフ",
+      "object_candidates": "ジュネーヴ, アテネ, ソウル特別市, 豊田市, ナンシー, ジョージタウン, ローマ, フィレンツェ, スタンフォード, キエフ",
+      "index": 6141,
+      "subject_en": "FC Dynamo Kyiv",
+      "object_en": "Kiev"
+    },
+    {
+      "subject": "FKサラエヴォ",
+      "object": "サラエヴォ",
+      "object_candidates": "北京市, キエフ, テヘラン, ケンブリッジ, バルセロナ, モントリオール, シェフィールド, アテネ, 豊田市, サラエヴォ",
+      "index": 6142,
+      "subject_en": "F.K. Sarajevo",
+      "object_en": "Sarajevo"
+    },
+    {
+      "subject": "欧州宇宙機関",
+      "object": "パリ",
+      "object_candidates": "テヘラン, ローマ, ジュネーヴ, モスクワ, 台北市, ベルリン, シカゴ, ケルン, ライプツィヒ, パリ",
+      "index": 6143,
+      "subject_en": "European Space Agency",
+      "object_en": "Paris"
+    },
+    {
+      "subject": "ブラウン大学",
+      "object": "プロビデンス",
+      "object_candidates": "ケルン, カーブル, ロンドン, フィレンツェ, ライプツィヒ, バルセロナ, シェフィールド, テヘラン, 台北市, プロビデンス",
+      "index": 6144,
+      "subject_en": "Brown University",
+      "object_en": "Providence"
+    },
+    {
+      "subject": "ジュネーヴ大学",
+      "object": "ジュネーヴ",
+      "object_candidates": "京都市, ミュンヘン, ナンシー, ストックホルム, パリ, ベルリン, モントリオール, キエフ, 北京市, ジュネーヴ",
+      "index": 6145,
+      "subject_en": "University of Geneva",
+      "object_en": "Geneva"
+    },
+    {
+      "subject": "ドミニコ会",
+      "object": "ローマ",
+      "object_candidates": "リヨン, 京都市, ジュネーヴ, 台北市, ミュンヘン, パリ, ライプツィヒ, シェフィールド, モスクワ, ローマ",
+      "index": 6146,
+      "subject_en": "Dominican Order",
+      "object_en": "Rome"
+    },
+    {
+      "subject": "WWE",
+      "object": "スタンフォード",
+      "object_candidates": "京都市, アテネ, ソウル特別市, バルセロナ, キエフ, 北京市, ナンシー, ジュネーヴ, ローマ, スタンフォード",
+      "index": 6147,
+      "subject_en": "WWE",
+      "object_en": "Stamford"
+    },
+    {
+      "subject": "マギル大学",
+      "object": "モントリオール",
+      "object_candidates": "ロンドン, ライプツィヒ, ソウル特別市, 豊田市, ジュネーヴ, フランクフルト・アム・マイン, プロビデンス, ローマ, ケンブリッジ, モントリオール",
+      "index": 6148,
+      "subject_en": "McGill University",
+      "object_en": "Montreal"
+    },
+    {
+      "subject": "カリブ共同体",
+      "object": "ジョージタウン",
+      "object_candidates": "フランクフルト・アム・マイン, ロンドン, 北京市, スタンフォード, ボン, ベルリン, シアトル, ローマ, ケルン, ジョージタウン",
+      "index": 6149,
+      "subject_en": "Caribbean Community Secretariat",
+      "object_en": "Georgetown"
+    },
+    {
+      "subject": "レクサス",
+      "object": "名古屋市",
+      "object_candidates": "ロンドン, バルセロナ, ケルン, ベルリン, モスクワ, ボン, 台北市, ミュンヘン, プロビデンス, 名古屋市",
+      "index": 6150,
+      "subject_en": "Lexus",
+      "object_en": "Nagoya"
+    },
+    {
+      "subject": "シェフィールド・ユナイテッドFC",
+      "object": "シェフィールド",
+      "object_candidates": "ローマ, シカゴ, スタンフォード, モスクワ, デトロイト, ナンシー, ストックホルム, ミュンヘン, テヘラン, シェフィールド",
+      "index": 6151,
+      "subject_en": "Sheffield United F.C.",
+      "object_en": "Sheffield"
+    }
+  ],
+  "relation_id": "P159"
+}
