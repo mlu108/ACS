@@ -4819,7 +4819,8 @@ def _compute_and_save_pr_auc_all_langs(
         if best_layer is None or lang not in tt:
             continue
         common_ids = tt[lang].get("common_ids")
-        if common_ids is None:
+        test_mask = tt[lang].get("test_mask")
+        if common_ids is None or test_mask is None:
             continue
         if best_layer not in outs_by_layer or lang not in outs_by_layer[best_layer]:
             continue
@@ -4836,6 +4837,9 @@ def _compute_and_save_pr_auc_all_langs(
         y_correct = np.asarray(y_acc_by_lang[lang], dtype=np.float64)
         if len(y_correct) != len(x):
             continue
+        # Held-out only: exclude the examples used to pick best_layer, so PR-AUC
+        # is not evaluated on layer-selection data (mirrors plot_cumulative_all_layers_all_langs).
+        x, y_correct = x[test_mask], y_correct[test_mask]
 
         pr_stats = compute_failure_pr_auc(x, y_correct, n_perm=n_perm, n_boot=n_boot, ci=ci, seed=seed)
         summary[lang] = {
@@ -5001,7 +5005,8 @@ def _src_tgt_row_from_pack(
     if target_lang not in tt_dev or target_lang not in outs_src:
         return None
     common_ids = tt_dev[target_lang].get("common_ids")
-    if common_ids is None or target_lang not in y_acc_by_lang_test:
+    test_mask = tt_dev[target_lang].get("test_mask")
+    if common_ids is None or test_mask is None or target_lang not in y_acc_by_lang_test:
         return None
     pack = outs_src[target_lang]
     if x_key not in pack:
@@ -5015,6 +5020,13 @@ def _src_tgt_row_from_pack(
     y_correct = np.asarray(y_acc_by_lang_test[target_lang], dtype=np.float64)
     if len(y_correct) != len(x):
         return None
+    # Held-out only: common_ids/test_mask come from tt_dev (the target's own
+    # dev-phase layer-selection split, reused as-is for src_dev and tgt_dev —
+    # see compute_exp1_src_tgt_subspace_control), so this excludes exactly the
+    # examples used to pick the target's best layer, matching Exp1's own
+    # cumulative-curve AUC convention and the PR-AUC fix in
+    # _compute_and_save_pr_auc_all_langs.
+    x, y_correct = x[test_mask], y_correct[test_mask]
 
     m = np.isfinite(x) & np.isfinite(y_correct)
     if int(m.sum()) < min_n:

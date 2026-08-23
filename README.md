@@ -113,13 +113,41 @@ python multihop_datasets_save_resid_stream_logits.py \
 - Loads a tokenizer only (`AutoTokenizer`/`PreTrainedTokenizerFast`) — no model weights, no GPU.
 
 **Outputs** — root: `weekly_meetings/geometric_features_experiments/`
+
 - `auto_clusters/auto_clusters_{train|all}.json` — the learned task→cluster assignment
 - `auto_clusters/auto_cluster_plots_{train|all}/` — interactive HTML cluster-visualization
   plots (only when `AUTO_CLUSTER_DEBUG_MODE = True`, the current default)
-- Many further per-experiment `.svg`/`.json`/`.csv` files under the same `weekly_meetings/`
-  root (cumulative-AUC curves, PR-AUC curves, corr-vs-layer plots, distance/scatter plots) —
-  driven by the `DO_EXP*`-style flags near the bottom of the script, mirroring the structure
-  used in `geometric_feature_experiment_merged_lans.py` below.
+
+The main geometry experiment (`select_best_layer_by_train_auc_and_plot_test_for_datasets`)
+picks the layer with the lowest TRAIN cumulative-AUC per dataset-cluster, then plots TEST-set
+curves at that layer. All filenames below share a common
+`{prefix} = datasets_{n}_train{train_ratio}_seed{seed}_bestlayer{NN}` prefix. Under
+`out_dir` (one such tree per dataset-cluster / experiment call):
+
+| File | Plot |
+|---|---|
+| `{prefix}_test_cumulative_{y_mode}.svg` | cumulative curve — mean accuracy vs. orthogonality quantile, cumulative prefix |
+| `{prefix}_test_noncumulative_{y_mode}.svg` | non-cumulative curve — mean accuracy per orthogonality bin |
+| `{prefix}_test_meanortho_vs_meanacc.svg` | scatter: per-dataset mean orthogonality vs. mean accuracy, annotated |
+| `{prefix}_test_error_recall.svg` | error-recall curve |
+| `{prefix}_test_orthogonality_distribution.svg` | histogram of orthogonality values |
+| `{prefix}_test_pr_curve.svg` | failure-prediction PR curve (does low orthogonality predict wrong answers?) |
+
+If `plot_every_layer_test=True` (repeats the cumulative curve + PR curve *per layer*, not
+just at the best layer), under `out_dir/ex_ex_all_layers_test/`:
+- `{all_layers_prefix}layer{NN}_test_cumulative_{y_mode}.svg` / `..._test_pr_curve.svg` — one pair per layer
+- `{all_layers_prefix}pr_auc_summary.json` — PR-AUC, normalized PR-AUC, failure rate, permutation p-value, per layer
+
+Cross-hop "Q1 vs Q2" geometry (does the first hop's example/subspace predict orthogonality
+to the second hop's subspace, and vice versa), under `out_dir/example_subspace/`:
+- `{prefix}_q1subspace_q2subspace_test_{cumulative,noncumulative}_{y_mode}_{x_key}.svg` — one pair per orthogonality variant (`x_key`)
+- `{prefix}_q1vec_q2subspace_test_{cumulative,noncumulative}_{y_mode}.svg`
+- `{prefix}_q2vec_q1subspace_test_{cumulative,noncumulative}_{y_mode}.svg`
+
+Per-individual-dataset breakdown (same cumulative/noncumulative/distribution triple as above,
+but one dataset at a time rather than a whole cluster — prefix is
+`{dataset_name}_train{train_ratio}_seed{seed}_bestlayer{NN}`), directly under `out_dir`:
+- `{ds_prefix}_test_cumulative.svg`, `{ds_prefix}_test_noncumulative.svg`, `{ds_prefix}_test_distribution.svg`
 
 ---
 
