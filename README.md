@@ -167,3 +167,18 @@ python make_summary_plots.py --results_dir <base_results_dir>
 - `make_summary_plots.py` reads every run's `summary.json` under `--results_dir` and produces
   cross-run bar/line charts (accuracy and orthogonality vs. layer, vs. coverage) under
   `--results_dir/Plots/`.
+
+**Demo notebook** — `SCAN/scan_ci_demo.ipynb` reproduces the cumulative, noncumulative, and
+error-recall plots for one representative checkpoint (`d_model=12`, `8%` coverage, `seed=42`,
+best layer 6) by calling `plot_cumulative_curve`/`plot_noncumulative_curve`/
+`plot_error_recall_curve` from `analysis_atomic_avg.py` directly — not a reimplementation —
+then prints the 10 SCAN test examples with the highest CI (the model's predicted hardest),
+ranked high-to-low, alongside the gold action sequence and whether the model actually got
+each one right. `d_model=12` was picked over the smallest `d_model=8` checkpoint because CI's
+signal is visibly cleaner once the model isn't capacity-starved (96% vs. 47% accuracy; smooth,
+near-monotonic curves; error-recall AUC-above-diagonal 0.224 vs. 0.029). Needs no GPU/model
+reload: it runs entirely off `SCAN/demo_data/size_p8_dmodel12/` (that checkpoint's cached
+atomic-concept representations, per-example CI/correctness table, and summary metrics — copied
+in from `results_scan_paper_new_dev/size_p8/` in the source repo, same attribution as above).
+Run from `SCAN/` so `he_probe` resolves; the permutation test inside the cumulative plot
+(`N_PERMUTATIONS = 1000`, matching the real pipeline) takes a couple of minutes.
