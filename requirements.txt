@@ -1,0 +1,42 @@
+# Environment for ACS (Multihop, Multilingual, SCAN pipelines), derived from the actual
+# `import`s across this repo and pinned to the versions verified working end-to-end
+# (smoke-tested against every stage-1/stage-2 script and the SCAN notebook).
+#
+# Python 3.10 (tested on 3.10.16).
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# torch: pinned to the CPU/CUDA-agnostic version below; the verified environment actually
+# ran a CUDA 12.4 build (torch==2.6.0+cu124). On a GPU machine, install the matching build
+# from https://download.pytorch.org/whl/cu124 (or your CUDA version) instead of plain PyPI.
+torch==2.6.0
+
+# HuggingFace stack — model/tokenizer loading (helpers.py), datasets (composing-functions,
+# KLAR/OSCAR loading), and hub auth (HF_TOKEN login for gated models/datasets).
+transformers==4.48.3
+datasets==3.3.1
+huggingface_hub==0.36.2
+
+# transformer_lens's TransformerBridge (used throughout helpers.py) is not yet in a
+# published PyPI release — install the exact commit this codebase was verified against.
+transformer_lens @ git+https://github.com/TransformerLensOrg/TransformerLens.git@535f2d8e1c05f44c5ca53b0258d7e10e473dc96c
+
+# numeric / ML
+numpy==2.2.3
+scipy==1.15.3
+scikit-learn==1.7.2
+pandas==2.2.3
+jaxtyping==0.2.38
+
+# plotting
+matplotlib==3.10.0
+seaborn==0.13.2
+plotly==6.0.0
+
+# misc
+tqdm==4.67.1
+num2words==0.5.14
+
+# only needed to run SCAN/scan_ci_demo.ipynb
+ipykernel==6.29.5

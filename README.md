@@ -16,6 +16,9 @@ Each task below is two stages: **stage 1** (GPU) runs the model and caches resid
 **stage 2** (CPU-only, reads stage 1's output) computes CI and correlates it against
 composed-query accuracy.
 
+`pip install -r requirements.txt` sets up the environment (Python 3.10) for every pipeline
+below, SCAN included.
+
 `helpers.py`, `multihop_auto_cluster.py`, and `multilingual_experiment_auc_plots.py` are
 shared helpers, imported by the scripts below rather than run directly.
 
@@ -31,6 +34,8 @@ and model size), showing the angle between atomic-concept representations (`walk
 > (`he_probe/`) — only the files this pipeline uses are copied in, no checkpoints/results/
 > figures from the source repo; each file has a one-line header pointing back to its source path.
 
+- `SCAN/SCAN/simple_split/` — the official SCAN benchmark data (BSD-licensed, Lake & Baroni)
+  that `gen_data_scan.py` reads train/test examples from; needed for stage 1 to run at all
 - `SCAN/he_probe/experiment_scan.py` — stage 1: train
 - `SCAN/he_probe/analysis_atomic_avg.py` — stage 2: compute CI, evaluate vs. OOD accuracy
 - `SCAN/make_summary_plots.py` — aggregates stage-2 outputs across checkpoints
@@ -44,8 +49,8 @@ python he_probe/experiment_scan.py --config he_probe/experiment_scan_configs/con
 python -m he_probe.analysis_atomic_avg --checkpoint <ckpt.pt> --results_dir <dir> \
     --seed <s> --d_model <d> --n_heads <h> --d_ff <f> --n_layers <l> \
     --data_mode size_variation --size_variation_p <p> --aggregation cumulative_coherence \
-    --select_best_layer cumulative
-python make_summary_plots.py --results_dir <dir>
+    --select_best_layer cumulative --results_subdir analysis_results
+python make_summary_plots.py --results_dir <dir> --plot_folder_name <name>
 ```
 
 **Notes**
@@ -54,6 +59,11 @@ python make_summary_plots.py --results_dir <dir>
 - Stage 2's `--seed`/`--d_model`/`--n_heads`/`--d_ff`/`--n_layers`/`--size_variation_p` must
   match the checkpoint (encoded in its filename); to sweep every checkpoint, loop over
   `find results_dir -name "*.pt"`.
+- `make_summary_plots.py` only looks inside a subdirectory literally named `analysis_results`
+  under each `size_p*/` — stage 2's own default (`analysis_results_atomic_avg_train`) won't be
+  found, so pass `--results_subdir analysis_results` to stage 2 if you plan to run this after.
+
+All three stages were smoke-tested end to end (tiny data, few epochs) — confirmed working.
 
 ---
 
@@ -119,11 +129,10 @@ python multilingual_experiment_merged_lans.py --model llama-3b
   stage 2 expects automatically.
 - `dynamic_tyler_geometry.py` streams the (gated) `oscar-corpus/OSCAR-2109` dataset live —
   nothing local to copy in. This is the raw material stage 2 reduces to the per-language
-  SVD subspace `B_ℓ`. `--model_name` selects the model; the language list is still hardcoded
-  at the top of the script. Saves to `oscar_geometry_{model_name}/...`; large, safe to
+  SVD subspace `B_ℓ`. `--model_name` selects the model. Saves to `oscar_geometry_{model_name}/...`; large, safe to
   delete once stage 2 has built `oscar_subspaces_cache_{model_name}/` from it.
 - `multilingual_experiment_merged_lans.py` needs stage 1a's KLAR output and either
   stage 1b's raw OSCAR residuals or an already-populated `oscar_subspaces_cache_{model_name}/`
-  (the SVD cache is built lazily on first run, so you only need the raw OSCAR data once). It
+  (the SVD cache is built on first run, so you only need the raw OSCAR data once). It
   computes CI(`a_q`, `B_ℓ`) per language and evaluates it against fact-recall accuracy
   (Figures 4b–c, 5 in the paper). Writes under `multilingual_experiments_{model_name}/`.
