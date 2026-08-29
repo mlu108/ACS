@@ -39,8 +39,17 @@ device = utils.get_device()
 
 
 #INPUT:
+import argparse
+
 available_models = ['llama-1b','llama-3b','llama-7b','llama-8b','Qwen2_1.5b','Qwen2-0.5B','Qwen2.5-14B']
-MODEL = available_models[-1]
+
+# parse_known_args (not parse_args) so this still runs unmodified under a
+# Jupyter kernel, which injects its own argv (e.g. "-f kernel-xxx.json") that
+# would otherwise make argparse error out and kill the kernel.
+_arg_parser = argparse.ArgumentParser()
+_arg_parser.add_argument("--model_name", type=str, default=available_models[-1])
+_args, _unknown_argv = _arg_parser.parse_known_args()
+MODEL = _args.model_name
 
 print(MODEL)
 model,tokenizer = load_hooked_transformer_model(MODEL)
