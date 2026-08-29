@@ -26,8 +26,8 @@ Stage 1 needs a GPU (loads the model). Stage 2 is CPU-only — it only reads wha
 wrote to disk.
 
 `helpers.py` (`load_hooked_transformer_model(name)`), `multihop_auto_cluster.py`, and
-`geometric_feature_experiment_auc_plots.py` are shared helpers, imported by the scripts
-below rather than run directly.
+`multilingual_experiment_auc_plots.py` are shared helpers, imported by the scripts below
+rather than run directly.
 
 ---
 
@@ -46,7 +46,7 @@ first- and second-hop queries, cluster-center them into concept representations 
 ```bash
 cd ACS
 python multihop_datasets_save_resid_stream_logits.py --model_name llama-3b
-python multihop_experiments_auto_cluster_center.py --model_name llama-3b
+python multihop_experiments_auto_cluster_center.py --model_name llama-3b --experiments_dir multihop_experiments
 ```
 
 **Notes**
@@ -60,8 +60,8 @@ python multihop_experiments_auto_cluster_center.py --model_name llama-3b
 - `multihop_experiments_auto_cluster_center.py` builds `a_f`/`a_g` from the stage-1 residuals,
   auto-clusters tasks by composition family, and computes CI to predict composed-query
   accuracy (the multihop curve in Figure 4a). Loads a tokenizer only — no model weights, no
-  GPU. Writes plots (`.svg`) and tables (`.json`) under
-  `weekly_meetings/geometric_features_experiments/`.
+  GPU. Writes auto-cluster plots (`.svg`/`.html`) and tables (`.json`) under
+  `--experiments_dir` (default `multihop_experiments/`).
 
 ---
 
@@ -75,14 +75,14 @@ predict cross-lingual transfer failure — without needing the translated input.
 
 - `KLAR_datasets_save_resid_streams_logits.py` — stage 1a (KLAR factual queries)
 - `dynamic_tyler_geometry.py` — stage 1b (OSCAR per-language background residuals)
-- `geometric_feature_experiment_merged_lans.py` — stage 2
+- `multilingual_experiment_merged_lans.py` — stage 2
 
 **Pipeline:**
 ```bash
 cd ACS
 python KLAR_datasets_save_resid_streams_logits.py --model_name llama-3b --n_shots 0 --prompt_template_which 0
 python dynamic_tyler_geometry.py --model_name llama-3b
-python geometric_feature_experiment_merged_lans.py --model llama-3b
+python multilingual_experiment_merged_lans.py --model llama-3b
 ```
 
 **Notes**
@@ -96,12 +96,12 @@ python geometric_feature_experiment_merged_lans.py --model llama-3b
   SVD subspace `B_ℓ`. `--model_name` selects the model; the language list is still hardcoded
   at the top of the script. Saves to `oscar_geometry_{model_name}/...`; large, safe to
   delete once stage 2 has built `oscar_subspaces_cache_{model_name}/` from it.
-- `geometric_feature_experiment_merged_lans.py` needs stage 1a's KLAR output and either
+- `multilingual_experiment_merged_lans.py` needs stage 1a's KLAR output and either
   stage 1b's raw OSCAR residuals or an already-populated `oscar_subspaces_cache_{model_name}/`
   (the SVD cache is built lazily on first run, so you only need the raw OSCAR data once). It
   computes CI(`a_q`, `B_ℓ`) per language and evaluates it against fact-recall accuracy
   (Figures 4b–c, 5 in the paper). Writes under
-  `weekly_meetings/geometric_features_experiments_{model_name}/`.
+  `multilingual_experiments_{model_name}/`.
 
 ---
 
@@ -113,4 +113,57 @@ data distribution and model scale — that the angle between atomic-concept repr
 (`walk`, `left`, `twice`, ...) predicts compositional generalization failure on held-out
 instruction compositions.
 
-*Code for this section is not yet in this repo — coming soon.*
+> **Adapted from** [`ryeii/Representational-Homomorphism-for-Transformer-Language-Models`](https://github.com/ryeii/Representational-Homomorphism-for-Transformer-Language-Models)
+> (`he_probe/`). Only the files this pipeline actually uses are copied in here — no saved
+> checkpoints, result JSONs, or figures from the source repo. Each copied file carries a
+> one-line header pointing back to its source path in that repo.
+
+- `SCAN/he_probe/experiment_scan.py` — stage 1: train toy Transformers on SCAN
+- `SCAN/he_probe/analysis_atomic_avg.py` — stage 2: compute CI and evaluate against OOD accuracy
+- `SCAN/make_summary_plots.py` — aggregates stage 2's per-checkpoint outputs into summary plots
+- `SCAN/he_probe/gen_data_scan.py`, `SCAN/he_probe/transformers.py` — SCAN data generation and
+  the toy `DecoderOnlyTransformer`, imported by both stages
+- `SCAN/he_probe/experiment_scan_configs/` — training configs (sweep seeds, model size, etc.)
+
+**Pipeline** (run from `SCAN/`, so `he_probe` resolves as a package):
+```bash
+cd ACS/SCAN
+
+# stage 1 — train a sweep of checkpoints
+python he_probe/experiment_scan.py --config he_probe/experiment_scan_configs/config_d32_sweep_seeds_fixed_seed_data2.json
+
+# stage 2 — for each checkpoint, compute CI and evaluate OOD accuracy
+python -m he_probe.analysis_atomic_avg \
+    --checkpoint <path/to/checkpoint.pt> \
+    --results_dir <base_results_dir from the stage-1 config> \
+    --seed <seed> --d_model <d_model> --n_heads <n_heads> --d_ff <d_ff> --n_layers <n_layers> \
+    --data_mode size_variation --size_variation_p <size_p> \
+    --aggregation cumulative_coherence --bin_width 0.1 \
+    --dev_source from_test_split --dev_fraction 0.1 \
+    --select_best_layer cumulative
+
+# optional — aggregate every stage-2 run under one results_dir into summary plots
+python make_summary_plots.py --results_dir <base_results_dir>
+```
+
+**Notes**
+- `experiment_scan.py --config ...` trains one model per (seed × architecture × coverage)
+  combination in the config and saves a `.pt` checkpoint per run under `base_results_dir`
+  (set in the config, e.g. `results_scan_sweep_seeds`). CLI flags of the same name (e.g.
+  `--epochs`, `--lr`) override individual config fields without editing the JSON.
+- `python -m he_probe.analysis_atomic_avg` takes one `--checkpoint` at a time. Its
+  `--seed`/`--d_model`/`--n_heads`/`--d_ff`/`--n_layers`/`--size_variation_p` must match the
+  values used to train that checkpoint (they're encoded in the checkpoint's filename). It
+  extracts atomic-concept representations, computes CI (`--aggregation
+  cumulative_coherence`), and evaluates CI against held-out compositional accuracy, writing
+  `summary.json` and plots under `--results_dir/<size_p dir>/<--results_subdir>/<run_name>/`.
+  It caches each checkpoint's per-example dev/test correctness the first time it runs
+  generation, so re-running with different aggregation/analysis flags on the same checkpoint
+  is fast. To sweep this over every checkpoint under a `base_results_dir`, loop over
+  `find base_results_dir -name "*.pt"` and parse each filename for `seed`/`dmodel`/`nheads`/
+  `dff`/`layer`/`size_p`, then call the command above per checkpoint (this is what
+  `run_analysis_all_cumulative_coherence.sh` in the source repo does — not copied here, since
+  it's cluster-submission glue rather than pipeline code).
+- `make_summary_plots.py` reads every run's `summary.json` under `--results_dir` and produces
+  cross-run bar/line charts (accuracy and orthogonality vs. layer, vs. coverage) under
+  `--results_dir/Plots/`.

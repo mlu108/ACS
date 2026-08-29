@@ -316,8 +316,13 @@ _arg_parser.add_argument(
          f"save-name ({list(model_name_dict.values())}), or a hyphenated "
          "alias (e.g. 'olmo-7b', 'llama-3b', 'qwen-14b').",
 )
+_arg_parser.add_argument(
+    "--experiments_dir", type=str, default="multihop_experiments",
+    help="Root directory for auto-cluster JSON/plots (default: multihop_experiments).",
+)
 _args, _unknown_argv = _arg_parser.parse_known_args()
 model_name = _args.model_name
+EXPERIMENTS_DIR = _args.experiments_dir
 
 # Allow the full HF id, the short save-name (llama_3b), or a hyphenated
 # alias (llama-3b) on the CLI — all normalize to the same short save-name.
@@ -612,13 +617,13 @@ AUTO_CLUSTER_USING = "train"   # "train" (no test leakage, recommended) or "all"
 AUTO_CLUSTER_DEBUG_MODE = True   # if True, print per-cluster datasets + compare against manual A/B/C
 AUTO_CLUSTER_PCA_BEFORE_CLUSTERING = True   # if True, cluster on PCA-reduced centroids instead of raw ones (PCA is always computed for the debug plot regardless)
 AUTO_CLUSTER_SAVE_PATH = os.path.join(
-    "weekly_meetings", "geometric_features_experiments", "auto_clusters",
+    EXPERIMENTS_DIR, "auto_clusters",
     f"auto_clusters_{AUTO_CLUSTER_USING}.json",
 )
 # Interactive per-layer cluster-visualization HTML plots, only written when
 # AUTO_CLUSTER_DEBUG_MODE is True (see run_auto_clustering's debug_plot_dir).
 AUTO_CLUSTER_DEBUG_PLOT_DIR = os.path.join(
-    "weekly_meetings", "geometric_features_experiments", "auto_clusters",
+    EXPERIMENTS_DIR, "auto_clusters",
     f"auto_cluster_plots_{AUTO_CLUSTER_USING}",
 )
 

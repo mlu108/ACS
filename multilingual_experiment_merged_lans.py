@@ -4567,7 +4567,7 @@ device = 'cpu'
 
 auc_tables = defaultdict(dict)
 from collections import defaultdict
-from geometric_feature_experiment_auc_plots import load_auc_matrix, plot_auc_heatmap, plot_auc_diagsum_and_rowsum_bars
+from multilingual_experiment_auc_plots import load_auc_matrix, plot_auc_heatmap, plot_auc_diagsum_and_rowsum_bars
 valid_langs = ["es","fr","hu","ja","ko","nl","ru","uk","vi","zh"]#,"en"]
 print(len(valid_langs))
 
