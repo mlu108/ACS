@@ -21,7 +21,6 @@ from helpers import *  # expects load_hooked_transformer_model, etc.
 parser = argparse.ArgumentParser()
 parser.add_argument("--model_name", type=str, default="llama-3b")
 parser.add_argument("--seed", type=int, default=12345)
-parser.add_argument("--out_dir", type=str, default="composing_functions_save_resid_logits")
 parser.add_argument("--max_new_tokens", type=int, default=5)
 parser.add_argument("--dtype", type=str, default="float16", choices=["float16", "float32"])
 parser.add_argument("--n_icl", type=int, default=10)
@@ -36,7 +35,7 @@ parser.add_argument("--print_first_k", type=int, default=10)
 args = parser.parse_args()
 
 MODEL_NAME = args.model_name
-OUT_DIR = args.out_dir
+OUT_DIR = f"multihop_functions_resid_logits_{MODEL_NAME.replace('-', '_')}"
 MAX_NEW_TOKENS = args.max_new_tokens
 N_ICL = args.n_icl
 N_QUERIES_PER_TASK = args.n_queries_per_task

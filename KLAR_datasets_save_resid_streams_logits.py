@@ -26,7 +26,6 @@ from helpers import *  # expects load_hooked_transformer_model etc.
 parser = argparse.ArgumentParser()
 parser.add_argument("--model_name", type=str, default="llama-3b")
 parser.add_argument("--seed", type=int, default=12345)
-parser.add_argument("--out_dir", type=str, default="klar/llama_3b_eval_save_all_layers_nobatch")
 parser.add_argument("--max_new_tokens", type=int, default=10)
 parser.add_argument("--n_shots", type=int, default=0, choices=[0, 3])
 parser.add_argument("--print_every", type=int, default=250)
@@ -37,7 +36,7 @@ parser.add_argument("--prompt_template_which", type=int, default=0, choices=[0,1
 args = parser.parse_args()
 
 MODEL_NAME = args.model_name
-OUT_DIR = args.out_dir
+OUT_DIR = f"klar/{MODEL_NAME}_eval_save_all_layers_prompt{args.prompt_template_which}"
 MAX_NEW_TOKENS = args.max_new_tokens
 N_SHOTS = args.n_shots
 DTYPE = np.float16 if args.dtype == "float16" else np.float32
