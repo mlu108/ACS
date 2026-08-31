@@ -3,12 +3,13 @@
 Code for **"Adversarial Concept Search: Predicting Compositional Errors From Feature
 Geometry"**.
 
-We predict *where* an LLM will fail on compositional tasks — multihop reasoning,
-multilingual factual recall — using only the geometry of its internal representations,
-without evaluating the composed input itself. The core quantity is **Compositional
-Interference (CI)**: how non-orthogonal (close in angle) the atomic concept
-representations `a_i` that make up a composition are. Near-orthogonal concepts compose
-reliably; concepts encoded close together interfere, and interference predicts failure.
+We predict *where* an LLM will fail on compositional tasks — synthetic compositional task
+SCAN, multihop reasoning, multilingual factual recall — using only the geometry of its
+internal representations, without evaluating the composed input itself. The core quantity
+is **Compositional Interference (CI)**: how non-orthogonal (close in angle) the atomic
+concept representations `a_i` that make up a composition are. Near-orthogonal concepts
+compose reliably; concepts encoded close together interfere, and interference predicts
+failure.
 
 ![Can we find challenging concept combinations for LLMs without explicitly evaluating them?](ACS_title_figure.png)
 
@@ -110,24 +111,24 @@ over residuals from OSCAR text in that language, then compute CI between `a_q` a
 predict cross-lingual transfer failure — without needing the translated input.
 
 - `KLAR_datasets_save_resid_streams_logits.py` — stage 1a (KLAR factual queries)
-- `dynamic_tyler_geometry.py` — stage 1b (OSCAR per-language background residuals)
+- `multilingual_oscar_save_resids.py` — stage 1b (OSCAR per-language background residuals)
 - `multilingual_experiment_merged_lans.py` — stage 2
 
 **Pipeline:**
 ```bash
 cd ACS
 python KLAR_datasets_save_resid_streams_logits.py --model_name llama-3b --n_shots 0 --prompt_template_which 0
-python dynamic_tyler_geometry.py --model_name llama-3b
+python multilingual_oscar_save_resids.py --model_name llama-3b
 python multilingual_experiment_merged_lans.py --model llama-3b
 ```
 
 **Notes**
-- `KLAR_datasets_save_resid_streams_logits.py` reads `klar/klar/<lang>/<relation>.json`
+- `KLAR_datasets_save_resid_streams_logits.py` reads `klar/<lang>/<relation>.json`
   (run with CWD = `ACS/` so the glob resolves) and saves last-token residuals + predictions
   per query. Output directory is fixed —
   `klar/{model_name}_eval_save_all_layers_prompt{prompt_template_which}` — matching what
   stage 2 expects automatically.
-- `dynamic_tyler_geometry.py` streams the (gated) `oscar-corpus/OSCAR-2109` dataset live —
+- `multilingual_oscar_save_resids.py` streams the (gated) `oscar-corpus/OSCAR-2109` dataset live —
   nothing local to copy in. This is the raw material stage 2 reduces to the per-language
   SVD subspace `B_ℓ`. `--model_name` selects the model. Saves to `oscar_geometry_{model_name}/...`; large, safe to
   delete once stage 2 has built `oscar_subspaces_cache_{model_name}/` from it.

@@ -74,7 +74,7 @@ id2lang = {i: l for l, i in lang2id.items()}
 # -----------------------------
 # Load KLAR JSONs
 # -----------------------------
-json_paths = glob.glob("klar/klar/*/*.json")
+json_paths = glob.glob("klar/*/*.json")
 path_map = defaultdict(dict)  # rel -> lang -> path
 
 for p in json_paths:

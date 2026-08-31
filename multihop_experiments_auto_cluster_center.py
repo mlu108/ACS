@@ -11,6 +11,8 @@ from sklearn.metrics import average_precision_score
 from transformers import AutoTokenizer, PreTrainedTokenizerFast
 from tqdm.auto import tqdm
 
+from helpers import resolve_model_id
+
 def ensure_dir(path):
     os.makedirs(path, exist_ok=True)
 
@@ -313,8 +315,9 @@ _arg_parser.add_argument(
     "--model_name", type=str, default='allenai/OLMo-7B',
     help="Model to run the experiment for (default: allenai/OLMo-7B). Accepts "
          f"a full HF model id ({list(model_name_dict.keys())}), a short "
-         f"save-name ({list(model_name_dict.values())}), or a hyphenated "
-         "alias (e.g. 'olmo-7b', 'llama-3b', 'qwen-14b').",
+         f"save-name ({list(model_name_dict.values())}), a hyphenated alias "
+         "(e.g. 'olmo-7b', 'llama-3b', 'qwen-14b'), or any other alias "
+         "helpers.resolve_model_id understands (e.g. 'qwen-0.5b').",
 )
 _arg_parser.add_argument(
     "--experiments_dir", type=str, default="multihop_experiments",
@@ -330,17 +333,37 @@ _full_name_by_short = {v: k for k, v in model_name_dict.items()}
 _normalized_alias = model_name.strip().lower().replace('-', '_')
 model_name = _full_name_by_short.get(_normalized_alias, model_name)
 
-model_save_name = (
-    model_name_dict[model_name]
-    if model_name not in model_name_dict.values()
-    else model_name
-)
+if model_name in model_name_dict:
+    # a recognized full HF id -> its canonical short save-name
+    model_save_name = model_name_dict[model_name]
+elif model_name in model_name_dict.values():
+    # already a canonical short save-name
+    model_save_name = model_name
+else:
+    # any other model: match stage 1's own output-directory convention
+    # (multihop_datasets_save_resid_stream_logits.py: MODEL_NAME.replace('-', '_'))
+    # directly, so the two scripts always agree without needing an entry here.
+    model_save_name = model_name.strip().replace('-', '_')
+
 run_dirs = [f"multihop_functions_resid_logits_{model_save_name}"]
 
+# Resolve an actual loadable HF id for the tokenizer. The three models above
+# already have one (a full HF id, via model_name_dict); for anything else,
+# fall back to the same short-alias table helpers.py uses to load models in
+# stage 1 (e.g. 'qwen-0.5b' -> 'Qwen/Qwen2-0.5B'). If that alias isn't
+# recognized either, assume the user already passed a loadable HF id.
+if model_name in model_name_dict:
+    tokenizer_model_id = model_name
+else:
+    try:
+        tokenizer_model_id, _ = resolve_model_id(model_name)
+    except ValueError:
+        tokenizer_model_id = model_name
+
 tokenizer = (
-    PreTrainedTokenizerFast.from_pretrained(model_name)
-    if model_name == 'allenai/OLMo-7B'
-    else AutoTokenizer.from_pretrained(model_name, use_fast=False, trust_remote_code=True)
+    PreTrainedTokenizerFast.from_pretrained(tokenizer_model_id)
+    if tokenizer_model_id == 'allenai/OLMo-7B'
+    else AutoTokenizer.from_pretrained(tokenizer_model_id, use_fast=False, trust_remote_code=True)
 )
 if len(run_dirs) == 0:
     raise ValueError("run_dirs must contain at least one run directory.")

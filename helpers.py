@@ -9,13 +9,17 @@ from transformer_lens.model_bridge import TransformerBridge
 def _maybe_login_hf():
     login(token=os.environ["HF_TOKEN"], add_to_git_credential=True)
 
-def load_hooked_transformer_model(model_name):
-    name = model_name.lower()
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    dtype = torch.bfloat16 if device == "cuda" else torch.float32
-    load_in_dtype = False
+def resolve_model_id(model_name):
+    """Map a short alias (e.g. 'llama-3b', 'qwen-0.5b', 'olmo-7b') to its full
+    HF repo id. Returns (model_id, load_in_dtype), where load_in_dtype flags
+    the couple of models that must be force-loaded in bf16 (see below).
 
-    _maybe_login_hf()
+    Pulled out of load_hooked_transformer_model so other scripts (e.g. stage-2
+    analysis scripts that only need the HF id, not the loaded model) can reuse
+    the same alias table instead of re-deriving their own.
+    """
+    name = model_name.lower()
+    load_in_dtype = False
 
     if "llama" in name:
         if "1b" in name:
@@ -62,6 +66,17 @@ def load_hooked_transformer_model(model_name):
 
     else:
         raise ValueError(f"MODEL NAME not configured: {model_name}")
+
+    return model_id, load_in_dtype
+
+
+def load_hooked_transformer_model(model_name):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.bfloat16 if device == "cuda" else torch.float32
+
+    _maybe_login_hf()
+
+    model_id, load_in_dtype = resolve_model_id(model_name)
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_id,
