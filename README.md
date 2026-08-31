@@ -6,10 +6,13 @@ Geometry"**.
 We predict *where* an LLM will fail on compositional tasks — synthetic compositional task
 SCAN, multihop reasoning, multilingual factual recall — using only the geometry of its
 internal representations, without evaluating the composed input itself. The core quantity
-is **Compositional Interference (CI)**: how non-orthogonal (close in angle) the atomic
-concept representations `a_i` that make up a composition are. Near-orthogonal concepts
-compose reliably; concepts encoded close together interfere, and interference predicts
-failure.
+is **Compositional Interference (CI)**, built on a *cumulative coherence* recovery bound
+from compressed sensing: robustly recovering a set of active concepts from superposition
+gets harder as the concepts' representations become non-orthogonal, since the least-orthogonal
+one causes the most destructive interference. For active concepts `a_i` (`i ∈ S`), we
+estimate `CI(S) = max_i (1/|S|) Σ_j |cos(a_i, a_j)|`; with two concepts this reduces to just
+the angle (cosine similarity) between them. Near-orthogonal concepts compose reliably;
+concepts encoded close together interfere, and interference predicts failure.
 
 ![Can we find challenging concept combinations for LLMs without explicitly evaluating them?](ACS_title_figure.png)
 
