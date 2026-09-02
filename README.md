@@ -16,8 +16,8 @@ concepts encoded close together interfere, and interference predicts failure.
 
 ![Can we find challenging concept combinations for LLMs without explicitly evaluating them?](ACS_title_figure.png)
 
-Each task below is two stages: **stage 1** (GPU) runs the model and caches residuals;
-**stage 2** (CPU-only, reads stage 1's output) computes CI and correlates it against
+Each task below is two stages: **stage 1** runs the model and caches residuals;
+**stage 2** computes CI and correlates it against
 composed-query accuracy.
 
 `pip install -r requirements.txt` sets up the environment (Python 3.10) for every pipeline
@@ -102,7 +102,7 @@ python multihop_experiments_auto_cluster_center.py --model_name llama-3b --exper
   accuracy (the multihop curve in Figure 4a). Loads a tokenizer only — no model weights, no
   GPU. Writes cluster plots (`.svg`/`.html`) and tables (`.json`) under
   `--experiments_dir` (default `multihop_experiments/`).
-  Clustering itself defaults to the hand-picked A/B/C dataset groups
+  Clustering itself defaults to the hand-picked A/B/C dataset groups following the paper
   (`--manual_cluster`, default `True`); pass `--no-manual_cluster` to use
   `multihop_experiment.py`'s per-layer auto-clustering (KMeans over dataset
   centroids) instead.
