@@ -24,7 +24,7 @@ Typical usage from multihop_experiments_auto_cluster_center.py, after
 `runs`, `eligible`, `n_layers`, `d_model`, and `ALL_TASKS_QxFx_QFxGFx` are
 already loaded:
 
-    from multihop_auto_cluster import run_auto_clustering
+    from multihop_experiment import run_auto_clustering
 
     task_names = sorted({d for pair in ALL_TASKS_QxFx_QFxGFx.values() for d in pair})
 
@@ -432,7 +432,7 @@ def save_cluster_pca_plot_html(
     evr = info.get("pca_explained_variance_ratio", np.array([]))
 
     if len(datasets_sorted) == 0:
-        print(f"[multihop_auto_cluster] layer {layer}: skipping cluster plot (fewer than 2 fit datasets).")
+        print(f"[multihop_experiment] layer {layer}: skipping cluster plot (fewer than 2 fit datasets).")
         return
 
     n_components = X_reduced.shape[1]
@@ -758,7 +758,7 @@ def run_auto_clustering(
             task_field=task_field, subset_indices=None,
         )
         counts_vals = list(fit_counts.values())
-        print(f"[multihop_auto_cluster] dataset sizes (auto_cluster_using={auto_cluster_using!r}, "
+        print(f"[multihop_experiment] dataset sizes (auto_cluster_using={auto_cluster_using!r}, "
               f"fit set = {len(fit_indices)}/{len(eligible)} examples):")
         print(f"  fit-set vector count per dataset: min={min(counts_vals)}, "
               f"median={int(np.median(counts_vals))}, max={max(counts_vals)}")
@@ -803,7 +803,7 @@ def run_auto_clustering(
         for L in range(n_layers):
             evr = pca_explained_variance_by_layer[L]
             if len(evr) > 0:
-                print(f"[multihop_auto_cluster] layer {L}: PCA({pca_n_components}) explained variance "
+                print(f"[multihop_experiment] layer {L}: PCA({pca_n_components}) explained variance "
                       f"= {float(np.sum(evr)):.3f} (per-component: {[round(float(v), 3) for v in evr]})")
 
     exact_mu = {c: [np.zeros(d_model, dtype=np.float32) for _ in range(n_layers)] for c in all_cluster_labels}
@@ -818,7 +818,7 @@ def run_auto_clustering(
     debug = None
     if debug_mode:
         if manual_clusters is None:
-            print("[multihop_auto_cluster] debug_mode=True but manual_clusters not provided; "
+            print("[multihop_experiment] debug_mode=True but manual_clusters not provided; "
                   "skipping ground-truth comparison.")
         else:
             debug = _compare_to_manual(
@@ -826,7 +826,7 @@ def run_auto_clustering(
                 default_label=manual_default_label,
             )
             for L in sorted(debug["ari_by_layer"].keys()):
-                print(f"[multihop_auto_cluster] layer {L}: ARI vs manual = {debug['ari_by_layer'][L]:.3f} "
+                print(f"[multihop_experiment] layer {L}: ARI vs manual = {debug['ari_by_layer'][L]:.3f} "
                       f"(auto k={k_by_layer[L]})")
 
     result = {
@@ -887,7 +887,7 @@ def save_auto_clusters(result, save_path):
     }
     with open(save_path, "w") as f:
         json.dump(payload, f, indent=2)
-    print(f"[multihop_auto_cluster] Saved auto clusters to: {save_path}")
+    print(f"[multihop_experiment] Saved auto clusters to: {save_path}")
 
 
 def load_auto_clusters(save_path):

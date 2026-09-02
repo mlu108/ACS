@@ -491,9 +491,15 @@ def count_primitives(inp_tokens: List[str], dedup: bool = False) -> int:
 def example_orthogonality_score(
     inp_tokens: List[str],
     atomic_reps: Dict[str, torch.Tensor],
-    aggregation: str = "min",
+    aggregation: str = "cumulative_coherence",
     no_duplicate_in_example_ortho: bool = True,
 ) -> Tuple[float, int]:
+    if aggregation != "cumulative_coherence":
+        raise ValueError(
+            f"Unsupported aggregation: {aggregation!r}. Only 'cumulative_coherence' "
+            "(the paper's CI metric) is supported."
+        )
+
     # Only consider input tokens that are known atomic concepts
     atomic_tok_set = set(ATOMIC_TOKENS)
     seen: set = set()
@@ -507,52 +513,19 @@ def example_orthogonality_score(
                 raise KeyError(f"Token {tok} missing from atomic representations")
             vecs.append(atomic_reps[tok])
 
-    if aggregation == "cumulative_coherence":
-        # For each concept i, compute its mean pairwise orthogonality with all other
-        # concepts in the example.  The per-concept mean equals 1 - mean|cos(i,j)|,
-        # so min(per-concept means) = 1 - max(mean |cos| per concept) = 1 - CI.
-        # Storing (1 - CI) keeps the same convention as other aggregations:
-        # low value = concepts are coherent = hard for compositional generalization.
-        n = len(vecs)
-        if n < 2:
-            return 1.0, 0
-        per_concept_means = []
-        for i in range(n):
-            others = [orthogonality(vecs[i], vecs[j]) for j in range(n) if j != i]
-            per_concept_means.append(float(np.mean(others)))
-        return float(np.min(per_concept_means)), n
-
-    if aggregation == "cumulative_coherence_l2":
-        # L2 variant: per-concept score = sqrt(mean_j |cos(i,j)|^4) across j≠i.
-        # |cos(i,j)| = 1 - orthogonality(i,j).
-        # Result = 1 - max_i(sqrt(mean_j |cos(i,j)|^4)).
-        # Low value = concepts are coherent (concentrated alignment).
-        n = len(vecs)
-        if n < 2:
-            return 1.0, 0
-        per_concept_l2 = []
-        for i in range(n):
-            abs_cos = np.array([1.0 - orthogonality(vecs[i], vecs[j]) for j in range(n) if j != i])
-            per_concept_l2.append(float(np.sqrt(np.mean(abs_cos ** 4))))
-        return float(1.0 - max(per_concept_l2)), n
-
-    pair_scores = []
-    for i in range(len(vecs)):
-        for j in range(i + 1, len(vecs)):
-            pair_scores.append(orthogonality(vecs[i], vecs[j]))
-
-    if len(pair_scores) == 0:
+    # For each concept i, compute its mean pairwise orthogonality with all other
+    # concepts in the example.  The per-concept mean equals 1 - mean|cos(i,j)|,
+    # so min(per-concept means) = 1 - max(mean |cos| per concept) = 1 - CI.
+    # Storing (1 - CI): low value = concepts are coherent = hard for compositional
+    # generalization.
+    n = len(vecs)
+    if n < 2:
         return 1.0, 0
-
-    if aggregation == "mean":
-        return float(np.mean(pair_scores)), len(pair_scores)
-    if aggregation == "sum":
-        return float(np.sum(pair_scores)), len(pair_scores)
-    if aggregation == "min":
-        return float(np.min(pair_scores)), len(pair_scores)
-    if aggregation == "max":
-        return float(np.max(pair_scores)), len(pair_scores)
-    raise ValueError(f"Unknown aggregation: {aggregation}")
+    per_concept_means = []
+    for i in range(n):
+        others = [orthogonality(vecs[i], vecs[j]) for j in range(n) if j != i]
+        per_concept_means.append(float(np.mean(others)))
+    return float(np.min(per_concept_means)), n
 
 
 def analyze_examples(
@@ -561,7 +534,7 @@ def analyze_examples(
     token2id: Dict[str, int],
     atomic_reps_by_layer: Dict[int, Dict[str, torch.Tensor]],
     max_new_tokens: int,
-    aggregation: str = "mean",
+    aggregation: str = "cumulative_coherence",
     no_duplicate_in_example_ortho: bool = True,
     checkpoint_path: Optional[str] = None,
     split_name: Optional[str] = None,
@@ -2600,7 +2573,7 @@ def main():
     parser.add_argument("--train_fraction", type=float, default=0.8)
     parser.add_argument("--exposure_ratio", type=float, default=1.0)
     parser.add_argument("--dev_fraction", type=float, default=0.1)
-    parser.add_argument("--aggregation", type=str, default="min", choices=["mean", "sum", "min", "max", "cumulative_coherence", "cumulative_coherence_l2"])
+    parser.add_argument("--aggregation", type=str, default="cumulative_coherence", choices=["cumulative_coherence"])
     parser.add_argument("--layer", type=int, default=None)
     parser.add_argument("--bin_width", type=float, default=0.1)
     parser.add_argument("--data_mode", type=str, default="size_variation", choices=["exposure", "size_variation"])

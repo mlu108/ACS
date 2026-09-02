@@ -323,6 +323,12 @@ _arg_parser.add_argument(
     "--experiments_dir", type=str, default="multihop_experiments",
     help="Root directory for auto-cluster JSON/plots (default: multihop_experiments).",
 )
+_arg_parser.add_argument(
+    "--manual_cluster", action=argparse.BooleanOptionalAction, default=True,
+    help="Use the hand-picked A/B/C dataset groups for cluster-mean-centering "
+         "instead of run_auto_clustering's per-layer KMeans (default: True). "
+         "Pass --no-manual_cluster to use auto-clustering instead.",
+)
 _args, _unknown_argv = _arg_parser.parse_known_args()
 model_name = _args.model_name
 EXPERIMENTS_DIR = _args.experiments_dir
@@ -607,7 +613,7 @@ import os
 import numpy as np
 from tqdm import tqdm
 
-from multihop_auto_cluster import (
+from multihop_experiment import (
     run_auto_clustering, load_auto_clusters, resolve_cluster_label, print_cluster_report,
 )
 
@@ -615,7 +621,7 @@ from multihop_auto_cluster import (
 # Automatic per-layer clustering (replaces hand-picked A/B/C dataset groups).
 # Cluster membership is now allowed to differ by layer, so task_to_cluster is
 # {layer: {task: cluster_label}} rather than a flat, layer-constant dict.
-# See multihop_auto_cluster.py: KMeans over balanced per-task centroids, k
+# See multihop_experiment.py: KMeans over balanced per-task centroids, k
 # chosen per layer by silhouette score, fit on a train-only subset by default
 # (auto_cluster_using='train') to avoid leaking test examples into the
 # cluster centers used to center them.
@@ -633,8 +639,9 @@ CLUSTER_MEAN_CENTER = True
 
 # If True, skip run_auto_clustering entirely and instead build task_to_cluster /
 # exact_mu directly from the hand-picked A/B/C dataset groups below (same logic
-# as the manual clustering block in multihop_experiments.py).
-MANUAL_CLUSTER = True
+# as the manual clustering block in multihop_experiments.py). Set via
+# --manual_cluster/--no-manual_cluster (default: True).
+MANUAL_CLUSTER = _args.manual_cluster
 
 AUTO_CLUSTER_USING = "train"   # "train" (no test leakage, recommended) or "all"
 AUTO_CLUSTER_DEBUG_MODE = True   # if True, print per-cluster datasets + compare against manual A/B/C
@@ -2341,7 +2348,7 @@ import json
 import numpy as np
 from tqdm import tqdm
 
-from multihop_auto_cluster import resolve_cluster_label as _resolve_cluster_label
+from multihop_experiment import resolve_cluster_label as _resolve_cluster_label
 
 
 def _get_cluster_center_for_task(task, layer, task_to_cluster, exact_mu, cluster_default="C"):
@@ -3396,29 +3403,6 @@ def compute_tasklevel_geometry_from_runs(
             "q2": rep_q2,
         }
 
-        mean_feats = compute_mean_geometry_features(rep_q1["mean"], rep_q2["mean"])
-
-        sub_feats = compute_subspace_geometry_features(
-            rep_q1["basis"],
-            rep_q2["basis"],
-            svd_values1=rep_q1["singular_values"],
-            svd_values2=rep_q2["singular_values"],
-            #include_signed_basis_features=include_signed_basis_features,
-        )
-
-        cross_feats = {}
-        if include_cross_features:
-            cross_feats.update(
-                compute_mean_subspace_features(
-                    rep_q1["mean"], rep_q2["basis"], "mean1_to_sub2"
-                )
-            )
-            cross_feats.update(
-                compute_mean_subspace_features(
-                    rep_q2["mean"], rep_q1["basis"], "mean2_to_sub1"
-                )
-            )
-
         rows.append({
             "task": task,
             "layer": int(L),
@@ -3435,9 +3419,6 @@ def compute_tasklevel_geometry_from_runs(
             "mean_norm_ratio": float(
                 np.linalg.norm(rep_q1["mean"]) / np.linalg.norm(rep_q2["mean"])
             ) if np.linalg.norm(rep_q2["mean"]) > 0 else np.nan,
-            **mean_feats,
-            **sub_feats,
-            **cross_feats,
         })
 
     # ── subspace_subspace_angle_by_cumulative_coherence ────────────────────────────────
@@ -3447,26 +3428,12 @@ def compute_tasklevel_geometry_from_runs(
         t = row["task"]
         W_q1 = task_reps[t]["q1"]["basis"]
         W_q2 = task_reps[t]["q2"]["basis"]
-        sv_q1 = task_reps[t]["q1"]["singular_values"]
-        sv_q2 = task_reps[t]["q2"]["singular_values"]
         if W_q1.shape[1] > 0 and W_q2.shape[1] > 0:
             coh = _pairwise_coherence(W_q1, W_q2)
-            coh_w = _pairwise_coherence_weighted(W_q1, W_q2, sv_q1, sv_q2, weight_mode=sv_weight_mode)
-            coh_L2 = _pairwise_coherence_L2(W_q1, W_q2)
-            coh_sum = _pairwise_coherence_sum(W_q1, W_q2)
-            coh_fsm = _pairwise_coherence_full_set_mean(W_q1, W_q2)
         else:
-            coh = coh_w = coh_L2 = coh_sum = coh_fsm = np.nan
+            coh = np.nan
         row["subspace_subspace_angle_by_cumulative_coherence"] = 1.0 - abs(coh) if np.isfinite(coh) else np.nan
-        row["subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values"] = 1.0 - abs(coh_w) if np.isfinite(coh_w) else np.nan
-        row["subspace_subspace_angle_by_cumulative_coherence_L2"] = 1.0 - abs(coh_L2) if np.isfinite(coh_L2) else np.nan
-        row["subspace_subspace_angle_by_cumulative_coherence_sum"] = 1.0 - abs(coh_sum) if np.isfinite(coh_sum) else np.nan
-        row["subspace_subspace_angle_by_cumulative_coherence_full_set_mean"] = 1.0 - abs(coh_fsm) if np.isfinite(coh_fsm) else np.nan
         task_reps[t]["subspace_subspace_angle_by_cumulative_coherence"] = row["subspace_subspace_angle_by_cumulative_coherence"]
-        task_reps[t]["subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values"] = row["subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values"]
-        task_reps[t]["subspace_subspace_angle_by_cumulative_coherence_L2"] = row["subspace_subspace_angle_by_cumulative_coherence_L2"]
-        task_reps[t]["subspace_subspace_angle_by_cumulative_coherence_sum"] = row["subspace_subspace_angle_by_cumulative_coherence_sum"]
-        task_reps[t]["subspace_subspace_angle_by_cumulative_coherence_full_set_mean"] = row["subspace_subspace_angle_by_cumulative_coherence_full_set_mean"]
 
     return rows, task_reps
 
@@ -4024,22 +3991,7 @@ def select_best_layer_by_train_auc_and_plot_test_for_datasets(
     sweep_subspace_var_prop = list(sweep_subspace_var_prop)
 
     x_keys = _ss_x_keys = [
-        "mean_mean_ortho",
-        "sub_sub_min_angle_ortho",
-        "sub_sub_max_angle_ortho",
-        "sub_sub_mean_angle_ortho",
-        "sub_sub_principal_min_angle_ortho",
-        "sub_sub_principal_max_angle_ortho",
-        "sub_sub_principal_mean_angle_ortho",
-        "sub_sub_fro_ortho",
-        "sub_sub_mean_weighted_angle_ortho",
-        "sub_sub_one_minus_spectral_norm",
-        "sub_sub_one_minus_spectral_norm_unnormalized",
         "subspace_subspace_angle_by_cumulative_coherence",
-        "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values",
-        "subspace_subspace_angle_by_cumulative_coherence_L2",
-        "subspace_subspace_angle_by_cumulative_coherence_sum",
-        "subspace_subspace_angle_by_cumulative_coherence_full_set_mean",
     ]
 
     # =========================================================
@@ -4156,85 +4108,6 @@ def select_best_layer_by_train_auc_and_plot_test_for_datasets(
             point_size=180,
             title_suffix=f" | dev-best vp={_vp_sel} L={_layer_sel}",
             file_suffix=_var_suffix,
-        )
-
-    # Multi-mode SVGs for the weighted metric only (also sweeps var_prop)
-    _weighted_ss_metric = "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values"
-    for _wm in ["sv", "sv_squared", "none"]:
-        if _wm == sv_weight_mode:
-            _wm_dev_rows_by_vp_layer = _ss_dev_rows_by_vp_layer
-        else:
-            _wm_dev_rows_by_vp_layer = {}
-            for _vp in sweep_subspace_var_prop:
-                for _wm_layer in range(n_layers):
-                    _wm_dev_rows, _ = compute_tasklevel_geometry_from_runs(
-                        eligible_dev, runs, layer=_wm_layer,
-                        subspace_var_prop=_vp, subspace_center=subspace_center,
-                        min_examples_per_task=2, task_field=dataset_field,
-                        sv_weight_mode=_wm,
-                    )
-                    _wm_dev_rows_by_vp_layer[(_vp, _wm_layer)] = _wm_dev_rows
-
-        # Find best (var_prop, layer) for the weighted metric under this weight mode
-        _wm_best_key, _wm_best_score = None, -np.inf
-        if _wm == sv_weight_mode and _ss_best_vp_layer.get(_weighted_ss_metric) is not None:
-            _wm_best_key = _ss_best_vp_layer[_weighted_ss_metric]
-            _wm_best_score = float("nan")
-        else:
-            for _vp in sweep_subspace_var_prop:
-                for _wm_layer in range(n_layers):
-                    _wm_dev_vals = [
-                        (r[_weighted_ss_metric], r["task_mean_acc"])
-                        for r in _wm_dev_rows_by_vp_layer[(_vp, _wm_layer)]
-                        if _weighted_ss_metric in r
-                        and np.isfinite(r[_weighted_ss_metric])
-                        and np.isfinite(r["task_mean_acc"])
-                    ]
-                    if len(_wm_dev_vals) < 3:
-                        continue
-                    _wm_xs_d = np.array([v[0] for v in _wm_dev_vals])
-                    _wm_ys_d = np.array([v[1] for v in _wm_dev_vals])
-                    if np.std(_wm_xs_d) < 1e-12 or np.std(_wm_ys_d) < 1e-12:
-                        continue
-                    _wm_score, _ = pearsonr(_wm_xs_d, _wm_ys_d)
-                    if _wm_score > _wm_best_score:
-                        _wm_best_score, _wm_best_key = _wm_score, (_vp, _wm_layer)
-
-        if _wm_best_key is None:
-            print(f"[SubSub-{_wm}] No valid dev (var_prop, layer) for {_weighted_ss_metric}, skipping")
-            continue
-        _wm_vp, _wm_best_layer = _wm_best_key
-        print(f"[SubSub-{_wm}] dev best var_prop={_wm_vp}, layer={_wm_best_layer}, score={_wm_best_score}")
-        _wm_var_suffix = f"_vp{_wm_vp}_layer{_wm_best_layer}"
-
-        if _wm == sv_weight_mode and _wm_best_key in _ss_test_rows_by_vp_layer:
-            _wm_test_rows = _ss_test_rows_by_vp_layer[_wm_best_key]
-        else:
-            _wm_test_rows, _ = compute_tasklevel_geometry_from_runs(
-                eligible_test, runs, layer=_wm_best_layer,
-                subspace_var_prop=_wm_vp, subspace_center=subspace_center,
-                min_examples_per_task=2, task_field=dataset_field,
-                sv_weight_mode=_wm,
-            )
-        plot_tasklevel_feature_vs_accuracy(
-            _wm_dev_rows_by_vp_layer[_wm_best_key],
-            x_keys=[_weighted_ss_metric],
-            y_key="task_mean_acc",
-            save_dir=subsub_dev_save_dir,
-            show=show,
-            point_size=180,
-            title_suffix=f" | dev-best vp={_wm_vp} L={_wm_best_layer} (dev)",
-            file_suffix=f"{_wm_var_suffix}_svwt_{_wm}",
-        )
-        plot_tasklevel_feature_vs_accuracy(
-            _wm_test_rows,
-            x_keys=[_weighted_ss_metric],
-            y_key="task_mean_acc",
-            save_dir=subsub_save_dir,
-            show=show,
-            point_size=180,
-            title_suffix=f" | dev-best vp={_wm_vp} L={_wm_best_layer}",
-            file_suffix=f"{_wm_var_suffix}_svwt_{_wm}",
         )
 
     # =========================================================

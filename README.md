@@ -23,7 +23,7 @@ composed-query accuracy.
 `pip install -r requirements.txt` sets up the environment (Python 3.10) for every pipeline
 below, SCAN included.
 
-`helpers.py`, `multihop_auto_cluster.py`, and `multilingual_experiment_auc_plots.py` are
+`helpers.py`, `multihop_experiment.py`, and `multilingual_experiment_auc_plots.py` are
 shared helpers, imported by the scripts below rather than run directly.
 
 ---
@@ -98,10 +98,14 @@ python multihop_experiments_auto_cluster_center.py --model_name llama-3b --exper
   underscores) — which stage 2 looks for automatically, so just keep `--model_name`
   consistent between the two commands.
 - `multihop_experiments_auto_cluster_center.py` builds `a_f`/`a_g` from the stage-1 residuals,
-  auto-clusters tasks by composition family, and computes CI to predict composed-query
+  clusters tasks by composition family, and computes CI to predict composed-query
   accuracy (the multihop curve in Figure 4a). Loads a tokenizer only — no model weights, no
-  GPU. Writes auto-cluster plots (`.svg`/`.html`) and tables (`.json`) under
+  GPU. Writes cluster plots (`.svg`/`.html`) and tables (`.json`) under
   `--experiments_dir` (default `multihop_experiments/`).
+  Clustering itself defaults to the hand-picked A/B/C dataset groups
+  (`--manual_cluster`, default `True`); pass `--no-manual_cluster` to use
+  `multihop_experiment.py`'s per-layer auto-clustering (KMeans over dataset
+  centroids) instead.
 
 ---
 

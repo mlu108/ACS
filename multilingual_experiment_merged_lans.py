@@ -2274,23 +2274,6 @@ def single_geometry_computation(feature, X1, vL_or_WL, eps: float = 1e-12, sv_we
     """
     feature = str(feature).lower()
 
-    # ----------------------------
-    # features depending only on X1
-    # ----------------------------
-    if feature == "en_fact_norm":
-        return np.linalg.norm(X1, axis=1)
-
-    elif feature == "en_fact_density":
-        l2 = np.linalg.norm(X1, axis=1)
-        l1 = np.sum(np.abs(X1), axis=1)
-        return l1 / np.clip(l2, eps, None)
-
-    elif feature == "en_fact_max_coordinate_fraction":
-        l2 = np.linalg.norm(X1, axis=1)
-        max_abs = np.max(np.abs(X1), axis=1)
-        return max_abs / np.clip(l2, eps, None)
-
-    # from here on, we need a vector/subspace signal
     if vL_or_WL is None:
         raise ValueError(f"Feature '{feature}' requires a language-side signal, but got None.")
 
@@ -2298,237 +2281,24 @@ def single_geometry_computation(feature, X1, vL_or_WL, eps: float = 1e-12, sv_we
     is_vector = (arr.ndim == 1)
     is_subspace = (arr.ndim == 2)
 
-    # ----------------------------
-    # vector-vector features
-    # ----------------------------
-    if feature == "vec_vec_cosine":
-        if not is_vector:
-            raise ValueError(f"Feature '{feature}' requires a vector signal.")
-        return _cos_vec_vec(X1, vL_or_WL)
-
-    elif feature == "vec_vec_orthogonality":
+    # vec_vec_orthogonality: cumulative coherence's two-concept reduction (just the
+    # angle between the two vectors) — used when the language-side signal is a
+    # single vector rather than a subspace.
+    if feature == "vec_vec_orthogonality":
         if not is_vector:
             raise ValueError(f"Feature '{feature}' requires a vector signal.")
         cos = _cos_vec_vec(X1, vL_or_WL)
         return 1.0 - abs(cos)
 
-    elif feature == "vec_vec_angle_radians":
-        if not is_vector:
-            raise ValueError(f"Feature '{feature}' requires a vector signal.")
-        cos = np.clip(_cos_vec_vec(X1, vL_or_WL), -1.0, 1.0)
-        return np.arccos(cos)
-
-    # ----------------------------
-    # vector-subspace features
-    # ----------------------------
-    elif feature == "vec_subspace_cosine":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return _cos_vec_subspace(X1, vL_or_WL)
-
-    elif feature in ("vec_subspace_orthogonality", "vec_subspace_ortho"):
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        cos = _cos_vec_subspace(X1, vL_or_WL)
-        return 1.0 - cos
-
-    elif feature == "vec_subspace_mean":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return 1.0 - _per_basis_abs_cos(X1, vL_or_WL, eps).mean(axis=1)
-
-    elif feature == "vec_subspace_min":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return 1.0 - _per_basis_abs_cos(X1, vL_or_WL, eps).max(axis=1)
-
-    elif feature == "vec_subspace_pairwise_max_sim":
-        # 1 - max_j(|v·w_j|/||v||): most-similar W_L basis vector to v (min pairwise angle)
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return 1.0 - _per_basis_abs_cos(X1, vL_or_WL, eps).max(axis=1)
-
-    elif feature == "vec_subspace_pairwise_min_sim":
-        # 1 - min_j(|v·w_j|/||v||): least-similar W_L basis vector to v (max pairwise angle)
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return 1.0 - _per_basis_abs_cos(X1, vL_or_WL, eps).min(axis=1)
-
-    elif feature == "vec_subspace_mean_weighted_by_variance":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        abs_cos = _per_basis_abs_cos(X1, vL_or_WL, eps)
-        if sv_weights is None:
-            return 1.0 - abs_cos.mean(axis=1)
-        k = abs_cos.shape[1]
-        sv = np.asarray(sv_weights[:k], dtype=np.float64)
-        if sv_weight_mode == "sv_squared":
-            w = sv ** 2
-            w_sum = w.sum()
-            weighted = (abs_cos @ w) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-        elif sv_weight_mode == "sv":
-            w_sum = sv.sum()
-            weighted = (abs_cos @ sv) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-        else:  # "none": direct sv-weighted sum, no normalisation
-            weighted = abs_cos @ sv
-        return 1.0 - weighted
-
-    elif feature == "vec_subspace_orthogonality_abs":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        cos = _cos_vec_subspace(X1, vL_or_WL)
-        return 1.0 - abs(cos)
-
-    elif feature == "vec_subspace_angle_radians":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        cos = np.clip(_cos_vec_subspace(X1, vL_or_WL), 0.0, 1.0)
-        return np.arccos(cos)
-
-    elif feature == "vec_subspace_mean_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return _vec_subspace_mean_angle(X1, vL_or_WL, eps)
-
-    elif feature == "vec_subspace_min_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        return _vec_subspace_min_angle(X1, vL_or_WL, eps)
-
-    elif feature == "vec_subspace_mean_weighted_by_variance_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        if sv_weights is None:
-            return _vec_subspace_mean_angle(X1, vL_or_WL, eps)
-        return _vec_subspace_mean_weighted_angle(X1, vL_or_WL, sv_weights, eps, sv_weight_mode=sv_weight_mode)
-
-    elif feature == "vec_subspace_angle_by_cumulative_coherence_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        W = np.asarray(vL_or_WL, dtype=np.float64)
-        norms = np.linalg.norm(X1, axis=1, keepdims=True)
-        abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)
-        return np.arccos(np.clip(abs_cos.mean(axis=1), 0.0, 1.0))
-
-    elif feature == "vec_subspace_angle_by_cumulative_coherence_l2_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        W = np.asarray(vL_or_WL, dtype=np.float64)
-        norms = np.linalg.norm(X1, axis=1, keepdims=True)
-        abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)
-        return np.arccos(np.clip(np.sqrt((abs_cos ** 4).mean(axis=1)), 0.0, 1.0))
-
-    elif feature == "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_arccos":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        W = np.asarray(vL_or_WL, dtype=np.float64)
-        k = W.shape[1]
-        norms = np.linalg.norm(X1, axis=1, keepdims=True)
-        abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)
-        if sv_weights is not None and len(sv_weights) >= k:
-            sv = np.asarray(sv_weights[:k], dtype=np.float64)
-            if sv_weight_mode == "sv_squared":
-                w = sv ** 2
-                w_sum = w.sum()
-                weighted = (abs_cos @ w) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-            elif sv_weight_mode == "sv":
-                w_sum = sv.sum()
-                weighted = (abs_cos @ sv) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-            else:  # "none": direct sv-weighted sum, no normalisation
-                weighted = abs_cos @ sv
-        else:
-            weighted = abs_cos.mean(axis=1)
-        return np.arccos(np.clip(weighted, 0.0, 1.0))
-
-    elif feature == "vec_subspace_angle_by_cumulative_coherence_l2":
-        # 1 - sqrt(mean(|v·w_i|/||v||)^4) — matches _pairwise_coherence_L2's sqrt(mean(cos^4))
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        W = np.asarray(vL_or_WL, dtype=np.float64)
-        norms = np.linalg.norm(X1, axis=1, keepdims=True)
-        abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)  # [n, k]
-        return 1.0 - np.sqrt((abs_cos ** 4).mean(axis=1))  # [n]
-
     elif feature == "vec_subspace_angle_by_cumulative_coherence":
-        # 1 - abs(mean(sim_vec)) where sim_vec[i] = |v·w_i|/||v||
+        # 1 - abs(mean(sim_vec)) where sim_vec[i] = |v·w_i|/||v|| — the paper's CI
+        # metric between a vector and a subspace.
         if not is_subspace:
             raise ValueError(f"Feature '{feature}' requires a subspace signal.")
         W = np.asarray(vL_or_WL, dtype=np.float64)
         norms = np.linalg.norm(X1, axis=1, keepdims=True)  # [n,1]
         abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)  # [n, k]
         return 1.0 - np.abs(abs_cos.mean(axis=1))  # [n]
-
-    elif feature == "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values":
-        # 1 - abs(weighted_sum(|v·w_i|/||v||))
-        # "sv"/"sv_squared": normalised by sum of weights; "none": direct sv-weighted sum
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        W = np.asarray(vL_or_WL, dtype=np.float64)
-        k = W.shape[1]
-        norms = np.linalg.norm(X1, axis=1, keepdims=True)  # [n,1]
-        abs_cos = np.abs(X1 @ W) / np.clip(norms, eps, None)  # [n, k]
-        if sv_weights is not None and len(sv_weights) >= k:
-            sv = np.asarray(sv_weights[:k], dtype=np.float64)
-            if sv_weight_mode == "sv_squared":
-                w = sv ** 2
-                w_sum = w.sum()
-                weighted = (abs_cos @ w) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-            elif sv_weight_mode == "sv":
-                w_sum = sv.sum()
-                weighted = (abs_cos @ sv) / w_sum if w_sum > eps else abs_cos.mean(axis=1)
-            else:  # "none": direct sv-weighted sum, no normalisation
-                weighted = abs_cos @ sv
-        else:
-            weighted = abs_cos.mean(axis=1)
-        return 1.0 - np.abs(weighted)  # [n]
-
-    elif feature == "squared_energy_projection":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        # WL assumed orthonormal, so ||P_U(x)||^2 = ||xW||^2
-        coeff = X1 @ vL_or_WL                  # [n, k]
-        proj_sq = np.sum(coeff ** 2, axis=1)
-        x_sq = np.sum(X1 ** 2, axis=1)
-        return proj_sq / np.clip(x_sq, eps, None)
-
-    elif feature == "residual_energy_fraction":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        coeff = X1 @ vL_or_WL
-        proj_sq = np.sum(coeff ** 2, axis=1)
-        x_sq = np.sum(X1 ** 2, axis=1)
-        return 1.0 - (proj_sq / np.clip(x_sq, eps, None))
-
-    # ----------------------------
-    # projection coefficient distribution features
-    # ----------------------------
-    
-    elif feature == "projection_coefficient_l1_over_l2":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        coeff = X1 @ vL_or_WL                  # [n, k]
-        coeff_l1 = np.sum(np.abs(coeff), axis=1)
-        coeff_l2 = np.linalg.norm(coeff, axis=1)
- 
-        return coeff_l1 / np.clip(coeff_l2, eps, None)
-
-    elif feature == "projection_max_fraction":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        coeff = X1 @ vL_or_WL                  # [n, k]
-        coeff_max = np.max(np.abs(coeff), axis=1)
-        coeff_l2 = np.linalg.norm(coeff, axis=1)
-        return coeff_max / np.clip(coeff_l2, eps, None)
-
-    elif feature == "projection_entropy":
-        if not is_subspace:
-            raise ValueError(f"Feature '{feature}' requires a subspace signal.")
-        coeff = X1 @ vL_or_WL                  # [n, k]
-        coeff_sq = coeff ** 2                  # [n, k]
-        denom = np.sum(coeff_sq, axis=1, keepdims=True)
-        p = coeff_sq / np.clip(denom, eps, None)
-        # entropy over projection-energy distribution
-        return -np.sum(p * np.log(np.clip(p, eps, None)), axis=1)
 
     else:
         raise ValueError(f"Unknown feature: {feature}")
@@ -2553,7 +2323,7 @@ def compute_geometric_feature(
     target_kind: str = "prob",
     rank_kind: str = "rank_if_in_topk_else_lower_bound",
     y_transform: str = "identity",
-    feature="vec_subspace_orthogonality",
+    feature="vec_subspace_angle_by_cumulative_coherence",
     translation_data_dirs: dict,
     prefer_filled_N: bool = True,
     min_n: int = 100,
@@ -3270,25 +3040,14 @@ def compute_geometric_feature(
                 "relation": relation_m,
                 "meta": {**meta_common, "separate_correct_incorrect_examples": False},
             }
-            # Always compute vec-subspace coherence features when WL is available
+            # Always compute the vec-subspace cumulative-coherence feature when WL is
+            # available, under its own name — used directly by callers that look it up
+            # by key (e.g. EXP1_SRC_TGT_X_KEY / EXP1_TABLE_X_KEY), independent of
+            # whichever `feature` drove x_ortho above.
             WL_coh = W_by_lang.get(L, None)
             if WL_coh is not None and WL_coh.ndim == 2 and WL_coh.shape[1] > 0:
-                sv_coh = sv_by_lang.get(L, None)
                 pack["vec_subspace_angle_by_cumulative_coherence"] = geometry_computation(
                     "vec_subspace_angle_by_cumulative_coherence", X_base, WL_coh)
-                pack["vec_subspace_angle_by_cumulative_coherence_L2"] = geometry_computation(
-                    "vec_subspace_angle_by_cumulative_coherence_L2", X_base, WL_coh)
-                pack["vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values"] = geometry_computation(
-                    "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values", X_base, WL_coh,
-                    sv_weights=sv_coh, sv_weight_mode=sv_weight_mode)
-                for _sv_wm in ("sv", "sv_squared", "none"):
-                    pack[f"vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_{_sv_wm}"] = geometry_computation(
-                        "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values", X_base, WL_coh,
-                        sv_weights=sv_coh, sv_weight_mode=_sv_wm)
-                pack["vec_subspace_pairwise_max_sim"] = geometry_computation(
-                    "vec_subspace_pairwise_max_sim", X_base, WL_coh)
-                pack["vec_subspace_pairwise_min_sim"] = geometry_computation(
-                    "vec_subspace_pairwise_min_sim", X_base, WL_coh)
             out[L] = pack
 
     if not store_X_base:
@@ -4305,14 +4064,9 @@ def compute_relation_subspace_metrics_for_layer(
 ):
     """
     For each relation group in pack, build a SVD subspace from X_base vectors,
-    then compute _subspace_metrics() and pairwise coherence against W_L.
+    then compute the cumulative-coherence pairwise metric against W_L.
 
-    Returns dict: rel_str -> {'n', 'y_mean', 'ortho_*',
-                               'subspace_subspace_angle_by_cumulative_coherence',
-                               'subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values',
-                               'subspace_subspace_angle_by_cumulative_coherence_L2',
-                               'subspace_subspace_angle_by_cumulative_coherence_sum',
-                               'subspace_subspace_angle_by_cumulative_coherence_full_set_mean'}
+    Returns dict: rel_str -> {'n', 'y_mean', 'subspace_subspace_angle_by_cumulative_coherence'}
     """
     X_base = np.asarray(pack.get("X_base", []), dtype=np.float64)
     y_vals = np.asarray(pack.get("y", []), dtype=np.float64)
@@ -4324,12 +4078,6 @@ def compute_relation_subspace_metrics_for_layer(
     W_L = _orthonormalize(np.asarray(W_L, dtype=np.float64))
     if W_L.shape[1] == 0:
         return {}
-
-    sv_WL_arr = (
-        np.asarray(sv_WL, dtype=np.float64)
-        if sv_WL is not None
-        else np.ones(W_L.shape[1], dtype=np.float64)
-    )
 
     result = {}
     unique_rels = sorted({str(r) for r in rel_arr.tolist() if r is not None and str(r) != "None"})
@@ -4345,23 +4093,13 @@ def compute_relation_subspace_metrics_for_layer(
         mu_rel, W_rel, S_rel = _build_svd_subspace(X_rel, var_prop=var_prop_en, center=center)
         if W_rel.shape[1] == 0:
             continue
-        mets = _subspace_metrics(W_rel, mu_rel, W_L, mu_L=mu_L, sv_weights=S_rel)
 
         coh = _pairwise_coherence(W_rel, W_L)
-        coh_w = _pairwise_coherence_weighted(W_rel, W_L, S_rel, sv_WL_arr, weight_mode=sv_weight_mode)
-        coh_L2 = _pairwise_coherence_L2(W_rel, W_L)
-        coh_sum = _pairwise_coherence_sum(W_rel, W_L)
-        coh_fsm = _pairwise_coherence_full_set_mean(W_rel, W_L)
 
         result[str(rel)] = {
             "n": int(X_rel.shape[0]),
             "y_mean": float(np.mean(y_rel)),
             "subspace_subspace_angle_by_cumulative_coherence": float(1.0 - abs(coh)) if np.isfinite(coh) else np.nan,
-            "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values": float(1.0 - abs(coh_w)) if np.isfinite(coh_w) else np.nan,
-            "subspace_subspace_angle_by_cumulative_coherence_L2": float(1.0 - abs(coh_L2)) if np.isfinite(coh_L2) else np.nan,
-            "subspace_subspace_angle_by_cumulative_coherence_sum": float(1.0 - abs(coh_sum)) if np.isfinite(coh_sum) else np.nan,
-            "subspace_subspace_angle_by_cumulative_coherence_full_set_mean": float(1.0 - abs(coh_fsm)) if np.isfinite(coh_fsm) else np.nan,
-            **mets,
         }
     return result
 
@@ -4620,7 +4358,7 @@ if isinstance(lang_mode, (list, tuple)):#subspace
     if "mean_vector" in lang_mode[0]:
         feature ='vec_vec_orthogonality'
     else:
-        feature='vec_subspace_orthogonality' #vec_subspace_orthogonality_abs
+        feature='vec_subspace_angle_by_cumulative_coherence'
     base_or_random_mode_list = ['en_fact']
 else:
     lang_mode_name = str(lang_mode)
@@ -5099,11 +4837,11 @@ def compute_exp1_src_tgt_subspace_control(
         scoring — substantially more expensive than "src_dev".
 
     `x_key` selects which CI feature drives the ranking — "x_ortho" is the
-    orthogonality-residual default, but any key computed by
-    compute_geometric_feature works, e.g. "vec_subspace_angle_by_cumulative_coherence"
-    (the "coherence" metric from _COHERENCE_PLOT_KEYS). Layer selection
+    cumulative-coherence default (any key computed by compute_geometric_feature
+    works, but the pipeline only ever computes cumulative coherence, e.g.
+    "vec_subspace_angle_by_cumulative_coherence"). Layer selection
     (dev_best_layers) is always the one chosen via x_ortho on the dev split —
-    same convention the coherence-tag plots elsewhere in Exp1 already use
+    same convention the coherence plots elsewhere in Exp1 already use
     (fixed_layers_to_plot=dev_best_layers regardless of x_key).
 
     Writes (filenames include layer_select so both modes coexist):
@@ -5540,7 +5278,7 @@ EXP1_SRC_TGT_sub_control_exp = True  # imported-subspace negative control: every
                                      # language's subspace vs every target language's facts
                                      # (see compute_exp1_src_tgt_subspace_control below)
 # Single metric used to rank facts for the SRC x TGT control matrix — the
-# "coherence" tag from _COHERENCE_PLOT_KEYS further below.
+# same cumulative-coherence metric used throughout Exp1.
 EXP1_SRC_TGT_X_KEY = "vec_subspace_angle_by_cumulative_coherence"
 EXP1_SRC_TGT_METRIC_TAG = "coherence"
 # Which layer_select mode to run for the SRC x TGT control — "src_dev"
@@ -5575,66 +5313,19 @@ MIN_EXAMPLES     = 5
 DATASET_VAR_PROP =0.99 #0.99
 SUBSPACE_CENTERED = False
 SV_WEIGHT_MODE = "none"  # "sv": normalised by sum(sv); "sv_squared": normalised by sum(sv²); "none": direct sv-weighted sum
-ALL_METRICS = ["ortho_max", "ortho_min", "ortho_mean",
-               "ortho_principal_max", "ortho_principal_min", "ortho_principal_mean",
-               "ortho_weighted_mean", "ortho_fro", "mu_ortho", "affine_ortho",
-               "subspace_subspace_angle_by_cumulative_coherence",
-               "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values",
-               "subspace_subspace_angle_by_cumulative_coherence_L2",
-               "subspace_subspace_angle_by_cumulative_coherence_sum",
-               "subspace_subspace_angle_by_cumulative_coherence_full_set_mean"]
-# Subset of ALL_METRICS to actually run in exp2.
-ACTIVE_METRICS = ["ortho_max", "ortho_min", "ortho_mean",
-                  "ortho_principal_max", "ortho_principal_min", "ortho_principal_mean",
-                  "ortho_fro", "mu_ortho", "affine_ortho", "ortho_weighted_mean",
-                  "subspace_subspace_angle_by_cumulative_coherence",
-                  "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values",
-                  "subspace_subspace_angle_by_cumulative_coherence_L2",
-                  "subspace_subspace_angle_by_cumulative_coherence_sum",
-                  "subspace_subspace_angle_by_cumulative_coherence_full_set_mean",
-                  "vec_subspace_mean_arccos",
-                  "vec_subspace_min_arccos",
-                  "vec_subspace_mean_weighted_by_variance_arccos",
-                  "vec_subspace_angle_by_cumulative_coherence_arccos",
-                  "vec_subspace_angle_by_cumulative_coherence_l2_arccos",
-                  "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_arccos"]
+ALL_METRICS = ["subspace_subspace_angle_by_cumulative_coherence"]
+# Subset of ALL_METRICS to actually run in exp2 — just the one CI metric.
+ACTIVE_METRICS = ["subspace_subspace_angle_by_cumulative_coherence"]
 _COHERENCE_METRICS = {
     "subspace_subspace_angle_by_cumulative_coherence",
-    "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values",
-    "subspace_subspace_angle_by_cumulative_coherence_L2",
-    "subspace_subspace_angle_by_cumulative_coherence_sum",
-    "subspace_subspace_angle_by_cumulative_coherence_full_set_mean",
 }
-_EXP2_WEIGHTED_METRICS = {
-    "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values",
-    "vec_subspace_mean_weighted_by_variance_arccos",
-    "vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_arccos",
-}
+# No weighted-coherence variant remains, so the sv_weight_mode sweep over
+# ["sv", "sv_squared", "none"] below is a no-op (kept only because the single
+# active metric doesn't need special-casing out of that loop).
+_EXP2_WEIGHTED_METRICS = set()
 METRIC_LABELS = {
-    "ortho_max":           "1 - max pairwise basis-vector cosine",
-    "ortho_min":           "1 - min pairwise basis-vector cosine",
-    "ortho_mean":          "1 - mean pairwise basis-vector cosine (corrected denominator)",
-    "ortho_principal_max": "1 - max principal-angle cosine",
-    "ortho_principal_min": "1 - min principal-angle cosine",
-    "ortho_principal_mean":"1 - mean principal-angle cosine",
-    "ortho_weighted_mean": "weighted mean(1 - cosθ), weights=singular values from data SVD",
-    "ortho_fro":           "1 - mean(cos²θ)  [Frobenius]",
-    "mu_ortho":            "1 - cos(mu_dataset, W_L)",
-    "affine_ortho":        "||(I-WW^T)(μ_rel−μ_L)|| / ||μ_rel−μ_L||",
     "subspace_subspace_angle_by_cumulative_coherence":
         "1 - |pairwise-coherence(W_rel, W_L)|",
-    "subspace_subspace_angle_by_cumulative_coherence_weighted_by_singular_values":
-        "1 - |pairwise-coherence(W_rel, W_L) weighted by singular values|",
-    "subspace_subspace_angle_by_cumulative_coherence_L2":
-        "1 - |L2-pairwise-coherence(W_rel, W_L) [sqrt(mean cos^4)]|",
-    "subspace_subspace_angle_by_cumulative_coherence_sum":
-        "1 - |pairwise-coherence(W_rel, W_L) [sum instead of mean]|",
-    "subspace_subspace_angle_by_cumulative_coherence_full_set_mean":
-        "1 - |pairwise-coherence(W_rel, W_L) [full-set mean: sum / (k1+k2-1)]|",
-    "vec_subspace_pairwise_max_sim":
-        "1 - max_j(|v·w_j|/||v||)  [most-similar W_L basis vector; min pairwise angle]",
-    "vec_subspace_pairwise_min_sim":
-        "1 - min_j(|v·w_j|/||v||)  [least-similar W_L basis vector; max pairwise angle]",
 }
 
 en_fact_best_layer = None
@@ -6594,7 +6285,7 @@ def plot_3d_cumulative_surface_by_language(
 def load_pr_auc_summary_for_plot(
     input_path,
     *,
-    feature="vec_subspace_orthogonality",
+    feature="vec_subspace_angle_by_cumulative_coherence",
     base_or_random_mode="en_fact",
     coherence_tag="coherence",
     remove_langs=("en", "english"),
@@ -7223,109 +6914,6 @@ for base_or_random_mode in (base_or_random_mode_list if DO_EXP1 else []):
             x_key=EXP1_TABLE_X_KEY,
         )
 
-    # ── Coherence-based vec-subspace plots ──────────────────────────────────
-    _COHERENCE_PLOT_KEYS = [
-        ("vec_subspace_angle_by_cumulative_coherence",                                      "coherence"),
-        ("vec_subspace_angle_by_cumulative_coherence_L2",                                   "coherence_L2"),
-        ("vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_sv",        "coherence_weighted_sv"),
-        ("vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_sv_squared","coherence_weighted_sv_squared"),
-        ("vec_subspace_angle_by_cumulative_coherence_weighted_by_singular_values_none",      "coherence_weighted_none"),
-        ("vec_subspace_pairwise_max_sim",                                                    "pairwise_max_sim"),
-        ("vec_subspace_pairwise_min_sim",                                                    "pairwise_min_sim"),
-    ]
-    # save_path=None on all three raw plot_* calls below in this loop: each is
-    # immediately replaced at the same path by its replot_exp1_*_from_json
-    # counterpart, so the raw render would just be encoded and thrown away.
-    for _coh_feat, _coh_tag in _COHERENCE_PLOT_KEYS:
-        with plt.rc_context(PAPER_RCPARAMS):
-            plot_cumulative_all_layers_all_langs(
-                outs_test_by_layer, tt_dev,
-                valid_langs=valid_langs, y_mode=y_mode,
-                y_acc_by_lang=y_acc_by_lang_test, y_layer="last",
-                quantile_step=quantile_step, cumulative_mode="cumulative",
-                title=f"[Exp1] {base_or_random_mode}: dev-selected layer, test Oscar W_L ({_coh_tag})",
-                save_path=None,
-                save_data_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_cumulative_{_coh_tag}.json"),
-                calculate_auc=True, show=False,
-                fixed_layers_to_plot=dev_best_layers, y_lim=(0.0, 1.0),
-                x_key=_coh_feat,
-                lang_colors=exp1_lang_colors,
-            )
-        # Replace the coherence cumulative curve directly with the paper style
-        # (ported from replot_multilingual_facts.ipynb), reading back the JSON
-        # just written. Reuses the SAME run-level lang_order/colors/markers
-        # computed from the main pass above, not recomputed per tag.
-        try:
-            with plt.rc_context(PAPER_RCPARAMS):
-                replot_exp1_cumulative_from_json(
-                    os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_cumulative_{_coh_tag}.json"),
-                    save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_cumulative_{_coh_tag}.svg"),
-                    table_save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_cumulative_{_coh_tag}_table.svg"),
-                    lang_order=exp1_lang_order, lang_colors=exp1_lang_colors, lang_markers=exp1_lang_markers,
-                )
-        except Exception as _pp_exp1_coh_err:
-            print(f"[warn] could not render paper-style Exp1 cumulative plot ({_coh_tag}): {_pp_exp1_coh_err}")
-        with plt.rc_context(PAPER_RCPARAMS):
-            plot_cumulative_all_layers_all_langs(
-                outs_test_by_layer, tt_dev,
-                valid_langs=valid_langs, y_mode=y_mode,
-                y_acc_by_lang=y_acc_by_lang_test, y_layer="last",
-                quantile_step=quantile_step, cumulative_mode="non_cumulative",
-                title=f"[Exp1] {base_or_random_mode}: dev-selected layer, test Oscar W_L ({_coh_tag}, non-cumul)",
-                save_path=None,
-                save_data_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_noncumulative_{_coh_tag}.json"),
-                calculate_auc=False, show=False,
-                fixed_layers_to_plot=dev_best_layers, y_lim=(0.0, 1.0),
-                x_key=_coh_feat,
-                lang_colors=exp1_lang_colors,
-            )
-        try:
-            with plt.rc_context(PAPER_RCPARAMS):
-                replot_exp1_noncumulative_from_json(
-                    os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_noncumulative_{_coh_tag}.json"),
-                    save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_noncumulative_{_coh_tag}.svg"),
-                    table_save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_noncumulative_{_coh_tag}_table.svg"),
-                    lang_order=exp1_lang_order, lang_colors=exp1_lang_colors, lang_markers=exp1_lang_markers,
-                )
-        except Exception as _pp_exp1_nc_coh_err:
-            print(f"[warn] could not render paper-style Exp1 non-cumulative plot ({_coh_tag}): {_pp_exp1_nc_coh_err}")
-        with plt.rc_context(PAPER_RCPARAMS):
-            plot_error_recall_all_layers_all_langs(
-                outs_test_by_layer, tt_dev,
-                valid_langs=valid_langs, y_mode=y_mode,
-                y_acc_by_lang=y_acc_by_lang_test, y_layer="last",
-                title=f"[Exp1] {base_or_random_mode}: dev-selected layer, test Oscar W_L ({_coh_tag}, error recall)",
-                save_path=None,
-                save_data_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_error_recall_{_coh_tag}.json"),
-                show=False,
-                fixed_layers_to_plot=dev_best_layers,
-                x_key=_coh_feat,
-                lang_colors=exp1_lang_colors,
-            )
-        try:
-            with plt.rc_context(PAPER_RCPARAMS):
-                replot_exp1_error_recall_from_json(
-                    os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_error_recall_{_coh_tag}.json"),
-                    save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_error_recall_{_coh_tag}.svg"),
-                    table_save_path=os.path.join(exp1_plot_root, f"exp1_{base_or_random_mode}_error_recall_{_coh_tag}_table.svg"),
-                    lang_order=exp1_lang_order, lang_colors=exp1_lang_colors, lang_markers=exp1_lang_markers,
-                )
-        except Exception as _pp_exp1_er_coh_err:
-            print(f"[warn] could not render paper-style Exp1 error-recall plot ({_coh_tag}): {_pp_exp1_er_coh_err}")
-        if y_acc_by_lang_test is not None:
-            _compute_and_save_pr_auc_all_langs(
-                outs_test_by_layer, tt_dev, valid_langs,
-                best_layers=dev_best_layers,
-                y_acc_by_lang=y_acc_by_lang_test,
-                save_dir=exp1_plot_root,
-                label=f"Exp1 {base_or_random_mode} {_coh_tag} dev-sel",
-                x_key=_coh_feat,
-                plot_curves=False,
-                summary_filename=f"exp1_{base_or_random_mode}_pr_auc_summary_{_coh_tag}.json",
-                n_boot=200,
-            )
-        print(f"[Exp 1] coherence plots saved: {_coh_tag}, mode={base_or_random_mode}")
-
     del outs_dev_by_layer, outs_test_by_layer
     print(f"[Exp 1] done mode={base_or_random_mode}")
 
@@ -7336,17 +6924,16 @@ if DO_EXP1 and en_fact_dev_best_layers_exp1 is not None:
     try:
         with plt.rc_context(PAPER_RCPARAMS):
             plot_3d_cumulative_surface_by_language(
-                os.path.join(exp1_plot_root, "exp1_en_fact_cumulative_coherence.json"),
-                save_path=os.path.join(exp1_plot_root, "exp1_en_fact_cumulative_coherence_3d.svg"),
+                os.path.join(exp1_plot_root, "exp1_en_fact_cumulative.json"),
+                save_path=os.path.join(exp1_plot_root, "exp1_en_fact_cumulative_3d.svg"),
             )
     except Exception as _pp1_err:
         print(f"[warn] could not generate Exp1 3D surface plot: {_pp1_err}")
 
-    # PR-AUC vertical bar/table, paper style — one per PR-AUC variant already
-    # computed above (the main dev-selected features, plus every coherence-
-    # weighting variant in _COHERENCE_PLOT_KEYS). No new PR-AUC numbers are
-    # computed here; this just plots the summaries already saved to disk.
-    _pr_auc_variants = [(None, "main")] + [(_tag, _tag) for _, _tag in _COHERENCE_PLOT_KEYS]
+    # PR-AUC vertical bar/table, paper style. `feature` is the cumulative-coherence
+    # metric everywhere in Exp1, so there is only the one (main) PR-AUC summary to
+    # plot here — this just plots what was already saved to disk above.
+    _pr_auc_variants = [(None, "main")]
     for _pp_coh_tag, _pp_variant_label in _pr_auc_variants:
         try:
             _pp_langs, _pp_pr_auc, _pp_baseline = load_pr_auc_summary_for_plot(
@@ -8553,7 +8140,7 @@ if pr_auc_tables_exp3:
 print("\n[Exp 3b] W_L subspace ortho_min feature with dev/test Oscar split")
 
 lang_mode_WL = ('language_subspace', 'SVD', 0.99)
-feature_exp3b = 'vec_subspace_orthogonality'
+feature_exp3b = 'vec_subspace_angle_by_cumulative_coherence'
 exp3b_plot_root = os.path.join(EXP_ROOT_DIR, f"{feature_exp3b}_lowest_feature_first", "exp3b_orthomin_dev_test_split")
 
 pr_auc_tables_exp3b = {}
